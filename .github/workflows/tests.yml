@@ -1,0 +1,19 @@
+name: CPU protocol checks
+on:
+  push:
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install pinned CPU environment
+        run: bash scripts/setup.sh --cpu
+      - name: Protocol checks
+        run: .venv/bin/python -m pytest -q
+      - name: End-to-end smoke
+        run: .venv/bin/python -m pmr smoke --steps 10 --rounds 2 --out runs/ci
