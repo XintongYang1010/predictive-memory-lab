@@ -12,7 +12,11 @@ ACTIONS = ("keep", "reweight", "rebuild", "reset")
 DIAGNOSTICS = ACTIONS + ("drop_worst", "random_drop", "decay", "reset_all")
 FEATURES = ("min_rmse", "max_rmse", "mean_rmse", "std_rmse", "weighted_rmse",
             "prior_entropy", "age_seconds", "speed", "abs_heading_change",
-            "observed_fraction", "endpoint_spread", "has_evidence")
+            "observed_fraction", "endpoint_spread", "has_evidence",
+            "update_time_seconds", "rebuild_available")
+FEATURE_SCHEMA = 2
+MODEL_KWARGS = dict(embed_dim=128, future_steps=60, encoder_depth=4,
+                    num_heads=8, mlp_ratio=4., qkv_bias=False, drop_path=.2)
 
 
 def observed_only(frame):
@@ -56,7 +60,9 @@ def evidence(frame, state):
                       (prior*rmse).sum(),-(prior*prior.clamp_min(1e-12).log()).sum(),
                       rmse.new_tensor(age),frame["x_velocity"][0,0,-1],angle.abs(),
                       rmse.new_tensor(valid_count/max(hi-lo,1)),spread,
-                      rmse.new_tensor(float(valid_count>0))))
+                      rmse.new_tensor(float(valid_count>0)),
+                      rmse.new_tensor(current_step/10.),
+                      rmse.new_tensor(float(state["has_prior_context"])) ))
     return {"features":feat,"mse":mse,"prior":prior,"age":age,
             "valid_count":valid_count,"from_step":lo,"until_step":hi}
 
@@ -65,8 +71,7 @@ class RealMotionAdapter:
     def __init__(self, device="cpu", checkpoint=None, trust_checkpoint=False, random_init=False):
         module,_=activate()
         self.device=torch.device(device)
-        self.model=module.RealMotion(embed_dim=128,future_steps=60,encoder_depth=4,
-                                    num_heads=8,mlp_ratio=4.,qkv_bias=False,drop_path=.2).to(self.device)
+        self.model=module.RealMotion(**MODEL_KWARGS).to(self.device)
         if checkpoint is None and not random_init:
             raise ValueError("Real experiments require --checkpoint; random weights are smoke-only")
         self.checkpoint_hash="RANDOM_INIT_SMOKE_ONLY"
@@ -166,4 +171,5 @@ class RealMotionAdapter:
         # Ensure exact integer frame lag in upstream's floor-based index.
         # Native schedule is 30/40/50 and yields exactly one second here.
         out=self._forward(frame,memory,edit,mask,scale)
-        return out,{"memory":clone(out["memory_dict"]),"previous_observation":observed_only(frame)}
+        return out,{"memory":clone(out["memory_dict"]),"previous_observation":observed_only(frame),
+                    "has_prior_context":memory is not None}

@@ -13,7 +13,9 @@
 
 新增证据是从 previous_step 到 current_step 的真实观测；未来预测部分不用于判错。
 每次策略调用从保存的先验重新算一次权重，不把同一残差递归乘进 posterior。
-没有有效重叠时，重加权和选择性删除退化为 Keep；controller 会收到无证据标志。
+没有有效重叠时，重加权和选择性删除退化为 Keep；controller 强制选择 Keep。
+V2 在原 12 维特征后增加当前更新时间和上一 bank 是否使用过历史上下文的标志；二者都由已观察状态确定。
+没有历史上下文的 bank 禁选 Rebuild；这使 4 秒更新的已知无效动作不会被选中。
 
 ## 分支监督
 
@@ -24,9 +26,27 @@
 对于 4 秒事件，比较 4/5 秒两个更新；对于 5 秒事件，只比较当次输出。
 因此不得把 5 秒事件称为“多步恢复实验”。各事件的动作比较严格配对，事件之间单列。
 
-选择 ES 改善大于 0.01 的最佳操作；否则 Keep。权重为 `1 + min(max(gain,0),5)`。
-Train-repair 训练；Dev 的分支分类损失选择 checkpoint；Calibration 决定 sigma/tau/阈值。
+V2 分支还保存 5 秒更新后的完整 60 帧 `final` 指标。
+收益回归目标为 `branch_keep.final.energy_score - branch_action.final.energy_score`，
+用 MSE 监督 Reweight / Rebuild / Reset 的全部收益，包括负收益；Keep 的预测收益固定为零。
+公共窗口产生的 `label/weight/tie` 保留为诊断字段，V2 不使用它们训练。
+
+Train-repair 只负责梯度更新。Dev 先按已记录分支的平均实际收益对 checkpoint/门槛组合排序，
+取最多 `--dev-candidates` 个决策不同的候选（默认 3），再在整个 Dev 中逐个完整运行。
+候选每次更新使用自己产生的历史状态；选择指标与最终报告一致，都是完整 60 帧 ES。
+预测收益门槛候选固定为 0.01 / 0.05 / 0.1 米。零干预候选由 Keep 基准覆盖。
+配对场景 bootstrap CI 下界大于 0 且普通场景平均收益非负时才可入选，以平均收益选最终模型。
+没有候选满足条件就回退 Keep。这个 CI 只作为开发集调参门槛，不能宣称筛选后的统计显著性。
+完整候选记录、选中的 step/门槛与回退状态保存在 `roundN.controller.selection.json`。
+Calibration 继续决定 sigma/tau/残差阈值。
 预先固定轮数后才评价确认集。所有轮次的监督均重新生成，不直接复用旧标签。
+V2 权重和特征 schema 与 V1 不兼容，加载时明确拒绝；`--resume` 仍要求代码和设置完全匹配。
+
+## 基线检查边界
+
+每次运行在一个 Calibration 场景上比较 Keep 适配器与同权重、无任何 hook 的固定版本模型，
+记录 `baseline_adapter.json`。两边都使用同一纯 PyTorch attention 后端。
+该检查能发现包装层改变 baseline 的问题，不能替代与官方 NATTEN 后端及完整官方验证集的对照。
 
 ## 两类评价不要混用
 
@@ -57,3 +77,4 @@ minADE6 对六模式取最小平均距离；minFDE6 取最小终点距离；1-mo
 
 本阶段没有构造人工冲突、遮挡或意图标签；high_conflict 只是新观察与旧预测的残差分组。
 完整的 RSI 论证还需要固定监督与普通难例训练的计算预算匹配对照。`--rounds 3` 本身不提供该论证。
+V1 的确认集结果已经参与研究判断；相同场景上的 V2 重跑是探索性比较，正式确认需另用未查看的验证场景。

@@ -1,4 +1,4 @@
-from collections import defaultdict
+from collections import Counter
 from pathlib import Path
 import csv
 import json
@@ -34,11 +34,15 @@ def report(out,smoke=False):
         subset=[r for r in rows if r["policy"]==policy]
         if {r["scene_id"] for r in subset}!=set(baseline):
             raise ValueError("Unpaired evaluation rows")
+        if len(subset)!=len(baseline):
+            raise ValueError("Duplicate evaluation rows")
         metrics={k:float(np.mean([r["final"][k] for r in subset])) for k in subset[0]["final"]}
         gains=[baseline[r["scene_id"]]["final"]["energy_score"]-r["final"]["energy_score"] for r in subset]
         metrics["paired_ES_improvement"]=paired_ci(gains)
         metrics["mean_seconds_per_scene"]=float(np.mean([r["seconds"] for r in subset]))
         metrics["forward_calls"]=sum(r["forward_calls"] for r in subset)
+        metrics["actions_by_step"]={str(step):dict(Counter(r["edits"][i] for r in subset))
+                                    for i,step in enumerate((30,40,50))}
         metrics["groups"]={}
         for group in ("ordinary","high_conflict"):
             group_rows=[r for r in subset if r["common_curve"][0]["group"]==group]
@@ -53,6 +57,8 @@ def report(out,smoke=False):
                 # At a fixed event_step there is one event per scene.
                 stats[action]=paired_ci([r["branches"]["keep"]["loss"]-r["branches"][action]["loss"] for r in events])
             summary["diagnostic"][f"step{step}_{group}"]=stats
+    summary["controller_selection"]=[json.loads(path.read_text()) for path in sorted(
+        out.glob("round*.controller.selection.json"),key=lambda p:int(p.name.split('.')[0][5:]))]
     write_json(out/"summary.json",summary)
     fields=["policy","energy_score","minADE6","minFDE6","b_minFDE6","b_minFDE6_upstream","miss_rate","mean_seconds_per_scene"]
     with (out/"metrics.csv").open("w",newline="") as f:
@@ -68,6 +74,18 @@ def report(out,smoke=False):
     for policy,m in summary["policies"].items():
         d=m["paired_ES_improvement"]
         lines.append(f"|{policy}|{m['energy_score']:.4f}|{m['minADE6']:.4f}|{m['minFDE6']:.4f}|{d['mean']:.4f} [{d['ci95'][0]:.4f}, {d['ci95'][1]:.4f}]|")
+    if summary["controller_selection"]:
+        selection=summary["controller_selection"][-1]
+        lines.extend(["",f"Controller selection: **{selection['mode']}** (development scenes only)."])
+        if selection["mode"]=="keep_fallback":
+            lines.append("No shortlisted controller passed the development gate. Deployed controller uses Keep; this is not a learned improvement.")
+        else:
+            choice=selection['selected']
+            lines.append(f"Selected training step {choice['step']}, predicted ES gain margin {choice['gain_margin']}. Development selection is not confirmation evidence.")
+        lines.extend(["","|Update|Keep|Reweight|Rebuild|Reset|","|---|---:|---:|---:|---:|"])
+        for step,counts in summary['policies']['controller']['actions_by_step'].items():
+            if step!='30':
+                lines.append(f"|{step} frames|"+'|'.join(str(counts.get(a,0)) for a in ('keep','reweight','rebuild','reset'))+'|')
     lines.extend(["","Final metrics use the native 60-step forecast at step50. Curves compare the same absolute [50,100) target interval.",
                   "Group labels for policy curves are frozen at the reference model's step40 event.",
                   "Single-edit diagnostic results are in summary.json, split by event step. Rebuild at step40 is structurally a no-op.",

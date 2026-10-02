@@ -1,8 +1,8 @@
 import torch
 import pytest
-from pmr.adapter import evidence,rotation,observed_only,RealMotionAdapter
+from pmr.adapter import evidence,rotation,observed_only,RealMotionAdapter,FEATURES
 from pmr.common import clone
-from pmr.experiment import correctness,rollout,replay
+from pmr.experiment import correctness,rollout,replay,baseline_adapter_check
 from pmr.metrics import scores,frame_scores
 from pmr.data import synthetic_raw,create_synthetic,make_manifest
 from pmr.upstream import activate
@@ -57,7 +57,31 @@ def test_missing_overlap_is_not_zero_error_evidence(adapter,sequence):
     _,state=adapter.step(sequence[0])
     frame=clone(sequence[1]);frame['x_valid_mask'][0,0,-10:]=False
     e=evidence(frame,state)
-    assert e['valid_count']==0 and e['features'][-1]==0
+    assert e['valid_count']==0 and e['features'][FEATURES.index('has_evidence')]==0
+
+
+def test_keep_matches_hook_free_pinned_model(adapter,sequence):
+    assert baseline_adapter_check(adapter,sequence)['passed']
+
+
+def test_stage_and_rebuild_features_are_causal(adapter,sequence):
+    _,states,_=rollout(adapter,sequence)
+    for i,time in ((1,4.),(2,5.)):
+        f=evidence(sequence[i],states[i-1])['features']
+        assert f[FEATURES.index('update_time_seconds')]==time
+        assert f[FEATURES.index('rebuild_available')]==(i==2)
+        altered=clone(sequence[i]);altered['target']+=1e6
+        torch.testing.assert_close(evidence(altered,states[i-1])['features'],f,atol=0,rtol=0)
+
+
+def test_replay_logs_full_horizon_target_independently_of_common_loss(adapter,sequence):
+    _,states,_=rollout(adapter,sequence)
+    branch=replay(adapter,sequence,1,states[0],'reset')
+    first,state=adapter.step(sequence[1],states[0],'reset')
+    final,_=adapter.step(sequence[2],state,'keep')
+    assert branch['final']==frame_scores(final,sequence[2])
+    assert branch['final']['valid_steps']==60
+    assert all(x['valid_steps']==50 for x in branch['curve'])
 
 
 def test_random_deletion_matches_selective_count(adapter,sequence):

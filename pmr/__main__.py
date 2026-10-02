@@ -16,10 +16,11 @@ def parser():
     for command in ("smoke","run"):
         q=sub.add_parser(command)
         q.add_argument("--device",default="cpu" if command=="smoke" else "cuda")
-        q.add_argument("--out",default=f"runs/{command}")
+        q.add_argument("--out",default=f"runs/{command}_v2")
         q.add_argument("--seed",type=int,default=42)
         q.add_argument("--steps",type=int,default=30 if command=="smoke" else 500)
         q.add_argument("--rounds",type=int,default=1)
+        q.add_argument("--dev-candidates",type=int,default=3,help="Maximum candidate policies evaluated on complete dev rollouts per round")
         q.add_argument("--threads",type=int,default=2)
         q.add_argument("--resume",action="store_true",help="Reuse completed stages only, with exact same settings")
         if command=="run":
@@ -55,14 +56,14 @@ def doctor(args):
 def run(args):
     from .adapter import RealMotionAdapter
     from .data import make_manifest,create_synthetic,load_sequence
-    from .experiment import correctness,calibrate,collect,evaluate
+    from .experiment import correctness,baseline_adapter_check,calibrate,collect,evaluate,development_rollout
     from .controller import train_controller,load_controller
     from .report import report,read_jsonl
     smoke=args.command=="smoke"
     torch.set_num_threads(args.threads)
     seed_all(args.seed)
-    if args.steps<1 or args.rounds<1:
-        raise ValueError("steps and rounds must be positive")
+    if args.steps<1 or args.rounds<1 or args.dev_candidates<1:
+        raise ValueError("steps, rounds and dev-candidates must be positive")
     out=Path(args.out).resolve()
     info=environment(args.device)
     settings={k:v for k,v in vars(args).items() if k!="resume"}
@@ -93,7 +94,9 @@ def run(args):
     write_json(identity,{"sha256":adapter.checkpoint_hash})
     timer=clock(args.device)
     try:
-        e0=correctness(adapter,load_sequence(groups["calib"][0],args.device,trusted))
+        check_sequence=load_sequence(groups["calib"][0],args.device,trusted)
+        write_json(out/"baseline_adapter.json",baseline_adapter_check(adapter,check_sequence))
+        e0=correctness(adapter,check_sequence)
         write_json(out/"correctness.json",e0)
         cal=out/"calibration.json"
         config=json.loads(cal.read_text()) if args.resume and cal.exists() else calibrate(adapter,groups["calib"],cal,args.device,trusted,args.seed)
@@ -107,7 +110,9 @@ def run(args):
                 continue
             train_rows=collect(adapter,groups["train"],prefix.with_suffix(".train.jsonl"),config,args.device,current,trusted=trusted,seed=args.seed,round_id=r)
             dev_rows=collect(adapter,groups["dev"],prefix.with_suffix(".dev.jsonl"),config,args.device,current,trusted=trusted,seed=args.seed,round_id=r)
-            current=train_controller(train_rows,dev_rows,ctrl,args.device,args.steps,seed=args.seed+r)
+            dev_evaluator=lambda policy: development_rollout(adapter,groups["dev"],config,args.device,policy,trusted,args.seed)
+            current=train_controller(train_rows,dev_rows,ctrl,args.device,args.steps,seed=args.seed+r,
+                                     dev_evaluator=dev_evaluator,max_candidates=args.dev_candidates)
             write_json(done,{"complete":True,"round":r})
         # Confirmation is evaluated once, after the fixed number of rounds.
         collect(adapter,groups["eval"],out/"diagnostic.jsonl",config,args.device,"keep",True,trusted,args.seed)

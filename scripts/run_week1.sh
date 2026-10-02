@@ -8,7 +8,7 @@ if [[ $# -lt 1 ]]; then
 fi
 DATA_ROOT="$1"
 shift
-PMR_PYTHON="$PMR_ROOT/.venv/bin/python"
+PMR_PYTHON="${PMR_PYTHON:-$PMR_ROOT/.venv/bin/python}"
 [[ -x "$PMR_PYTHON" ]] || { echo 'Run bash scripts/setup.sh --av2 first' >&2; exit 2; }
 "$PMR_PYTHON" -m pmr doctor --device cuda --strict
 "$PMR_PYTHON" -m pytest -q
@@ -24,4 +24,4 @@ MODEL_PATH="${CHECKPOINT:-$PMR_ROOT/checkpoints/realmotion.pth}"
 if [[ ! -f "$MODEL_PATH" ]]; then
   "$PMR_PYTHON" scripts/download_checkpoint.py --out "$MODEL_PATH"
 fi
-exec "$PMR_PYTHON" -m pmr run --data-root "$PROCESSED" --checkpoint "$MODEL_PATH" --trust-inputs --device cuda --out runs/week1 "$@"
+exec "$PMR_PYTHON" -m pmr run --data-root "$PROCESSED" --checkpoint "$MODEL_PATH" --trust-inputs --device cuda --out runs/week1_v2 "$@"

@@ -5,7 +5,7 @@ import json
 import numpy as np
 import torch
 from tqdm import tqdm
-from .adapter import ACTIONS, DIAGNOSTICS, evidence
+from .adapter import ACTIONS, DIAGNOSTICS, FEATURES, FEATURE_SCHEMA, MODEL_KWARGS, evidence, observed_only
 from .common import clone, clock, write_json
 from .data import load_sequence
 from .metrics import frame_scores
@@ -50,7 +50,31 @@ def replay(adapter,seq,start,state,edit,continuation="keep",sigma=2.,threshold=2
                                seed=stable_seed(seq[i]["scenario_id"][0],i,seed))
         result.append(frame_scores(out,seq[i],common=True))
     return {"loss":float(np.mean([x["energy_score"] for x in result])),
+            "final":frame_scores(out,seq[-1]),
             "curve":result,"seconds":clock(adapter.device)-t0,"forward_calls":adapter.forward_calls-calls}
+
+
+@torch.no_grad()
+def baseline_adapter_check(adapter, seq):
+    """Compare Keep against a separate hook-free pinned model on the same backend.
+
+    This checks the wrapper, not NATTEN parity or the published benchmark score.
+    """
+    reference = type(adapter.model)(**MODEL_KWARGS).to(adapter.device).eval().requires_grad_(False)
+    reference.load_state_dict(adapter.model.state_dict(), strict=True)
+    state, memory, max_error = None, None, 0.
+    for frame in seq:
+        data = observed_only(frame)
+        data["memory_dict"] = clone(memory)
+        expected = reference(data)
+        memory = expected["memory_dict"]
+        actual, state = adapter.step(frame, state, "keep")
+        for key in ("y_hat", "pi"):
+            torch.testing.assert_close(actual[key], expected[key], atol=1e-6, rtol=1e-5)
+            max_error = max(max_error, float((actual[key]-expected[key]).abs().max()))
+    return {"passed": True, "updates": len(seq), "max_absolute_error": max_error,
+            "scope": "Keep adapter vs hook-free pinned model, both portable PyTorch backend",
+            "official_NATTEN_or_benchmark_reproduction": False}
 
 
 def correctness(adapter,seq):
@@ -134,6 +158,8 @@ def collect(adapter,records,out,config,device,policy="keep",diagnostic=False,tru
                 row={"scene_id":record["scene_id"],"event_step":(30,40,50)[i],"observed_until":(30,40,50)[i]-1,
                      "actor_id":seq[i]["track_id"][0],"checkpoint_hash":adapter.checkpoint_hash,
                      "controller_round":round_id,"seed":seed,"features":ev["features"].cpu().tolist(),
+                     "feature_schema":FEATURE_SCHEMA,"feature_names":list(FEATURES),
+                     "gain_target_metric":"final.energy_score",
                      "label":label,"weight":float(1+min(max(gain,0),5)),"tie":bool(gain<=.01),
                      "reference_residual":float(ref["features"][4]),
                      "group":"high_conflict" if float(ref["features"][4])>config["threshold"] else "ordinary",
@@ -142,6 +168,20 @@ def collect(adapter,records,out,config,device,policy="keep",diagnostic=False,tru
                 rows.append(row)
                 log.write(json.dumps(row,allow_nan=False)+"\n")
                 log.flush()
+    return rows
+
+
+def development_rollout(adapter, records, config, device, policy, trusted=False, seed=0):
+    """Closed-loop selection on official-train development scenes only."""
+    rows = []
+    for record in tqdm(records, desc="development policy rollout"):
+        seq = load_sequence(record, device, trusted)
+        # Group assignment must stay fixed across all candidates.
+        _, reference, _ = rollout(adapter, seq, "keep")
+        group = "high_conflict" if float(evidence(seq[1], reference[0])["features"][4]) > config["threshold"] else "ordinary"
+        outs, _, edits = rollout(adapter, seq, policy, config["sigma"], config["threshold"], config["tau"], seed)
+        rows.append({"scene_id": record["scene_id"], "group": group, "edits": edits,
+                     "energy_score": frame_scores(outs[-1], seq[-1])["energy_score"]})
     return rows
 
 

@@ -3,7 +3,38 @@
 首周实验仓库：在 **RealMotion 官方骨干**上检查旧预测 memory 的作用，再训练一个小型修正 controller。
 
 **目标镜像：Python 3.11 / PyTorch 2.9.1 / CUDA 12.8，单张 A100 即可启动。**
-骨干冻结；训练对象是四分类 controller（Keep / Reweight / Rebuild / Reset）。
+骨干冻结；V2 controller 预测 Reweight / Rebuild / Reset 相对 Keep 的最终 ES 收益，再决定是否干预。
+
+## V2 更新与重新测试
+
+V1 的单 A100 结果见 [结果交接 PR #1](https://github.com/XintongYang1010/predictive-memory-lab/pull/1)：
+1,000 个评估场景中 controller ES 1.5928，Keep 1.5731，未取得收益。
+V2 改用全部动作的收益回归，加入更新时间和可重建标志，并在 Dev 上完整运行候选策略选择模型。
+如果没有候选通过开发集收益门槛，就部署 Keep，报告会明确显示 `keep_fallback`。
+这不等于已经学到改进，也不保证新场景上一定没有损伤。
+
+下载新目录以保留原来的环境、数据和输出：
+
+```bash
+git clone https://github.com/XintongYang1010/predictive-memory-lab.git predictive-memory-lab-v2
+cd predictive-memory-lab-v2
+bash scripts/setup.sh --av2
+.venv/bin/python -m pytest -q
+.venv/bin/python -m pmr smoke --device cuda --out runs/gpu-smoke-v2
+CHECKPOINT=/path/to/existing/realmotion.pth \
+  bash scripts/run_week1.sh /path/to/existing/av2_processed --out runs/week1_v2
+```
+
+在先前的 ParaCloud 离线镜像中重跑，可直接复用已跑通的 Python、处理后数据、上游源码和骨干权重，
+无需再次安装依赖或下载 AV2。完整命令见 [离线重跑说明](docs/OPERATIONS.md#v2-离线重跑)。
+在新源码目录、之前的 GPU 镜像内，可直接执行：
+
+```bash
+bash scripts/retest_v2.sh /share/home/s2026316084/yxt_pmr_20261002
+```
+
+该脚本自动创建带时间戳的 V2 输出目录，执行 GPU smoke、协议测试和完整训练评估。
+V1 的控制器权重、分支标签和 `--resume` 目录不能混入 V2；使用新的输出目录。
 
 ## 最快启动
 
@@ -49,7 +80,7 @@ bash scripts/run_week1.sh /path/to/realmotion_processed \
 
 ## 输出看哪里
 
-`runs/week1/`：
+`runs/week1_v2/`：
 
 |文件|用途|
 |---|---|
@@ -58,8 +89,11 @@ bash scripts/run_week1.sh /path/to/realmotion_processed \
 |`update_curves.png`|在相同绝对未来区间上比较两次更新|
 |`diagnostic.jsonl`|从同一状态进行单次干预的每个分支、评分、计算耗时|
 |`evaluation.jsonl`|实际部署策略逐场景结果，不含未来选最优分支|
-|`round0.train.jsonl`、`round0.dev.jsonl`|修复训练样本、动作标签、tie、收益和来源|
+|`round0.train.jsonl`、`round0.dev.jsonl`|14 维因果特征、各动作最终 ES、诊断标签和来源|
 |`round0.controller.pt`|小 controller 权重及训练/开发场景 ID|
+|`round0.controller.selection.json`|候选策略在 Dev 上完整运行的 ES、动作分布、是否通过门槛及最终选择|
+|`round0.controller.training.json`|收益回归 MSE、训练时间和候选预算|
+|`baseline_adapter.json`|Keep 包装层与无 hook 的固定版本模型的输出对齐检查；不等于官方 NATTEN/论文分数复现|
 |`manifest.json`、`checkpoint.json`|数据路径、场景划分、内容哈希、骨干权重哈希|
 |`correctness.json`、`environment.json`、`run_stats.json`|一致性检查、运行环境、前向次数、耗时和显存|
 
@@ -78,7 +112,7 @@ bash scripts/run_week1.sh /path/to/realmotion_processed \
 |Decay|按 bank 年龄衰减 trajectory correction，时间常数仅在 Calibration 选择|
 |Reset-all|清空整个前一帧 memory，作为额外诊断|
 |Threshold|超过校准残差阈值时 Reset，否则 Keep|
-|Controller|仅利用当前可见的 12 个特征选择四种修正操作|
+|Controller|利用 14 个当前可见特征预测动作收益；收益不足、无新增证据或开发集筛选失败时保留历史|
 
 官方代码只有上一更新的 bank，不是任意长度的多年龄 memory。原生观察更新时间为 3/4/5 秒。
 在 4 秒时，Rebuild 必然与 Keep 相同，因为它重建的 3 秒状态尚无更早 context；5 秒才是非平凡重建。
@@ -91,10 +125,13 @@ Reweight 作用于旧 bank 的读取，并不直接改变最终输出模式概�
 - 官方 train 按场景 ID 的固定 SHA256 分成 Train-repair / Dev / Calibration；官方 val 用作一次确认评价。
 - 动作和 controller 特征看不到 `target` 或 `target_mask`。未来只用于训练分支评分和评价。
 - 所有候选从完整克隆状态开始，观察日程相同。删除使用局部固定随机种子。
-- 训练标签使用 Energy Score；改善不超过 0.01 米时标为 Keep/tie。
+- V2 训练目标为每个动作相对 Keep 的最终 60 帧 ES 改善，使用 MSE，同时监督正、负收益。
+- `label/weight/tie` 保留为公共窗口的 V1 诊断字段，不再作为 V2 训练目标。
+- Dev 中先按分支收益粗筛最多 3 个候选，再运行真实连续决策；仅当配对收益 CI 下界大于 0 且普通组平均收益非负时允许干预，否则回退 Keep。
+- 开发集筛选的 CI 是调参门槛，不是筛选后显著性结论。V1 已看过的 val 子集重跑属于探索分析；正式确认应使用未看过的场景和额外种子。
 - 4/5 秒的曲线都评价绝对 `[50,100)` 帧。最终标准预测指标使用 5 秒时完整 60 帧未来。
 - `b_minFDE6` 与官方仓库中另一种计算顺序的 `b_minFDE6_upstream` 同时保留，详见 [实验协议](docs/PROTOCOL.md)。
-- 本版本实现首周问题诊断和冻结骨干 controller 训练。**不声称已复现论文分数、验证 A100 性能、完成 SHARP/世界模拟实验，或证明 RSI 有独立收益。**
+- 本版本实现首周问题诊断和冻结骨干 controller 训练。V1 已在 A100 跑通；**V2 效果仍待重新实测，不声称已复现论文分数、完成 SHARP/世界模拟实验，或证明 RSI 有独立收益。**
 
 ## 进一步命令
 
