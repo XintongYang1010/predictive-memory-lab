@@ -55,6 +55,26 @@ CHECKPOINT="$OLD/checkpoints/realmotion.pth" \
 要重新独立运行，用新的 `--out`。重点传回 `REPORT.md`、`summary.json`、
 `round0.controller.selection.json` 和完整输出目录。`keep_fallback` 表示没有候选通过开发集门槛，不能解释成方法取得了提升。
 
+## V2.1 训练诊断
+
+完整实验自动运行小样本拟合，并生成 `roundN.controller.diagnostics.json`、
+`roundN.controller.training.json` 和 `training_curves.png`。
+`training.json` 在训练中每 50 步及首尾更新，可在作业未完成时查看。
+小样本拟合失败会报告 `needs_investigation`；重复输入有冲突目标时报告 `conflicting_targets`，
+不会直接宣称实现错误或自动更改训练预算。
+
+若已有 V2 输出，可在新源码目录、原镜像内仅做 CPU 诊断：
+
+```bash
+/share/home/s2026316084/yxt_pmr_20261002/.venv/bin/python \
+  -m pmr diagnose --run /path/to/existing_v2_output
+```
+
+该命令只读取 `round0.train.jsonl` 和 `round0.dev.jsonl`，不读取 Eval、不加载预测骨干，
+默认保存 `round0.controller.diagnostics.json`。指定其他轮次用 `--round 1`。
+它不会重新选策略，也不会把旧实验变成新校准目标下的结果；比较 V2.1 效果需要新目录完整重跑。
+V1 输出不兼容，不能用公共 50 帧指标冒充最终 60 帧标签。
+
 ## 输入
 
 原始目录：`train/<scenario>/scenario_<id>.parquet` 及同目录地图 JSON；val 同理。

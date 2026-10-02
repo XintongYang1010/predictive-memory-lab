@@ -13,6 +13,10 @@ def parser():
     sub=p.add_subparsers(dest="command",required=True)
     setup=sub.add_parser("setup"); setup.add_argument("--source")
     doctor=sub.add_parser("doctor"); doctor.add_argument("--device",default="cuda"); doctor.add_argument("--strict",action="store_true")
+    diag=sub.add_parser("diagnose",help="Diagnose saved V2 Train/Dev branch rows on CPU without rerunning RealMotion")
+    diag.add_argument("--run",required=True);diag.add_argument("--round",type=int,default=0)
+    diag.add_argument("--steps",type=int,default=300);diag.add_argument("--seed",type=int,default=42)
+    diag.add_argument("--out",help="JSON output; defaults to roundN.controller.diagnostics.json in the run directory")
     for command in ("smoke","run"):
         q=sub.add_parser(command)
         q.add_argument("--device",default="cpu" if command=="smoke" else "cuda")
@@ -156,6 +160,17 @@ def main():
     if args.command=="setup": print(prepare(args.source))
     elif args.command=="doctor": doctor(args)
     elif args.command=="profile": profile(args)
+    elif args.command=="diagnose":
+        from .diagnostics import diagnose_rows
+        from .report import read_jsonl
+        torch.set_num_threads(2)
+        root=Path(args.run)
+        result=diagnose_rows(read_jsonl(root/f"round{args.round}.train.jsonl"),
+                             read_jsonl(root/f"round{args.round}.dev.jsonl"),args.seed,args.steps)
+        target=Path(args.out) if args.out else root/f"round{args.round}.controller.diagnostics.json"
+        write_json(target,result)
+        print(json.dumps({"output":str(target),"tiny_fit":result["tiny_overfit"]["status"],
+                          "dev_baselines":result["dev_baselines"]},indent=2))
     else: run(args)
 
 

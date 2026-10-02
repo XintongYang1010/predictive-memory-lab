@@ -5,6 +5,27 @@
 **目标镜像：Python 3.11 / PyTorch 2.9.1 / CUDA 12.8，单张 A100 即可启动。**
 骨干冻结；V2 controller 预测 Reweight / Rebuild / Reset 相对 Keep 的最终 ES 收益，再决定是否干预。
 
+## V2.1：先定位为什么没有学到收益
+
+根据训练诊断的思路增加以下检查，无新增依赖；离线重跑命令保持不变。
+
+- 修正目标不一致：sigma/tau 校准也使用最终完整 60 帧 ES，与训练、Dev 筛选和最终评估一致。
+- 每轮训练前自动在最多 16 条 Train 事件上做无 weight decay 的小样本拟合。记录初始 MSE、拟合曲线、重复特征的冲突标签下限；诊断使用独立随机状态，不改变正式训练的随机序列。
+- Dev 上比较零收益、Train 全局均值、分阶段均值、仅残差线性模型、全部特征线性模型。所有参数只在 Train 拟合，不根据 Dev 调整这些诊断基线。
+- 每 50 步及首尾保存全 Train/Dev MSE、梯度、激活统计、实际 AdamW 参数更新量和动作损伤率。日志在训练中持续写入，选择阶段失败也能检查。
+- 新增 `training_curves.png` 和 `roundN.controller.diagnostics.json`；报告明确区分记录分支上的收益与完整策略的收益。
+- 坐标旋转/平移和六个预测模式重排不应改变 controller 证据，增加相应协议检查。
+
+只分析已有 **V2** 分支日志，不重跑骨干、无需 GPU：
+
+```bash
+python -m pmr diagnose --run /path/to/v2_run
+```
+
+这只是诊断，不能替代本版本校准目标修正后的完整重跑。旧 V1 日志缺少最终 60 帧分支目标，不能补造为 V2 标签。
+代码更新后使用新输出目录，原有 `--resume` 仍严格校验代码指纹。
+如何读日志、下一步研究假设及已有工作的边界见 [研究与诊断路线](docs/RESEARCH_IDEAS.md)。
+
 ## V2 更新与重新测试
 
 V1 的单 A100 结果见 [结果交接 PR #1](https://github.com/XintongYang1010/predictive-memory-lab/pull/1)：

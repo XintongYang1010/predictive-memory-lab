@@ -119,12 +119,15 @@ def calibrate(adapter,records,out,device,trusted=False,seed=0):
             for seq_cpu in seqs:
                 seq=move(seq_cpu,device)
                 outs,_,_=rollout(adapter,seq,kind,sigma=value if kind=="reweight" else 2.,tau=value if kind=="decay" else 1.,seed=seed)
-                losses.append(frame_scores(outs[-1],seq[-1],common=True)["energy_score"])
+                # Match branch supervision, development selection and final
+                # evaluation: all use the native final 60-frame forecast.
+                losses.append(frame_scores(outs[-1],seq[-1])["energy_score"])
             trials.append({"policy":kind,"value":value,"energy_score":float(np.mean(losses)),
                            "seconds":clock(device)-start,"forward_calls":adapter.forward_calls-calls})
     sigma=min((x for x in trials if x["policy"]=="reweight"),key=lambda x:x["energy_score"])["value"]
     tau=min((x for x in trials if x["policy"]=="decay"),key=lambda x:x["energy_score"])["value"]
     config={"sigma":sigma,"tau":tau,"threshold":threshold,"threshold_quantile":.8,
+            "objective":"final_60_frame_energy_score",
             "split":"calib_from_official_train","trials":trials,"scene_ids":[r["scene_id"] for r in records]}
     write_json(out,config)
     return config

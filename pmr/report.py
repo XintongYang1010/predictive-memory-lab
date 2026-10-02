@@ -59,6 +59,14 @@ def report(out,smoke=False):
             summary["diagnostic"][f"step{step}_{group}"]=stats
     summary["controller_selection"]=[json.loads(path.read_text()) for path in sorted(
         out.glob("round*.controller.selection.json"),key=lambda p:int(p.name.split('.')[0][5:]))]
+    training_paths=sorted(out.glob("round*.controller.training.json"),key=lambda p:int(p.name.split('.')[0][5:]))
+    training=[json.loads(path.read_text()) for path in training_paths]
+    summary["controller_learning"]=[{
+        "round":int(path.name.split('.')[0][5:]), "status":item.get("status"),
+        "tiny_fit_status":item.get("tiny_fit_status"), "initial":item.get("initial"),
+        "last_logged_checkpoint":item["history"][-1] if item["history"] else None,
+        "dev_baselines":item.get("dev_baselines"),
+    } for path,item in zip(training_paths,training)]
     write_json(out/"summary.json",summary)
     fields=["policy","energy_score","minADE6","minFDE6","b_minFDE6","b_minFDE6_upstream","miss_rate","mean_seconds_per_scene"]
     with (out/"metrics.csv").open("w",newline="") as f:
@@ -86,6 +94,22 @@ def report(out,smoke=False):
         for step,counts in summary['policies']['controller']['actions_by_step'].items():
             if step!='30':
                 lines.append(f"|{step} frames|"+'|'.join(str(counts.get(a,0)) for a in ('keep','reweight','rebuild','reset'))+'|')
+    if training and training[-1].get("dev_baselines"):
+        fit=training[-1]
+        last=fit["history"][-1]
+        lines.extend(["", "## Learning diagnostics", "",
+                      f"Tiny-set fit on Train only: **{fit['tiny_fit_status']}**.",
+                      "The table describes recorded Dev single-edit branches. It does not measure complete deployed policies.",
+                      "The logged controller below is the last training checkpoint, not necessarily the selected checkpoint.", "",
+                      "|Predictor|Dev gain MSE ↓|Offline mean gain ↑|Intervention fraction|",
+                      "|---|---:|---:|---:|"])
+        metrics={**fit['dev_baselines'], 'last_logged_controller':last['dev_at_margin_001']}
+        for name,m in metrics.items():
+            lines.append(f"|{name}|{m['MSE']:.6g}|{m['offline_mean_gain']:.6g}|{m['intervention_fraction']:.3f}|")
+        lines.extend(["", "Read `training_curves.png` and each `roundN.controller.diagnostics.json` alongside the rollout selection.",
+                      "Tiny-set failure can reflect optimization or indistinguishable features with conflicting outcomes; it is not automatically an implementation bug.",
+                      "A zero-weight layer has an undefined update/weight ratio (null). No universal ratio threshold is enforced."])
+        lines.extend(["", "![Controller learning diagnostics](training_curves.png)"])
     lines.extend(["","Final metrics use the native 60-step forecast at step50. Curves compare the same absolute [50,100) target interval.",
                   "Group labels for policy curves are frozen at the reference model's step40 event.",
                   "Single-edit diagnostic results are in summary.json, split by event step. Rebuild at step40 is structurally a no-op.",
@@ -109,4 +133,36 @@ def report(out,smoke=False):
     fig.suptitle(title)
     fig.savefig(out/"update_curves.png",dpi=150)
     plt.close(fig)
+    if training and training[-1].get("initial"):
+        learning_curves(training, out/"training_curves.png")
     return summary
+
+
+def learning_curves(training, path):
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    fig,axes=plt.subplots(2,2,figsize=(12,8),layout="constrained")
+    for r,fit in enumerate(training):
+        h=fit['history']
+        steps=[v['step'] for v in h]
+        for split in ('train','dev'):
+            initial=fit['initial'][f'{split}_MSE']
+            axes[0,0].plot([0]+steps,[initial]+[v[f'{split}_MSE'] for v in h],
+                           marker='o',markersize=3,label=f'r{r} {split}')
+        axes[0,1].plot(steps,[v['dev_at_margin_001']['offline_mean_gain'] for v in h],marker='o',markersize=3,label=f'r{r}')
+        axes[1,0].plot(steps,[v['gradient_norm_before_clip'] for v in h],marker='o',markersize=3,label=f'r{r}')
+        for name in ('net.0.weight','net.2.weight','net.4.weight'):
+            axes[1,1].plot(steps,[v['parameter_updates'][name]['update_weight_ratio'] for v in h],
+                           marker='o',markersize=3,label=f'r{r} {name}')
+    for ax,title in zip(axes.flat,('Gain MSE (Train/Dev in the same units)',
+                                 'Dev single-edit gain at margin 0.01 (not rollout)',
+                                 'Gradient norm before clipping', 'Actual AdamW update / prior weight norm')):
+        ax.set(title=title,xlabel='Training step')
+        ax.legend(fontsize=7)
+        ax.grid(alpha=.2)
+    axes[0,0].set_yscale('symlog',linthresh=1e-10)
+    axes[0,1].axhline(0.,color='grey',linestyle='--',linewidth=.8)
+    fig.suptitle('Training diagnostics — not evidence of held-out improvement')
+    fig.savefig(path,dpi=150)
+    plt.close(fig)

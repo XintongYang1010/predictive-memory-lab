@@ -26,7 +26,7 @@ def test_world_residual_preserves_absolute_error(adapter,sequence):
 def test_rigid_transform_invariance(adapter,sequence):
     _,state=adapter.step(sequence[0])
     frame=sequence[1]
-    before=evidence(frame,state)['mse']
+    before=evidence(frame,state)
     phi=torch.tensor(.7)
     rot=rotation(phi)
     shift=torch.tensor([200.,-300.])
@@ -37,7 +37,21 @@ def test_rigid_transform_invariance(adapter,sequence):
     mem['origin']=mem['origin']@rot.T+shift
     mem['theta']+=phi
     mem['glo_y_hat']=mem['glo_y_hat']@rot.T
-    torch.testing.assert_close(evidence(frame2,state2)['mse'],before,atol=2e-3,rtol=2e-5)
+    after=evidence(frame2,state2)
+    torch.testing.assert_close(after['mse'],before['mse'],atol=2e-3,rtol=2e-5)
+    torch.testing.assert_close(after['features'],before['features'],atol=2e-3,rtol=2e-5)
+
+
+def test_mode_order_does_not_change_controller_evidence(adapter,sequence):
+    _,state=adapter.step(sequence[0])
+    original=evidence(sequence[1],state)
+    shuffled=clone(state)
+    order=torch.tensor([3,0,5,2,1,4])
+    for key in ('glo_y_hat','_prob','x_mode'):
+        shuffled['memory'][key]=shuffled['memory'][key][:,order]
+    changed=evidence(sequence[1],shuffled)
+    torch.testing.assert_close(changed['features'],original['features'])
+    torch.testing.assert_close(changed['mse'],original['mse'][order])
 
 
 def test_evidence_only_new_observed_overlap_and_no_compounding(adapter,sequence):

@@ -114,6 +114,7 @@ def select_controller(candidates, model, dev_evaluator, dev_ids, out):
 
 def train_controller(train_rows, dev_rows, out, device="cpu", steps=500, batch_size=64, seed=0,
                      dev_evaluator=None, max_candidates=3):
+    from .diagnostics import diagnose_rows, regression_metrics, activation_stats, parameter_updates
     seed_all(seed)
     if not train_rows or not dev_rows or steps < 1 or max_candidates < 1:
         raise ValueError("Nonempty scene-disjoint train/dev data and positive budgets required")
@@ -122,6 +123,14 @@ def train_controller(train_rows, dev_rows, out, device="cpu", steps=500, batch_s
         raise ValueError("Scene leakage between controller train/dev")
     if dev_evaluator is None:
         raise ValueError("A development-only rollout evaluator is required for V2 model selection")
+    out = Path(out)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    controller_start = clock(device)
+    diagnostic = diagnose_rows(train_rows, dev_rows, seed)
+    diagnostic_seconds = clock(device)-controller_start
+    write_json(out.with_suffix(".diagnostics.json"), diagnostic)
+    tiny = diagnostic["tiny_overfit"]
+    print(f"tiny-set fit: {tiny['status']}, initial MSE={tiny['initial_MSE']:.6g}, best MSE={tiny['best_MSE']:.6g}", flush=True)
     model = Controller().to(device)
     x, gains = training_tensors(train_rows, device)
     xd, gd = training_tensors(dev_rows, device)
@@ -129,8 +138,20 @@ def train_controller(train_rows, dev_rows, out, device="cpu", steps=500, batch_s
     model.std.copy_(x.std(0, unbiased=False).clamp_min(.01))
     opt = torch.optim.AdamW(model.parameters(), lr=1e-3, weight_decay=1e-4)
     history, pool = [], []
+    training_path = out.with_suffix(".training.json")
+    initial = {"train_MSE": float(gains[:, 1:].square().mean()),
+               "dev_MSE": float(gd[:, 1:].square().mean()),
+               "explanation": "Zero-initialized gain head predicts Keep-relative gain 0 for every action"}
+    metadata = {"objective": "per_action_final_ES_gain_MSE", "initial": initial,
+                "diagnostic_seconds": diagnostic_seconds,
+                "train_rows": len(train_rows), "dev_rows": len(dev_rows),
+                "candidate_budget": max_candidates, "tiny_fit_status": tiny["status"],
+                "dev_baselines": diagnostic["dev_baselines"],
+                "parameters": sum(p.numel() for p in model.parameters())}
+    write_json(training_path, dict(metadata, history=history, status="fitting"))
     start = clock(device)
     for step in range(1, steps+1):
+        log_step = step == 1 or step % 50 == 0 or step == steps
         model.train()
         indices = torch.randint(len(x), (min(batch_size, len(x)),), device=device)
         # All actions are supervised in ES units, including harmful interventions.
@@ -139,20 +160,32 @@ def train_controller(train_rows, dev_rows, out, device="cpu", steps=500, batch_s
             raise FloatingPointError("Nonfinite controller regression loss")
         opt.zero_grad(set_to_none=True)
         loss.backward()
-        nn.utils.clip_grad_norm_(model.parameters(), 1.)
+        before = {k: v.detach().clone() for k, v in model.named_parameters()} if log_step else None
+        grad_norm = nn.utils.clip_grad_norm_(model.parameters(), 1., error_if_nonfinite=True)
         opt.step()
-        if step == 1 or step % 50 == 0 or step == steps:
+        if log_step:
             model.eval()
             with torch.no_grad():
-                dev_mse = float((model(xd)[:, 1:]-gd[:, 1:]).square().mean())
+                train_mse = float((model(x)[:, 1:]-gains[:, 1:]).square().mean())
+                dev_metrics = regression_metrics(model(xd), gd, xd)
+                dev_mse = dev_metrics["MSE"]
+                if not math.isfinite(train_mse + dev_mse):
+                    raise FloatingPointError("Nonfinite full-dataset controller MSE")
                 weights = {k: v.detach().cpu().clone() for k, v in model.state_dict().items()}
                 for margin in GAIN_MARGINS:
                     actions = model.actions(xd, margin)
                     offline_gain = float(gd.gather(1, actions[:, None]).mean())
                     pool.append({"step": step, "margin": margin, "offline_dev_gain": offline_gain,
                                  "state_dict": weights, "decisions": tuple(actions.cpu().tolist())})
-            history.append({"step": step, "train_MSE": float(loss.detach()), "dev_MSE": dev_mse})
-            print(f"controller step {step}/{steps}: train MSE={float(loss.detach()):.5f} dev MSE={dev_mse:.5f}", flush=True)
+            history.append({"step": step, "train_MSE": train_mse, "batch_MSE_before_update": float(loss.detach()),
+                            "dev_MSE": dev_mse, "learning_rate": opt.param_groups[0]["lr"],
+                            "gradient_norm_before_clip": float(grad_norm),
+                            "gradient_was_clipped": float(grad_norm) > 1.,
+                            "parameter_updates": parameter_updates(model, before),
+                            "activations": activation_stats(model, x), "dev_at_margin_001": dev_metrics})
+            # Durable progress while fitting, so a later failure retains curves.
+            write_json(training_path, dict(metadata, history=history, status="fitting", fit_seconds=clock(device)-start))
+            print(f"controller step {step}/{steps}: train MSE={train_mse:.5f} dev MSE={dev_mse:.5f} grad={float(grad_norm):.4g}", flush=True)
     fit_seconds = clock(device)-start
     # Counterfactual ranking only makes a bounded shortlist. Final selection
     # uses complete on-policy dev rollouts and always includes Keep fallback.
@@ -164,17 +197,16 @@ def train_controller(train_rows, dev_rows, out, device="cpu", steps=500, batch_s
         candidates.append(item)
         if len(candidates) == max_candidates:
             break
-    out = Path(out)
-    out.parent.mkdir(parents=True, exist_ok=True)
+    write_json(training_path, dict(metadata, history=history, status="selecting", fit_seconds=fit_seconds))
     selection = select_controller(candidates, model, dev_evaluator, dev_ids, out.with_suffix(".selection.json"))
     state = {k: v.detach().cpu().clone() for k, v in model.state_dict().items()}
     torch.save({"schema": CONTROLLER_SCHEMA, "state_dict": state, "actions": list(ACTIONS),
                 "features": list(FEATURES), "objective": "per_action_final_ES_gain_MSE", "selection": selection,
                 "seed": seed, "steps": steps, "train_scenes": sorted(train_ids), "dev_scenes": sorted(dev_ids)}, out)
-    write_json(out.with_suffix(".training.json"), {"history": history, "fit_seconds": fit_seconds,
-               "seconds_including_selection": clock(device)-start, "parameters": sum(p.numel() for p in model.parameters()),
-               "train_rows": len(train_rows), "dev_rows": len(dev_rows), "candidate_budget": max_candidates,
-               "objective": "per_action_final_ES_gain_MSE", "selected_mode": selection["mode"]})
+    write_json(training_path, dict(metadata, history=history, fit_seconds=fit_seconds, status="complete",
+               seconds_including_selection=clock(device)-start,
+               seconds_including_diagnostics_and_selection=clock(device)-controller_start,
+               selected_mode=selection["mode"]))
     return model.eval()
 
 
