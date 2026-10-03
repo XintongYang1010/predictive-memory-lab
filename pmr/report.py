@@ -2,8 +2,9 @@ from collections import Counter
 from pathlib import Path
 import csv
 import json
+import math
 import numpy as np
-from .common import write_json
+from .common import write_json,sha256
 
 
 def read_jsonl(path):
@@ -21,6 +22,66 @@ def paired_ci(deltas,seed=0):
     for _ in range(20):
         draws.extend(gen.choice(a,(50,len(a)),replace=True).mean(-1).tolist())
     return {"n_scenes":len(a),"mean":float(a.mean()),"ci95":np.quantile(draws,[.025,.975]).tolist()}
+
+
+def audit_selections(root):
+    """Recompute every gate from saved complete-scene rollouts, not summaries."""
+    root=Path(root)
+    results=[]
+    def same(a,b):
+        if isinstance(a,dict):
+            if a.keys()!=b.keys():raise ValueError("Selection audit: keys differ")
+            for k in a:same(a[k],b[k])
+        elif isinstance(a,list):
+            if len(a)!=len(b):raise ValueError("Selection audit: list lengths differ")
+            for x,y in zip(a,b):same(x,y)
+        elif isinstance(a,(int,float)):
+            if not math.isclose(a,b,rel_tol=1e-9,abs_tol=1e-10):raise ValueError(f"Selection audit mismatch: {a} != {b}")
+        elif a!=b:raise ValueError(f"Selection audit mismatch: {a} != {b}")
+    for path in sorted(root.rglob("*.selection.json")):
+        selection=json.loads(path.read_text())
+        if selection.get('schema')!=3:
+            raise ValueError("Selection audit needs V3 per-scene candidate records")
+        def artifact(relative):
+            target=(path.parent/relative).resolve()
+            if not target.is_relative_to(path.parent.resolve()):raise ValueError("Candidate artifact outside run")
+            return target
+        def indexed(relative):
+            rows=read_jsonl(artifact(relative))
+            if len(rows)!=selection['n_scenes'] or len({r['scene_id'] for r in rows})!=len(rows):
+                raise ValueError("Selection audit: missing or duplicate scenes")
+            if not all(math.isfinite(r['energy_score']) for r in rows):raise ValueError("Nonfinite candidate ES")
+            return {r['scene_id']:r for r in rows}
+        baseline=indexed(selection['baseline_rollout_file'])
+        ids=sorted(baseline)
+        same(float(np.mean([baseline[s]['energy_score'] for s in ids])),selection['keep_ES'])
+        eligible=[]
+        for candidate in selection['candidates']:
+            trial=indexed(candidate['rollout_file'])
+            if set(trial)!=set(baseline):raise ValueError("Selection audit: foreign scenes")
+            if sha256(artifact(candidate['checkpoint_file']))!=candidate['checkpoint_sha256']:
+                raise ValueError("Candidate checkpoint hash differs")
+            gains=[baseline[s]['energy_score']-trial[s]['energy_score'] for s in ids]
+            for s,g in zip(ids,gains):
+                same(trial[s]['group'],baseline[s]['group'])
+                same(trial[s]['keep_energy_score'],baseline[s]['energy_score'])
+                same(trial[s]['paired_gain'],g)
+            stats=paired_ci(gains)
+            ordinary=[g for s,g in zip(ids,gains) if baseline[s]['group']=='ordinary']
+            ordinary_gain=float(np.mean(ordinary)) if ordinary else None
+            valid=stats['ci95'][0]>0 and (ordinary_gain is None or ordinary_gain>=0)
+            same(stats,candidate['paired_ES_improvement'])
+            same(ordinary_gain,candidate['ordinary_mean_gain'])
+            same(valid,candidate['eligible'])
+            same(float(np.mean([trial[s]['energy_score'] for s in ids])),candidate['mean_final_ES'])
+            same(dict(Counter(a for s in ids for a in trial[s]['edits'][1:])),candidate['action_counts'])
+            if valid:eligible.append(candidate)
+        expected=max(eligible,key=lambda c:c['paired_ES_improvement']['mean']) if eligible else None
+        same(expected,selection['selected'])
+        same('gain_controller' if eligible else 'keep_fallback',selection['mode'])
+        results.append({'selection':str(path.relative_to(root)),'candidates':len(selection['candidates']),'verified':True})
+    if not results:raise ValueError("No selection records found")
+    return {'passed':True,'selections':results,'scope':'Saved Dev rollouts and gate arithmetic; no predictor rerun or significance claim'}
 
 
 def report(out,smoke=False):
@@ -41,6 +102,7 @@ def report(out,smoke=False):
         metrics["paired_ES_improvement"]=paired_ci(gains)
         metrics["mean_seconds_per_scene"]=float(np.mean([r["seconds"] for r in subset]))
         metrics["forward_calls"]=sum(r["forward_calls"] for r in subset)
+        metrics["probe_forward_calls"]=sum(r.get("probe_forward_calls",0) for r in subset)
         metrics["actions_by_step"]={str(step):dict(Counter(r["edits"][i] for r in subset))
                                     for i,step in enumerate((30,40,50))}
         metrics["groups"]={}
@@ -57,8 +119,30 @@ def report(out,smoke=False):
                 # At a fixed event_step there is one event per scene.
                 stats[action]=paired_ci([r["branches"]["keep"]["loss"]-r["branches"][action]["loss"] for r in events])
             summary["diagnostic"][f"step{step}_{group}"]=stats
+    summary['diagnostic_metrics']={'diagnostic':'common-window average ES gain (legacy)',
+                                   'diagnostic_final':'final 60-frame ES gain; hindsight is not deployed performance'}
+    summary['diagnostic_final']={}
+    for step in (40,50):
+        events=[r for r in diagnostic if r['event_step']==step]
+        if not events:continue
+        summary['diagnostic_final'][str(step)]={a:paired_ci([
+            r['branches']['keep']['final']['energy_score']-r['branches'][a]['final']['energy_score'] for r in events])
+            for a in sorted(events[0]['branches'])}
+        summary['diagnostic_final'][str(step)]['hindsight_core4']=paired_ci([
+            r['branches']['keep']['final']['energy_score']-min(r['branches'][a]['final']['energy_score']
+            for a in ('keep','reweight','rebuild','reset')) for r in events])
     summary["controller_selection"]=[json.loads(path.read_text()) for path in sorted(
         out.glob("round*.controller.selection.json"),key=lambda p:int(p.name.split('.')[0][5:]))]
+    summary["ablation_selection"]={path.parent.name:json.loads(path.read_text())
+                                     for path in sorted((out/"ablations").glob("*/round0.controller.selection.json"))}
+    summary["ablation_comparisons"]={}
+    for left,right in (("controller_base","controller_temporal"),("controller_temporal","controller")):
+        left_rows={r['scene_id']:r for r in rows if r['policy']==left}
+        right_rows={r['scene_id']:r for r in rows if r['policy']==right}
+        if left_rows and right_rows:
+            if set(left_rows)!=set(right_rows):raise ValueError("Unpaired ablation scenes")
+            summary['ablation_comparisons'][f'{right}_over_{left}']=paired_ci([
+                left_rows[s]['final']['energy_score']-right_rows[s]['final']['energy_score'] for s in sorted(left_rows)])
     training_paths=sorted(out.glob("round*.controller.training.json"),key=lambda p:int(p.name.split('.')[0][5:]))
     training=[json.loads(path.read_text()) for path in training_paths]
     summary["controller_learning"]=[{
@@ -68,7 +152,7 @@ def report(out,smoke=False):
         "dev_baselines":item.get("dev_baselines"),
     } for path,item in zip(training_paths,training)]
     write_json(out/"summary.json",summary)
-    fields=["policy","energy_score","minADE6","minFDE6","b_minFDE6","b_minFDE6_upstream","miss_rate","mean_seconds_per_scene"]
+    fields=["policy","energy_score","minADE6","minFDE6","b_minFDE6","b_minFDE6_upstream","miss_rate","mean_seconds_per_scene","forward_calls","probe_forward_calls"]
     with (out/"metrics.csv").open("w",newline="") as f:
         writer=csv.DictWriter(f,fieldnames=fields)
         writer.writeheader()
@@ -82,6 +166,20 @@ def report(out,smoke=False):
     for policy,m in summary["policies"].items():
         d=m["paired_ES_improvement"]
         lines.append(f"|{policy}|{m['energy_score']:.4f}|{m['minADE6']:.4f}|{m['minFDE6']:.4f}|{d['mean']:.4f} [{d['ci95'][0]:.4f}, {d['ci95'][1]:.4f}]|")
+    lines.extend(["","All controller arms and keep_probe run two target-free influence probes per decision.",
+                  "Keep is the native-cost baseline. Extra Rebuild forwards are included in the totals below.","",
+                  "|Policy|Seconds/scene|Forwards/scene|Probe forwards/scene|","|---|---:|---:|---:|"])
+    for policy,m in summary['policies'].items():
+        n=m['paired_ES_improvement']['n_scenes']
+        lines.append(f"|{policy}|{m['mean_seconds_per_scene']:.5f}|{m['forward_calls']/n:.2f}|{m['probe_forward_calls']/n:.2f}|")
+    if summary['ablation_selection']:
+        lines.extend(["","Feature ablations use identical Keep-generated Train/Dev branches and equal training/candidate budgets.",
+                      "All arms are fixed on Dev before Eval; this table does not choose an Eval winner.","",
+                      "|Feature set|Dev selection|","|---|---|"])
+        for name,s in {**summary['ablation_selection'],'temporal_influence':summary['controller_selection'][-1]}.items():
+            lines.append(f"|{name}|{s['mode']}|")
+        for name,d in summary['ablation_comparisons'].items():
+            lines.append(f"{name}: paired ES gain {d['mean']:.6g}, CI {d['ci95']} (exploratory).")
     if summary["controller_selection"]:
         selection=summary["controller_selection"][-1]
         lines.extend(["",f"Controller selection: **{selection['mode']}** (development scenes only)."])
@@ -112,7 +210,7 @@ def report(out,smoke=False):
         lines.extend(["", "![Controller learning diagnostics](training_curves.png)"])
     lines.extend(["","Final metrics use the native 60-step forecast at step50. Curves compare the same absolute [50,100) target interval.",
                   "Group labels for policy curves are frozen at the reference model's step40 event.",
-                  "Single-edit diagnostic results are in summary.json, split by event step. Rebuild at step40 is structurally a no-op.",
+                  "Single-edit final-60-frame results are in summary.json / diagnostic_final; diagnostic retains legacy common-window gains. Rebuild at step40 is structurally a no-op.",
                   "b_minFDE6 selects the minimum-FDE mode then adds its Brier term; b_minFDE6_upstream minimizes the sum, matching the pinned repository.",
                   "No best-branch/oracle score is presented as deployed-controller performance."])
     (out/"REPORT.md").write_text("\n".join(lines)+"\n")
@@ -135,6 +233,8 @@ def report(out,smoke=False):
     plt.close(fig)
     if training and training[-1].get("initial"):
         learning_curves(training, out/"training_curves.png")
+    for path in (out/"ablations").glob("*/round0.controller.training.json"):
+        learning_curves([json.loads(path.read_text())],path.parent/"training_curves.png")
     return summary
 
 

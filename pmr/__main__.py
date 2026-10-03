@@ -13,18 +13,24 @@ def parser():
     sub=p.add_subparsers(dest="command",required=True)
     setup=sub.add_parser("setup"); setup.add_argument("--source")
     doctor=sub.add_parser("doctor"); doctor.add_argument("--device",default="cuda"); doctor.add_argument("--strict",action="store_true")
-    diag=sub.add_parser("diagnose",help="Diagnose saved V2 Train/Dev branch rows on CPU without rerunning RealMotion")
+    diag=sub.add_parser("diagnose",help="Diagnose saved V3 Train/Dev branch rows on CPU without rerunning RealMotion")
     diag.add_argument("--run",required=True);diag.add_argument("--round",type=int,default=0)
     diag.add_argument("--steps",type=int,default=300);diag.add_argument("--seed",type=int,default=42)
     diag.add_argument("--out",help="JSON output; defaults to roundN.controller.diagnostics.json in the run directory")
+    from .adapter import FEATURE_SETS
+    diag.add_argument("--feature-set",choices=FEATURE_SETS,default="temporal_influence")
+    audit=sub.add_parser("audit-selection",help="Independently recompute saved candidate selection from per-scene Dev rows")
+    audit.add_argument("--run",required=True)
     for command in ("smoke","run"):
         q=sub.add_parser(command)
         q.add_argument("--device",default="cpu" if command=="smoke" else "cuda")
-        q.add_argument("--out",default=f"runs/{command}_v2")
+        q.add_argument("--out",default=f"runs/{command}_v3")
         q.add_argument("--seed",type=int,default=42)
         q.add_argument("--steps",type=int,default=30 if command=="smoke" else 500)
         q.add_argument("--rounds",type=int,default=1)
         q.add_argument("--dev-candidates",type=int,default=3,help="Maximum candidate policies evaluated on complete dev rollouts per round")
+        q.add_argument("--feature-set",choices=FEATURE_SETS,default="temporal_influence")
+        q.add_argument("--ablation",action="store_true",help="Compare all three feature sets on identical Keep-generated training rows; requires one round")
         q.add_argument("--threads",type=int,default=2)
         q.add_argument("--resume",action="store_true",help="Reuse completed stages only, with exact same settings")
         if command=="run":
@@ -58,7 +64,7 @@ def doctor(args):
 
 
 def run(args):
-    from .adapter import RealMotionAdapter
+    from .adapter import RealMotionAdapter,FEATURE_SETS
     from .data import make_manifest,create_synthetic,load_sequence
     from .experiment import correctness,baseline_adapter_check,calibrate,collect,evaluate,development_rollout
     from .controller import train_controller,load_controller
@@ -68,6 +74,8 @@ def run(args):
     seed_all(args.seed)
     if args.steps<1 or args.rounds<1 or args.dev_candidates<1:
         raise ValueError("steps, rounds and dev-candidates must be positive")
+    if args.ablation and (args.rounds!=1 or args.feature_set!="temporal_influence"):
+        raise ValueError("--ablation requires --rounds 1 and the default temporal_influence feature set")
     out=Path(args.out).resolve()
     info=environment(args.device)
     settings={k:v for k,v in vars(args).items() if k!="resume"}
@@ -105,26 +113,39 @@ def run(args):
         cal=out/"calibration.json"
         config=json.loads(cal.read_text()) if args.resume and cal.exists() else calibrate(adapter,groups["calib"],cal,args.device,trusted,args.seed)
         current="keep"
+        ablations={}
         for r in range(args.rounds):
             prefix=out/f"round{r}"
             done=prefix.with_suffix(".complete.json")
             ctrl=prefix.with_suffix(".controller.pt")
             if args.resume and done.exists() and ctrl.exists():
                 current=load_controller(ctrl,args.device)
+                if args.ablation:
+                    for name in ("base","temporal"):
+                        ablations[f"controller_{name}"]=load_controller(out/"ablations"/name/ctrl.name,args.device)
                 continue
             train_rows=collect(adapter,groups["train"],prefix.with_suffix(".train.jsonl"),config,args.device,current,trusted=trusted,seed=args.seed,round_id=r)
             dev_rows=collect(adapter,groups["dev"],prefix.with_suffix(".dev.jsonl"),config,args.device,current,trusted=trusted,seed=args.seed,round_id=r)
             dev_evaluator=lambda policy: development_rollout(adapter,groups["dev"],config,args.device,policy,trusted,args.seed)
-            current=train_controller(train_rows,dev_rows,ctrl,args.device,args.steps,seed=args.seed+r,
-                                     dev_evaluator=dev_evaluator,max_candidates=args.dev_candidates)
+            for name in (FEATURE_SETS if args.ablation else (args.feature_set,)):
+                target=ctrl if name==args.feature_set else out/"ablations"/name/ctrl.name
+                fitted=train_controller(train_rows,dev_rows,target,args.device,args.steps,seed=args.seed+r,
+                                        dev_evaluator=dev_evaluator,max_candidates=args.dev_candidates,feature_set=name)
+                if name==args.feature_set:
+                    current=fitted
+                else:
+                    ablations[f"controller_{name}"]=fitted
             write_json(done,{"complete":True,"round":r})
         # Confirmation is evaluated once, after the fixed number of rounds.
         collect(adapter,groups["eval"],out/"diagnostic.jsonl",config,args.device,"keep",True,trusted,args.seed)
-        evaluate(adapter,groups["eval"],out/"evaluation.jsonl",config,args.device,current,trusted,args.seed)
+        evaluate(adapter,groups["eval"],out/"evaluation.jsonl",config,args.device,current,trusted,args.seed,ablations)
+        from .report import audit_selections
+        write_json(out/"selection_audit.json",audit_selections(out))
         report(out,smoke)
         elapsed=clock(args.device)-timer
         write_json(out/"run_stats.json",{"status":"complete","seconds":elapsed,"device_hours":elapsed/3600,
-                   "predictor_forward_calls":adapter.forward_calls,"peak_cuda_allocated_bytes":torch.cuda.max_memory_allocated(args.device) if str(args.device).startswith("cuda") else None})
+                   "predictor_forward_calls":adapter.forward_calls,"probe_forward_calls":adapter.probe_forward_calls,
+                   "peak_cuda_allocated_bytes":torch.cuda.max_memory_allocated(args.device) if str(args.device).startswith("cuda") else None})
         failure=out/"failure.json"
         if failure.exists(): failure.unlink()
         print(f"Complete: {out/'REPORT.md'}",flush=True)
@@ -160,13 +181,16 @@ def main():
     if args.command=="setup": print(prepare(args.source))
     elif args.command=="doctor": doctor(args)
     elif args.command=="profile": profile(args)
+    elif args.command=="audit-selection":
+        from .report import audit_selections
+        print(json.dumps(audit_selections(Path(args.run)),indent=2))
     elif args.command=="diagnose":
         from .diagnostics import diagnose_rows
         from .report import read_jsonl
         torch.set_num_threads(2)
         root=Path(args.run)
         result=diagnose_rows(read_jsonl(root/f"round{args.round}.train.jsonl"),
-                             read_jsonl(root/f"round{args.round}.dev.jsonl"),args.seed,args.steps)
+                             read_jsonl(root/f"round{args.round}.dev.jsonl"),args.seed,args.steps,args.feature_set)
         target=Path(args.out) if args.out else root/f"round{args.round}.controller.diagnostics.json"
         write_json(target,result)
         print(json.dumps({"output":str(target),"tiny_fit":result["tiny_overfit"]["status"],

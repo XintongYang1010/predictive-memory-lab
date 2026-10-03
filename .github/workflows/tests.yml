@@ -17,3 +17,8 @@ jobs:
         run: .venv/bin/python -m pytest -q
       - name: End-to-end smoke
         run: .venv/bin/python -m pmr smoke --steps 10 --rounds 2 --out runs/ci
+      - name: Three-arm ablation and saved selection audit
+        run: |
+          .venv/bin/python -m pmr smoke --steps 50 --ablation --out runs/ci-v3
+          .venv/bin/python -m pmr audit-selection --run runs/ci-v3
+          .venv/bin/python scripts/package_results.py --run runs/ci-v3

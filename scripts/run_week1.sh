@@ -24,4 +24,4 @@ MODEL_PATH="${CHECKPOINT:-$PMR_ROOT/checkpoints/realmotion.pth}"
 if [[ ! -f "$MODEL_PATH" ]]; then
   "$PMR_PYTHON" scripts/download_checkpoint.py --out "$MODEL_PATH"
 fi
-exec "$PMR_PYTHON" -m pmr run --data-root "$PROCESSED" --checkpoint "$MODEL_PATH" --trust-inputs --device cuda --out runs/week1_v2 "$@"
+exec "$PMR_PYTHON" -m pmr run --data-root "$PROCESSED" --checkpoint "$MODEL_PATH" --trust-inputs --device cuda --out runs/week1_v3 "$@"

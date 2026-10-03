@@ -10,11 +10,20 @@ from .upstream import activate
 
 ACTIONS = ("keep", "reweight", "rebuild", "reset")
 DIAGNOSTICS = ACTIONS + ("drop_worst", "random_drop", "decay", "reset_all")
-FEATURES = ("min_rmse", "max_rmse", "mean_rmse", "std_rmse", "weighted_rmse",
+BASE_FEATURES = ("min_rmse", "max_rmse", "mean_rmse", "std_rmse", "weighted_rmse",
             "prior_entropy", "age_seconds", "speed", "abs_heading_change",
             "observed_fraction", "endpoint_spread", "has_evidence",
             "update_time_seconds", "rebuild_available")
-FEATURE_SCHEMA = 2
+TEMPORAL_FEATURES = ("early_rmse", "late_rmse", "rmse_growth", "residual_longitudinal",
+                     "residual_lateral", "direction_consistency", "previous_rmse",
+                     "rmse_change", "persistent_rmse", "across_update_alignment",
+                     "has_previous_evidence", "has_temporal_span")
+INFLUENCE_FEATURES = ("probe_mean_shift", "probe_endpoint_shift", "probe_energy_distance",
+                      "conflict_times_influence", "has_influence_probe")
+FEATURES = BASE_FEATURES + TEMPORAL_FEATURES + INFLUENCE_FEATURES
+FEATURE_SETS = {"base": BASE_FEATURES, "temporal": BASE_FEATURES + TEMPORAL_FEATURES,
+                "temporal_influence": FEATURES}
+FEATURE_SCHEMA = 3
 MODEL_KWARGS = dict(embed_dim=128, future_steps=60, encoder_depth=4,
                     num_heads=8, mlp_ratio=4., qkv_bias=False, drop_path=.2)
 
@@ -44,6 +53,8 @@ def evidence(frame, state):
     prior=mem["_prob"][0]
     age=float(frame["timestamp"][0]-mem["timestamp"][0])
     mse=prior.new_zeros(prior.shape)
+    temporal=prior.new_zeros(len(TEMPORAL_FEATURES))
+    mean_error=prior.new_zeros(2)
     valid_count=0
     if hi>lo:
         mask=frame["x_valid_mask"][0,0,lo-hist_start:hi-hist_start]
@@ -51,7 +62,30 @@ def evidence(frame, state):
         if valid_count:
             actual=history[lo-hist_start:hi-hist_start] @ rotation(frame["theta"][0]).T + frame["origin"][0]
             predicted=mem["glo_y_hat"][0,:,lo-previous_step:hi-previous_step]+mem["origin"][0]
-            mse=(predicted[:,mask]-actual[mask]).square().sum(-1).mean(-1)
+            errors=predicted[:,mask]-actual[mask]
+            mse=errors.square().sum(-1).mean(-1)
+            vectors=(prior[:,None,None]*errors).sum(0)
+            mean_error=vectors.mean(0)
+            local_error=mean_error @ rotation(frame["theta"][0])
+            consistency=mean_error.norm()/vectors.norm(dim=-1).mean().clamp_min(1e-6)
+            times=torch.arange(hi-lo,device=mask.device)[mask]
+            early=times<(hi-lo)/2
+            has_span=bool(early.any() and (~early).any())
+            early_rmse=(prior*errors[:,early].square().sum(-1).mean(-1).sqrt()).sum() if has_span else prior.new_zeros(())
+            late_rmse=(prior*errors[:,~early].square().sum(-1).mean(-1).sqrt()).sum() if has_span else prior.new_zeros(())
+            current_rmse=(prior*mse.sqrt()).sum()
+            previous=state.get("previous_evidence")
+            has_previous=previous is not None and previous["valid_count"]>0
+            previous_rmse=previous["rmse"] if has_previous else prior.new_zeros(())
+            alignment=prior.new_zeros(())
+            if has_previous:
+                old_error=previous["mean_error"]
+                alignment=(mean_error*old_error).sum()/(mean_error.norm()*old_error.norm()).clamp_min(1e-6)
+            temporal=torch.stack((early_rmse,late_rmse,late_rmse-early_rmse,
+                                  local_error[0],local_error[1],consistency.clamp(0,1),previous_rmse,
+                                  current_rmse-previous_rmse if has_previous else prior.new_zeros(()),
+                                  torch.minimum(current_rmse,previous_rmse),alignment.clamp(-1,1),
+                                  prior.new_tensor(float(has_previous)),prior.new_tensor(float(has_span))))
     rmse=mse.sqrt()
     endpoints=mem["glo_y_hat"][0,:,-1]
     spread=(endpoints-endpoints.mean(0)).norm(dim=-1).mean()
@@ -63,8 +97,26 @@ def evidence(frame, state):
                       rmse.new_tensor(float(valid_count>0)),
                       rmse.new_tensor(current_step/10.),
                       rmse.new_tensor(float(state["has_prior_context"])) ))
-    return {"features":feat,"mse":mse,"prior":prior,"age":age,
+    feat=torch.cat((feat,temporal,feat.new_zeros(len(INFLUENCE_FEATURES))))
+    return {"features":feat,"mse":mse,"prior":prior,"age":age,"mean_error":mean_error,
             "valid_count":valid_count,"from_step":lo,"until_step":hi}
+
+
+def influence_features(keep, reset, conflict):
+    """Compare predicted distributions, without targets or future validity masks.
+
+    Symmetric energy distance is invariant to independent mode permutations.
+    It measures sensitivity, not whether either prediction is correct.
+    """
+    y,z=keep["y_hat"][0],reset["y_hat"][0]
+    p,q=keep["pi"][0].softmax(-1),reset["pi"][0].softmax(-1)
+    shift=(p[:,None,None]*y).sum(0)-(q[:,None,None]*z).sum(0)
+    a,b=y.flatten(1)/(y.shape[1]**.5),z.flatten(1)/(z.shape[1]**.5)
+    distance=(2*(p[:,None]*q[None,:]*torch.cdist(a,b)).sum()
+              -(p[:,None]*p[None,:]*torch.cdist(a,a)).sum()
+              -(q[:,None]*q[None,:]*torch.cdist(b,b)).sum()).clamp_min(0)
+    return torch.stack((shift.square().sum(-1).mean().sqrt(),shift[-1].norm(),distance,
+                        conflict*distance,distance.new_ones(())))
 
 
 class RealMotionAdapter:
@@ -97,6 +149,7 @@ class RealMotionAdapter:
         self._mask=None
         self._scale=1.
         self.forward_calls=0
+        self.probe_forward_calls=0
         self.model.traj_interact.register_forward_pre_hook(self._before_interaction,with_kwargs=True)
         self.model.traj_interact.register_forward_hook(self._after_interaction)
         self.model.stream_loc.register_forward_hook(self._after_correction)
@@ -130,14 +183,28 @@ class RealMotionAdapter:
         return out
 
     @torch.no_grad()
+    def decision_evidence(self, frame, state):
+        # Two cloned, current-observation forwards; neither result is committed.
+        ev=evidence(frame,state)
+        keep=self._forward(frame,state["memory"],"keep")
+        reset=self._forward(frame,state["memory"],"reset")
+        self.probe_forward_calls+=2
+        ev["features"][-len(INFLUENCE_FEATURES):]=influence_features(keep,reset,ev["features"][4])
+        return ev
+
+    @torch.no_grad()
     def step(self,frame,state=None,edit="keep",sigma=2.,drop_count=2,seed=0,tau=1.):
         if edit not in DIAGNOSTICS:
             raise ValueError(edit)
         memory=clone(state["memory"]) if state else None
         mask=None
         scale=1.
+        previous_evidence=None
         if state:
             ev=evidence(frame,state)
+            previous_evidence={"rmse":ev["features"][4].detach().clone(),
+                               "mean_error":ev["mean_error"].detach().clone(),
+                               "valid_count":ev["valid_count"]}
             if ev["age"]<=0 or ev["age"]>6:
                 raise ValueError("Memory must precede this observation by (0,6] seconds")
             if edit=="reset_all":
@@ -172,4 +239,4 @@ class RealMotionAdapter:
         # Native schedule is 30/40/50 and yields exactly one second here.
         out=self._forward(frame,memory,edit,mask,scale)
         return out,{"memory":clone(out["memory_dict"]),"previous_observation":observed_only(frame),
-                    "has_prior_context":memory is not None}
+                    "has_prior_context":memory is not None,"previous_evidence":previous_evidence}

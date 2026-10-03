@@ -55,9 +55,9 @@ def test_each_action_can_be_selected(gains,expected):
 
 def test_v1_rows_and_weights_fail_clearly(tmp_path):
     old=row('x');old.pop('feature_schema')
-    with pytest.raises(ValueError,match='V2 needs fresh'):training_tensors([old],'cpu')
+    with pytest.raises(ValueError,match='V3 needs fresh'):training_tensors([old],'cpu')
     torch.save({'features':list(FEATURES)[:12]},tmp_path/'v1.pt')
-    with pytest.raises(ValueError,match='V1 weights'):load_controller(tmp_path/'v1.pt')
+    with pytest.raises(ValueError,match='V1/V2 weights'):load_controller(tmp_path/'v1.pt')
 
 
 def test_positive_offline_gain_cannot_override_harmful_closed_loop(tmp_path):

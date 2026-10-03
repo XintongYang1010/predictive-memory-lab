@@ -2,20 +2,25 @@
 from pathlib import Path
 from collections import Counter
 import math
+import json
 import numpy as np
 import torch
 from torch import nn
-from .adapter import ACTIONS, FEATURES, FEATURE_SCHEMA
-from .common import seed_all, write_json, clock
+from .adapter import ACTIONS, FEATURES, FEATURE_SCHEMA, FEATURE_SETS
+from .common import seed_all, write_json, clock, sha256
 from .report import paired_ci
 
-CONTROLLER_SCHEMA = 2
+CONTROLLER_SCHEMA = 3
 GAIN_MARGINS = (.01, .05, .1)
 
 
 class Controller(nn.Module):
-    def __init__(self):
+    def __init__(self, feature_set="temporal_influence"):
         super().__init__()
+        if feature_set not in FEATURE_SETS:
+            raise ValueError(f"Unknown feature set: {feature_set}")
+        self.feature_set=feature_set
+        self.register_buffer("feature_mask",torch.tensor([float(f in FEATURE_SETS[feature_set]) for f in FEATURES]))
         self.register_buffer("mean", torch.zeros(len(FEATURES)))
         self.register_buffer("std", torch.ones(len(FEATURES)))
         self.register_buffer("gain_margin", torch.tensor(.01))
@@ -26,7 +31,7 @@ class Controller(nn.Module):
         nn.init.zeros_(self.net[-1].bias)
 
     def forward(self, x):
-        gains = self.net(((x-self.mean)/self.std).clamp(-20, 20))
+        gains = self.net(((x-self.mean)/self.std).clamp(-20, 20)*self.feature_mask)
         return torch.cat((torch.zeros_like(gains[..., :1]), gains), dim=-1)
 
     @torch.no_grad()
@@ -50,13 +55,13 @@ class Controller(nn.Module):
 
 def training_tensors(rows, device):
     if any(r.get("feature_schema") != FEATURE_SCHEMA or r.get("feature_names") != list(FEATURES) for r in rows):
-        raise ValueError("V2 needs fresh branch rows with stage features and final ES; do not reuse V1 labels")
+        raise ValueError("V3 needs fresh branch rows with temporal/probe features; do not reuse V1/V2 labels")
     x = torch.tensor([r["features"] for r in rows], dtype=torch.float32, device=device)
     try:
         losses = torch.tensor([[r["branches"][a]["final"]["energy_score"] for a in ACTIONS] for r in rows],
                               dtype=torch.float32, device=device)
     except KeyError as exc:
-        raise ValueError("Missing full-horizon final ES in branch labels; regenerate them with V2") from exc
+        raise ValueError("Missing full-horizon final ES in branch labels; regenerate them with V3") from exc
     if not bool(torch.isfinite(x).all() and torch.isfinite(losses).all()):
         raise ValueError("Nonfinite controller training data")
     return x, losses[:, :1]-losses
@@ -64,6 +69,13 @@ def training_tensors(rows, device):
 
 def select_controller(candidates, model, dev_evaluator, dev_ids, out):
     """The development CI is a tuning gate, not a post-selection significance claim."""
+    out=Path(out)
+    artifacts=out.parent/(out.name.removesuffix(".selection.json")+".candidates")
+    artifacts.mkdir(parents=True,exist_ok=True)
+    def save_rows(name, rows):
+        path=artifacts/name
+        path.write_text(''.join(json.dumps(r,allow_nan=False)+'\n' for r in rows))
+        return str(path.relative_to(out.parent))
     def checked(policy):
         rows = dev_evaluator(policy)
         if len(rows) != len(dev_ids) or {r["scene_id"] for r in rows} != dev_ids:
@@ -74,6 +86,7 @@ def select_controller(candidates, model, dev_evaluator, dev_ids, out):
 
     baseline = checked("keep")
     ids = sorted(dev_ids)
+    baseline_file=save_rows("keep.jsonl",[baseline[s] for s in ids])
     ordinary = [baseline[s]["group"] == "ordinary" for s in ids]
     selected = None
     records = []
@@ -81,8 +94,17 @@ def select_controller(candidates, model, dev_evaluator, dev_ids, out):
         model.load_state_dict(candidate["state_dict"])
         model.gain_margin.fill_(candidate["margin"])
         model.keep_only.fill_(False)
+        checkpoint=artifacts/f"candidate{rank:03d}.pt"
+        torch.save({"schema":CONTROLLER_SCHEMA,"features":list(FEATURES),"actions":list(ACTIONS),
+                    "feature_set":model.feature_set,"training_step":candidate["step"],
+                    "state_dict":{k:v.detach().cpu().clone() for k,v in model.state_dict().items()}},checkpoint)
         trial = checked(model.eval())
+        if any(trial[s]["group"]!=baseline[s]["group"] for s in ids):
+            raise ValueError("Candidate changed reference development groups")
         gains = np.array([baseline[s]["energy_score"]-trial[s]["energy_score"] for s in ids])
+        rollout_file=save_rows(f"candidate{rank:03d}.jsonl",[
+            dict(trial[s],keep_energy_score=baseline[s]["energy_score"],paired_gain=float(g))
+            for s,g in zip(ids,gains)])
         ci = paired_ci(gains)
         ordinary_gain = float(gains[ordinary].mean()) if any(ordinary) else None
         eligible = ci["ci95"][0] > 0 and (ordinary_gain is None or ordinary_gain >= 0)
@@ -91,6 +113,8 @@ def select_controller(candidates, model, dev_evaluator, dev_ids, out):
                 "mean_final_ES": float(np.mean([trial[s]["energy_score"] for s in ids])),
                 "paired_ES_improvement": ci, "ordinary_mean_gain": ordinary_gain,
                 "eligible": eligible,
+                "rollout_file":rollout_file,"checkpoint_file":str(checkpoint.relative_to(out.parent)),
+                "checkpoint_sha256":sha256(checkpoint),
                 "action_counts": dict(Counter(a for s in ids for a in trial[s]["edits"][1:]))}
         records.append(item)
         print(f"dev rollout step={candidate['step']} margin={candidate['margin']}: gain={ci['mean']:.5f}, eligible={eligible}", flush=True)
@@ -102,6 +126,7 @@ def select_controller(candidates, model, dev_evaluator, dev_ids, out):
     else:
         model.keep_only.fill_(True)
     selection = {"schema": CONTROLLER_SCHEMA, "split": "dev_from_official_train",
+                 "feature_set":model.feature_set,"baseline_rollout_file":baseline_file,
                  "metric": "final_60_frame_energy_score", "n_scenes": len(ids),
                  "keep_ES": float(np.mean([baseline[s]["energy_score"] for s in ids])),
                  "gate": "paired development CI lower bound > 0 and ordinary mean gain >= 0",
@@ -113,7 +138,7 @@ def select_controller(candidates, model, dev_evaluator, dev_ids, out):
 
 
 def train_controller(train_rows, dev_rows, out, device="cpu", steps=500, batch_size=64, seed=0,
-                     dev_evaluator=None, max_candidates=3):
+                     dev_evaluator=None, max_candidates=3, feature_set="temporal_influence"):
     from .diagnostics import diagnose_rows, regression_metrics, activation_stats, parameter_updates
     seed_all(seed)
     if not train_rows or not dev_rows or steps < 1 or max_candidates < 1:
@@ -126,12 +151,12 @@ def train_controller(train_rows, dev_rows, out, device="cpu", steps=500, batch_s
     out = Path(out)
     out.parent.mkdir(parents=True, exist_ok=True)
     controller_start = clock(device)
-    diagnostic = diagnose_rows(train_rows, dev_rows, seed)
+    diagnostic = diagnose_rows(train_rows, dev_rows, seed, feature_set=feature_set)
     diagnostic_seconds = clock(device)-controller_start
     write_json(out.with_suffix(".diagnostics.json"), diagnostic)
     tiny = diagnostic["tiny_overfit"]
     print(f"tiny-set fit: {tiny['status']}, initial MSE={tiny['initial_MSE']:.6g}, best MSE={tiny['best_MSE']:.6g}", flush=True)
-    model = Controller().to(device)
+    model = Controller(feature_set).to(device)
     x, gains = training_tensors(train_rows, device)
     xd, gd = training_tensors(dev_rows, device)
     model.mean.copy_(x.mean(0))
@@ -143,6 +168,7 @@ def train_controller(train_rows, dev_rows, out, device="cpu", steps=500, batch_s
                "dev_MSE": float(gd[:, 1:].square().mean()),
                "explanation": "Zero-initialized gain head predicts Keep-relative gain 0 for every action"}
     metadata = {"objective": "per_action_final_ES_gain_MSE", "initial": initial,
+                "feature_set":feature_set,"active_features":list(FEATURE_SETS[feature_set]),
                 "diagnostic_seconds": diagnostic_seconds,
                 "train_rows": len(train_rows), "dev_rows": len(dev_rows),
                 "candidate_budget": max_candidates, "tiny_fit_status": tiny["status"],
@@ -201,6 +227,7 @@ def train_controller(train_rows, dev_rows, out, device="cpu", steps=500, batch_s
     selection = select_controller(candidates, model, dev_evaluator, dev_ids, out.with_suffix(".selection.json"))
     state = {k: v.detach().cpu().clone() for k, v in model.state_dict().items()}
     torch.save({"schema": CONTROLLER_SCHEMA, "state_dict": state, "actions": list(ACTIONS),
+                "feature_set":feature_set,
                 "features": list(FEATURES), "objective": "per_action_final_ES_gain_MSE", "selection": selection,
                 "seed": seed, "steps": steps, "train_scenes": sorted(train_ids), "dev_scenes": sorted(dev_ids)}, out)
     write_json(training_path, dict(metadata, history=history, fit_seconds=fit_seconds, status="complete",
@@ -213,7 +240,7 @@ def train_controller(train_rows, dev_rows, out, device="cpu", steps=500, batch_s
 def load_controller(path, device="cpu"):
     obj = torch.load(path, map_location=device, weights_only=True)
     if obj.get("schema") != CONTROLLER_SCHEMA or obj["features"] != list(FEATURES) or obj["actions"] != list(ACTIONS):
-        raise ValueError("Controller schema mismatch: V1 weights cannot be loaded by V2; use a new run directory")
-    model = Controller().to(device)
+        raise ValueError("Controller schema mismatch: V1/V2 weights cannot be loaded by V3; use a new run directory")
+    model = Controller(obj["feature_set"]).to(device)
     model.load_state_dict(obj["state_dict"], strict=True)
     return model.eval()

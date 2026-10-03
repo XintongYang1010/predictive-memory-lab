@@ -1,7 +1,7 @@
 """Train/dev-only learning diagnostics; never select a deployment policy here."""
 from collections import Counter
 import torch
-from .adapter import ACTIONS, FEATURES
+from .adapter import ACTIONS, FEATURES, FEATURE_SETS
 
 
 def available_actions(x):
@@ -53,7 +53,7 @@ def feature_health(x, mean, std):
             for i, name in enumerate(FEATURES)}
 
 
-def tiny_overfit(x, gains, steps=300, seed=0):
+def tiny_overfit(x, gains, steps=300, seed=0, feature_set="temporal_influence"):
     """Fit up to 16 training events with no regularization; preserve caller RNG.
 
     Failure is diagnostic, not proof of a bug: identical features can have
@@ -66,7 +66,8 @@ def tiny_overfit(x, gains, steps=300, seed=0):
     gen = torch.Generator().manual_seed(seed)
     indices = torch.randperm(len(x), generator=gen)[:16]
     xt, yt = x[indices], gains[indices, 1:]
-    _, inverse = torch.unique(xt, dim=0, return_inverse=True)
+    cols=[FEATURES.index(f) for f in FEATURE_SETS[feature_set]]
+    _, inverse = torch.unique(xt[:,cols], dim=0, return_inverse=True)
     floor_pred = torch.empty_like(yt)
     for group in inverse.unique():
         mask = inverse == group
@@ -75,7 +76,7 @@ def tiny_overfit(x, gains, steps=300, seed=0):
     with torch.random.fork_rng(devices=[]):
         # CPU-only diagnostic: do not reseed any CUDA generators.
         torch.random.default_generator.manual_seed(seed)
-        model = Controller()
+        model = Controller(feature_set)
         model.mean.copy_(xt.mean(0))
         model.std.copy_(xt.std(0, unbiased=False).clamp_min(.01))
         opt = torch.optim.AdamW(model.parameters(), lr=.01, weight_decay=0.)
@@ -105,7 +106,7 @@ def tiny_overfit(x, gains, steps=300, seed=0):
             "history": history}
 
 
-def diagnose_rows(train_rows, dev_rows, seed=0, tiny_steps=300):
+def diagnose_rows(train_rows, dev_rows, seed=0, tiny_steps=300, feature_set="temporal_influence"):
     from .controller import training_tensors
     if not train_rows or not dev_rows:
         raise ValueError("Nonempty train/dev rows required")
@@ -127,7 +128,7 @@ def diagnose_rows(train_rows, dev_rows, seed=0, tiny_steps=300):
     baselines["stage_mean_gain"] = regression_metrics(pred, gd, xd)
     # Fixed ridge penalty, fit on Train only; Dev never chooses its parameters.
     for name, cols in (("residual_ridge", [FEATURES.index("weighted_rmse")]),
-                       ("all_feature_ridge", list(range(len(FEATURES))))):
+                       ("all_feature_ridge", [FEATURES.index(f) for f in FEATURE_SETS[feature_set]])):
         z = ((x-mean)/std).clamp(-20, 20)[:, cols].double()
         zd = ((xd-mean)/std).clamp(-20, 20)[:, cols].double()
         z = torch.cat((torch.ones(len(z), 1), z), 1)
@@ -142,15 +143,15 @@ def diagnose_rows(train_rows, dev_rows, seed=0, tiny_steps=300):
                       "by_update_seconds": {str(float(t)): opportunity(xx[xx[:, stage] == t], gg[xx[:, stage] == t])
                                             for t in xx[:, stage].unique()},
                       "features": feature_health(xx, mean, std)}
-    return {"schema": 1, "scope": "train/dev only; offline single-edit diagnostics, not deployed performance",
+    return {"schema": 2,"feature_set":feature_set, "scope": "train/dev only; offline single-edit diagnostics, not deployed performance",
             "metric": "final_60_frame_energy_score_gain", "seed": seed,
             "data": data, "dev_baselines": baselines,
-            "tiny_overfit": tiny_overfit(x, g, tiny_steps, seed)}
+            "tiny_overfit": tiny_overfit(x, g, tiny_steps, seed, feature_set)}
 
 
 @torch.no_grad()
 def activation_stats(model, x):
-    z = ((x[:256]-model.mean)/model.std).clamp(-20, 20)
+    z = ((x[:256]-model.mean)/model.std).clamp(-20, 20)*model.feature_mask
     stats = {}
     for i, layer in enumerate(model.net):
         z = layer(z)

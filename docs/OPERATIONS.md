@@ -11,69 +11,83 @@ PyTorch 官方安装参考：https://pytorch.org/get-started/previous-versions/#
 `requirements-av2.txt` 固定 pandas/numpy/scipy/opencv/numba 等关键兼容版本。
 数据只读挂载时，用 `PMR_PROCESSED_ROOT=/writable/path` 指定缓存位置。
 
-## V2 离线重跑
+## V3 离线复测
 
-先在可以访问 GitHub 的机器下载最新 `main`（或仓库页面 Code → Download ZIP），
-将完整源码解压到 ParaCloud 的新目录。以下命令在**与 V1 相同的镜像内，已有 Slurm GPU allocation**时执行。
-不在登录节点直接运行训练。`OLD` 来自 PR #1 的运行记录；若同学移动过目录，应改为实际位置。
-
-一条命令完成上游准备、GPU 检查、smoke、协议测试和完整实验：
+在与已完成 V2.1 作业相同的 Python/CUDA 镜像内，已有 Slurm GPU allocation 时执行。
+仓库源码需放在新目录，旧目录只用于读取环境、数据、权重和固定版本上游。
 
 ```bash
-cd /path/to/predictive-memory-lab-v2
-bash scripts/retest_v2.sh /share/home/s2026316084/yxt_pmr_20261002
+cd /path/to/predictive-memory-lab-v3
+bash scripts/retest_v3.sh /share/home/s2026316084/yxt_pmr_20261002
 ```
 
-输出在新的 `runs/week1_v2_<UTC时间戳>/`。可用 `PMR_V2_OUT` 固定输出位置；
-用 `PMR_DATA_ROOT`、`CHECKPOINT`、`PMR_PYTHON`、`PMR_UPSTREAM` 覆盖迁移后的路径。
-要断点恢复完整实验，直接执行下面的 `run_week1.sh` 命令并附加 `--resume`，不要重新运行包装脚本。
-如需分步运行，命令如下：
+自动按顺序完成：准备上游副本 → 严格检查 Python 3.11/torch 2.9.1/cu128 → 测试 →
+GPU 三组 smoke → 真实数据三组训练/评估 → 候选逐场景复核 → 自动打包。
+运行中持续显示进度；控制器日志每 50 步及首尾更新。新增特征不引入依赖。
+
+PR #2 核实的 Python 为 `source_852f57d/.venv/bin/python`，上游为
+`source_852f57d/external/RealMotion`。脚本优先识别这两个位置，兼容旧的根目录布局。
+路径变化时可显式设置：
 
 ```bash
-cd /path/to/predictive-memory-lab-v2
-OLD=/share/home/s2026316084/yxt_pmr_20261002
-export PATH="$OLD/bin:$PATH"
-export PMR_PYTHON="$OLD/.venv/bin/python"
-export MPLCONFIGDIR="$PWD/runs/matplotlib-cache"
-"$PMR_PYTHON" -m pmr setup --source "$OLD/external/RealMotion"
-"$PMR_PYTHON" -m pmr doctor --device cuda --strict
-"$PMR_PYTHON" -m pytest -q
-"$PMR_PYTHON" -m pmr smoke --device cuda --out runs/gpu-smoke-v2
-CHECKPOINT="$OLD/checkpoints/realmotion.pth" \
-  bash scripts/run_week1.sh "$OLD/data/av2_week1_processed" --out runs/week1_v2
+PMR_PYTHON=/path/to/working/python \
+PMR_UPSTREAM=/path/to/pinned/RealMotion \
+PMR_DATA_ROOT=/path/to/processed \
+CHECKPOINT=/path/to/realmotion.pth \
+  bash scripts/retest_v3.sh /path/to/old-root
 ```
 
-这条路径复用已安装的依赖和官方权重，V2 没有新增依赖。
-从新源码目录运行使 `python -m pmr` 使用当前 V2 源码，即便旧虚拟环境的 editable install 指向旧目录。
-`pmr setup --source` 只读检查旧的固定版本上游，在新目录生成适配副本。
-不要在新目录覆盖安装、复制旧 controller 权重或复用旧输出目录。
-
-在线从头安装仍用 `bash scripts/setup.sh --av2`。镜像缺 `libGL.so.1` 时，参考 V1 环境使用
-`opencv-python-headless==4.11.0.86`；已经跑通的离线环境不需要重装。
-
-输出默认为 `runs/week1_v2`。同一版本意外中断，可在相同命令末尾加 `--resume`；
-要重新独立运行，用新的 `--out`。重点传回 `REPORT.md`、`summary.json`、
-`round0.controller.selection.json` 和完整输出目录。`keep_fallback` 表示没有候选通过开发集门槛，不能解释成方法取得了提升。
-
-## V2.1 训练诊断
-
-完整实验自动运行小样本拟合，并生成 `roundN.controller.diagnostics.json`、
-`roundN.controller.training.json` 和 `training_curves.png`。
-`training.json` 在训练中每 50 步及首尾更新，可在作业未完成时查看。
-小样本拟合失败会报告 `needs_investigation`；重复输入有冲突目标时报告 `conflicting_targets`，
-不会直接宣称实现错误或自动更改训练预算。
-
-若已有 V2 输出，可在新源码目录、原镜像内仅做 CPU 诊断：
+默认使用 seed 42、500 步、每组 3 个 Dev 候选及 1000/200/200/1000 场景。
+缩小数据规模的功能试跑：
 
 ```bash
-/share/home/s2026316084/yxt_pmr_20261002/.venv/bin/python \
-  -m pmr diagnose --run /path/to/existing_v2_output
+bash scripts/retest_v3.sh /share/home/s2026316084/yxt_pmr_20261002 \
+  --train-scenes 100 --dev-scenes 30 --calib-scenes 30 --eval-scenes 100 --steps 100
 ```
 
-该命令只读取 `round0.train.jsonl` 和 `round0.dev.jsonl`，不读取 Eval、不加载预测骨干，
-默认保存 `round0.controller.diagnostics.json`。指定其他轮次用 `--round 1`。
-它不会重新选策略，也不会把旧实验变成新校准目标下的结果；比较 V2.1 效果需要新目录完整重跑。
-V1 输出不兼容，不能用公共 50 帧指标冒充最终 60 帧标签。
+三组均在相同 Keep 状态上收集标签，所有模型在 Eval 之前由 Dev 选择并固定。
+为保持对照可比，包装脚本固定 `--ablation --rounds 1`，不接受覆盖 `--out`/`--feature-set`。
+用 `PMR_V3_OUT` 指定全新的输出位置；包装脚本不覆盖旧结果。
+
+成功时打印 `RETEST_V3_COMPLETE` 和压缩包路径。输出包括主实验目录、同名 `.log`、
+`.tar.gz`、`.tar.gz.sha256`，smoke 在单独的 `.smoke` 目录。
+结果包包含主实验所有日志、三组候选的权重、逐场景数据和文件校验清单，
+不包含 AV2、官方骨干权重和合成数据。将结果包传回即可。
+
+## 分步运行与恢复
+
+```bash
+PMR_OLD=/share/home/s2026316084/yxt_pmr_20261002
+PMR_PYTHON="$PMR_OLD/source_852f57d/.venv/bin/python"
+export PATH="$PMR_OLD/bin:$PATH"
+"$PMR_PYTHON" -m pmr setup --source "$PMR_OLD/source_852f57d/external/RealMotion"
+"$PMR_PYTHON" -m pmr run --device cuda --trust-inputs \
+  --data-root "$PMR_OLD/data/av2_week1_processed" \
+  --checkpoint "$PMR_OLD/checkpoints/realmotion.pth" \
+  --ablation --rounds 1 --out runs/week1_v3
+```
+
+中断后对完全相同的 `pmr run` 命令加 `--resume`。只重用完成的轮次，未完成轮次重新运行；
+不是 optimizer step 级恢复。`settings.json` 记录精确参数和代码指纹，不能跨版本绕过检查。
+不要对同一输出目录同时运行多个进程。
+
+```bash
+"$PMR_PYTHON" -m pmr audit-selection --run runs/week1_v3
+"$PMR_PYTHON" scripts/package_results.py --run runs/week1_v3
+```
+
+`audit-selection` 不运行骨干，从每个候选的逐场景 Dev 记录重算配对均值、95% CI、普通组损伤、
+动作数量和最终选择，并验证候选权重哈希。旧 V1/V2 包缺少这些记录，不兼容此复核命令。
+如果门槛未通过，报告显示 `keep_fallback`，不能解释成学到了改进。
+
+已有 V3 输出可单独诊断 Train/Dev：
+
+```bash
+"$PMR_PYTHON" -m pmr diagnose --run runs/week1_v3 --feature-set temporal_influence
+```
+
+仅做一组实验可省去 `--ablation`，用 `--feature-set base|temporal|temporal_influence` 指定输入。
+多轮 `--rounds` 只用于单组探索，不能与共享 Keep 标签的三组对照同时使用。
 
 ## 输入
 
