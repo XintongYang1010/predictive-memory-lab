@@ -1,15 +1,41 @@
 # Predictive Memory Lab
 
-首周实验仓库：在 **RealMotion 官方骨干**上检查旧预测 memory 的作用，再训练一个小型修正 controller。
+研究持续记忆如何保留隐藏状态、接受新证据，并避免破坏未变化对象。
 
 **目标镜像：Python 3.11 / PyTorch 2.9.1 / CUDA 12.8，单张 A100 即可启动。**
-骨干冻结；V3 controller 预测 Reweight / Rebuild / Reset 相对 Keep 的最终 ES 收益，再决定是否干预。
+最新实验为 **V4 可控状态记忆对照**；V1–V3 的 RealMotion 冻结骨干实验仍可独立运行。
+
+## V4：隐藏状态、局部纠正与保留
+
+V3 真实 AV2 复测没有可靠提升。下一轮直接检查：近期可见输入相同而早期历史不同，模型能否保持不同的隐藏状态？新证据纠正一个对象时，另一个仍不可见的对象是否继续被正确追踪？
+
+五组对照：短窗口、8 个观测事件的 FIFO 检索、全局 GRU、逐对象状态、解析跟踪。
+训练长度 24，评价长度 24/48/96，三个训练种子；训练记忆更新与读取，Dev 选择 checkpoint。
+主机制比较是 T=48 下 slot 相对 GRU 的隐藏位置误差，同时检查纠正、保留和恢复失败率。
+这是一轮有已知对象 ID 和速度读数的合成状态实验，**不是视觉 JEPA、AV2 提升或新方法的证明**。
+
+在之前已分配到 A100 的工作镜像内：
+
+```bash
+git clone https://github.com/XintongYang1010/predictive-memory-lab.git predictive-memory-lab-v4
+cd predictive-memory-lab-v4
+bash scripts/retest_v4.sh /share/home/s2026316084/yxt_pmr_20261002
+```
+
+一条脚本完成环境检查、测试、GPU smoke、训练评估和打包。不需要 AV2、RealMotion 源码或预训练权重，不替换现有 PyTorch。
+缺少依赖时用工作环境的 Python 执行 `python -m pip install -r requirements-state-memory.txt`。
+默认单 GPU、三种子顺序运行、3600 秒检查式预算；超时保留 partial 并报错，不自动增加预算。
+回传 `runs/state_memory_v4_*.tar.gz` 和对应 `.sha256`，其中包含全部逐场景数据、曲线和失败案例。
+协议、指标含义、论文阅读及失败后的下一步见 [V4 说明](docs/STATE_MEMORY_V4.md)。
 
 ## V3：冲突变化与记忆影响度
 
 V2.1 已在 A100 完整跑通，但三个 Dev 候选都未通过门槛，部署结果全部 Keep，
 Eval ES 1.573144 与 Keep 完全相同。这不是已实现的提升。
 V3 检验：加入冲突的时间变化及旧记忆对当前预测的影响，是否帮助识别值得干预的场景？
+现已完成 A100 复测（[PR #3](https://github.com/XintongYang1010/predictive-memory-lab/pull/3)，Slurm 450）：
+Keep ES 1.573144；temporal ES 1.581897，配对改善 -0.008753，95% CI [-0.017783, 0.000219]；base/full 回退 Keep。
+这没有提供可靠部署收益，详细复核见 [验证记录](docs/VALIDATION.md)。
 
 |控制器|可见输入|用途|
 |---|---|---|
@@ -46,7 +72,7 @@ V3 的 schema 已更新，必须重新收集特征，不能混用 V1/V2 日志�
 默认仍为 Train 1000 / Dev 200 / Calibration 200 / Eval 1000、seed 42、单轮。
 同一 Eval 子集已用于 V1/V2 研究判断，本轮属于探索；正式确认需要未查看的场景和额外种子。
 
-## 最快启动
+## V1–V3 RealMotion 启动
 
 下载或 clone 本仓库，进入目录。已有目标镜像时：
 
@@ -144,7 +170,7 @@ Reweight 作用于旧 bank 的读取，并不直接改变最终输出模式概�
 - 开发集筛选的 CI 是调参门槛，不是筛选后显著性结论。V1 已看过的 val 子集重跑属于探索分析；正式确认应使用未看过的场景和额外种子。
 - 4/5 秒的曲线都评价绝对 `[50,100)` 帧。最终标准预测指标使用 5 秒时完整 60 帧未来。
 - `b_minFDE6` 与官方仓库中另一种计算顺序的 `b_minFDE6_upstream` 同时保留，详见 [实验协议](docs/PROTOCOL.md)。
-- 本版本实现首周问题诊断和冻结骨干 controller 训练。V1 已在 A100 跑通；**V2.1 已实测但未取得部署收益；V3 效果待 A100 实测。不声称已复现论文分数、完成 SHARP/世界模拟实验或证明 RSI 有独立收益。**
+- V1–V3 实现首周问题诊断和冻结骨干 controller 训练。三版均已在 A100 跑通；**V2.1 与 V3 未取得可靠部署收益。不声称已复现论文分数、完成 SHARP/世界模拟实验或证明 RSI 有独立收益。**
 
 ## 进一步命令
 

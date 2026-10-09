@@ -1,2 +1,2 @@
-"""Predictive memory revision: controlled RealMotion experiments."""
-__version__ = "0.3.0"
+"""Controlled hidden-state memory and RealMotion revision experiments."""
+__version__ = "0.4.0"
