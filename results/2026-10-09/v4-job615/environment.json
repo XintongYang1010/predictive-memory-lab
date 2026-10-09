@@ -1,0 +1,12 @@
+{
+  "python": "3.11.14",
+  "torch": "2.9.1+cu128",
+  "numpy": "1.26.4",
+  "cuda_runtime": "12.8",
+  "device": "cuda",
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "git": {
+    "commit": "e66bdd368e1895f62bde788f3075edcf32180415",
+    "working_tree_status": ""
+  }
+}

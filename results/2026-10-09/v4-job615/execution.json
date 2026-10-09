@@ -1,0 +1,35 @@
+{
+  "job_id": "615",
+  "compute_status": "COMPLETED",
+  "exit_status": 0,
+  "source_sha": "e66bdd368e1895f62bde788f3075edcf32180415",
+  "start_beijing": "2026-10-09T14:17:57+08:00",
+  "end_beijing": "2026-10-09T14:32:39+08:00",
+  "scheduler_elapsed_seconds": 882,
+  "runner_seconds": 850.784360775724,
+  "experiment_budget_seconds": 3600,
+  "scheduler_limit_minutes": 65,
+  "hostname": "gpu01",
+  "num_gpus": 1,
+  "cpus": 4,
+  "container_memory_limit_GiB": 40,
+  "container_image": "10.0.0.1:88/cadmin/pytorch@sha256:7b324d212a4450795b49edba9949b7cdc72429148a64e974334bfe5774d51385",
+  "python": "/share/home/s2026316084/yxt_pmr_20261002/source_852f57d/.venv/bin/python",
+  "remote_output": "/share/home/s2026316084/yxt_pmr_v4_20261009/source_e66bdd3/runs/state_memory_v4_20261009T061757Z_615",
+  "gpu_binding_verified": false,
+  "outer_logged_gpu_uuid": "GPU-4fd11e10-6ef5-dd51-fa9c-4bb55aae271a",
+  "container_logged_gpu_uuid": "GPU-174ae482-12b7-8b2c-0582-4921ad4803af",
+  "gpu_mapping_exception": "Outer allocation log and container UUID differ. The reused launcher passed Slurm remapped ordinal 0 to the container runtime. This is an execution-protocol exception; do not claim allocated-card binding was verified. Both original logs and launchers are retained. No automatic rerun.",
+  "next_launcher_patch": {
+    "applied_to_server": false,
+    "gpu_tested": false,
+    "checks": [
+      "bash syntax",
+      "mock correct UUID starts experiment",
+      "mock wrong/multiple UUIDs stop before experiment"
+    ],
+    "note": "Local templates use the sole allocation-visible UUID and require an exact match inside the container. Select a fresh output root before any future submission."
+  },
+  "archive_bytes": 359646477,
+  "archive_sha256": "21541e4d6a09750edc2af3b5c8ae8bcc6a902d3e39adbfd6a8b2d7c800bc1beb"
+}
