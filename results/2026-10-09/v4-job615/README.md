@@ -39,6 +39,9 @@
 
 原始 .tar.gz 与 .tar.gz.sha256 发到 [Slack V4 交接线程](https://dn-lab-hq.slack.com/archives/C0C7S3PFJSE/p1791512716621849)，三名项目成员均有频道权限。343 MiB 的完整附件保留在 Slack 与服务器，本 PR 保存报告、汇总、训练曲线、执行日志与校验记录。
 
+- [下载完整 .tar.gz](https://dn-lab-hq.slack.com/files/U0C4D2NER62/F0C7TNW6ZCK/state_memory_v4_20261009t061757z_615.tar.gz)
+- [下载 .tar.gz.sha256](https://dn-lab-hq.slack.com/files/U0C4D2NER62/F0C81UNMVS5/state_memory_v4_20261009t061757z_615.tar.gz.sha256)
+
 ```text
 state_memory_v4_20261009T061757Z_615.tar.gz
 SHA256 21541e4d6a09750edc2af3b5c8ae8bcc6a902d3e39adbfd6a8b2d7c800bc1beb
