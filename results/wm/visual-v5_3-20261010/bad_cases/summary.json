@@ -1,0 +1,635 @@
+{
+  "scope": "Posthoc descriptive analysis of already evaluated Dev384..639; no new confirmation inference.",
+  "counts": {
+    "paired_worlds": 256,
+    "episodes": 512,
+    "target_observations": 1024
+  },
+  "reflection_definitions": {
+    "cue_interval": "Any object/axis/variant crosses a mirror tile boundary between t6 and t7.",
+    "reflected_by_t7": "Any unreflected t7 coordinate lies outside its lane; initial positions lie inside and pre-update velocity is constant.",
+    "boundary_ties_at_1e_14": 0
+  },
+  "visibility": {
+    "cue_shutters": "Both targets open at t6 and t7 by the fixed original generator.",
+    "yellow_target_y_bounding_box_intersections": 0,
+    "implication": "Zero intersections proves no yellow-on-target occlusion in these cue images; it does not imply absent encoder distraction."
+  },
+  "groups": {
+    "all": {
+      "paired_worlds": 256,
+      "S": {
+        "dx_mse": 0.0007493615800124942,
+        "motion_mse": 0.00045985298781135253,
+        "per_axis_mse": [
+          0.0009042114994073085,
+          0.00019276932080700203,
+          0.0005945116606176798,
+          0.0001479194704134198
+        ],
+        "zero_motion_skill": [
+          -4.203132408381242,
+          -0.21143271837035837,
+          -2.3529636844653212,
+          0.1112726161367118
+        ],
+        "horizontal_sign_error_rate": 0.427734375
+      },
+      "B": {
+        "dx_mse": 0.00011115604459684413,
+        "motion_mse": 0.00011153667820350014,
+        "per_axis_mse": [
+          0.00011781148577053372,
+          0.00012033994648696197,
+          0.00010450060342315452,
+          0.00010349467713335036
+        ],
+        "zero_motion_skill": [
+          0.3220736961496169,
+          0.24373988614505493,
+          0.4106310245983936,
+          0.3781849448525776
+        ],
+        "horizontal_sign_error_rate": 0.2158203125
+      }
+    },
+    "cue_reflection": {
+      "paired_worlds": 92,
+      "S": {
+        "dx_mse": 0.0006938533422377588,
+        "motion_mse": 0.0004289945386375843,
+        "per_axis_mse": [
+          0.0008122716429400476,
+          0.00019445817238677616,
+          0.00057543504153547,
+          0.00013381329768804356
+        ],
+        "zero_motion_skill": [
+          -3.7141257425223504,
+          -0.20269165075428042,
+          -2.2890560915868545,
+          0.11762513254687701
+        ],
+        "horizontal_sign_error_rate": 0.42391304347826086
+      },
+      "B": {
+        "dx_mse": 0.00011094798943300804,
+        "motion_mse": 0.00010656351744579878,
+        "per_axis_mse": [
+          0.00011352456011448957,
+          0.00012236503675103604,
+          0.00010837141875152649,
+          8.199305416614295e-05
+        ],
+        "zero_motion_skill": [
+          0.3411452241430256,
+          0.2431924755931748,
+          0.3805735673526114,
+          0.45933168413058556
+        ],
+        "horizontal_sign_error_rate": 0.25271739130434784
+      }
+    },
+    "no_cue_reflection": {
+      "paired_worlds": 164,
+      "S": {
+        "dx_mse": 0.0007805003475446624,
+        "motion_mse": 0.00047716382515273446,
+        "per_axis_mse": [
+          0.0009557875164499166,
+          0.00019182191626225073,
+          0.0006052131786394081,
+          0.0001558326892593623
+        ],
+        "zero_motion_skill": [
+          -4.473832916442175,
+          -0.21646054350161714,
+          -2.388076552346959,
+          0.10817979602867267
+        ],
+        "horizontal_sign_error_rate": 0.4298780487804878
+      },
+      "B": {
+        "dx_mse": 0.00011127275846924007,
+        "motion_mse": 0.0001143265000919668,
+        "per_axis_mse": [
+          0.0001202163465044123,
+          0.00011920392024126183,
+          0.00010232917043406782,
+          0.00011555656318812526
+        ],
+        "zero_motion_skill": [
+          0.31151622796409284,
+          0.24405475437977797,
+          0.4271455493612978,
+          0.33867740945458946
+        ],
+        "horizontal_sign_error_rate": 0.1951219512195122
+      }
+    },
+    "reflected_by_t7": {
+      "paired_worlds": 168,
+      "S": {
+        "dx_mse": 0.0007589605720897646,
+        "motion_mse": 0.000464275109341542,
+        "per_axis_mse": [
+          0.0009118626659022605,
+          0.00018691295646990714,
+          0.0006060584782772687,
+          0.00015226633671673156
+        ],
+        "zero_motion_skill": [
+          -4.179505128508529,
+          -0.07398290851716594,
+          -2.4807464716414014,
+          0.13898094297639285
+        ],
+        "horizontal_sign_error_rate": 0.4330357142857143
+      },
+      "B": {
+        "dx_mse": 0.00011389638047889348,
+        "motion_mse": 0.00011236747419038832,
+        "per_axis_mse": [
+          0.00011749675559741844,
+          0.00011965857049500764,
+          0.0001102960053603685,
+          0.00010201856530875866
+        ],
+        "zero_motion_skill": [
+          0.33260229752056414,
+          0.3124539785987235,
+          0.36654226406415236,
+          0.4231165548793523
+        ],
+        "horizontal_sign_error_rate": 0.23065476190476192
+      }
+    },
+    "no_reflection_by_t7": {
+      "paired_worlds": 88,
+      "S": {
+        "dx_mse": 0.0007310362315013405,
+        "motion_mse": 0.0004514107557991721,
+        "per_axis_mse": [
+          0.0008896047270078508,
+          0.00020394965272327442,
+          0.0005724677359948302,
+          0.00013962090747073324
+        ],
+        "zero_motion_skill": [
+          -4.24999685182827,
+          -0.5609605337178207,
+          -2.1213657154894308,
+          0.04745145385641747
+        ],
+        "horizontal_sign_error_rate": 0.41761363636363635
+      },
+      "B": {
+        "dx_mse": 0.00010592449427656835,
+        "motion_mse": 0.00010995061313762286,
+        "per_axis_mse": [
+          0.0001184123342828452,
+          0.00012164075519887473,
+          9.343665427029149e-05,
+          0.00010631270879847996
+        ],
+        "zero_motion_skill": [
+          0.3011903339435743,
+          0.06900347403530593,
+          0.49053902801613825,
+          0.2746930381912499
+        ],
+        "horizontal_sign_error_rate": 0.1875
+      }
+    },
+    "cue_horizontal_reflection": {
+      "paired_worlds": 10,
+      "S": {
+        "dx_mse": 0.00046294803384275935,
+        "motion_mse": 0.0003361826631196454,
+        "per_axis_mse": [
+          0.0005601134039092297,
+          0.0002478532273020829,
+          0.00036578266377628897,
+          0.00017098135749097992
+        ],
+        "zero_motion_skill": [
+          -2.365550301872758,
+          -0.7331081535307868,
+          -1.2966711895136238,
+          -0.23667777227099496
+        ],
+        "horizontal_sign_error_rate": 0.325
+      },
+      "B": {
+        "dx_mse": 0.00013312664675895478,
+        "motion_mse": 0.00012012821039220371,
+        "per_axis_mse": [
+          0.0001343694952928946,
+          0.00012427552153854507,
+          0.00013188379822501496,
+          8.998402651236019e-05
+        ],
+        "zero_motion_skill": [
+          0.192614759280465,
+          0.13100619262772306,
+          0.1719298103961857,
+          0.3491615280154132
+        ],
+        "horizontal_sign_error_rate": 0.35
+      }
+    },
+    "no_cue_horizontal_reflection": {
+      "paired_worlds": 246,
+      "S": {
+        "dx_mse": 0.0007610044070925644,
+        "motion_mse": 0.00046488023678256,
+        "per_axis_mse": [
+          0.0009181992268665795,
+          0.0001905301376161451,
+          0.0006038095873185493,
+          0.00014698199532896608
+        ],
+        "zero_motion_skill": [
+          -4.274545801927559,
+          -0.19245205280425415,
+          -2.3913741064383816,
+          0.12294175269813412
+        ],
+        "horizontal_sign_error_rate": 0.43191056910569103
+      },
+      "B": {
+        "dx_mse": 0.00011026293068781528,
+        "motion_mse": 0.00011118742892753659,
+        "per_axis_mse": [
+          0.00011713839595255163,
+          0.00012017996376128787,
+          0.0001033874654230789,
+          0.00010404389057322799
+        ],
+        "zero_motion_skill": [
+          0.32710481937071223,
+          0.24784159458380128,
+          0.41931102034465506,
+          0.3791582968758411
+        ],
+        "horizontal_sign_error_rate": 0.21036585365853658
+      }
+    },
+    "horizontal_reflected_by_t7": {
+      "paired_worlds": 11,
+      "S": {
+        "dx_mse": 0.0004990728085257401,
+        "motion_mse": 0.0003533060026629006,
+        "per_axis_mse": [
+          0.000626378528610399,
+          0.00025303960427750866,
+          0.0003717670884410812,
+          0.0001620387893226137
+        ],
+        "zero_motion_skill": [
+          -2.49675220106133,
+          -0.6986886432635795,
+          -1.450899546550385,
+          -0.11786115456644697
+        ],
+        "horizontal_sign_error_rate": 0.36363636363636365
+      },
+      "B": {
+        "dx_mse": 0.00013142671892109163,
+        "motion_mse": 0.00012105003884733525,
+        "per_axis_mse": [
+          0.00014150405138697777,
+          0.0001334639815533652,
+          0.00012134938645520548,
+          8.788273599379255e-05
+        ],
+        "zero_motion_skill": [
+          0.2100549738762303,
+          0.1040384749384754,
+          0.1999960042607004,
+          0.393721113721201
+        ],
+        "horizontal_sign_error_rate": 0.3409090909090909
+      }
+    },
+    "no_horizontal_reflection_by_t7": {
+      "paired_worlds": 245,
+      "S": {
+        "dx_mse": 0.000760599035058838,
+        "motion_mse": 0.0004646367300016911,
+        "per_axis_mse": [
+          0.0009166856327900265,
+          0.0001900633080797548,
+          0.0006045124373276495,
+          0.0001472855418093335
+        ],
+        "zero_motion_skill": [
+          -4.282212997497304,
+          -0.19101175575949414,
+          -2.387388307291949,
+          0.12018061671884528
+        ],
+        "horizontal_sign_error_rate": 0.4306122448979592
+      },
+      "B": {
+        "dx_mse": 0.00011024593268840857,
+        "motion_mse": 0.0001111095477256137,
+        "per_axis_mse": [
+          0.00011674773792653018,
+          0.00011975070409622551,
+          0.00010374412745028697,
+          0.00010419562142941213
+        ],
+        "zero_motion_skill": [
+          0.3272650986936727,
+          0.2495947914405826,
+          0.4186692901988466,
+          0.3775809474544588
+        ],
+        "horizontal_sign_error_rate": 0.21020408163265306
+      }
+    },
+    "outside_FIT_coordinate_envelope": {
+      "paired_worlds": 244,
+      "S": {
+        "dx_mse": 0.0007476800050025473,
+        "motion_mse": 0.0004593894939773565,
+        "per_axis_mse": [
+          0.0009027859932865599,
+          0.0001957281291911177,
+          0.0005925740167185347,
+          0.00014646983671321397
+        ],
+        "zero_motion_skill": [
+          -4.136533884758971,
+          -0.20490713181997533,
+          -2.3309781761266226,
+          0.12838234242537683
+        ],
+        "horizontal_sign_error_rate": 0.42725409836065575
+      },
+      "B": {
+        "dx_mse": 0.00011310579516306161,
+        "motion_mse": 0.0001138248852753961,
+        "per_axis_mse": [
+          0.00012074986450135535,
+          0.00012452142759986128,
+          0.00010546172582476787,
+          0.00010456652317559992
+        ],
+        "zero_motion_skill": [
+          0.31297586005591405,
+          0.2334430579828669,
+          0.4071783486487057,
+          0.3777419976954446
+        ],
+        "horizontal_sign_error_rate": 0.22028688524590165
+      }
+    },
+    "inside_FIT_coordinate_envelope": {
+      "paired_worlds": 12,
+      "S": {
+        "dx_mse": 0.0007835536052147414,
+        "motion_mse": 0.0004692773624359335,
+        "per_axis_mse": [
+          0.0009331967905291809,
+          0.00013260688366331462,
+          0.0006339104199003019,
+          0.00017739535565093666
+        ],
+        "zero_motion_skill": [
+          -5.984480041873667,
+          -0.44655687400654576,
+          -2.833952207188756,
+          -0.32558386566647357
+        ],
+        "horizontal_sign_error_rate": 0.4375
+      },
+      "B": {
+        "dx_mse": 7.151111641708904e-05,
+        "motion_mse": 6.500980107494925e-05,
+        "per_axis_mse": [
+          5.8064451577160985e-05,
+          3.531649719134287e-05,
+          8.495778125701708e-05,
+          8.170047427427608e-05
+        ],
+        "zero_motion_skill": [
+          0.5654185619808565,
+          0.6147460797911573,
+          0.4861670312669283,
+          0.38949455515405806
+        ],
+        "horizontal_sign_error_rate": 0.125
+      }
+    }
+  },
+  "nuisance_pair_common_residual": {
+    "S": {
+      "A_dx": {
+        "pearson_r": 0.9309935292284811,
+        "linear_slope": 0.05041203907540932
+      },
+      "B_dx": {
+        "pearson_r": 0.8925805805106424,
+        "linear_slope": 0.03734159393427286
+      }
+    },
+    "B": {
+      "A_dx": {
+        "pearson_r": 0.23594018939818664,
+        "linear_slope": 0.0027772098622489754
+      },
+      "B_dx": {
+        "pearson_r": 0.044092655253386806,
+        "linear_slope": 0.0004663428460352283
+      }
+    }
+  },
+  "spatial_support_proxy": {
+    "definition": "Outside if any cue t6/t7, variant, target coordinate exceeds the coordinatewise rounded schema outer envelope. This is not a full joint-support or empirical FIT coverage test.",
+    "coordinate_order": [
+      "A_x",
+      "A_y",
+      "B_x",
+      "B_y"
+    ],
+    "nominal_unrounded_low": [
+      0.182,
+      0.182,
+      0.182,
+      0.632
+    ],
+    "nominal_unrounded_high": [
+      0.818,
+      0.368,
+      0.818,
+      0.818
+    ],
+    "actual_quantized_low": [
+      0.18200016021728516,
+      0.18200016021728516,
+      0.18200016021728516,
+      0.6319999694824219
+    ],
+    "actual_quantized_high": [
+      0.8179998397827148,
+      0.3680000305175781,
+      0.8179998397827148,
+      0.8179998397827148
+    ],
+    "rounding_quantum": 9.5367431640625e-07,
+    "comparison_tolerance": 0,
+    "source": "scripts/v5_3_data.py: make_block center and displacement rounding",
+    "posthoc": true,
+    "confidence_intervals": null,
+    "coordinate_groups": {
+      "A_dx": {
+        "outside": {
+          "target_coordinate_observations": 61,
+          "unique_worlds": 61,
+          "S_mse": 0.0008467550551156305,
+          "B_mse": 0.00030520122497990575
+        },
+        "inside": {
+          "target_coordinate_observations": 451,
+          "unique_worlds": 256,
+          "S_mse": 0.0009119827701429893,
+          "B_mse": 9.246608867126181e-05
+        }
+      },
+      "A_dy": {
+        "outside": {
+          "target_coordinate_observations": 247,
+          "unique_worlds": 206,
+          "S_mse": 0.00029456414753106476,
+          "B_mse": 0.00020644458890554677
+        },
+        "inside": {
+          "target_coordinate_observations": 265,
+          "unique_worlds": 215,
+          "S_mse": 9.788885967174369e-05,
+          "B_mse": 4.008392128926228e-05
+        }
+      },
+      "B_dx": {
+        "outside": {
+          "target_coordinate_observations": 70,
+          "unique_worlds": 70,
+          "S_mse": 0.0004477264584138869,
+          "B_mse": 0.00020273049694090388
+        },
+        "inside": {
+          "target_coordinate_observations": 442,
+          "unique_worlds": 256,
+          "S_mse": 0.0006177581858535754,
+          "B_mse": 8.894383295654263e-05
+        }
+      },
+      "B_dy": {
+        "outside": {
+          "target_coordinate_observations": 223,
+          "unique_worlds": 180,
+          "S_mse": 0.00016728815539638527,
+          "B_mse": 0.00014971549170471072
+        },
+        "inside": {
+          "target_coordinate_observations": 289,
+          "unique_worlds": 213,
+          "S_mse": 0.00013297408373106202,
+          "B_mse": 6.7829481114619e-05
+        }
+      }
+    }
+  },
+  "relative_motion_groups": {
+    "same_direction": {
+      "target_observations": 510,
+      "unique_worlds": 255,
+      "S_dx_mse": 0.00047932054597956206,
+      "B_dx_mse": 0.00010099269053899831
+    },
+    "opposite_direction": {
+      "target_observations": 510,
+      "unique_worlds": 255,
+      "S_dx_mse": 0.0010245803837320426,
+      "B_dx_mse": 0.0001216314473511015
+    },
+    "zero_product": {
+      "target_observations": 4,
+      "unique_worlds": 1,
+      "S_dx_mse": 8.919594496892435e-05,
+      "B_dx_mse": 7.136983580438871e-05
+    }
+  },
+  "relative_motion_group_caveat": "Correlated target/variant observations; no independent-observation confidence interval or causal group effect is claimed.",
+  "selection": [
+    {
+      "rule": "Largest B concat dx MSE (both variants and both targets); tie: smaller pair ID.",
+      "pair_id": 425,
+      "cue_interval_reflection": false,
+      "reflected_by_t7": true,
+      "cue_horizontal_reflection": false,
+      "horizontal_reflected_by_t7": false,
+      "any_cue_outside_FIT_coordinate_envelope": true,
+      "yellow_dx": 0.7232142857142857,
+      "family": "update",
+      "S_dx_mse": 0.0007095620144879486,
+      "S_motion_mse": 0.00039264318122083627,
+      "S_horizontal_sign_errors": 3,
+      "B_dx_mse": 0.00043714622069881547,
+      "B_motion_mse": 0.00023123905006453954,
+      "B_horizontal_sign_errors": 2,
+      "shown_variant": 0
+    },
+    {
+      "rule": "Remaining pair with most B horizontal sign errors; tie: largest B dx MSE, then smaller ID.",
+      "pair_id": 454,
+      "cue_interval_reflection": false,
+      "reflected_by_t7": false,
+      "cue_horizontal_reflection": false,
+      "horizontal_reflected_by_t7": false,
+      "any_cue_outside_FIT_coordinate_envelope": true,
+      "yellow_dx": -0.48214285714285715,
+      "family": "interference",
+      "S_dx_mse": 0.0005351167594133405,
+      "S_motion_mse": 0.00039115301065640115,
+      "S_horizontal_sign_errors": 2,
+      "B_dx_mse": 0.0003647554866768576,
+      "B_motion_mse": 0.00020913347917267153,
+      "B_horizontal_sign_errors": 3,
+      "shown_variant": 1
+    },
+    {
+      "rule": "Remaining pair without a cue-interval reflection with largest B dx MSE; fallback: largest remaining B dx MSE.",
+      "pair_id": 579,
+      "cue_interval_reflection": false,
+      "reflected_by_t7": true,
+      "cue_horizontal_reflection": false,
+      "horizontal_reflected_by_t7": false,
+      "any_cue_outside_FIT_coordinate_envelope": true,
+      "yellow_dx": -0.71875,
+      "family": "hold",
+      "S_dx_mse": 0.0008747898300497914,
+      "S_motion_mse": 0.000495408625439229,
+      "S_horizontal_sign_errors": 2,
+      "B_dx_mse": 0.00038685261760557424,
+      "B_motion_mse": 0.00031231467972912564,
+      "B_horizontal_sign_errors": 1,
+      "shown_variant": 0
+    }
+  ],
+  "primary_report": {
+    "S_minus_B_dx_mse": 0.00063820553541565,
+    "S_minus_B_motion_nmse": 2.0027214367064596,
+    "dx_mse_paired_95ci": [
+      0.0005843578585442669,
+      0.0006926271442516212
+    ],
+    "motion_nmse_descriptive_paired_95ci": [
+      1.8392897668235293,
+      2.1771989252051176
+    ]
+  },
+  "singleframe_equivalence_passed": true
+}

@@ -1,0 +1,153 @@
+{
+  "status": "verified",
+  "source": "local pinned cue-only re-render",
+  "pillow": "11.3.0",
+  "numpy": "2.0.2",
+  "checks": [
+    {
+      "pair_id": 425,
+      "variant": 0,
+      "time": 6,
+      "expected": {
+        "sha256": "a48ad5356d56933dacd4bb148a8545ab5058fc27562e141e256aa619e9d6d693",
+        "dtype": "uint8",
+        "shape": [
+          224,
+          224,
+          3
+        ]
+      },
+      "actual": {
+        "sha256": "a48ad5356d56933dacd4bb148a8545ab5058fc27562e141e256aa619e9d6d693",
+        "dtype": "uint8",
+        "shape": [
+          224,
+          224,
+          3
+        ]
+      },
+      "exact": true
+    },
+    {
+      "pair_id": 425,
+      "variant": 0,
+      "time": 7,
+      "expected": {
+        "sha256": "1d1325a692e35839a413ad28f0b0cd0983a0cb644eb1dd45282db3984ccca616",
+        "dtype": "uint8",
+        "shape": [
+          224,
+          224,
+          3
+        ]
+      },
+      "actual": {
+        "sha256": "1d1325a692e35839a413ad28f0b0cd0983a0cb644eb1dd45282db3984ccca616",
+        "dtype": "uint8",
+        "shape": [
+          224,
+          224,
+          3
+        ]
+      },
+      "exact": true
+    },
+    {
+      "pair_id": 454,
+      "variant": 1,
+      "time": 6,
+      "expected": {
+        "sha256": "2c778e738dd74cd5799462bd1493d66d46f5b8f425c25f15ad288ef54f5a022b",
+        "dtype": "uint8",
+        "shape": [
+          224,
+          224,
+          3
+        ]
+      },
+      "actual": {
+        "sha256": "2c778e738dd74cd5799462bd1493d66d46f5b8f425c25f15ad288ef54f5a022b",
+        "dtype": "uint8",
+        "shape": [
+          224,
+          224,
+          3
+        ]
+      },
+      "exact": true
+    },
+    {
+      "pair_id": 454,
+      "variant": 1,
+      "time": 7,
+      "expected": {
+        "sha256": "767dc71c6ac25aff527f5c2f8b9dca8547e73988e4d93ea48fb6a5b7aa9d6841",
+        "dtype": "uint8",
+        "shape": [
+          224,
+          224,
+          3
+        ]
+      },
+      "actual": {
+        "sha256": "767dc71c6ac25aff527f5c2f8b9dca8547e73988e4d93ea48fb6a5b7aa9d6841",
+        "dtype": "uint8",
+        "shape": [
+          224,
+          224,
+          3
+        ]
+      },
+      "exact": true
+    },
+    {
+      "pair_id": 579,
+      "variant": 0,
+      "time": 6,
+      "expected": {
+        "sha256": "e476f5fbca53d35d8cf9097433ad454d79de139d5f4f4452e38dbc673b5700ea",
+        "dtype": "uint8",
+        "shape": [
+          224,
+          224,
+          3
+        ]
+      },
+      "actual": {
+        "sha256": "e476f5fbca53d35d8cf9097433ad454d79de139d5f4f4452e38dbc673b5700ea",
+        "dtype": "uint8",
+        "shape": [
+          224,
+          224,
+          3
+        ]
+      },
+      "exact": true
+    },
+    {
+      "pair_id": 579,
+      "variant": 0,
+      "time": 7,
+      "expected": {
+        "sha256": "5a250fc3c446953d824d0ca8706892640ddf0f68bef9e7cc50dfc3496bd6a16c",
+        "dtype": "uint8",
+        "shape": [
+          224,
+          224,
+          3
+        ]
+      },
+      "actual": {
+        "sha256": "5a250fc3c446953d824d0ca8706892640ddf0f68bef9e7cc50dfc3496bd6a16c",
+        "dtype": "uint8",
+        "shape": [
+          224,
+          224,
+          3
+        ]
+      },
+      "exact": true
+    }
+  ],
+  "external_archive": null
+}

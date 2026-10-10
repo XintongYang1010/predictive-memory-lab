@@ -93,3 +93,5 @@ python3 build_results.py --scene <downloaded-v53-scene> --out <new-analysis-dire
 ```
 
 完整模型见 [FIT reader Release](https://github.com/XintongYang1010/predictive-memory-lab/releases/tag/visual-v5_3-fit-20261010)。硬件为既有分配中的8张H800，与IndexMem共用；GPUh按选卡数量乘实际wall time保守计账，不声称A100等效速度。
+
+后验剩余错误分析与六张原输入哈希核验见 [bad cases](bad_cases/README.md)。244/256 pairs 至少一个 cue 坐标超出本轮FIT坐标外包络；这是覆盖差异线索，不是因果证明。
