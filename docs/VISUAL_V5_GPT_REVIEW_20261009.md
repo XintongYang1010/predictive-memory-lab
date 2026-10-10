@@ -35,3 +35,40 @@ The independent local findings are already available in the
 [CPU diagnostic archive](../results/wm/visual-v5-probe-diagnostic-20261009/README.md).
 No GPT recommendation is represented as received or validated before its actual
 reply is read and checked.
+
+## Local reasoning while awaiting review
+
+A future criterion should not require that both exact endpoint positions carry
+zero conditional-mean information about nontrivial Euclidean displacement.
+Let d = p7 − p6 with finite second moments. If E[d|p6] = E[d|p7] = 0, then
+E[||d||²] = E[d·p7] − E[d·p6] = 0, so d is zero almost surely. More generally,
+if both conditional means are the same constant mean displacement, displacement
+has zero variance. This statement concerns exact endpoint coordinates; it is
+not a theorem about every lossy image representation or a fitted finite-sample
+probe score.
+
+Consequently, the useful confirmation question is whether two frames provide
+reproducible **incremental** predictive value over matched single-frame controls.
+Holding the terminal rendered image exactly fixed while changing earlier
+history can additionally test whether the prediction responds to that history.
+A periodic-space direction label can remove different marginal shortcuts, but
+changes the task away from the original unwrapped Euclidean displacement and
+must be declared as a separate diagnostic. These are candidate design constraints,
+not a new registered protocol or a claim of experimental confirmation.
+
+A concrete candidate is a matched-terminal family: choose an interior anchor
+p7 = z and nonzero vector u, and pair p6 = z − u with p6 = z + u, giving targets
++u and −u. Both variants must have byte-identical terminal RGB and identical
+nuisance variables, while earlier RGB differs. A deterministic terminal-only
+predictor has exactly zero within-pair prediction contrast, versus the required
+2u. A symmetric matched-initial family holds p6 fixed and changes p7 to test
+dependence on the later frame. Report these families separately; combining
+them does not eliminate every single-frame statistical prior.
+
+Before any new extraction, fix the generator version, independent Train and
+confirmation namespaces, group all related variants in the same split/fold,
+specify the Train-only model/alpha selection and interval procedure, and state
+the confirmation decision. Verify identical-image hashes, nonzero visible
+pixel motion and no reflection/wrap ambiguity. The original Test split remains
+sealed. This would be a new confirmation experiment, not a relabeling of the
+old failed run or a change to its archived metrics.
