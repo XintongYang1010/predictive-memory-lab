@@ -1,0 +1,32 @@
+{
+  "completed_unix": 1791659148.8265522,
+  "deleted_only_owned_verified_artifacts": true,
+  "existing_parent_entries_preserved": true,
+  "github_verification_commit": "0a7617918c933d261489a271561d676adc1aba51",
+  "no_job_cancellation": true,
+  "prior_scene_all_file_hashes_unchanged": true,
+  "removed": [
+    "/aifs4su/guhao/KVCache/WM/diagnostic-20261010-v55",
+    "/aifs4su/guhao/KVCache/WM/diagnostic-20261010-v55.export.tar.gz"
+  ],
+  "status": "completed",
+  "steps": {
+    "415453.40": [
+      "COMPLETED",
+      "0:0"
+    ],
+    "415453.41": [
+      "COMPLETED",
+      "0:0"
+    ],
+    "415453.42": [
+      "COMPLETED",
+      "0:0"
+    ],
+    "415453.43": [
+      "COMPLETED",
+      "0:0"
+    ]
+  },
+  "verified_archive_sha256": "7c39ad4fd468c5c8dad768fa33182bf1b686443ea9b0b1dd95890fa19adf5b44"
+}
