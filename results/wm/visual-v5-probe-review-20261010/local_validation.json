@@ -1,0 +1,87 @@
+{
+  "status": "local_review_and_software_validation_passed_scientific_confirmation_not_run",
+  "verified_utc": "2026-10-10T02:07:45.072380+00:00",
+  "review_commit": "b13c9877339779b8c770d175a483ea3489d2420c",
+  "integration_commit": "577aa09b520aa41b27c0f22b39c333f5fc8dfdd9",
+  "review_files": {
+    "docs/V5_PROBE_REVIEW_20261010.md": {
+      "bytes": 17789,
+      "sha256": "739aad270afbed0102b188c939f48c71f61011d508ceb3ff0e09dc2478e00618",
+      "matches_review_commit": true
+    },
+    "results/wm/visual-v5-probe-review-20261010/README.md": {
+      "bytes": 2131,
+      "sha256": "a84710795224701c1858833e40d188043a06848522cc88ccee8a1c195dc5e16d",
+      "matches_review_commit": true
+    },
+    "results/wm/visual-v5-probe-review-20261010/archive_audit.json": {
+      "bytes": 9652,
+      "sha256": "d0a18e2be47058c4ccdf0c9803df1fb7311accbe2152ce2c72282e97fa95467d",
+      "matches_review_commit": true
+    },
+    "results/wm/visual-v5-probe-review-20261010/review_validation.json": {
+      "bytes": 1251,
+      "sha256": "331e5f978e3df61deb520f6b2be54090151e9d00bd22f590b4a533d68c789b53",
+      "matches_review_commit": true
+    },
+    "scripts/audit_v5_archived_predictions.py": {
+      "bytes": 9416,
+      "sha256": "28be65f50b0783b37d258edc28a6e255c848ea2ffab6af676dd43dc6e24d2c80",
+      "matches_review_commit": true
+    },
+    "scripts/v5_temporal_confirmation.py": {
+      "bytes": 12061,
+      "sha256": "6fe8a1f96e6d1209094fa2522dcccf4e9558afcb9714e8e9d7dd9785eb651681",
+      "matches_review_commit": true
+    },
+    "scripts/v5_temporal_confirmation_plan.json": {
+      "bytes": 6641,
+      "sha256": "b2bd8f17c4abad23b2f2600b3dce572f8d1ec53b9500f129aff718b4aaacf711",
+      "matches_review_commit": true
+    },
+    "tests/visual_memory/test_temporal_confirmation.py": {
+      "bytes": 5106,
+      "sha256": "178ea75387dec7d171a3a0afc48e758c09f08811f4d0045275b9847c75812038",
+      "matches_review_commit": true
+    }
+  },
+  "cpu_tests": {
+    "command": "python3 -m unittest discover -s tests/visual_memory -v",
+    "count": 73,
+    "status": "passed",
+    "log": "local-cpu-tests.log"
+  },
+  "archive_audit_rerun": {
+    "path": "local-archive-audit.json",
+    "all_non_version_fields_match_exactly": true,
+    "maximum_numeric_difference": 0.0
+  },
+  "scientific_review": {
+    "matched_anchor_single_frame_exclusion": "valid",
+    "end_start_contrasts_under_registered_symmetric_fit": "algebraically redundant; software difference below 1e-16",
+    "bootstrap": "nine-endpoint Bonferroni remains conservative; approximate percentile coverage",
+    "helper_is_complete_execution_gate": false,
+    "remaining_runner_requirements": [
+      "exactly256 unique unseen confirmation blocks",
+      "FIT/model/source/protocol freeze receipts",
+      "identical encoded anchors reused",
+      "single frozen model",
+      "fresh original-distribution bridge",
+      "Test isolation",
+      "budget and GPU execution integration"
+    ]
+  },
+  "scientific_fit_confirmation_bridge_generated": false,
+  "new_gpu_jobs": 0,
+  "test_opened": false,
+  "original_gate_changed": false,
+  "remote_cleanup_performed": false,
+  "independent_numerical_review": {
+    "status": "no_blocking_defect",
+    "maximum_reversal_residual": 3.82e-13,
+    "maximum_repeated_center_residual": 2.84e-13,
+    "analytic_constant_error_bootstrap_maximum_difference": 1.11e-16,
+    "quadratic_centering_and_trace_normalization": "verified",
+    "fresh_scientific_data_generated": false
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "schema": "v5-designer-review-local-validation-1",
+  "created_utc": "2026-10-10T02:08:50.295222+00:00",
+  "review_commit": "b13c9877339779b8c770d175a483ea3489d2420c",
+  "additive_integration_commit": "577aa09",
+  "scientific_confirmation_executed": false,
+  "test_opened": false,
+  "new_gpu_jobs": 0,
+  "files": {
+    "README.md": {
+      "bytes": 2131,
+      "sha256": "a84710795224701c1858833e40d188043a06848522cc88ccee8a1c195dc5e16d"
+    },
+    "archive_audit.json": {
+      "bytes": 9652,
+      "sha256": "d0a18e2be47058c4ccdf0c9803df1fb7311accbe2152ce2c72282e97fa95467d"
+    },
+    "gpt_reply.md": {
+      "bytes": 4192,
+      "sha256": "3ad63eeb52a3bb1cb6f92b78c16619b68ff90b6b525fcb2306441b4e18f53359"
+    },
+    "local-archive-audit.json": {
+      "bytes": 9652,
+      "sha256": "ba60058ab1743042540a6809474efcd00a46428a69fc47878e7a4f8eea3865a6"
+    },
+    "local-cpu-tests.log": {
+      "bytes": 11669,
+      "sha256": "49e1b1b59714cdd2a31a811a0a5b7c9c450c5fc96181b45ce441e25993c3818a"
+    },
+    "local_validation.json": {
+      "bytes": 3478,
+      "sha256": "6e8fd221da2d045a3bd345b419f1c5070a2fae84c74e4f540d03a6fc056e2df0"
+    },
+    "review_validation.json": {
+      "bytes": 1251,
+      "sha256": "331e5f978e3df61deb520f6b2be54090151e9d00bd22f590b4a533d68c789b53"
+    }
+  },
+  "source_files": {
+    "docs/VISUAL_V5_GPT_REVIEW_20261009.md": {
+      "bytes": 7253,
+      "sha256": "ffb54faaf1419ae89f23fb98ae0e9622e369d8c1092ac80db4e489d58cfd3614"
+    },
+    "docs/V5_PROBE_REVIEW_20261010.md": {
+      "bytes": 17789,
+      "sha256": "739aad270afbed0102b188c939f48c71f61011d508ceb3ff0e09dc2478e00618"
+    },
+    "scripts/v5_temporal_confirmation.py": {
+      "bytes": 12061,
+      "sha256": "6fe8a1f96e6d1209094fa2522dcccf4e9558afcb9714e8e9d7dd9785eb651681"
+    },
+    "scripts/v5_temporal_confirmation_plan.json": {
+      "bytes": 6641,
+      "sha256": "b2bd8f17c4abad23b2f2600b3dce572f8d1ec53b9500f129aff718b4aaacf711"
+    },
+    "scripts/audit_v5_archived_predictions.py": {
+      "bytes": 9416,
+      "sha256": "28be65f50b0783b37d258edc28a6e255c848ea2ffab6af676dd43dc6e24d2c80"
+    },
+    "tests/visual_memory/test_temporal_confirmation.py": {
+      "bytes": 5106,
+      "sha256": "178ea75387dec7d171a3a0afc48e758c09f08811f4d0045275b9847c75812038"
+    }
+  }
+}

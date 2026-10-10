@@ -25,16 +25,59 @@ position priors from substituting for motion information. It prohibits changing
 the original failed gate, opening Test, launching GPU jobs, or overwriting the
 existing main/result/diagnostic branches as part of that review.
 
-## Response status
+## Received response and independent local verification
 
-Pending at the time of this document's initial commit. The conversation showed
-active with no error or attention flag. No new assistant answer had been returned.
-The older message claiming the `df9e780` upload is historical, not this review.
+The actual new answer was received on 2026-10-10 UTC (2026-10-09 New York),
+message `888ba774-01fa-57b7-96d8-68805b03d858`. It cites independent review branch
+`review/v5-designer-probe-audit-20261010`, commit
+[`b13c9877339779b8c770d175a483ea3489d2420c`](https://github.com/XintongYang1010/predictive-memory-lab/commit/b13c9877339779b8c770d175a483ea3489d2420c).
+The older `df9e780` upload message was not mistaken for this review.
 
-The independent local findings are already available in the
-[CPU diagnostic archive](../results/wm/visual-v5-probe-diagnostic-20261009/README.md).
-No GPT recommendation is represented as received or validated before its actual
-reply is read and checked.
+We fetched that exact commit and inspected its eight added files. Its parent is
+the earlier frozen scientific source; its branch snapshot therefore omits later
+archives. We integrated only its additive commit with `cherry-pick -x` as
+`577aa09`, preserving all existing results and diagnostics.
+
+The reviewer agrees that the current blocker is the validity of the temporal
+prerequisite. It found no newly demonstrated causal implementation error in
+frame indices, labels, pooling, splits or ridge. Regularization changes the
+score, but pooled concat does not beat the matched single-frame control. This
+does not prove the encoder lacks motion information or that all improved score
+comes from position priors. The old failure remains unchanged.
+
+Received deliverables:
+
+- [Full design review](V5_PROBE_REVIEW_20261010.md)
+- [Fixed quartet confirmation plan](../scripts/v5_temporal_confirmation_plan.json)
+- [CPU quartet, kernel and scoring helpers](../scripts/v5_temporal_confirmation.py)
+- [Reviewer evidence](../results/wm/visual-v5-probe-review-20261010/README.md) and
+  [independent local validation](../results/wm/visual-v5-probe-review-20261010/local_validation.json)
+- [Independent local diagnostic measurements](../results/wm/visual-v5-probe-diagnostic-20261009/README.md)
+
+Local validation passed **73 applicable CPU tests**, including the reviewer's
+11 new software checks. Its archived-prediction audit was rerun locally: all
+non-environment JSON fields match exactly (maximum numeric difference 0), despite
+different NumPy/Pillow versions. Independent source review found the matched
+anchor proof sound and no blocking numerical/statistical defect in the helpers.
+
+Two qualifications matter for execution:
+
+1. The helper deliberately returns `p0_authorized=false`. Its metric-only flag
+   can be true on eight software-test blocks; a new runner must enforce exactly
+   256 unique fresh confirmation blocks, identical anchor tensors, FIT/model/
+   protocol hashes, the original-distribution bridge and Test isolation. No such
+   GPU extraction/provenance runner is delivered yet.
+2. For the registered reversal-balanced ridge and swap-invariant kernels, the
+   two anchor contrasts are algebraically equal, not independent evidence.
+   Independent software checks found differences below 1e−16. The nine-endpoint
+   Bonferroni procedure is still conservative; independence is not required.
+
+The accepted next experiment is a **new confirmation**, not a repaired historical
+success: freeze the new reader on 256 FIT quartets, then evaluate 256 unseen
+quartets and the predeclared original-distribution bridge. The same frozen
+pooled reader must satisfy all registered criteria before a separately versioned
+P0. FIT/confirmation/bridge scientific data have not been generated in this
+consultation. No new GPU job or remote cleanup occurred, and Test remains sealed.
 
 ## Local reasoning while awaiting review
 

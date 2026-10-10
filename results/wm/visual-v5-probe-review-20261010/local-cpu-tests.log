@@ -1,0 +1,118 @@
+test_failed_gate_has_no_checkpoints_and_retains_reconstruction (test_archive.Archive) ... ok
+test_missing_source_refused_before_output_and_inventory_tamper_fails (test_archive.Archive) ... ok
+test_training_checkpoint_archive_and_tamper_detection (test_archive.Archive) ... ok
+test_competing_reservations_cannot_cross_round_cap (test_budget_parallel.ParallelBudget) ... ok
+test_eight_distinct_stages_reserve_and_refund_without_lost_updates (test_budget_parallel.ParallelBudget) ... ok
+test_eight_gpu_lease_accounts_wall_time_and_signal (test_budget_parallel.ParallelBudget) ... ok
+test_hard_kill_keeps_full_reservation_and_releases_stage_lock (test_budget_parallel.ParallelBudget) ... ok
+test_same_stage_has_one_active_owner (test_budget_parallel.ParallelBudget) ... ok
+test_parallel_record_writes_match_serial_and_parent_owns_completion (test_feature_workers.FeatureWorkers) ... {"stage": "features", "episode": "dev-000000-0", "frames": 19}
+{"stage": "features", "episode": "dev-000000-1", "frames": 19}
+{"stage": "features", "episode": "dev-000001-0", "frames": 19}
+{"stage": "features", "episode": "dev-000001-1", "frames": 19}
+{"stage": "features", "episode": "dev-000000-0", "frames": 19}
+{"stage": "features", "episode": "dev-000000-1", "frames": 19}
+{"stage": "features", "episode": "dev-000001-0", "frames": 19}
+{"stage": "features", "episode": "dev-000001-1", "frames": 19}
+ok
+test_resume_rejects_wrong_episode_and_test_is_never_opened (test_feature_workers.FeatureWorkers) ... {"stage": "features", "episode": "train-000000-0", "frames": 19}
+{"stage": "features", "episode": "train-000000-1", "frames": 19}
+ok
+test_shards_are_disjoint_complete_and_keep_pairs_together (test_feature_workers.FeatureWorkers) ... ok
+test_worker_stops_for_shared_cancellation_or_deadline (test_feature_workers.FeatureWorkers) ... ok
+test_chunked_gram_matches_concat_and_repeat_frame_equivalence (test_input_audit.InputAudit) ... ok
+test_chunked_probe_matches_frozen_probe_regularizer_precision (test_input_audit.InputAudit) ... ok
+test_raw_pooling_preserves_spatial_raster_and_storage_dtype (test_input_audit.InputAudit) ... ok
+test_dgx_60h_round_cap_prevents_submission (test_launcher.Launcher) ... ok
+test_dgx_failed_step_persists_receipt_and_stops_chain (test_launcher.Launcher) ... ok
+test_dgx_rejects_unverified_account_and_untyped_new_allocation (test_launcher.Launcher) ... ok
+test_dgx_requires_explicit_account (test_launcher.Launcher) ... ok
+test_dgx_shared_dry_run_records_reserved_eight_selected_one (test_launcher.Launcher) ... ok
+test_dry_run_uses_live_gpu_type_and_never_submits (test_launcher.Launcher) ... ok
+test_parallel_dry_run_keeps_aggregate_budget_and_uses_eight_feature_workers (test_launcher.Launcher) ... ok
+test_parallel_failure_drains_started_siblings_but_never_launches_ninth (test_launcher.Launcher) ... ok
+test_parallel_scheduler_never_exceeds_eight_and_waits_before_ninth (test_launcher.Launcher) ... ok
+test_refuse_torch_and_unknown_partition (test_launcher.Launcher) ... ok
+test_unreconciled_interrupted_budget_never_submits (test_launcher.Launcher) ... ok
+test_alpha_selection_cannot_see_dev_kernel_or_targets (test_probe_diagnostics.ProbeDiagnostics) ... ok
+test_chunked_frame_kernels_match_explicit_concat_and_difference (test_probe_diagnostics.ProbeDiagnostics) ... ok
+test_gram_centering_matches_explicit_original_dual_fit (test_probe_diagnostics.ProbeDiagnostics) ... ok
+test_grouped_folds_keep_both_variants_and_frames_together (test_probe_diagnostics.ProbeDiagnostics) ... ok
+test_pair_bootstrap_identity_and_incomplete_pairs (test_probe_diagnostics.ProbeDiagnostics) ... ok
+test_shared_position_decoder_uses_derived_labels_and_differences (test_probe_diagnostics.ProbeDiagnostics) ... /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_probe_diagnostics.py:73: RuntimeWarning: divide by zero encountered in matmul
+  views = diagnostics.kernel_views(frames@frames.T, query@frames.T)
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_probe_diagnostics.py:73: RuntimeWarning: overflow encountered in matmul
+  views = diagnostics.kernel_views(frames@frames.T, query@frames.T)
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_probe_diagnostics.py:73: RuntimeWarning: invalid value encountered in matmul
+  views = diagnostics.kernel_views(frames@frames.T, query@frames.T)
+ok
+test_frame_selection_uses_train_score_and_ignores_dev_fields (test_probe_temporal.TemporalControls) ... ok
+test_reversed_labels_change_endpoint_and_displacement_sign (test_probe_temporal.TemporalControls) ... ok
+test_single_frame_and_query_swap_kernels_match_explicit_features (test_probe_temporal.TemporalControls) ... /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_probe_temporal.py:16: RuntimeWarning: divide by zero encountered in matmul
+  cross=dev.reshape(10,13)@train.reshape(16,13).T
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_probe_temporal.py:16: RuntimeWarning: overflow encountered in matmul
+  cross=dev.reshape(10,13)@train.reshape(16,13).T
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_probe_temporal.py:16: RuntimeWarning: invalid value encountered in matmul
+  cross=dev.reshape(10,13)@train.reshape(16,13).T
+ok
+test_budget_stops_profile_before_another_encoder_call (test_profiling.Profiling) ... ok
+test_cold_start_is_separate_from_representative_throughput (test_profiling.Profiling) ... ok
+test_actor_does_not_receive_evaluation_fields (test_protocol.Protocol) ... ok
+test_all_candidates_gradients_and_frozen_writer (test_protocol.Protocol) ... ok
+test_budget_resume_and_cap (test_protocol.Protocol) ... ok
+test_checkpoint_resume_and_tiny_training (test_protocol.Protocol) ... {"run": "tmptv5vk_bc", "step": 2, "train_loss": 0.014771723188459873, "dev_mse": 0.008185838116332889, "gradient_norm": 0.3281517028808594, "elapsed_seconds": 0.008723958999999226, "trainable_parameters": 7190}
+{"run": "tmptv5vk_bc", "step": 4, "train_loss": 0.004557535983622074, "dev_mse": 0.0029543497948907316, "gradient_norm": 0.14698077738285065, "elapsed_seconds": 0.017000458999999246, "trainable_parameters": 7190}
+ok
+test_delta_formula_nontrivial_decay (test_protocol.Protocol) ... ok
+test_delta_revises_one_orthogonal_address (test_protocol.Protocol) ... ok
+test_equal_cache_budget (test_protocol.Protocol) ... ok
+test_gap_and_write_axes (test_protocol.Protocol) ... ok
+test_interrupted_optimizer_resume_matches_uninterrupted (test_protocol.Protocol) ... {"run": "direct", "step": 2, "train_loss": 0.14178377389907837, "dev_mse": 0.11253934912383556, "gradient_norm": 1.16609525680542, "elapsed_seconds": 0.00619962499999982, "trainable_parameters": 7190}
+{"run": "direct", "step": 4, "train_loss": 0.08947477489709854, "dev_mse": 0.06558792851865292, "gradient_norm": 0.8720167875289917, "elapsed_seconds": 0.014019042000000148, "trainable_parameters": 7190}
+{"run": "resume", "step": 2, "train_loss": 0.14178377389907837, "dev_mse": 0.11253934912383556, "gradient_norm": 1.16609525680542, "elapsed_seconds": 0.005606124999999906, "trainable_parameters": 7190}
+{"run": "resume", "step": 4, "train_loss": 0.08947477489709854, "dev_mse": 0.06558792851865292, "gradient_norm": 0.8720167875289917, "elapsed_seconds": 0.005725208000000315, "trainable_parameters": 7190}
+ok
+test_pairs_and_splits (test_protocol.Protocol) ... ok
+test_reader_empty_and_identity (test_protocol.Protocol) ... ok
+test_skip_reset_chronological_and_size (test_protocol.Protocol) ... ok
+test_streaming_fifo_writes_once_and_matches_replay (test_protocol.Protocol) ... ok
+test_requires_reader_results_and_successful_replay_status (test_report.ReportCompleteness) ... /Users/xintongyang/Library/Python/3.9/lib/python/site-packages/matplotlib/_fontconfig_pattern.py:64: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+  prop = Group((name + Suppress("=") + comma_separated(value)) | oneOf(_CONSTANTS))
+/Users/xintongyang/Library/Python/3.9/lib/python/site-packages/matplotlib/_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  parse = parser.parseString(pattern)
+/Users/xintongyang/Library/Python/3.9/lib/python/site-packages/matplotlib/_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+  parser.resetCache()
+/Users/xintongyang/Library/Python/3.9/lib/python/site-packages/matplotlib/_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'
+  ParserElement.enablePackrat()
+In /Users/xintongyang/Library/Python/3.9/lib/python/site-packages/matplotlib/mpl-data/stylelib/classic.mplstyle: 'parseString' deprecated - use 'parse_string'
+In /Users/xintongyang/Library/Python/3.9/lib/python/site-packages/matplotlib/mpl-data/stylelib/classic.mplstyle: 'resetCache' deprecated - use 'reset_cache'
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/pmr/visual_memory/report.py:58: UserWarning: No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+  ax.legend(fontsize=7)
+ok
+test_dgx_account_derived_from_live_job_not_missing_env (test_slurm_backend.SlurmBackend) ... ok
+test_explicit_eight_worker_selection_validates_all_uuids (test_slurm_backend.SlurmBackend) ... ok
+test_explicit_sharing_records_occupancy_but_requires_free_memory (test_slurm_backend.SlurmBackend) ... ok
+test_gpu_totals_do_not_double_count_types (test_slurm_backend.SlurmBackend) ... ok
+test_real_account_cannot_be_spoofed_by_environment (test_slurm_backend.SlurmBackend) ... ok
+test_real_pending_job_and_wrong_step_identity_refused (test_slurm_backend.SlurmBackend) ... ok
+test_selector_changes_only_cuda_visibility_and_preserves_receipt (test_slurm_backend.SlurmBackend) ... ok
+test_shared_selection_never_takes_gpu_outside_step_or_busy_gpu (test_slurm_backend.SlurmBackend) ... ok
+test_shared_selection_requires_exact_uuid_and_records_allocation_eight (test_slurm_backend.SlurmBackend) ... ok
+test_unapproved_multi_gpu_step_is_refused (test_slurm_backend.SlurmBackend) ... ok
+test_wrong_gpu_and_multiple_visible_devices_are_refused (test_slurm_backend.SlurmBackend) ... ok
+test_actor_has_no_group_or_variant_or_state (test_temporal_confirmation.TemporalConfirmation) ... ok
+test_any_first_frame_function_fails_start_contrast (test_temporal_confirmation.TemporalConfirmation) ... ok
+test_any_last_frame_function_fails_end_contrast (test_temporal_confirmation.TemporalConfirmation) ... ok
+test_end_and_start_anchor_pixels_identical (test_temporal_confirmation.TemporalConfirmation) ... ok
+test_exact_reversals_pixels_and_labels (test_temporal_confirmation.TemporalConfirmation) ... ok
+test_fixed_train_selection_keeps_all_four_views_together (test_temporal_confirmation.TemporalConfirmation) ... ok
+test_no_reflection_and_displacement_matches_positions (test_temporal_confirmation.TemporalConfirmation) ... ok
+test_perfect_two_frame_coordinate_oracle_passes_metrics_only (test_temporal_confirmation.TemporalConfirmation) ... ok
+test_quadratic_matches_explicit_feature_map (test_temporal_confirmation.TemporalConfirmation) ... ok
+test_reject_test_namespace_and_bad_order (test_temporal_confirmation.TemporalConfirmation) ... ok
+test_zero_motion_prediction_cannot_pass (test_temporal_confirmation.TemporalConfirmation) ... ok
+
+----------------------------------------------------------------------
+Ran 73 tests in 4.624s
+
+OK
