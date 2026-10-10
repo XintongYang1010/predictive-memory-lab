@@ -1,0 +1,34 @@
+{
+  "python": "3.9.6 (default, Dec  2 2025, 07:27:58) \n[Clang 17.0.0 (clang-1700.6.3.2)]",
+  "executable": "/Library/Developer/CommandLineTools/usr/bin/python3",
+  "platform": "macOS-15.7.3-arm64-arm-64bit",
+  "torch": "2.8.0",
+  "numpy": "2.0.2",
+  "matplotlib": "3.9.4",
+  "device": "CPU",
+  "test_opened": false,
+  "gpu_inference_added": false,
+  "cpu_tests": {
+    "command": "python3 -m unittest discover -s tests/visual_memory -v",
+    "count": 62,
+    "status": "passed",
+    "log": "validation/cpu-tests.log"
+  },
+  "original_source_commit": "d0b4fef25e98eefb58bfba737997cb0145f27daa",
+  "original_result_commit": "d4b6fc622d0fe08e28605aaf6e48100201ab2008",
+  "original_gate_status": "failed; unchanged",
+  "feature_caches": {
+    "episodes": 256,
+    "pairs_per_split": 64,
+    "bytes": 655082496,
+    "sha256_verified": true,
+    "included_in_git": false,
+    "location": "original retained remote work directory /aifs4su/guhao/KVCache/WM/run1/probe_features",
+    "manifest_source": "../visual-v5-dgx-20261009/run/probe_features/{train,dev}/manifest.json"
+  },
+  "figures_visually_inspected": [
+    "matched_temporal_controls.png",
+    "train_cv_regularization.png",
+    "probe_comparisons.png"
+  ]
+}

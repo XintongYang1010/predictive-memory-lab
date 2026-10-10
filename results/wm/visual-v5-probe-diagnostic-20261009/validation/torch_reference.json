@@ -1,0 +1,110 @@
+{
+  "status": "verified",
+  "implementation": "Explicit centered pooled feature matrices + torch.linalg.solve; no NumPy solve or Gram-space centering",
+  "reference": "core_probe/train_selection.json and core_probe/diagnostics.json",
+  "cpu_threads": 4,
+  "test_opened": false,
+  "original_gate_changed": false,
+  "rtol": 1e-07,
+  "atol": 1e-10,
+  "grouped_folds_identical": true,
+  "checked_fold_scores": 24,
+  "trials": [
+    {
+      "alpha": 0.0001,
+      "fold_scores": [
+        1.0947124741137846,
+        1.2412634799380586,
+        0.9551169152694516,
+        1.1307899150990504
+      ],
+      "mean_score": 1.1054706961050864,
+      "maximum_absolute_difference": 1.1688428003253648e-12,
+      "matches": true
+    },
+    {
+      "alpha": 0.001,
+      "fold_scores": [
+        1.0895530436532246,
+        1.2353231693853362,
+        0.949566726420983,
+        1.124162826157706
+      ],
+      "mean_score": 1.0996514414043124,
+      "maximum_absolute_difference": 1.1530776333756876e-12,
+      "matches": true
+    },
+    {
+      "alpha": 0.01,
+      "fold_scores": [
+        1.0461563248509913,
+        1.1846450405991513,
+        0.904048969941012,
+        1.0693652780750833
+      ],
+      "mean_score": 1.0510539033665594,
+      "maximum_absolute_difference": 1.0087486401744172e-12,
+      "matches": true
+    },
+    {
+      "alpha": 0.1,
+      "fold_scores": [
+        0.8876089053539933,
+        0.9770780959592154,
+        0.7659247302527703,
+        0.8822994550819837
+      ],
+      "mean_score": 0.8782277966619907,
+      "maximum_absolute_difference": 4.418687638008123e-13,
+      "matches": true
+    },
+    {
+      "alpha": 1.0,
+      "fold_scores": [
+        0.8134045813053256,
+        0.7982174487975895,
+        0.7448186104973735,
+        0.7722766471791186
+      ],
+      "mean_score": 0.7821793219448517,
+      "maximum_absolute_difference": 5.517808432387028e-14,
+      "matches": true
+    },
+    {
+      "alpha": 10.0,
+      "fold_scores": [
+        0.9000416320303009,
+        0.8681874064608707,
+        0.8587070500368563,
+        0.850320154172241
+      ],
+      "mean_score": 0.8693140606750672,
+      "maximum_absolute_difference": 4.3298697960381105e-15,
+      "matches": true
+    }
+  ],
+  "maximum_cv_score_difference": 1.1688428003253648e-12,
+  "selected_alpha": 1.0,
+  "dev_r2_per_dimension": [
+    0.9267546884903455,
+    0.9348716297327189,
+    0.9338214215065818,
+    0.9120882897421092,
+    0.15391028761352332,
+    0.4647425962433751,
+    0.14266103147645537,
+    0.2142672606571916
+  ],
+  "dev_position_r2": 0.9268840073679387,
+  "dev_displacement_r2": 0.24389529399763635,
+  "maximum_dev_r2_difference": 1.0325074129013956e-14,
+  "all_outputs_finite": true,
+  "wall_seconds": 0.7311194580000001,
+  "peak_process_rss_bytes": 519634944,
+  "script_sha256": "d9af40cdf41fa535ceff951d1ef88102083f101b1ac568a948b5fd2b327fae09",
+  "cache_manifest_sha256": {
+    "train": "bc79778884ccfdb741ac52e4edb58b501bb7c6cc4e80d10fc72170fce2253202",
+    "dev": "a44c86624c8de1c7924cb725af93cfd8b6e13effa795931d90dc96edad544498"
+  },
+  "interpretation": "Independent reproduction of the exploratory diagnostic; no new gate or independent confirmation dataset."
+}

@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "review_scope": [
+    "single-frame kernel indexing",
+    "reversed query kernel indexing",
+    "Train-only frame and alpha selection",
+    "reversed target and Train-mean denominator",
+    "paired bootstrap differences",
+    "CSV labels and oddness"
+  ],
+  "recorded_temporal_script_sha256": "3fe2ef6782c2b4b7970626bdd81ae631e28a99b0121c7d1f314dd7172c54467c",
+  "csv_dimensions_independently_recomputed": 64,
+  "maximum_metric_absolute_difference": 2.66e-15,
+  "forward_predictions_match_core_exactly": true,
+  "interpretation": "Raw two-frame improvement over the Train-selected frame6 does not establish two-frame necessity; both single-frame results remain visible. Query reversal is a distribution-shift diagnostic."
+}

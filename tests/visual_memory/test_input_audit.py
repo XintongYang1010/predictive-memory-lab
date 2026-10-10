@@ -3,6 +3,7 @@ from pathlib import Path
 import unittest
 
 import torch
+from pmr.visual_memory.features import probe
 
 SPEC=importlib.util.spec_from_file_location("audit_visual_probe_inputs_v5",Path(__file__).resolve().parents[2]/"scripts/audit_visual_probe_inputs_v5.py")
 audit=importlib.util.module_from_spec(SPEC);SPEC.loader.exec_module(audit)
@@ -31,6 +32,22 @@ class InputAudit(unittest.TestCase):
         gram,cross=components[0]
         torch.testing.assert_close(audit.ridge_prediction(gram,cross,targets),
                                    audit.ridge_prediction(2*gram,2*cross,targets),rtol=0,atol=0)
+
+    def test_chunked_probe_matches_frozen_probe_regularizer_precision(self):
+        torch.manual_seed(19)
+        def rows(count):
+            return [dict(raw_cue=torch.randn(2,16,3).bfloat16(),features=torch.randn(8,4,3).bfloat16(),
+                         probe_state=torch.randn(8)) for _ in range(count)]
+        train,dev=rows(12),rows(8)
+        original=probe(train,dev)
+        y=torch.stack([r["probe_state"] for r in train]).double()
+        target=torch.stack([r["probe_state"] for r in dev]).double()
+        for representation,mode in (("raw","raw"),("original_pooled","pooled")):
+            parts=[audit.gram_components(train,dev,lambda row,i=i:audit.frame(row,representation,i),chunk=7) for i in (0,1)]
+            pred=audit.ridge_prediction(sum(p[0] for p in parts),sum(p[1] for p in parts),y)
+            actual=audit.summarize(pred,target,y.mean(0))
+            torch.testing.assert_close(torch.tensor(actual["r2_per_dimension"]),
+                                       torch.tensor(original[mode]["r2_per_dimension"]),rtol=1e-10,atol=1e-10)
 
 
 if __name__=="__main__":unittest.main()

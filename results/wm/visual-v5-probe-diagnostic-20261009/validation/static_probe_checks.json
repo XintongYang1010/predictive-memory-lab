@@ -1,0 +1,136 @@
+{
+  "schema": "offline-static-data-checks-1",
+  "test_opened": false,
+  "split_checks": {
+    "train": {
+      "episodes": 128,
+      "pairs": 64,
+      "timestamps_6_7_correct": true,
+      "paired_recent_equal": true,
+      "visible_rgb_frame_changes": 128
+    },
+    "dev": {
+      "episodes": 128,
+      "pairs": 64,
+      "timestamps_6_7_correct": true,
+      "paired_recent_equal": true,
+      "visible_rgb_frame_changes": 128
+    }
+  },
+  "rgb_color_centroid_oracle": {
+    "per_dimension": [
+      0.9998291034672673,
+      0.9991876185354314,
+      0.9997999841368824,
+      0.9989560877966009,
+      0.9849627480123208,
+      0.9812060573230054,
+      0.9766594016664895,
+      0.9686945863170398
+    ],
+    "position_r2": 0.9994431984840455,
+    "displacement_r2": 0.9778806983297139
+  },
+  "no_temporal_input_controls": {
+    "position_only_polynomial_degree_1": {
+      "per_dimension": [
+        0.9999999659086143,
+        0.999999259909552,
+        0.9999999600765459,
+        0.9999990160061146,
+        0.18705448188695417,
+        0.5713957992077185,
+        0.170744345362692,
+        0.33077095700522996
+      ],
+      "position_r2": 0.9999995504752066,
+      "displacement_r2": 0.31499139586564867
+    },
+    "position_only_polynomial_degree_3": {
+      "per_dimension": [
+        0.9999551370095853,
+        0.9998017432572209,
+        0.9999735180616837,
+        0.9994852589362321,
+        0.19540123635246176,
+        0.5617875851049876,
+        0.18204737520950243,
+        0.3178698942624616
+      ],
+      "position_r2": 0.9998039143161804,
+      "displacement_r2": 0.31427652273235335
+    }
+  },
+  "recomputed_published_predictions": {
+    "raw": {
+      "per_dimension": [
+        0.9529110795775746,
+        0.9567561714149598,
+        0.966406634829759,
+        0.9524301820834467,
+        0.006395826382453507,
+        0.38296602242876876,
+        -0.1746072768433411,
+        0.10745606209955283
+      ],
+      "position_r2": 0.9571260169764351,
+      "displacement_r2": 0.0805526585168585
+    },
+    "pooled": {
+      "per_dimension": [
+        0.9745803853105978,
+        0.971225526730171,
+        0.9803852033982638,
+        0.9725725450308577,
+        -0.1105450464873694,
+        0.32685867737639673,
+        -0.3081169755957498,
+        0.008096022111247048
+      ],
+      "position_r2": 0.9746909151174726,
+      "displacement_r2": -0.020926830648868855
+    }
+  },
+  "r2_using_dev_mean": {
+    "raw": [
+      0.9522382070223872,
+      0.9567552126880774,
+      0.9660278688322861,
+      0.952325563904636,
+      0.006380921640728454,
+      0.38030977130429433,
+      -0.17509523799786253,
+      0.10598017595117892
+    ],
+    "pooled": [
+      0.9742171541951995,
+      0.9712248887926443,
+      0.9801640460964445,
+      0.9725122250524774,
+      -0.11056170542211552,
+      0.3239608914194755,
+      -0.3086604000085258,
+      0.006455836928961567
+    ]
+  },
+  "fixed_fit_pair_bootstrap_95ci": {
+    "raw": [
+      -0.03771657778702156,
+      0.18469519424719857
+    ],
+    "pooled": [
+      -0.16323617400438406,
+      0.1004722161023568
+    ],
+    "raw_minus_pooled": [
+      0.033255641880178245,
+      0.17485758434527682
+    ]
+  },
+  "limitations": [
+    "Exploratory controls; not a new gate or threshold change.",
+    "Oracle uses known target colors to locate visible objects; not an actor input.",
+    "Bootstrap conditions on fixed fitted models and excludes training uncertainty.",
+    "Degree1 and degree3 controls reported together; no Dev-based choice or retraining of the official gate."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "status": "additional_exploratory_followup_designed_after_core_result",
+  "trigger": "Core Train-CV concat improved Dev motion R2, requiring matched single-frame and order-swap controls before temporal claims.",
+  "original_core_results_sha256": "41492df5e69588f36aa61f1d90895370ed9a9d21ea582b3c49833f9c34e45357",
+  "original_core_script_sha256": "f44c8d1f6e728febcb35cb9c5d6fe9757c6ba8b2241db777af0fdfbb24a103ff",
+  "data": "Existing 128 Train and 128 previously inspected Dev records; Test remains unopened",
+  "representations": [
+    "raw",
+    "pooled"
+  ],
+  "single_frame_controls": [
+    "frame6",
+    "frame7"
+  ],
+  "train_cv": {
+    "folds": 4,
+    "seed": 8317,
+    "group": "pair_id; both variants and both frames stay together",
+    "objective": "Mean of four displacement-dimension MSE ratios against that fold's Train target mean evaluated on held-out Train pairs; average equally across folds.",
+    "tie_break": "Smallest alpha in ascending grid.",
+    "dev_access": false
+  },
+  "alpha_grid": [
+    0.0001,
+    0.001,
+    0.01,
+    0.1,
+    1.0,
+    10.0
+  ],
+  "frame_selection": "Choose frame6/frame7 by minimum best-alpha Train CV score; exact ties choose frame6. Report both Dev controls.",
+  "reference": "Reuse the core full-Train concat alpha selected by Train CV, with no new Dev selection",
+  "comparison": "Paired Dev bootstrap of concat R2 minus the Train-selected single-frame R2; identical original Train-mean denominator",
+  "query_order_intervention": "Fit original Train concat, reverse only Dev cue-frame order; targets become [p6,-displacement]",
+  "reversed_denominator": "Reversed Train target mean: [mean(p7)-mean(displacement), -mean(displacement)]",
+  "oddness": "RMSE of forward plus reversed predicted displacement; zero is ideal signed-displacement antisymmetry",
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 7709,
+    "confidence": 0.95,
+    "unit": "Dev pair_id; both variants retained",
+    "scope": "Full-Train fits only",
+    "metric": "Mean displacement R2; recompute resampled Dev denominator against fixed Train target mean.",
+    "interpretation": "Exploratory paired-sample uncertainty, not a new scientific gate or independent confirmation."
+  },
+  "limitations": [
+    "Followup was triggered by observed core Dev results, not preregistered.",
+    "All Dev findings and intervals are exploratory; no automatic model winner or gate change.",
+    "Reversing query order changes the generator's directional/position prior and is a distribution-shift intervention.",
+    "No GPU, Test access, downstream training, or modification of archived results."
+  ]
+}
