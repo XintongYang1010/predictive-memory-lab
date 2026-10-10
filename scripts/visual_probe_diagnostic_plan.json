@@ -1,0 +1,21 @@
+{
+  "schema": "v5-probe-diagnostic-plan-1",
+  "status": "fixed_before_followup_cache_analysis",
+  "purpose": "Exploratory explanation of the failed pooled displacement prerequisite; no replacement gate or authorization to train memory models.",
+  "data": {"train_episodes": 128, "dev_episodes": 128, "test_access": false, "dev_use": "Previously inspected; exploratory reporting only, never hyperparameter or model selection."},
+  "representations": ["raw", "pooled"],
+  "methods": {
+    "concat": "Original centered concatenated t6/t7 ridge predicting all eight targets.",
+    "difference_hybrid": "Centered (t7-t6) ridge predicts four displacement targets; original fixed-alpha 0.01 concat ridge supplies four position predictions.",
+    "shared_position": "One ridge decoder maps both frames to positions, trained with analysis-only targets p7 and p6=p7-displacement; predicts p7 and derives displacement by subtracting predicted positions."
+  },
+  "normalization": "Within each fit only: center features on fitting observations and divide Gram matrices by their mean centered diagonal. Shared-position fit pools both frame times.",
+  "alpha_grid": [0.0001, 0.001, 0.01, 0.1, 1.0, 10.0],
+  "cv": {"folds": 4, "seed": 8317, "group": "pair_id; both variants and both frames stay together", "objective": "Mean of four displacement-dimension MSE ratios against that fold's Train target mean evaluated on held-out Train pairs; average equally across folds.", "tie_break": "Smallest alpha in ascending grid.", "dev_access": false},
+  "sample_size_sensitivity": {"train_pairs": [16, 32, 64], "subset_seed": 1921, "nested": true, "alpha_selection": "Repeat inner-Train grouped CV separately for each subset; never select a sample size using Dev."},
+  "fixed_alpha_controls": {"alpha": 0.01, "train_pairs": 64, "methods": ["concat", "difference_hybrid"]},
+  "bootstrap": {"replicates": 2000, "seed": 7709, "confidence": 0.95, "unit": "Dev pair_id; both variants retained", "scope": "Full-Train fits only", "metric": "Mean displacement R2; recompute resampled Dev denominator against fixed Train target mean.", "interpretation": "Exploratory paired-sample uncertainty, not a new scientific gate or independent confirmation."},
+  "numerics": {"dtype": "float64", "solver": "dual Gram ridge; never a feature-dimensional primal system", "feature_chunk": 4096, "default_cpu_threads": 4},
+  "outputs": ["frozen_plan.json", "train_selection.json", "gram_energy.json", "summary.csv", "per_dimension.csv", "dev_predictions.csv", "diagnostics.json", "README.md"],
+  "invariants": ["Original feature_gate.json and prior results remain unchanged", "No Test load or generation", "No GPU computation", "No automatic Dev winner or downstream training approval", "All fitting/cross-validation choices are fixed before Dev reporting"]
+}
