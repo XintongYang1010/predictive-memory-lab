@@ -1,0 +1,43 @@
+{
+  "archive": {
+    "bytes": 2729102394,
+    "name": "visual-v5_5-20261010-remote-scene.tar.gz",
+    "sha256": "7c39ad4fd468c5c8dad768fa33182bf1b686443ea9b0b1dd95890fa19adf5b44"
+  },
+  "concatenation": "lexical order part000, part001, ...; then verify full SHA256 and extract tar.gz",
+  "manifest_sha256": "b6e0ca1e893a595edb3a8c60507f72de647f5affcb20daf8223bf3af20e72663",
+  "parts": [
+    {
+      "bytes": 536870912,
+      "name": "visual-v5_5-20261010-remote-scene.tar.gz.part000",
+      "sha256": "0773f3860f166f2f825431bd84b02ecb6c13e23f27b0973bd2b2644991f81d45"
+    },
+    {
+      "bytes": 536870912,
+      "name": "visual-v5_5-20261010-remote-scene.tar.gz.part001",
+      "sha256": "89631d2367d82b12b17a5a8f0d613389a7cf9375dfc66aa7fddaa210e3f3c922"
+    },
+    {
+      "bytes": 536870912,
+      "name": "visual-v5_5-20261010-remote-scene.tar.gz.part002",
+      "sha256": "88e3dd079784ad72354f26f5916d9086e6b6f35286b7ad3d480b53ce63530679"
+    },
+    {
+      "bytes": 536870912,
+      "name": "visual-v5_5-20261010-remote-scene.tar.gz.part003",
+      "sha256": "2e870fd606f6b683b5c2a1073311b56c1685797d74bab041b2c676a0326696d9"
+    },
+    {
+      "bytes": 536870912,
+      "name": "visual-v5_5-20261010-remote-scene.tar.gz.part004",
+      "sha256": "f2a6a41575292172664f457c34a5e2cd35f17bcb8ef16abb62a5ed56c5f85636"
+    },
+    {
+      "bytes": 44747834,
+      "name": "visual-v5_5-20261010-remote-scene.tar.gz.part005",
+      "sha256": "32408085e40ad7464e50a99420a881445b786161364b23348e930e7a9af43fb7"
+    }
+  ],
+  "release_url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/tag/visual-v5_5-20261010",
+  "schema": "v55.split-archive.v1"
+}

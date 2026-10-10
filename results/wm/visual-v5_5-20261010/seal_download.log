@@ -1,0 +1,44 @@
+{"stage": "remote_export_ready", "path": "/aifs4su/guhao/KVCache/WM/diagnostic-20261010-v55.export.tar.gz", "bytes": 2729102394, "sha256": "7c39ad4fd468c5c8dad768fa33182bf1b686443ea9b0b1dd95890fa19adf5b44", "inode": 144115728637789187, "device": 2345267470, "uid": 1046, "created_by_this_run": true, "root": "/aifs4su/guhao/KVCache/WM/diagnostic-20261010-v55", "root_token": "9c0ea147fac24865b1a647bd0cc12bd0", "manifest_sha256": "b6e0ca1e893a595edb3a8c60507f72de647f5affcb20daf8223bf3af20e72663", "created_unix": 1791656852.6150627}
+{"stage": "range_downloaded", "part": 3, "bytes": 134217728}
+{"stage": "range_downloaded", "part": 1, "bytes": 134217728}
+{"stage": "range_downloaded", "part": 4, "bytes": 134217728}
+{"stage": "range_downloaded", "part": 0, "bytes": 134217728}
+{"stage": "range_downloaded", "part": 5, "bytes": 134217728}
+Connection timed out during banner exchange
+Connection to UNKNOWN port 65535 timed out
+{"stage": "range_downloaded", "part": 2, "bytes": 134217728}
+Connection timed out during banner exchange
+Connection to UNKNOWN port 65535 timed out
+Connection timed out during banner exchange
+Connection to UNKNOWN port 65535 timed out
+Connection timed out during banner exchange
+Connection to UNKNOWN port 65535 timed out
+{"stage": "range_downloaded", "part": 7, "bytes": 134217728}
+{"stage": "range_downloaded", "part": 6, "bytes": 134217728}
+Connection closed by UNKNOWN port 65535
+Connection closed by UNKNOWN port 65535
+Connection closed by UNKNOWN port 65535
+Connection closed by UNKNOWN port 65535
+{"stage": "range_downloaded", "part": 8, "bytes": 134217728}
+{"stage": "range_downloaded", "part": 10, "bytes": 134217728}
+{"stage": "range_downloaded", "part": 9, "bytes": 134217728}
+{"stage": "range_downloaded", "part": 18, "bytes": 134217728}
+{"stage": "range_downloaded", "part": 15, "bytes": 134217728}
+{"stage": "range_downloaded", "part": 16, "bytes": 134217728}
+{"stage": "range_downloaded", "part": 17, "bytes": 134217728}
+Traceback (most recent call last):
+  File "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_5-20261010/seal_download.py", line 169, in <module>
+    with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:parts=list(pool.map(download,ranges))
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 608, in result_iterator
+    yield fs.pop().result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 438, in result
+    return self.__get_result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 390, in __get_result
+    raise self._exception
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_5-20261010/seal_download.py", line 165, in download
+    with path.open('xb') as f:subprocess.run(h.helper.ssh()+['bash -lc '+shlex.quote('python3 -c '+shlex.quote(code))],stdout=f,check=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 528, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['ssh', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=15', 'dgx-127-slurm', 'bash -lc \'python3 -c \'"\'"\'import sys\nwith open(\'"\'"\'"\'"\'"\'"\'"\'"\'/aifs4su/guhao/KVCache/WM/diagnostic-20261010-v55.export.tar.gz\'"\'"\'"\'"\'"\'"\'"\'"\',\'"\'"\'"\'"\'"\'"\'"\'"\'rb\'"\'"\'"\'"\'"\'"\'"\'"\') as f:\n f.seek(1476395008);remaining=134217728\n while remaining:\n  b=f.read(min(1048576,remaining))\n  if not b:raise RuntimeError(\'"\'"\'"\'"\'"\'"\'"\'"\'Unexpected export EOF\'"\'"\'"\'"\'"\'"\'"\'"\')\n  sys.stdout.buffer.write(b);remaining-=len(b)\n\'"\'"\'\'']' returned non-zero exit status 255.

@@ -1,0 +1,74 @@
+{
+  "events": [
+    {
+      "attempt": 0,
+      "bytes": 134217728,
+      "part": 12,
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "attempt": 0,
+      "bytes": 134217728,
+      "part": 11,
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "attempt": 0,
+      "bytes": 134217728,
+      "part": 13,
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "attempt": 0,
+      "bytes": 134217728,
+      "part": 14,
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "attempt": 0,
+      "bytes": 134217728,
+      "part": 19,
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "attempt": 0,
+      "bytes": 44747834,
+      "part": 20,
+      "returncode": 0,
+      "stderr": ""
+    }
+  ],
+  "full_archive_sha256": "7c39ad4fd468c5c8dad768fa33182bf1b686443ea9b0b1dd95890fa19adf5b44",
+  "initial_failure": "SSH banner exchange timeout and connection closures in8-connection export download",
+  "remote_export_hash_reverified": true,
+  "remote_writes": false,
+  "selected_parts": [
+    "download_parts/0000.part",
+    "download_parts/0001.part",
+    "download_parts/0002.part",
+    "download_parts/0003.part",
+    "download_parts/0004.part",
+    "download_parts/0005.part",
+    "download_parts/0006.part",
+    "download_parts/0007.part",
+    "download_parts/0008.part",
+    "download_parts/0009.part",
+    "download_parts/0010.part",
+    "download_recovery/0011.attempt0.part",
+    "download_recovery/0012.attempt0.part",
+    "download_recovery/0013.attempt0.part",
+    "download_recovery/0014.attempt0.part",
+    "download_parts/0015.part",
+    "download_parts/0016.part",
+    "download_parts/0017.part",
+    "download_parts/0018.part",
+    "download_recovery/0019.attempt0.part",
+    "download_recovery/0020.attempt0.part"
+  ],
+  "status": "recovered_and_fully_verified"
+}

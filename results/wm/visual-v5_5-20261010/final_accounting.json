@@ -1,0 +1,48 @@
+{
+  "steps": {
+    "415453.40": {
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 306,
+      "allocated_tres": "cpu=32,gres/gpu=8,mem=0,node=1"
+    },
+    "415453.41": {
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 28,
+      "allocated_tres": "cpu=8,mem=0,node=1"
+    },
+    "415453.42": {
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 56,
+      "allocated_tres": "cpu=32,gres/gpu=8,mem=0,node=1"
+    },
+    "415453.43": {
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 24,
+      "allocated_tres": "cpu=8,mem=0,node=1"
+    }
+  },
+  "all_new_steps_complete": true,
+  "active_new_leases": false,
+  "cumulative_charged_gpuh": 5.32908766817043,
+  "inherited_gpuh": 4.522264341248407,
+  "new_charged_gpuh": 0.8068233269220224,
+  "per_gpu_stage_charged_gpuh": [
+    0.681470273191161,
+    0.12535305373086075
+  ],
+  "v55_cap_gpuh": 1.2,
+  "diagnostic_cap_gpuh": 6,
+  "round_cap_gpuh": 60,
+  "all_caps_satisfied": true,
+  "supplement_source_commit": "280548d78f7a146fa2c20ed158fde4458fa867d4",
+  "comparison_status": "complete_cpu_frozen_comparison",
+  "complete_submanifests_verified": true,
+  "prior_scene_rehashed_unchanged": true,
+  "prior_manifest_sha256": "ec7bc9c17da8417e9ecd11ba0f21415a2df0ee7af620af9d12f911c3ab26e75c",
+  "test_opened": false,
+  "p0_authorized": false
+}

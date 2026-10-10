@@ -1,0 +1,8 @@
+{
+  "all_files_verified": true,
+  "archive_bytes": 2729102394,
+  "archive_sha256": "7c39ad4fd468c5c8dad768fa33182bf1b686443ea9b0b1dd95890fa19adf5b44",
+  "files": 1563,
+  "manifest_sha256": "b6e0ca1e893a595edb3a8c60507f72de647f5affcb20daf8223bf3af20e72663",
+  "transport_recovery": "transport_recovery.json"
+}

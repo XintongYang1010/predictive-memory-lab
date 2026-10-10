@@ -1,0 +1,13 @@
+{
+  "bytes": 2729102394,
+  "created_by_this_run": true,
+  "created_unix": 1791656852.6150627,
+  "device": 2345267470,
+  "inode": 144115728637789187,
+  "manifest_sha256": "b6e0ca1e893a595edb3a8c60507f72de647f5affcb20daf8223bf3af20e72663",
+  "path": "/aifs4su/guhao/KVCache/WM/diagnostic-20261010-v55.export.tar.gz",
+  "root": "/aifs4su/guhao/KVCache/WM/diagnostic-20261010-v55",
+  "root_token": "9c0ea147fac24865b1a647bd0cc12bd0",
+  "sha256": "7c39ad4fd468c5c8dad768fa33182bf1b686443ea9b0b1dd95890fa19adf5b44",
+  "uid": 1046
+}
