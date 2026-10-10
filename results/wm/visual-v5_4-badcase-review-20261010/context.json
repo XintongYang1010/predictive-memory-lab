@@ -1,0 +1,359 @@
+{
+  "schema": "v5.4.posthoc.badcase-context.1",
+  "posthoc": true,
+  "scope": "Full archived Dev640..895:512episodes/256pairedworlds. Descriptive contextual counts, no new experiment or CI.",
+  "definitions": {
+    "sign_error": "sign(predicted dx) differs from sign(actual t7-minus-t6 dx)",
+    "both_wrong": "Both A and B horizontal signs wrong in the same episode",
+    "both_right_to_both_left": "Both true dx>0 and both predicted dx<0; denominator is both-right target episodes",
+    "both_left_to_both_right": "Both true dx<0 and both predicted dx>0; denominator is both-left target episodes",
+    "same_when_true_opposite": "True A_dx*B_dx<0 and predicted A_dx*B_dx>0; zeros excluded from same/opposite",
+    "variant_score": "Each variant contains256worlds; skills use the frozen common FIT target mean",
+    "fixed": "N incorrect sign becomes W correct sign",
+    "broken": "N correct sign becomes W incorrect sign",
+    "top3_error_mass_fraction": "Sum of W mean A/B horizontal squared error for the selected3episodes divided by its sum over all512episodes",
+    "dx_times_224": "Normalized-coordinate dx multiplied by224 for pixel-coordinate scale; not measured integer raster displacement"
+  },
+  "target_patterns": {
+    "both_right": 129,
+    "both_left": 132,
+    "opposite": 251,
+    "zero_horizontal_targets": 0
+  },
+  "integrity": {
+    "source_commit": "3279bbe49f8db5ec1bd4b2f5c343db1ce9e5684b",
+    "predictions_sha256": "52f69d65e5f609f14d5f0d7f7610d4edb1a4c313eae0ade1247db001274a9ba0",
+    "report_sha256": "471fc4101f38e96e5d763bb1103c514527486715951a7a9c6a00dee8aa00a893",
+    "frozen_receipt_sha256": "c76e58360f71facfc60e4abe933f51d4785f2dfdf64da71b1bfd39da63765c4e",
+    "snapshot_verification_sha256": "d4a35330fad2f35e614a61eca70f25683a59a10f54fd0a3b0ba2e0b21cf28930",
+    "sources": {
+      "scripts/v5_3_data.py": "3018b72817b536323ee404c070c10b1cc13917420ec377e21a3aec5325bb8f12",
+      "scripts/v5_3_reader.py": "960e3123da1163d694fafaeee45f91cea84e03025b37a62da9823dcff0b04ada",
+      "scripts/v5_4_data.py": "97eb9796c9affe09a13d0bf242c701dac36d6e126f7e8cd91a84185534120576",
+      "scripts/v5_4_plan.json": "e5dc00d833455fb344527114bdbf752cad9c769200e2fce192d2f3e1364d5ec5",
+      "scripts/v5_4_reader.py": "e198aa3046056b032582e13c6ad135e581af895fcef17a8867e231355e82c3c1",
+      "pmr/visual_memory/data.py": "ce5082f3be9006dcceb46fbaffadc27349f977a77abcf8992eda3e80f8775368"
+    },
+    "all_target_shards_verified": 256
+  },
+  "arms": {
+    "N": {
+      "A_horizontal_wrong": 117,
+      "B_horizontal_wrong": 96,
+      "both_wrong": 30,
+      "exactly_one_wrong": 153,
+      "both_correct": 329,
+      "both_right_to_both_left": 8,
+      "both_left_to_both_right": 10,
+      "same_when_true_opposite": 87,
+      "zero_horizontal_predictions": 0,
+      "variants": {
+        "0": {
+          "episodes": 256,
+          "dx_mse": 0.00011325723803867523,
+          "motion_skill": 0.34873093978677216,
+          "motion_axis_skills": [
+            0.3109165287023795,
+            0.20698691638989508,
+            0.42627424018789517,
+            0.4507460738669189
+          ],
+          "A_horizontal_wrong": 65,
+          "B_horizontal_wrong": 49,
+          "both_wrong": 18,
+          "both_right_truth": 70,
+          "both_left_truth": 62,
+          "opposite_truth": 124,
+          "both_right_to_both_left": 5,
+          "both_left_to_both_right": 3,
+          "same_when_true_opposite": 44
+        },
+        "1": {
+          "episodes": 256,
+          "dx_mse": 0.00011183129063099863,
+          "motion_skill": 0.35915856035728017,
+          "motion_axis_skills": [
+            0.2799338024744793,
+            0.2430530003843262,
+            0.4688059932520199,
+            0.4448414453182953
+          ],
+          "A_horizontal_wrong": 52,
+          "B_horizontal_wrong": 47,
+          "both_wrong": 12,
+          "both_right_truth": 59,
+          "both_left_truth": 70,
+          "opposite_truth": 127,
+          "both_right_to_both_left": 3,
+          "both_left_to_both_right": 7,
+          "same_when_true_opposite": 43
+        }
+      },
+      "variant1_to_variant0_dx_mse_ratio": 0.987409657586832,
+      "variant1_higher_dx_error_worlds": 136,
+      "variant0_higher_dx_error_worlds": 120,
+      "variant_error_ties": 0,
+      "top_error_variant1_counts": {
+        "3": 2,
+        "10": 4,
+        "25": 13,
+        "50": 23,
+        "100": 49
+      },
+      "any_horizontal_sign_error": 183,
+      "any_horizontal_sign_error_rate": 0.357421875
+    },
+    "W": {
+      "A_horizontal_wrong": 123,
+      "B_horizontal_wrong": 96,
+      "both_wrong": 23,
+      "exactly_one_wrong": 173,
+      "both_correct": 316,
+      "both_right_to_both_left": 6,
+      "both_left_to_both_right": 7,
+      "same_when_true_opposite": 96,
+      "zero_horizontal_predictions": 0,
+      "variants": {
+        "0": {
+          "episodes": 256,
+          "dx_mse": 0.00011648100062527228,
+          "motion_skill": 0.4559915880283532,
+          "motion_axis_skills": [
+            0.2705173970805681,
+            0.558244421732633,
+            0.43101484380534894,
+            0.5641896894948628
+          ],
+          "A_horizontal_wrong": 58,
+          "B_horizontal_wrong": 47,
+          "both_wrong": 12,
+          "both_right_truth": 70,
+          "both_left_truth": 62,
+          "opposite_truth": 124,
+          "both_right_to_both_left": 2,
+          "both_left_to_both_right": 5,
+          "same_when_true_opposite": 48
+        },
+        "1": {
+          "episodes": 256,
+          "dx_mse": 0.00012042971379800274,
+          "motion_skill": 0.4115411613359572,
+          "motion_axis_skills": [
+            0.2651771622561405,
+            0.4721343086501799,
+            0.3860441652474087,
+            0.5228090091900998
+          ],
+          "A_horizontal_wrong": 65,
+          "B_horizontal_wrong": 49,
+          "both_wrong": 11,
+          "both_right_truth": 59,
+          "both_left_truth": 70,
+          "opposite_truth": 127,
+          "both_right_to_both_left": 4,
+          "both_left_to_both_right": 2,
+          "same_when_true_opposite": 48
+        }
+      },
+      "variant1_to_variant0_dx_mse_ratio": 1.0339000622550776,
+      "variant1_higher_dx_error_worlds": 131,
+      "variant0_higher_dx_error_worlds": 125,
+      "variant_error_ties": 0,
+      "top_error_variant1_counts": {
+        "3": 3,
+        "10": 6,
+        "25": 14,
+        "50": 23,
+        "100": 46
+      },
+      "any_horizontal_sign_error": 196,
+      "any_horizontal_sign_error_rate": 0.3828125
+    }
+  },
+  "N_to_W_sign_transitions": {
+    "A": {
+      "observations": 512,
+      "fixed_wrong_to_correct": 65,
+      "broken_correct_to_wrong": 71,
+      "remained_correct": 324,
+      "remained_wrong": 52
+    },
+    "B": {
+      "observations": 512,
+      "fixed_wrong_to_correct": 49,
+      "broken_correct_to_wrong": 49,
+      "remained_correct": 367,
+      "remained_wrong": 47
+    },
+    "pooled_target_observations": {
+      "observations": 1024,
+      "fixed_wrong_to_correct": 114,
+      "broken_correct_to_wrong": 120,
+      "remained_correct": 691,
+      "remained_wrong": 99
+    },
+    "episode_full_correctness": {
+      "observations": 512,
+      "fixed_wrong_to_correct": 78,
+      "broken_correct_to_wrong": 91,
+      "remained_correct": 238,
+      "remained_wrong": 105
+    },
+    "episode_wrong_count": {
+      "improved": 94,
+      "worsened": 100,
+      "unchanged": 318,
+      "unchanged_count_but_one_object_fixed_other_broken": 13
+    },
+    "by_variant": {
+      "0": {
+        "A": {
+          "observations": 256,
+          "fixed_wrong_to_correct": 38,
+          "broken_correct_to_wrong": 31,
+          "remained_correct": 160,
+          "remained_wrong": 27
+        },
+        "B": {
+          "observations": 256,
+          "fixed_wrong_to_correct": 26,
+          "broken_correct_to_wrong": 24,
+          "remained_correct": 183,
+          "remained_wrong": 23
+        },
+        "pooled_target_observations": {
+          "observations": 512,
+          "fixed_wrong_to_correct": 64,
+          "broken_correct_to_wrong": 55,
+          "remained_correct": 343,
+          "remained_wrong": 50
+        }
+      },
+      "1": {
+        "A": {
+          "observations": 256,
+          "fixed_wrong_to_correct": 27,
+          "broken_correct_to_wrong": 40,
+          "remained_correct": 164,
+          "remained_wrong": 25
+        },
+        "B": {
+          "observations": 256,
+          "fixed_wrong_to_correct": 23,
+          "broken_correct_to_wrong": 25,
+          "remained_correct": 184,
+          "remained_wrong": 24
+        },
+        "pooled_target_observations": {
+          "observations": 512,
+          "fixed_wrong_to_correct": 50,
+          "broken_correct_to_wrong": 65,
+          "remained_correct": 348,
+          "remained_wrong": 49
+        }
+      }
+    }
+  },
+  "top3": {
+    "selection_rule": "512 episodes ranked by W concat mean squared error over A_dx and B_dx descending; ties use ascending pair ID then variant; select3 without distinct-pair constraint.",
+    "episodes": [
+      {
+        "rank": 1,
+        "pair_id": 844,
+        "variant": 1,
+        "episode_id": "dev-000844-1",
+        "W_dx_mse": 0.0009061914747088423,
+        "N_dx_mse": 0.0005388071217402347,
+        "A_true_dx": -0.014635034836828709,
+        "A_N_dx": 0.008201023803977255,
+        "A_N_wrong": true,
+        "A_W_dx": 0.00762267959443341,
+        "A_W_wrong": true,
+        "A_fixed": false,
+        "A_broken": false,
+        "B_true_dx": -0.016471778973937035,
+        "B_N_dx": 0.007110601508833162,
+        "B_N_wrong": true,
+        "B_W_dx": 0.019818400106829025,
+        "B_W_wrong": true,
+        "B_fixed": false,
+        "B_broken": false,
+        "A_true_dx_times_224": -3.2782478034496307,
+        "A_N_dx_times_224": 1.837029332090905,
+        "A_W_dx_times_224": 1.7074802291530837,
+        "B_true_dx_times_224": -3.6896784901618958,
+        "B_N_dx_times_224": 1.5927747379786281,
+        "B_W_dx_times_224": 4.439321623929701
+      },
+      {
+        "rank": 2,
+        "pair_id": 761,
+        "variant": 1,
+        "episode_id": "dev-000761-1",
+        "W_dx_mse": 0.0006839508445257571,
+        "N_dx_mse": 0.00033942630236765607,
+        "A_true_dx": 0.017145724967122078,
+        "A_N_dx": -0.0008646245761430521,
+        "A_N_wrong": true,
+        "A_W_dx": -0.0084036966746488,
+        "A_W_wrong": true,
+        "A_fixed": false,
+        "A_broken": false,
+        "B_true_dx": 0.00943234283477068,
+        "B_N_dx": -0.00939529414029132,
+        "B_N_wrong": true,
+        "B_W_dx": -0.01730954832540204,
+        "B_W_wrong": true,
+        "B_fixed": false,
+        "B_broken": false,
+        "A_true_dx_times_224": 3.8406423926353455,
+        "A_N_dx_times_224": -0.19367590505604368,
+        "A_W_dx_times_224": -1.8824280551213315,
+        "B_true_dx_times_224": 2.112844794988632,
+        "B_N_dx_times_224": -2.104545887425256,
+        "B_W_dx_times_224": -3.8773388248900567
+      },
+      {
+        "rank": 3,
+        "pair_id": 891,
+        "variant": 1,
+        "episode_id": "dev-000891-1",
+        "W_dx_mse": 0.0005650815160397822,
+        "N_dx_mse": 0.00014004895387695722,
+        "A_true_dx": -0.016878092661499977,
+        "A_N_dx": -0.010675463154129254,
+        "A_N_wrong": false,
+        "A_W_dx": -0.009716328344401977,
+        "A_W_wrong": false,
+        "A_fixed": false,
+        "A_broken": false,
+        "B_true_dx": 0.014948084019124508,
+        "B_N_dx": -0.0005962170249304627,
+        "B_N_wrong": true,
+        "B_W_dx": -0.017898105469854368,
+        "B_W_wrong": true,
+        "B_fixed": false,
+        "B_broken": false,
+        "A_true_dx_times_224": -3.780692756175995,
+        "A_N_dx_times_224": -2.3913037465249527,
+        "A_W_dx_times_224": -2.176457549146043,
+        "B_true_dx_times_224": 3.3483708202838898,
+        "B_N_dx_times_224": -0.13355261358442364,
+        "B_W_dx_times_224": -4.009175625247378
+      }
+    ],
+    "episode_fraction": 0.005859375,
+    "W_error_mass_fraction": 0.03553593229008242,
+    "W_error_mass_percent": 3.5535932290082424,
+    "caution": "Selected worst cases are not representative and do not establish a causal mechanism."
+  },
+  "variant_interpretation": "Top3 all variant1 is an outcome-selected observation. Compare the full256/256 means, paired-world worse counts and top50/top100 mix; this analysis adds no significance test or broad population claim.",
+  "scientific_data_generated": false,
+  "test_opened": false,
+  "p0_authorized": false,
+  "reproduction": {
+    "script_sha256": "fb93f1bd4665ea10dfae3f59852aa91eeda5946dae21d1ae02c86ad530ba3b1f",
+    "python": "3.9.6 (default, Dec  2 2025, 07:27:58) \n[Clang 17.0.0 (clang-1700.6.3.2)]",
+    "numpy": "2.0.2"
+  }
+}
