@@ -1,0 +1,177 @@
+{
+  "status": "complete",
+  "top_minus_bottom": {
+    "global_W": {
+      "A_dx": {
+        "row_forward": {
+          "top_minus_bottom_rms_px": 0.0678363119893754,
+          "paired_world_95ci": [
+            0.03311312588288677,
+            0.10349108619194343
+          ],
+          "same_output": true
+        },
+        "row_reverse": {
+          "top_minus_bottom_rms_px": 0.07529175279582395,
+          "paired_world_95ci": [
+            0.040057877213609906,
+            0.11166185349674305
+          ],
+          "same_output": true
+        },
+        "interaction": {
+          "top_minus_bottom_rms_px": -0.022812215901383902,
+          "paired_world_95ci": [
+            -0.028890150593511847,
+            -0.016739824797802724
+          ],
+          "same_output": true
+        }
+      },
+      "B_dx": {
+        "row_forward": {
+          "top_minus_bottom_rms_px": -0.007357064954446546,
+          "paired_world_95ci": [
+            -0.047346882933627946,
+            0.033358723133102376
+          ],
+          "same_output": true
+        },
+        "row_reverse": {
+          "top_minus_bottom_rms_px": -0.00806423993239258,
+          "paired_world_95ci": [
+            -0.04719608610861117,
+            0.031850724953908394
+          ],
+          "same_output": true
+        },
+        "interaction": {
+          "top_minus_bottom_rms_px": -0.01500111802111375,
+          "paired_world_95ci": [
+            -0.02140223105063094,
+            -0.008725749353055326
+          ],
+          "same_output": true
+        }
+      }
+    },
+    "lane_W": {
+      "A_dx": {
+        "row_forward": {
+          "top_minus_bottom_rms_px": 0.9950985405363472,
+          "paired_world_95ci": [
+            0.9361394618533063,
+            1.0554417586474691
+          ],
+          "same_output": true
+        },
+        "row_reverse": {
+          "top_minus_bottom_rms_px": 0.9876341685665959,
+          "paired_world_95ci": [
+            0.9287147253563309,
+            1.0471844547727438
+          ],
+          "same_output": true
+        },
+        "interaction": {
+          "top_minus_bottom_rms_px": 0.1212227402780582,
+          "paired_world_95ci": [
+            0.11080225540502477,
+            0.13164780896182937
+          ],
+          "same_output": true
+        }
+      },
+      "B_dx": {
+        "row_forward": {
+          "top_minus_bottom_rms_px": -0.6587210971123819,
+          "paired_world_95ci": [
+            -0.6977495682113162,
+            -0.6211685000814935
+          ],
+          "same_output": true
+        },
+        "row_reverse": {
+          "top_minus_bottom_rms_px": -0.6575673469639851,
+          "paired_world_95ci": [
+            -0.6971496106223061,
+            -0.6187949686039049
+          ],
+          "same_output": true
+        },
+        "interaction": {
+          "top_minus_bottom_rms_px": -0.11808912461763778,
+          "paired_world_95ci": [
+            -0.12577855876041402,
+            -0.11024333443761519
+          ],
+          "same_output": true
+        }
+      }
+    }
+  },
+  "real_feature_changes": {
+    "top_outer_row": {
+      "token_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "contexts": 2048,
+      "contexts_with_any_nonzero_change": 2040,
+      "actual_rgb_changed_contexts": 2040,
+      "all_actual_changed_rgb_contexts_have_nonzero_feature_change": true,
+      "unchanged_rgb_contexts_have_zero_feature_change": true,
+      "feature_coordinates": 10485760,
+      "nonzero_feature_coordinates": 10229361,
+      "max_abs_feature_change": 1.625,
+      "mean_feature_l2": 4.705145163573936,
+      "rms_feature_l2": 4.815494719898371,
+      "rms_feature_l2_paired_world_95ci": [
+        4.709938127795217,
+        4.921253203260585
+      ],
+      "feature_l2_quantiles": {
+        "0": 0.0,
+        "0.25": 4.135362299232021,
+        "0.5": 4.711659235306796,
+        "0.75": 5.366918649532211,
+        "1": 8.220517026690443
+      }
+    },
+    "bottom_outer_row": {
+      "token_indices": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "contexts": 2048,
+      "contexts_with_any_nonzero_change": 2040,
+      "actual_rgb_changed_contexts": 2040,
+      "all_actual_changed_rgb_contexts_have_nonzero_feature_change": true,
+      "unchanged_rgb_contexts_have_zero_feature_change": true,
+      "feature_coordinates": 10485760,
+      "nonzero_feature_coordinates": 10234773,
+      "max_abs_feature_change": 1.796875,
+      "mean_feature_l2": 4.973014794820649,
+      "rms_feature_l2": 5.08726978551096,
+      "rms_feature_l2_paired_world_95ci": [
+        4.977193176264108,
+        5.198351292900725
+      ],
+      "feature_l2_quantiles": {
+        "0": 0.0,
+        "0.25": 4.416341535525541,
+        "0.5": 5.029946638445101,
+        "0.75": 5.602876126767934,
+        "1": 8.968582144267131
+      }
+    }
+  },
+  "manifest": {
+    "bytes": 657,
+    "sha256": "b1c2e523100a44c36c5813084ea8c6e44eaf453f9064db4432a41a305178ab54"
+  }
+}

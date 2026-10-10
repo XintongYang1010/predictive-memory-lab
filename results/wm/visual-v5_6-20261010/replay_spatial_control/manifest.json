@@ -1,0 +1,22 @@
+{
+  "analyze.py": {
+    "bytes": 16397,
+    "sha256": "423e09fb38d2e97bd9b5b3435ab70ed6bd8f847735bbcbf951d7d128be0762c2"
+  },
+  "report.json": {
+    "bytes": 74967,
+    "sha256": "5a11f81cb899d44d963446115bd4fecbd19af1b575c748d877b34aac1ed62a8b"
+  },
+  "per_world_effects.npz": {
+    "bytes": 669056,
+    "sha256": "7ab41270f79899da85cd570fc771dff09656ca672649c982268dab8ea413b971"
+  },
+  "same_output_spatial_controls.png": {
+    "bytes": 100809,
+    "sha256": "066bed4cebf9a3de3fa99f9591fa67bf8421cdc82567f05c977fcb1c077348a6"
+  },
+  "README.md": {
+    "bytes": 4374,
+    "sha256": "7afc052c0303e4fc8b4b73114685374513d87dcaa48502059fc742553e0806e7"
+  }
+}

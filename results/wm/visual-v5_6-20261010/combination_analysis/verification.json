@@ -1,0 +1,54 @@
+{
+  "schema": "v5.6-final-analysis-verification-1",
+  "status": "passed",
+  "datasets": {
+    "known": {
+      "step": "415453.47",
+      "download_receipt": {
+        "bytes": 701,
+        "sha256": "ad8ff2cf0a84560adb62d6e8100a82234864005f5f01df023cb4cea7340f689e"
+      },
+      "frozen_j_minus_x_max_abs_drift": 0.0
+    },
+    "confirm": {
+      "step": "415453.50",
+      "download_receipt": {
+        "bytes": 701,
+        "sha256": "e5e6291d8ab0333e30f11a62349f8033ec0cb332864ea5852b532b853987897c"
+      },
+      "frozen_j_minus_x_max_abs_drift": 0.0
+    },
+    "axis": {
+      "step": "415453.48",
+      "download_receipt": {
+        "bytes": 701,
+        "sha256": "5ac46d7a933dd19c4d200912d2f5f4d733c8fde2409aaf330b78da79cdddaa75"
+      },
+      "frozen_j_minus_x_max_abs_drift": 0.0
+    }
+  },
+  "fresh_all32_relative_dx_mse_reduction_percent": 22.344024275042564,
+  "fresh_center_negative_paired_rms": {
+    "first_minus_second_rms_px": -0.03818668207382604,
+    "paired_world_95ci_pixels": [
+      -0.09407554545200761,
+      0.02151487838137266
+    ],
+    "worlds": 64
+  },
+  "fresh_all32_each_motion_axis": {
+    "nonzero_and_at_least_one_pixel_targets": 2048,
+    "static_targets": 0
+  },
+  "fresh_first16_or_mixed16_each_motion_axis": {
+    "nonzero_and_at_least_one_pixel_targets": 1024,
+    "static_targets": 0
+  },
+  "fresh_center_negative_each_motion_axis": {
+    "nonzero_and_at_least_one_pixel_targets": 0,
+    "static_targets": 128
+  },
+  "all_bootstraps_whole_world": true,
+  "png_visually_inspected": true,
+  "scientific_data_modified": false
+}

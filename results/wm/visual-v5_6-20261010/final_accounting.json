@@ -1,0 +1,102 @@
+{
+  "schema": "v5.6.final-accounting-1",
+  "source_commit": "031788e0499c242a3671f57d026f3ed71da4872e",
+  "steps": {
+    "415453.44": {
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 67,
+      "allocated_tres": "cpu=32,gres/gpu=8,mem=0,node=1",
+      "elapsed_comparison": {
+        "controller_monotonic_wall_seconds": 66.97153589897789,
+        "slurm_elapsed_raw_seconds": 67,
+        "slurm_minus_controller_seconds": 0.02846410102210939,
+        "comparison_tolerance_seconds": 1.0,
+        "ledger_charge_adjusted": false,
+        "justification": "ElapsedRaw has integer-second resolution; integer endpoint differences can exceed subsecond wall duration by less than one second.",
+        "installed_rounding_algorithm_independently_verified": false,
+        "documentation": "https://slurm.schedmd.com/sacct.html",
+        "upstream_reference": "https://github.com/SchedMD/slurm/blob/master/src/plugins/accounting_storage/mysql/as_mysql_jobacct_process.c"
+      }
+    },
+    "415453.49": {
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 41,
+      "allocated_tres": "cpu=32,gres/gpu=8,mem=0,node=1",
+      "elapsed_comparison": {
+        "controller_monotonic_wall_seconds": 40.44480218796525,
+        "slurm_elapsed_raw_seconds": 41,
+        "slurm_minus_controller_seconds": 0.5551978120347485,
+        "comparison_tolerance_seconds": 1.0,
+        "ledger_charge_adjusted": false,
+        "justification": "ElapsedRaw has integer-second resolution; integer endpoint differences can exceed subsecond wall duration by less than one second.",
+        "installed_rounding_algorithm_independently_verified": false,
+        "documentation": "https://slurm.schedmd.com/sacct.html",
+        "upstream_reference": "https://github.com/SchedMD/slurm/blob/master/src/plugins/accounting_storage/mysql/as_mysql_jobacct_process.c"
+      }
+    },
+    "415453.48": {
+      "action": "axis-combination",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 7,
+      "allocated_tres": "cpu=32,mem=0,node=1"
+    },
+    "415453.46": {
+      "action": "axis-score",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 17,
+      "allocated_tres": "cpu=32,mem=0,node=1"
+    },
+    "415453.50": {
+      "action": "confirm-score",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 5,
+      "allocated_tres": "cpu=32,mem=0,node=1"
+    },
+    "415453.45": {
+      "action": "fit-reader",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 50,
+      "allocated_tres": "cpu=32,mem=0,node=1"
+    },
+    "415453.47": {
+      "action": "known-score",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 10,
+      "allocated_tres": "cpu=32,mem=0,node=1"
+    }
+  },
+  "gpu_steps": {
+    "fit-axis": "415453.44",
+    "confirm": "415453.49"
+  },
+  "all_new_steps_complete": true,
+  "active_new_leases": false,
+  "inherited_gpuh": 5.32908766817043,
+  "new_charged_gpuh": 0.23870297352654024,
+  "cumulative_charged_gpuh": 5.56779064169697,
+  "per_gpu_stage_charged_gpuh": [
+    0.14882563533106197,
+    0.08987733819547834
+  ],
+  "new_cap_gpuh": 0.65,
+  "diagnostic_cap_gpuh": 6,
+  "round_cap_gpuh": 60,
+  "all_caps_satisfied": true,
+  "all_submanifests_verified": true,
+  "encoder_slots": 4256,
+  "test_opened": false,
+  "p0_authorized": false,
+  "parent_and_indexmem_status": [
+    "415453|RUNNING|0:0",
+    "415453.5|COMPLETED|0:0"
+  ],
+  "no_job_cancellation": true,
+  "prior_v54_rehashed_unchanged": true
+}

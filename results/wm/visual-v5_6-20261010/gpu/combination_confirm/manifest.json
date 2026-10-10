@@ -1,0 +1,14 @@
+{
+  "report.json": {
+    "bytes": 36001,
+    "sha256": "be62d9ca1527c1d5ebfa71348ec3a776bc9237aa72b2e5823dfaefc2675036dc"
+  },
+  "predictions.npz": {
+    "bytes": 248190,
+    "sha256": "d2d90499f64be130907cd8556538e1bbe4a0676fda240f1ae67f287c9d10fc4d"
+  },
+  "per_example.csv": {
+    "bytes": 1364511,
+    "sha256": "6c96bb85ec8f6a85ee112da275b41c6ffedb4f6d81a717c8a10db87817b0d65b"
+  }
+}
