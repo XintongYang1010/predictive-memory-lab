@@ -1,0 +1,281 @@
+SOFTWARE ONLY: no intervention, no scientific-data generation, no GPU
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_confirmation_reader.py:129: RuntimeWarning: divide by zero encountered in matmul
+  out += a[:, lo:lo+chunk].astype(np.float64) @ b[:, lo:lo+chunk].astype(np.float64).T
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_confirmation_reader.py:129: RuntimeWarning: overflow encountered in matmul
+  out += a[:, lo:lo+chunk].astype(np.float64) @ b[:, lo:lo+chunk].astype(np.float64).T
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_confirmation_reader.py:129: RuntimeWarning: invalid value encountered in matmul
+  out += a[:, lo:lo+chunk].astype(np.float64) @ b[:, lo:lo+chunk].astype(np.float64).T
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_confirmation_reader.py:170: RuntimeWarning: divide by zero encountered in matmul
+  prediction = q @ state["coefficients"] + state["target_mean"]
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_confirmation_reader.py:170: RuntimeWarning: overflow encountered in matmul
+  prediction = q @ state["coefficients"] + state["target_mean"]
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_confirmation_reader.py:170: RuntimeWarning: invalid value encountered in matmul
+  prediction = q @ state["coefficients"] + state["target_mean"]
+{
+  "primary": {
+    "primary_dx_mse_reduction": 0.0,
+    "primary_dx_paired_95ci": [
+      0.0,
+      0.0
+    ],
+    "secondary_balanced_dx_mse_reduction": 0.0,
+    "secondary_balanced_dx_paired_95ci": [
+      0.0,
+      0.0
+    ],
+    "secondary_static_average_motion_nmse_reduction": 0.0,
+    "secondary_motion_paired_95ci": [
+      0.0,
+      0.0
+    ],
+    "conditions": {
+      "original": {
+        "per_dimension_skill": [
+          0.957825715466213,
+          0.9178239108443299,
+          0.9604031653839973,
+          0.9333624686929698,
+          -2.767883980413682,
+          -0.147834823690411,
+          -3.3580240738976492,
+          0.11964989737491671
+        ],
+        "per_dimension_mse": [
+          0.0016883128652383848,
+          0.0006646379629281755,
+          0.001533260657034085,
+          0.0004983545111138988,
+          0.0006902357965246709,
+          0.00018611457117093688,
+          0.0007691150246220932,
+          0.00014478728524275003
+        ],
+        "position_skill": 0.9423538150968775,
+        "motion_skill": -1.5385232451567066,
+        "motion_nmse": 2.5385232451567066,
+        "dx_mse": 0.0007296754105733821
+      },
+      "static_t6": {
+        "per_dimension_skill": [
+          0.957825715466213,
+          0.9178239108443299,
+          0.9604031653839973,
+          0.9333624686929698,
+          -2.767883980413682,
+          -0.147834823690411,
+          -3.3580240738976492,
+          0.11964989737491671
+        ],
+        "per_dimension_mse": [
+          0.0016883128652383848,
+          0.0006646379629281755,
+          0.001533260657034085,
+          0.0004983545111138988,
+          0.0006902357965246709,
+          0.00018611457117093688,
+          0.0007691150246220932,
+          0.00014478728524275003
+        ],
+        "position_skill": 0.9423538150968775,
+        "motion_skill": -1.5385232451567066,
+        "motion_nmse": 2.5385232451567066,
+        "dx_mse": 0.0007296754105733821
+      },
+      "static_t7": {
+        "per_dimension_skill": [
+          0.957825715466213,
+          0.9178239108443299,
+          0.9604031653839973,
+          0.9333624686929698,
+          -2.767883980413682,
+          -0.147834823690411,
+          -3.3580240738976492,
+          0.11964989737491671
+        ],
+        "per_dimension_mse": [
+          0.0016883128652383848,
+          0.0006646379629281755,
+          0.001533260657034085,
+          0.0004983545111138988,
+          0.0006902357965246709,
+          0.00018611457117093688,
+          0.0007691150246220932,
+          0.00014478728524275003
+        ],
+        "position_skill": 0.9423538150968775,
+        "motion_skill": -1.5385232451567066,
+        "motion_nmse": 2.5385232451567066,
+        "dx_mse": 0.0007296754105733821
+      },
+      "swap_nuisance": {
+        "per_dimension_skill": [
+          0.957825715466213,
+          0.9178239108443299,
+          0.9604031653839973,
+          0.9333624686929698,
+          -2.767883980413682,
+          -0.147834823690411,
+          -3.3580240738976492,
+          0.11964989737491671
+        ],
+        "per_dimension_mse": [
+          0.0016883128652383848,
+          0.0006646379629281755,
+          0.001533260657034085,
+          0.0004983545111138988,
+          0.0006902357965246709,
+          0.00018611457117093688,
+          0.0007691150246220932,
+          0.00014478728524275003
+        ],
+        "position_skill": 0.9423538150968775,
+        "motion_skill": -1.5385232451567066,
+        "motion_nmse": 2.5385232451567066,
+        "dx_mse": 0.0007296754105733821
+      }
+    },
+    "individual_comparisons": {
+      "static_t6": {
+        "nmse_reduction": 0.0,
+        "dx_mse_reduction": 0.0,
+        "dx_mse_reduction_descriptive_95ci": [
+          0.0,
+          0.0
+        ],
+        "descriptive_paired_95ci": [
+          0.0,
+          0.0
+        ]
+      },
+      "static_t7": {
+        "nmse_reduction": 0.0,
+        "dx_mse_reduction": 0.0,
+        "dx_mse_reduction_descriptive_95ci": [
+          0.0,
+          0.0
+        ],
+        "descriptive_paired_95ci": [
+          0.0,
+          0.0
+        ]
+      },
+      "swap_nuisance": {
+        "nmse_reduction": 0.0,
+        "dx_mse_reduction": 0.0,
+        "dx_mse_reduction_descriptive_95ci": [
+          0.0,
+          0.0
+        ],
+        "descriptive_paired_95ci": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "bootstrap": {
+      "replicates": 10000,
+      "seed": 7810,
+      "unit": "paired_world_with_all_variants_and_conditions",
+      "primary_endpoints": 1,
+      "secondary_intervals": "descriptive_unadjusted",
+      "interpretation": "conditional on frozen reader; posthoc inspected Dev pairs, not fresh confirmation"
+    }
+  },
+  "original_parity": {
+    "concat": {
+      "max_abs_prediction_difference": 2.9282132274488504e-15,
+      "motion_rms_drift_fraction": [
+        1.1371801590273563e-14,
+        9.12469966178736e-15,
+        1.7720611281804323e-14,
+        8.320814387356866e-15
+      ],
+      "motion_max_drift_fraction": [
+        9.702332566611092e-14,
+        7.73798888915278e-14,
+        2.2042043895281472e-13,
+        9.279335315240452e-14
+      ],
+      "all_dimension_skill_abs_drift": [
+        2.272795241653924e-18,
+        6.347655261090052e-17,
+        7.2226050007565e-18,
+        1.633895048720272e-17,
+        7.869293006031786e-16,
+        7.682441291800985e-16,
+        1.848622323426782e-15,
+        2.9904501888882523e-16
+      ],
+      "checks": {
+        "motion_rms_drift_fraction_at_most_001": true,
+        "motion_max_drift_fraction_at_most_01": true,
+        "each_motion_skill_drift_at_most_002": true
+      },
+      "passed": true
+    },
+    "t6": {
+      "max_abs_prediction_difference": 5.551115123125783e-16,
+      "motion_rms_drift_fraction": [
+        2.342314548873639e-16,
+        2.7502383250979226e-16,
+        2.0820367508731287e-16,
+        3.3531851266712695e-16
+      ],
+      "motion_max_drift_fraction": [
+        1.6021024713690706e-15,
+        1.226089788774208e-15,
+        1.2405178732534003e-15,
+        1.5893905241118849e-15
+      ],
+      "all_dimension_skill_abs_drift": [
+        1.9465128769437487e-18,
+        9.534137642853006e-18,
+        5.518259017552631e-18,
+        2.5649216897725096e-17,
+        1.1785306922663765e-17,
+        1.7751955153983567e-17,
+        6.749337858305166e-19,
+        5.887115498878233e-17
+      ],
+      "checks": {
+        "motion_rms_drift_fraction_at_most_001": true,
+        "motion_max_drift_fraction_at_most_01": true,
+        "each_motion_skill_drift_at_most_002": true
+      },
+      "passed": true
+    },
+    "t7": {
+      "max_abs_prediction_difference": 6.661338147750939e-16,
+      "motion_rms_drift_fraction": [
+        2.250142634149138e-16,
+        2.432300357190535e-16,
+        2.2210272716714537e-16,
+        3.291562026404768e-16
+      ],
+      "motion_max_drift_fraction": [
+        1.0573876311035867e-15,
+        1.311234912994639e-15,
+        1.0558684200799913e-15,
+        1.386489606140155e-15
+      ],
+      "all_dimension_skill_abs_drift": [
+        2.806559704662173e-17,
+        1.7660953511222636e-17,
+        1.827734947496958e-17,
+        1.319965582289564e-17,
+        2.9801925551563544e-18,
+        2.1070559441784795e-17,
+        1.2673756645039701e-17,
+        3.075013518660645e-17
+      ],
+      "checks": {
+        "motion_rms_drift_fraction_at_most_001": true,
+        "motion_max_drift_fraction_at_most_01": true,
+        "each_motion_skill_drift_at_most_002": true
+      },
+      "passed": true
+    }
+  },
+  "p0_authorized": false
+}
+PASS: all condition arrays bitwise identical; all effects/CIs exactly zero; parity/reuse passed; original files unchanged

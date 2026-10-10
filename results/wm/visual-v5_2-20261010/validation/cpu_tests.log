@@ -1,0 +1,192 @@
+test_failed_gate_has_no_checkpoints_and_retains_reconstruction (test_archive.Archive) ... ok
+test_missing_source_refused_before_output_and_inventory_tamper_fails (test_archive.Archive) ... ok
+test_training_checkpoint_archive_and_tamper_detection (test_archive.Archive) ... ok
+test_competing_reservations_cannot_cross_round_cap (test_budget_parallel.ParallelBudget) ... ok
+test_eight_distinct_stages_reserve_and_refund_without_lost_updates (test_budget_parallel.ParallelBudget) ... ok
+test_eight_gpu_lease_accounts_wall_time_and_signal (test_budget_parallel.ParallelBudget) ... ok
+test_hard_kill_keeps_full_reservation_and_releases_stage_lock (test_budget_parallel.ParallelBudget) ... ok
+test_same_stage_has_one_active_owner (test_budget_parallel.ParallelBudget) ... ok
+test_all_three_readers_use_same_grouped_cv_and_survive_reload (test_confirmation_reader.ConfirmationReader) ... /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_confirmation_reader.py:129: RuntimeWarning: divide by zero encountered in matmul
+  out += a[:, lo:lo+chunk].astype(np.float64) @ b[:, lo:lo+chunk].astype(np.float64).T
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_confirmation_reader.py:129: RuntimeWarning: overflow encountered in matmul
+  out += a[:, lo:lo+chunk].astype(np.float64) @ b[:, lo:lo+chunk].astype(np.float64).T
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_confirmation_reader.py:129: RuntimeWarning: invalid value encountered in matmul
+  out += a[:, lo:lo+chunk].astype(np.float64) @ b[:, lo:lo+chunk].astype(np.float64).T
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_confirmation_reader.py:170: RuntimeWarning: divide by zero encountered in matmul
+  prediction = q @ state["coefficients"] + state["target_mean"]
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_confirmation_reader.py:170: RuntimeWarning: overflow encountered in matmul
+  prediction = q @ state["coefficients"] + state["target_mean"]
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_confirmation_reader.py:170: RuntimeWarning: invalid value encountered in matmul
+  prediction = q @ state["coefficients"] + state["target_mean"]
+ok
+test_bridge_pair_bootstrap_known_relative_error (test_confirmation_reader.ConfirmationReader) ... ok
+test_frozen_files_cannot_be_silently_replaced (test_confirmation_reader.ConfirmationReader) ... ok
+test_indexed_grams_equal_explicit_cue_inputs (test_confirmation_reader.ConfirmationReader) ... /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_confirmation_reader.py:129: RuntimeWarning: divide by zero encountered in matmul
+  out += a[:, lo:lo+chunk].astype(np.float64) @ b[:, lo:lo+chunk].astype(np.float64).T
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_confirmation_reader.py:129: RuntimeWarning: overflow encountered in matmul
+  out += a[:, lo:lo+chunk].astype(np.float64) @ b[:, lo:lo+chunk].astype(np.float64).T
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_confirmation_reader.py:129: RuntimeWarning: invalid value encountered in matmul
+  out += a[:, lo:lo+chunk].astype(np.float64) @ b[:, lo:lo+chunk].astype(np.float64).T
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_confirmation_reader.py:50: RuntimeWarning: divide by zero encountered in matmul
+  np.testing.assert_allclose(reader.view_gram(raw, qi, bi, name), left@right.T, atol=1e-12)
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_confirmation_reader.py:50: RuntimeWarning: overflow encountered in matmul
+  np.testing.assert_allclose(reader.view_gram(raw, qi, bi, name), left@right.T, atol=1e-12)
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_confirmation_reader.py:50: RuntimeWarning: invalid value encountered in matmul
+  np.testing.assert_allclose(reader.view_gram(raw, qi, bi, name), left@right.T, atol=1e-12)
+ok
+test_production_rejects_small_cache_and_wrong_role (test_confirmation_reader.ConfirmationReader) ... ok
+test_serialized_moments_match_reference_both_kernels (test_confirmation_reader.ConfirmationReader) ... ok
+test_bridge_uses_actual_cue_times_and_keeps_both_variants (test_extract_v5_confirmation.ConfirmationExtraction) ... ok
+test_budget_is_inherited_and_refunded_even_on_error (test_extract_v5_confirmation.ConfirmationExtraction) ... ok
+test_evaluation_cannot_generate_before_frozen_reader_and_attestation (test_extract_v5_confirmation.ConfirmationExtraction) ... ok
+test_extractor_never_initializes_empty_budget (test_extract_v5_confirmation.ConfirmationExtraction) ... ok
+test_missing_or_ambiguous_bridge_time_is_rejected_before_encoding (test_extract_v5_confirmation.ConfirmationExtraction) ... ok
+test_npz_entry_hashes_are_accepted_by_reader (test_extract_v5_confirmation.ConfirmationExtraction) ... ok
+test_orphan_shard_is_preserved_and_not_silently_overwritten (test_extract_v5_confirmation.ConfirmationExtraction) ... ok
+test_scalar_role_hash_preserves_npz_scalar_shape (test_extract_v5_confirmation.ConfirmationExtraction) ... ok
+test_shard_resume_validates_data_and_configuration (test_extract_v5_confirmation.ConfirmationExtraction) ... ok
+test_unique_images_encoded_once_and_ordered_views_reuse_exact_tensors (test_extract_v5_confirmation.ConfirmationExtraction) ... ok
+test_parallel_record_writes_match_serial_and_parent_owns_completion (test_feature_workers.FeatureWorkers) ... {"stage": "features", "episode": "dev-000000-0", "frames": 19}
+{"stage": "features", "episode": "dev-000000-1", "frames": 19}
+{"stage": "features", "episode": "dev-000001-0", "frames": 19}
+{"stage": "features", "episode": "dev-000001-1", "frames": 19}
+{"stage": "features", "episode": "dev-000000-0", "frames": 19}
+{"stage": "features", "episode": "dev-000000-1", "frames": 19}
+{"stage": "features", "episode": "dev-000001-0", "frames": 19}
+{"stage": "features", "episode": "dev-000001-1", "frames": 19}
+ok
+test_resume_rejects_wrong_episode_and_test_is_never_opened (test_feature_workers.FeatureWorkers) ... {"stage": "features", "episode": "train-000000-0", "frames": 19}
+{"stage": "features", "episode": "train-000000-1", "frames": 19}
+ok
+test_shards_are_disjoint_complete_and_keep_pairs_together (test_feature_workers.FeatureWorkers) ... ok
+test_worker_stops_for_shared_cancellation_or_deadline (test_feature_workers.FeatureWorkers) ... ok
+test_chunked_gram_matches_concat_and_repeat_frame_equivalence (test_input_audit.InputAudit) ... ok
+test_chunked_probe_matches_frozen_probe_regularizer_precision (test_input_audit.InputAudit) ... ok
+test_raw_pooling_preserves_spatial_raster_and_storage_dtype (test_input_audit.InputAudit) ... ok
+test_dgx_60h_round_cap_prevents_submission (test_launcher.Launcher) ... ok
+test_dgx_failed_step_persists_receipt_and_stops_chain (test_launcher.Launcher) ... ok
+test_dgx_rejects_unverified_account_and_untyped_new_allocation (test_launcher.Launcher) ... ok
+test_dgx_requires_explicit_account (test_launcher.Launcher) ... ok
+test_dgx_shared_dry_run_records_reserved_eight_selected_one (test_launcher.Launcher) ... ok
+test_dry_run_uses_live_gpu_type_and_never_submits (test_launcher.Launcher) ... ok
+test_parallel_dry_run_keeps_aggregate_budget_and_uses_eight_feature_workers (test_launcher.Launcher) ... ok
+test_parallel_failure_drains_started_siblings_but_never_launches_ninth (test_launcher.Launcher) ... ok
+test_parallel_scheduler_never_exceeds_eight_and_waits_before_ninth (test_launcher.Launcher) ... ok
+test_refuse_torch_and_unknown_partition (test_launcher.Launcher) ... ok
+test_unreconciled_interrupted_budget_never_submits (test_launcher.Launcher) ... ok
+test_alpha_selection_cannot_see_dev_kernel_or_targets (test_probe_diagnostics.ProbeDiagnostics) ... ok
+test_chunked_frame_kernels_match_explicit_concat_and_difference (test_probe_diagnostics.ProbeDiagnostics) ... ok
+test_gram_centering_matches_explicit_original_dual_fit (test_probe_diagnostics.ProbeDiagnostics) ... ok
+test_grouped_folds_keep_both_variants_and_frames_together (test_probe_diagnostics.ProbeDiagnostics) ... ok
+test_pair_bootstrap_identity_and_incomplete_pairs (test_probe_diagnostics.ProbeDiagnostics) ... ok
+test_shared_position_decoder_uses_derived_labels_and_differences (test_probe_diagnostics.ProbeDiagnostics) ... /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_probe_diagnostics.py:73: RuntimeWarning: divide by zero encountered in matmul
+  views = diagnostics.kernel_views(frames@frames.T, query@frames.T)
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_probe_diagnostics.py:73: RuntimeWarning: overflow encountered in matmul
+  views = diagnostics.kernel_views(frames@frames.T, query@frames.T)
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_probe_diagnostics.py:73: RuntimeWarning: invalid value encountered in matmul
+  views = diagnostics.kernel_views(frames@frames.T, query@frames.T)
+ok
+test_frame_selection_uses_train_score_and_ignores_dev_fields (test_probe_temporal.TemporalControls) ... ok
+test_reversed_labels_change_endpoint_and_displacement_sign (test_probe_temporal.TemporalControls) ... ok
+test_single_frame_and_query_swap_kernels_match_explicit_features (test_probe_temporal.TemporalControls) ... /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_probe_temporal.py:16: RuntimeWarning: divide by zero encountered in matmul
+  cross=dev.reshape(10,13)@train.reshape(16,13).T
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_probe_temporal.py:16: RuntimeWarning: overflow encountered in matmul
+  cross=dev.reshape(10,13)@train.reshape(16,13).T
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_probe_temporal.py:16: RuntimeWarning: invalid value encountered in matmul
+  cross=dev.reshape(10,13)@train.reshape(16,13).T
+ok
+test_budget_stops_profile_before_another_encoder_call (test_profiling.Profiling) ... ok
+test_cold_start_is_separate_from_representative_throughput (test_profiling.Profiling) ... ok
+test_actor_does_not_receive_evaluation_fields (test_protocol.Protocol) ... ok
+test_all_candidates_gradients_and_frozen_writer (test_protocol.Protocol) ... ok
+test_budget_resume_and_cap (test_protocol.Protocol) ... ok
+test_checkpoint_resume_and_tiny_training (test_protocol.Protocol) ... {"run": "tmpue52a7bi", "step": 2, "train_loss": 0.014771723188459873, "dev_mse": 0.008185838116332889, "gradient_norm": 0.3281517028808594, "elapsed_seconds": 0.009495792000000058, "trainable_parameters": 7190}
+{"run": "tmpue52a7bi", "step": 4, "train_loss": 0.004557535983622074, "dev_mse": 0.0029543497948907316, "gradient_norm": 0.14698077738285065, "elapsed_seconds": 0.017506082999999784, "trainable_parameters": 7190}
+ok
+test_delta_formula_nontrivial_decay (test_protocol.Protocol) ... ok
+test_delta_revises_one_orthogonal_address (test_protocol.Protocol) ... ok
+test_equal_cache_budget (test_protocol.Protocol) ... ok
+test_gap_and_write_axes (test_protocol.Protocol) ... ok
+test_interrupted_optimizer_resume_matches_uninterrupted (test_protocol.Protocol) ... {"run": "direct", "step": 2, "train_loss": 0.14178377389907837, "dev_mse": 0.11253934912383556, "gradient_norm": 1.16609525680542, "elapsed_seconds": 0.005808125000000608, "trainable_parameters": 7190}
+{"run": "direct", "step": 4, "train_loss": 0.08947477489709854, "dev_mse": 0.06558792851865292, "gradient_norm": 0.8720167875289917, "elapsed_seconds": 0.014079875000000186, "trainable_parameters": 7190}
+{"run": "resume", "step": 2, "train_loss": 0.14178377389907837, "dev_mse": 0.11253934912383556, "gradient_norm": 1.16609525680542, "elapsed_seconds": 0.005429459000000136, "trainable_parameters": 7190}
+{"run": "resume", "step": 4, "train_loss": 0.08947477489709854, "dev_mse": 0.06558792851865292, "gradient_norm": 0.8720167875289917, "elapsed_seconds": 0.005377457999999891, "trainable_parameters": 7190}
+ok
+test_pairs_and_splits (test_protocol.Protocol) ... ok
+test_reader_empty_and_identity (test_protocol.Protocol) ... ok
+test_skip_reset_chronological_and_size (test_protocol.Protocol) ... ok
+test_streaming_fifo_writes_once_and_matches_replay (test_protocol.Protocol) ... ok
+test_requires_reader_results_and_successful_replay_status (test_report.ReportCompleteness) ... /Users/xintongyang/Library/Python/3.9/lib/python/site-packages/matplotlib/_fontconfig_pattern.py:64: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+  prop = Group((name + Suppress("=") + comma_separated(value)) | oneOf(_CONSTANTS))
+/Users/xintongyang/Library/Python/3.9/lib/python/site-packages/matplotlib/_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  parse = parser.parseString(pattern)
+/Users/xintongyang/Library/Python/3.9/lib/python/site-packages/matplotlib/_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+  parser.resetCache()
+/Users/xintongyang/Library/Python/3.9/lib/python/site-packages/matplotlib/_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'
+  ParserElement.enablePackrat()
+In /Users/xintongyang/Library/Python/3.9/lib/python/site-packages/matplotlib/mpl-data/stylelib/classic.mplstyle: 'parseString' deprecated - use 'parse_string'
+In /Users/xintongyang/Library/Python/3.9/lib/python/site-packages/matplotlib/mpl-data/stylelib/classic.mplstyle: 'resetCache' deprecated - use 'reset_cache'
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/pmr/visual_memory/report.py:58: UserWarning: No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+  ax.legend(fontsize=7)
+ok
+test_bootstrap_preserves_all_variants_and_conditions_within_pair (test_score_v5_2_counterfactual.CounterfactualScore) ... ok
+test_four_unique_image_indices_preserve_frame_content (test_score_v5_2_counterfactual.CounterfactualScore) ... ok
+test_original_parity_one_percent_rms_boundary (test_score_v5_2_counterfactual.CounterfactualScore) ... ok
+test_original_parity_point_zero_two_skill_boundary (test_score_v5_2_counterfactual.CounterfactualScore) ... ok
+test_original_parity_ten_percent_max_boundary (test_score_v5_2_counterfactual.CounterfactualScore) ... ok
+test_perfect_residuals_use_null_for_undefined_diagnostics (test_score_v5_2_counterfactual.CounterfactualScore) ... ok
+test_removing_shared_dx_error_gives_known_effect (test_score_v5_2_counterfactual.CounterfactualScore) ... ok
+test_static_comparison_averages_losses_not_predictions (test_score_v5_2_counterfactual.CounterfactualScore) ... ok
+test_wrong_condition_shape_is_rejected (test_score_v5_2_counterfactual.CounterfactualScore) ... ok
+test_dgx_account_derived_from_live_job_not_missing_env (test_slurm_backend.SlurmBackend) ... ok
+test_explicit_eight_worker_selection_validates_all_uuids (test_slurm_backend.SlurmBackend) ... ok
+test_explicit_sharing_records_occupancy_but_requires_free_memory (test_slurm_backend.SlurmBackend) ... ok
+test_gpu_totals_do_not_double_count_types (test_slurm_backend.SlurmBackend) ... ok
+test_real_account_cannot_be_spoofed_by_environment (test_slurm_backend.SlurmBackend) ... ok
+test_real_pending_job_and_wrong_step_identity_refused (test_slurm_backend.SlurmBackend) ... ok
+test_selector_changes_only_cuda_visibility_and_preserves_receipt (test_slurm_backend.SlurmBackend) ... ok
+test_shared_selection_never_takes_gpu_outside_step_or_busy_gpu (test_slurm_backend.SlurmBackend) ... ok
+test_shared_selection_requires_exact_uuid_and_records_allocation_eight (test_slurm_backend.SlurmBackend) ... ok
+test_unapproved_multi_gpu_step_is_refused (test_slurm_backend.SlurmBackend) ... ok
+test_wrong_gpu_and_multiple_visible_devices_are_refused (test_slurm_backend.SlurmBackend) ... ok
+test_actor_has_no_group_or_variant_or_state (test_temporal_confirmation.TemporalConfirmation) ... ok
+test_any_first_frame_function_fails_start_contrast (test_temporal_confirmation.TemporalConfirmation) ... ok
+test_any_last_frame_function_fails_end_contrast (test_temporal_confirmation.TemporalConfirmation) ... ok
+test_end_and_start_anchor_pixels_identical (test_temporal_confirmation.TemporalConfirmation) ... ok
+test_exact_reversals_pixels_and_labels (test_temporal_confirmation.TemporalConfirmation) ... ok
+test_fixed_train_selection_keeps_all_four_views_together (test_temporal_confirmation.TemporalConfirmation) ... ok
+test_no_reflection_and_displacement_matches_positions (test_temporal_confirmation.TemporalConfirmation) ... ok
+test_perfect_two_frame_coordinate_oracle_passes_metrics_only (test_temporal_confirmation.TemporalConfirmation) ... ok
+test_quadratic_matches_explicit_feature_map (test_temporal_confirmation.TemporalConfirmation) ... ok
+test_reject_test_namespace_and_bad_order (test_temporal_confirmation.TemporalConfirmation) ... ok
+test_zero_motion_prediction_cannot_pass (test_temporal_confirmation.TemporalConfirmation) ... ok
+test_changed_freeze_blocks_publication_release (test_v5_1_controller.V51Controller) ... ok
+test_confirmation_requires_verified_matching_publication (test_v5_1_controller.V51Controller) ... ok
+test_cpu_reader_explicitly_releases_gpu_step (test_v5_1_controller.V51Controller) ... ok
+test_extraction_uses_all_eight_allocated_gpus (test_v5_1_controller.V51Controller) ... ok
+test_failed_confirmation_prevents_bridge_release (test_v5_1_controller.V51Controller) ... ok
+test_outer_budget_rejects_before_launch (test_v5_1_controller.V51Controller) ... ok
+test_partial_final_report_cannot_be_labeled_complete (test_v5_1_controller.V51Controller) ... ok
+test_budget_cannot_drop_original_charge (test_v5_1_downstream.DownstreamPrerequisites) ... ok
+test_changed_source_refuses (test_v5_1_downstream.DownstreamPrerequisites) ... ok
+test_duplicate_group_ids_receipt_refuses_even_if_rehashed (test_v5_1_downstream.DownstreamPrerequisites) ... ok
+test_failed_gate_refuses (test_v5_1_downstream.DownstreamPrerequisites) ... ok
+test_forged_metric_with_same_predictions_refuses (test_v5_1_downstream.DownstreamPrerequisites) ... ok
+test_prediction_hash_mismatch_refuses (test_v5_1_downstream.DownstreamPrerequisites) ... ok
+test_valid_fixture_passes_recomputed_boundary_without_gpu (test_v5_1_downstream.DownstreamPrerequisites) ... ok
+test_wrong_count_or_test_access_refuses (test_v5_1_downstream.DownstreamPrerequisites) ... ok
+test_actual_target_mask_overlap_rejects_intervention (test_v5_2_counterfactual.V52Counterfactual) ... ok
+test_archived_rgb_hash_mismatch_fails_before_encoder (test_v5_2_counterfactual.V52Counterfactual) ... ok
+test_changed_original_targets_fail_before_encoder (test_v5_2_counterfactual.V52Counterfactual) ... ok
+test_four_conditions_reuse_exact_unique_tensors_without_reversing_targets (test_v5_2_counterfactual.V52Counterfactual) ... ok
+test_ledger_preserves_prior_cost_and_refunds_partial_run (test_v5_2_counterfactual.V52Counterfactual) ... ok
+test_only_old_new_rectangle_union_changes_grid_is_restored (test_v5_2_counterfactual.V52Counterfactual) ... ok
+test_original_pillow_rectangle_redraw_is_bitwise_exact (test_v5_2_counterfactual.V52Counterfactual) ... ok
+test_prior_scene_and_prior_ledger_cannot_be_output (test_v5_2_counterfactual.V52Counterfactual) ... ok
+test_shard_resume_rejects_hash_or_configuration_changes (test_v5_2_counterfactual.V52Counterfactual) ... ok
+test_unexpected_pixel_inside_strip_rejects_original_reconstruction (test_v5_2_counterfactual.V52Counterfactual) ... ok
+
+----------------------------------------------------------------------
+Ran 123 tests in 6.850s
+
+OK

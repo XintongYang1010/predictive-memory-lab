@@ -1,0 +1,14 @@
+{
+  "cache_sha256": {
+    "bridge": "a720682664da2c533820d9d421e1b9013b5d4b8b839e74a25492a5d70a894872",
+    "confirm": "34663d6b62adf9d96d44c728bd79b646f35950f25b4b02ea509abdfd57fb994d",
+    "fit": "c5e4b67990e5654516bcefa7508da4b9d24dbcc52ef744b2708176ad80ec98fc"
+  },
+  "elapsed_seconds": 1.6035870829999999,
+  "frozen_reader_sha256": "27ae0593f90c2728529f607b09893780d75badbf54261198b3e6f4a3f7b4596a",
+  "no_fitting_or_selection": true,
+  "posthoc_only": true,
+  "script_sha256": "032f21a309911a8b1cd35c686eefcabed881c9aa6c1fa18f410433df3bb80389",
+  "source_scene": "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_1-20261010/continuation-20261010",
+  "test_access": false
+}

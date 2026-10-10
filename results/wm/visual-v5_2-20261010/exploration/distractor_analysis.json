@@ -1,0 +1,57 @@
+{
+  "bootstrap": {
+    "interval": "unadjusted exploratory percentile95, conditional on frozen predictions",
+    "replicates": 2000,
+    "seed": 20261010,
+    "unit": "whole bridge paired world"
+  },
+  "error_decomposition": "mean_variants(error^2) = ((e0+e1)/2)^2 + ((e0-e1)/2)^2",
+  "posthoc_hypothesis_not_causal": true,
+  "summary": [
+    {
+      "axis": "A_dx",
+      "common_residual_distractor_dx_pearson": 0.8960860404492914,
+      "common_residual_fraction_of_mse": 0.8136154463021619,
+      "common_residual_rmse": 0.023697816474163778,
+      "correlation_ci95_high": 0.9156437190924073,
+      "correlation_ci95_low": 0.8734648811245598,
+      "fraction_ci95_high": 0.8433388339123002,
+      "fraction_ci95_low": 0.7827970384707339,
+      "pair_contrast_residual_rmse": 0.011342367075770495
+    },
+    {
+      "axis": "A_dy",
+      "common_residual_distractor_dx_pearson": 0.1547104966365029,
+      "common_residual_fraction_of_mse": 0.49829629907838086,
+      "common_residual_rmse": 0.009630171442868393,
+      "correlation_ci95_high": 0.2648028509524086,
+      "correlation_ci95_low": 0.036686488766024,
+      "fraction_ci95_high": 0.5501189693502018,
+      "fraction_ci95_low": 0.44428748660757034,
+      "pair_contrast_residual_rmse": 0.009663041402783042
+    },
+    {
+      "axis": "B_dx",
+      "common_residual_distractor_dx_pearson": 0.9024689718135126,
+      "common_residual_fraction_of_mse": 0.8440206626771211,
+      "common_residual_rmse": 0.025478402084048935,
+      "correlation_ci95_high": 0.9203209449751995,
+      "correlation_ci95_low": 0.8821967485153338,
+      "fraction_ci95_high": 0.8691120237660102,
+      "fraction_ci95_low": 0.8160499132904178,
+      "pair_contrast_residual_rmse": 0.01095290152724947
+    },
+    {
+      "axis": "B_dy",
+      "common_residual_distractor_dx_pearson": 0.24273088116888952,
+      "common_residual_fraction_of_mse": 0.6252247070420739,
+      "common_residual_rmse": 0.009514441024007433,
+      "correlation_ci95_high": 0.35274999222164044,
+      "correlation_ci95_low": 0.1271058917001409,
+      "fraction_ci95_high": 0.6793797548660911,
+      "fraction_ci95_low": 0.5665721753864111,
+      "pair_contrast_residual_rmse": 0.00736632182594777
+    }
+  ],
+  "yellow_dx_definition": "(int((0.5+0.4*sin(7*2.3+pair))*224)-int((0.5+0.4*sin(6*2.3+pair))*224))/224; positive coordinates make floor and int identical"
+}
