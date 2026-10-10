@@ -1,0 +1,9 @@
+{
+  "atol": 1e-07,
+  "rtol": 0,
+  "max_abs": {
+    "global__original": 1.4247492075014634e-12,
+    "correct_lane__original": 1.8605117446668373e-12
+  },
+  "passed": true
+}

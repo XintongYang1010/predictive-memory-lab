@@ -1,0 +1,319 @@
+{
+  "authenticated_inputs": {
+    "v54": {
+      "reader/freeze_receipt.json": {
+        "bytes": 47443,
+        "sha256": "c76e58360f71facfc60e4abe933f51d4785f2dfdf64da71b1bfd39da63765c4e"
+      },
+      "reader/frozen_model.npz": {
+        "bytes": 252781114,
+        "sha256": "657448f6b31928aeec30a6c4e8a3264ce1ff6a266918125b169a30407e4e7fa4"
+      },
+      "reader/training_config.json": {
+        "bytes": 1149,
+        "sha256": "7dbe3925dbfb6b8fe5f3af28116d3fe7903dd244deddf32078c2aa82ca800bbb"
+      }
+    },
+    "v55": {
+      "counterfactual_cache/cache.npz": {
+        "bytes": 481253863,
+        "sha256": "7fadb29391ad86e5ab278176fd1c7fed7e3785cdeff0913a575bf6dd3a9c8e24"
+      },
+      "counterfactual_cache/receipt.json": {
+        "bytes": 139376,
+        "sha256": "000ec48d9a2a7ba7ea07025f87e246ae87045d3a122ca478f6d7b10c4e5d4f46"
+      },
+      "lane_reader/freeze_receipt.json": {
+        "bytes": 104215,
+        "sha256": "50654153b296b0489f7403ae12ccec0f4a939cf2befc27f2d70fef310f5b38b2"
+      },
+      "lane_reader/frozen_model.npz": {
+        "bytes": 123809286,
+        "sha256": "05d2b5bd740fed4484543620614ac7bef8b420a4359a4b1a5b1a724c096e4d66"
+      },
+      "report/predictions.npz": {
+        "bytes": 1853693,
+        "sha256": "f3f66de4fb643ccbf4bb011761111d24aa49170e539c186a41d93068026eb294"
+      }
+    }
+  },
+  "cache": {
+    "bytes": 481253863,
+    "sha256": "7fadb29391ad86e5ab278176fd1c7fed7e3785cdeff0913a575bf6dd3a9c8e24"
+  },
+  "elapsed_seconds": 35.706315994262695,
+  "episodes": 512,
+  "feature_path_caveat": "off-manifold activations; outer rows avoid direct yellow pooling blocks; contextual leakage remains",
+  "feature_paths": {
+    "global_W_object0": {
+      "complement": {
+        "horizontal_mean_px": 0.031993799377520005,
+        "horizontal_rms_px": 1.2396241490500963
+      },
+      "interaction": {
+        "horizontal_mean_px": 0.0010858664717445492,
+        "horizontal_rms_px": 0.05800179361334334
+      },
+      "target_rows": {
+        "horizontal_mean_px": 0.020377623867632644,
+        "horizontal_rms_px": 0.4875193514860901
+      },
+      "total": {
+        "horizontal_mean_px": 0.05345728971689719,
+        "horizontal_rms_px": 1.1294318417747342
+      }
+    },
+    "global_W_object1": {
+      "complement": {
+        "horizontal_mean_px": -0.02191185428474713,
+        "horizontal_rms_px": 0.8262790184950394
+      },
+      "interaction": {
+        "horizontal_mean_px": -0.025199885069887115,
+        "horizontal_rms_px": 0.06579974056535084
+      },
+      "target_rows": {
+        "horizontal_mean_px": 0.030241745247672827,
+        "horizontal_rms_px": 0.5251196575176451
+      },
+      "total": {
+        "horizontal_mean_px": -0.016869994106961415,
+        "horizontal_rms_px": 0.8723459511703425
+      }
+    },
+    "lane_W_object0": {
+      "complement": {
+        "horizontal_mean_px": 0.07472176483389387,
+        "horizontal_rms_px": 1.493733327129801
+      },
+      "interaction": {
+        "horizontal_mean_px": -0.04169807856652136,
+        "horizontal_rms_px": 0.1212227402780582
+      },
+      "target_rows": {
+        "horizontal_mean_px": 0.03565565646192408,
+        "horizontal_rms_px": 0.9950985405363472
+      },
+      "total": {
+        "horizontal_mean_px": 0.06867934272929659,
+        "horizontal_rms_px": 1.1156060781281956
+      }
+    },
+    "lane_W_object1": {
+      "complement": {
+        "horizontal_mean_px": -0.041361482725855686,
+        "horizontal_rms_px": 0.8914971451346376
+      },
+      "interaction": {
+        "horizontal_mean_px": 0.011864834477992175,
+        "horizontal_rms_px": 0.11808912461763778
+      },
+      "target_rows": {
+        "horizontal_mean_px": 0.015917976261676976,
+        "horizontal_rms_px": 0.6587210971123819
+      },
+      "total": {
+        "horizontal_mean_px": -0.013578671986186555,
+        "horizontal_rms_px": 0.9449804515142592
+      }
+    }
+  },
+  "independent_denominator": "256 paired worlds, not32768 independent samples",
+  "known_dev_worlds": 256,
+  "original_parity": {
+    "global_W": {
+      "artifact_key": "W_concat",
+      "max_abs": 1.0269562977782698e-14
+    },
+    "lane_W": {
+      "artifact_key": "lane_W",
+      "max_abs": 8.326672684688674e-15
+    }
+  },
+  "p0_changed": false,
+  "publication_sha256": "1c2ae6f82f060211ee90db918ade028b48fdd64cb1f8a0bf871945b4f394041e",
+  "source_commit": "031788e0499c242a3671f57d026f3ed71da4872e",
+  "source_identity": {
+    "docs/V5_6_EXECUTION_PROTOCOL.md": "262dc8991ecd18cdb93c70a6ae239fbc8417f324f8a30a9b0d97dc894a04dc4d",
+    "scripts/score_v5_5.py": "6eb0e410a85efe7ceac1b5d0c5ac7b552eccfbfada4e8fc69a091c95de1d2984",
+    "scripts/v5_3_data.py": "3018b72817b536323ee404c070c10b1cc13917420ec377e21a3aec5325bb8f12",
+    "scripts/v5_3_reader.py": "960e3123da1163d694fafaeee45f91cea84e03025b37a62da9823dcff0b04ada",
+    "scripts/v5_4_data.py": "97eb9796c9affe09a13d0bf242c701dac36d6e126f7e8cd91a84185534120576",
+    "scripts/v5_4_plan.json": "e5dc00d833455fb344527114bdbf752cad9c769200e2fce192d2f3e1364d5ec5",
+    "scripts/v5_4_reader.py": "e198aa3046056b032582e13c6ad135e581af895fcef17a8867e231355e82c3c1",
+    "scripts/v5_5_lane_reader.py": "7bb19734653aaf19ae0867d429e1544d9a89d304b6dcf861b8fd257eea841983",
+    "scripts/v5_5_plan.json": "df912f428416c2a7243afa09b108bb7cbf8d740c2ca14b4657c96763d31ad41a",
+    "scripts/v5_6_plan.json": "ffb3b7d8603468d3202ab6a4965f93d580b78006556788c4ccd97c404f4466c0",
+    "scripts/v5_6_replay.py": "6838857742aa439221256e113df55724908e31144cf2f1c47b14ae2690a53049"
+  },
+  "status": "complete",
+  "test_opened": false,
+  "transitions": {
+    "global_W": {
+      "checks": {
+        "diagnostic_only": true,
+        "identity_motion_max_abs": 6.366136700442158e-15,
+        "reverse_motion_sum_max_abs": 1.2732273400884315e-14,
+        "target_identity_motion_max_abs": 0.0,
+        "target_reverse_motion_sum_max_abs": 0.0
+      },
+      "horizontal_rmse_px": 1.7429714090553892,
+      "large_axis_count": 64480,
+      "large_axis_wrong": 9712,
+      "large_axis_zero": 0,
+      "motion_rmse_px": 1.5864996213786176,
+      "motion_skill": 0.415963647093433,
+      "per_dimension_mse": [
+        0.000373948254249805,
+        0.0001078817532186925,
+        0.00035685758527007744,
+        0.00013364180957657542,
+        6.231094683264921e-05,
+        4.10994581707033e-05,
+        5.878078358765253e-05,
+        3.846099959733255e-05
+      ],
+      "per_dimension_skill": [
+        0.9907484577219607,
+        0.9856924566266925,
+        0.9908146269958801,
+        0.9805708459666701,
+        0.3108043412306898,
+        0.4832024377204074,
+        0.33491281914628723,
+        0.5349349902763476
+      ],
+      "pooled_motion_skill": 0.4116101832210449,
+      "position_rmse_px": 3.492406050653522,
+      "position_skill": 0.9869565968278009
+    },
+    "lane_W": {
+      "checks": {
+        "diagnostic_only": true,
+        "identity_motion_max_abs": 6.108719635748761e-15,
+        "reverse_motion_sum_max_abs": 1.2217439271497522e-14,
+        "target_identity_motion_max_abs": 0.0,
+        "target_reverse_motion_sum_max_abs": 0.0
+      },
+      "horizontal_rmse_px": 1.4651273731604866,
+      "large_axis_count": 64480,
+      "large_axis_wrong": 6320,
+      "large_axis_zero": 0,
+      "motion_rmse_px": 1.3572574607204329,
+      "motion_skill": 0.5719914434905371,
+      "per_dimension_mse": [
+        0.00018231039137558012,
+        5.930733362361755e-05,
+        0.00021622832849923333,
+        0.00010014790620232404,
+        4.3085076613760093e-05,
+        2.8457807087839356e-05,
+        4.2477671296959074e-05,
+        3.2834340942231164e-05
+      ],
+      "per_dimension_skill": [
+        0.9954896104624937,
+        0.99213451558898,
+        0.9944343684054812,
+        0.9854402667706657,
+        0.5234537546075655,
+        0.6421625494493319,
+        0.51937771278606,
+        0.6029717571191908
+      ],
+      "pooled_motion_skill": 0.5693646498657177,
+      "position_rmse_px": 2.6456523260788227,
+      "position_skill": 0.9918746903069051
+    }
+  },
+  "transitions_per_episode": 64,
+  "update_config": {
+    "caveats": [
+      "known Dev endpoint replay",
+      "no true occlusion rendering; observation-free holds",
+      "no trained writer",
+      "no long-term memory/full-history gate claim"
+    ],
+    "full_nuisance_q95": 17.940320877555358,
+    "local_nuisance_q95": [
+      6.001058707233465,
+      6.162423604682731
+    ],
+    "sequence": [
+      0,
+      1,
+      0,
+      1,
+      4,
+      5,
+      4,
+      5,
+      6,
+      7,
+      6,
+      7,
+      2,
+      3,
+      2,
+      3,
+      0,
+      1,
+      0
+    ],
+    "threshold_data": "only archived W FIT target-static nuisance pairs"
+  },
+  "update_replay": {
+    "fifo": {
+      "change_step_rmse_px": 2.9320778846740723,
+      "gap_rmse_px": 2.6745030879974365,
+      "metadata_bytes_per_episode": 8,
+      "missed_change_writes": 0,
+      "payload_bytes_per_episode": 32,
+      "position_rmse_px": 2.6847214698791504,
+      "reader": "frozen lane position output; every policy reads mean of two 2D states per object",
+      "true_object_changes": 2048,
+      "unchanged_object_rmse_px": 2.6541054248809814,
+      "unchanged_object_writes": 16384,
+      "writes": 18432
+    },
+    "latest": {
+      "change_step_rmse_px": 2.541229248046875,
+      "gap_rmse_px": 2.7004778385162354,
+      "metadata_bytes_per_episode": 8,
+      "missed_change_writes": 0,
+      "payload_bytes_per_episode": 32,
+      "position_rmse_px": 2.690929412841797,
+      "reader": "frozen lane position output; every policy reads mean of two 2D states per object",
+      "true_object_changes": 2048,
+      "unchanged_object_rmse_px": 2.7079973220825195,
+      "unchanged_object_writes": 16384,
+      "writes": 18432
+    },
+    "surprise": {
+      "change_step_rmse_px": 3.257462739944458,
+      "gap_rmse_px": 3.1951403617858887,
+      "metadata_bytes_per_episode": 8,
+      "missed_change_writes": 1375,
+      "payload_bytes_per_episode": 32,
+      "position_rmse_px": 3.1236138343811035,
+      "reader": "frozen lane position output; every policy reads mean of two 2D states per object",
+      "true_object_changes": 2048,
+      "unchanged_object_rmse_px": 3.107487916946411,
+      "unchanged_object_writes": 2149,
+      "writes": 2822
+    },
+    "trusted_local": {
+      "change_step_rmse_px": 3.067112684249878,
+      "gap_rmse_px": 3.075648784637451,
+      "metadata_bytes_per_episode": 8,
+      "missed_change_writes": 842,
+      "payload_bytes_per_episode": 32,
+      "position_rmse_px": 3.001065731048584,
+      "reader": "frozen lane position output; every policy reads mean of two 2D states per object",
+      "true_object_changes": 2048,
+      "unchanged_object_rmse_px": 2.9931998252868652,
+      "unchanged_object_writes": 1909,
+      "writes": 3115
+    }
+  }
+}
