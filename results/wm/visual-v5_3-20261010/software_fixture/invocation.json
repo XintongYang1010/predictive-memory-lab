@@ -1,0 +1,16 @@
+{
+  "software_only": true,
+  "command": [
+    "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_3-20261010/software_fixture/run_software_fixture.py",
+    "--repo",
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab",
+    "--out",
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_3-20261010/software_fixture/run_001",
+    "--reader-sha256",
+    "b7abe663295e2ccfa07f10a6aa7b98e388d17ecec58c99bab36b3b6cb5fada01",
+    "--data-sha256",
+    "3018b72817b536323ee404c070c10b1cc13917420ec377e21a3aec5325bb8f12"
+  ],
+  "timeout_seconds": 600
+}

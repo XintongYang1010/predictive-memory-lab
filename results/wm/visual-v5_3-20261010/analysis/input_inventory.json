@@ -1,0 +1,77 @@
+{
+  "schema": "v5.3.posthoc-report-inputs.1",
+  "inputs": {
+    "anchor_report/report.json": {
+      "bytes": 214184,
+      "sha256": "2de1e9c33c3c4be021fb6aa5e712a01cc1d9d1f288ef641629cda70be7bd9a7d"
+    },
+    "anchor_report/predictions.npz": {
+      "bytes": 1041724,
+      "sha256": "b1e4c3a09d78dc7805a287dbd9295e9fdfc284d456e332fcfaa7039879b405ce"
+    },
+    "anchor_report/cache_receipt.json": {
+      "bytes": 13209,
+      "sha256": "bd03fb45ba5abb2139ef33bcd12aa569b6da86068b28aad3f8fc1cbff7d6c8a1"
+    },
+    "anchor_cache/receipt.json": {
+      "bytes": 13209,
+      "sha256": "279752b1e2400a3e26736a09b160f371da6014f08097374b115fe32c66beec5d"
+    },
+    "bridge_report/report.json": {
+      "bytes": 15132,
+      "sha256": "e1bc4c4fc5fee010ac1fbf92358fadc5dbc7714472101b1464b55791e719814f"
+    },
+    "bridge_report/predictions.npz": {
+      "bytes": 203153,
+      "sha256": "fc2ce9a5cab09c03b25ccfb3355bdd8bea512aecb1bd0a2b9be832adfec3929b"
+    },
+    "bridge_report/cache_receipt.json": {
+      "bytes": 12978,
+      "sha256": "f7518955e97c7c2ad4f7592aa154b164a01ef23b6318cc03a36d01780cfb77f2"
+    },
+    "bridge_cache/receipt.json": {
+      "bytes": 12978,
+      "sha256": "fe9c8d35b842d4b5cda0cc7b1c14f52dba229a8077c1c47d8fd1faa4fd06cabe"
+    },
+    "fit_controller.json": {
+      "bytes": 4224,
+      "sha256": "b4f131470d0502b2c3a2207cc449193cc0a9fa8d7e2ce09003b504b5a6f03ae3"
+    },
+    "evaluation_controller.json": {
+      "bytes": 9121,
+      "sha256": "5987108d4780e1ade0d7b7476ccfe35d37ab53331b0188fda4292774146f4bc9"
+    },
+    "registration_publication.json": {
+      "bytes": 25641,
+      "sha256": "7e9570c8f635b89019ca7a7edc6f390baefcb122646c77aed7b70642b0976266"
+    },
+    "freeze_publication.json": {
+      "bytes": 1871,
+      "sha256": "3d90ad1a3e430639c1f34ae95f13723a6038c0001091eb96bf13e969dda1027b"
+    },
+    "reader/freeze_receipt.json": {
+      "bytes": 14198,
+      "sha256": "49dbfd9d70729b3ecbce1227873682a960f27745cd113ca8f133b49868e16e95"
+    },
+    "ledger/budget.json": {
+      "bytes": 8673,
+      "sha256": "d8740b2943f656f92772c585c49529efc183311296a2ac99663f1fb4fcce5911"
+    }
+  },
+  "renderer_sha256": "5205495a85b0f9dae994e84aeb5a153b72ee543a7c8f917fdcbd778cdc20e240",
+  "frozen_reader_sha256": "49dbfd9d70729b3ecbce1227873682a960f27745cd113ca8f133b49868e16e95",
+  "receipt_verification": {
+    "anchor": "original receipt byte SHA plus report-copy JSON equality",
+    "bridge": "original receipt byte SHA plus report-copy JSON equality"
+  },
+  "checks": [
+    "prediction SHA256",
+    "exact registered counts/IDs",
+    "per-coordinate MSE recomputation",
+    "paired S-B primary recomputation",
+    "per-path contrast recomputation",
+    "negative RMS recomputation",
+    "single-frame arm equivalence"
+  ],
+  "confidence_intervals": "copied from frozen scorer; conditional on frozen models; no new bootstrap or selection"
+}

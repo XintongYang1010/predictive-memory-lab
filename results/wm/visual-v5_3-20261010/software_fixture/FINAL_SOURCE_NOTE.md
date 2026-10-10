@@ -1,0 +1,1 @@
+Full-size fixture exercised the same fitting mathematics before final receipt/report-only additions. Its recorded reader SHA differs from the frozen final source; it is not a byte-for-byte execution of that final file. The final nine reader pytest tests passed independently. Software fixture artifacts contain only software_test worlds and random 64D features.

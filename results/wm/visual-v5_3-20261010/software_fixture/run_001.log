@@ -1,0 +1,98 @@
+{"stage": "six_reader_full_scale_fit", "status": "starting", "view_rows": 4096}
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_3_reader.py:188: RuntimeWarning: divide by zero encountered in matmul
+  g += a[:, lo:lo+chunk].astype(np.float64) @ b[:, lo:lo+chunk].astype(np.float64).T
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_3_reader.py:188: RuntimeWarning: overflow encountered in matmul
+  g += a[:, lo:lo+chunk].astype(np.float64) @ b[:, lo:lo+chunk].astype(np.float64).T
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_3_reader.py:188: RuntimeWarning: invalid value encountered in matmul
+  g += a[:, lo:lo+chunk].astype(np.float64) @ b[:, lo:lo+chunk].astype(np.float64).T
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_3_reader.py:280: RuntimeWarning: divide by zero encountered in matmul
+  fitted[arm] = g[:,arm_rows[arm]]@coef+intercept
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_3_reader.py:280: RuntimeWarning: overflow encountered in matmul
+  fitted[arm] = g[:,arm_rows[arm]]@coef+intercept
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_3_reader.py:280: RuntimeWarning: invalid value encountered in matmul
+  fitted[arm] = g[:,arm_rows[arm]]@coef+intercept
+{
+  "schema": "v5.3-software-scale-check-1",
+  "software_only": true,
+  "status": "passed_software_cpu_scale_only",
+  "scientific_roles_generated": [],
+  "test_opened": false,
+  "gpu_used": false,
+  "source_sha256": {
+    "scripts/v5_3_reader.py": "b7abe663295e2ccfa07f10a6aa7b98e388d17ecec58c99bab36b3b6cb5fada01",
+    "scripts/v5_3_data.py": "3018b72817b536323ee404c070c10b1cc13917420ec377e21a3aec5325bb8f12"
+  },
+  "feature_rng_seed": 530103,
+  "feature_shape": [
+    256,
+    6,
+    64
+  ],
+  "target_shape": [
+    256,
+    16,
+    8
+  ],
+  "total_view_rows": 4096,
+  "arm_view_rows": {
+    "S": 2048,
+    "B": 4096
+  },
+  "thread_limit": 4,
+  "environment": {
+    "python": "3.9.6 (default, Dec  2 2025, 07:27:58) \n[Clang 17.0.0 (clang-1700.6.3.2)]",
+    "numpy": "2.0.2",
+    "platform": "macOS-15.7.3-arm64-arm-64bit",
+    "executable": "/Library/Developer/CommandLineTools/usr/bin/python3"
+  },
+  "start_unix": 1791647039.920734,
+  "software_input_sha256": "df5549da49c36ffc7f4b49313939fa14ccbd59c48b080f1777681624518b083a",
+  "software_generation_seconds": 0.219975542,
+  "fit_seconds": 2.23738075,
+  "coefficient_shapes": {
+    "S_concat": [
+      2048,
+      8
+    ],
+    "S_t6": [
+      2048,
+      8
+    ],
+    "S_t7": [
+      2048,
+      8
+    ],
+    "B_concat": [
+      4096,
+      8
+    ],
+    "B_t6": [
+      4096,
+      8
+    ],
+    "B_t7": [
+      4096,
+      8
+    ]
+  },
+  "coefficients_finite": true,
+  "all_saved_arrays_finite": true,
+  "singleframe_fit_parity_max_abs": {
+    "t6": 1.747080258240885e-11,
+    "t7": 1.8644530364042566e-11
+  },
+  "coefficient_sum_max_abs": {
+    "S_concat": 4.0750069985051596e-11,
+    "S_t6": 1.0439862307976e-09,
+    "S_t7": 1.0240910341963172e-09,
+    "B_concat": 1.3236842733022058e-09,
+    "B_t6": 2.2137101041153073e-09,
+    "B_t7": 1.9624337710411055e-09
+  },
+  "software_models_sha256": "e9d993aeacdb50221ac742312ab88b64cf1fa30191dafb1e680d50398784734d",
+  "interpretation": "Six actual KRR solves at registered world/view counts with random64D features; not encoder throughput, scientific FIT quality, anchor/bridge evidence, or P0 authorization.",
+  "elapsed_seconds": 2.522639036178589,
+  "cpu_seconds": 2.5051509999999997,
+  "max_rss_platform_units": 1063190528,
+  "max_rss_units": "bytes on macOS; KiB on Linux"
+}

@@ -1,0 +1,425 @@
+{
+  "cache_bytes": 61698304,
+  "cache_sha256": "5ffab66797cca80789fa1d4c4d732c03371b6196487294964049a954e470f685",
+  "coincident_nuisance_pixel_blocks": 1,
+  "configuration_sha256": "a2325c3e207c82a67036ed3eb36ad699e6bb052a590a748e04d521368b007104",
+  "encoder_identity": {
+    "checkpoint_sha256": "0382013c481743e9ccea89f970bc6c6aa126aa19a62127500d6e672a641aae22",
+    "model": "official I-JEPA ViT-H/14 target_encoder",
+    "source_commit": "52c1ae95d05f743e000e8f10a1f3a79b10cff048"
+  },
+  "entry_hashes": {
+    "block_ids": {
+      "dtype": "int64",
+      "sha256": "bbd330b12e8159e117376ef24fa106413bc9fc18032a0d43e95c5dae5e47953f",
+      "shape": [
+        256
+      ]
+    },
+    "features": {
+      "dtype": "float32",
+      "sha256": "f52987214fefb780e501215a6286614bf0634e87bea020d3f51b8bd1180e06b2",
+      "shape": [
+        256,
+        6,
+        20480
+      ]
+    },
+    "negative_targets": {
+      "dtype": "float32",
+      "sha256": "d4defcc37b36c2feb7e5f8bbf428f919ebcc113f29ac743bf93af6cd39f92841",
+      "shape": [
+        256,
+        2,
+        8
+      ]
+    },
+    "role": {
+      "dtype": "<U6",
+      "sha256": "9a1b12be553ae89374aa54ba2d5d21f99f7929be5c009d1dea9d5e9fe87c02f4",
+      "shape": []
+    },
+    "targets": {
+      "dtype": "float32",
+      "sha256": "ca2f35403cabe606652f9c143aca0cf591384ed35e4731070066d6554684eb8c",
+      "shape": [
+        256,
+        16,
+        8
+      ]
+    }
+  },
+  "examples": 4096,
+  "feature_dtype": "float32",
+  "freeze_publication_sha256": "3d90ad1a3e430639c1f34ae95f13723a6038c0001091eb96bf13e969dda1027b",
+  "freshness_audit_sha256": "720218002caccdd0fcb3c497d1d767a06a50442b2edcc24f3e4339f6c65851a1",
+  "frozen_before_generation": true,
+  "frozen_reader_sha256": "49dbfd9d70729b3ecbce1227873682a960f27745cd113ca8f133b49868e16e95",
+  "groups": 256,
+  "images_encoded": 1536,
+  "input_records_sha256": "deff3ac286edf4ec6cad3c6e56372505c2340875efd49d9d33f711f29d88183e",
+  "negative_indices": [
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      2
+    ]
+  ],
+  "original_v5_gate": "failed_unchanged",
+  "p0_authorized": false,
+  "plan_sha256": "674962273628ffed67380d6b0ab563dd03652908e4a44d780f5156fc688e8576",
+  "pooling": "4x4_flattened",
+  "role": "anchor",
+  "runtime": {
+    "cuda": "12.8",
+    "executable": "/aifs4su/guhao/KVCache/WM/.venv/bin/python",
+    "numpy": "2.4.6",
+    "pillow": "12.3.0",
+    "platform": "Linux-5.15.0-1106-nvidia-x86_64-with-glibc2.35",
+    "python": "3.11.15 (main, May 10 2026, 19:28:18) [Clang 22.1.3 ]",
+    "torch": "2.8.0+cu128"
+  },
+  "schema": "v5.3-nuisance-repair-1",
+  "slurm": {
+    "account": "hansirui",
+    "actual_gpu": "NVIDIA H800",
+    "allow_gpu_sharing": true,
+    "backend": "dgx",
+    "cluster": "slurm",
+    "job_id": "415453",
+    "minimum_free_gpu_gib": 40.0,
+    "parent_allocated_gpu_count": 8,
+    "partition": "llm",
+    "pilot_accounting": "8 explicitly selected GPU(s); existing parent allocation accounted separately",
+    "qos": "llm",
+    "requested_gpu_model": "H800",
+    "selected_gpu": null,
+    "selected_gpus": [
+      {
+        "allow_gpu_sharing": true,
+        "free_memory_gib": 62.7119140625,
+        "index": 0,
+        "minimum_free_memory_gib": 40.0,
+        "name": "NVIDIA H800",
+        "occupied_by_other_pids": [
+          "4084652"
+        ],
+        "parent_gpus": 8,
+        "scheduler_gpu_binding": null,
+        "selected_gpus": 1,
+        "selection": "explicit CUDA UUID subset of verified Slurm step allocation",
+        "step_gpus": 8,
+        "total_memory_gib": 79.6474609375,
+        "uuid": "GPU-da1decf6-d33d-ca44-9340-8c9c6b45ceb6"
+      },
+      {
+        "allow_gpu_sharing": true,
+        "free_memory_gib": 79.17578125,
+        "index": 1,
+        "minimum_free_memory_gib": 40.0,
+        "name": "NVIDIA H800",
+        "occupied_by_other_pids": [],
+        "parent_gpus": 8,
+        "scheduler_gpu_binding": null,
+        "selected_gpus": 1,
+        "selection": "explicit CUDA UUID subset of verified Slurm step allocation",
+        "step_gpus": 8,
+        "total_memory_gib": 79.6474609375,
+        "uuid": "GPU-a27a6655-95b8-cb05-ed08-b15125877960"
+      },
+      {
+        "allow_gpu_sharing": true,
+        "free_memory_gib": 79.17578125,
+        "index": 2,
+        "minimum_free_memory_gib": 40.0,
+        "name": "NVIDIA H800",
+        "occupied_by_other_pids": [],
+        "parent_gpus": 8,
+        "scheduler_gpu_binding": null,
+        "selected_gpus": 1,
+        "selection": "explicit CUDA UUID subset of verified Slurm step allocation",
+        "step_gpus": 8,
+        "total_memory_gib": 79.6474609375,
+        "uuid": "GPU-aeca771a-00a6-7a2a-fc47-dc7b3db7bf0f"
+      },
+      {
+        "allow_gpu_sharing": true,
+        "free_memory_gib": 79.17578125,
+        "index": 3,
+        "minimum_free_memory_gib": 40.0,
+        "name": "NVIDIA H800",
+        "occupied_by_other_pids": [],
+        "parent_gpus": 8,
+        "scheduler_gpu_binding": null,
+        "selected_gpus": 1,
+        "selection": "explicit CUDA UUID subset of verified Slurm step allocation",
+        "step_gpus": 8,
+        "total_memory_gib": 79.6474609375,
+        "uuid": "GPU-ce743878-6a02-ca37-28ce-3b78d9b7bbe9"
+      },
+      {
+        "allow_gpu_sharing": true,
+        "free_memory_gib": 62.7119140625,
+        "index": 4,
+        "minimum_free_memory_gib": 40.0,
+        "name": "NVIDIA H800",
+        "occupied_by_other_pids": [
+          "4084873"
+        ],
+        "parent_gpus": 8,
+        "scheduler_gpu_binding": null,
+        "selected_gpus": 1,
+        "selection": "explicit CUDA UUID subset of verified Slurm step allocation",
+        "step_gpus": 8,
+        "total_memory_gib": 79.6474609375,
+        "uuid": "GPU-c15374ab-3124-048a-40c1-15e42a684766"
+      },
+      {
+        "allow_gpu_sharing": true,
+        "free_memory_gib": 79.17578125,
+        "index": 5,
+        "minimum_free_memory_gib": 40.0,
+        "name": "NVIDIA H800",
+        "occupied_by_other_pids": [],
+        "parent_gpus": 8,
+        "scheduler_gpu_binding": null,
+        "selected_gpus": 1,
+        "selection": "explicit CUDA UUID subset of verified Slurm step allocation",
+        "step_gpus": 8,
+        "total_memory_gib": 79.6474609375,
+        "uuid": "GPU-dbd04f6c-e269-6f2d-1fa2-ddbd8fc89a4d"
+      },
+      {
+        "allow_gpu_sharing": true,
+        "free_memory_gib": 79.17578125,
+        "index": 6,
+        "minimum_free_memory_gib": 40.0,
+        "name": "NVIDIA H800",
+        "occupied_by_other_pids": [],
+        "parent_gpus": 8,
+        "scheduler_gpu_binding": null,
+        "selected_gpus": 1,
+        "selection": "explicit CUDA UUID subset of verified Slurm step allocation",
+        "step_gpus": 8,
+        "total_memory_gib": 79.6474609375,
+        "uuid": "GPU-40129db3-3a4e-227b-7159-b4ad9065a36e"
+      },
+      {
+        "allow_gpu_sharing": true,
+        "free_memory_gib": 79.17578125,
+        "index": 7,
+        "minimum_free_memory_gib": 40.0,
+        "name": "NVIDIA H800",
+        "occupied_by_other_pids": [],
+        "parent_gpus": 8,
+        "scheduler_gpu_binding": null,
+        "selected_gpus": 1,
+        "selection": "explicit CUDA UUID subset of verified Slurm step allocation",
+        "step_gpus": 8,
+        "total_memory_gib": 79.6474609375,
+        "uuid": "GPU-e862d13a-759f-cb9c-ded1-1faf7b7387ed"
+      }
+    ],
+    "shared_parent_allocation": true,
+    "slurm_job": {
+      "Account": "hansirui",
+      "AccrueTime": "2026-10-08T13:50:59",
+      "AllocTRES": "cpu=64,node=1,billing=64,gres/gpu=8",
+      "BatchFlag": "1",
+      "BatchHost": "dgx-097",
+      "Command": "/aifs4su/guhao/debug_h800_8gpu_5days_20260908.slurm",
+      "Contiguous": "0",
+      "CoreSpec": "*",
+      "Deadline": "N/A",
+      "DelayBoot": "00:00:00",
+      "Dependency": "(null)",
+      "EligibleTime": "2026-10-08T13:50:59",
+      "EndTime": "2026-10-13T14:53:41",
+      "ExcNodeList": "(null)",
+      "ExitCode": "0:0",
+      "Features": "(null)",
+      "GroupId": "Gov(1009)",
+      "JobId": "415453",
+      "JobName": "indexmem-h800-hold-5d-20261008",
+      "JobState": "RUNNING",
+      "LastSchedEval": "2026-10-08T14:53:41",
+      "Licenses": "(null)",
+      "MCS_label": "N/A",
+      "MinCPUsNode": "64",
+      "MinMemoryNode": "0",
+      "MinTmpDiskNode": "0",
+      "Network": "(null)",
+      "Nice": "0",
+      "NodeList": "dgx-097",
+      "NumCPUs": "64",
+      "NumNodes": "1",
+      "NumTasks": "1",
+      "OverSubscribe": "OK",
+      "Partition": "llm",
+      "Priority": "4294708234",
+      "QOS": "llm",
+      "Reason": "None",
+      "Reboot": "0",
+      "ReqNodeList": "(null)",
+      "ReqTRES": "cpu=64,mem=2063935M,node=1,billing=64,gres/gpu=8",
+      "Requeue": "1",
+      "Restarts": "0",
+      "RunTime": "2-08:59:57",
+      "Scheduler": "Main",
+      "SecsPreSuspend": "0",
+      "StartTime": "2026-10-08T14:53:41",
+      "StdErr": "/aifs4su/guhao/logs/debug-h800-5d-415453.err",
+      "StdIn": "/dev/null",
+      "StdOut": "/aifs4su/guhao/logs/debug-h800-5d-415453.out",
+      "SubmitTime": "2026-10-08T13:50:59",
+      "SuspendTime": "None",
+      "TimeLimit": "5-00:00:00",
+      "TimeMin": "N/A",
+      "TresPerNode": "gres:gpu:8",
+      "UserId": "guhao(1046)",
+      "WorkDir": "/home/guhao"
+    },
+    "slurm_step": {
+      "CPUFreqReq": "Default",
+      "CPUs": "32",
+      "Dist": "Cyclic",
+      "Name": "v53_anchor",
+      "Network": "(null)",
+      "NodeList": "dgx-097",
+      "Nodes": "1",
+      "Partition": "llm",
+      "ResvPorts": "(null)",
+      "StartTime": "2026-10-10T23:53:24",
+      "State": "RUNNING",
+      "StepId": "415453.31",
+      "TRES": "cpu=32,gres/gpu=8,mem=0,node=1",
+      "Tasks": "1",
+      "TimeLimit": "00:06:00",
+      "TresPerNode": "gres:gpu:8",
+      "TresPerStep": "cpu:32",
+      "TresPerTask": "cpu:32",
+      "UserId": "1046"
+    },
+    "step_allocated_gpu_count": 8,
+    "step_id": "31",
+    "task_selected_gpu_count": 8,
+    "task_selected_gpu_index": null,
+    "visible_gpu_count": 8
+  },
+  "source_commit": "875be45515276cc8559ffcdb21c7412c6048d5ad",
+  "source_identity": {
+    "docs/V5_3_EXECUTION_PROTOCOL.md": "2116e021480d88e539c3ede88e64ab4c632dc41653bf31dd52e3d4ccdf2f948f",
+    "pmr/visual_memory/__init__.py": "5334f491766718f980788f117910c30e2b4d804bee37b69bd26438db575f0027",
+    "pmr/visual_memory/__main__.py": "bb4c496ca7009b617ff20badb661237d7e0afc35ec34972af15c61c42faa49b5",
+    "pmr/visual_memory/bind_gpu.py": "cab3427dddd890e1437393dc40cdb2381c623d177b32054f4bdd4c1f674fef45",
+    "pmr/visual_memory/common.py": "6b89bfca6f38aea698449edd7ece7da3baa14e16b97b805b6368d59853f5b4ac",
+    "pmr/visual_memory/data.py": "ce5082f3be9006dcceb46fbaffadc27349f977a77abcf8992eda3e80f8775368",
+    "pmr/visual_memory/feature_workers.py": "9334ce554d5d910d3f651e7d7d555ef23c629762b0f391f8b0e318d4c8fb1cc1",
+    "pmr/visual_memory/features.py": "5324748c4c2ef0cd82329d97c73a6cf8a21562501039ba31bd67dbc0efe29f93",
+    "pmr/visual_memory/memory.py": "779a3fa3ffd9a5e4b1b52111ae37ebb35292f61e2a4a4973cadffa61e6ec4b7b",
+    "pmr/visual_memory/predictor.py": "11b481b74fb50ad069c42335611677ab3dc20c0cc7dc8eef9e74b4472fb14d38",
+    "pmr/visual_memory/profiling.py": "a99b14df2651f4f32d5f242f28a877c47f83c6b5a8d425d31a891fa79c2c12fe",
+    "pmr/visual_memory/report.py": "fa8b54a0f1f840da0acf1cab11b23f24d6bbead8f214c4a1a6b4634cbbed225d",
+    "pmr/visual_memory/slurm_backend.py": "6b622a7f895adeaf1fd6dd84031639765ca9ce7c2e445ceba5d989f6a2c6fbbe",
+    "pmr/visual_memory/train.py": "59b8420c95625a08b324e93a7b5d75f7f44af58719a486002bd0cd831a1cf7bb",
+    "scripts/extract_v5_3.py": "c8f182dedd670732788f0cd3c3cc0d4e1b593785e905c7fbde286f8c3fabdeb7",
+    "scripts/extract_v5_confirmation.py": "8db68a6a978014e18b9f3f12f81cdc7388048cfaf41c285c97c1c268ee656034",
+    "scripts/launch_v5_1.py": "d12789004d1a9409f813db760773b3265d7fec5da76e8acf12e23728cfc71aa0",
+    "scripts/launch_v5_2.py": "6750f49bb0a0e546c47e44f107f2f1549385adfd5f362244e7efcc4d3be0adbb",
+    "scripts/launch_v5_3.py": "17cd7a05aa9127fd43bf51d4de8bcf5a59c91ad76705eeddf7842b6b1b099cc2",
+    "scripts/v5_3_data.py": "3018b72817b536323ee404c070c10b1cc13917420ec377e21a3aec5325bb8f12",
+    "scripts/v5_3_plan.json": "674962273628ffed67380d6b0ab563dd03652908e4a44d780f5156fc688e8576",
+    "scripts/v5_3_reader.py": "960e3123da1163d694fafaeee45f91cea84e03025b37a62da9823dcff0b04ada",
+    "scripts/v5_temporal_confirmation.py": "6fe8a1f96e6d1209094fa2522dcccf4e9558afcb9714e8e9d7dd9785eb651681"
+  },
+  "static_view_indices": [
+    0,
+    1,
+    4,
+    5,
+    8,
+    9,
+    12,
+    13
+  ],
+  "test_opened": false,
+  "unique_image_rule": "encode_once_reuse",
+  "unique_order": [
+    "p0a",
+    "p0b",
+    "p1a",
+    "p1b",
+    "p2a",
+    "p2b"
+  ],
+  "unseen_before_release": true,
+  "view_indices": [
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      5,
+      3
+    ],
+    [
+      4,
+      3
+    ],
+    [
+      5,
+      2
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      3,
+      0
+    ]
+  ]
+}
