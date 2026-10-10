@@ -1,0 +1,59 @@
+gpu01
+Fri Oct  9 14:17:57 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.124.06             Driver Version: 570.124.06     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-80GB          On  |   00000000:CA:00.0 Off |                    0 |
+| N/A   26C    P0             57W /  400W |       4MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+index, uuid, name, memory.used [MiB], memory.total [MiB], utilization.gpu [%]
+0, GPU-4fd11e10-6ef5-dd51-fa9c-4bb55aae271a, NVIDIA A100-SXM4-80GB, 4 MiB, 81920 MiB, 0 %
+pid, gpu_uuid, process_name, used_gpu_memory [MiB]
+USER         PID %CPU %MEM COMMAND
+s202531+ 2955048  305  0.0 python
+root     3071739 27.1  0.0 weaviate
+root      498255 13.3  0.0 paracloud-agent
+root      733456 10.0  0.0 influxd
+root     2956346  1.0  0.0 slurmstepd
+root      733325  0.9  0.0 paracloud-ng
+root        2812  0.6  0.0 containerd
+root     2625390  0.6  0.1 MainThread
+root        2855  0.4  0.0 dockerd
+root     2895769  0.4  0.0 kworker/u513:3-events_unbound
+root         931  0.3  0.0 kcompactd0
+root         932  0.3  0.0 kcompactd1
+root     2622603  0.3  0.0 MainThread
+root     2622681  0.2  0.0 MainThread
+root     2622760  0.2  0.0 MainThread
+root        2412  0.1  0.0 nvswi0
+root        2676  0.1  0.0 NetworkManager
+avahi       2677  0.1  0.0 avahi-daemon
+root        2680  0.1  0.0 irqbalance
+               total        used        free      shared  buff/cache   available
+Mem:         1031337       57161      419178        4158      568218      974176
+Swap:          32767        1029       31738
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/md0        7.0T  5.1T  2.0T  72% /share
+/share/home/s2026316084/yxt_pmr_v4_20261009/pmr_v4_source_e66bdd3.tar.gz: OK
+job=615 host=gpu01 visible_gpu=0 source=/share/home/s2026316084/yxt_pmr_v4_20261009/source_e66bdd3
+command=bash scripts/retest_v4.sh /share/home/s2026316084/yxt_pmr_20261002
+output=/share/home/s2026316084/yxt_pmr_v4_20261009/source_e66bdd3/runs/state_memory_v4_20261009T061757Z_615
+log=/share/home/s2026316084/yxt_pmr_v4_20261009/source_e66bdd3/runs/state_memory_v4_20261009T061757Z_615.log
+python=/share/home/s2026316084/yxt_pmr_20261002/source_852f57d/.venv/bin/python
+environment=Python 3.11 / PyTorch 2.9.1+cu128 image; old project venv
+gpu_count=1 cpus=4 container_memory=40g experiment_budget=3600s scheduler_limit=01:05:00
+WARNING: Error loading config file: open /share/home/s2026316084/.docker/config.json: permission denied
+yxt-pmr-retest-v4-615

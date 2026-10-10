@@ -1,0 +1,94 @@
+{
+  "hostname": "gpu01",
+  "timestamp": 1791532802,
+  "cpu_percent": 0.03216934029039662,
+  "memory_MB": [
+    66464,
+    1031337
+  ],
+  "storage": [
+    {
+      "Path": "/",
+      "Total": 921623465984,
+      "Free": 630318739456,
+      "Used": 291304726528,
+      "UsedPercent": 31.60778097343468,
+      "Device": "/dev/sda4"
+    },
+    {
+      "Path": "/boot",
+      "Total": 2080374784,
+      "Free": 1712730112,
+      "Used": 367644672,
+      "UsedPercent": 17.67204038558468,
+      "Device": "/dev/sda2"
+    },
+    {
+      "Path": "/boot/efi",
+      "Total": 1071624192,
+      "Free": 1064239104,
+      "Used": 7385088,
+      "UsedPercent": 0.6891490557167265,
+      "Device": "/dev/sda1"
+    },
+    {
+      "Path": "/share",
+      "Total": 7679093243904,
+      "Free": 1986229108736,
+      "Used": 5692864135168,
+      "UsedPercent": 74.13458795655652,
+      "Device": "/dev/md0"
+    }
+  ],
+  "gpus": [
+    {
+      "index": 0,
+      "uuid": "174ae482-12b7-8b2c-0582-4921ad4803af",
+      "used_MB": 4,
+      "utilization": 0
+    },
+    {
+      "index": 1,
+      "uuid": "d6254d1c-dad0-94cd-cc98-974a9c0c814b",
+      "used_MB": 5,
+      "utilization": 0
+    },
+    {
+      "index": 2,
+      "uuid": "ab3068b0-a54d-b48b-bbc9-3f81ef356e60",
+      "used_MB": 5,
+      "utilization": 0
+    },
+    {
+      "index": 3,
+      "uuid": "f7ca5eb5-9ba0-f1af-986c-a8ba3f2226bd",
+      "used_MB": 5,
+      "utilization": 0
+    },
+    {
+      "index": 4,
+      "uuid": "2e04d521-2c6d-ca03-2afb-2f1a9bd6fa53",
+      "used_MB": 55314,
+      "utilization": 1
+    },
+    {
+      "index": 5,
+      "uuid": "88025d14-1ffe-9863-fcb1-9fa41ebc0a91",
+      "used_MB": 34098,
+      "utilization": 1
+    },
+    {
+      "index": 6,
+      "uuid": "4fd11e10-6ef5-dd51-fa9c-4bb55aae271a",
+      "used_MB": 45362,
+      "utilization": 1
+    },
+    {
+      "index": 7,
+      "uuid": "32c672f7-2f13-c310-d023-06d0e6ba289c",
+      "used_MB": 4,
+      "utilization": 0
+    }
+  ],
+  "our_processes": []
+}

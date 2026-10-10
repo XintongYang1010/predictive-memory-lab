@@ -1,0 +1,70 @@
+{
+  "status": "complete",
+  "smoke_only": false,
+  "schema": 1,
+  "completed_models": [
+    {
+      "model": "window",
+      "seed": 42
+    },
+    {
+      "model": "retrieval",
+      "seed": 42
+    },
+    {
+      "model": "gru",
+      "seed": 42
+    },
+    {
+      "model": "slot",
+      "seed": 42
+    },
+    {
+      "model": "analytic",
+      "seed": 42
+    },
+    {
+      "model": "window",
+      "seed": 43
+    },
+    {
+      "model": "retrieval",
+      "seed": 43
+    },
+    {
+      "model": "gru",
+      "seed": 43
+    },
+    {
+      "model": "slot",
+      "seed": 43
+    },
+    {
+      "model": "analytic",
+      "seed": 43
+    },
+    {
+      "model": "window",
+      "seed": 44
+    },
+    {
+      "model": "retrieval",
+      "seed": 44
+    },
+    {
+      "model": "gru",
+      "seed": 44
+    },
+    {
+      "model": "slot",
+      "seed": 44
+    },
+    {
+      "model": "analytic",
+      "seed": 44
+    }
+  ],
+  "expected_models": 15,
+  "seconds": 850.784360775724,
+  "peak_cuda_bytes": 103454720
+}

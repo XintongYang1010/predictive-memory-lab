@@ -1,0 +1,101 @@
+{
+  "archive_sha256": "21541e4d6a09750edc2af3b5c8ae8bcc6a902d3e39adbfd6a8b2d7c800bc1beb",
+  "verified_files": 252,
+  "source_files_match": 37,
+  "completed_models": 15,
+  "result_groups": 270,
+  "episode_records": 138240,
+  "learning_models_reached_1500_steps": 12,
+  "checkpoint_files": 12,
+  "primary_comparisons": [
+    {
+      "reference": "gru",
+      "model": "slot",
+      "seed": 42,
+      "length": 48,
+      "condition": "clean",
+      "primary": true,
+      "metric": "hidden_position_rmse",
+      "gain_definition": "reference_minus_candidate",
+      "episodes": 512,
+      "paired_episodes": 512,
+      "excluded_episodes": 0,
+      "mean_gain": 0.5211623535419296,
+      "ci95": [
+        0.49809314139166466,
+        0.5423483566567494
+      ],
+      "bootstrap_draws": 1000,
+      "bootstrap_seed": 0
+    },
+    {
+      "reference": "gru",
+      "model": "slot",
+      "seed": 43,
+      "length": 48,
+      "condition": "clean",
+      "primary": true,
+      "metric": "hidden_position_rmse",
+      "gain_definition": "reference_minus_candidate",
+      "episodes": 512,
+      "paired_episodes": 512,
+      "excluded_episodes": 0,
+      "mean_gain": 0.47547267079039063,
+      "ci95": [
+        0.45047069195484424,
+        0.49898547207293686
+      ],
+      "bootstrap_draws": 1000,
+      "bootstrap_seed": 0
+    },
+    {
+      "reference": "gru",
+      "model": "slot",
+      "seed": 44,
+      "length": 48,
+      "condition": "clean",
+      "primary": true,
+      "metric": "hidden_position_rmse",
+      "gain_definition": "reference_minus_candidate",
+      "episodes": 512,
+      "paired_episodes": 512,
+      "excluded_episodes": 0,
+      "mean_gain": 0.4213073772535695,
+      "ci95": [
+        0.39785963949312037,
+        0.444411051924089
+      ],
+      "bootstrap_draws": 1000,
+      "bootstrap_seed": 0
+    }
+  ],
+  "primary_ci_recomputed_from_episodes": [
+    {
+      "seed": 42,
+      "paired_episodes": 512,
+      "mean_gain": 0.5211623535419296,
+      "ci95": [
+        0.49809314139166466,
+        0.5423483566567494
+      ]
+    },
+    {
+      "seed": 43,
+      "paired_episodes": 512,
+      "mean_gain": 0.47547267079039063,
+      "ci95": [
+        0.45047069195484424,
+        0.49898547207293686
+      ]
+    },
+    {
+      "seed": 44,
+      "paired_episodes": 512,
+      "mean_gain": 0.4213073772535695,
+      "ci95": [
+        0.39785963949312037,
+        0.444411051924089
+      ]
+    }
+  ]
+}
