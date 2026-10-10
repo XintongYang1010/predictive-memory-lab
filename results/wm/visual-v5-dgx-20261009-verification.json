@@ -1,0 +1,92 @@
+{
+  "result_commit": "d4b6fc622d0fe08e28605aaf6e48100201ab2008",
+  "git_archive_sha256": "acf24996c9062d52aa701952377ab3d926522b59856904dff90fad9bc958ced7",
+  "archive_manifest_sha256": "0dbd70ec67f599603225778e5f13662a1865f2fd5c75bb3ffc40a0955f50a932",
+  "verification": {
+    "verified": true,
+    "experiment_status": "partial",
+    "files": 160,
+    "checkpoints": 0
+  },
+  "remote_inventory_reconciliation": {
+    "status": "verified_partial_evidence",
+    "science_status": "partial_feature_gate_failed",
+    "source_commit": "d0b4fef25e98eefb58bfba737997cb0145f27daa",
+    "source_files_verified": 16,
+    "remote_run_files": 301,
+    "downloaded_run_files_verified": 44,
+    "omitted_feature_tensors": {
+      "files": 256,
+      "bytes": 655082496,
+      "reason": "Reproducible caches omitted under handoff policy; all original SHA256/size entries retained and matched against remote inventory."
+    },
+    "omitted_transient_files": [
+      "run1/active.lock"
+    ],
+    "probe_episodes": {
+      "train": 128,
+      "dev": 128,
+      "test": 0
+    },
+    "workers_verified": 8,
+    "diagnostic_matches_recorded_gate": true,
+    "cumulative_selected_gpu_hours": 0.39161167637833216,
+    "main_checkpoints": 0,
+    "checkpoint_reason": "P0/adaptation/replay were not started after failed prerequisite.",
+    "slurm_terminal": {
+      "profile": {
+        "JobID": "415453.14",
+        "JobName": "v5_profile",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "Elapsed": "00:00:32",
+        "AllocTRES": "cpu=4,gres/gpu=8,mem=0,node=1"
+      },
+      "features": {
+        "JobID": "415453.15",
+        "JobName": "v5_features",
+        "State": "FAILED",
+        "ExitCode": "1:0",
+        "Elapsed": "00:03:00",
+        "AllocTRES": "cpu=32,gres/gpu=8,mem=0,node=1"
+      }
+    },
+    "existing_indexmem_status": {
+      "JobID": "415453.5",
+      "JobName": "python",
+      "State": "RUNNING",
+      "ExitCode": "0:0",
+      "Elapsed": "1-05:04:53",
+      "AllocTRES": "cpu=64,gres/gpu=8,mem=0,node=1"
+    },
+    "remote_cleanup": {
+      "performed": false,
+      "reason": "Experiment incomplete; retain scene as requested."
+    },
+    "verification_scope": "Local artifact and remote-inventory reconciliation. Separate immutable GitHub readback is required and recorded outside this self-hashed archive."
+  },
+  "readback_method": "Downloaded immutable GitHub tarball via authenticated gh api; verified all files with downloaded helper; reran independent partial-evidence audit; verified archive again.",
+  "verification_timestamp_unix": 1791595886.999747,
+  "repository": "XintongYang1010/predictive-memory-lab",
+  "repository_private": true,
+  "results_branch": "results/visual-v5-dgx-20261009",
+  "result_url": "https://github.com/XintongYang1010/predictive-memory-lab/tree/d4b6fc622d0fe08e28605aaf6e48100201ab2008/results/wm/visual-v5-dgx-20261009",
+  "automation_status": "PAUSED",
+  "retention_verification": {
+    "checked_unix": 1791595851.2624133,
+    "root_exists": true,
+    "resolved_path": "/aifs4su/guhao/KVCache/WM",
+    "device": 2345267470,
+    "inode": 144115727966677964,
+    "owner_uid": 1046,
+    "creation_record_matches": true,
+    "controller_pid_present": false,
+    "active_steps": [
+      "415453.batch",
+      "415453.5"
+    ],
+    "indexmem_step_state": "RUNNING",
+    "cleanup_performed": false,
+    "reason": "Feature prerequisite failed; planned training incomplete. Preserve full remote scene under handoff instructions."
+  }
+}
