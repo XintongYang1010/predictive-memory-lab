@@ -1,0 +1,284 @@
+{
+  "status": "verified",
+  "posthoc": true,
+  "selection_rule": "Rank the 512 already evaluated Dev640..895 episodes by W concat mean squared error over A_dx and B_dx, descending; ties: smaller pair ID, then variant. Select the first three episodes; no distinct-pair constraint.",
+  "selected": [
+    {
+      "rank": 1,
+      "pair_id": 844,
+      "variant": 1,
+      "episode_id": "dev-000844-1",
+      "W_dx_mse": 0.0009061914747088423,
+      "N_dx_mse": 0.0005388071217402347,
+      "cue_reflection": false,
+      "reflection_axes": "A:none, B:none",
+      "boundary_tie_count": 0,
+      "yellow_pixel_dx": -45,
+      "A_true_dx": -0.014635034836828709,
+      "A_true_direction": "L",
+      "A_N_dx": 0.008201023803977255,
+      "A_N_direction": "R",
+      "A_W_dx": 0.00762267959443341,
+      "A_W_direction": "R",
+      "B_true_dx": -0.016471778973937035,
+      "B_true_direction": "L",
+      "B_N_dx": 0.007110601508833162,
+      "B_N_direction": "R",
+      "B_W_dx": 0.019818400106829025,
+      "B_W_direction": "R"
+    },
+    {
+      "rank": 2,
+      "pair_id": 761,
+      "variant": 1,
+      "episode_id": "dev-000761-1",
+      "W_dx_mse": 0.0006839508445257571,
+      "N_dx_mse": 0.00033942630236765607,
+      "cue_reflection": false,
+      "reflection_axes": "A:none, B:none",
+      "boundary_tie_count": 0,
+      "yellow_pixel_dx": -163,
+      "A_true_dx": 0.017145724967122078,
+      "A_true_direction": "R",
+      "A_N_dx": -0.0008646245761430521,
+      "A_N_direction": "L",
+      "A_W_dx": -0.0084036966746488,
+      "A_W_direction": "L",
+      "B_true_dx": 0.00943234283477068,
+      "B_true_direction": "R",
+      "B_N_dx": -0.00939529414029132,
+      "B_N_direction": "L",
+      "B_W_dx": -0.01730954832540204,
+      "B_W_direction": "L"
+    },
+    {
+      "rank": 3,
+      "pair_id": 891,
+      "variant": 1,
+      "episode_id": "dev-000891-1",
+      "W_dx_mse": 0.0005650815160397822,
+      "N_dx_mse": 0.00014004895387695722,
+      "cue_reflection": false,
+      "reflection_axes": "A:none, B:none",
+      "boundary_tie_count": 0,
+      "yellow_pixel_dx": 64,
+      "A_true_dx": -0.016878092661499977,
+      "A_true_direction": "L",
+      "A_N_dx": -0.010675463154129254,
+      "A_N_direction": "L",
+      "A_W_dx": -0.009716328344401977,
+      "A_W_direction": "L",
+      "B_true_dx": 0.014948084019124508,
+      "B_true_direction": "R",
+      "B_N_dx": -0.0005962170249304627,
+      "B_N_direction": "L",
+      "B_W_dx": -0.017898105469854368,
+      "B_W_direction": "L"
+    }
+  ],
+  "rgb_checks": [
+    {
+      "rank": 1,
+      "pair_id": 844,
+      "variant": 1,
+      "time": 6,
+      "expected": {
+        "sha256": "6896f5cf580cf81d2c12118a579e52a156ca57059c21e5f5483cc4e830a7d7ba",
+        "dtype": "uint8",
+        "shape": [
+          224,
+          224,
+          3
+        ]
+      },
+      "actual": {
+        "sha256": "6896f5cf580cf81d2c12118a579e52a156ca57059c21e5f5483cc4e830a7d7ba",
+        "dtype": "uint8",
+        "shape": [
+          224,
+          224,
+          3
+        ]
+      },
+      "exact": true
+    },
+    {
+      "rank": 1,
+      "pair_id": 844,
+      "variant": 1,
+      "time": 7,
+      "expected": {
+        "sha256": "a076815b0ceac286476f62a492fd89c6a782ec8f819ca334875e49866097464d",
+        "dtype": "uint8",
+        "shape": [
+          224,
+          224,
+          3
+        ]
+      },
+      "actual": {
+        "sha256": "a076815b0ceac286476f62a492fd89c6a782ec8f819ca334875e49866097464d",
+        "dtype": "uint8",
+        "shape": [
+          224,
+          224,
+          3
+        ]
+      },
+      "exact": true
+    },
+    {
+      "rank": 2,
+      "pair_id": 761,
+      "variant": 1,
+      "time": 6,
+      "expected": {
+        "sha256": "8e531abf1b7e93608f818e438d822b55d159c800ab339f5995aee18678da0d6b",
+        "dtype": "uint8",
+        "shape": [
+          224,
+          224,
+          3
+        ]
+      },
+      "actual": {
+        "sha256": "8e531abf1b7e93608f818e438d822b55d159c800ab339f5995aee18678da0d6b",
+        "dtype": "uint8",
+        "shape": [
+          224,
+          224,
+          3
+        ]
+      },
+      "exact": true
+    },
+    {
+      "rank": 2,
+      "pair_id": 761,
+      "variant": 1,
+      "time": 7,
+      "expected": {
+        "sha256": "4f251959e7f53a4997f0e97271cc1e0e07e957b8f9ef0d754644cdc88a630cff",
+        "dtype": "uint8",
+        "shape": [
+          224,
+          224,
+          3
+        ]
+      },
+      "actual": {
+        "sha256": "4f251959e7f53a4997f0e97271cc1e0e07e957b8f9ef0d754644cdc88a630cff",
+        "dtype": "uint8",
+        "shape": [
+          224,
+          224,
+          3
+        ]
+      },
+      "exact": true
+    },
+    {
+      "rank": 3,
+      "pair_id": 891,
+      "variant": 1,
+      "time": 6,
+      "expected": {
+        "sha256": "2cb982c696d74b691abcab5d38a8f3440505815ae32305edfd9628657f0a0eb6",
+        "dtype": "uint8",
+        "shape": [
+          224,
+          224,
+          3
+        ]
+      },
+      "actual": {
+        "sha256": "2cb982c696d74b691abcab5d38a8f3440505815ae32305edfd9628657f0a0eb6",
+        "dtype": "uint8",
+        "shape": [
+          224,
+          224,
+          3
+        ]
+      },
+      "exact": true
+    },
+    {
+      "rank": 3,
+      "pair_id": 891,
+      "variant": 1,
+      "time": 7,
+      "expected": {
+        "sha256": "ae54610372dfd95e5b16442969d44b6ea83283bc72a029878f1ca641138b0f9e",
+        "dtype": "uint8",
+        "shape": [
+          224,
+          224,
+          3
+        ]
+      },
+      "actual": {
+        "sha256": "ae54610372dfd95e5b16442969d44b6ea83283bc72a029878f1ca641138b0f9e",
+        "dtype": "uint8",
+        "shape": [
+          224,
+          224,
+          3
+        ]
+      },
+      "exact": true
+    }
+  ],
+  "labels_exact": true,
+  "original_generator": {
+    "path": "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/pmr/visual_memory/data.py",
+    "sha256": "ce5082f3be9006dcceb46fbaffadc27349f977a77abcf8992eda3e80f8775368"
+  },
+  "helper_sha256": "c7ab771868eeee0097671de1b8062c48efe935eea9b84a784588a69e097cfd50",
+  "source_commit": "3279bbe49f8db5ec1bd4b2f5c343db1ce9e5684b",
+  "runtime": {
+    "python": "3.9.6 (default, Dec  2 2025, 07:27:58) \n[Clang 17.0.0 (clang-1700.6.3.2)]",
+    "numpy": "2.0.2",
+    "pillow": "11.3.0",
+    "platform": "macOS-15.7.3-arm64-arm-64bit"
+  },
+  "snapshot_verification": {
+    "path": "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/report-snapshot-verification.json",
+    "sha256": "d4a35330fad2f35e614a61eca70f25683a59a10f54fd0a3b0ba2e0b21cf28930"
+  },
+  "input_files": {
+    "bridge_report/report.json": {
+      "bytes": 13113,
+      "sha256": "471fc4101f38e96e5d763bb1103c514527486715951a7a9c6a00dee8aa00a893"
+    },
+    "bridge_cache/receipt.json": {
+      "bytes": 14373,
+      "sha256": "f7de7a8d964e79bc9850776aa60c861b9b6e7f32f649d9566d4105270c9d9f7e"
+    },
+    "bridge_report/predictions.npz": {
+      "bytes": 77115,
+      "sha256": "52f69d65e5f609f14d5f0d7f7610d4edb1a4c313eae0ade1247db001274a9ba0"
+    },
+    "bridge_cache/shards/000844.json": {
+      "bytes": 2529,
+      "sha256": "3229eed8ed50e01191c4aade24dd4bc9dbf24327f41aa7d6baea0678187d1b56"
+    },
+    "bridge_cache/shards/000761.json": {
+      "bytes": 2511,
+      "sha256": "9b64888aee646b08f274067b0929e4f6be438c8bc94ab83ca220658c3cdd91ec"
+    },
+    "bridge_cache/shards/000891.json": {
+      "bytes": 2511,
+      "sha256": "958d966f77294ccb8b60fc5c65dddbb39b5b4f9e469f46e18e64f48ed2dd4cd3"
+    }
+  },
+  "scientific_source_changed": false,
+  "test_opened": false,
+  "new_scientific_samples": false,
+  "contact_sheet_sha256": "1678bb8df42f939ecdc7e1f1f99a358aed99dee99016b08140bd1ed3e2f96d91",
+  "visual_review": {
+    "status": "view_image_checked",
+    "contact_sheet_sha256": "1678bb8df42f939ecdc7e1f1f99a358aed99dee99016b08140bd1ed3e2f96d91",
+    "corrections_required": false,
+    "notes": "All three rows and six cues are readable; true/N/W dx and directions match CSV; no RGB editing, crop or misleading image annotation."
+  }
+}

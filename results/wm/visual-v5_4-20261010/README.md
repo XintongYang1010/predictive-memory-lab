@@ -109,6 +109,10 @@ p7 使用缓存 FP32 标签转 FP64，p6=p7−d；按预注册窄域量化外包
   --out /path/to/new-analysis-directory
 ```
 
+逐坐标预注册分组显示覆盖取舍：A_dx域外MSE由2.0862e-4降至1.7522e-4（70世界），域内由9.6844e-5升至1.1627e-4（186世界）；B_dx域外1.4026e-4降至1.1570e-4（65世界），域内8.3189e-5升至1.0072e-4（191世界）。这些是描述性分组点估计，无分组显著性结论。本次固定256世界的扩域未确认总体水平收益，不能据此否定所有覆盖方案。网页端复核见 [完整讨论](web_result_review.md)。
+
+按W水平误差排序的三个事后坏例与实际输入RGB哈希复核见 [逐例图像](bad_cases/README.md)；这是选择的坏例，不代表总体或因果结论。
+
 完整冻结的两组 reader、共同特征基底和原始 FIT 收据见 [V5.4 FIT Release](https://github.com/XintongYang1010/predictive-memory-lab/releases/tag/visual-v5_4-fit-20261010)。
 
 只读CPU复核显示N/W自身FIT运动分数为0.999493/0.999508，训练方向错误均为0，而fresh bridge仅0.353835/0.433999。全部65536个训练预测另经KRR正规方程核验，最大偏差1.73e-12；详见 [训练与新样本的差距](training_generalization/README.md)。这是事后诊断，不能单独定位编码器、池化、正则化或数据密度的原因。
