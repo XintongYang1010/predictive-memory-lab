@@ -1,0 +1,47 @@
+{
+  "verified_readback": true,
+  "frozen_reader_sha256": "49dbfd9d70729b3ecbce1227873682a960f27745cd113ca8f133b49868e16e95",
+  "source_commit": "875be45515276cc8559ffcdb21c7412c6048d5ad",
+  "plan_sha256": "674962273628ffed67380d6b0ab563dd03652908e4a44d780f5156fc688e8576",
+  "verified_unix": 1791647578.041943,
+  "freeze_commit": "4f59b2ec40b9393fb0a5833e404e8cdcc287b340",
+  "release_url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/tag/visual-v5_3-fit-20261010",
+  "asset_id": 628353239,
+  "asset_sha256": "2d7e9a310b4a2b7abb3279c984afbf3bcdd736d4d4f444d46fbea0f3f5c5c417",
+  "asset_bytes": 62651536,
+  "all_model_and_receipt_files_downloaded_and_verified": true,
+  "files": {
+    "reader/frozen_model.npz": {
+      "bytes": 127337484,
+      "sha256": "fb9b0e92e3126f4402ca212d115b9874d4ce0494b100ea25e6ca1746512faf5c"
+    },
+    "reader/freeze_receipt.json": {
+      "bytes": 14198,
+      "sha256": "49dbfd9d70729b3ecbce1227873682a960f27745cd113ca8f133b49868e16e95"
+    },
+    "reader/training_config.json": {
+      "bytes": 1135,
+      "sha256": "bfb9acf577f8f4316a4c3858b304efeecf336bedaa63a4a6559bd0f7accd1a4f"
+    },
+    "fit_cache/receipt.json": {
+      "bytes": 12941,
+      "sha256": "18f52d9e6ecca5be3872a916d87dfcc67b789ff2062e84a9c9cab84aa51e17e6"
+    },
+    "source_manifest.json": {
+      "bytes": 12378,
+      "sha256": "51eb22f8882048406cb915e10a061f00686069bcb75d3d76cea28536822820ff"
+    },
+    "registration_publication.json": {
+      "bytes": 25641,
+      "sha256": "7e9570c8f635b89019ca7a7edc6f390baefcb122646c77aed7b70642b0976266"
+    },
+    "freshness_audit.json": {
+      "bytes": 4712,
+      "sha256": "720218002caccdd0fcb3c497d1d767a06a50442b2edcc24f3e4339f6c65851a1"
+    },
+    "fit_controller.json": {
+      "bytes": 4224,
+      "sha256": "b4f131470d0502b2c3a2207cc449193cc0a9fa8d7e2ce09003b504b5a6f03ae3"
+    }
+  }
+}
