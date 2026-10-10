@@ -1,0 +1,113 @@
+{
+  "schema": "v5.1-posthoc-report-1",
+  "conclusion_zh": "时间确认报告通过，但原分布桥接门槛未通过；尚无进入P0的依据。",
+  "scientific_gate_mutated": false,
+  "p0_authorized_by_this_renderer": false,
+  "original_v5_gate": "failed_unchanged",
+  "source_commit": "0e50f6aadbdcec9c9b787208362d9dde9b6360dd",
+  "confirmation_present": true,
+  "bridge_present": true,
+  "confirmation_report_passed": true,
+  "bridge_report_passed": false,
+  "controllers": {
+    "confirm_controller.json": {
+      "action": "confirm",
+      "status": "scientific_prerequisite_failed",
+      "failed_role": "bridge",
+      "reason": null
+    },
+    "fit_controller.json": {
+      "action": "fit",
+      "status": "awaiting_freeze_publication",
+      "failed_role": null,
+      "reason": null
+    }
+  },
+  "cumulative_charged_gpuh": 1.7294136471218544,
+  "stage_charged_gpuh": {
+    "profile": 0.008888888888888889,
+    "features": 0.4,
+    "temporal_fit": 0.45001224835713705,
+    "temporal_confirm": 0.4278377988603379,
+    "temporal_bridge": 0.44267471101548933
+  },
+  "active_budget_leases": [],
+  "active_controller_envelopes": [],
+  "freeze_publication_record": {
+    "verified_readback": true,
+    "github_commit": "03c1b8bc650c7347d0e7b532db22bf4a720d8b66",
+    "source_commit": "0e50f6aadbdcec9c9b787208362d9dde9b6360dd",
+    "freeze_sha256": "27ae0593f90c2728529f607b09893780d75badbf54261198b3e6f4a3f7b4596a",
+    "files": {
+      "results/wm/visual-v5_1-20261010/freeze/fit_controller.json": "f97da69876aae2b7e3c336212f6b4ebb3d3f3892ce8a239d3d1861625e92b9b0",
+      "results/wm/visual-v5_1-20261010/freeze/source_manifest.json": "825c4c69e2f97ab7dea9783baca501220b0ff3fa2847b8e26e6635abb3a0714f",
+      "results/wm/visual-v5_1-20261010/freeze/README.md": "6aa998dc3ba2981fa7f1a2a0fcd1a529fdf13e63e8149b6a1faaaa6149dcdeb2",
+      "results/wm/visual-v5_1-20261010/freeze/creation.json": "17d32ac1d4be322be0741985829e9e71163a5f9ccf0fc4bf4d1e61cdfb50d6ab",
+      "results/wm/visual-v5_1-20261010/freeze/freshness_audit.json": "0ac68b3c94e2da88df129c462f2de9cf74027ce53031e0dcf81436df0c4864dc",
+      "results/wm/visual-v5_1-20261010/freeze/reader/train_selection.json": "642dc9d9d3fa72cf5aa34268e0a81c9f7a8ca753c47debec62adfb74dcf16f3b",
+      "results/wm/visual-v5_1-20261010/freeze/reader/freeze_receipt.json": "27ae0593f90c2728529f607b09893780d75badbf54261198b3e6f4a3f7b4596a",
+      "results/wm/visual-v5_1-20261010/freeze/ledger/budget.json": "6657865eabb5c0c59949c92a4f91c711857ec7bba94bd4a0dc737c117171cde8",
+      "results/wm/visual-v5_1-20261010/freeze/fit_cache/receipt.json": "d16d0db84ee8577fbfd4d14191f956de98251e3bbc47af87890288abbc650179"
+    },
+    "verified_unix": 1791601497.902783,
+    "url": "https://github.com/XintongYang1010/predictive-memory-lab/tree/03c1b8bc650c7347d0e7b532db22bf4a720d8b66/results/wm/visual-v5_1-20261010/freeze"
+  },
+  "downstream_report_status": null,
+  "jobs": [
+    {
+      "stage": "temporal_confirm",
+      "slurm_step": "415453.20",
+      "allocation_job": "415453",
+      "selected_gpus": 8,
+      "status": "complete",
+      "returncode": 0,
+      "controller": "confirm_controller.json"
+    },
+    {
+      "stage": "reader_confirm",
+      "slurm_step": "415453.21",
+      "allocation_job": "415453",
+      "selected_gpus": 0,
+      "status": "complete",
+      "returncode": 0,
+      "controller": "confirm_controller.json"
+    },
+    {
+      "stage": "temporal_bridge",
+      "slurm_step": "415453.22",
+      "allocation_job": "415453",
+      "selected_gpus": 8,
+      "status": "complete",
+      "returncode": 0,
+      "controller": "confirm_controller.json"
+    },
+    {
+      "stage": "reader_bridge",
+      "slurm_step": "415453.23",
+      "allocation_job": "415453",
+      "selected_gpus": 0,
+      "status": "complete",
+      "returncode": 0,
+      "controller": "confirm_controller.json"
+    },
+    {
+      "stage": "temporal_fit",
+      "slurm_step": "415453.18",
+      "allocation_job": "415453",
+      "selected_gpus": 8,
+      "status": "complete",
+      "returncode": 0,
+      "controller": "fit_controller.json"
+    },
+    {
+      "stage": "reader_fit",
+      "slurm_step": "415453.19",
+      "allocation_job": "415453",
+      "selected_gpus": 0,
+      "status": "complete",
+      "returncode": 0,
+      "controller": "fit_controller.json"
+    }
+  ],
+  "verification_scope": "Serialized report/count/flag and prediction/cache-receipt hashes; not a new scientific re-fit or gate authorization"
+}

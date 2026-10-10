@@ -1,0 +1,65 @@
+{
+  "concat": {
+    "checks": {
+      "all_four_motion_coordinate_skills_positive": false,
+      "motion_mean_lower_bound_positive": false,
+      "position_skill_over_point_one": true
+    },
+    "metric_conditions_met": false,
+    "motion_mean_lower_bound": -1.6831536637932238,
+    "motion_skill": -1.5385232451567052,
+    "per_dimension_skill": [
+      0.957825715466213,
+      0.9178239108443299,
+      0.9604031653839973,
+      0.9333624686929698,
+      -2.76788398041368,
+      -0.14783482369041168,
+      -3.3580240738976457,
+      0.11964989737491616
+    ],
+    "position_skill": 0.9423538150968775
+  },
+  "t6": {
+    "checks": {
+      "all_four_motion_coordinate_skills_positive": false,
+      "motion_mean_lower_bound_positive": false,
+      "position_skill_over_point_one": true
+    },
+    "metric_conditions_met": false,
+    "motion_mean_lower_bound": -0.13247153646996157,
+    "motion_skill": -0.12146048526726727,
+    "per_dimension_skill": [
+      0.8776301350846993,
+      0.763591612110196,
+      0.864842519555648,
+      0.7467198046757455,
+      -0.04576113994141173,
+      -0.2444001043842996,
+      -0.04629985112537094,
+      -0.1493808456179868
+    ],
+    "position_skill": 0.8131960178565723
+  },
+  "t7": {
+    "checks": {
+      "all_four_motion_coordinate_skills_positive": true,
+      "motion_mean_lower_bound_positive": true,
+      "position_skill_over_point_one": true
+    },
+    "metric_conditions_met": true,
+    "motion_mean_lower_bound": 0.09122629232883873,
+    "motion_skill": 0.100680813665384,
+    "per_dimension_skill": [
+      0.871369701306476,
+      0.7969998377378076,
+      0.8642534003317418,
+      0.7909493166675592,
+      0.036300269248027206,
+      0.19507138684306202,
+      0.05107313692442028,
+      0.12027846164602651
+    ],
+    "position_skill": 0.8308930640108961
+  }
+}

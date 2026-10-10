@@ -1,0 +1,10 @@
+{
+  "tests": 104,
+  "all_passed": true,
+  "command": "/Library/Developer/CommandLineTools/usr/bin/python3 -m unittest discover -s tests/visual_memory",
+  "scientific_source": "0e50f6aadbdcec9c9b787208362d9dde9b6360dd",
+  "controller_test_commit": "8107f83d575d79844aecd5225cbe0599ed7523a5",
+  "independent_replay": "independent_recompute/audit.json",
+  "posthoc_label_and_metric_verification": "diagnostics/verification.json",
+  "limitations": "CPU tests and numerical replay do not establish memory architecture performance; downstream and Test were not run."
+}

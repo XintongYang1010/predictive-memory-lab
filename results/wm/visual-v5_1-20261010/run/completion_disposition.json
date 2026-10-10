@@ -1,0 +1,10 @@
+{
+  "status": "scientific_prerequisite_failed",
+  "failed_role": "bridge",
+  "confirmation_passed": true,
+  "bridge_passed": false,
+  "downstream_started": false,
+  "test_opened": false,
+  "cleanup": "retain_failed_scene_per_user_instruction",
+  "recorded_unix": 1791603244.166495
+}

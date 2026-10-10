@@ -1,0 +1,1 @@
+StepId=415453.5 UserId=1046 StartTime=2026-10-09T04:20:16 TimeLimit=4-00:00:00 State=RUNNING Partition=llm NodeList=dgx-097 Nodes=1 CPUs=64 Tasks=8 Name=python Network=(null) TRES=cpu=64,gres/gpu=8,mem=0,node=1 ResvPorts=(null) CPUFreqReq=Default Dist=Block SrunHost:Pid=dgx-127:3499575 TresBind=gpu:single:1 TresPerStep=cpu:64 TresPerNode=gres:gpu:8 TresPerTask=cpu:8,gres:gpu:1

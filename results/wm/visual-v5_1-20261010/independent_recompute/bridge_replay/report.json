@@ -1,0 +1,148 @@
+{
+  "cache_identity": {
+    "encoder_identity": {
+      "checkpoint_sha256": "0382013c481743e9ccea89f970bc6c6aa126aa19a62127500d6e672a641aae22",
+      "model": "official I-JEPA ViT-H/14 target_encoder",
+      "source_commit": "52c1ae95d05f743e000e8f10a1f3a79b10cff048"
+    },
+    "feature_dtype": "float32",
+    "plan_sha256": "b2bd8f17c4abad23b2f2600b3dce572f8d1ec53b9500f129aff718b4aaacf711",
+    "pooling": "4x4_flattened",
+    "source_commit": "0e50f6aadbdcec9c9b787208362d9dde9b6360dd",
+    "source_identity": {
+      "docs/V5_1_EXECUTION_PROTOCOL.md": "0c243bcf0bba066ac9a60d57c3836f5200e29bcac0311eb7656c9fb283f50126",
+      "pmr/visual_memory/__init__.py": "5334f491766718f980788f117910c30e2b4d804bee37b69bd26438db575f0027",
+      "pmr/visual_memory/__main__.py": "bb4c496ca7009b617ff20badb661237d7e0afc35ec34972af15c61c42faa49b5",
+      "pmr/visual_memory/bind_gpu.py": "cab3427dddd890e1437393dc40cdb2381c623d177b32054f4bdd4c1f674fef45",
+      "pmr/visual_memory/common.py": "6b89bfca6f38aea698449edd7ece7da3baa14e16b97b805b6368d59853f5b4ac",
+      "pmr/visual_memory/data.py": "ce5082f3be9006dcceb46fbaffadc27349f977a77abcf8992eda3e80f8775368",
+      "pmr/visual_memory/feature_workers.py": "9334ce554d5d910d3f651e7d7d555ef23c629762b0f391f8b0e318d4c8fb1cc1",
+      "pmr/visual_memory/features.py": "5324748c4c2ef0cd82329d97c73a6cf8a21562501039ba31bd67dbc0efe29f93",
+      "pmr/visual_memory/memory.py": "779a3fa3ffd9a5e4b1b52111ae37ebb35292f61e2a4a4973cadffa61e6ec4b7b",
+      "pmr/visual_memory/predictor.py": "11b481b74fb50ad069c42335611677ab3dc20c0cc7dc8eef9e74b4472fb14d38",
+      "pmr/visual_memory/profiling.py": "a99b14df2651f4f32d5f242f28a877c47f83c6b5a8d425d31a891fa79c2c12fe",
+      "pmr/visual_memory/report.py": "fa8b54a0f1f840da0acf1cab11b23f24d6bbead8f214c4a1a6b4634cbbed225d",
+      "pmr/visual_memory/slurm_backend.py": "6b622a7f895adeaf1fd6dd84031639765ca9ce7c2e445ceba5d989f6a2c6fbbe",
+      "pmr/visual_memory/train.py": "59b8420c95625a08b324e93a7b5d75f7f44af58719a486002bd0cd831a1cf7bb",
+      "scripts/extract_v5_confirmation.py": "8db68a6a978014e18b9f3f12f81cdc7388048cfaf41c285c97c1c268ee656034",
+      "scripts/launch_v5_1.py": "d12789004d1a9409f813db760773b3265d7fec5da76e8acf12e23728cfc71aa0",
+      "scripts/run_v5_1_downstream.py": "f2a8c09059f099014530e8135367b725ad51c0d1dca941e43f17ef6e9ae6db0d",
+      "scripts/v5_confirmation_reader.py": "f1d9ef31eac1fd0aaf1ca066dccd6af37189e0297dc097d4acb1df61786abf3b",
+      "scripts/v5_temporal_confirmation.py": "6fe8a1f96e6d1209094fa2522dcccf4e9558afcb9714e8e9d7dd9785eb651681",
+      "scripts/v5_temporal_confirmation_plan.json": "b2bd8f17c4abad23b2f2600b3dce572f8d1ec53b9500f129aff718b4aaacf711"
+    }
+  },
+  "cache_receipt_sha256": "9417ff78fc4da07338ae6f854ec3990bb6227b5477af79f57d534d66c626a1bc",
+  "cache_sha256": "a720682664da2c533820d9d421e1b9013b5d4b8b839e74a25492a5d70a894872",
+  "controls": "t6 and t7 reported without winner selection",
+  "counts": {
+    "episodes": 512,
+    "paired_worlds": 256
+  },
+  "frozen_reader_sha256": "27ae0593f90c2728529f607b09893780d75badbf54261198b3e6f4a3f7b4596a",
+  "original_v5_gate": "failed_unchanged",
+  "p0_authorized": false,
+  "predictions_sha256": "6259459b2f8cdffb56e51217ed29e5ae6f4bac2cdb12bf0a74ca7a254e94a4ae",
+  "primary_metric_conditions_met": false,
+  "primary_reader": "concat",
+  "role": "bridge",
+  "schema": "v5-temporal-confirm-1",
+  "scores": {
+    "concat": {
+      "bootstrap": {
+        "baseline": "frozen_FIT_target_mean",
+        "conditional_on_frozen_reader": true,
+        "one_sided_quantile": 0.05,
+        "replicates": 10000,
+        "seed": 7709,
+        "unit": "paired_world"
+      },
+      "checks": {
+        "all_four_motion_coordinate_skills_positive": false,
+        "motion_mean_lower_bound_positive": false,
+        "position_skill_over_point_one": true
+      },
+      "metric_conditions_met": false,
+      "motion_mean_lower_bound": -1.6831536637932245,
+      "motion_skill": -1.5385232451567066,
+      "p0_authorized": false,
+      "per_dimension_skill": [
+        0.957825715466213,
+        0.9178239108443299,
+        0.9604031653839973,
+        0.9333624686929698,
+        -2.767883980413682,
+        -0.147834823690411,
+        -3.3580240738976492,
+        0.11964989737491671
+      ],
+      "position_skill": 0.9423538150968775
+    },
+    "t6": {
+      "bootstrap": {
+        "baseline": "frozen_FIT_target_mean",
+        "conditional_on_frozen_reader": true,
+        "one_sided_quantile": 0.05,
+        "replicates": 10000,
+        "seed": 7709,
+        "unit": "paired_world"
+      },
+      "checks": {
+        "all_four_motion_coordinate_skills_positive": false,
+        "motion_mean_lower_bound_positive": false,
+        "position_skill_over_point_one": true
+      },
+      "metric_conditions_met": false,
+      "motion_mean_lower_bound": -0.13247153646996151,
+      "motion_skill": -0.12146048526726738,
+      "p0_authorized": false,
+      "per_dimension_skill": [
+        0.8776301350846993,
+        0.763591612110196,
+        0.864842519555648,
+        0.7467198046757453,
+        -0.04576113994141173,
+        -0.24440010438429982,
+        -0.04629985112537116,
+        -0.1493808456179868
+      ],
+      "position_skill": 0.8131960178565721
+    },
+    "t7": {
+      "bootstrap": {
+        "baseline": "frozen_FIT_target_mean",
+        "conditional_on_frozen_reader": true,
+        "one_sided_quantile": 0.05,
+        "replicates": 10000,
+        "seed": 7709,
+        "unit": "paired_world"
+      },
+      "checks": {
+        "all_four_motion_coordinate_skills_positive": true,
+        "motion_mean_lower_bound_positive": true,
+        "position_skill_over_point_one": true
+      },
+      "metric_conditions_met": true,
+      "motion_mean_lower_bound": 0.09122629232883873,
+      "motion_skill": 0.10068081366538398,
+      "p0_authorized": false,
+      "per_dimension_skill": [
+        0.871369701306476,
+        0.7969998377378076,
+        0.8642534003317417,
+        0.7909493166675592,
+        0.036300269248027206,
+        0.19507138684306202,
+        0.05107313692442017,
+        0.12027846164602651
+      ],
+      "position_skill": 0.8308930640108961
+    }
+  },
+  "sources": {
+    "v5_confirmation_reader.py": "f1d9ef31eac1fd0aaf1ca066dccd6af37189e0297dc097d4acb1df61786abf3b",
+    "v5_temporal_confirmation.py": "6fe8a1f96e6d1209094fa2522dcccf4e9558afcb9714e8e9d7dd9785eb651681",
+    "v5_temporal_confirmation_plan.json": "b2bd8f17c4abad23b2f2600b3dce572f8d1ec53b9500f129aff718b4aaacf711"
+  },
+  "test_access": false
+}

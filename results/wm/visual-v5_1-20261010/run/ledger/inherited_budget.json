@@ -1,0 +1,33 @@
+{
+  "charged_gpuh": 0.39161167637833216,
+  "stages": {
+    "profile": 0.007657659230495106,
+    "features": 0.38395401714783617
+  },
+  "leases": [
+    {
+      "lease_id": "003e90cca77348068bac0043325938ba",
+      "stage": "profile",
+      "job_id": "415453",
+      "pid": 2070785,
+      "gpu_count": 1,
+      "lease_hours": 0.5,
+      "charged_gpuh": 0.007657659230495079,
+      "status": "complete",
+      "start_unix": 1791595202.8986027,
+      "end_unix": 1791595230.4662051
+    },
+    {
+      "lease_id": "296990c062b04277950b24cf34017227",
+      "stage": "features",
+      "job_id": "415453",
+      "pid": 2071726,
+      "gpu_count": 8,
+      "lease_hours": 1.0,
+      "charged_gpuh": 0.3839540171478358,
+      "status": "partial",
+      "start_unix": 1791595240.5941114,
+      "end_unix": 1791595413.3730688
+    }
+  ]
+}

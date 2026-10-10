@@ -1,0 +1,7 @@
+{
+  "all_512_scalar_targets_exact": true,
+  "descriptive_only": true,
+  "helper_sha256": "28be65f50b0783b37d258edc28a6e255c848ea2ffab6af676dd43dc6e24d2c80",
+  "no_stratum_gate_or_hyperparameter_selection": true,
+  "stratification": "a complete pair is reflected if either variant has any boundary crossing between t6 and t7"
+}

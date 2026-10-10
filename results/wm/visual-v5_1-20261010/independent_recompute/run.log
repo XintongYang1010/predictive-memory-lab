@@ -1,0 +1,27 @@
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_confirmation_reader.py:129: RuntimeWarning: divide by zero encountered in matmul
+  out += a[:, lo:lo+chunk].astype(np.float64) @ b[:, lo:lo+chunk].astype(np.float64).T
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_confirmation_reader.py:129: RuntimeWarning: overflow encountered in matmul
+  out += a[:, lo:lo+chunk].astype(np.float64) @ b[:, lo:lo+chunk].astype(np.float64).T
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_confirmation_reader.py:129: RuntimeWarning: invalid value encountered in matmul
+  out += a[:, lo:lo+chunk].astype(np.float64) @ b[:, lo:lo+chunk].astype(np.float64).T
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_confirmation_reader.py:170: RuntimeWarning: divide by zero encountered in matmul
+  prediction = q @ state["coefficients"] + state["target_mean"]
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_confirmation_reader.py:170: RuntimeWarning: overflow encountered in matmul
+  prediction = q @ state["coefficients"] + state["target_mean"]
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_confirmation_reader.py:170: RuntimeWarning: invalid value encountered in matmul
+  prediction = q @ state["coefficients"] + state["target_mean"]
+{
+  "status": "verified_independent_frozen_prediction_replay",
+  "original_scene_inventory": {
+    "files": 1739,
+    "bytes": 274246065
+  },
+  "interpretation": "Confirmation passes; original-distribution bridge fails. P0 remains unauthorized, original V5 gate remains failed.",
+  "runtime": {
+    "executable": "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "python": "3.9.6 (default, Dec  2 2025, 07:27:58) \n[Clang 17.0.0 (clang-1700.6.3.2)]",
+    "numpy": "2.0.2",
+    "platform": "macOS-15.7.3-arm64-arm-64bit",
+    "wall_seconds": 3.379706792
+  }
+}

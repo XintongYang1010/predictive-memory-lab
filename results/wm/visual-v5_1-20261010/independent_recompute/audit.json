@@ -1,0 +1,1089 @@
+{
+  "status": "verified_independent_frozen_prediction_replay",
+  "script_sha256": "00da336dc7f5569f1981d0aa5bc8f2e81fe7285e2dfa068e1724531606c1feca",
+  "archive_manifest_sha256": "56d35d072c7d8a885429902c7128572b645e4040a47e5edf0347177f03f1f6ae",
+  "original_scene_unchanged": true,
+  "original_scene_inventory": {
+    "files": 1739,
+    "bytes": 274246065
+  },
+  "local_sources_match_freeze": true,
+  "reader_frozen_receipt_sha256": "27ae0593f90c2728529f607b09893780d75badbf54261198b3e6f4a3f7b4596a",
+  "cache_roles": {
+    "fit": {
+      "inventory": {
+        "files": 530,
+        "bytes": 62622760
+      },
+      "feature_shape": [
+        256,
+        3,
+        20480
+      ],
+      "target_shape": [
+        256,
+        4,
+        8
+      ],
+      "groups": 256,
+      "examples": 1024,
+      "canonical_first_id": 0,
+      "canonical_last_id": 255,
+      "aggregate_exactly_matches_shards": true,
+      "input_records_hash_verified": true,
+      "eight_complete_distinct_gpu_workers": true,
+      "gpu_steps": [
+        "415453.18"
+      ],
+      "cache_sha256": "c5e4b67990e5654516bcefa7508da4b9d24dbcc52ef744b2708176ad80ec98fc",
+      "receipt_sha256": "d16d0db84ee8577fbfd4d14191f956de98251e3bbc47af87890288abbc650179",
+      "input_rgb_hash_count": 768,
+      "distinct_input_rgb_hash_count": 768
+    },
+    "confirm": {
+      "inventory": {
+        "files": 530,
+        "bytes": 62625604
+      },
+      "feature_shape": [
+        256,
+        3,
+        20480
+      ],
+      "target_shape": [
+        256,
+        4,
+        8
+      ],
+      "groups": 256,
+      "examples": 1024,
+      "canonical_first_id": 0,
+      "canonical_last_id": 255,
+      "aggregate_exactly_matches_shards": true,
+      "input_records_hash_verified": true,
+      "eight_complete_distinct_gpu_workers": true,
+      "gpu_steps": [
+        "415453.20"
+      ],
+      "cache_sha256": "34663d6b62adf9d96d44c728bd79b646f35950f25b4b02ea509abdfd57fb994d",
+      "receipt_sha256": "a70119a557c879bbf8e60bf16cc8c6d8e10cebc0dfd2c0040c7938ef49a9509d",
+      "input_rgb_hash_count": 768,
+      "distinct_input_rgb_hash_count": 768
+    },
+    "bridge": {
+      "inventory": {
+        "files": 530,
+        "bytes": 83377272
+      },
+      "feature_shape": [
+        256,
+        2,
+        2,
+        20480
+      ],
+      "target_shape": [
+        256,
+        2,
+        8
+      ],
+      "groups": 256,
+      "examples": 512,
+      "canonical_first_id": 128,
+      "canonical_last_id": 383,
+      "aggregate_exactly_matches_shards": true,
+      "input_records_hash_verified": true,
+      "eight_complete_distinct_gpu_workers": true,
+      "gpu_steps": [
+        "415453.22"
+      ],
+      "cache_sha256": "a720682664da2c533820d9d421e1b9013b5d4b8b839e74a25492a5d70a894872",
+      "receipt_sha256": "9417ff78fc4da07338ae6f854ec3990bb6227b5477af79f57d534d66c626a1bc",
+      "input_rgb_hash_count": 1024,
+      "distinct_input_rgb_hash_count": 1024
+    }
+  },
+  "fit_confirm_recorded_rgb_hash_overlap": 0,
+  "comparisons": {
+    "confirm": {
+      "predictions": {
+        "concat": {
+          "shape": [
+            256,
+            4,
+            8
+          ],
+          "max_absolute_difference": 2.0539125955565396e-15,
+          "bitwise_equal": false
+        },
+        "t6": {
+          "shape": [
+            256,
+            4,
+            8
+          ],
+          "max_absolute_difference": 5.551115123125783e-16,
+          "bitwise_equal": false
+        },
+        "t7": {
+          "shape": [
+            256,
+            4,
+            8
+          ],
+          "max_absolute_difference": 8.326672684688674e-16,
+          "bitwise_equal": false
+        },
+        "concat_repeat": {
+          "shape": [
+            256,
+            4
+          ],
+          "max_absolute_difference": 3.59919751597934e-16,
+          "bitwise_equal": false
+        },
+        "t6_repeat": {
+          "shape": [
+            256,
+            4
+          ],
+          "max_absolute_difference": 1.5612511283791264e-17,
+          "bitwise_equal": false
+        },
+        "t7_repeat": {
+          "shape": [
+            256,
+            4
+          ],
+          "max_absolute_difference": 2.0383000842727483e-17,
+          "bitwise_equal": false
+        },
+        "targets": {
+          "shape": [
+            256,
+            4,
+            8
+          ],
+          "max_absolute_difference": 0.0,
+          "bitwise_equal": true
+        }
+      },
+      "metadata_and_decisions_exact_match": true,
+      "all_report_numbers_max_absolute_difference": 8.881784197001252e-16,
+      "report_number_comparisons": [
+        {
+          "path": "/counts/blocks",
+          "original": 256,
+          "replay": 256,
+          "absolute_difference": 0
+        },
+        {
+          "path": "/counts/views",
+          "original": 1024,
+          "replay": 1024,
+          "absolute_difference": 0
+        },
+        {
+          "path": "/scores/concat/absolute_displacement_skill",
+          "original": 0.6741172521084837,
+          "replay": 0.6741172521084839,
+          "absolute_difference": 2.220446049250313e-16
+        },
+        {
+          "path": "/scores/concat/blocks",
+          "original": 256,
+          "replay": 256,
+          "absolute_difference": 0
+        },
+        {
+          "path": "/scores/concat/bootstrap/one_sided_quantile",
+          "original": 0.005555555555555556,
+          "replay": 0.005555555555555556,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/concat/bootstrap/replicates",
+          "original": 10000,
+          "replay": 10000,
+          "absolute_difference": 0
+        },
+        {
+          "path": "/scores/concat/bootstrap/seed",
+          "original": 7709,
+          "replay": 7709,
+          "absolute_difference": 0
+        },
+        {
+          "path": "/scores/concat/contrast_skills/end_anchor/0",
+          "original": 0.7231540335108524,
+          "replay": 0.7231540335108531,
+          "absolute_difference": 6.661338147750939e-16
+        },
+        {
+          "path": "/scores/concat/contrast_skills/end_anchor/1",
+          "original": 0.8944515887913744,
+          "replay": 0.8944515887913745,
+          "absolute_difference": 1.1102230246251565e-16
+        },
+        {
+          "path": "/scores/concat/contrast_skills/end_anchor/2",
+          "original": 0.6429460387261938,
+          "replay": 0.6429460387261942,
+          "absolute_difference": 3.3306690738754696e-16
+        },
+        {
+          "path": "/scores/concat/contrast_skills/end_anchor/3",
+          "original": 0.863438295899003,
+          "replay": 0.8634382958990032,
+          "absolute_difference": 2.220446049250313e-16
+        },
+        {
+          "path": "/scores/concat/contrast_skills/start_anchor/0",
+          "original": 0.7231540335108546,
+          "replay": 0.7231540335108555,
+          "absolute_difference": 8.881784197001252e-16
+        },
+        {
+          "path": "/scores/concat/contrast_skills/start_anchor/1",
+          "original": 0.8944515887913758,
+          "replay": 0.894451588791376,
+          "absolute_difference": 2.220446049250313e-16
+        },
+        {
+          "path": "/scores/concat/contrast_skills/start_anchor/2",
+          "original": 0.6429460387261927,
+          "replay": 0.6429460387261933,
+          "absolute_difference": 5.551115123125783e-16
+        },
+        {
+          "path": "/scores/concat/contrast_skills/start_anchor/3",
+          "original": 0.8634382958990018,
+          "replay": 0.863438295899002,
+          "absolute_difference": 2.220446049250313e-16
+        },
+        {
+          "path": "/scores/concat/expected_confirmation_blocks",
+          "original": 256,
+          "replay": 256,
+          "absolute_difference": 0
+        },
+        {
+          "path": "/scores/concat/position_skill",
+          "original": 0.9883714076281956,
+          "replay": 0.9883714076281956,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/concat/primary_lower_bounds/0",
+          "original": 0.6700281003865599,
+          "replay": 0.6700281003865601,
+          "absolute_difference": 2.220446049250313e-16
+        },
+        {
+          "path": "/scores/concat/primary_lower_bounds/1",
+          "original": 0.8678911689726718,
+          "replay": 0.8678911689726719,
+          "absolute_difference": 1.1102230246251565e-16
+        },
+        {
+          "path": "/scores/concat/primary_lower_bounds/2",
+          "original": 0.5812023569611762,
+          "replay": 0.5812023569611767,
+          "absolute_difference": 5.551115123125783e-16
+        },
+        {
+          "path": "/scores/concat/primary_lower_bounds/3",
+          "original": 0.8323176624313369,
+          "replay": 0.8323176624313369,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/concat/primary_lower_bounds/4",
+          "original": 0.6700281003865614,
+          "replay": 0.670028100386562,
+          "absolute_difference": 6.661338147750939e-16
+        },
+        {
+          "path": "/scores/concat/primary_lower_bounds/5",
+          "original": 0.8678911689726735,
+          "replay": 0.8678911689726735,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/concat/primary_lower_bounds/6",
+          "original": 0.5812023569611777,
+          "replay": 0.5812023569611778,
+          "absolute_difference": 1.1102230246251565e-16
+        },
+        {
+          "path": "/scores/concat/primary_lower_bounds/7",
+          "original": 0.8323176624313353,
+          "replay": 0.832317662431335,
+          "absolute_difference": 3.3306690738754696e-16
+        },
+        {
+          "path": "/scores/concat/primary_lower_bounds/8",
+          "original": 0.6483949678326053,
+          "replay": 0.6483949678326054,
+          "absolute_difference": 1.1102230246251565e-16
+        },
+        {
+          "path": "/scores/concat/repeated_center_max_abs",
+          "original": 2.629586920079873e-15,
+          "replay": 2.611866486164388e-15,
+          "absolute_difference": 1.7720433915484816e-17
+        },
+        {
+          "path": "/scores/concat/reversal_max_abs",
+          "original": 5.39499001028787e-15,
+          "replay": 5.362030264244311e-15,
+          "absolute_difference": 3.2959746043559335e-17
+        },
+        {
+          "path": "/scores/t6/absolute_displacement_skill",
+          "original": 0.007938567005028513,
+          "replay": 0.007938567005028485,
+          "absolute_difference": 2.7755575615628914e-17
+        },
+        {
+          "path": "/scores/t6/blocks",
+          "original": 256,
+          "replay": 256,
+          "absolute_difference": 0
+        },
+        {
+          "path": "/scores/t6/bootstrap/one_sided_quantile",
+          "original": 0.005555555555555556,
+          "replay": 0.005555555555555556,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t6/bootstrap/replicates",
+          "original": 10000,
+          "replay": 10000,
+          "absolute_difference": 0
+        },
+        {
+          "path": "/scores/t6/bootstrap/seed",
+          "original": 7709,
+          "replay": 7709,
+          "absolute_difference": 0
+        },
+        {
+          "path": "/scores/t6/contrast_skills/end_anchor/0",
+          "original": 0.009401897572238527,
+          "replay": 0.009401897572238527,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t6/contrast_skills/end_anchor/1",
+          "original": 0.05709340464098567,
+          "replay": 0.05709340464098567,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t6/contrast_skills/end_anchor/2",
+          "original": -0.003599773337365386,
+          "replay": -0.003599773337365164,
+          "absolute_difference": 2.220446049250313e-16
+        },
+        {
+          "path": "/scores/t6/contrast_skills/end_anchor/3",
+          "original": 0.062179311004940674,
+          "replay": 0.062179311004940674,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t6/contrast_skills/start_anchor/0",
+          "original": 0.0,
+          "replay": 0.0,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t6/contrast_skills/start_anchor/1",
+          "original": 0.0,
+          "replay": 0.0,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t6/contrast_skills/start_anchor/2",
+          "original": 0.0,
+          "replay": 0.0,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t6/contrast_skills/start_anchor/3",
+          "original": 0.0,
+          "replay": 0.0,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t6/expected_confirmation_blocks",
+          "original": 256,
+          "replay": 256,
+          "absolute_difference": 0
+        },
+        {
+          "path": "/scores/t6/position_skill",
+          "original": 0.8909897395881803,
+          "replay": 0.8909897395881804,
+          "absolute_difference": 1.1102230246251565e-16
+        },
+        {
+          "path": "/scores/t6/primary_lower_bounds/0",
+          "original": 0.0026572827075649567,
+          "replay": 0.00265728270756509,
+          "absolute_difference": 1.3314002678121994e-16
+        },
+        {
+          "path": "/scores/t6/primary_lower_bounds/1",
+          "original": 0.04996189485652821,
+          "replay": 0.04996189485652837,
+          "absolute_difference": 1.5959455978986625e-16
+        },
+        {
+          "path": "/scores/t6/primary_lower_bounds/2",
+          "original": -0.012952480544031175,
+          "replay": -0.012952480544031197,
+          "absolute_difference": 2.2551405187698492e-17
+        },
+        {
+          "path": "/scores/t6/primary_lower_bounds/3",
+          "original": 0.05510222865778978,
+          "replay": 0.055102228657789624,
+          "absolute_difference": 1.5265566588595902e-16
+        },
+        {
+          "path": "/scores/t6/primary_lower_bounds/4",
+          "original": 0.0,
+          "replay": 0.0,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t6/primary_lower_bounds/5",
+          "original": 0.0,
+          "replay": 0.0,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t6/primary_lower_bounds/6",
+          "original": 0.0,
+          "replay": 0.0,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t6/primary_lower_bounds/7",
+          "original": 0.0,
+          "replay": 0.0,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t6/primary_lower_bounds/8",
+          "original": 0.005839291413714069,
+          "replay": 0.005839291413714066,
+          "absolute_difference": 2.6020852139652106e-18
+        },
+        {
+          "path": "/scores/t6/repeated_center_max_abs",
+          "original": 0.0034563909481786456,
+          "replay": 0.003456390948178647,
+          "absolute_difference": 1.3010426069826053e-18
+        },
+        {
+          "path": "/scores/t6/reversal_max_abs",
+          "original": 0.006882297256583563,
+          "replay": 0.006882297256583557,
+          "absolute_difference": 6.071532165918825e-18
+        },
+        {
+          "path": "/scores/t7/absolute_displacement_skill",
+          "original": 0.00793856700502843,
+          "replay": 0.007938567005028346,
+          "absolute_difference": 8.326672684688674e-17
+        },
+        {
+          "path": "/scores/t7/blocks",
+          "original": 256,
+          "replay": 256,
+          "absolute_difference": 0
+        },
+        {
+          "path": "/scores/t7/bootstrap/one_sided_quantile",
+          "original": 0.005555555555555556,
+          "replay": 0.005555555555555556,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t7/bootstrap/replicates",
+          "original": 10000,
+          "replay": 10000,
+          "absolute_difference": 0
+        },
+        {
+          "path": "/scores/t7/bootstrap/seed",
+          "original": 7709,
+          "replay": 7709,
+          "absolute_difference": 0
+        },
+        {
+          "path": "/scores/t7/contrast_skills/end_anchor/0",
+          "original": 0.0,
+          "replay": 0.0,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t7/contrast_skills/end_anchor/1",
+          "original": 0.0,
+          "replay": 0.0,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t7/contrast_skills/end_anchor/2",
+          "original": 0.0,
+          "replay": 0.0,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t7/contrast_skills/end_anchor/3",
+          "original": 0.0,
+          "replay": 0.0,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t7/contrast_skills/start_anchor/0",
+          "original": 0.009401897572238527,
+          "replay": 0.009401897572238416,
+          "absolute_difference": 1.1102230246251565e-16
+        },
+        {
+          "path": "/scores/t7/contrast_skills/start_anchor/1",
+          "original": 0.05709340464098567,
+          "replay": 0.05709340464098567,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t7/contrast_skills/start_anchor/2",
+          "original": -0.003599773337365386,
+          "replay": -0.003599773337365386,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t7/contrast_skills/start_anchor/3",
+          "original": 0.06217931100494056,
+          "replay": 0.06217931100494056,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t7/expected_confirmation_blocks",
+          "original": 256,
+          "replay": 256,
+          "absolute_difference": 0
+        },
+        {
+          "path": "/scores/t7/position_skill",
+          "original": 0.929607596575756,
+          "replay": 0.9296075965757561,
+          "absolute_difference": 1.1102230246251565e-16
+        },
+        {
+          "path": "/scores/t7/primary_lower_bounds/0",
+          "original": 0.0,
+          "replay": 0.0,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t7/primary_lower_bounds/1",
+          "original": 0.0,
+          "replay": 0.0,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t7/primary_lower_bounds/2",
+          "original": 0.0,
+          "replay": 0.0,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t7/primary_lower_bounds/3",
+          "original": 0.0,
+          "replay": 0.0,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t7/primary_lower_bounds/4",
+          "original": 0.0026572827075650065,
+          "replay": 0.00265728270756509,
+          "absolute_difference": 8.326672684688674e-17
+        },
+        {
+          "path": "/scores/t7/primary_lower_bounds/5",
+          "original": 0.04996189485652825,
+          "replay": 0.04996189485652836,
+          "absolute_difference": 1.1102230246251565e-16
+        },
+        {
+          "path": "/scores/t7/primary_lower_bounds/6",
+          "original": -0.012952480544031298,
+          "replay": -0.012952480544031298,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t7/primary_lower_bounds/7",
+          "original": 0.055102228657789847,
+          "replay": 0.055102228657789756,
+          "absolute_difference": 9.020562075079397e-17
+        },
+        {
+          "path": "/scores/t7/primary_lower_bounds/8",
+          "original": 0.005839291413714018,
+          "replay": 0.0058392914137139875,
+          "absolute_difference": 3.0357660829594124e-17
+        },
+        {
+          "path": "/scores/t7/repeated_center_max_abs",
+          "original": 0.0034563909481787045,
+          "replay": 0.003456390948178701,
+          "absolute_difference": 3.469446951953614e-18
+        },
+        {
+          "path": "/scores/t7/reversal_max_abs",
+          "original": 0.006882297256583592,
+          "replay": 0.006882297256583592,
+          "absolute_difference": 0.0
+        }
+      ],
+      "original_npz_sha256": "a96eb473b7c08d3c07ad24a2579547e141282d55b79ea9d97d2d2b38bdfe7ee4",
+      "replay_npz_sha256": "cbfa572b4d76e20916c5dba2a5b0b4aa36bccca975dff1a4eaf3d169f0e9193d",
+      "primary_passed": true,
+      "primary_scores": {
+        "schema": "v5-temporal-confirm-1",
+        "status": "metric_checks_only",
+        "p0_authorized": false,
+        "blocks": 256,
+        "expected_confirmation_blocks": 256,
+        "contrast_skills": {
+          "end_anchor": [
+            0.7231540335108531,
+            0.8944515887913745,
+            0.6429460387261942,
+            0.8634382958990032
+          ],
+          "start_anchor": [
+            0.7231540335108555,
+            0.894451588791376,
+            0.6429460387261933,
+            0.863438295899002
+          ]
+        },
+        "absolute_displacement_skill": 0.6741172521084839,
+        "position_skill": 0.9883714076281956,
+        "primary_lower_bounds": [
+          0.6700281003865601,
+          0.8678911689726719,
+          0.5812023569611767,
+          0.8323176624313369,
+          0.670028100386562,
+          0.8678911689726735,
+          0.5812023569611778,
+          0.832317662431335,
+          0.6483949678326054
+        ],
+        "bound_order": [
+          "end_A_dx",
+          "end_A_dy",
+          "end_B_dx",
+          "end_B_dy",
+          "start_A_dx",
+          "start_A_dy",
+          "start_B_dx",
+          "start_B_dy",
+          "absolute_mean"
+        ],
+        "bootstrap": {
+          "replicates": 10000,
+          "seed": 7709,
+          "unit": "complete_four_view_block",
+          "one_sided_quantile": 0.005555555555555556,
+          "interpretation": "Bonferroni-adjusted percentile bootstrap; finite-sample coverage approximate, fixed fitted reader"
+        },
+        "reversal_max_abs": 5.362030264244311e-15,
+        "repeated_center_max_abs": 2.611866486164388e-15,
+        "checks": {
+          "nine_lower_bounds_positive": true,
+          "position_skill_over_point_one": true,
+          "reversal_max_abs_at_most_1e_minus_6": true,
+          "repeated_frame_max_abs_at_most_1e_minus_6": true
+        },
+        "metric_conditions_met": true,
+        "remaining_requirements": [
+          "256 unique unseen confirmation blocks",
+          "independently verified input/model receipts",
+          "fresh original-distribution bridge",
+          "new versioned P0 protocol; original V5 gate stays failed"
+        ]
+      }
+    },
+    "bridge": {
+      "predictions": {
+        "concat": {
+          "shape": [
+            256,
+            2,
+            8
+          ],
+          "max_absolute_difference": 2.9282132274488504e-15,
+          "bitwise_equal": false
+        },
+        "t6": {
+          "shape": [
+            256,
+            2,
+            8
+          ],
+          "max_absolute_difference": 5.551115123125783e-16,
+          "bitwise_equal": false
+        },
+        "t7": {
+          "shape": [
+            256,
+            2,
+            8
+          ],
+          "max_absolute_difference": 6.661338147750939e-16,
+          "bitwise_equal": false
+        },
+        "targets": {
+          "shape": [
+            256,
+            2,
+            8
+          ],
+          "max_absolute_difference": 0.0,
+          "bitwise_equal": true
+        }
+      },
+      "metadata_and_decisions_exact_match": true,
+      "all_report_numbers_max_absolute_difference": 3.552713678800501e-15,
+      "report_number_comparisons": [
+        {
+          "path": "/counts/episodes",
+          "original": 512,
+          "replay": 512,
+          "absolute_difference": 0
+        },
+        {
+          "path": "/counts/paired_worlds",
+          "original": 256,
+          "replay": 256,
+          "absolute_difference": 0
+        },
+        {
+          "path": "/scores/concat/bootstrap/one_sided_quantile",
+          "original": 0.05,
+          "replay": 0.05,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/concat/bootstrap/replicates",
+          "original": 10000,
+          "replay": 10000,
+          "absolute_difference": 0
+        },
+        {
+          "path": "/scores/concat/bootstrap/seed",
+          "original": 7709,
+          "replay": 7709,
+          "absolute_difference": 0
+        },
+        {
+          "path": "/scores/concat/motion_mean_lower_bound",
+          "original": -1.6831536637932238,
+          "replay": -1.6831536637932245,
+          "absolute_difference": 6.661338147750939e-16
+        },
+        {
+          "path": "/scores/concat/motion_skill",
+          "original": -1.5385232451567052,
+          "replay": -1.5385232451567066,
+          "absolute_difference": 1.3322676295501878e-15
+        },
+        {
+          "path": "/scores/concat/per_dimension_skill/0",
+          "original": 0.957825715466213,
+          "replay": 0.957825715466213,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/concat/per_dimension_skill/1",
+          "original": 0.9178239108443299,
+          "replay": 0.9178239108443299,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/concat/per_dimension_skill/2",
+          "original": 0.9604031653839973,
+          "replay": 0.9604031653839973,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/concat/per_dimension_skill/3",
+          "original": 0.9333624686929698,
+          "replay": 0.9333624686929698,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/concat/per_dimension_skill/4",
+          "original": -2.76788398041368,
+          "replay": -2.767883980413682,
+          "absolute_difference": 2.220446049250313e-15
+        },
+        {
+          "path": "/scores/concat/per_dimension_skill/5",
+          "original": -0.14783482369041168,
+          "replay": -0.147834823690411,
+          "absolute_difference": 6.661338147750939e-16
+        },
+        {
+          "path": "/scores/concat/per_dimension_skill/6",
+          "original": -3.3580240738976457,
+          "replay": -3.3580240738976492,
+          "absolute_difference": 3.552713678800501e-15
+        },
+        {
+          "path": "/scores/concat/per_dimension_skill/7",
+          "original": 0.11964989737491616,
+          "replay": 0.11964989737491671,
+          "absolute_difference": 5.551115123125783e-16
+        },
+        {
+          "path": "/scores/concat/position_skill",
+          "original": 0.9423538150968775,
+          "replay": 0.9423538150968775,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t6/bootstrap/one_sided_quantile",
+          "original": 0.05,
+          "replay": 0.05,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t6/bootstrap/replicates",
+          "original": 10000,
+          "replay": 10000,
+          "absolute_difference": 0
+        },
+        {
+          "path": "/scores/t6/bootstrap/seed",
+          "original": 7709,
+          "replay": 7709,
+          "absolute_difference": 0
+        },
+        {
+          "path": "/scores/t6/motion_mean_lower_bound",
+          "original": -0.13247153646996157,
+          "replay": -0.13247153646996151,
+          "absolute_difference": 5.551115123125783e-17
+        },
+        {
+          "path": "/scores/t6/motion_skill",
+          "original": -0.12146048526726727,
+          "replay": -0.12146048526726738,
+          "absolute_difference": 1.1102230246251565e-16
+        },
+        {
+          "path": "/scores/t6/per_dimension_skill/0",
+          "original": 0.8776301350846993,
+          "replay": 0.8776301350846993,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t6/per_dimension_skill/1",
+          "original": 0.763591612110196,
+          "replay": 0.763591612110196,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t6/per_dimension_skill/2",
+          "original": 0.864842519555648,
+          "replay": 0.864842519555648,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t6/per_dimension_skill/3",
+          "original": 0.7467198046757455,
+          "replay": 0.7467198046757453,
+          "absolute_difference": 2.220446049250313e-16
+        },
+        {
+          "path": "/scores/t6/per_dimension_skill/4",
+          "original": -0.04576113994141173,
+          "replay": -0.04576113994141173,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t6/per_dimension_skill/5",
+          "original": -0.2444001043842996,
+          "replay": -0.24440010438429982,
+          "absolute_difference": 2.220446049250313e-16
+        },
+        {
+          "path": "/scores/t6/per_dimension_skill/6",
+          "original": -0.04629985112537094,
+          "replay": -0.04629985112537116,
+          "absolute_difference": 2.220446049250313e-16
+        },
+        {
+          "path": "/scores/t6/per_dimension_skill/7",
+          "original": -0.1493808456179868,
+          "replay": -0.1493808456179868,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t6/position_skill",
+          "original": 0.8131960178565723,
+          "replay": 0.8131960178565721,
+          "absolute_difference": 1.1102230246251565e-16
+        },
+        {
+          "path": "/scores/t7/bootstrap/one_sided_quantile",
+          "original": 0.05,
+          "replay": 0.05,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t7/bootstrap/replicates",
+          "original": 10000,
+          "replay": 10000,
+          "absolute_difference": 0
+        },
+        {
+          "path": "/scores/t7/bootstrap/seed",
+          "original": 7709,
+          "replay": 7709,
+          "absolute_difference": 0
+        },
+        {
+          "path": "/scores/t7/motion_mean_lower_bound",
+          "original": 0.09122629232883873,
+          "replay": 0.09122629232883873,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t7/motion_skill",
+          "original": 0.100680813665384,
+          "replay": 0.10068081366538398,
+          "absolute_difference": 2.7755575615628914e-17
+        },
+        {
+          "path": "/scores/t7/per_dimension_skill/0",
+          "original": 0.871369701306476,
+          "replay": 0.871369701306476,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t7/per_dimension_skill/1",
+          "original": 0.7969998377378076,
+          "replay": 0.7969998377378076,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t7/per_dimension_skill/2",
+          "original": 0.8642534003317418,
+          "replay": 0.8642534003317417,
+          "absolute_difference": 1.1102230246251565e-16
+        },
+        {
+          "path": "/scores/t7/per_dimension_skill/3",
+          "original": 0.7909493166675592,
+          "replay": 0.7909493166675592,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t7/per_dimension_skill/4",
+          "original": 0.036300269248027206,
+          "replay": 0.036300269248027206,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t7/per_dimension_skill/5",
+          "original": 0.19507138684306202,
+          "replay": 0.19507138684306202,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t7/per_dimension_skill/6",
+          "original": 0.05107313692442028,
+          "replay": 0.05107313692442017,
+          "absolute_difference": 1.1102230246251565e-16
+        },
+        {
+          "path": "/scores/t7/per_dimension_skill/7",
+          "original": 0.12027846164602651,
+          "replay": 0.12027846164602651,
+          "absolute_difference": 0.0
+        },
+        {
+          "path": "/scores/t7/position_skill",
+          "original": 0.8308930640108961,
+          "replay": 0.8308930640108961,
+          "absolute_difference": 0.0
+        }
+      ],
+      "original_npz_sha256": "c9d510b314ef13276e9cb224b047749441ec69969f8f74c8655bf470497e6b80",
+      "replay_npz_sha256": "6259459b2f8cdffb56e51217ed29e5ae6f4bac2cdb12bf0a74ca7a254e94a4ae",
+      "primary_passed": false,
+      "primary_scores": {
+        "per_dimension_skill": [
+          0.957825715466213,
+          0.9178239108443299,
+          0.9604031653839973,
+          0.9333624686929698,
+          -2.767883980413682,
+          -0.147834823690411,
+          -3.3580240738976492,
+          0.11964989737491671
+        ],
+        "position_skill": 0.9423538150968775,
+        "motion_skill": -1.5385232451567066,
+        "motion_mean_lower_bound": -1.6831536637932245,
+        "checks": {
+          "position_skill_over_point_one": true,
+          "all_four_motion_coordinate_skills_positive": false,
+          "motion_mean_lower_bound_positive": false
+        },
+        "metric_conditions_met": false,
+        "p0_authorized": false,
+        "bootstrap": {
+          "replicates": 10000,
+          "seed": 7709,
+          "unit": "paired_world",
+          "one_sided_quantile": 0.05,
+          "baseline": "frozen_FIT_target_mean",
+          "conditional_on_frozen_reader": true
+        }
+      }
+    }
+  },
+  "safeguards": {
+    "fitting_disabled": true,
+    "data_generation_disabled": true,
+    "no_gpu": true,
+    "no_remote_access": true,
+    "no_test_access": true,
+    "only_registered_bootstrap_seed": 7709
+  },
+  "interpretation": "Confirmation passes; original-distribution bridge fails. P0 remains unauthorized, original V5 gate remains failed.",
+  "limitations": [
+    "This is numerical replay of the same frozen artifacts, not a new independent scientific sample.",
+    "Input RGB hashes and freshness attestations are audited as archived provenance; no inputs were regenerated.",
+    "Cross-platform BLAS can differ in last floating-point bits; prediction tolerance1e-9 and report tolerance1e-8 were fixed before replay.",
+    "Bootstrap intervals reuse the registered seed and remain conditional on the frozen reader and registered sample."
+  ],
+  "runtime": {
+    "executable": "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "python": "3.9.6 (default, Dec  2 2025, 07:27:58) \n[Clang 17.0.0 (clang-1700.6.3.2)]",
+    "numpy": "2.0.2",
+    "platform": "macOS-15.7.3-arm64-arm-64bit",
+    "wall_seconds": 3.379706792
+  }
+}

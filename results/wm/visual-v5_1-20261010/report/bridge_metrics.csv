@@ -1,0 +1,19 @@
+reader,metric,point,lower_bound,threshold,bound_kind
+concat,motion_A_dx,-2.76788398041368,,0,point criterion
+concat,motion_A_dy,-0.14783482369041168,,0,point criterion
+concat,motion_B_dx,-3.3580240738976457,,0,point criterion
+concat,motion_B_dy,0.11964989737491616,,0,point criterion
+concat,motion_mean,-1.5385232451567052,-1.6831536637932238,0,"one-sided 95%, paired world"
+concat,position_mean,0.9423538150968775,,0.1,point criterion
+t6,motion_A_dx,-0.04576113994141173,,0,point criterion
+t6,motion_A_dy,-0.2444001043842996,,0,point criterion
+t6,motion_B_dx,-0.04629985112537094,,0,point criterion
+t6,motion_B_dy,-0.1493808456179868,,0,point criterion
+t6,motion_mean,-0.12146048526726727,-0.13247153646996157,0,"one-sided 95%, paired world"
+t6,position_mean,0.8131960178565723,,0.1,point criterion
+t7,motion_A_dx,0.036300269248027206,,0,point criterion
+t7,motion_A_dy,0.19507138684306202,,0,point criterion
+t7,motion_B_dx,0.05107313692442028,,0,point criterion
+t7,motion_B_dy,0.12027846164602651,,0,point criterion
+t7,motion_mean,0.100680813665384,0.09122629232883873,0,"one-sided 95%, paired world"
+t7,position_mean,0.8308930640108961,,0.1,point criterion

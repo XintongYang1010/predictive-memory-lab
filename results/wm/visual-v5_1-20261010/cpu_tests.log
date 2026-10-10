@@ -1,0 +1,69 @@
+......../Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_confirmation_reader.py:129: RuntimeWarning: divide by zero encountered in matmul
+  out += a[:, lo:lo+chunk].astype(np.float64) @ b[:, lo:lo+chunk].astype(np.float64).T
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_confirmation_reader.py:129: RuntimeWarning: overflow encountered in matmul
+  out += a[:, lo:lo+chunk].astype(np.float64) @ b[:, lo:lo+chunk].astype(np.float64).T
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_confirmation_reader.py:129: RuntimeWarning: invalid value encountered in matmul
+  out += a[:, lo:lo+chunk].astype(np.float64) @ b[:, lo:lo+chunk].astype(np.float64).T
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_confirmation_reader.py:170: RuntimeWarning: divide by zero encountered in matmul
+  prediction = q @ state["coefficients"] + state["target_mean"]
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_confirmation_reader.py:170: RuntimeWarning: overflow encountered in matmul
+  prediction = q @ state["coefficients"] + state["target_mean"]
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_confirmation_reader.py:170: RuntimeWarning: invalid value encountered in matmul
+  prediction = q @ state["coefficients"] + state["target_mean"]
+.../Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_confirmation_reader.py:129: RuntimeWarning: divide by zero encountered in matmul
+  out += a[:, lo:lo+chunk].astype(np.float64) @ b[:, lo:lo+chunk].astype(np.float64).T
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_confirmation_reader.py:129: RuntimeWarning: overflow encountered in matmul
+  out += a[:, lo:lo+chunk].astype(np.float64) @ b[:, lo:lo+chunk].astype(np.float64).T
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_confirmation_reader.py:129: RuntimeWarning: invalid value encountered in matmul
+  out += a[:, lo:lo+chunk].astype(np.float64) @ b[:, lo:lo+chunk].astype(np.float64).T
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_confirmation_reader.py:50: RuntimeWarning: divide by zero encountered in matmul
+  np.testing.assert_allclose(reader.view_gram(raw, qi, bi, name), left@right.T, atol=1e-12)
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_confirmation_reader.py:50: RuntimeWarning: overflow encountered in matmul
+  np.testing.assert_allclose(reader.view_gram(raw, qi, bi, name), left@right.T, atol=1e-12)
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_confirmation_reader.py:50: RuntimeWarning: invalid value encountered in matmul
+  np.testing.assert_allclose(reader.view_gram(raw, qi, bi, name), left@right.T, atol=1e-12)
+.............{"stage": "features", "episode": "dev-000000-0", "frames": 19}
+{"stage": "features", "episode": "dev-000000-1", "frames": 19}
+{"stage": "features", "episode": "dev-000001-0", "frames": 19}
+{"stage": "features", "episode": "dev-000001-1", "frames": 19}
+{"stage": "features", "episode": "dev-000000-0", "frames": 19}
+{"stage": "features", "episode": "dev-000000-1", "frames": 19}
+{"stage": "features", "episode": "dev-000001-0", "frames": 19}
+{"stage": "features", "episode": "dev-000001-1", "frames": 19}
+.{"stage": "features", "episode": "train-000000-0", "frames": 19}
+{"stage": "features", "episode": "train-000000-1", "frames": 19}
+....................../Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_probe_diagnostics.py:73: RuntimeWarning: divide by zero encountered in matmul
+  views = diagnostics.kernel_views(frames@frames.T, query@frames.T)
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_probe_diagnostics.py:73: RuntimeWarning: overflow encountered in matmul
+  views = diagnostics.kernel_views(frames@frames.T, query@frames.T)
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_probe_diagnostics.py:73: RuntimeWarning: invalid value encountered in matmul
+  views = diagnostics.kernel_views(frames@frames.T, query@frames.T)
+.../Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_probe_temporal.py:16: RuntimeWarning: divide by zero encountered in matmul
+  cross=dev.reshape(10,13)@train.reshape(16,13).T
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_probe_temporal.py:16: RuntimeWarning: overflow encountered in matmul
+  cross=dev.reshape(10,13)@train.reshape(16,13).T
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_probe_temporal.py:16: RuntimeWarning: invalid value encountered in matmul
+  cross=dev.reshape(10,13)@train.reshape(16,13).T
+......{"run": "tmpsf0iz5pp", "step": 2, "train_loss": 0.014771723188459873, "dev_mse": 0.008185838116332889, "gradient_norm": 0.3281517028808594, "elapsed_seconds": 0.009055415999999816, "trainable_parameters": 7190}
+{"run": "tmpsf0iz5pp", "step": 4, "train_loss": 0.004557535983622074, "dev_mse": 0.0029543497948907316, "gradient_norm": 0.14698077738285065, "elapsed_seconds": 0.01694645799999961, "trainable_parameters": 7190}
+.....{"run": "direct", "step": 2, "train_loss": 0.14178377389907837, "dev_mse": 0.11253934912383556, "gradient_norm": 1.16609525680542, "elapsed_seconds": 0.00550941699999985, "trainable_parameters": 7190}
+{"run": "direct", "step": 4, "train_loss": 0.08947477489709854, "dev_mse": 0.06558792851865292, "gradient_norm": 0.8720167875289917, "elapsed_seconds": 0.013194458000000076, "trainable_parameters": 7190}
+{"run": "resume", "step": 2, "train_loss": 0.14178377389907837, "dev_mse": 0.11253934912383556, "gradient_norm": 1.16609525680542, "elapsed_seconds": 0.005542874999999725, "trainable_parameters": 7190}
+{"run": "resume", "step": 4, "train_loss": 0.08947477489709854, "dev_mse": 0.06558792851865292, "gradient_norm": 0.8720167875289917, "elapsed_seconds": 0.005535124999999752, "trainable_parameters": 7190}
+...../Users/xintongyang/Library/Python/3.9/lib/python/site-packages/matplotlib/_fontconfig_pattern.py:64: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+  prop = Group((name + Suppress("=") + comma_separated(value)) | oneOf(_CONSTANTS))
+/Users/xintongyang/Library/Python/3.9/lib/python/site-packages/matplotlib/_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  parse = parser.parseString(pattern)
+/Users/xintongyang/Library/Python/3.9/lib/python/site-packages/matplotlib/_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+  parser.resetCache()
+/Users/xintongyang/Library/Python/3.9/lib/python/site-packages/matplotlib/_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'
+  ParserElement.enablePackrat()
+In /Users/xintongyang/Library/Python/3.9/lib/python/site-packages/matplotlib/mpl-data/stylelib/classic.mplstyle: 'parseString' deprecated - use 'parse_string'
+In /Users/xintongyang/Library/Python/3.9/lib/python/site-packages/matplotlib/mpl-data/stylelib/classic.mplstyle: 'resetCache' deprecated - use 'reset_cache'
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/pmr/visual_memory/report.py:58: UserWarning: No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+  ax.legend(fontsize=7)
+......................................
+----------------------------------------------------------------------
+Ran 104 tests in 6.810s
+
+OK

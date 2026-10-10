@@ -1,0 +1,116 @@
+{
+  "concat": {
+    "absolute_displacement_skill": 0.6741172521084837,
+    "checks": {
+      "nine_lower_bounds_positive": true,
+      "position_skill_over_point_one": true,
+      "repeated_frame_max_abs_at_most_1e_minus_6": true,
+      "reversal_max_abs_at_most_1e_minus_6": true
+    },
+    "contrast_skills": {
+      "end_anchor": [
+        0.7231540335108524,
+        0.8944515887913744,
+        0.6429460387261938,
+        0.863438295899003
+      ],
+      "start_anchor": [
+        0.7231540335108546,
+        0.8944515887913758,
+        0.6429460387261927,
+        0.8634382958990018
+      ]
+    },
+    "metric_conditions_met": true,
+    "position_skill": 0.9883714076281956,
+    "primary_lower_bounds": [
+      0.6700281003865599,
+      0.8678911689726718,
+      0.5812023569611762,
+      0.8323176624313369,
+      0.6700281003865614,
+      0.8678911689726735,
+      0.5812023569611777,
+      0.8323176624313353,
+      0.6483949678326053
+    ],
+    "repeated_center_max_abs": 2.629586920079873e-15,
+    "reversal_max_abs": 5.39499001028787e-15
+  },
+  "t6": {
+    "absolute_displacement_skill": 0.007938567005028513,
+    "checks": {
+      "nine_lower_bounds_positive": false,
+      "position_skill_over_point_one": true,
+      "repeated_frame_max_abs_at_most_1e_minus_6": false,
+      "reversal_max_abs_at_most_1e_minus_6": false
+    },
+    "contrast_skills": {
+      "end_anchor": [
+        0.009401897572238527,
+        0.05709340464098567,
+        -0.003599773337365386,
+        0.062179311004940674
+      ],
+      "start_anchor": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "metric_conditions_met": false,
+    "position_skill": 0.8909897395881803,
+    "primary_lower_bounds": [
+      0.0026572827075649567,
+      0.04996189485652821,
+      -0.012952480544031175,
+      0.05510222865778978,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.005839291413714069
+    ],
+    "repeated_center_max_abs": 0.0034563909481786456,
+    "reversal_max_abs": 0.006882297256583563
+  },
+  "t7": {
+    "absolute_displacement_skill": 0.00793856700502843,
+    "checks": {
+      "nine_lower_bounds_positive": false,
+      "position_skill_over_point_one": true,
+      "repeated_frame_max_abs_at_most_1e_minus_6": false,
+      "reversal_max_abs_at_most_1e_minus_6": false
+    },
+    "contrast_skills": {
+      "end_anchor": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "start_anchor": [
+        0.009401897572238527,
+        0.05709340464098567,
+        -0.003599773337365386,
+        0.06217931100494056
+      ]
+    },
+    "metric_conditions_met": false,
+    "position_skill": 0.929607596575756,
+    "primary_lower_bounds": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0026572827075650065,
+      0.04996189485652825,
+      -0.012952480544031298,
+      0.055102228657789847,
+      0.005839291413714018
+    ],
+    "repeated_center_max_abs": 0.0034563909481787045,
+    "reversal_max_abs": 0.006882297256583592
+  }
+}

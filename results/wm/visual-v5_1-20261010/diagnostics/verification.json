@@ -1,0 +1,74 @@
+{
+  "diagnostic_script_sha256": "982673cfeabeab0d2ec821e68de903cdafc59a2abe5c702165c6be30fa05a898",
+  "fitting": false,
+  "frozen_reader_sha256": "27ae0593f90c2728529f607b09893780d75badbf54261198b3e6f4a3f7b4596a",
+  "new_gate": false,
+  "posthoc_only": true,
+  "roles": {
+    "bridge": {
+      "comparison": {
+        "concat": {
+          "all_decisions_exact": true,
+          "all_numeric_values_bitwise_equal": true,
+          "maximum_absolute_metric_difference": 0.0,
+          "tolerance": {
+            "atol": 1e-12,
+            "rtol": 1e-12
+          }
+        },
+        "t6": {
+          "all_decisions_exact": true,
+          "all_numeric_values_bitwise_equal": true,
+          "maximum_absolute_metric_difference": 0.0,
+          "tolerance": {
+            "atol": 1e-12,
+            "rtol": 1e-12
+          }
+        },
+        "t7": {
+          "all_decisions_exact": true,
+          "all_numeric_values_bitwise_equal": true,
+          "maximum_absolute_metric_difference": 0.0,
+          "tolerance": {
+            "atol": 1e-12,
+            "rtol": 1e-12
+          }
+        }
+      },
+      "report_sha256": "18b1e43d48020d890cfac25316e1a80d269ed646f07f65be9cb382ce5866b8e4"
+    },
+    "confirm": {
+      "comparison": {
+        "concat": {
+          "all_decisions_exact": true,
+          "all_numeric_values_bitwise_equal": true,
+          "maximum_absolute_metric_difference": 0.0,
+          "tolerance": {
+            "atol": 1e-12,
+            "rtol": 1e-12
+          }
+        },
+        "t6": {
+          "all_decisions_exact": true,
+          "all_numeric_values_bitwise_equal": true,
+          "maximum_absolute_metric_difference": 0.0,
+          "tolerance": {
+            "atol": 1e-12,
+            "rtol": 1e-12
+          }
+        },
+        "t7": {
+          "all_decisions_exact": true,
+          "all_numeric_values_bitwise_equal": true,
+          "maximum_absolute_metric_difference": 0.0,
+          "tolerance": {
+            "atol": 1e-12,
+            "rtol": 1e-12
+          }
+        }
+      },
+      "report_sha256": "0290eb59c160eba6767d0aa28faff5283ec7fa46e412e14f645ea3eb05c45fd3"
+    }
+  },
+  "test_access": false
+}

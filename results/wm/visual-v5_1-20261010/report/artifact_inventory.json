@@ -1,0 +1,46 @@
+{
+  "README.md": {
+    "bytes": 4152,
+    "sha256": "bb5b3efe0013498bbaad916f13307106ed29a4c8e78a1634d803c75a1188c510"
+  },
+  "bridge_controls.png": {
+    "bytes": 62842,
+    "sha256": "b5758d2f7b4fad761765b574e6c743c8c1c60262627084bcb5fd03c8415d8f91"
+  },
+  "bridge_metrics.csv": {
+    "bytes": 1178,
+    "sha256": "3c5973ac61be2ee1fe5d99739ed86edfd824799a72d3f5b7f67ac2ca61a4f40c"
+  },
+  "confirmation_contrasts.png": {
+    "bytes": 74198,
+    "sha256": "00ffac28c1c844e085570c16b7b87a27fe8a17ecc5357f756081318b63788f3c"
+  },
+  "confirmation_controls.png": {
+    "bytes": 58663,
+    "sha256": "6c25f06873c3ced7f6e0d4685eb275dfc4fb1fdbe6d735649f05ffb52a0b4406"
+  },
+  "confirmation_metrics.csv": {
+    "bytes": 2831,
+    "sha256": "8a10b8abcd9352be55c44f4ec232b2822cb679b06d63914edd61ea3c275e2a18"
+  },
+  "fit_reader_selection.png": {
+    "bytes": 87998,
+    "sha256": "9dcdaa096beac4d31b6ebbb03aa5fe3900a09babdcec1b9ded57c8fab63c769d"
+  },
+  "input_inventory.json": {
+    "bytes": 1811,
+    "sha256": "4e92134d08cd91d52b9f94cb0ebcb160a6c8e69e1a45e45b98eceac2d0f41e66"
+  },
+  "jobs.csv": {
+    "bytes": 484,
+    "sha256": "ee3b7ddf2c7f4818036b3f30e7fee24010bd62f25c9214323e5b247bbd39e70c"
+  },
+  "summary.json": {
+    "bytes": 4474,
+    "sha256": "aad02e15981f4942fa2682e4db9476022a1562da6df01da23189eccef1356b96"
+  },
+  "train_cv.csv": {
+    "bytes": 4567,
+    "sha256": "40e7b295de0e72894b7a1e29cf9488b759e720c98fe10744460c6ade3af6ffa7"
+  }
+}

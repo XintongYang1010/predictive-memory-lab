@@ -1,0 +1,7 @@
+stage,slurm_step,allocation_job,selected_gpus,status,returncode,controller
+temporal_confirm,415453.20,415453,8,complete,0,confirm_controller.json
+reader_confirm,415453.21,415453,0,complete,0,confirm_controller.json
+temporal_bridge,415453.22,415453,8,complete,0,confirm_controller.json
+reader_bridge,415453.23,415453,0,complete,0,confirm_controller.json
+temporal_fit,415453.18,415453,8,complete,0,fit_controller.json
+reader_fit,415453.19,415453,0,complete,0,fit_controller.json

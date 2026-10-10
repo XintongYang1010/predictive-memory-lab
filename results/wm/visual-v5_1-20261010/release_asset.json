@@ -1,0 +1,9 @@
+{
+  "file": "visual-v5_1-20261010-remote-scene.tar.gz",
+  "sha256": "86ee5e31749476bde466d9b7e094c779adcbd9dc7590168402c8bb2992ba7358",
+  "bytes": 238634147,
+  "release_tag": "visual-v5_1-20261010",
+  "release_url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/tag/visual-v5_1-20261010",
+  "remote_manifest": "remote_scene_manifest.json",
+  "contains": "Complete new remote directory: all caches/shards, frozen reader checkpoint, source, configurations, logs, budget, receipts; external pre-existing official weights remain referenced by pinned SHA256"
+}

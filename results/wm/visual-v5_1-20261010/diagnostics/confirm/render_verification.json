@@ -1,0 +1,15 @@
+{
+  "checks": [
+    {
+      "block_id": 9,
+      "targets_equal": true
+    },
+    {
+      "block_id": 103,
+      "targets_equal": true
+    }
+  ],
+  "posthoc_only": true,
+  "report_required_before_render": true,
+  "selection_rule": "descending mean squared motion error over all four views and four coordinates; ties ascending block ID"
+}

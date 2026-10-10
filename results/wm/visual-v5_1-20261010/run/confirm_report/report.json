@@ -1,0 +1,259 @@
+{
+  "cache_identity": {
+    "encoder_identity": {
+      "checkpoint_sha256": "0382013c481743e9ccea89f970bc6c6aa126aa19a62127500d6e672a641aae22",
+      "model": "official I-JEPA ViT-H/14 target_encoder",
+      "source_commit": "52c1ae95d05f743e000e8f10a1f3a79b10cff048"
+    },
+    "feature_dtype": "float32",
+    "plan_sha256": "b2bd8f17c4abad23b2f2600b3dce572f8d1ec53b9500f129aff718b4aaacf711",
+    "pooling": "4x4_flattened",
+    "source_commit": "0e50f6aadbdcec9c9b787208362d9dde9b6360dd",
+    "source_identity": {
+      "docs/V5_1_EXECUTION_PROTOCOL.md": "0c243bcf0bba066ac9a60d57c3836f5200e29bcac0311eb7656c9fb283f50126",
+      "pmr/visual_memory/__init__.py": "5334f491766718f980788f117910c30e2b4d804bee37b69bd26438db575f0027",
+      "pmr/visual_memory/__main__.py": "bb4c496ca7009b617ff20badb661237d7e0afc35ec34972af15c61c42faa49b5",
+      "pmr/visual_memory/bind_gpu.py": "cab3427dddd890e1437393dc40cdb2381c623d177b32054f4bdd4c1f674fef45",
+      "pmr/visual_memory/common.py": "6b89bfca6f38aea698449edd7ece7da3baa14e16b97b805b6368d59853f5b4ac",
+      "pmr/visual_memory/data.py": "ce5082f3be9006dcceb46fbaffadc27349f977a77abcf8992eda3e80f8775368",
+      "pmr/visual_memory/feature_workers.py": "9334ce554d5d910d3f651e7d7d555ef23c629762b0f391f8b0e318d4c8fb1cc1",
+      "pmr/visual_memory/features.py": "5324748c4c2ef0cd82329d97c73a6cf8a21562501039ba31bd67dbc0efe29f93",
+      "pmr/visual_memory/memory.py": "779a3fa3ffd9a5e4b1b52111ae37ebb35292f61e2a4a4973cadffa61e6ec4b7b",
+      "pmr/visual_memory/predictor.py": "11b481b74fb50ad069c42335611677ab3dc20c0cc7dc8eef9e74b4472fb14d38",
+      "pmr/visual_memory/profiling.py": "a99b14df2651f4f32d5f242f28a877c47f83c6b5a8d425d31a891fa79c2c12fe",
+      "pmr/visual_memory/report.py": "fa8b54a0f1f840da0acf1cab11b23f24d6bbead8f214c4a1a6b4634cbbed225d",
+      "pmr/visual_memory/slurm_backend.py": "6b622a7f895adeaf1fd6dd84031639765ca9ce7c2e445ceba5d989f6a2c6fbbe",
+      "pmr/visual_memory/train.py": "59b8420c95625a08b324e93a7b5d75f7f44af58719a486002bd0cd831a1cf7bb",
+      "scripts/extract_v5_confirmation.py": "8db68a6a978014e18b9f3f12f81cdc7388048cfaf41c285c97c1c268ee656034",
+      "scripts/launch_v5_1.py": "d12789004d1a9409f813db760773b3265d7fec5da76e8acf12e23728cfc71aa0",
+      "scripts/run_v5_1_downstream.py": "f2a8c09059f099014530e8135367b725ad51c0d1dca941e43f17ef6e9ae6db0d",
+      "scripts/v5_confirmation_reader.py": "f1d9ef31eac1fd0aaf1ca066dccd6af37189e0297dc097d4acb1df61786abf3b",
+      "scripts/v5_temporal_confirmation.py": "6fe8a1f96e6d1209094fa2522dcccf4e9558afcb9714e8e9d7dd9785eb651681",
+      "scripts/v5_temporal_confirmation_plan.json": "b2bd8f17c4abad23b2f2600b3dce572f8d1ec53b9500f129aff718b4aaacf711"
+    }
+  },
+  "cache_receipt_sha256": "a70119a557c879bbf8e60bf16cc8c6d8e10cebc0dfd2c0040c7938ef49a9509d",
+  "cache_sha256": "34663d6b62adf9d96d44c728bd79b646f35950f25b4b02ea509abdfd57fb994d",
+  "controls": "t6 and t7 reported without winner selection",
+  "counts": {
+    "blocks": 256,
+    "views": 1024
+  },
+  "frozen_reader_sha256": "27ae0593f90c2728529f607b09893780d75badbf54261198b3e6f4a3f7b4596a",
+  "original_v5_gate": "failed_unchanged",
+  "p0_authorized": false,
+  "predictions_sha256": "a96eb473b7c08d3c07ad24a2579547e141282d55b79ea9d97d2d2b38bdfe7ee4",
+  "primary_metric_conditions_met": true,
+  "primary_reader": "concat",
+  "role": "confirm",
+  "schema": "v5-temporal-confirm-1",
+  "scores": {
+    "concat": {
+      "absolute_displacement_skill": 0.6741172521084837,
+      "blocks": 256,
+      "bootstrap": {
+        "interpretation": "Bonferroni-adjusted percentile bootstrap; finite-sample coverage approximate, fixed fitted reader",
+        "one_sided_quantile": 0.005555555555555556,
+        "replicates": 10000,
+        "seed": 7709,
+        "unit": "complete_four_view_block"
+      },
+      "bound_order": [
+        "end_A_dx",
+        "end_A_dy",
+        "end_B_dx",
+        "end_B_dy",
+        "start_A_dx",
+        "start_A_dy",
+        "start_B_dx",
+        "start_B_dy",
+        "absolute_mean"
+      ],
+      "checks": {
+        "nine_lower_bounds_positive": true,
+        "position_skill_over_point_one": true,
+        "repeated_frame_max_abs_at_most_1e_minus_6": true,
+        "reversal_max_abs_at_most_1e_minus_6": true
+      },
+      "contrast_skills": {
+        "end_anchor": [
+          0.7231540335108524,
+          0.8944515887913744,
+          0.6429460387261938,
+          0.863438295899003
+        ],
+        "start_anchor": [
+          0.7231540335108546,
+          0.8944515887913758,
+          0.6429460387261927,
+          0.8634382958990018
+        ]
+      },
+      "expected_confirmation_blocks": 256,
+      "metric_conditions_met": true,
+      "p0_authorized": false,
+      "position_skill": 0.9883714076281956,
+      "primary_lower_bounds": [
+        0.6700281003865599,
+        0.8678911689726718,
+        0.5812023569611762,
+        0.8323176624313369,
+        0.6700281003865614,
+        0.8678911689726735,
+        0.5812023569611777,
+        0.8323176624313353,
+        0.6483949678326053
+      ],
+      "remaining_requirements": [
+        "256 unique unseen confirmation blocks",
+        "independently verified input/model receipts",
+        "fresh original-distribution bridge",
+        "new versioned P0 protocol; original V5 gate stays failed"
+      ],
+      "repeated_center_max_abs": 2.629586920079873e-15,
+      "reversal_max_abs": 5.39499001028787e-15,
+      "schema": "v5-temporal-confirm-1",
+      "status": "metric_checks_only"
+    },
+    "t6": {
+      "absolute_displacement_skill": 0.007938567005028513,
+      "blocks": 256,
+      "bootstrap": {
+        "interpretation": "Bonferroni-adjusted percentile bootstrap; finite-sample coverage approximate, fixed fitted reader",
+        "one_sided_quantile": 0.005555555555555556,
+        "replicates": 10000,
+        "seed": 7709,
+        "unit": "complete_four_view_block"
+      },
+      "bound_order": [
+        "end_A_dx",
+        "end_A_dy",
+        "end_B_dx",
+        "end_B_dy",
+        "start_A_dx",
+        "start_A_dy",
+        "start_B_dx",
+        "start_B_dy",
+        "absolute_mean"
+      ],
+      "checks": {
+        "nine_lower_bounds_positive": false,
+        "position_skill_over_point_one": true,
+        "repeated_frame_max_abs_at_most_1e_minus_6": false,
+        "reversal_max_abs_at_most_1e_minus_6": false
+      },
+      "contrast_skills": {
+        "end_anchor": [
+          0.009401897572238527,
+          0.05709340464098567,
+          -0.003599773337365386,
+          0.062179311004940674
+        ],
+        "start_anchor": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "expected_confirmation_blocks": 256,
+      "metric_conditions_met": false,
+      "p0_authorized": false,
+      "position_skill": 0.8909897395881803,
+      "primary_lower_bounds": [
+        0.0026572827075649567,
+        0.04996189485652821,
+        -0.012952480544031175,
+        0.05510222865778978,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.005839291413714069
+      ],
+      "remaining_requirements": [
+        "256 unique unseen confirmation blocks",
+        "independently verified input/model receipts",
+        "fresh original-distribution bridge",
+        "new versioned P0 protocol; original V5 gate stays failed"
+      ],
+      "repeated_center_max_abs": 0.0034563909481786456,
+      "reversal_max_abs": 0.006882297256583563,
+      "schema": "v5-temporal-confirm-1",
+      "status": "metric_checks_only"
+    },
+    "t7": {
+      "absolute_displacement_skill": 0.00793856700502843,
+      "blocks": 256,
+      "bootstrap": {
+        "interpretation": "Bonferroni-adjusted percentile bootstrap; finite-sample coverage approximate, fixed fitted reader",
+        "one_sided_quantile": 0.005555555555555556,
+        "replicates": 10000,
+        "seed": 7709,
+        "unit": "complete_four_view_block"
+      },
+      "bound_order": [
+        "end_A_dx",
+        "end_A_dy",
+        "end_B_dx",
+        "end_B_dy",
+        "start_A_dx",
+        "start_A_dy",
+        "start_B_dx",
+        "start_B_dy",
+        "absolute_mean"
+      ],
+      "checks": {
+        "nine_lower_bounds_positive": false,
+        "position_skill_over_point_one": true,
+        "repeated_frame_max_abs_at_most_1e_minus_6": false,
+        "reversal_max_abs_at_most_1e_minus_6": false
+      },
+      "contrast_skills": {
+        "end_anchor": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "start_anchor": [
+          0.009401897572238527,
+          0.05709340464098567,
+          -0.003599773337365386,
+          0.06217931100494056
+        ]
+      },
+      "expected_confirmation_blocks": 256,
+      "metric_conditions_met": false,
+      "p0_authorized": false,
+      "position_skill": 0.929607596575756,
+      "primary_lower_bounds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0026572827075650065,
+        0.04996189485652825,
+        -0.012952480544031298,
+        0.055102228657789847,
+        0.005839291413714018
+      ],
+      "remaining_requirements": [
+        "256 unique unseen confirmation blocks",
+        "independently verified input/model receipts",
+        "fresh original-distribution bridge",
+        "new versioned P0 protocol; original V5 gate stays failed"
+      ],
+      "repeated_center_max_abs": 0.0034563909481787045,
+      "reversal_max_abs": 0.006882297256583592,
+      "schema": "v5-temporal-confirm-1",
+      "status": "metric_checks_only"
+    }
+  },
+  "sources": {
+    "v5_confirmation_reader.py": "f1d9ef31eac1fd0aaf1ca066dccd6af37189e0297dc097d4acb1df61786abf3b",
+    "v5_temporal_confirmation.py": "6fe8a1f96e6d1209094fa2522dcccf4e9558afcb9714e8e9d7dd9785eb651681",
+    "v5_temporal_confirmation_plan.json": "b2bd8f17c4abad23b2f2600b3dce572f8d1ec53b9500f129aff718b4aaacf711"
+  },
+  "test_access": false
+}
