@@ -48,4 +48,3 @@ Message: `888ba774-01fa-57b7-96d8-68805b03d858`. This is the received review tex
 **只有新确认与桥接均通过，才有理由进入新版本 P0。** P0 之后仍须通过正确历史相对 recent-only、swapped history 的检查，才能开始 memory 比较。
 
 本次新增代码的 **11 项 CPU 软件检查通过**；fresh 科学数据尚未生成。没有启动 GPU、操作远端或写入 main、原 results、diagnostics 分支；冻结源码的 81 个原文件保持不变。
-
