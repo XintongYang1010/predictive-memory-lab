@@ -1,0 +1,345 @@
+{
+  "status": "final_for_this_registered_diagnostic_after_zero_batch_shape_difference",
+  "evidence_scope": "Independent validation of complete compact comparison report and original archived prediction arrays; new raw feature files were not independently downloaded by this analysis",
+  "batch_audit": {
+    "feature_coordinates": 83886080,
+    "prediction_outputs": 98304,
+    "all_exactly_zero": true,
+    "derived_metrics_identical": true,
+    "workers_complete": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "actual_gpu_step": "415453.42",
+    "actual_cpu_step": "415453.43",
+    "charged_gpuh": 5.32908766817043,
+    "provenance": {
+      "first_cache_sha256": "7fadb29391ad86e5ab278176fd1c7fed7e3785cdeff0913a575bf6dd3a9c8e24",
+      "new_cache_sha256": "7f16d4c11b9e7bb1e5e75803075e14ffaab8f77cbee43af1f7c0b056bacb1838",
+      "new_receipt_sha256": "86c3a9d076819c26b1ddf7d85e8f96f222bd3b612179141fdedcccbf2156edd8",
+      "first_manifest_sha256": "70c188788b3c87e28d112bbca57aad37970cb662fa68f07668fa76249b21efa3",
+      "frozen_reader_sha256": "c76e58360f71facfc60e4abe933f51d4785f2dfdf64da71b1bfd39da63765c4e",
+      "lane_reader_sha256": "50654153b296b0489f7403ae12ccec0f4a939cf2befc27f2d70fef310f5b38b2",
+      "source_sha256": "144d86e8672931ccb5ef62feaf915078504fcc0a232a3fe1d4e79cac0a6632f4",
+      "source_commit": "280548d78f7a146fa2c20ed158fde4458fa867d4"
+    }
+  },
+  "conclusion_zh": "这轮可以定位到一个可改进的下游读出环节：编码器及其输出保持不变，仅采用预先固定的上下半区特征访问，原始512个片段的水平MSE下降29.78%，运动skill从0.4340升至0.5799，至少一个水平方向错误从196降至139。这是一项同时改变特征访问、维度、核几何及对应正则化几何的组合干预，不能把收益单独归因于目标分离，也不能据此宣判编码器正常或故障。全量统一batch4重编码后，8种条件的canonical特征和三个固定读出器的预测均逐项相同，因此本次观察到的对象干预响应不由原batch4/batch12差异造成。在固定Shapley分摊下，局部读出增强自身响应、减小另一目标响应，但黄色响应没有一致下降；自身运动响应不足和方向错误仍与串扰并存。这些是真实有限图像干预对整个编码→池化→读出链的响应，Shapley响应幅度不是模块责任或MSE占比；结论仍局限于已查看Dev、一个冻结FIT和当前渲染干预，旧gate及P0状态不变。",
+  "examples": [
+    {
+      "pair_id": 891,
+      "variant": 1,
+      "units": "normalized coordinate times224; not integer raster displacement",
+      "masks": {
+        "000": {
+          "true_dx_pixels": [
+            -0.0,
+            0.0
+          ],
+          "global_dx_pixels": [
+            6.567164439147666e-15,
+            -1.472530630245313e-13
+          ],
+          "lane_dx_pixels": [
+            1.1065260290017693e-13,
+            1.438277252530517e-13
+          ]
+        },
+        "001": {
+          "true_dx_pixels": [
+            -0.0,
+            0.0
+          ],
+          "global_dx_pixels": [
+            0.5348696880687746,
+            -1.086994197956304
+          ],
+          "lane_dx_pixels": [
+            -0.21682694405022426,
+            -0.9197989550918371
+          ]
+        },
+        "010": {
+          "true_dx_pixels": [
+            -0.0,
+            3.3483708202838898
+          ],
+          "global_dx_pixels": [
+            0.027954663786918087,
+            -0.9898636923569588
+          ],
+          "lane_dx_pixels": [
+            0.1382740996130216,
+            0.3034265975986923
+          ]
+        },
+        "011": {
+          "true_dx_pixels": [
+            -0.0,
+            3.3483708202838898
+          ],
+          "global_dx_pixels": [
+            0.4691920387343318,
+            -2.2975814315429397
+          ],
+          "lane_dx_pixels": [
+            0.1233918767630202,
+            -1.0658821991189598
+          ]
+        },
+        "100": {
+          "true_dx_pixels": [
+            -3.780692756175995,
+            0.0
+          ],
+          "global_dx_pixels": [
+            -2.4453061552523305,
+            -1.9258335385581393
+          ],
+          "lane_dx_pixels": [
+            -3.4926121584244356,
+            -0.832129788451074
+          ]
+        },
+        "101": {
+          "true_dx_pixels": [
+            -3.780692756175995,
+            0.0
+          ],
+          "global_dx_pixels": [
+            -1.5543864927362658,
+            -3.735366450732779
+          ],
+          "lane_dx_pixels": [
+            -2.915443217951285,
+            -2.331443344478115
+          ]
+        },
+        "110": {
+          "true_dx_pixels": [
+            -3.780692756175995,
+            3.3483708202838898
+          ],
+          "global_dx_pixels": [
+            -1.8431931830951305,
+            -2.4871367689530213
+          ],
+          "lane_dx_pixels": [
+            -3.0140243130742164,
+            -0.8516727484684373
+          ]
+        },
+        "111": {
+          "true_dx_pixels": [
+            -3.780692756175995,
+            3.3483708202838898
+          ],
+          "global_dx_pixels": [
+            -2.176457549146043,
+            -4.009175625247378
+          ],
+          "lane_dx_pixels": [
+            -3.1145334374028866,
+            -1.6692835489366786
+          ]
+        }
+      }
+    },
+    {
+      "pair_id": 844,
+      "variant": 1,
+      "units": "normalized coordinate times224; not integer raster displacement",
+      "masks": {
+        "000": {
+          "true_dx_pixels": [
+            -0.0,
+            -0.0
+          ],
+          "global_dx_pixels": [
+            1.2083475721847756e-13,
+            -4.021193705425867e-14
+          ],
+          "lane_dx_pixels": [
+            1.4403403038353795e-13,
+            -5.552936610554558e-14
+          ]
+        },
+        "001": {
+          "true_dx_pixels": [
+            -0.0,
+            -0.0
+          ],
+          "global_dx_pixels": [
+            1.1475945781344796,
+            -0.6227384994085479
+          ],
+          "lane_dx_pixels": [
+            0.496613758772087,
+            -1.9102986535192887
+          ]
+        },
+        "010": {
+          "true_dx_pixels": [
+            -0.0,
+            -3.6896784901618958
+          ],
+          "global_dx_pixels": [
+            -0.677662082661078,
+            -0.07081222670250575
+          ],
+          "lane_dx_pixels": [
+            -0.41526929253438205,
+            -1.3071447217994967
+          ]
+        },
+        "011": {
+          "true_dx_pixels": [
+            -0.0,
+            -3.6896784901618958
+          ],
+          "global_dx_pixels": [
+            0.3629731054460319,
+            -0.1038082172164101
+          ],
+          "lane_dx_pixels": [
+            -0.2070717432287699,
+            -2.113368838522682
+          ]
+        },
+        "100": {
+          "true_dx_pixels": [
+            -3.2782478034496307,
+            -0.0
+          ],
+          "global_dx_pixels": [
+            1.83721911395459,
+            4.165736219764039
+          ],
+          "lane_dx_pixels": [
+            0.11110189350609681,
+            1.0556871472843046
+          ]
+        },
+        "101": {
+          "true_dx_pixels": [
+            -3.2782478034496307,
+            -0.0
+          ],
+          "global_dx_pixels": [
+            2.9759416805687566,
+            3.3139354327132717
+          ],
+          "lane_dx_pixels": [
+            0.6696166506828134,
+            -0.6013212338889828
+          ]
+        },
+        "110": {
+          "true_dx_pixels": [
+            -3.2782478034496307,
+            -3.6896784901618958
+          ],
+          "global_dx_pixels": [
+            0.3415883249789965,
+            4.721305010517721
+          ],
+          "lane_dx_pixels": [
+            -0.418647816729077,
+            0.8540698143347795
+          ]
+        },
+        "111": {
+          "true_dx_pixels": [
+            -3.2782478034496307,
+            -3.6896784901618958
+          ],
+          "global_dx_pixels": [
+            1.7074802291530837,
+            4.439321623929701
+          ],
+          "lane_dx_pixels": [
+            -0.22944031344935253,
+            -0.44375250161917984
+          ]
+        }
+      }
+    }
+  ],
+  "original_comparison": {
+    "global_minus_lane_dx_mse": 3.527822689661896e-05,
+    "paired_95ci": [
+      2.839088036809452e-05,
+      4.2309516139479786e-05
+    ]
+  },
+  "prior_mechanism_summary": {
+    "W_concat": {
+      "own_gain_through_origin_descriptive": [
+        0.422290433370113,
+        0.5547023829135933,
+        0.41321737696756744,
+        0.5966820504252853
+      ],
+      "own_error_rms": [
+        0.00908375281324811,
+        0.007795411968476509,
+        0.009177171082120409,
+        0.007490572299379466
+      ],
+      "other_target_rms": [
+        0.004021710589856091,
+        0.0032827589634458632,
+        0.004234685354899209,
+        0.003183831011244238
+      ],
+      "yellow_rms": [
+        0.004835392833032041,
+        0.0029656519170799395,
+        0.003584947920620445,
+        0.002992255542106692
+      ]
+    },
+    "lane_W": {
+      "own_gain_through_origin_descriptive": [
+        0.6110959035447324,
+        0.6819999571816113,
+        0.5758356005963117,
+        0.6662813666241605
+      ],
+      "own_error_rms": [
+        0.007281551379440536,
+        0.00638553709898836,
+        0.007717820384955397,
+        0.006872956008974503
+      ],
+      "other_target_rms": [
+        0.0027848088674324962,
+        0.0024891548621733244,
+        0.002678535244887903,
+        0.0024442405588556257
+      ],
+      "yellow_rms": [
+        0.004766511180640954,
+        0.002881544218594225,
+        0.0038803872271276785,
+        0.003299507585163589
+      ]
+    }
+  },
+  "input_sha256": {
+    "latest-batch-monitor.txt": "964a89338d798cfe084913d6c53d55d51d183d4b89eabd5b622d7026eb5fea1b",
+    "independent_interpretation.json": "902a5080a2d38b2ebcf9e06283c2aa68a64caec3bea8cd890ac0b5af38b5afda",
+    "report-snapshot/report/predictions.npz": "f3f66de4fb643ccbf4bb011761111d24aa49170e539c186a41d93068026eb294"
+  },
+  "analysis_script_sha256": "f69eec98ad95d6d205d058aae6459d8e090bd74990b9686e009f181d56c6686c",
+  "test_opened": false,
+  "p0_authorized": false,
+  "no_new_fit": true,
+  "no_new_images": true
+}

@@ -1,0 +1,14 @@
+{
+  "creation": {
+    "created_unix": 1791656165.8889444,
+    "device": 2345267470,
+    "inode": 180144508711834788,
+    "parent_preserved": true,
+    "preexisted": false,
+    "root": "/aifs4su/guhao/KVCache/WM/diagnostic-20261010-v55/batch_match_run",
+    "token": "12159502fd4040e88572c8cdab6bc9f9",
+    "uid": 1046
+  },
+  "source_commit": "280548d78f7a146fa2c20ed158fde4458fa867d4",
+  "verified_source_files": 136
+}

@@ -1,0 +1,27 @@
+{
+  "addendum_sha256": "c85c085bf02f576319188549b4a98ea5ae68d94fa6b556649f4e699da2d03b21",
+  "charged_gpuh": 5.203734614439568,
+  "files": {
+    "docs/V5_5_BATCH_MATCH_ADDENDUM.md": {
+      "bytes": 2772,
+      "git_blob_sha": "562ffa2f4ccafc3ec9b30bd3b919604cec2e6fc9",
+      "sha256": "c85c085bf02f576319188549b4a98ea5ae68d94fa6b556649f4e699da2d03b21"
+    },
+    "scripts/launch_v5_5_batch_match.py": {
+      "bytes": 5007,
+      "git_blob_sha": "9b28ab7ce16e65f174920af5d17b216ca17d4b4f",
+      "sha256": "4371de5e5bc71450c489ba60b77984c44e28cb11ac809c29a2a079d29e526108"
+    },
+    "scripts/v5_5_batch_match.py": {
+      "bytes": 26622,
+      "git_blob_sha": "65088dcbaee10bd7a27f1bc2f0f6a8ac81ca49be",
+      "sha256": "144d86e8672931ccb5ef62feaf915078504fcc0a232a3fe1d4e79cac0a6632f4"
+    }
+  },
+  "first_cache_manifest_sha256": "70c188788b3c87e28d112bbca57aad37970cb662fa68f07668fa76249b21efa3",
+  "first_ledger_sha256": "4b476efd94f45ef9b6ec70912c021904dc2cb8c008ff8d2600aef398edd250e5",
+  "remaining_gpuh": 0.5185297268088387,
+  "source_commit": "280548d78f7a146fa2c20ed158fde4458fa867d4",
+  "verified_readback": true,
+  "verified_unix": 1791656158.5093591
+}

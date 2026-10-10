@@ -1,0 +1,108 @@
+{
+  "schema": "v5.5.descriptive-figures-1",
+  "created_unix": 1791656241.167967,
+  "renderer": {
+    "path": "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_5-20261010/make_figures.py",
+    "bytes": 13694,
+    "sha256": "91f4c1a800c9b5d75db498edbd2cb90eb1b0e19ac2307a11da155098a90936e7"
+  },
+  "inputs": {
+    "report.json": {
+      "path": "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_5-20261010/report-snapshot/report/report.json",
+      "bytes": 185978,
+      "sha256": "d865026f0ea2fcfcfab60eca47d1a92eeac87aa701ebfce4ce4a35dc80e70f17"
+    },
+    "predictions.npz": {
+      "path": "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_5-20261010/report-snapshot/report/predictions.npz",
+      "bytes": 1853693,
+      "sha256": "f3f66de4fb643ccbf4bb011761111d24aa49170e539c186a41d93068026eb294"
+    },
+    "pool_per_episode.json": {
+      "path": "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_5-20261010/report-snapshot/report/pool_per_episode.json",
+      "bytes": 142805,
+      "sha256": "1932785fcf65e85a592cfc50b830b6914fc7a3e4c0b92188160e8f553df78a2a"
+    },
+    "manifest.json": {
+      "path": "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_5-20261010/report-snapshot/report/manifest.json",
+      "bytes": 650,
+      "sha256": "f54c3aa3138b12776e80da7e1d0eaed8d059ce7ca7098160f5e2210311d07087"
+    }
+  },
+  "source_commit": "d0cae2237fe2cc8e562e1c62744a6958157a3e60",
+  "fixed_cases": [
+    {
+      "pair_id": 844,
+      "variant": 1
+    },
+    {
+      "pair_id": 761,
+      "variant": 1
+    },
+    {
+      "pair_id": 891,
+      "variant": 1
+    }
+  ],
+  "no_fit": true,
+  "no_model_selection": true,
+  "thumbnails_generated": false,
+  "scientific_result_modified": false,
+  "files": {
+    "01_all_masks_dx_mse.png": {
+      "bytes": 83643,
+      "sha256": "e78642dd5ac5e6483688cd63f4013593e08d01f18213d164a0d6ac4341b20615"
+    },
+    "01_all_masks_dx_mse.svg": {
+      "bytes": 24200,
+      "sha256": "e81c18744a0e1b1d65b21a31c22426b1fd9df077c93981ef2efd746a0c65992b"
+    },
+    "02_shapley_component_rms.png": {
+      "bytes": 86868,
+      "sha256": "e847ff2734f93075873e647132f672ee1f889ee719b8f75aaac6f4a50c16a133"
+    },
+    "02_shapley_component_rms.svg": {
+      "bytes": 30047,
+      "sha256": "48f2122b5c321a252f7b260ca88d67ff54f36ab04a2f6888d941368b429fd387"
+    },
+    "03_original_direction_amplitude.png": {
+      "bytes": 63542,
+      "sha256": "2fedca1b1612d646d15720a1e7fc44995900fe52f322456aa512375b2072931d"
+    },
+    "03_original_direction_amplitude.svg": {
+      "bytes": 18142,
+      "sha256": "5c9bebed7a992308fa3982bfe60df7994fadc3df707821288a14948fd1e80f50"
+    },
+    "04_pool_projection_energy.png": {
+      "bytes": 75615,
+      "sha256": "2a54e2fd22dc5f911d3a86d99abf24b1853c17c1d90e58e2c81648dbe9703ae7"
+    },
+    "04_pool_projection_energy.svg": {
+      "bytes": 26809,
+      "sha256": "4e756238faab0e9f5148c2b13907c696dfe158ed41fc26964f895d81abac24ee"
+    },
+    "case_761_1_predictions.png": {
+      "bytes": 220379,
+      "sha256": "ac7ff1771d3de1a7d4a1b811b9048f318ec69139d34cd0c8e84b6da546d1695b"
+    },
+    "case_761_1_predictions.svg": {
+      "bytes": 50872,
+      "sha256": "39223320621329d50a431ed66a14f3b04e156d1776230c026678fb1e6bfff5f4"
+    },
+    "case_844_1_predictions.png": {
+      "bytes": 203797,
+      "sha256": "97d13180024e94b538a125d49c74883266f1611138b2cc5d82b7ee85d6731469"
+    },
+    "case_844_1_predictions.svg": {
+      "bytes": 49095,
+      "sha256": "a10e9e04523a9051d42f4aeb016f5d295f249c1c88f7e6bfe44f4c2604cd09d2"
+    },
+    "case_891_1_predictions.png": {
+      "bytes": 218783,
+      "sha256": "cccf2e97d24a05caaa6c78f5641b21632b423596e775c3b5cd535abd6e71b559"
+    },
+    "case_891_1_predictions.svg": {
+      "bytes": 46692,
+      "sha256": "1d366233ac627d835971f43e89ee5cda47bb3580788713484acb924fbc179a92"
+    }
+  }
+}

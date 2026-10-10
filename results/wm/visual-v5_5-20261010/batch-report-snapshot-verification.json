@@ -1,0 +1,57 @@
+{
+  "all_downloaded_files_verified": true,
+  "files": {
+    "batch_match_run/cache/manifest.json": {
+      "bytes": 93363,
+      "sha256": "0bc36081d0346911a0ce64ecf4e3b8bb1d87e6ee52d85e0562b797b445f60387"
+    },
+    "batch_match_run/cache/receipt.json": {
+      "bytes": 26643,
+      "sha256": "86c3a9d076819c26b1ddf7d85e8f96f222bd3b612179141fdedcccbf2156edd8"
+    },
+    "batch_match_run/comparison/feature_per_endpoint.csv": {
+      "bytes": 106557,
+      "sha256": "0e7543d74564a22dad61a213f2b04fc15a23352a2aac21b58c5840b72947befa"
+    },
+    "batch_match_run/comparison/manifest.json": {
+      "bytes": 464,
+      "sha256": "8643f17c1570cb7168b13ceb0577f7f7941ef91642d05e7ff13849109d549917"
+    },
+    "batch_match_run/comparison/predictions.npz": {
+      "bytes": 4792400,
+      "sha256": "b89c4519a96fffbb31f5a8dc348a80b3622865c5365065c3214a78c971a64b8f"
+    },
+    "batch_match_run/comparison/report.json": {
+      "bytes": 232143,
+      "sha256": "745879fd9aee5b6948cfa9082dcd0e9b5662f71721a9737c765e59f7b2ad88c9"
+    },
+    "batch_match_run/creation.json": {
+      "bytes": 287,
+      "sha256": "93becfe4bd4d14216633a2b397fcdd424da3ba6ef86a8e48b7c5969b205f416c"
+    },
+    "batch_match_run/extraction_controller.json": {
+      "bytes": 6235,
+      "sha256": "3ff5ff48a0afe52f90c5bd1ae2e7cdf899c1598a3f8f2b87a78d82cd9b5acf1b"
+    },
+    "batch_match_run/gpu_selection/v55_batch4_415453_42.json": {
+      "bytes": 6599,
+      "sha256": "8f83db6e0a9636a9c1d3562a8f0dd1a4a1e240b87f71ac9e5c9bffd31b587e6f"
+    },
+    "batch_match_run/ledger/budget.json": {
+      "bytes": 12910,
+      "sha256": "8f813dbcc6b439c72c7826fb3fd6468e31566838cc629e22e9736365662a578a"
+    },
+    "batch_match_run/logs/v55_batch4_415453.42.log": {
+      "bytes": 29997,
+      "sha256": "cbc8d16b6ed41c8a2589a1dfe05458a49863fc8450cb5c99321a01edca8c35d3"
+    },
+    "batch_match_run/logs/v55_batch_score_415453.43.log": {
+      "bytes": 89,
+      "sha256": "ee3b454e170668b129cc47ff99484af296a0a9d2b06b319d5caab4110029b189"
+    },
+    "batch_match_run/owned_step.json": {
+      "bytes": 154,
+      "sha256": "ac4873c0d4560481a3e311a9a3b29b42149114038f1b79352a6eaeaa5d3ecc50"
+    }
+  }
+}

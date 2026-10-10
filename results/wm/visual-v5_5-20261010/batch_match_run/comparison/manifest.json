@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "files": {
+    "feature_per_endpoint.csv": {
+      "bytes": 106557,
+      "sha256": "0e7543d74564a22dad61a213f2b04fc15a23352a2aac21b58c5840b72947befa"
+    },
+    "predictions.npz": {
+      "bytes": 4792400,
+      "sha256": "b89c4519a96fffbb31f5a8dc348a80b3622865c5365065c3214a78c971a64b8f"
+    },
+    "report.json": {
+      "bytes": 232143,
+      "sha256": "745879fd9aee5b6948cfa9082dcd0e9b5662f71721a9737c765e59f7b2ad88c9"
+    }
+  }
+}

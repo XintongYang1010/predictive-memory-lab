@@ -1,0 +1,11 @@
+{
+  "status": "diagnostic_complete",
+  "original_global_vs_lane": {
+    "global_minus_lane_dx_mse": 3.527822689661896e-05,
+    "paired_95ci": [
+      2.839088036809452e-05,
+      4.2309516139479786e-05
+    ]
+  },
+  "elapsed_seconds": 25.802255630493164
+}

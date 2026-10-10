@@ -1,0 +1,73 @@
+{
+  "all_downloaded_files_verified": true,
+  "files": {
+    "counterfactual_cache/manifest.json": {
+      "bytes": 130725,
+      "sha256": "70c188788b3c87e28d112bbca57aad37970cb662fa68f07668fa76249b21efa3"
+    },
+    "counterfactual_cache/receipt.json": {
+      "bytes": 139376,
+      "sha256": "000ec48d9a2a7ba7ea07025f87e246ae87045d3a122ca478f6d7b10c4e5d4f46"
+    },
+    "extraction_controller.json": {
+      "bytes": 6184,
+      "sha256": "758ceb7eac9ccd8babae9468a3f3384156fa7166ac486ec7acc43a4a922bdd94"
+    },
+    "gpu_selection/v55_counterfactual_415453_40.json": {
+      "bytes": 6613,
+      "sha256": "4ac19a8564b636bcb46b8197f4e1c96f0a3dc216d166c0664e34f2e151f25f1c"
+    },
+    "ledger/budget.json": {
+      "bytes": 12061,
+      "sha256": "4b476efd94f45ef9b6ec70912c021904dc2cb8c008ff8d2600aef398edd250e5"
+    },
+    "logs/v55_counterfactual_415453.40.log": {
+      "bytes": 142730,
+      "sha256": "56a1ccfa9a58ada262b8b5a9fcd29b49728cda8bb20edc5cf714c80125040702"
+    },
+    "logs/v55_score_415453.41.log": {
+      "bytes": 255,
+      "sha256": "3a30b225a57c8b798a4b4578b8652ef864492b135fc9b5fd8df601517adf443f"
+    },
+    "owned_step.json": {
+      "bytes": 155,
+      "sha256": "8165a905598462553005c5228981ee984c3c90f15fd8623190a1eabfb626cf5e"
+    },
+    "registration_publication.json": {
+      "bytes": 30314,
+      "sha256": "7f5d66120a10974282340a534c84c7ddabcf9f32349dfce135c420d84f1b7f66"
+    },
+    "report/manifest.json": {
+      "bytes": 650,
+      "sha256": "f54c3aa3138b12776e80da7e1d0eaed8d059ce7ca7098160f5e2210311d07087"
+    },
+    "report/parity.json": {
+      "bytes": 128,
+      "sha256": "cd4a025f49bf9bccde9d45d11f8499b49a23b04817d6e760202554c1a2e8510d"
+    },
+    "report/per_episode.csv": {
+      "bytes": 1368159,
+      "sha256": "1a1ac305da327e1fe4ac115083085f8afb38543dbe638ba24923587b140766b9"
+    },
+    "report/pool_per_episode.json": {
+      "bytes": 142805,
+      "sha256": "1932785fcf65e85a592cfc50b830b6914fc7a3e4c0b92188160e8f553df78a2a"
+    },
+    "report/predictions.npz": {
+      "bytes": 1853693,
+      "sha256": "f3f66de4fb643ccbf4bb011761111d24aa49170e539c186a41d93068026eb294"
+    },
+    "report/report.json": {
+      "bytes": 185978,
+      "sha256": "d865026f0ea2fcfcfab60eca47d1a92eeac87aa701ebfce4ce4a35dc80e70f17"
+    },
+    "score_process.json": {
+      "bytes": 964,
+      "sha256": "a351674be76eab5c5b0658889442bf6fef235b2aeb97a775eada14f62fac4319"
+    },
+    "source_manifest.json": {
+      "bytes": 14033,
+      "sha256": "9b131408698767c3a39de17a9d250c8b1814bc29597e674479ed1982d2e24226"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "status": "visual_review_complete",
+  "reviewed_unix": 1791656277.2096572,
+  "figure_manifest_sha256": "f47eedfb81cd1271a154f7db4b047dbe8daeed862e01ec7769fa9db01cdd5024",
+  "files_verified": 14,
+  "groups_reviewed": [
+    "all8mask_dx_mse",
+    "shapley_component_rms",
+    "original_direction_amplitude",
+    "pool_projection_energy",
+    "case844_1",
+    "case761_1",
+    "case891_1"
+  ],
+  "layout": "case legend moved into dedicated top margin; no title overlap; full axes and captions visible",
+  "source": "first V5.5 extraction, original batch4 plus edited batch12",
+  "batch_match_status": "complete: all canonical values and all N/W/lane predictions exactly equal; no figure redraw necessary",
+  "no_new_rgb": true,
+  "no_training": true,
+  "archive_only_directory": "figures; figures-layout-draft* are superseded local rendering drafts",
+  "batch_comparison_report_sha256": "745879fd9aee5b6948cfa9082dcd0e9b5662f71721a9737c765e59f7b2ad88c9",
+  "batch_comparison_manifest_sha256": "8643f17c1570cb7168b13ceb0577f7f7941ef91642d05e7ff13849109d549917",
+  "batch_prediction_arrays_independently_equal": true,
+  "canonical_feature_values_verified_zero_difference": 83886080,
+  "batch_reviewed_unix": 1791656587.29862
+}
