@@ -1,0 +1,1120 @@
+{
+  "schema": "v5-archive-1",
+  "experiment_status": "partial",
+  "stages": {
+    "profile": {
+      "status": "complete",
+      "runtime": {
+        "python": "3.11.15",
+        "torch": "2.8.0+cu128",
+        "cuda": "12.8",
+        "gpu": "NVIDIA H800",
+        "job_id": "415453"
+      },
+      "slurm": {
+        "backend": "dgx",
+        "account": "hansirui",
+        "partition": "llm",
+        "qos": "llm",
+        "cluster": "slurm",
+        "job_id": "415453",
+        "step_id": "14",
+        "requested_gpu_model": "H800",
+        "actual_gpu": "NVIDIA H800",
+        "visible_gpu_count": 1,
+        "parent_allocated_gpu_count": 8,
+        "step_allocated_gpu_count": 8,
+        "task_selected_gpu_index": 3,
+        "task_selected_gpu_count": 1,
+        "pilot_accounting": "1 explicitly selected GPU(s); existing parent allocation accounted separately",
+        "allow_gpu_sharing": true,
+        "minimum_free_gpu_gib": 40.0,
+        "shared_parent_allocation": true,
+        "selected_gpu": {
+          "index": 3,
+          "uuid": "GPU-ce743878-6a02-ca37-28ce-3b78d9b7bbe9",
+          "name": "NVIDIA H800",
+          "occupied_by_other_pids": [],
+          "allow_gpu_sharing": true,
+          "free_memory_gib": 79.17578125,
+          "total_memory_gib": 79.6474609375,
+          "minimum_free_memory_gib": 40.0,
+          "selection": "explicit CUDA UUID subset of verified Slurm step allocation",
+          "scheduler_gpu_binding": "gpu:map_gpu:3",
+          "parent_gpus": 8,
+          "step_gpus": 8,
+          "selected_gpus": 1
+        },
+        "selected_gpus": [
+          {
+            "index": 3,
+            "uuid": "GPU-ce743878-6a02-ca37-28ce-3b78d9b7bbe9",
+            "name": "NVIDIA H800",
+            "occupied_by_other_pids": [],
+            "allow_gpu_sharing": true,
+            "free_memory_gib": 79.17578125,
+            "total_memory_gib": 79.6474609375,
+            "minimum_free_memory_gib": 40.0,
+            "selection": "explicit CUDA UUID subset of verified Slurm step allocation",
+            "scheduler_gpu_binding": "gpu:map_gpu:3",
+            "parent_gpus": 8,
+            "step_gpus": 8,
+            "selected_gpus": 1
+          }
+        ],
+        "slurm_job": {
+          "JobId": "415453",
+          "JobName": "indexmem-h800-hold-5d-20261008",
+          "UserId": "guhao(1046)",
+          "GroupId": "Gov(1009)",
+          "MCS_label": "N/A",
+          "Priority": "4294708234",
+          "Nice": "0",
+          "Account": "hansirui",
+          "QOS": "llm",
+          "JobState": "RUNNING",
+          "Reason": "None",
+          "Dependency": "(null)",
+          "Requeue": "1",
+          "Restarts": "0",
+          "BatchFlag": "1",
+          "Reboot": "0",
+          "ExitCode": "0:0",
+          "RunTime": "1-18:26:21",
+          "TimeLimit": "5-00:00:00",
+          "TimeMin": "N/A",
+          "SubmitTime": "2026-10-08T13:50:59",
+          "EligibleTime": "2026-10-08T13:50:59",
+          "AccrueTime": "2026-10-08T13:50:59",
+          "StartTime": "2026-10-08T14:53:41",
+          "EndTime": "2026-10-13T14:53:41",
+          "Deadline": "N/A",
+          "SuspendTime": "None",
+          "SecsPreSuspend": "0",
+          "LastSchedEval": "2026-10-08T14:53:41",
+          "Scheduler": "Main",
+          "Partition": "llm",
+          "ReqNodeList": "(null)",
+          "ExcNodeList": "(null)",
+          "NodeList": "dgx-097",
+          "BatchHost": "dgx-097",
+          "NumNodes": "1",
+          "NumCPUs": "64",
+          "NumTasks": "1",
+          "ReqTRES": "cpu=64,mem=2063935M,node=1,billing=64,gres/gpu=8",
+          "AllocTRES": "cpu=64,node=1,billing=64,gres/gpu=8",
+          "CoreSpec": "*",
+          "MinCPUsNode": "64",
+          "MinMemoryNode": "0",
+          "MinTmpDiskNode": "0",
+          "Features": "(null)",
+          "DelayBoot": "00:00:00",
+          "OverSubscribe": "OK",
+          "Contiguous": "0",
+          "Licenses": "(null)",
+          "Network": "(null)",
+          "Command": "/aifs4su/guhao/debug_h800_8gpu_5days_20260908.slurm",
+          "WorkDir": "/home/guhao",
+          "StdErr": "/aifs4su/guhao/logs/debug-h800-5d-415453.err",
+          "StdIn": "/dev/null",
+          "StdOut": "/aifs4su/guhao/logs/debug-h800-5d-415453.out",
+          "TresPerNode": "gres:gpu:8"
+        },
+        "slurm_step": {
+          "StepId": "415453.14",
+          "UserId": "1046",
+          "StartTime": "2026-10-10T09:19:59",
+          "TimeLimit": "00:30:00",
+          "State": "RUNNING",
+          "Partition": "llm",
+          "NodeList": "dgx-097",
+          "Nodes": "1",
+          "CPUs": "4",
+          "Tasks": "1",
+          "Name": "v5_profile",
+          "Network": "(null)",
+          "TRES": "cpu=4,gres/gpu=8,mem=0,node=1",
+          "ResvPorts": "(null)",
+          "CPUFreqReq": "Default",
+          "Dist": "Cyclic",
+          "TresBind": "gpu:map_gpu:3",
+          "TresPerStep": "cpu:4",
+          "TresPerNode": "gres:gpu:8",
+          "TresPerTask": "cpu:4"
+        }
+      }
+    },
+    "features": {
+      "status": "partial",
+      "reason": "Pooled visual cue probe failed; inspect raw vs pooled before training P0",
+      "runtime": {
+        "python": "3.11.15",
+        "torch": "2.8.0+cu128",
+        "cuda": "12.8",
+        "gpu": "NVIDIA H800",
+        "job_id": "415453"
+      },
+      "slurm": {
+        "backend": "dgx",
+        "account": "hansirui",
+        "partition": "llm",
+        "qos": "llm",
+        "cluster": "slurm",
+        "job_id": "415453",
+        "step_id": "15",
+        "requested_gpu_model": "H800",
+        "actual_gpu": "NVIDIA H800",
+        "visible_gpu_count": 8,
+        "parent_allocated_gpu_count": 8,
+        "step_allocated_gpu_count": 8,
+        "task_selected_gpu_index": null,
+        "task_selected_gpu_count": 8,
+        "pilot_accounting": "8 explicitly selected GPU(s); existing parent allocation accounted separately",
+        "allow_gpu_sharing": true,
+        "minimum_free_gpu_gib": 40.0,
+        "shared_parent_allocation": true,
+        "selected_gpu": null,
+        "selected_gpus": [
+          {
+            "index": 0,
+            "uuid": "GPU-da1decf6-d33d-ca44-9340-8c9c6b45ceb6",
+            "name": "NVIDIA H800",
+            "occupied_by_other_pids": [
+              "4084652"
+            ],
+            "allow_gpu_sharing": true,
+            "free_memory_gib": 62.6455078125,
+            "total_memory_gib": 79.6474609375,
+            "minimum_free_memory_gib": 40.0,
+            "selection": "explicit CUDA UUID subset of verified Slurm step allocation",
+            "scheduler_gpu_binding": null,
+            "parent_gpus": 8,
+            "step_gpus": 8,
+            "selected_gpus": 1
+          },
+          {
+            "index": 1,
+            "uuid": "GPU-a27a6655-95b8-cb05-ed08-b15125877960",
+            "name": "NVIDIA H800",
+            "occupied_by_other_pids": [
+              "4084796"
+            ],
+            "allow_gpu_sharing": true,
+            "free_memory_gib": 62.7138671875,
+            "total_memory_gib": 79.6474609375,
+            "minimum_free_memory_gib": 40.0,
+            "selection": "explicit CUDA UUID subset of verified Slurm step allocation",
+            "scheduler_gpu_binding": null,
+            "parent_gpus": 8,
+            "step_gpus": 8,
+            "selected_gpus": 1
+          },
+          {
+            "index": 2,
+            "uuid": "GPU-aeca771a-00a6-7a2a-fc47-dc7b3db7bf0f",
+            "name": "NVIDIA H800",
+            "occupied_by_other_pids": [
+              "4084680"
+            ],
+            "allow_gpu_sharing": true,
+            "free_memory_gib": 62.5830078125,
+            "total_memory_gib": 79.6474609375,
+            "minimum_free_memory_gib": 40.0,
+            "selection": "explicit CUDA UUID subset of verified Slurm step allocation",
+            "scheduler_gpu_binding": null,
+            "parent_gpus": 8,
+            "step_gpus": 8,
+            "selected_gpus": 1
+          },
+          {
+            "index": 3,
+            "uuid": "GPU-ce743878-6a02-ca37-28ce-3b78d9b7bbe9",
+            "name": "NVIDIA H800",
+            "occupied_by_other_pids": [],
+            "allow_gpu_sharing": true,
+            "free_memory_gib": 79.17578125,
+            "total_memory_gib": 79.6474609375,
+            "minimum_free_memory_gib": 40.0,
+            "selection": "explicit CUDA UUID subset of verified Slurm step allocation",
+            "scheduler_gpu_binding": null,
+            "parent_gpus": 8,
+            "step_gpus": 8,
+            "selected_gpus": 1
+          },
+          {
+            "index": 4,
+            "uuid": "GPU-c15374ab-3124-048a-40c1-15e42a684766",
+            "name": "NVIDIA H800",
+            "occupied_by_other_pids": [
+              "4084873"
+            ],
+            "allow_gpu_sharing": true,
+            "free_memory_gib": 62.6455078125,
+            "total_memory_gib": 79.6474609375,
+            "minimum_free_memory_gib": 40.0,
+            "selection": "explicit CUDA UUID subset of verified Slurm step allocation",
+            "scheduler_gpu_binding": null,
+            "parent_gpus": 8,
+            "step_gpus": 8,
+            "selected_gpus": 1
+          },
+          {
+            "index": 5,
+            "uuid": "GPU-dbd04f6c-e269-6f2d-1fa2-ddbd8fc89a4d",
+            "name": "NVIDIA H800",
+            "occupied_by_other_pids": [
+              "4084697"
+            ],
+            "allow_gpu_sharing": true,
+            "free_memory_gib": 62.7158203125,
+            "total_memory_gib": 79.6474609375,
+            "minimum_free_memory_gib": 40.0,
+            "selection": "explicit CUDA UUID subset of verified Slurm step allocation",
+            "scheduler_gpu_binding": null,
+            "parent_gpus": 8,
+            "step_gpus": 8,
+            "selected_gpus": 1
+          },
+          {
+            "index": 6,
+            "uuid": "GPU-40129db3-3a4e-227b-7159-b4ad9065a36e",
+            "name": "NVIDIA H800",
+            "occupied_by_other_pids": [
+              "4084713"
+            ],
+            "allow_gpu_sharing": true,
+            "free_memory_gib": 62.5849609375,
+            "total_memory_gib": 79.6474609375,
+            "minimum_free_memory_gib": 40.0,
+            "selection": "explicit CUDA UUID subset of verified Slurm step allocation",
+            "scheduler_gpu_binding": null,
+            "parent_gpus": 8,
+            "step_gpus": 8,
+            "selected_gpus": 1
+          },
+          {
+            "index": 7,
+            "uuid": "GPU-e862d13a-759f-cb9c-ded1-1faf7b7387ed",
+            "name": "NVIDIA H800",
+            "occupied_by_other_pids": [],
+            "allow_gpu_sharing": true,
+            "free_memory_gib": 79.17578125,
+            "total_memory_gib": 79.6474609375,
+            "minimum_free_memory_gib": 40.0,
+            "selection": "explicit CUDA UUID subset of verified Slurm step allocation",
+            "scheduler_gpu_binding": null,
+            "parent_gpus": 8,
+            "step_gpus": 8,
+            "selected_gpus": 1
+          }
+        ],
+        "slurm_job": {
+          "JobId": "415453",
+          "JobName": "indexmem-h800-hold-5d-20261008",
+          "UserId": "guhao(1046)",
+          "GroupId": "Gov(1009)",
+          "MCS_label": "N/A",
+          "Priority": "4294708234",
+          "Nice": "0",
+          "Account": "hansirui",
+          "QOS": "llm",
+          "JobState": "RUNNING",
+          "Reason": "None",
+          "Dependency": "(null)",
+          "Requeue": "1",
+          "Restarts": "0",
+          "BatchFlag": "1",
+          "Reboot": "0",
+          "ExitCode": "0:0",
+          "RunTime": "1-18:26:57",
+          "TimeLimit": "5-00:00:00",
+          "TimeMin": "N/A",
+          "SubmitTime": "2026-10-08T13:50:59",
+          "EligibleTime": "2026-10-08T13:50:59",
+          "AccrueTime": "2026-10-08T13:50:59",
+          "StartTime": "2026-10-08T14:53:41",
+          "EndTime": "2026-10-13T14:53:41",
+          "Deadline": "N/A",
+          "SuspendTime": "None",
+          "SecsPreSuspend": "0",
+          "LastSchedEval": "2026-10-08T14:53:41",
+          "Scheduler": "Main",
+          "Partition": "llm",
+          "ReqNodeList": "(null)",
+          "ExcNodeList": "(null)",
+          "NodeList": "dgx-097",
+          "BatchHost": "dgx-097",
+          "NumNodes": "1",
+          "NumCPUs": "64",
+          "NumTasks": "1",
+          "ReqTRES": "cpu=64,mem=2063935M,node=1,billing=64,gres/gpu=8",
+          "AllocTRES": "cpu=64,node=1,billing=64,gres/gpu=8",
+          "CoreSpec": "*",
+          "MinCPUsNode": "64",
+          "MinMemoryNode": "0",
+          "MinTmpDiskNode": "0",
+          "Features": "(null)",
+          "DelayBoot": "00:00:00",
+          "OverSubscribe": "OK",
+          "Contiguous": "0",
+          "Licenses": "(null)",
+          "Network": "(null)",
+          "Command": "/aifs4su/guhao/debug_h800_8gpu_5days_20260908.slurm",
+          "WorkDir": "/home/guhao",
+          "StdErr": "/aifs4su/guhao/logs/debug-h800-5d-415453.err",
+          "StdIn": "/dev/null",
+          "StdOut": "/aifs4su/guhao/logs/debug-h800-5d-415453.out",
+          "TresPerNode": "gres:gpu:8"
+        },
+        "slurm_step": {
+          "StepId": "415453.15",
+          "UserId": "1046",
+          "StartTime": "2026-10-10T09:20:33",
+          "TimeLimit": "01:00:00",
+          "State": "RUNNING",
+          "Partition": "llm",
+          "NodeList": "dgx-097",
+          "Nodes": "1",
+          "CPUs": "32",
+          "Tasks": "1",
+          "Name": "v5_features",
+          "Network": "(null)",
+          "TRES": "cpu=32,gres/gpu=8,mem=0,node=1",
+          "ResvPorts": "(null)",
+          "CPUFreqReq": "Default",
+          "Dist": "Cyclic",
+          "TresPerStep": "cpu:32",
+          "TresPerNode": "gres:gpu:8",
+          "TresPerTask": "cpu:32"
+        }
+      }
+    },
+    "p0": null,
+    "adapt_A0": null,
+    "adapt_A1": null,
+    "adapt_B0": null,
+    "adapt_B1": null,
+    "adapt_C0": null,
+    "adapt_C1": null,
+    "adapt_full": null,
+    "adapt_recent": null,
+    "adapt_fifo": null,
+    "replay": null
+  },
+  "missing_completion_requirements": [
+    "features_status.json: complete",
+    "p0_status.json: complete",
+    "adapt_A0_status.json: complete",
+    "adapt_A1_status.json: complete",
+    "adapt_B0_status.json: complete",
+    "adapt_B1_status.json: complete",
+    "adapt_C0_status.json: complete",
+    "adapt_C1_status.json: complete",
+    "adapt_full_status.json: complete",
+    "adapt_recent_status.json: complete",
+    "adapt_fifo_status.json: complete",
+    "replay_status.json: complete",
+    "data_manifest.json",
+    "overfit_gate.json",
+    "history_gate.json",
+    "p0.pt",
+    "p0_dev.jsonl",
+    "metrics_by_family.csv",
+    "state_costs.csv",
+    "pressure_curves.png",
+    "reader_only_C0/per_episode.jsonl",
+    "reader_only_C0/best.pt",
+    "A0/model.pt",
+    "A0/per_episode.jsonl",
+    "A0/status.json",
+    "A0/lr_search.json",
+    "A0/fit/learning_curves.jsonl",
+    "A1/model.pt",
+    "A1/per_episode.jsonl",
+    "A1/status.json",
+    "A1/lr_search.json",
+    "A1/fit/learning_curves.jsonl",
+    "B0/model.pt",
+    "B0/per_episode.jsonl",
+    "B0/status.json",
+    "B0/lr_search.json",
+    "B0/fit/learning_curves.jsonl",
+    "B1/model.pt",
+    "B1/per_episode.jsonl",
+    "B1/status.json",
+    "B1/lr_search.json",
+    "B1/fit/learning_curves.jsonl",
+    "C0/model.pt",
+    "C0/per_episode.jsonl",
+    "C0/status.json",
+    "C0/lr_search.json",
+    "C0/fit/learning_curves.jsonl",
+    "C1/model.pt",
+    "C1/per_episode.jsonl",
+    "C1/status.json",
+    "C1/lr_search.json",
+    "C1/fit/learning_curves.jsonl",
+    "full/model.pt",
+    "full/per_episode.jsonl",
+    "full/status.json",
+    "full/lr_search.json",
+    "full/fit/learning_curves.jsonl",
+    "recent/model.pt",
+    "recent/per_episode.jsonl",
+    "recent/status.json",
+    "recent/lr_search.json",
+    "recent/fit/learning_curves.jsonl",
+    "fifo/model.pt",
+    "fifo/per_episode.jsonl",
+    "fifo/status.json",
+    "fifo/lr_search.json",
+    "fifo/fit/learning_curves.jsonl",
+    "feature_gate.json: passed",
+    "overfit_gate.json: passed",
+    "history_gate.json: passed",
+    "report_status.json: pilot_complete"
+  ],
+  "files": {
+    "README.md": {
+      "bytes": 8698,
+      "sha256": "4de33510bf022512cc08debedf51c99f0f40c1e066f2b40b378634241943e58d"
+    },
+    "analysis/audit_archive.py": {
+      "bytes": 4062,
+      "sha256": "52d1872b2db32fccfd92570f62359ceea1c174d0fc1de745ade78a30815ea89c"
+    },
+    "analysis/bad_cases.csv": {
+      "bytes": 4546,
+      "sha256": "82ff91123c24291d23a8a29d0445d8929036e8bc56c9179550ed6aeb0ceb2061"
+    },
+    "analysis/bad_cases.md": {
+      "bytes": 2369,
+      "sha256": "f7394359c03752530992b030b73eaac167bc54b70fd7f648b5c05d96a2101b8a"
+    },
+    "analysis/cue_frames.png": {
+      "bytes": 245601,
+      "sha256": "67aa39d815f711a6c7ee21577094dbaddcf1c59ff329cec06d3cd3e69aa55b81"
+    },
+    "analysis/execution_audit.md": {
+      "bytes": 5194,
+      "sha256": "24dedbaf1e4ac04211a3a3b7fb4ce25494a9e3361d8280c20ea491d99f23b1a9"
+    },
+    "analysis/reproduce_bad_cases.py": {
+      "bytes": 8652,
+      "sha256": "439273a234ee4859c32902dd711ab70b4aeca28de665403897922fa44b39adee"
+    },
+    "archival_audit.json": {
+      "bytes": 1815,
+      "sha256": "6504a311248e16f1bbc258a302b0a653ca0dc94ae59fc7a96dc4efa573cda878"
+    },
+    "experiment_status.json": {
+      "bytes": 16074,
+      "sha256": "ea124d468b2af844174e21e43f33ca239f432d3ca73f11d447382bc03fc7a770"
+    },
+    "logs/account-association.txt": {
+      "bytes": 36,
+      "sha256": "1d498b71daa66e31efee055f1ac291a3d1b0bef4214c02112ff101a4d52eeae9"
+    },
+    "logs/chain-controller.log": {
+      "bytes": 20068,
+      "sha256": "2f275d50c8b940e3a2a74f7e96a7510bad2f3e15eb199fb5f6f354754b975257"
+    },
+    "logs/dry-run.log": {
+      "bytes": 17669,
+      "sha256": "9856e479bfec20025c8023c7bcfd60bb8d6f95f5f29ba1352c212df4aab4ca1e"
+    },
+    "logs/eight-gpu-preflight.txt": {
+      "bytes": 2092,
+      "sha256": "a336b872a6562040e7a1a6c7dd7a62ab99679f65384f0f8657af7dec798b958f"
+    },
+    "logs/execution-controller.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "logs/execution-controller.pid": {
+      "bytes": 8,
+      "sha256": "635331ba3fd692b4f6701190861520d153a53ca6bd63d526b8888875da7f39c0"
+    },
+    "logs/execution_controller.sh": {
+      "bytes": 3326,
+      "sha256": "4be1be3f89fbe142231d64aa7e07a59792f10a869218d9ca9f2850cce6442e22"
+    },
+    "logs/feature-diagnostics.log": {
+      "bytes": 182,
+      "sha256": "0b9af4e7fbaf48c812876d948ac3fe3735318ae3927d7c41b77cbd59d51e6bff"
+    },
+    "logs/parent-job-initial.txt": {
+      "bytes": 1267,
+      "sha256": "94921e8a84c127d99496d8d5f97ee838a7d37779a680616d162fea187f9abcc6"
+    },
+    "logs/partitions.txt": {
+      "bytes": 1376,
+      "sha256": "b7a6ccc15b480c4200093b6d0c88c338a1579490e7d367cfeaa280e351b8b6b3"
+    },
+    "logs/pip-freeze.txt": {
+      "bytes": 778,
+      "sha256": "ead3a511584081911d0d68ad9ae6e0a82baf7b7cfd93f84fca14c72544b10b5a"
+    },
+    "logs/post-run-gpu-processes.txt": {
+      "bytes": 3163,
+      "sha256": "2d9542600a552c56502c556917d6ad734b47878efc8d8c50de3a92535e31ebf7"
+    },
+    "logs/preparation.log": {
+      "bytes": 98423,
+      "sha256": "ada0860bbde1b42c51fbfb30dedd798d71b9652056a1ec79b912032c4b9b49c0"
+    },
+    "logs/preparation.pid": {
+      "bytes": 8,
+      "sha256": "f469caf71cfe786b636564415d8e67f83bd0f0ba17818d16f424da2e5712e1a0"
+    },
+    "logs/profile-controller.log": {
+      "bytes": 4129,
+      "sha256": "7571e73c40d63644925012751cc2e03be2bf5d0f9a628d6d6f6ed90f5c329144"
+    },
+    "logs/report.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "logs/slurm-accounting-final.txt": {
+      "bytes": 1357,
+      "sha256": "ef31b38b23448b8d4f6902246e5facb53b4b851b34257319b045789c53afff0c"
+    },
+    "logs/slurm-nodes.txt": {
+      "bytes": 563,
+      "sha256": "04f7c22afe9f6d3efd7acecc677f2c72b7526e6515f6ca533a48698bd2befd03"
+    },
+    "previews/pair_hold.png": {
+      "bytes": 8228,
+      "sha256": "2c9bc81704c23bb25f01c20126227337f344856f9bac3a996b3ab6cda5aadf39"
+    },
+    "previews/pair_interference.png": {
+      "bytes": 8228,
+      "sha256": "2c9bc81704c23bb25f01c20126227337f344856f9bac3a996b3ab6cda5aadf39"
+    },
+    "previews/pair_update.png": {
+      "bytes": 8365,
+      "sha256": "30ab4c66becc7dfc9bf240137e5903a674c1a682555ba300e7a7a66b5d71bc61"
+    },
+    "reconstruction.json": {
+      "bytes": 4410,
+      "sha256": "61c4b5e171e5eb04c93b25229a774643e910d262d82b553530db0f0fa15f89b1"
+    },
+    "run/budget.json": {
+      "bytes": 826,
+      "sha256": "dabfae949276308e48ec9927eb946e31aaf2fbe26b99fb6ab1d7b1e5b6757161"
+    },
+    "run/budget_locks/1900eab6c028483d7126599ee6f50de0d27907b5c65fa90524580b4b0f9852b0.lock": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "run/budget_locks/5b8a8b56dada6ce7567442b4935298df7de2badd7becdcf4915a59487338ca4b.lock": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "run/failure_ledger.jsonl": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "run/feature_diagnostics/README.md": {
+      "bytes": 1201,
+      "sha256": "70023e895026e4585029246d02f1709017818c6cfab175135dfd7992e1d55ec5"
+    },
+    "run/feature_diagnostics/dev_predictions.csv": {
+      "bytes": 291960,
+      "sha256": "b114eb1770e3625863a651b2b7b678e22924feb894717143a33bb96b5e21ab8d"
+    },
+    "run/feature_diagnostics/pooled_predictions.png": {
+      "bytes": 356413,
+      "sha256": "3a2f98c0dfba0b7b1c747c2b740b440e315330ceefc92c098a98383bdabad6e4"
+    },
+    "run/feature_diagnostics/r2_by_dimension.csv": {
+      "bytes": 2125,
+      "sha256": "7c61e8466eb543b6f4c2a02650e287bccef41b6139c0b75a5ba5ac690724d4f2"
+    },
+    "run/feature_diagnostics/r2_by_dimension.png": {
+      "bytes": 73563,
+      "sha256": "5c52a7eb47e905392af2ba5bc6bf59a89d011f5c849df34b5e7c53b1c2c4b183"
+    },
+    "run/feature_diagnostics/raw_predictions.png": {
+      "bytes": 346568,
+      "sha256": "6633618984aae8f6121c209aa56abf9955d1035eada01be6aeac7c39015470a0"
+    },
+    "run/feature_diagnostics/verification.json": {
+      "bytes": 3705,
+      "sha256": "cee976a93b4f7af8f70e21bf668fcee6b02e3d8040577ed826ed885254b1d190"
+    },
+    "run/feature_gate.json": {
+      "bytes": 874,
+      "sha256": "8822aa68ffba373018fee63320b2a0b2cf35b5d7b5056bc09a3c1129aa0e86cb"
+    },
+    "run/features_415453.15.log": {
+      "bytes": 3986,
+      "sha256": "e92af1636183c5e9a770e2711cdc085f3e9cba99b1c8040b8a0492ec19764446"
+    },
+    "run/features_status.json": {
+      "bytes": 7755,
+      "sha256": "975aa6d2fef7bd7530184d7bb1eaab861146fbf6d22096e901171990982485f4"
+    },
+    "run/gpu_selection/features_415453_15.json": {
+      "bytes": 6731,
+      "sha256": "e3555ced1cd1dd0ca0fe1632c4430c35770566d189798f89a5062f4c64bc7d96"
+    },
+    "run/gpu_selection/profile_415453_14.json": {
+      "bytes": 3136,
+      "sha256": "7040ae49240b009c744b4985e29caf6bea04caee2940edae2abe93e35a269750"
+    },
+    "run/probe_features/dev/manifest.json": {
+      "bytes": 17856,
+      "sha256": "a44c86624c8de1c7924cb725af93cfd8b6e13effa795931d90dc96edad544498"
+    },
+    "run/probe_features/train/manifest.json": {
+      "bytes": 17858,
+      "sha256": "bc79778884ccfdb741ac52e4edb58b501bb7c6cc4e80d10fc72170fce2253202"
+    },
+    "run/profile.json": {
+      "bytes": 6466,
+      "sha256": "4c60ea96f8fa20780a29dab1be438e231be7db2cfce0cd2aadd02a63642897cd"
+    },
+    "run/profile_415453.14.log": {
+      "bytes": 502,
+      "sha256": "f9bb848557c9a033306546865a9d6c2241e17f9268337598887ad7baa7980620"
+    },
+    "run/profile_status.json": {
+      "bytes": 4341,
+      "sha256": "4336be1d3bad477c5f1eb8ab605912bf048f4b99160a76208bcfdb6f99ebb2e1"
+    },
+    "run/report_status.json": {
+      "bytes": 766,
+      "sha256": "861e052f7995151bd55dcaf91893a6fe3aa9f557dd5180aacef6e80dc6394e89"
+    },
+    "run/run_manifest.json": {
+      "bytes": 7106,
+      "sha256": "24b666a14bb1e97500866139fff471414a2cbb12420e7049912f1cf1caf93dd4"
+    },
+    "run/steps/features_415453_15.json": {
+      "bytes": 7794,
+      "sha256": "ecce098062559fa8eb79b3e2e5a28af358ce9c30054f0ea28f9b9e1f2a42e1c1"
+    },
+    "run/steps/profile_415453_14.json": {
+      "bytes": 4377,
+      "sha256": "8b7b4b952cc221a8b59b5cb5d0d6586283b3dbccba9a82c35e70be66f50a0a21"
+    },
+    "run/submission.json": {
+      "bytes": 37141,
+      "sha256": "a3c16fce595da522c1be2bfa01255a4fffddc6a778fae1b6b185dcabd837fb74"
+    },
+    "run/submission.lock": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "run/submission_plan.json": {
+      "bytes": 5621,
+      "sha256": "3bdffd01b6331c73f7d6c5de1b350f069a88d232fef88c0ec4064c8cc19eef28"
+    },
+    "run/workers/feature_worker_0_2071911.json": {
+      "bytes": 876,
+      "sha256": "4b7509c5a6465ee0330c18b21a3354fca4595d73719091f519ed741b22125087"
+    },
+    "run/workers/feature_worker_0_2071911.log": {
+      "bytes": 2048,
+      "sha256": "84983db501df7e91f54713ea6b28018d70bc6a90af8d2aac4d23922b8b98a38f"
+    },
+    "run/workers/feature_worker_1_2072233.json": {
+      "bytes": 876,
+      "sha256": "b5c4431d92521ad3c93acc15136ddd6fba0b94160f59f38a9efaa342bb291bc2"
+    },
+    "run/workers/feature_worker_1_2072233.log": {
+      "bytes": 2048,
+      "sha256": "bfc7b3d857a2e9888175efffe09766e071af4b2a8cd2db918a68bfb131534838"
+    },
+    "run/workers/feature_worker_2_2072715.json": {
+      "bytes": 876,
+      "sha256": "0691a2bd158a5195cc8d9a6c2aa7195f716bfee55642afb6ab690f863bcb3d6d"
+    },
+    "run/workers/feature_worker_2_2072715.log": {
+      "bytes": 2048,
+      "sha256": "48a907a622a1dd9c66be5a27ec55c8f71f25abb9ad171a4923bc717a7e45b730"
+    },
+    "run/workers/feature_worker_3_2073054.json": {
+      "bytes": 875,
+      "sha256": "ad7e6810b818b7daa2aded4f32e6153d5493b6961e9687343aeb13e3dfefa6e8"
+    },
+    "run/workers/feature_worker_3_2073054.log": {
+      "bytes": 2048,
+      "sha256": "7ea4818982927a699a2c4582fddb5708e26b7d9ef6e71162b962e544c7652d1c"
+    },
+    "run/workers/feature_worker_4_2073600.json": {
+      "bytes": 876,
+      "sha256": "f4a04a3b61b8b9d21ebcca88b90fc7fb4ec1c611a73128de90dbae6802715751"
+    },
+    "run/workers/feature_worker_4_2073600.log": {
+      "bytes": 2048,
+      "sha256": "0da177655209fafa4020fd533c276311c23fc7b13c051343f970ca16f402802a"
+    },
+    "run/workers/feature_worker_5_2073879.json": {
+      "bytes": 876,
+      "sha256": "808127c0245835cbe34998f0f8db3f874a5fc39936d3c9673cdc8ab1873cd1c7"
+    },
+    "run/workers/feature_worker_5_2073879.log": {
+      "bytes": 2048,
+      "sha256": "76dafb277cf5b6b759267c585e823d3e127488ab532fc652bad55510846e4126"
+    },
+    "run/workers/feature_worker_6_2074337.json": {
+      "bytes": 875,
+      "sha256": "86c2529390e3b0e35a6d28733c59d2661a3d79370d51cd5e5b65e02c257541ef"
+    },
+    "run/workers/feature_worker_6_2074337.log": {
+      "bytes": 2048,
+      "sha256": "4c2180a019e4a6ce2861011ed4d3082c646faaf6d0f95d79418c4b1558576245"
+    },
+    "run/workers/feature_worker_7_2074879.json": {
+      "bytes": 876,
+      "sha256": "bfe46d55bfeb3255a70c2e3aba740bd427a9cd9d5833d5031176a6f93fe148fe"
+    },
+    "run/workers/feature_worker_7_2074879.log": {
+      "bytes": 2048,
+      "sha256": "9c5632a37de2e00a2607ecb2f04f9238bc250420cd152052ac49362d92138612"
+    },
+    "source/.github/workflows/tests.yml": {
+      "bytes": 1154,
+      "sha256": "029d0f582208cd6d093c8dab21d2e65e32a373e512db36968aa809674b240026"
+    },
+    "source/.gitignore": {
+      "bytes": 135,
+      "sha256": "92b93e6d93b80dcb04de6af428435bc1a49df8533bbf2c9000d36cd4e53710a4"
+    },
+    "source/README.md": {
+      "bytes": 14307,
+      "sha256": "9c31374432a9c96ef5b0c6a79be07295965d6ee832162c1e5728f59f0aace3df"
+    },
+    "source/START_HERE.md": {
+      "bytes": 1445,
+      "sha256": "217da724b3382e133bdec74e0af1d491b580739c3949eaee32a35ebb7eaf5749"
+    },
+    "source/THIRD_PARTY.md": {
+      "bytes": 1180,
+      "sha256": "ab763549bc8bb36f238bc648643fadbae04db939aa8b11859d12bbb1978c0318"
+    },
+    "source/docs/CODEX_DGX_HANDOFF.md": {
+      "bytes": 7222,
+      "sha256": "0bc7b7bebf0f5ab67f828a64befa7391ef35dd2695c5233fb5f9164433235314"
+    },
+    "source/docs/DGX_V5_EXECUTION.md": {
+      "bytes": 5615,
+      "sha256": "9ca4840c803af608f690ea07f300e24c729172442cb80a420c4dc59afaba19f5"
+    },
+    "source/docs/OPERATIONS.md": {
+      "bytes": 6272,
+      "sha256": "8b89053a7f93f7b5285820041634249e7d637796171b416ea49e51fe45fa03cd"
+    },
+    "source/docs/PROTOCOL.md": {
+      "bytes": 9350,
+      "sha256": "d8cdcf433c6924d8e124b120c3cc35f2d618960e0d16c45b341a405b19c059b5"
+    },
+    "source/docs/RESEARCH_IDEAS.md": {
+      "bytes": 8783,
+      "sha256": "fcd97079c14ea6b071324bc5aa428da5afc42366f7851b815e10076a6364e0d9"
+    },
+    "source/docs/STATE_MEMORY_V4.md": {
+      "bytes": 15814,
+      "sha256": "aacfbfa56d8a2d2e7a5fefaf22e5b81c987476a1cc9c71691189b4447f0c44ae"
+    },
+    "source/docs/VALIDATION.md": {
+      "bytes": 9094,
+      "sha256": "4b1d1359ba479df95ed4bccfbd4848702a207ac2bac4464eaa20654e205b50f2"
+    },
+    "source/docs/VISUAL_MEMORY_V5.md": {
+      "bytes": 11716,
+      "sha256": "91c2fd6038ae2daa0179ec21ef93fe4ca0f3ee6cde44aac24bf2dcfe9a05efe7"
+    },
+    "source/pmr/__init__.py": {
+      "bytes": 96,
+      "sha256": "19115c8fcca36eb20031f0c9d05ae0d70c9f487628b36f795246e2eb460543be"
+    },
+    "source/pmr/__main__.py": {
+      "bytes": 11686,
+      "sha256": "d5575827924e8edf673c8936ec1e56516d0d2a39eb07113da8eaaa07c65b2943"
+    },
+    "source/pmr/adapter.py": {
+      "bytes": 12644,
+      "sha256": "905990ad9ef786cc4e94550c558beef3ea70910fb91b83be6b6a35ae33f32098"
+    },
+    "source/pmr/common.py": {
+      "bytes": 2660,
+      "sha256": "1a1a405f0e30d2b092f5a018c4bc05e8f1b186581205492d7c27a3b5892da850"
+    },
+    "source/pmr/compat.py": {
+      "bytes": 2651,
+      "sha256": "4f21f5ab05873440644ae45433be41d873ea9cd0b5e10cf8fbce10909d90096b"
+    },
+    "source/pmr/controller.py": {
+      "bytes": 14547,
+      "sha256": "f619c05febbab3e2a4d1172958aed3ec13ecffe2c1c7c796be01111af592400a"
+    },
+    "source/pmr/data.py": {
+      "bytes": 4078,
+      "sha256": "49191f6d2b13bd73b6aebf4c41b0ac602205b900b016de538d2053bc43544cc3"
+    },
+    "source/pmr/diagnostics.py": {
+      "bytes": 8732,
+      "sha256": "b25c33151b6876f7fe39893b1caa7a3ad2fd662bcf8c5074e45604c5c9d8ab04"
+    },
+    "source/pmr/experiment.py": {
+      "bytes": 11596,
+      "sha256": "601b7fc98bd9c847e6b52301fe56a11188eec43a2abf71228ce6d63eea310aa0"
+    },
+    "source/pmr/metrics.py": {
+      "bytes": 1625,
+      "sha256": "7a86612e17353778df3f58958f3fa4ebe7e1926d77edacf3ef5ca8ac8a6a12b4"
+    },
+    "source/pmr/report.py": {
+      "bytes": 17694,
+      "sha256": "55370d8455d608370afb8408d79e9f00da60cbd09f19441d1d8cc745c0d7de6c"
+    },
+    "source/pmr/state_memory/__init__.py": {
+      "bytes": 229,
+      "sha256": "c530f393010b91b9ccb068f643095273dc4b2554632eb3b6bbbc9bd65079e615"
+    },
+    "source/pmr/state_memory/__main__.py": {
+      "bytes": 64,
+      "sha256": "27a44ea730347f7f069599adbb3ed5ff82c80a733bae75d832d01248f2f2f8b9"
+    },
+    "source/pmr/state_memory/data.py": {
+      "bytes": 14226,
+      "sha256": "86b4f525a5a3dffdd14e952986af1f2d3d39359525683e525f8b40d4741a4695"
+    },
+    "source/pmr/state_memory/metrics.py": {
+      "bytes": 11304,
+      "sha256": "f5526793ba5110794759c5e10d89340c9d1a8ad1cd59bdbfe27a8650c4d367e1"
+    },
+    "source/pmr/state_memory/models.py": {
+      "bytes": 12877,
+      "sha256": "46daee8618e39044757cc56a938e37c03c43ea2060bf18fb9c62e84aaf1672f2"
+    },
+    "source/pmr/state_memory/runner.py": {
+      "bytes": 24632,
+      "sha256": "5677a13a6cc4f3467e8d948171ac7c47b548f628c42ecc028e1a5fd4e6041dfe"
+    },
+    "source/pmr/upstream.py": {
+      "bytes": 2996,
+      "sha256": "59c9ff7b355b2f816e03ec9a6ce45a97fd6bfdb2ee6c4d3ef1395e073878910d"
+    },
+    "source/pmr/visual_memory/__init__.py": {
+      "bytes": 86,
+      "sha256": "5334f491766718f980788f117910c30e2b4d804bee37b69bd26438db575f0027"
+    },
+    "source/pmr/visual_memory/__main__.py": {
+      "bytes": 11150,
+      "sha256": "bb4c496ca7009b617ff20badb661237d7e0afc35ec34972af15c61c42faa49b5"
+    },
+    "source/pmr/visual_memory/bind_gpu.py": {
+      "bytes": 3648,
+      "sha256": "cab3427dddd890e1437393dc40cdb2381c623d177b32054f4bdd4c1f674fef45"
+    },
+    "source/pmr/visual_memory/common.py": {
+      "bytes": 6412,
+      "sha256": "6b89bfca6f38aea698449edd7ece7da3baa14e16b97b805b6368d59853f5b4ac"
+    },
+    "source/pmr/visual_memory/data.py": {
+      "bytes": 5577,
+      "sha256": "ce5082f3be9006dcceb46fbaffadc27349f977a77abcf8992eda3e80f8775368"
+    },
+    "source/pmr/visual_memory/feature_workers.py": {
+      "bytes": 7539,
+      "sha256": "9334ce554d5d910d3f651e7d7d555ef23c629762b0f391f8b0e318d4c8fb1cc1"
+    },
+    "source/pmr/visual_memory/features.py": {
+      "bytes": 9033,
+      "sha256": "5324748c4c2ef0cd82329d97c73a6cf8a21562501039ba31bd67dbc0efe29f93"
+    },
+    "source/pmr/visual_memory/memory.py": {
+      "bytes": 4934,
+      "sha256": "779a3fa3ffd9a5e4b1b52111ae37ebb35292f61e2a4a4973cadffa61e6ec4b7b"
+    },
+    "source/pmr/visual_memory/predictor.py": {
+      "bytes": 7428,
+      "sha256": "11b481b74fb50ad069c42335611677ab3dc20c0cc7dc8eef9e74b4472fb14d38"
+    },
+    "source/pmr/visual_memory/profiling.py": {
+      "bytes": 1747,
+      "sha256": "a99b14df2651f4f32d5f242f28a877c47f83c6b5a8d425d31a891fa79c2c12fe"
+    },
+    "source/pmr/visual_memory/report.py": {
+      "bytes": 5313,
+      "sha256": "fa8b54a0f1f840da0acf1cab11b23f24d6bbead8f214c4a1a6b4634cbbed225d"
+    },
+    "source/pmr/visual_memory/slurm_backend.py": {
+      "bytes": 10614,
+      "sha256": "6b622a7f895adeaf1fd6dd84031639765ca9ce7c2e445ceba5d989f6a2c6fbbe"
+    },
+    "source/pmr/visual_memory/train.py": {
+      "bytes": 12143,
+      "sha256": "59b8420c95625a08b324e93a7b5d75f7f44af58719a486002bd0cd831a1cf7bb"
+    },
+    "source/pyproject.toml": {
+      "bytes": 382,
+      "sha256": "ca19f1f56f37193717772f7bb7d9325748c20edfe911e75a1c114ba1cc9874c8"
+    },
+    "source/requirement.txt": {
+      "bytes": 79,
+      "sha256": "9f307f391bed459fdbfab9aa550e34cf829527ef106ae4323ded246ee6495c42"
+    },
+    "source/requirements-av2.txt": {
+      "bytes": 114,
+      "sha256": "a0e30d4683997b7e69862f4aacb9fd3f967e8a8614dd5e36a01bec8eca1f5bec"
+    },
+    "source/requirements-state-memory.txt": {
+      "bytes": 272,
+      "sha256": "86fdd0f56340a772e022877190eb34f8c9c5b5003eb5c3ebc7fd184102384ac3"
+    },
+    "source/requirements-visual-memory.txt": {
+      "bytes": 125,
+      "sha256": "23731e11f1308cfed1ba15db505720844f6d0dea4003b38272f839484199d42a"
+    },
+    "source/requirements.txt": {
+      "bytes": 185,
+      "sha256": "7963bd5335b4a5576058e13b1e25a2bd4294dda2e8a90cfc444b50be97b1f296"
+    },
+    "source/scripts/archive_visual_v5.py": {
+      "bytes": 15598,
+      "sha256": "525a65e4b894ee8f05ca44ffe4d1b042584543abb0d38a45b924ccfbcd609b07"
+    },
+    "source/scripts/create_github_repo.sh": {
+      "bytes": 1072,
+      "sha256": "37899a9584f27962be8876c16da64761c70c02cd70793123eb851a86ec8e8f93"
+    },
+    "source/scripts/diagnose_visual_features.py": {
+      "bytes": 9964,
+      "sha256": "44d7cbee484d29e334961680f8e1fc30868b2b4fe19cbcf5101556b23558b297"
+    },
+    "source/scripts/download_checkpoint.py": {
+      "bytes": 1349,
+      "sha256": "86436d391ee3e1d6bda86052a914a4a6e79d472a7b08717e4f190ce2031db2ea"
+    },
+    "source/scripts/launch_visual_v5.py": {
+      "bytes": 23243,
+      "sha256": "996861db1c349d340e0c7f9a2609d70b9eee36bd7e01669cae49239c0b263831"
+    },
+    "source/scripts/package_results.py": {
+      "bytes": 1829,
+      "sha256": "eb69ec494c9a471dd8d5188f7d599cd4f6c07f18979e5c62df34329931ce3ef0"
+    },
+    "source/scripts/prepare_visual_v5.sh": {
+      "bytes": 2840,
+      "sha256": "f2d1446f083ae42ccf2cc55f72a57cfa8464a08d31a5b519923b046e5daede13"
+    },
+    "source/scripts/preprocess.py": {
+      "bytes": 1990,
+      "sha256": "2735b1752477268c573c3e5621567cc57e5b5956f16ab2585ecf194ef1ed7082"
+    },
+    "source/scripts/retest_v2.sh": {
+      "bytes": 1643,
+      "sha256": "8cd352794895d2ec56149ea8efb38695dbf298f4e17c877cfa5b8819b0db8b8f"
+    },
+    "source/scripts/retest_v3.sh": {
+      "bytes": 3017,
+      "sha256": "e6ec1bde34ed6c3bfd0cb0e967554f7812e56a629d1abea4034a280b6fe1dfbb"
+    },
+    "source/scripts/retest_v4.sh": {
+      "bytes": 5204,
+      "sha256": "41bd85eee0f2c8575e661b3756ac5cf666e61737c7cbbe3b3ec8f48ccea51dbb"
+    },
+    "source/scripts/run_week1.sh": {
+      "bytes": 1150,
+      "sha256": "92d6eb597aa1a3ba3f285dbb2376866aeabefe93e2ed38945f0330455ceaabc6"
+    },
+    "source/scripts/setup.sh": {
+      "bytes": 1512,
+      "sha256": "ae4380b84c6aea6e2063c75c7e98dd394fdbe3fef64bec5dcc98389eaf5f577d"
+    },
+    "source/tests/conftest.py": {
+      "bytes": 533,
+      "sha256": "aa083fd9a79833771c06e2d56eee303098426b1d32446c951809fd48ec704f31"
+    },
+    "source/tests/test_attention.py": {
+      "bytes": 1353,
+      "sha256": "1c7bd7e7f4b0db13d2686f6c715a3d4f5158915d4978946635e537b0f0b3fb78"
+    },
+    "source/tests/test_controller.py": {
+      "bytes": 5345,
+      "sha256": "3ddecc5e1dee0dd65fa037d4f4938f273f84a6a5ccb2387f5e13fc8a4e1ce765"
+    },
+    "source/tests/test_diagnostics.py": {
+      "bytes": 4681,
+      "sha256": "b27d83a028ad0442c5b491d6a97e80485c18f43709970a3c48bbc5abf548af64"
+    },
+    "source/tests/test_protocol.py": {
+      "bytes": 8444,
+      "sha256": "c453acda6e72f67735956ffbae952ca366184ec24abab2f02e7bdde6a642229e"
+    },
+    "source/tests/test_state_memory_data.py": {
+      "bytes": 7570,
+      "sha256": "317394aee75224f9a370c32d34b05979922d2d80c2502c47539a6e1a06611627"
+    },
+    "source/tests/test_state_memory_metrics.py": {
+      "bytes": 7349,
+      "sha256": "ed2ff45d149978f648b7ab25b0147bf7d3e271a636537fc66381f75f144a9b4c"
+    },
+    "source/tests/test_state_memory_models.py": {
+      "bytes": 6309,
+      "sha256": "c2b8b760f414ee2499916f33ebeec1de4258a947db12a48ef8a34758c067e4ce"
+    },
+    "source/tests/test_state_memory_runner.py": {
+      "bytes": 2932,
+      "sha256": "8a15ae6c84848a2780234655cd2a9a22f86fd14afa871b0b4c1af3d088493456"
+    },
+    "source/tests/test_v3.py": {
+      "bytes": 6300,
+      "sha256": "d5f686d562edce5254157884225e3a01e8c898e03a61ff1f96c15a3470372022"
+    },
+    "source/tests/visual_memory/test_archive.py": {
+      "bytes": 4192,
+      "sha256": "1d5bd18d97a313e3edd9965d894e1d6b3d884354507dc6a55b5e18258833662a"
+    },
+    "source/tests/visual_memory/test_budget_parallel.py": {
+      "bytes": 7597,
+      "sha256": "089813478fff62d971489fa7ee69ba6a6cd8676b440029eb9d5b80cfccc19467"
+    },
+    "source/tests/visual_memory/test_feature_workers.py": {
+      "bytes": 4765,
+      "sha256": "9103ad5228a3b6d2c80708222981d77d22a89e2043a835404ae7121fa71b67ba"
+    },
+    "source/tests/visual_memory/test_launcher.py": {
+      "bytes": 12723,
+      "sha256": "8f5e7becf7b9e52061c19516ac9d023ca9922f7844749c43c7b46313819a8b28"
+    },
+    "source/tests/visual_memory/test_profiling.py": {
+      "bytes": 1920,
+      "sha256": "888b4cd888325099713bc8ff83c1c19118cb4e73c74058a9452eb6063dfeb66a"
+    },
+    "source/tests/visual_memory/test_protocol.py": {
+      "bytes": 9961,
+      "sha256": "3e5c029b579bb5a500a580669cb2479daac1a92e1b67fc4bf04cb6adb66cc9d5"
+    },
+    "source/tests/visual_memory/test_report.py": {
+      "bytes": 2614,
+      "sha256": "024f7e5eb910d637d6204e76bcc0deaf3f68c2ad669157097d79a1ccbf48a6d5"
+    },
+    "source/tests/visual_memory/test_slurm_backend.py": {
+      "bytes": 7674,
+      "sha256": "2b7f1afb3b1d4960b98c340c30f6472e8e494be13c39de495e40bc5619a5900c"
+    },
+    "workspace/controller_status.json": {
+      "bytes": 152,
+      "sha256": "2a7cff438535a2fb63e581b0eaa9612457545915bd024f1f427ace477abd0491"
+    },
+    "workspace/creation_record.json": {
+      "bytes": 342,
+      "sha256": "54fd7aa77c0b3163c4b97311453c34d7355faf491175b7d6659f5965f60137da"
+    },
+    "workspace/preparation.json": {
+      "bytes": 271,
+      "sha256": "920b4837915243d621b11a7560558b522816ca6edfd177c16ffc0bf0c0f22062"
+    },
+    "workspace/remote_run_inventory.json": {
+      "bytes": 48228,
+      "sha256": "d07af5c9269e087b06d4f4e21275dbd363bc4b1aff4b5ac4993d357ca3e8a138"
+    }
+  },
+  "checkpoint_archive": null
+}

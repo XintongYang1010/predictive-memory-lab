@@ -1,0 +1,57 @@
+{
+  "status": "verified_partial_evidence",
+  "science_status": "partial_feature_gate_failed",
+  "source_commit": "d0b4fef25e98eefb58bfba737997cb0145f27daa",
+  "source_files_verified": 16,
+  "remote_run_files": 301,
+  "downloaded_run_files_verified": 44,
+  "omitted_feature_tensors": {
+    "files": 256,
+    "bytes": 655082496,
+    "reason": "Reproducible caches omitted under handoff policy; all original SHA256/size entries retained and matched against remote inventory."
+  },
+  "omitted_transient_files": [
+    "run1/active.lock"
+  ],
+  "probe_episodes": {
+    "train": 128,
+    "dev": 128,
+    "test": 0
+  },
+  "workers_verified": 8,
+  "diagnostic_matches_recorded_gate": true,
+  "cumulative_selected_gpu_hours": 0.39161167637833216,
+  "main_checkpoints": 0,
+  "checkpoint_reason": "P0/adaptation/replay were not started after failed prerequisite.",
+  "slurm_terminal": {
+    "profile": {
+      "JobID": "415453.14",
+      "JobName": "v5_profile",
+      "State": "COMPLETED",
+      "ExitCode": "0:0",
+      "Elapsed": "00:00:32",
+      "AllocTRES": "cpu=4,gres/gpu=8,mem=0,node=1"
+    },
+    "features": {
+      "JobID": "415453.15",
+      "JobName": "v5_features",
+      "State": "FAILED",
+      "ExitCode": "1:0",
+      "Elapsed": "00:03:00",
+      "AllocTRES": "cpu=32,gres/gpu=8,mem=0,node=1"
+    }
+  },
+  "existing_indexmem_status": {
+    "JobID": "415453.5",
+    "JobName": "python",
+    "State": "RUNNING",
+    "ExitCode": "0:0",
+    "Elapsed": "1-05:04:53",
+    "AllocTRES": "cpu=64,gres/gpu=8,mem=0,node=1"
+  },
+  "remote_cleanup": {
+    "performed": false,
+    "reason": "Experiment incomplete; retain scene as requested."
+  },
+  "verification_scope": "Local artifact and remote-inventory reconciliation. Separate immutable GitHub readback is required and recorded outside this self-hashed archive."
+}

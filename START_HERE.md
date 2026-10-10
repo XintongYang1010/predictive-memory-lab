@@ -1,7 +1,13 @@
 # V5 first run: local Codex to DGX
 
 本仓库包含 V5 首轮 visual world model + bounded memory 的源码和 CPU 测试。
-尚未运行 V5 A100 实验，没有真实 GPU 结果。
+2026-10-09 已按用户选择共用 IndexMem 的八张 H800，完成官方 I-JEPA profile 和
+八卡 Train/Dev probe。池化特征位移 R² = −0.020927，未通过预定门槛，
+因此后续训练未启动，远端现场保留。A100 实验仍未运行。
+实际步骤为 `415453.14` / `415453.15`；见
+[本轮结果、图表、失败样本和归档清单](results/wm/visual-v5-dgx-20261009/README.md)。
+
+下面保留部署交接流程；新的实验必须使用新目录并重新查询有效的资源分配。
 
 当前任务通过 Mac 本地已有的 SSH 别名 `dgx-127-slurm` 连接服务器，
 在 `/aifs4su/guhao/KVCache/WM` 中运行，将结果上传回本仓库，

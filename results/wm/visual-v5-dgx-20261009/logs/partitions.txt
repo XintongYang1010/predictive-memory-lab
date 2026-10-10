@@ -1,0 +1,26 @@
+PartitionName=debug
+   AllowGroups=ALL AllowAccounts=for_yichao,lixiaomeng,llm,xuewei,luowenhan,hansirui,songjun AllowQos=ALL
+   AllocNodes=ALL Default=NO QoS=N/A
+   DefaultTime=1-00:00:00 DisableRootJobs=NO ExclusiveUser=NO GraceTime=0 Hidden=NO
+   MaxNodes=UNLIMITED MaxTime=4-00:00:00 MinNodes=1 LLN=NO MaxCPUsPerNode=220 MaxCPUsPerSocket=UNLIMITED
+   Nodes=dgx-[126-127]
+   PriorityJobFactor=1 PriorityTier=1 RootOnly=NO ReqResv=NO OverSubscribe=NO
+   OverTimeLimit=NONE PreemptMode=OFF
+   State=UP TotalCPUs=448 TotalNodes=2 SelectTypeParameters=NONE
+   JobDefaults=(null)
+   DefMemPerCPU=4096 MaxMemPerCPU=6144
+   TRES=cpu=448,mem=4127868M,node=2,billing=448,gres/gpu=3
+
+PartitionName=llm
+   AllowGroups=hansirui,Gov,hansirui4 AllowAccounts=hansirui,xuewei,luowenhan AllowQos=llm
+   AllocNodes=ALL Default=NO QoS=N/A
+   DefaultTime=01:00:00 DisableRootJobs=NO ExclusiveUser=NO GraceTime=0 Hidden=NO
+   MaxNodes=UNLIMITED MaxTime=5-00:00:00 MinNodes=1 LLN=NO MaxCPUsPerNode=220 MaxCPUsPerSocket=UNLIMITED
+   Nodes=dgx-[061,081-082,091-092,097,100,103]
+   PriorityJobFactor=1 PriorityTier=1 RootOnly=NO ReqResv=NO OverSubscribe=NO
+   OverTimeLimit=NONE PreemptMode=OFF
+   State=UP TotalCPUs=1792 TotalNodes=8 SelectTypeParameters=NONE
+   JobDefaults=(null)
+   DefMemPerNode=UNLIMITED MaxMemPerNode=UNLIMITED
+   TRES=cpu=1792,mem=16511476M,node=8,billing=1792,gres/gpu=64
+

@@ -1,0 +1,12 @@
+{
+  "run_id": "visual-v5-dgx-20261009",
+  "root": "/aifs4su/guhao/KVCache/WM",
+  "resolved": "/aifs4su/guhao/KVCache/WM",
+  "wm_preexisted": false,
+  "created_unix": 1791593954.6326356,
+  "device": 2345267470,
+  "inode": 144115727966677964,
+  "uid": 1046,
+  "token": "728e4719e8444d86b5dadb2063ed0f9f",
+  "parent": "/aifs4su/guhao/KVCache"
+}

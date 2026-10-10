@@ -1,0 +1,2 @@
+# Preserve byte-exact experiment evidence, including CSV/log line endings.
+results/wm/visual-v5-dgx-20261009/** -text -whitespace

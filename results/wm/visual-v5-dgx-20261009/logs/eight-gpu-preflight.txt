@@ -1,0 +1,19 @@
+StepId=415453.13 UserId=1046 StartTime=2026-10-10T09:09:18 TimeLimit=00:02:00 State=RUNNING Partition=llm NodeList=dgx-097 Nodes=1 CPUs=4 Tasks=1 Name=bash Network=(null) TRES=cpu=4,gres/gpu=8,mem=0,node=1 ResvPorts=(null) CPUFreqReq=Default Dist=Cyclic SrunHost:Pid=dgx-127:1024533 TresPerStep=cpu:4 TresPerNode=gres:gpu:8 TresPerTask=cpu:4
+index, name, uuid, memory.total [MiB], memory.used [MiB], memory.free [MiB], utilization.gpu [%]
+0, NVIDIA H800, GPU-da1decf6-d33d-ca44-9340-8c9c6b45ceb6, 81559 MiB, 16931 MiB, 64149 MiB, 46 %
+1, NVIDIA H800, GPU-a27a6655-95b8-cb05-ed08-b15125877960, 81559 MiB, 16861 MiB, 64219 MiB, 48 %
+2, NVIDIA H800, GPU-aeca771a-00a6-7a2a-fc47-dc7b3db7bf0f, 81559 MiB, 16995 MiB, 64085 MiB, 50 %
+3, NVIDIA H800, GPU-ce743878-6a02-ca37-28ce-3b78d9b7bbe9, 81559 MiB, 0 MiB, 81079 MiB, 0 %
+4, NVIDIA H800, GPU-c15374ab-3124-048a-40c1-15e42a684766, 81559 MiB, 16931 MiB, 64149 MiB, 47 %
+5, NVIDIA H800, GPU-dbd04f6c-e269-6f2d-1fa2-ddbd8fc89a4d, 81559 MiB, 16859 MiB, 64221 MiB, 50 %
+6, NVIDIA H800, GPU-40129db3-3a4e-227b-7159-b4ad9065a36e, 81559 MiB, 17013 MiB, 64067 MiB, 46 %
+7, NVIDIA H800, GPU-e862d13a-759f-cb9c-ded1-1faf7b7387ed, 81559 MiB, 0 MiB, 81079 MiB, 0 %
+pid, process_name, gpu_uuid, used_gpu_memory [MiB]
+4084652, /aifs4su/guhao/KVCache/IndexMem/.venv/bin/python, GPU-da1decf6-d33d-ca44-9340-8c9c6b45ceb6, 16922 MiB
+4084796, /aifs4su/guhao/KVCache/IndexMem/.venv/bin/python, GPU-a27a6655-95b8-cb05-ed08-b15125877960, 16852 MiB
+4084680, /aifs4su/guhao/KVCache/IndexMem/.venv/bin/python, GPU-aeca771a-00a6-7a2a-fc47-dc7b3db7bf0f, 16986 MiB
+4084873, /aifs4su/guhao/KVCache/IndexMem/.venv/bin/python, GPU-c15374ab-3124-048a-40c1-15e42a684766, 16922 MiB
+4084697, /aifs4su/guhao/KVCache/IndexMem/.venv/bin/python, GPU-dbd04f6c-e269-6f2d-1fa2-ddbd8fc89a4d, 16850 MiB
+4084713, /aifs4su/guhao/KVCache/IndexMem/.venv/bin/python, GPU-40129db3-3a4e-227b-7159-b4ad9065a36e, 17004 MiB
+2.8.0+cu128 12.8
+[(0, 'NVIDIA H800'), (1, 'NVIDIA H800'), (2, 'NVIDIA H800'), (3, 'NVIDIA H800'), (4, 'NVIDIA H800'), (5, 'NVIDIA H800'), (6, 'NVIDIA H800'), (7, 'NVIDIA H800')]

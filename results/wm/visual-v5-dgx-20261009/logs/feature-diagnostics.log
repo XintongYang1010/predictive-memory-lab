@@ -1,0 +1,7 @@
+{
+  "out": "/aifs4su/guhao/KVCache/WM/run1/feature_diagnostics",
+  "matches_recorded_feature_gate": true,
+  "dev_prediction_rows": 2048,
+  "dimensions": 16,
+  "gate_passed": false
+}

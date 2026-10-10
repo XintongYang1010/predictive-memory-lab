@@ -1,0 +1,33 @@
+{
+  "worker": 1,
+  "pid": 2072233,
+  "status": "complete",
+  "start_unix": 1791595262.4966395,
+  "tasks": [
+    {
+      "task_id": 0,
+      "folder": "/aifs4su/guhao/KVCache/WM/run1/probe_features/train",
+      "records": 16,
+      "status": "complete"
+    },
+    {
+      "task_id": 1,
+      "folder": "/aifs4su/guhao/KVCache/WM/run1/probe_features/dev",
+      "records": 16,
+      "status": "complete"
+    }
+  ],
+  "encoder": {
+    "encoder": "official-IJEPA-ViT-H14-224-target_encoder",
+    "code_commit": "52c1ae95d05f743e000e8f10a1f3a79b10cff048",
+    "checkpoint_sha256": "0382013c481743e9ccea89f970bc6c6aa126aa19a62127500d6e672a641aae22",
+    "pretrained": true,
+    "grid": 4
+  },
+  "gpu": "NVIDIA H800",
+  "visible_device": "GPU-a27a6655-95b8-cb05-ed08-b15125877960",
+  "job_id": "415453",
+  "step_id": "15",
+  "current_task": null,
+  "end_unix": 1791595411.9474158
+}

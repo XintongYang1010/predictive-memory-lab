@@ -1,0 +1,133 @@
+{
+  "status": "verified",
+  "matches_recorded_feature_gate": true,
+  "recorded_gate": {
+    "raw": {
+      "r2_per_dimension": [
+        0.9529110795775746,
+        0.9567561714149598,
+        0.9664066348297589,
+        0.9524301820834467,
+        0.00639582638245384,
+        0.38296602242876887,
+        -0.17460727684334088,
+        0.10745606209955239
+      ],
+      "mse": 0.0005584681244107188,
+      "position_r2": 0.9571260169764351,
+      "velocity_r2": 0.08055265851685856
+    },
+    "pooled": {
+      "r2_per_dimension": [
+        0.9745803853105978,
+        0.971225526730171,
+        0.9803852033982638,
+        0.9725725450308577,
+        -0.1105450464873694,
+        0.3268586773763965,
+        -0.3081169755957498,
+        0.00809602211124727
+      ],
+      "mse": 0.00035776447294709056,
+      "position_r2": 0.9746909151174726,
+      "velocity_r2": -0.020926830648868855
+    },
+    "passed": false,
+    "criterion": "pilot gate: held-out position R2>0.1 and velocity R2>0; inspect per-dimension values"
+  },
+  "reconstructed_gate": {
+    "raw": {
+      "r2_per_dimension": [
+        0.9529110795775746,
+        0.9567561714149598,
+        0.9664066348297589,
+        0.9524301820834467,
+        0.00639582638245384,
+        0.38296602242876887,
+        -0.17460727684334088,
+        0.10745606209955239
+      ],
+      "mse": 0.0005584681244107188,
+      "position_r2": 0.9571260169764351,
+      "velocity_r2": 0.08055265851685856
+    },
+    "pooled": {
+      "r2_per_dimension": [
+        0.9745803853105978,
+        0.971225526730171,
+        0.9803852033982638,
+        0.9725725450308577,
+        -0.1105450464873694,
+        0.3268586773763965,
+        -0.3081169755957498,
+        0.00809602211124727
+      ],
+      "mse": 0.00035776447294709056,
+      "position_r2": 0.9746909151174726,
+      "velocity_r2": -0.020926830648868855
+    },
+    "passed": false,
+    "criterion": "pilot gate: held-out position R2>0.1 and velocity R2>0; inspect per-dimension values"
+  },
+  "comparisons": [
+    {
+      "mode": "raw",
+      "metric": "r2_per_dimension",
+      "matches": true,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "mode": "raw",
+      "metric": "mse",
+      "matches": true,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "mode": "raw",
+      "metric": "position_r2",
+      "matches": true,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "mode": "raw",
+      "metric": "velocity_r2",
+      "matches": true,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "mode": "pooled",
+      "metric": "r2_per_dimension",
+      "matches": true,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "mode": "pooled",
+      "metric": "mse",
+      "matches": true,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "mode": "pooled",
+      "metric": "position_r2",
+      "matches": true,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "mode": "pooled",
+      "metric": "velocity_r2",
+      "matches": true,
+      "maximum_absolute_difference": 0.0
+    }
+  ],
+  "evaluation_split": "dev",
+  "test_opened": false,
+  "feature_gate_sha256": "8822aa68ffba373018fee63320b2a0b2cf35b5d7b5056bc09a3c1129aa0e86cb",
+  "cache_manifest_sha256": {
+    "train": "bc79778884ccfdb741ac52e4edb58b501bb7c6cc4e80d10fc72170fce2253202",
+    "dev": "a44c86624c8de1c7924cb725af93cfd8b6e13effa795931d90dc96edad544498"
+  },
+  "target_definition": "Positions A(x,y), B(x,y) at t=7, then their observed displacements position(7)-position(6); not hidden velocities.",
+  "baseline_definition": "Per-dimension Dev squared error against the Train target mean; identical to features.probe.",
+  "ridge_coefficient": 0.01,
+  "torch_threads": 1
+}

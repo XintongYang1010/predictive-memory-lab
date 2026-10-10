@@ -1,0 +1,236 @@
+{
+  "backend": "dgx",
+  "account": "hansirui",
+  "qos": "llm",
+  "gpu_model": "H800",
+  "resources": {
+    "host": "dgx-127",
+    "cluster": "slurm",
+    "partition": "llm",
+    "gres": "gpu:1",
+    "memory_mb": 2063934,
+    "cpus": 224,
+    "model_evidence": "untyped GRES; model unverified until allocated profile"
+  },
+  "association_evidence": "slurm|hansirui|guhao||for_hansirui",
+  "allocation_evidence": {
+    "JobId": "415453",
+    "JobName": "indexmem-h800-hold-5d-20261008",
+    "UserId": "guhao(1046)",
+    "GroupId": "Gov(1009)",
+    "MCS_label": "N/A",
+    "Priority": "4294708234",
+    "Nice": "0",
+    "Account": "hansirui",
+    "QOS": "llm",
+    "JobState": "RUNNING",
+    "Reason": "None",
+    "Dependency": "(null)",
+    "Requeue": "1",
+    "Restarts": "0",
+    "BatchFlag": "1",
+    "Reboot": "0",
+    "ExitCode": "0:0",
+    "RunTime": "1-18:26:13",
+    "TimeLimit": "5-00:00:00",
+    "TimeMin": "N/A",
+    "SubmitTime": "2026-10-08T13:50:59",
+    "EligibleTime": "2026-10-08T13:50:59",
+    "AccrueTime": "2026-10-08T13:50:59",
+    "StartTime": "2026-10-08T14:53:41",
+    "EndTime": "2026-10-13T14:53:41",
+    "Deadline": "N/A",
+    "SuspendTime": "None",
+    "SecsPreSuspend": "0",
+    "LastSchedEval": "2026-10-08T14:53:41",
+    "Scheduler": "Main",
+    "Partition": "llm",
+    "ReqNodeList": "(null)",
+    "ExcNodeList": "(null)",
+    "NodeList": "dgx-097",
+    "BatchHost": "dgx-097",
+    "NumNodes": "1",
+    "NumCPUs": "64",
+    "NumTasks": "1",
+    "ReqTRES": "cpu=64,mem=2063935M,node=1,billing=64,gres/gpu=8",
+    "AllocTRES": "cpu=64,node=1,billing=64,gres/gpu=8",
+    "CoreSpec": "*",
+    "MinCPUsNode": "64",
+    "MinMemoryNode": "0",
+    "MinTmpDiskNode": "0",
+    "Features": "(null)",
+    "DelayBoot": "00:00:00",
+    "OverSubscribe": "OK",
+    "Contiguous": "0",
+    "Licenses": "(null)",
+    "Network": "(null)",
+    "Command": "/aifs4su/guhao/debug_h800_8gpu_5days_20260908.slurm",
+    "WorkDir": "/home/guhao",
+    "StdErr": "/aifs4su/guhao/logs/debug-h800-5d-415453.err",
+    "StdIn": "/dev/null",
+    "StdOut": "/aifs4su/guhao/logs/debug-h800-5d-415453.out",
+    "TresPerNode": "gres:gpu:8"
+  },
+  "observed_allocated_gpuh": null,
+  "requested_max_gpuh": 54.5,
+  "charged_round_gpuh": 0.0,
+  "round_limit_gpuh": 60,
+  "parent_allocated_gpu_count": 8,
+  "step_allocated_gpu_count": 8,
+  "task_selected_gpu_count": null,
+  "selected_gpu_count_by_phase": {
+    "profile": 1,
+    "features": 8,
+    "p0": 1,
+    "adapt": 1,
+    "replay": 1
+  },
+  "task_selected_gpu_index": 3,
+  "feature_workers": 8,
+  "max_concurrent_adaptation_stages": 8,
+  "allow_gpu_sharing": true,
+  "minimum_free_gpu_gib": 40,
+  "planned_stages": [
+    {
+      "stage": "profile",
+      "phase": "profile",
+      "variant": null,
+      "minutes": 30,
+      "selected_gpus": 1
+    },
+    {
+      "stage": "features",
+      "phase": "features",
+      "variant": null,
+      "minutes": 60,
+      "selected_gpus": 8
+    },
+    {
+      "stage": "p0",
+      "phase": "p0",
+      "variant": null,
+      "minutes": 720,
+      "selected_gpus": 1
+    },
+    {
+      "stage": "adapt_A0",
+      "phase": "adapt",
+      "variant": "A0",
+      "minutes": 240,
+      "selected_gpus": 1
+    },
+    {
+      "stage": "adapt_A1",
+      "phase": "adapt",
+      "variant": "A1",
+      "minutes": 240,
+      "selected_gpus": 1
+    },
+    {
+      "stage": "adapt_B0",
+      "phase": "adapt",
+      "variant": "B0",
+      "minutes": 240,
+      "selected_gpus": 1
+    },
+    {
+      "stage": "adapt_B1",
+      "phase": "adapt",
+      "variant": "B1",
+      "minutes": 240,
+      "selected_gpus": 1
+    },
+    {
+      "stage": "adapt_C0",
+      "phase": "adapt",
+      "variant": "C0",
+      "minutes": 240,
+      "selected_gpus": 1
+    },
+    {
+      "stage": "adapt_C1",
+      "phase": "adapt",
+      "variant": "C1",
+      "minutes": 240,
+      "selected_gpus": 1
+    },
+    {
+      "stage": "adapt_full",
+      "phase": "adapt",
+      "variant": "full",
+      "minutes": 120,
+      "selected_gpus": 1
+    },
+    {
+      "stage": "adapt_recent",
+      "phase": "adapt",
+      "variant": "recent",
+      "minutes": 120,
+      "selected_gpus": 1
+    },
+    {
+      "stage": "adapt_fifo",
+      "phase": "adapt",
+      "variant": "fifo",
+      "minutes": 120,
+      "selected_gpus": 1
+    },
+    {
+      "stage": "replay",
+      "phase": "replay",
+      "variant": null,
+      "minutes": 240,
+      "selected_gpus": 1
+    }
+  ],
+  "accounting_note": "60 GPUh caps the sum of selected GPU walltime across all workers and stages; the preexisting shared parent reservation is separately reported",
+  "jobs": [],
+  "submitted": false,
+  "parallel_plan": [
+    {
+      "stage": "adapt_A0",
+      "gpu_index": 0,
+      "placement": "first available GPU slot"
+    },
+    {
+      "stage": "adapt_A1",
+      "gpu_index": 1,
+      "placement": "first available GPU slot"
+    },
+    {
+      "stage": "adapt_B0",
+      "gpu_index": 2,
+      "placement": "first available GPU slot"
+    },
+    {
+      "stage": "adapt_B1",
+      "gpu_index": 3,
+      "placement": "first available GPU slot"
+    },
+    {
+      "stage": "adapt_C0",
+      "gpu_index": 4,
+      "placement": "first available GPU slot"
+    },
+    {
+      "stage": "adapt_C1",
+      "gpu_index": 5,
+      "placement": "first available GPU slot"
+    },
+    {
+      "stage": "adapt_full",
+      "gpu_index": 6,
+      "placement": "first available GPU slot"
+    },
+    {
+      "stage": "adapt_recent",
+      "gpu_index": 7,
+      "placement": "first available GPU slot"
+    },
+    {
+      "stage": "adapt_fifo",
+      "gpu_index": 0,
+      "placement": "first available GPU slot"
+    }
+  ]
+}

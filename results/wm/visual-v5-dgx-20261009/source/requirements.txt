@@ -1,0 +1,8 @@
+# torch is installed/validated separately by scripts/setup.sh, preserving cu128.
+numpy==1.26.4
+matplotlib==3.10.7
+contourpy==1.3.2
+PyYAML==6.0.3
+tqdm==4.67.1
+pytest==8.4.2
+gdown==5.2.0

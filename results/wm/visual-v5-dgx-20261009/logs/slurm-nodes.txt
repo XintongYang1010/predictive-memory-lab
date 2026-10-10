@@ -1,0 +1,10 @@
+dgx-061|llm|gpu:8(S:0-1)|location=local|2063935|224|mix
+dgx-081|llm|gpu:8(S:0-1)|location=local|2063935|224|mix
+dgx-082|llm|gpu:8(S:0-1)|location=local|2063934|224|idle
+dgx-091|llm|gpu:8(S:0-1)|location=local|2063935|224|mix
+dgx-092|llm|gpu:8(S:0-1)|location=local|2063934|224|mix
+dgx-097|llm|gpu:8(S:0-1)|location=local|2063934|224|mix
+dgx-100|llm|gpu:8(S:0-1)|location=local|2063934|224|mix
+dgx-103|llm|gpu:8(S:0-1)|location=local|2063935|224|idle
+dgx-126|debug|(null)|location=local|2063934|224|idle
+dgx-127|debug|gpu:3(S:0-1)|location=local|2063934|224|drain

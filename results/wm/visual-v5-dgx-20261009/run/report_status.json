@@ -1,0 +1,38 @@
+{
+  "status": "partial",
+  "missing_variants": [
+    "A0",
+    "A1",
+    "B0",
+    "B1",
+    "C0",
+    "C1",
+    "fifo",
+    "full",
+    "reader_only_C0",
+    "recent"
+  ],
+  "incomplete_stages": [
+    "adapt_A0",
+    "adapt_A1",
+    "adapt_B0",
+    "adapt_B1",
+    "adapt_C0",
+    "adapt_C1",
+    "adapt_fifo",
+    "adapt_full",
+    "adapt_recent",
+    "features",
+    "p0",
+    "replay"
+  ],
+  "evaluation_split": "dev",
+  "test_evaluated": false,
+  "limitations": [
+    "controlled synthetic RGB only",
+    "two targets; capacity and similar-address sweeps pending",
+    "ROI latent errors are not physical trajectory errors",
+    "prefix minimization and fresh confirmation remain human-guided",
+    "sharing/selector experiments deliberately not started"
+  ]
+}

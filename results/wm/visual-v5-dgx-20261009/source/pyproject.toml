@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "predictive-memory-lab"
+version = "0.4.0"
+description = "Controlled hidden-state memory and predictive-memory revision experiments"
+requires-python = ">=3.11"
+
+[tool.setuptools.packages.find]
+include = ["pmr*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

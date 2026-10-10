@@ -1,0 +1,28 @@
+name: CPU protocol checks
+on:
+  push:
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install pinned CPU environment
+        run: bash scripts/setup.sh --cpu
+      - name: Protocol checks
+        run: .venv/bin/python -m pytest -q
+      - name: End-to-end smoke
+        run: .venv/bin/python -m pmr smoke --steps 10 --rounds 2 --out runs/ci
+      - name: Three-arm ablation and saved selection audit
+        run: |
+          .venv/bin/python -m pmr smoke --steps 50 --ablation --out runs/ci-v3
+          .venv/bin/python -m pmr audit-selection --run runs/ci-v3
+          .venv/bin/python scripts/package_results.py --run runs/ci-v3
+      - name: V4 state-memory training and packaging smoke
+        run: |
+          .venv/bin/python -m pmr.state_memory --device cpu --smoke --steps 3 --train-episodes 32 --dev-episodes 8 --eval-episodes 8 --seeds 42 --eval-lengths 24,48 --max-seconds 120 --out runs/ci-v4
+          .venv/bin/python scripts/package_results.py --run runs/ci-v4

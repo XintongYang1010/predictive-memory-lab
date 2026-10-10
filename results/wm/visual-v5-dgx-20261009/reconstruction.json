@@ -1,0 +1,72 @@
+{
+  "source_commit_if_available": "d0b4fef25e98eefb58bfba737997cb0145f27daa",
+  "recorded_configuration": {
+    "schema": "v5-rgb-pairs-1",
+    "train": 2048,
+    "dev": 256,
+    "test": 512,
+    "seed": 42,
+    "round_limit_gpuh": 60,
+    "prototype": "two moving targets; independent gap/write axes; terminal multi-horizon prediction",
+    "source": {
+      "git_commit": "d0b4fef25e98eefb58bfba737997cb0145f27daa",
+      "source_sha256": "b56fefd1bd6e9def4b0235d8ce5f3e914a51167f7643a238508f43b0c18370e1",
+      "files": {
+        "pmr/visual_memory/__init__.py": "5334f491766718f980788f117910c30e2b4d804bee37b69bd26438db575f0027",
+        "pmr/visual_memory/__main__.py": "bb4c496ca7009b617ff20badb661237d7e0afc35ec34972af15c61c42faa49b5",
+        "pmr/visual_memory/bind_gpu.py": "cab3427dddd890e1437393dc40cdb2381c623d177b32054f4bdd4c1f674fef45",
+        "pmr/visual_memory/common.py": "6b89bfca6f38aea698449edd7ece7da3baa14e16b97b805b6368d59853f5b4ac",
+        "pmr/visual_memory/data.py": "ce5082f3be9006dcceb46fbaffadc27349f977a77abcf8992eda3e80f8775368",
+        "pmr/visual_memory/feature_workers.py": "9334ce554d5d910d3f651e7d7d555ef23c629762b0f391f8b0e318d4c8fb1cc1",
+        "pmr/visual_memory/features.py": "5324748c4c2ef0cd82329d97c73a6cf8a21562501039ba31bd67dbc0efe29f93",
+        "pmr/visual_memory/memory.py": "779a3fa3ffd9a5e4b1b52111ae37ebb35292f61e2a4a4973cadffa61e6ec4b7b",
+        "pmr/visual_memory/predictor.py": "11b481b74fb50ad069c42335611677ab3dc20c0cc7dc8eef9e74b4472fb14d38",
+        "pmr/visual_memory/profiling.py": "a99b14df2651f4f32d5f242f28a877c47f83c6b5a8d425d31a891fa79c2c12fe",
+        "pmr/visual_memory/report.py": "fa8b54a0f1f840da0acf1cab11b23f24d6bbead8f214c4a1a6b4634cbbed225d",
+        "pmr/visual_memory/slurm_backend.py": "6b622a7f895adeaf1fd6dd84031639765ca9ce7c2e445ceba5d989f6a2c6fbbe",
+        "pmr/visual_memory/train.py": "59b8420c95625a08b324e93a7b5d75f7f44af58719a486002bd0cd831a1cf7bb",
+        "scripts/archive_visual_v5.py": "525a65e4b894ee8f05ca44ffe4d1b042584543abb0d38a45b924ccfbcd609b07",
+        "scripts/launch_visual_v5.py": "996861db1c349d340e0c7f9a2609d70b9eee36bd7e01669cae49239c0b263831",
+        "scripts/prepare_visual_v5.sh": "f2d1446f083ae42ccf2cc55f72a57cfa8464a08d31a5b519923b046e5daede13"
+      }
+    },
+    "execution": {
+      "backend": "dgx",
+      "account": "hansirui",
+      "partition": "llm",
+      "requested_gpu_model": "H800",
+      "shared_parent_allocation": true,
+      "parent_allocated_gpu_count": 8,
+      "feature_workers": 8,
+      "batch_size": 32,
+      "frame_batch": 32
+    }
+  },
+  "recorded_encoder": {
+    "encoder": "official-IJEPA-ViT-H14-224-target_encoder",
+    "code_commit": "52c1ae95d05f743e000e8f10a1f3a79b10cff048",
+    "checkpoint_sha256": "0382013c481743e9ccea89f970bc6c6aa126aa19a62127500d6e672a641aae22",
+    "pretrained": true,
+    "grid": 4
+  },
+  "excluded": {
+    "transient_or_incomplete_files": {
+      "files": 1,
+      "bytes": 0
+    },
+    "official_assets": "Not copied. Recreate pinned I-JEPA source and weights using source/scripts/prepare_visual_v5.sh; compare recorded encoder code/checkpoint hashes.",
+    "python_environments": "Not copied. Recreate isolated environment using archived preparation script and environment logs.",
+    "git_metadata": "Not copied. Actual source snapshot and per-file SHA256 hashes are included.",
+    "reproducible_feature_tensors": {
+      "files": 256,
+      "bytes": 655082496,
+      "sha256_inventory": "run/probe_features/{train,dev}/manifest.json; reconciled against workspace/remote_run_inventory.json",
+      "downloaded": false
+    },
+    "installation_caches": "Not downloaded; reconstruct environment from preparation script and pip-freeze."
+  },
+  "feature_reconstruction": "Use the archived source/configuration, encoder identity, and run/features or run/probe_features manifests. Test remains unopened. A failed feature gate must be investigated; do not bypass it.",
+  "checkpoint_restore": "Verify checkpoint asset first, then extract its run/ tree over the archived run/ tree. CHECKPOINTS.json lists every training checkpoint.",
+  "publication": "Upload this result directory to GitHub and checkpoint archive as a release asset; reread/download and run this helper with --verify before considering cleanup.",
+  "cleanup": "This helper does not authorize cleanup. Incomplete/failed experiments must retain the remote workspace."
+}

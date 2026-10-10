@@ -1,13 +1,17 @@
 # Predictive Memory Lab
 
-## V5 视觉记忆首轮（源码已提供，A100 实验尚未运行）
+## V5 视觉记忆首轮（H800 八卡 probe 已运行，门槛未通过）
 
 新增独立的 `pmr/visual_memory/`：受控成对 RGB 世界、冻结官方 I-JEPA、
 公共时间预测器 P0、三种 writer × 两种 reader、等字节 FIFO 对照，以及
 特征/历史有效性门槛、断点恢复和 60 GPUh 轮次上限。
-CPU 软件测试已通过；**尚未提交 V5 GPU 作业，也没有 V5 视觉实验结果**。
-当前部署目标是通过 Mac 本地 SSH 别名 `dgx-127-slurm`，在远端
-`/aifs4su/guhao/KVCache/WM` 中运行，结果归档到本仓库后再清理本次目录。
+50 项 CPU 测试已通过。2026-10-09 按用户选择共用已有的八张 H800，
+实际完成 profile（`415453.14`）和八卡 probe（`415453.15`）。
+池化位置 R² = 0.974691，位移 R² = −0.020927，未通过既定门槛；
+P0、架构对照和 reader replay 未启动，尚无训练检查点或架构优劣结论。
+[本轮可读结果、图表、失败样本、复现配置与 SHA 清单](results/wm/visual-v5-dgx-20261009/README.md)。
+IndexMem 保留运行；实验不完整，远端 `/aifs4su/guhao/KVCache/WM` 保留现场。
+A100 实验尚未运行。
 本地 Codex 的完整执行说明见 [DGX 交接任务](docs/CODEX_DGX_HANDOFF.md)。
 DGX 后端已加入真实 Slurm 校验、共享分配中的单 GPU 选择和独立 60 GPUh 计账；
 部署命令、H800 硬件变更及恢复方式见 [DGX 执行记录](docs/DGX_V5_EXECUTION.md)。

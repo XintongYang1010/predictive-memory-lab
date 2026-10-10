@@ -1,0 +1,7 @@
+-r requirements.txt
+av2==0.3.6
+pandas==2.2.3
+pyarrow==19.0.1
+scipy==1.15.3
+opencv-python==4.11.0.86
+numba==0.61.2
