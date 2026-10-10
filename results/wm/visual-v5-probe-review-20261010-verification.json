@@ -1,0 +1,39 @@
+{
+  "status": "verified_from_immutable_github_tarball",
+  "verified_utc": "2026-10-10T02:10:18.181271+00:00",
+  "commit": "39da61d15e6ee79fc80ceeb430f3cfaf2a4ea241",
+  "archives": {
+    "visual-v5-dgx-20261009": {
+      "files": 160,
+      "bytes": 2267619,
+      "status": "verified"
+    },
+    "visual-v5-probe-diagnostic-20261009": {
+      "files": 40,
+      "bytes": 8261662,
+      "source_files": {
+        "files": 12,
+        "bytes": 145272
+      },
+      "status": "verified"
+    },
+    "visual-v5-probe-review-20261010": {
+      "files": 7,
+      "bytes": 42024,
+      "source_files": {
+        "files": 6,
+        "bytes": 58266
+      },
+      "status": "verified"
+    }
+  },
+  "archive_files_including_manifests_and_checksums_byte_identical": 213,
+  "consultation_readback_byte_identical": true,
+  "consultation_sha256": "ffb54faaf1419ae89f23fb98ae0e9622e369d8c1092ac80db4e489d58cfd3614",
+  "checksums_verified": true,
+  "original_gate_changed": false,
+  "new_gpu_jobs": 0,
+  "scientific_confirmation_executed": false,
+  "test_opened": false,
+  "remote_cleanup_performed": false
+}
