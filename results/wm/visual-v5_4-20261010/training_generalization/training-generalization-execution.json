@@ -1,0 +1,55 @@
+{
+  "argv": [
+    "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/training_generalization.py",
+    "--execute",
+    "--anchor-report",
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/report-snapshot/anchor_report/report.json",
+    "--bridge-report",
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/report-snapshot/bridge_report/report.json"
+  ],
+  "cwd": "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab",
+  "started_unix": 1791650586.925312,
+  "script_sha256": "0dd18cb80e680b24bdc802cc50a466fff287907b73a02ed0327d0e7b310dd15b",
+  "snapshot_verification_sha256": "d4a35330fad2f35e614a61eca70f25683a59a10f54fd0a3b0ba2e0b21cf28930",
+  "snapshot_files_verified": 832,
+  "environment": {
+    "OMP_NUM_THREADS": "4",
+    "OPENBLAS_NUM_THREADS": "4",
+    "MKL_NUM_THREADS": "4",
+    "VECLIB_MAXIMUM_THREADS": "4",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "CUDA_VISIBLE_DEVICES": ""
+  },
+  "scope": "CPU-only frozen FIT prediction, no fit or sample generation",
+  "pid": 45952,
+  "returncode": 0,
+  "ended_unix": 1791650589.332944,
+  "elapsed_seconds": 2.4076318740844727,
+  "script_unchanged": true,
+  "logs": {
+    "training-generalization.stdout.log": {
+      "sha256": "aad51f6b53d2f78b183714ada081be2f081f5a4e47effa8a751edc2aad5faf30",
+      "bytes": 204
+    },
+    "training-generalization.stderr.log": {
+      "sha256": "18b9e3357fc24ee525269ce23b79fe13b6aaee061be4ca1346f6f1721702da41",
+      "bytes": 1510
+    }
+  },
+  "status": "complete",
+  "outputs": {
+    "report.json": {
+      "sha256": "0e1df6f801ae047e32d5e8f4f26b27c339c57ff5c24e1718db58cc516da0acec",
+      "bytes": 75084
+    },
+    "README.md": {
+      "sha256": "d68dd278181ca6feafdb5bab695e0d5253f858f0d3d74926a333dee276aa52a9",
+      "bytes": 1245
+    },
+    "predictions.npz": {
+      "sha256": "f25f0fddb4cbe210f47c0c1dba807e2ccbe7ca3d3d5b5acf434937874a709853",
+      "bytes": 481120
+    }
+  }
+}

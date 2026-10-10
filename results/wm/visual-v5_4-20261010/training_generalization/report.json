@@ -1,0 +1,2438 @@
+{
+  "alpha_unchanged": 7.8125e-07,
+  "baseline": {
+    "name": "same joint N/W FIT target mean used by official evaluation",
+    "per_dataset_denominator": "mean((target - shared_target_mean)^2) by dimension",
+    "values": [
+      0.4847960099577904,
+      0.27861388213932514,
+      0.4824831821024418,
+      0.7279571853578091,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "world_weighting": "equal world weight; 16 equally weighted views within each FIT world"
+  },
+  "cache_identity": {
+    "encoder_identity": {
+      "checkpoint_sha256": "0382013c481743e9ccea89f970bc6c6aa126aa19a62127500d6e672a641aae22",
+      "model": "official I-JEPA ViT-H/14 target_encoder",
+      "source_commit": "52c1ae95d05f743e000e8f10a1f3a79b10cff048"
+    },
+    "feature_dtype": "float32",
+    "plan_sha256": "e5dc00d833455fb344527114bdbf752cad9c769200e2fce192d2f3e1364d5ec5",
+    "pooling": "4x4_flattened",
+    "source_commit": "3279bbe49f8db5ec1bd4b2f5c343db1ce9e5684b",
+    "source_identity": {
+      "docs/V5_3_EXECUTION_PROTOCOL.md": "2116e021480d88e539c3ede88e64ab4c632dc41653bf31dd52e3d4ccdf2f948f",
+      "docs/V5_4_EXECUTION_PROTOCOL.md": "ef265690735250f89808204598b63171a11a9615f5764fdde5841f8a9c4888e2",
+      "pmr/visual_memory/__init__.py": "5334f491766718f980788f117910c30e2b4d804bee37b69bd26438db575f0027",
+      "pmr/visual_memory/__main__.py": "bb4c496ca7009b617ff20badb661237d7e0afc35ec34972af15c61c42faa49b5",
+      "pmr/visual_memory/bind_gpu.py": "cab3427dddd890e1437393dc40cdb2381c623d177b32054f4bdd4c1f674fef45",
+      "pmr/visual_memory/common.py": "6b89bfca6f38aea698449edd7ece7da3baa14e16b97b805b6368d59853f5b4ac",
+      "pmr/visual_memory/data.py": "ce5082f3be9006dcceb46fbaffadc27349f977a77abcf8992eda3e80f8775368",
+      "pmr/visual_memory/feature_workers.py": "9334ce554d5d910d3f651e7d7d555ef23c629762b0f391f8b0e318d4c8fb1cc1",
+      "pmr/visual_memory/features.py": "5324748c4c2ef0cd82329d97c73a6cf8a21562501039ba31bd67dbc0efe29f93",
+      "pmr/visual_memory/memory.py": "779a3fa3ffd9a5e4b1b52111ae37ebb35292f61e2a4a4973cadffa61e6ec4b7b",
+      "pmr/visual_memory/predictor.py": "11b481b74fb50ad069c42335611677ab3dc20c0cc7dc8eef9e74b4472fb14d38",
+      "pmr/visual_memory/profiling.py": "a99b14df2651f4f32d5f242f28a877c47f83c6b5a8d425d31a891fa79c2c12fe",
+      "pmr/visual_memory/report.py": "fa8b54a0f1f840da0acf1cab11b23f24d6bbead8f214c4a1a6b4634cbbed225d",
+      "pmr/visual_memory/slurm_backend.py": "6b622a7f895adeaf1fd6dd84031639765ca9ce7c2e445ceba5d989f6a2c6fbbe",
+      "pmr/visual_memory/train.py": "59b8420c95625a08b324e93a7b5d75f7f44af58719a486002bd0cd831a1cf7bb",
+      "scripts/extract_v5_3.py": "c8f182dedd670732788f0cd3c3cc0d4e1b593785e905c7fbde286f8c3fabdeb7",
+      "scripts/extract_v5_4.py": "9d04cfe291abf44ea65bbf6ffde1af2b8ab48e00d52ddceaee921ea26c96a6bf",
+      "scripts/extract_v5_confirmation.py": "8db68a6a978014e18b9f3f12f81cdc7388048cfaf41c285c97c1c268ee656034",
+      "scripts/launch_v5_1.py": "d12789004d1a9409f813db760773b3265d7fec5da76e8acf12e23728cfc71aa0",
+      "scripts/launch_v5_2.py": "6750f49bb0a0e546c47e44f107f2f1549385adfd5f362244e7efcc4d3be0adbb",
+      "scripts/launch_v5_3.py": "17cd7a05aa9127fd43bf51d4de8bcf5a59c91ad76705eeddf7842b6b1b099cc2",
+      "scripts/launch_v5_4.py": "ccec7a9dbbe50acf61acea9398dd2778890ef7fa87f9818d9f4eef595072492f",
+      "scripts/v5_3_data.py": "3018b72817b536323ee404c070c10b1cc13917420ec377e21a3aec5325bb8f12",
+      "scripts/v5_3_plan.json": "674962273628ffed67380d6b0ab563dd03652908e4a44d780f5156fc688e8576",
+      "scripts/v5_3_reader.py": "960e3123da1163d694fafaeee45f91cea84e03025b37a62da9823dcff0b04ada",
+      "scripts/v5_4_data.py": "97eb9796c9affe09a13d0bf242c701dac36d6e126f7e8cd91a84185534120576",
+      "scripts/v5_4_plan.json": "e5dc00d833455fb344527114bdbf752cad9c769200e2fce192d2f3e1364d5ec5",
+      "scripts/v5_4_reader.py": "e198aa3046056b032582e13c6ad135e581af895fcef17a8867e231355e82c3c1",
+      "scripts/v5_temporal_confirmation.py": "6fe8a1f96e6d1209094fa2522dcccf4e9558afcb9714e8e9d7dd9785eb651681"
+    }
+  },
+  "dimensions": [
+    "A_x",
+    "A_y",
+    "B_x",
+    "B_y",
+    "A_dx",
+    "A_dy",
+    "B_dx",
+    "B_dy"
+  ],
+  "elapsed_seconds": 2.3598551750183105,
+  "environment": {
+    "cuda_visible_devices": "",
+    "numpy": "2.0.2",
+    "platform": "macOS-15.7.3-arm64-arm-64bit",
+    "python": "3.9.6 (default, Dec  2 2025, 07:27:58) \n[Clang 17.0.0 (clang-1700.6.3.2)]",
+    "threads": {
+      "MKL_NUM_THREADS": "4",
+      "OMP_NUM_THREADS": "4",
+      "OPENBLAS_NUM_THREADS": "4",
+      "VECLIB_MAXIMUM_THREADS": "4"
+    }
+  },
+  "input_files": {
+    "anchor_report": {
+      "bytes": 81033,
+      "path": "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/report-snapshot/anchor_report/report.json",
+      "sha256": "d6b0f97012365dd75370489372226a43e4b761d45a031eb942dcd15744938bc7"
+    },
+    "bridge_report": {
+      "bytes": 13113,
+      "path": "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/report-snapshot/bridge_report/report.json",
+      "sha256": "471fc4101f38e96e5d763bb1103c514527486715951a7a9c6a00dee8aa00a893"
+    },
+    "diagnostic_script": {
+      "bytes": 12156,
+      "path": "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/training_generalization.py",
+      "sha256": "0dd18cb80e680b24bdc802cc50a466fff287907b73a02ed0327d0e7b310dd15b"
+    },
+    "evaluation_controller": {
+      "bytes": 6478,
+      "path": "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/report-snapshot/evaluation_controller.json",
+      "sha256": "14a0c8d35f8fb2de33e89275328c09d21abb658fb78897319e32349cad586ada"
+    },
+    "freeze_publication": {
+      "bytes": 5127,
+      "path": "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/freeze_publication.json",
+      "sha256": "101d05423548c7e6d3a3c60ecf7b0fedc8f4a76627343a6df3a440f661cd0edf"
+    },
+    "freeze_receipt": {
+      "bytes": 47443,
+      "path": "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/frozen/reader/freeze_receipt.json",
+      "sha256": "c76e58360f71facfc60e4abe933f51d4785f2dfdf64da71b1bfd39da63765c4e"
+    },
+    "frozen_model": {
+      "bytes": 252781114,
+      "path": "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/frozen/reader/frozen_model.npz",
+      "sha256": "657448f6b31928aeec30a6c4e8a3264ce1ff6a266918125b169a30407e4e7fa4"
+    },
+    "training_config": {
+      "bytes": 1149,
+      "path": "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/frozen/reader/training_config.json",
+      "sha256": "7dbe3925dbfb6b8fe5f3af28116d3fe7903dd244deddf32078c2aa82ca800bbb"
+    }
+  },
+  "limitations": [
+    "In-sample training diagnostics do not establish generalization.",
+    "A train/evaluation gap can reflect covariate or task shift; it does not isolate a cause.",
+    "No thresholds, alpha selection, new bootstrap intervals, or pass gates are introduced."
+  ],
+  "model_identity": {
+    "cache_identity": {
+      "encoder_identity": {
+        "checkpoint_sha256": "0382013c481743e9ccea89f970bc6c6aa126aa19a62127500d6e672a641aae22",
+        "model": "official I-JEPA ViT-H/14 target_encoder",
+        "source_commit": "52c1ae95d05f743e000e8f10a1f3a79b10cff048"
+      },
+      "feature_dtype": "float32",
+      "plan_sha256": "e5dc00d833455fb344527114bdbf752cad9c769200e2fce192d2f3e1364d5ec5",
+      "pooling": "4x4_flattened",
+      "source_commit": "3279bbe49f8db5ec1bd4b2f5c343db1ce9e5684b",
+      "source_identity": {
+        "docs/V5_3_EXECUTION_PROTOCOL.md": "2116e021480d88e539c3ede88e64ab4c632dc41653bf31dd52e3d4ccdf2f948f",
+        "docs/V5_4_EXECUTION_PROTOCOL.md": "ef265690735250f89808204598b63171a11a9615f5764fdde5841f8a9c4888e2",
+        "pmr/visual_memory/__init__.py": "5334f491766718f980788f117910c30e2b4d804bee37b69bd26438db575f0027",
+        "pmr/visual_memory/__main__.py": "bb4c496ca7009b617ff20badb661237d7e0afc35ec34972af15c61c42faa49b5",
+        "pmr/visual_memory/bind_gpu.py": "cab3427dddd890e1437393dc40cdb2381c623d177b32054f4bdd4c1f674fef45",
+        "pmr/visual_memory/common.py": "6b89bfca6f38aea698449edd7ece7da3baa14e16b97b805b6368d59853f5b4ac",
+        "pmr/visual_memory/data.py": "ce5082f3be9006dcceb46fbaffadc27349f977a77abcf8992eda3e80f8775368",
+        "pmr/visual_memory/feature_workers.py": "9334ce554d5d910d3f651e7d7d555ef23c629762b0f391f8b0e318d4c8fb1cc1",
+        "pmr/visual_memory/features.py": "5324748c4c2ef0cd82329d97c73a6cf8a21562501039ba31bd67dbc0efe29f93",
+        "pmr/visual_memory/memory.py": "779a3fa3ffd9a5e4b1b52111ae37ebb35292f61e2a4a4973cadffa61e6ec4b7b",
+        "pmr/visual_memory/predictor.py": "11b481b74fb50ad069c42335611677ab3dc20c0cc7dc8eef9e74b4472fb14d38",
+        "pmr/visual_memory/profiling.py": "a99b14df2651f4f32d5f242f28a877c47f83c6b5a8d425d31a891fa79c2c12fe",
+        "pmr/visual_memory/report.py": "fa8b54a0f1f840da0acf1cab11b23f24d6bbead8f214c4a1a6b4634cbbed225d",
+        "pmr/visual_memory/slurm_backend.py": "6b622a7f895adeaf1fd6dd84031639765ca9ce7c2e445ceba5d989f6a2c6fbbe",
+        "pmr/visual_memory/train.py": "59b8420c95625a08b324e93a7b5d75f7f44af58719a486002bd0cd831a1cf7bb",
+        "scripts/extract_v5_3.py": "c8f182dedd670732788f0cd3c3cc0d4e1b593785e905c7fbde286f8c3fabdeb7",
+        "scripts/extract_v5_4.py": "9d04cfe291abf44ea65bbf6ffde1af2b8ab48e00d52ddceaee921ea26c96a6bf",
+        "scripts/extract_v5_confirmation.py": "8db68a6a978014e18b9f3f12f81cdc7388048cfaf41c285c97c1c268ee656034",
+        "scripts/launch_v5_1.py": "d12789004d1a9409f813db760773b3265d7fec5da76e8acf12e23728cfc71aa0",
+        "scripts/launch_v5_2.py": "6750f49bb0a0e546c47e44f107f2f1549385adfd5f362244e7efcc4d3be0adbb",
+        "scripts/launch_v5_3.py": "17cd7a05aa9127fd43bf51d4de8bcf5a59c91ad76705eeddf7842b6b1b099cc2",
+        "scripts/launch_v5_4.py": "ccec7a9dbbe50acf61acea9398dd2778890ef7fa87f9818d9f4eef595072492f",
+        "scripts/v5_3_data.py": "3018b72817b536323ee404c070c10b1cc13917420ec377e21a3aec5325bb8f12",
+        "scripts/v5_3_plan.json": "674962273628ffed67380d6b0ab563dd03652908e4a44d780f5156fc688e8576",
+        "scripts/v5_3_reader.py": "960e3123da1163d694fafaeee45f91cea84e03025b37a62da9823dcff0b04ada",
+        "scripts/v5_4_data.py": "97eb9796c9affe09a13d0bf242c701dac36d6e126f7e8cd91a84185534120576",
+        "scripts/v5_4_plan.json": "e5dc00d833455fb344527114bdbf752cad9c769200e2fce192d2f3e1364d5ec5",
+        "scripts/v5_4_reader.py": "e198aa3046056b032582e13c6ad135e581af895fcef17a8867e231355e82c3c1",
+        "scripts/v5_temporal_confirmation.py": "6fe8a1f96e6d1209094fa2522dcccf4e9558afcb9714e8e9d7dd9785eb651681"
+      }
+    },
+    "narrow_reference": {
+      "cache_sha256": "107fa44e56c3152ab08ec02413d4a1b0e051179cebf4ea8b851efbf67f513833",
+      "encoder_identity": {
+        "checkpoint_sha256": "0382013c481743e9ccea89f970bc6c6aa126aa19a62127500d6e672a641aae22",
+        "model": "official I-JEPA ViT-H/14 target_encoder",
+        "source_commit": "52c1ae95d05f743e000e8f10a1f3a79b10cff048"
+      },
+      "manifest_sha256": "bfa3006ad1af90869deab7fa24d69b309bfaf76ca9b885532373145acb95ea13",
+      "receipt_sha256": "18f52d9e6ecca5be3872a916d87dfcc67b789ff2062e84a9c9cab84aa51e17e6",
+      "source_commit": "875be45515276cc8559ffcdb21c7412c6048d5ad"
+    },
+    "training_config": {
+      "arms": [
+        "N",
+        "W"
+      ],
+      "baseline": "joint_N_W_FIT_target_mean_for_scoring_only",
+      "cv": false,
+      "historical_V53_model_used": false,
+      "inputs": [
+        "concat"
+      ],
+      "intercept": "arm_specific_unpenalized_intercept_via_SPD_solve_and_Schur_complement",
+      "kernel": "quadratic",
+      "loss": "mean_within_world_then_equal_mean_over_worlds",
+      "mean_loss_alpha": 7.8125e-07,
+      "normalization": "shared_joint_N_W_FIT_linear_then_quadratic_center_and_mean_diagonal",
+      "reference_order": "all_N_worlds_then_all_W_worlds; target-major/path-minor views",
+      "regularization": {
+        "N": 0.0032,
+        "W": 0.0032
+      },
+      "selection": false,
+      "view_indices": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          0
+        ]
+      ]
+    },
+    "wide_fit_cache_sha256": "eef7a791a9e3f35a91aa656fe1ed244603e2e5b3142941009af5e6dceb77fd68"
+  },
+  "narrow_reference": {
+    "cache_sha256": "107fa44e56c3152ab08ec02413d4a1b0e051179cebf4ea8b851efbf67f513833",
+    "encoder_identity": {
+      "checkpoint_sha256": "0382013c481743e9ccea89f970bc6c6aa126aa19a62127500d6e672a641aae22",
+      "model": "official I-JEPA ViT-H/14 target_encoder",
+      "source_commit": "52c1ae95d05f743e000e8f10a1f3a79b10cff048"
+    },
+    "manifest_sha256": "bfa3006ad1af90869deab7fa24d69b309bfaf76ca9b885532373145acb95ea13",
+    "receipt_sha256": "18f52d9e6ecca5be3872a916d87dfcc67b789ff2062e84a9c9cab84aa51e17e6",
+    "source_commit": "875be45515276cc8559ffcdb21c7412c6048d5ad"
+  },
+  "new_fit": false,
+  "new_generation": false,
+  "official_evaluation_comparisons": {
+    "anchor": {
+      "N": {
+        "comparison": "Descriptive difference across distributions using the same frozen joint FIT mean; not a causal decomposition",
+        "evaluation_minus_own_fit_per_dimension_mse": [
+          0.0007929924506954125,
+          0.00017491800693266216,
+          0.0011042963539718812,
+          0.00019687894142747587,
+          9.666914441398498e-05,
+          7.944647853449423e-05,
+          0.00011418632245180828,
+          7.047323554172248e-05
+        ],
+        "official_score": {
+          "motion_absolute_amplitude_ratio": [
+            0.6131003683580818,
+            0.7235658560473063,
+            0.5711368414958963,
+            0.7054924986497468
+          ],
+          "motion_direction_error_rate": [
+            0.1923828125,
+            0.12744140625,
+            0.240234375,
+            0.1201171875
+          ],
+          "motion_nmse": 0.5191390251229865,
+          "motion_prediction_target_covariance": [
+            8.5034675221931e-05,
+            0.00010486671565885302,
+            6.87832188929366e-05,
+            0.00011239599143037829
+          ],
+          "motion_prediction_zero_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "motion_rms_ratio": [
+            0.7211065202180084,
+            0.8152842153895801,
+            0.6961960261876144,
+            0.8057508962700664
+          ],
+          "motion_sign_tie_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "motion_signed_bias": [
+            -5.759019360029351e-17,
+            -4.37661923846297e-17,
+            2.676141304543654e-16,
+            -1.7976749646167467e-16
+          ],
+          "motion_skill": 0.48086097487701346,
+          "motion_std_ratio": [
+            0.7211065202180083,
+            0.8152842153895805,
+            0.6961960261876147,
+            0.8057508962700666
+          ],
+          "motion_target_zero_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "per_dimension_mse": [
+            0.0007930851475759142,
+            0.00017494070226680024,
+            0.0011044157004613119,
+            0.00019690528456053132,
+            9.679333096395727e-05,
+            7.949206559429066e-05,
+            0.00011432440689352878,
+            7.052662635840378e-05
+          ],
+          "per_dimension_skill": [
+            0.9835790328796724,
+            0.9562305477020613,
+            0.9777789189804897,
+            0.9534953465359396,
+            0.4486852155128038,
+            0.5424693981919528,
+            0.3261518539253524,
+            0.6061374318779447
+          ],
+          "position_skill": 0.9677709615245408
+        },
+        "own_fit_minus_evaluation_motion_skill": 0.5186322106260801
+      },
+      "W": {
+        "comparison": "Descriptive difference across distributions using the same frozen joint FIT mean; not a causal decomposition",
+        "evaluation_minus_own_fit_per_dimension_mse": [
+          0.0001945660165567466,
+          5.2612272597211416e-05,
+          0.0002648555492209724,
+          6.265131314467052e-05,
+          0.00010274264123505759,
+          5.153701384164621e-05,
+          0.00010740356319449159,
+          6.0745050198448393e-05
+        ],
+        "official_score": {
+          "motion_absolute_amplitude_ratio": [
+            0.5556966167491352,
+            0.7389381102042748,
+            0.5560572299399247,
+            0.7317154083007539
+          ],
+          "motion_direction_error_rate": [
+            0.2099609375,
+            0.06201171875,
+            0.2236328125,
+            0.0966796875
+          ],
+          "motion_nmse": 0.4640357178261045,
+          "motion_prediction_target_covariance": [
+            7.60570014639009e-05,
+            0.0001228813134663588,
+            7.023740854135199e-05,
+            0.00012218099210894304
+          ],
+          "motion_prediction_zero_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "motion_rms_ratio": [
+            0.6724893146966828,
+            0.8434927471508192,
+            0.6795340529314616,
+            0.8391901941756769
+          ],
+          "motion_sign_tie_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "motion_signed_bias": [
+            3.817111625154142e-17,
+            4.9847888945915575e-19,
+            6.472602266443736e-17,
+            6.646667537104495e-18
+          ],
+          "motion_skill": 0.5359642821738955,
+          "motion_std_ratio": [
+            0.6724893146966826,
+            0.8434927471508191,
+            0.6795340529314621,
+            0.8391901941756771
+          ],
+          "motion_target_zero_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "per_dimension_mse": [
+            0.0001946793986894122,
+            5.264421822597755e-05,
+            0.0002649728151003202,
+            6.268414655608152e-05,
+            0.00010285345437450865,
+            5.1592524915058824e-05,
+            0.00010752703975836055,
+            6.0806163935984396e-05
+          ],
+          "per_dimension_skill": [
+            0.9959691288953586,
+            0.9868286306814404,
+            0.9946686900685561,
+            0.9851953972703825,
+            0.41416800654002817,
+            0.7030501246041476,
+            0.36621673041745273,
+            0.6604222671339535
+          ],
+          "position_skill": 0.9906654617289343
+        },
+        "own_fit_minus_evaluation_motion_skill": 0.46354412893000396
+      }
+    },
+    "bridge": {
+      "N": {
+        "comparison": "Descriptive difference across distributions using the same frozen joint FIT mean; not a causal decomposition",
+        "evaluation_minus_own_fit_per_dimension_mse": [
+          0.0012989864471575562,
+          0.0006193428693614711,
+          0.001455364444281777,
+          0.0004465694316950288,
+          0.00012728379518962878,
+          0.00012326179947454527,
+          9.75424624883521e-05,
+          9.127892808326249e-05
+        ],
+        "official_score": {
+          "motion_absolute_amplitude_ratio": [
+            0.5979559940299516,
+            0.6403895847509374,
+            0.6198619100778859,
+            0.6433023314185203
+          ],
+          "motion_direction_error_rate": [
+            0.228515625,
+            0.2421875,
+            0.1875,
+            0.171875
+          ],
+          "motion_nmse": 0.6461646469041795,
+          "motion_prediction_target_covariance": [
+            7.513604628411171e-05,
+            6.087490269062935e-05,
+            8.840685895699431e-05,
+            5.98401256705241e-05
+          ],
+          "motion_prediction_zero_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "motion_rms_ratio": [
+            0.7316511109810595,
+            0.7436769272489359,
+            0.7436179784331702,
+            0.7551559962794934
+          ],
+          "motion_sign_tie_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "motion_signed_bias": [
+            0.0003837078008172004,
+            -0.0010172135577947868,
+            0.00017588458246242195,
+            -0.0013839375137702377
+          ],
+          "motion_skill": 0.3538353530958204,
+          "motion_std_ratio": [
+            0.7314008471738511,
+            0.733312368666673,
+            0.7434656792435637,
+            0.7549161843526864
+          ],
+          "motion_target_zero_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "per_dimension_mse": [
+            0.0012990791440380578,
+            0.0006193655646956092,
+            0.0014554837907712077,
+            0.0004465957748280842,
+            0.00012740798173960108,
+            0.00012330738653434172,
+            9.76805469300726e-05,
+            9.133231889994379e-05
+          ],
+          "per_dimension_skill": [
+            0.9687191097086915,
+            0.925440977298585,
+            0.9636018682740037,
+            0.9386600196101361,
+            0.2953964562332293,
+            0.22474699657427222,
+            0.44738675110466364,
+            0.44781120847111655
+          ],
+          "position_skill": 0.949105493722854
+        },
+        "own_fit_minus_evaluation_motion_skill": 0.645657832407273
+      },
+      "W": {
+        "comparison": "Descriptive difference across distributions using the same frozen joint FIT mean; not a causal decomposition",
+        "evaluation_minus_own_fit_per_dimension_mse": [
+          0.00035144473466045304,
+          0.00011908457167285861,
+          0.00035661539586301523,
+          0.00013473311301016226,
+          0.00013227956683034708,
+          7.695208635087727e-05,
+          0.00010439685788960787,
+          7.542410995186183e-05
+        ],
+        "official_score": {
+          "motion_absolute_amplitude_ratio": [
+            0.5890688862006603,
+            0.6678484121102687,
+            0.5893904144719483,
+            0.6582287123053784
+          ],
+          "motion_direction_error_rate": [
+            0.240234375,
+            0.140625,
+            0.1875,
+            0.138671875
+          ],
+          "motion_nmse": 0.5660008226656813,
+          "motion_prediction_target_covariance": [
+            7.027119962863268e-05,
+            8.889864835820889e-05,
+            8.05820747376848e-05,
+            6.842818475525618e-05
+          ],
+          "motion_prediction_zero_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "motion_rms_ratio": [
+            0.7137674977308321,
+            0.7805654352906835,
+            0.7093514275650988,
+            0.7676264449240858
+          ],
+          "motion_sign_tie_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "motion_signed_bias": [
+            6.101825732069822e-05,
+            -0.00035234541455791523,
+            0.0003584792832857743,
+            -0.0012243072215947061
+          ],
+          "motion_skill": 0.4339991773343187,
+          "motion_std_ratio": [
+            0.7137822481606255,
+            0.7777608205289878,
+            0.7087658324125339,
+            0.7635461406172587
+          ],
+          "motion_target_zero_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "per_dimension_mse": [
+            0.00035155811679311866,
+            0.00011911651730162474,
+            0.000356732661742363,
+            0.00013476594642157326,
+            0.00013239037996979814,
+            7.700759742428988e-05,
+            0.00010452033445347683,
+            7.548522368939783e-05
+          ],
+          "per_dimension_skill": [
+            0.9915347337128042,
+            0.9856607928760617,
+            0.9910789783469978,
+            0.9814898819544298,
+            0.26784233127558577,
+            0.515841079210991,
+            0.40869166468414997,
+            0.5436216341665482
+          ],
+          "position_skill": 0.9874410967225734
+        },
+        "own_fit_minus_evaluation_motion_skill": 0.5655092337695807
+      }
+    }
+  },
+  "original_fit_receipt_hashes": {
+    "N": "18f52d9e6ecca5be3872a916d87dfcc67b789ff2062e84a9c9cab84aa51e17e6",
+    "W": "d8d97bebc4042c2c6700f1a7905d6bdf37a3f730bc7b1e6202dcc5ca080a55b8"
+  },
+  "original_v5_gate": "failed_unchanged",
+  "own_fit": {
+    "N": {
+      "all_views": {
+        "dx_mse": 1.3113549584639917e-07,
+        "motion_absolute_amplitude_ratio": [
+          0.9859186008101457,
+          0.9939445752050645,
+          0.9856543228033513,
+          0.9937435150323513
+        ],
+        "motion_direction_error_rate": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "motion_mse": 9.031221704263323e-08,
+        "motion_nmse": 0.000506814496906437,
+        "motion_prediction_rms": [
+          0.013032789499592237,
+          0.013376036890595999,
+          0.013195814016497363,
+          0.013411291068880591
+        ],
+        "motion_prediction_target_covariance": [
+          0.0001721771373679598,
+          0.00017993852590051317,
+          0.000176544919502151,
+          0.0001809400103433082
+        ],
+        "motion_prediction_zero_count": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "motion_rms_ratio": [
+          0.9862439369666559,
+          0.994221248354499,
+          0.9860304201721861,
+          0.9939180487150574
+        ],
+        "motion_sign_tie_count": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "motion_signed_bias": [
+          -2.804991956479978e-17,
+          -9.256799564068621e-18,
+          -7.295939466998597e-17,
+          -6.0806377701018086e-18
+        ],
+        "motion_skill": 0.9994931855030935,
+        "motion_std_ratio": [
+          0.9862439369666555,
+          0.9942212483544993,
+          0.9860304201721859,
+          0.9939180487150574
+        ],
+        "motion_target_rms": [
+          0.01321456995687758,
+          0.013453782961020207,
+          0.013382765629272406,
+          0.013493357008878932
+        ],
+        "motion_target_zero_count": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "per_dimension_baseline_mse": [
+          0.028227372045966412,
+          0.0019938366742185644,
+          0.02825331083611046,
+          0.002094644943326274,
+          0.00017462485914521153,
+          0.00018100427596223767,
+          0.00017909841588803488,
+          0.00018207068336906218
+        ],
+        "per_dimension_mse": [
+          9.269688050167853e-08,
+          2.2695334138073583e-08,
+          1.1934648943077495e-07,
+          2.6343133055439162e-08,
+          1.2418654997229208e-07,
+          4.558705979643947e-08,
+          1.3808444172050623e-07,
+          5.339081668129515e-08
+        ],
+        "per_dimension_rmse": [
+          0.0003044616240212854,
+          0.00015064970673079182,
+          0.0003454656125155946,
+          0.00016230567782871664,
+          0.0003524011208442619,
+          0.00021351126386314956,
+          0.00037159714977446506,
+          0.00023106452925816015
+        ],
+        "per_dimension_skill": [
+          0.9999967160640972,
+          0.9999886172551485,
+          0.9999957758405688,
+          0.9999874235807173,
+          0.9992888380807854,
+          0.9997481437410576,
+          0.9992290024396038,
+          0.9997067577509275
+        ],
+        "position_skill": 0.9999921331851329
+      },
+      "examples": 4096,
+      "input_domain": "N_FIT",
+      "paths": {
+        "aa": {
+          "dx_mse": 1.4845890458399644e-07,
+          "motion_absolute_amplitude_ratio": [
+            0.9873784775253718,
+            0.9945697459032768,
+            0.9861822055923052,
+            0.9941957865943891
+          ],
+          "motion_direction_error_rate": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "motion_mse": 1.0245718315519309e-07,
+          "motion_nmse": 0.0005747969556309711,
+          "motion_prediction_rms": [
+            0.013052420971605083,
+            0.013385916585004086,
+            0.013205783245955853,
+            0.013421034672294647
+          ],
+          "motion_prediction_target_covariance": [
+            0.0001724265771265782,
+            0.0001800697477360265,
+            0.00017666580366504272,
+            0.00018106474371570812
+          ],
+          "motion_prediction_zero_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "motion_rms_ratio": [
+            0.98772952992026,
+            0.9949555915824753,
+            0.9867753506099339,
+            0.9946401524441476
+          ],
+          "motion_sign_tie_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "motion_signed_bias": [
+            -4.337994536068174e-17,
+            1.0117808554952618e-17,
+            -1.1032604137987262e-17,
+            -6.196893042112461e-18
+          ],
+          "motion_skill": 0.999425203044369,
+          "motion_std_ratio": [
+            0.9877295299202594,
+            0.9949555915824752,
+            0.9867753506099338,
+            0.9946401524441474
+          ],
+          "motion_target_rms": [
+            0.01321456995687758,
+            0.013453782961020207,
+            0.013382765629272406,
+            0.013493357008878932
+          ],
+          "motion_target_zero_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "per_dimension_baseline_mse": [
+            0.028227372045964177,
+            0.00199383667421836,
+            0.028253310836111337,
+            0.0020946449433260636,
+            0.00017462485914521153,
+            0.00018100427596223767,
+            0.00017909841588803488,
+            0.00018207068336906218
+          ],
+          "per_dimension_mse": [
+            9.353271785335251e-08,
+            2.3406831294052717e-08,
+            1.3431910821436892e-07,
+            2.9063795755313234e-08,
+            1.3739811205083313e-07,
+            4.754331087206326e-08,
+            1.5951969711715972e-07,
+            6.536761258071622e-08
+          ],
+          "per_dimension_rmse": [
+            0.0003058311917600174,
+            0.0001529929125615063,
+            0.0003664957137735296,
+            0.00017048107154553327,
+            0.0003706725132119094,
+            0.00021804428649259137,
+            0.0003993991701508151,
+            0.00025567090679370663
+          ],
+          "per_dimension_skill": [
+            0.9999966864532164,
+            0.9999882604068845,
+            0.9999952458984721,
+            0.9999861247149079,
+            0.9992131812576778,
+            0.9997373359793887,
+            0.9991093182129713,
+            0.9996409767274382
+          ],
+          "position_skill": 0.9999915793683702
+        },
+        "ab": {
+          "dx_mse": 1.045176460766856e-07,
+          "motion_absolute_amplitude_ratio": [
+            0.9858342620658629,
+            0.9939162120093121,
+            0.9858705869496717,
+            0.9937631060584
+          ],
+          "motion_direction_error_rate": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "motion_mse": 7.252383505807599e-08,
+          "motion_nmse": 0.00040711411737070797,
+          "motion_prediction_rms": [
+            0.013031071314942775,
+            0.013375262885030461,
+            0.013197585818261344,
+            0.013411048614068069
+          ],
+          "motion_prediction_target_covariance": [
+            0.00017216503939429393,
+            0.00017993130555593172,
+            0.00017658462599900128,
+            0.00018094258517196415
+          ],
+          "motion_prediction_zero_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "motion_rms_ratio": [
+            0.9861139149791777,
+            0.9941637176534478,
+            0.9861628144629526,
+            0.9939000802575148
+          ],
+          "motion_sign_tie_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "motion_signed_bias": [
+            -6.187162085107279e-07,
+            8.208955838317968e-06,
+            -4.190626785690149e-06,
+            2.949238136732696e-06
+          ],
+          "motion_skill": 0.9995928858826293,
+          "motion_std_ratio": [
+            0.9861139138676518,
+            0.9941635304132297,
+            0.9861627647479322,
+            0.9939000562245721
+          ],
+          "motion_target_rms": [
+            0.01321456995687758,
+            0.013453782961020207,
+            0.013382765629272406,
+            0.013493357008878932
+          ],
+          "motion_target_zero_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "per_dimension_baseline_mse": [
+            0.028227372045964177,
+            0.00199383667421836,
+            0.028253310836111337,
+            0.0020946449433260636,
+            0.00017462485914521153,
+            0.00018100427596223767,
+            0.00017909841588803488,
+            0.00018207068336906218
+          ],
+          "per_dimension_mse": [
+            8.946462700803985e-08,
+            2.0057827060428463e-08,
+            1.0967969155516499e-07,
+            2.3542592150084507e-08,
+            1.0359997174853323e-07,
+            3.93220940480909e-08,
+            1.0543532040483795e-07,
+            4.173795403084184e-08
+          ],
+          "per_dimension_rmse": [
+            0.00029910638075447314,
+            0.0001416256581994536,
+            0.00033117924384714237,
+            0.00015343595455461054,
+            0.0003218694949021004,
+            0.00019829799305109194,
+            0.00032470805411144015,
+            0.00020429868827489284
+          ],
+          "per_dimension_skill": [
+            0.9999968305718696,
+            0.9999899400852037,
+            0.9999961179880054,
+            0.9999887605810115,
+            0.9994067283876096,
+            0.9997827559938071,
+            0.9994112995367265,
+            0.999770759612374
+          ],
+          "position_skill": 0.9999929123065225
+        },
+        "ba": {
+          "dx_mse": 1.045176460766961e-07,
+          "motion_absolute_amplitude_ratio": [
+            0.9858342620658618,
+            0.9939162120093148,
+            0.9858705869496743,
+            0.993763106058401
+          ],
+          "motion_direction_error_rate": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "motion_mse": 7.252383505807829e-08,
+          "motion_nmse": 0.0004071141173707225,
+          "motion_prediction_rms": [
+            0.013031071314942754,
+            0.013375262885030503,
+            0.013197585818261366,
+            0.013411048614068092
+          ],
+          "motion_prediction_target_covariance": [
+            0.00017216503939429344,
+            0.0001799313055559321,
+            0.00017658462599900172,
+            0.00018094258517196456
+          ],
+          "motion_prediction_zero_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "motion_rms_ratio": [
+            0.9861139149791762,
+            0.9941637176534509,
+            0.9861628144629543,
+            0.9939000802575164
+          ],
+          "motion_sign_tie_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "motion_signed_bias": [
+            6.187162085312167e-07,
+            -8.208955838323276e-06,
+            4.190626785553036e-06,
+            -2.9492381367140334e-06
+          ],
+          "motion_skill": 0.9995928858826293,
+          "motion_std_ratio": [
+            0.9861139138676508,
+            0.9941635304132319,
+            0.9861627647479333,
+            0.9939000562245739
+          ],
+          "motion_target_rms": [
+            0.01321456995687758,
+            0.013453782961020207,
+            0.013382765629272406,
+            0.013493357008878932
+          ],
+          "motion_target_zero_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "per_dimension_baseline_mse": [
+            0.028227372045964177,
+            0.00199383667421836,
+            0.028253310836111337,
+            0.0020946449433260636,
+            0.00017462485914521153,
+            0.00018100427596223767,
+            0.00017909841588803488,
+            0.00018207068336906218
+          ],
+          "per_dimension_mse": [
+            8.423402230915306e-08,
+            2.0798024224534574e-08,
+            1.1346538321079164e-07,
+            2.458588225374893e-08,
+            1.035999717485706e-07,
+            3.932209404808459e-08,
+            1.0543532040482162e-07,
+            4.1737954030836405e-08
+          ],
+          "per_dimension_rmse": [
+            0.000290230980960257,
+            0.00014421520108689852,
+            0.0003368462308098335,
+            0.00015679885922336594,
+            0.00032186949490215844,
+            0.000198297993051076,
+            0.000324708054111415,
+            0.00020429868827487956
+          ],
+          "per_dimension_skill": [
+            0.9999970158744437,
+            0.999989568842577,
+            0.9999959839969245,
+            0.9999882625060958,
+            0.9994067283876094,
+            0.9997827559938071,
+            0.9994112995367266,
+            0.999770759612374
+          ],
+          "position_skill": 0.9999927078050102
+        },
+        "bb": {
+          "dx_mse": 1.670477866482192e-07,
+          "motion_absolute_amplitude_ratio": [
+            0.9846274015834757,
+            0.9933761308983527,
+            0.9846939117217581,
+            0.9932520614182218
+          ],
+          "motion_direction_error_rate": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "motion_mse": 1.1374401489918597e-07,
+          "motion_nmse": 0.0006382327972533489,
+          "motion_prediction_rms": [
+            0.013016569291195074,
+            0.01336769891515758,
+            0.013182290249878414,
+            0.013402025630635724
+          ],
+          "motion_prediction_target_covariance": [
+            0.00017195189355667605,
+            0.0001798217447541629,
+            0.00017634462234555954,
+            0.0001808101273135983
+          ],
+          "motion_prediction_zero_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "motion_rms_ratio": [
+            0.9850164881393317,
+            0.9936014988414753,
+            0.985019884159408,
+            0.9932313820657743
+          ],
+          "motion_sign_tie_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "motion_signed_bias": [
+            -8.930861285965166e-17,
+            -4.183834539667891e-17,
+            -1.4369151620516676e-16,
+            -3.678833496514877e-17
+          ],
+          "motion_skill": 0.9993617672027466,
+          "motion_std_ratio": [
+            0.9850164881393323,
+            0.9936014988414749,
+            0.9850198841594081,
+            0.9932313820657744
+          ],
+          "motion_target_rms": [
+            0.01321456995687758,
+            0.013453782961020207,
+            0.013382765629272406,
+            0.013493357008878932
+          ],
+          "motion_target_zero_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "per_dimension_baseline_mse": [
+            0.028227372045964177,
+            0.00199383667421836,
+            0.028253310836111337,
+            0.0020946449433260636,
+            0.00017462485914521153,
+            0.00018100427596223767,
+            0.00017909841588803488,
+            0.00018207068336906218
+          ],
+          "per_dimension_mse": [
+            1.0355615483616854e-07,
+            2.651865397327841e-08,
+            1.19921774742774e-07,
+            2.818026206260997e-08,
+            1.5214814434123144e-07,
+            5.616074021751872e-08,
+            1.8194742895520697e-07,
+            6.47197460827867e-08
+          ],
+          "per_dimension_rmse": [
+            0.0003218014214327969,
+            0.00016284549110515283,
+            0.00034629723467387665,
+            0.00016786977709704021,
+            0.0003900617186308231,
+            0.00023698257365789308,
+            0.0004265529614892,
+            0.0002544007588093768
+          ],
+          "per_dimension_skill": [
+            0.9999963313568593,
+            0.999986699685929,
+            0.9999957554788733,
+            0.9999865465208543,
+            0.9991287142902449,
+            0.9996897269972272,
+            0.9989840924719906,
+            0.999644535051524
+          ],
+          "position_skill": 0.999991333260629
+        }
+      },
+      "schedule_groups": {
+        "moving": {
+          "dx_mse": 1.0451764607669086e-07,
+          "motion_absolute_amplitude_ratio": [
+            0.9858342620658618,
+            0.9939162120093145,
+            0.985870586949674,
+            0.9937631060583995
+          ],
+          "motion_direction_error_rate": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "motion_mse": 7.252383505807716e-08,
+          "motion_nmse": 0.00040711411737071534,
+          "motion_prediction_rms": [
+            0.01303107131494277,
+            0.013375262885030482,
+            0.013197585818261349,
+            0.013411048614068083
+          ],
+          "motion_prediction_target_covariance": [
+            0.00017216503939429347,
+            0.00017993130555593202,
+            0.00017658462599900172,
+            0.0001809425851719645
+          ],
+          "motion_prediction_zero_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "motion_rms_ratio": [
+            0.9861139149791773,
+            0.9941637176534495,
+            0.9861628144629531,
+            0.9939000802575159
+          ],
+          "motion_sign_tie_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "motion_signed_bias": [
+            1.0244439980567135e-17,
+            -2.653330707274096e-18,
+            -6.855672916839493e-17,
+            9.331338463427e-18
+          ],
+          "motion_skill": 0.9995928858826294,
+          "motion_std_ratio": [
+            0.9861139149791773,
+            0.9941637176534491,
+            0.9861628144629528,
+            0.9939000802575159
+          ],
+          "motion_target_rms": [
+            0.01321456995687758,
+            0.013453782961020207,
+            0.013382765629272406,
+            0.013493357008878932
+          ],
+          "motion_target_zero_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "per_dimension_baseline_mse": [
+            0.028227372045963643,
+            0.001993836674218347,
+            0.02825331083610985,
+            0.0020946449433260884,
+            0.00017462485914521153,
+            0.00018100427596223767,
+            0.00017909841588803488,
+            0.00018207068336906218
+          ],
+          "per_dimension_mse": [
+            8.684932465859654e-08,
+            2.0427925642481517e-08,
+            1.1157253738297824e-07,
+            2.4064237201916696e-08,
+            1.0359997174855199e-07,
+            3.932209404808776e-08,
+            1.0543532040482974e-07,
+            4.173795403083919e-08
+          ],
+          "per_dimension_rmse": [
+            0.0002947020947645207,
+            0.00014292629444046158,
+            0.0003340247556439167,
+            0.00015512651998261516,
+            0.00032186949490212955,
+            0.000198297993051084,
+            0.0003247080541114275,
+            0.00020429868827488636
+          ],
+          "per_dimension_skill": [
+            0.9999969232231567,
+            0.9999897544638904,
+            0.9999960509924649,
+            0.9999885115435537,
+            0.9994067283876095,
+            0.9997827559938071,
+            0.9994112995367266,
+            0.999770759612374
+          ],
+          "position_skill": 0.9999928100557665
+        },
+        "static": {
+          "dx_mse": 1.5775334561610776e-07,
+          "motion_absolute_amplitude_ratio": [
+            0.9860029395544235,
+            0.993972938400816,
+            0.9854380586570327,
+            0.9937239240063057
+          ],
+          "motion_direction_error_rate": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "motion_mse": 1.0810059902718948e-07,
+          "motion_nmse": 0.0006065148764421597,
+          "motion_prediction_rms": [
+            0.013034507457753794,
+            0.013376810851376202,
+            0.013194041976801647,
+            0.013411533519310003
+          ],
+          "motion_prediction_target_covariance": [
+            0.00017218923534162767,
+            0.00017994574624509497,
+            0.0001765052130053013,
+            0.00018093743551465333
+          ],
+          "motion_prediction_zero_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "motion_rms_ratio": [
+            0.9863739418148775,
+            0.9942787757267217,
+            0.9858980081024538,
+            0.9939360168477654
+          ],
+          "motion_sign_tie_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "motion_signed_bias": [
+            -6.63442791101667e-17,
+            -1.5860268420863147e-17,
+            -7.736206017157701e-17,
+            -2.1492614003630617e-17
+          ],
+          "motion_skill": 0.9993934851235579,
+          "motion_std_ratio": [
+            0.9863739418148781,
+            0.994278775726722,
+            0.9858980081024546,
+            0.9939360168477653
+          ],
+          "motion_target_rms": [
+            0.01321456995687758,
+            0.013453782961020207,
+            0.013382765629272406,
+            0.013493357008878932
+          ],
+          "motion_target_zero_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "per_dimension_baseline_mse": [
+            0.028227372045963643,
+            0.001993836674218347,
+            0.02825331083610985,
+            0.0020946449433260884,
+            0.00017462485914521153,
+            0.00018100427596223767,
+            0.00017909841588803488,
+            0.00018207068336906218
+          ],
+          "per_dimension_mse": [
+            9.85444363447604e-08,
+            2.496274263366552e-08,
+            1.2712044147857158e-07,
+            2.8622028908961632e-08,
+            1.447731281960322e-07,
+            5.185202554479102e-08,
+            1.7073356303618332e-07,
+            6.504367933175136e-08
+          ],
+          "per_dimension_rmse": [
+            0.0003139178815307602,
+            0.0001579960209425083,
+            0.0003565395370482376,
+            0.00016918046255097433,
+            0.00038049064140400644,
+            0.00022771039841164704,
+            0.0004131991808270962,
+            0.00025503662351072514
+          ],
+          "per_dimension_skill": [
+            0.9999965089050379,
+            0.9999874800464068,
+            0.9999955006886727,
+            0.9999863356178811,
+            0.9991709477739613,
+            0.999713531488308,
+            0.999046705342481,
+            0.999642755889481
+          ],
+          "position_skill": 0.9999914563144996
+        }
+      },
+      "worlds": 256
+    },
+    "W": {
+      "all_views": {
+        "dx_mse": 1.1714485166000741e-07,
+        "motion_absolute_amplitude_ratio": [
+          0.9855286627787974,
+          0.9918607430597186,
+          0.9855634617994432,
+          0.9918311598983172
+        ],
+        "motion_direction_error_rate": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "motion_mse": 8.77286285671566e-08,
+        "motion_nmse": 0.0004915888961005827,
+        "motion_prediction_rms": [
+          0.013027353420052694,
+          0.013344866913817144,
+          0.013193390264773536,
+          0.013386437070526325
+        ],
+        "motion_prediction_target_covariance": [
+          0.00017211299156835963,
+          0.000179517118918158,
+          0.00017652024300139307,
+          0.0001806031335373435
+        ],
+        "motion_prediction_zero_count": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "motion_rms_ratio": [
+          0.985832566823149,
+          0.991904429592879,
+          0.9858493102438672,
+          0.9920761054286009
+        ],
+        "motion_sign_tie_count": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "motion_signed_bias": [
+          6.534605078182751e-17,
+          5.6092639349547904e-18,
+          5.7650968214259e-17,
+          -1.0083080204115191e-17
+        ],
+        "motion_skill": 0.9995084111038994,
+        "motion_std_ratio": [
+          0.9858325668231497,
+          0.9919044295928792,
+          0.985849310243867,
+          0.9920761054286009
+        ],
+        "motion_target_rms": [
+          0.01321456995687758,
+          0.013453782961020207,
+          0.013382765629272406,
+          0.013493357008878932
+        ],
+        "motion_target_zero_count": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "per_dimension_baseline_mse": [
+          0.045710888729579215,
+          0.003964086560269297,
+          0.04575090448920381,
+          0.004168859879800713,
+          0.00017462485914521153,
+          0.00018100427596223767,
+          0.00017909841588803488,
+          0.00018207068336906218
+        ],
+        "per_dimension_mse": [
+          1.1338213266560199e-07,
+          3.194562876613406e-08,
+          1.1726587934777944e-07,
+          3.2833411410998566e-08,
+          1.1081313945105767e-07,
+          5.55110734126102e-08,
+          1.2347656386895714e-07,
+          6.111373753600138e-08
+        ],
+        "per_dimension_rmse": [
+          0.00033672263462024944,
+          0.00017873340137236258,
+          0.00034244105966980574,
+          0.00018119992111200977,
+          0.0003328860757842804,
+          0.00023560788062501265,
+          0.0003513923218696691,
+          0.00024721192838534587
+        ],
+        "per_dimension_skill": [
+          0.9999975195815304,
+          0.9999919412383457,
+          0.9999974368620542,
+          0.9999921241268938,
+          0.999365421738958,
+          0.9996933162317989,
+          0.9993105658514246,
+          0.999664340593416
+        ],
+        "position_skill": 0.9999947554522061
+      },
+      "examples": 4096,
+      "input_domain": "W_FIT",
+      "paths": {
+        "aa": {
+          "dx_mse": 1.3942833471051293e-07,
+          "motion_absolute_amplitude_ratio": [
+            0.9862809328227699,
+            0.992644230397478,
+            0.9838656789955893,
+            0.9916847541159564
+          ],
+          "motion_direction_error_rate": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "motion_mse": 1.059938100625597e-07,
+          "motion_nmse": 0.0005933709400247516,
+          "motion_prediction_rms": [
+            0.013035064487061111,
+            0.013354872388883112,
+            0.01317537482784573,
+            0.013384895271658911
+          ],
+          "motion_prediction_target_covariance": [
+            0.00017220884009859597,
+            0.000179643537703765,
+            0.0001762650731013535,
+            0.00018057540165478494
+          ],
+          "motion_prediction_zero_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "motion_rms_ratio": [
+            0.9864160944773654,
+            0.9926481219130953,
+            0.9845031432835492,
+            0.9919618418790336
+          ],
+          "motion_sign_tie_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "motion_signed_bias": [
+            4.0948960802061896e-17,
+            2.061678193616967e-18,
+            3.8086836473289615e-17,
+            -4.186799154983281e-17
+          ],
+          "motion_skill": 0.9994066290599752,
+          "motion_std_ratio": [
+            0.9864160944773656,
+            0.9926481219130955,
+            0.9845031432835487,
+            0.9919618418790334
+          ],
+          "motion_target_rms": [
+            0.01321456995687758,
+            0.013453782961020207,
+            0.013382765629272406,
+            0.013493357008878932
+          ],
+          "motion_target_zero_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "per_dimension_baseline_mse": [
+            0.045710888729577015,
+            0.0039640865602689835,
+            0.04575090448920339,
+            0.004168859879800892,
+            0.00017462485914521153,
+            0.00018100427596223767,
+            0.00017909841588803488,
+            0.00018207068336906218
+          ],
+          "per_dimension_mse": [
+            1.227867997892861e-07,
+            3.7680966474098476e-08,
+            1.2822591944694342e-07,
+            3.5524355138337777e-08,
+            1.2008512986162147e-07,
+            6.981707805980525e-08,
+            1.587715395594044e-07,
+            7.530149276940766e-08
+          ],
+          "per_dimension_rmse": [
+            0.0003504094744570787,
+            0.00019411585837869733,
+            0.00035808646923186503,
+            0.00018847905755902373,
+            0.0003465330141005637,
+            0.00026422921500054693,
+            0.0003984614655890885,
+            0.000274411174643832
+          ],
+          "per_dimension_skill": [
+            0.9999973138391486,
+            0.9999904944138073,
+            0.9999971973030723,
+            0.9999914786401648,
+            0.9993123251153962,
+            0.9996142793992647,
+            0.9991134955673832,
+            0.9995864161578568
+          ],
+          "position_skill": 0.9999941210490483
+        },
+        "ab": {
+          "dx_mse": 9.850048684001354e-08,
+          "motion_absolute_amplitude_ratio": [
+            0.9856069131862217,
+            0.9916899299419387,
+            0.985691101193579,
+            0.9917479825485325
+          ],
+          "motion_direction_error_rate": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "motion_mse": 7.338010802248865e-08,
+          "motion_nmse": 0.0004113431815661064,
+          "motion_prediction_rms": [
+            0.013028301402525673,
+            0.013342218320844588,
+            0.013194554409374589,
+            0.01338422850540454
+          ],
+          "motion_prediction_target_covariance": [
+            0.0001721323856632614,
+            0.00017948701852179305,
+            0.00017654720311502145,
+            0.00018057838261763447
+          ],
+          "motion_prediction_zero_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "motion_rms_ratio": [
+            0.9859043044942251,
+            0.9917075635530277,
+            0.9859362985864342,
+            0.9919124274706004
+          ],
+          "motion_sign_tie_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "motion_signed_bias": [
+            1.443642246503591e-06,
+            1.3799320187220812e-06,
+            -2.1925974504916872e-06,
+            -1.7195042016721923e-06
+          ],
+          "motion_skill": 0.999588656818434,
+          "motion_std_ratio": [
+            0.9859042984415365,
+            0.9917075582489143,
+            0.9859362849736408,
+            0.9919124192847617
+          ],
+          "motion_target_rms": [
+            0.01321456995687758,
+            0.013453782961020207,
+            0.013382765629272406,
+            0.013493357008878932
+          ],
+          "motion_target_zero_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "per_dimension_baseline_mse": [
+            0.045710888729577015,
+            0.0039640865602689835,
+            0.04575090448920339,
+            0.004168859879800892,
+            0.00017462485914521153,
+            0.00018100427596223767,
+            0.00017909841588803488,
+            0.00018207068336906218
+          ],
+          "per_dimension_mse": [
+            1.0331071060699563e-07,
+            2.7155432209245907e-08,
+            1.1677269558487417e-07,
+            3.1012777256536143e-08,
+            9.672525374154804e-08,
+            4.502863973306158e-08,
+            1.0027571993847904e-07,
+            5.1490818676865976e-08
+          ],
+          "per_dimension_rmse": [
+            0.0003214198354286736,
+            0.00016478905366936817,
+            0.0003417202007269605,
+            0.00017610444984876488,
+            0.00031100683873758796,
+            0.00021219952811696256,
+            0.0003166634174300515,
+            0.00022691588458472
+          ],
+          "per_dimension_skill": [
+            0.9999977399102604,
+            0.9999931496369223,
+            0.9999974476418141,
+            0.9999925608492128,
+            0.9994460968832558,
+            0.9997512288618946,
+            0.9994401082810181,
+            0.999717193247567
+          ],
+          "position_skill": 0.9999952245095525
+        },
+        "ba": {
+          "dx_mse": 9.850048684002084e-08,
+          "motion_absolute_amplitude_ratio": [
+            0.985606913186222,
+            0.9916899299419355,
+            0.9856911011935793,
+            0.9917479825485307
+          ],
+          "motion_direction_error_rate": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "motion_mse": 7.338010802249044e-08,
+          "motion_nmse": 0.00041134318156611744,
+          "motion_prediction_rms": [
+            0.013028301402525644,
+            0.013342218320844567,
+            0.013194554409374592,
+            0.013384228505404517
+          ],
+          "motion_prediction_target_covariance": [
+            0.00017213238566326093,
+            0.00017948701852179262,
+            0.00017654720311502145,
+            0.00018057838261763392
+          ],
+          "motion_prediction_zero_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "motion_rms_ratio": [
+            0.985904304494223,
+            0.991707563553026,
+            0.9859362985864344,
+            0.9919124274705986
+          ],
+          "motion_sign_tie_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "motion_signed_bias": [
+            -1.4436422463854993e-06,
+            -1.3799320187290447e-06,
+            2.1925974506099076e-06,
+            1.719504201668457e-06
+          ],
+          "motion_skill": 0.9995886568184338,
+          "motion_std_ratio": [
+            0.9859042984415349,
+            0.9917075582489109,
+            0.9859362849736422,
+            0.9919124192847606
+          ],
+          "motion_target_rms": [
+            0.01321456995687758,
+            0.013453782961020207,
+            0.013382765629272406,
+            0.013493357008878932
+          ],
+          "motion_target_zero_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "per_dimension_baseline_mse": [
+            0.045710888729577015,
+            0.0039640865602689835,
+            0.04575090448920339,
+            0.004168859879800892,
+            0.00017462485914521153,
+            0.00018100427596223767,
+            0.00017909841588803488,
+            0.00018207068336906218
+          ],
+          "per_dimension_mse": [
+            1.1254607322625528e-07,
+            3.152231597616515e-08,
+            1.1347510077645379e-07,
+            3.3094227184938e-08,
+            9.672525374157485e-08,
+            4.502863973306096e-08,
+            1.0027571993846682e-07,
+            5.149081867685911e-08
+          ],
+          "per_dimension_rmse": [
+            0.0003354788715049806,
+            0.00017754525050297783,
+            0.0003368606548358739,
+            0.00018191818816418,
+            0.00031100683873763106,
+            0.0002121995281169611,
+            0.0003166634174300322,
+            0.0002269158845847049
+          ],
+          "per_dimension_skill": [
+            0.9999975378716898,
+            0.999992048025315,
+            0.9999975197189642,
+            0.9999920615640393,
+            0.9994460968832557,
+            0.9997512288618946,
+            0.9994401082810183,
+            0.999717193247567
+          ],
+          "position_skill": 0.9999947917950022
+        },
+        "bb": {
+          "dx_mse": 1.3215009824948174e-07,
+          "motion_absolute_amplitude_ratio": [
+            0.9846198919199638,
+            0.9914188819575254,
+            0.9870059658150246,
+            0.9921439203802477
+          ],
+          "motion_direction_error_rate": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "motion_mse": 9.816048816108728e-08,
+          "motion_nmse": 0.0005502982812453535,
+          "motion_prediction_rms": [
+            0.013017740490265103,
+            0.013340153515775367,
+            0.013209055709488061,
+            0.01339239422096006
+          ],
+          "motion_prediction_target_covariance": [
+            0.00017197835484831982,
+            0.00017945090092528335,
+            0.0001767214926741769,
+            0.00018068036725932306
+          ],
+          "motion_prediction_zero_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "motion_rms_ratio": [
+            0.9851051175138668,
+            0.9915540896137496,
+            0.9870198788055895,
+            0.9925175930754344
+          ],
+          "motion_sign_tie_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "motion_signed_bias": [
+            1.0234360288494809e-16,
+            2.7338835405579798e-17,
+            7.42966479354637e-17,
+            5.271086030763511e-18
+          ],
+          "motion_skill": 0.9994497017187547,
+          "motion_std_ratio": [
+            0.9851051175138666,
+            0.9915540896137497,
+            0.9870198788055892,
+            0.9925175930754346
+          ],
+          "motion_target_rms": [
+            0.01321456995687758,
+            0.013453782961020207,
+            0.013382765629272406,
+            0.013493357008878932
+          ],
+          "motion_target_zero_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "per_dimension_baseline_mse": [
+            0.045710888729577015,
+            0.0039640865602689835,
+            0.04575090448920339,
+            0.004168859879800892,
+            0.00017462485914521153,
+            0.00018100427596223767,
+            0.00017909841588803488,
+            0.00018207068336906218
+          ],
+          "per_dimension_mse": [
+            1.148849470398716e-07,
+            3.142380040502676e-08,
+            1.1058980158284588e-07,
+            3.170228606418223e-08,
+            1.297169204594863e-07,
+            6.216993612451293e-08,
+            1.3458327603947717e-07,
+            6.61718200208727e-08
+          ],
+          "per_dimension_rmse": [
+            0.0003389468203713845,
+            0.00017726759547369837,
+            0.00033255044968071517,
+            0.00017805135793973106,
+            0.0003601623529180782,
+            0.00024933899840280286,
+            0.00036685593362991575,
+            0.00025723883847676016
+          ],
+          "per_dimension_skill": [
+            0.999997486705023,
+            0.9999920728773383,
+            0.9999975827843663,
+            0.9999923954541582,
+            0.9992571680739246,
+            0.9996565278041416,
+            0.9992485512762792,
+            0.9996365597206732
+          ],
+          "position_skill": 0.9999948844552213
+        }
+      },
+      "schedule_groups": {
+        "moving": {
+          "dx_mse": 9.850048684001703e-08,
+          "motion_absolute_amplitude_ratio": [
+            0.9856069131862243,
+            0.9916899299419384,
+            0.9856911011935783,
+            0.991747982548533
+          ],
+          "motion_direction_error_rate": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "motion_mse": 7.338010802248947e-08,
+          "motion_nmse": 0.00041134318156611153,
+          "motion_prediction_rms": [
+            0.01302830140252566,
+            0.01334221832084458,
+            0.013194554409374604,
+            0.013384228505404529
+          ],
+          "motion_prediction_target_covariance": [
+            0.0001721323856632611,
+            0.00017948701852179273,
+            0.00017654720311502183,
+            0.0001805783826176342
+          ],
+          "motion_prediction_zero_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "motion_rms_ratio": [
+            0.9859043044942241,
+            0.9917075635530269,
+            0.9859362985864354,
+            0.9919124274705995
+          ],
+          "motion_sign_tie_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "motion_signed_bias": [
+            5.904581972015002e-17,
+            -3.4817289296888015e-18,
+            5.911019422414135e-17,
+            -1.8677076486957322e-18
+          ],
+          "motion_skill": 0.9995886568184338,
+          "motion_std_ratio": [
+            0.9859043044942243,
+            0.9917075635530269,
+            0.9859362985864351,
+            0.9919124274705995
+          ],
+          "motion_target_rms": [
+            0.01321456995687758,
+            0.013453782961020207,
+            0.013382765629272406,
+            0.013493357008878932
+          ],
+          "motion_target_zero_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "per_dimension_baseline_mse": [
+            0.04571088872957881,
+            0.003964086560269206,
+            0.04575090448920343,
+            0.004168859879801081,
+            0.00017462485914521153,
+            0.00018100427596223767,
+            0.00017909841588803488,
+            0.00018207068336906218
+          ],
+          "per_dimension_mse": [
+            1.0792839191662525e-07,
+            2.9338874092705637e-08,
+            1.15123898180664e-07,
+            3.205350222073708e-08,
+            9.672525374156122e-08,
+            4.5028639733061256e-08,
+            1.0027571993847286e-07,
+            5.1490818676862555e-08
+          ],
+          "per_dimension_rmse": [
+            0.0003285245682085668,
+            0.0001712859424842145,
+            0.00033929912788078896,
+            0.0001790349189983258,
+            0.00031100683873760916,
+            0.00021219952811696178,
+            0.0003166634174300417,
+            0.00022691588458471248
+          ],
+          "per_dimension_skill": [
+            0.999997638890975,
+            0.9999925988311187,
+            0.9999974836803891,
+            0.999992311206626,
+            0.9994460968832557,
+            0.9997512288618946,
+            0.9994401082810181,
+            0.999717193247567
+          ],
+          "position_skill": 0.9999950081522772
+        },
+        "static": {
+          "dx_mse": 1.3578921647999733e-07,
+          "motion_absolute_amplitude_ratio": [
+            0.9854504123713671,
+            0.992031556177503,
+            0.9854358224053072,
+            0.9919143372481006
+          ],
+          "motion_direction_error_rate": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "motion_mse": 1.020771491118235e-07,
+          "motion_nmse": 0.0005718346106350526,
+          "motion_prediction_rms": [
+            0.013026405368591315,
+            0.013347514981220414,
+            0.01319222601744279,
+            0.013388645271327515
+          ],
+          "motion_prediction_target_covariance": [
+            0.00017209359747345784,
+            0.00017954721931452485,
+            0.00017649328288776514,
+            0.00018062788445705348
+          ],
+          "motion_prediction_zero_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "motion_rms_ratio": [
+            0.9857608239314414,
+            0.9921012565679345,
+            0.9857623142250324,
+            0.9922397563866047
+          ],
+          "motion_sign_tie_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "motion_signed_bias": [
+            7.1646281843505e-17,
+            1.4700256799598382e-17,
+            5.619174220437666e-17,
+            -1.829845275953465e-17
+          ],
+          "motion_skill": 0.9994281653893649,
+          "motion_std_ratio": [
+            0.9857608239314406,
+            0.9921012565679344,
+            0.9857623142250328,
+            0.9922397563866046
+          ],
+          "motion_target_rms": [
+            0.01321456995687758,
+            0.013453782961020207,
+            0.013382765629272406,
+            0.013493357008878932
+          ],
+          "motion_target_zero_count": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "per_dimension_baseline_mse": [
+            0.04571088872957881,
+            0.003964086560269206,
+            0.04575090448920343,
+            0.004168859879801081,
+            0.00017462485914521153,
+            0.00018100427596223767,
+            0.00017909841588803488,
+            0.00018207068336906218
+          ],
+          "per_dimension_mse": [
+            1.1883587341457915e-07,
+            3.455238343956261e-08,
+            1.1940786051489463e-07,
+            3.361332060125999e-08,
+            1.249010251605538e-07,
+            6.599350709215921e-08,
+            1.4667740779944087e-07,
+            7.073665639514013e-08
+          ],
+          "per_dimension_rmse": [
+            0.0003447257945303472,
+            0.00018588271420323787,
+            0.00034555442482320296,
+            0.0001833393591165301,
+            0.00035341339131469507,
+            0.00025689201445774684,
+            0.00038298486627991044,
+            0.0002659636373550718
+          ],
+          "per_dimension_skill": [
+            0.9999974002720857,
+            0.9999912836455728,
+            0.9999973900437193,
+            0.9999919370471615,
+            0.9992847465946605,
+            0.9996354036017031,
+            0.9991810234218311,
+            0.999611487939265
+          ],
+          "position_skill": 0.9999945027521349
+        }
+      },
+      "worlds": 256
+    }
+  },
+  "p0_authorized": false,
+  "posthoc": true,
+  "predictions_entry_hashes": {
+    "N_prediction": {
+      "dtype": "float64",
+      "sha256": "77af59a85f0c31417461b1210601c1ce856c4415dbd219162f3bfce1e0b3ae54",
+      "shape": [
+        256,
+        16,
+        8
+      ]
+    },
+    "N_targets": {
+      "dtype": "float32",
+      "sha256": "900baa916ad27ab19bd0aab4a8c4e4c8702cda41d9a29db214d2c4a99cb161ab",
+      "shape": [
+        256,
+        16,
+        8
+      ]
+    },
+    "W_prediction": {
+      "dtype": "float64",
+      "sha256": "6886bea440776b2fd51cc72c183d3c49a7c4d3fef4ca7819aa12f7a81c503923",
+      "shape": [
+        256,
+        16,
+        8
+      ]
+    },
+    "W_targets": {
+      "dtype": "float32",
+      "sha256": "855e9690d0eb99a0a4e1923434074f451c892c5849910c8af9e431ae1fda4bc6",
+      "shape": [
+        256,
+        16,
+        8
+      ]
+    },
+    "block_ids": {
+      "dtype": "int64",
+      "sha256": "bbd330b12e8159e117376ef24fa106413bc9fc18032a0d43e95c5dae5e47953f",
+      "shape": [
+        256
+      ]
+    },
+    "role": {
+      "dtype": "<U22",
+      "sha256": "dc1e7c85063bba902b533cff2dfbde4ab463a2292c09955c8b42e97338435198",
+      "shape": []
+    },
+    "shared_target_mean": {
+      "dtype": "float64",
+      "sha256": "c6e0f5234698e4eccfa3dfdcdc52f7ad5fb7d45a74aae0b3918b9493dd8403ec",
+      "shape": [
+        8
+      ]
+    }
+  },
+  "predictions_file": {
+    "bytes": 481120,
+    "path": "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/training-generalization/predictions.npz",
+    "sha256": "f25f0fddb4cbe210f47c0c1dba807e2ccbe7ca3d3d5b5acf434937874a709853"
+  },
+  "schema": "v5.4.posthoc-frozen-fit-replay-1",
+  "source_commit": "3279bbe49f8db5ec1bd4b2f5c343db1ce9e5684b",
+  "source_hashes": {
+    "scripts/v5_3_data.py": "3018b72817b536323ee404c070c10b1cc13917420ec377e21a3aec5325bb8f12",
+    "scripts/v5_3_reader.py": "960e3123da1163d694fafaeee45f91cea84e03025b37a62da9823dcff0b04ada",
+    "scripts/v5_4_data.py": "97eb9796c9affe09a13d0bf242c701dac36d6e126f7e8cd91a84185534120576",
+    "scripts/v5_4_plan.json": "e5dc00d833455fb344527114bdbf752cad9c769200e2fce192d2f3e1364d5ec5",
+    "scripts/v5_4_reader.py": "e198aa3046056b032582e13c6ad135e581af895fcef17a8867e231355e82c3c1"
+  },
+  "status": "complete",
+  "support_only": true,
+  "test_opened": false,
+  "training_config": {
+    "arms": [
+      "N",
+      "W"
+    ],
+    "baseline": "joint_N_W_FIT_target_mean_for_scoring_only",
+    "cv": false,
+    "historical_V53_model_used": false,
+    "inputs": [
+      "concat"
+    ],
+    "intercept": "arm_specific_unpenalized_intercept_via_SPD_solve_and_Schur_complement",
+    "kernel": "quadratic",
+    "loss": "mean_within_world_then_equal_mean_over_worlds",
+    "mean_loss_alpha": 7.8125e-07,
+    "normalization": "shared_joint_N_W_FIT_linear_then_quadratic_center_and_mean_diagonal",
+    "reference_order": "all_N_worlds_then_all_W_worlds; target-major/path-minor views",
+    "regularization": {
+      "N": 0.0032,
+      "W": 0.0032
+    },
+    "selection": false,
+    "view_indices": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        5,
+        3
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        0
+      ]
+    ]
+  }
+}

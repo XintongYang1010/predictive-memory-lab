@@ -111,4 +111,6 @@ p7 使用缓存 FP32 标签转 FP64，p6=p7−d；按预注册窄域量化外包
 
 完整冻结的两组 reader、共同特征基底和原始 FIT 收据见 [V5.4 FIT Release](https://github.com/XintongYang1010/predictive-memory-lab/releases/tag/visual-v5_4-fit-20261010)。
 
+只读CPU复核显示N/W自身FIT运动分数为0.999493/0.999508，训练方向错误均为0，而fresh bridge仅0.353835/0.433999。全部65536个训练预测另经KRR正规方程核验，最大偏差1.73e-12；详见 [训练与新样本的差距](training_generalization/README.md)。这是事后诊断，不能单独定位编码器、池化、正则化或数据密度的原因。
+
 硬件是既有 Slurm 分配415453中的8张 H800，与 IndexMem 共用。GPUh按选卡数量乘实际wall time计账，不换算为A100等效吞吐。原V5/V5.1门槛未更改，Test未打开，P0与memory训练未启动。

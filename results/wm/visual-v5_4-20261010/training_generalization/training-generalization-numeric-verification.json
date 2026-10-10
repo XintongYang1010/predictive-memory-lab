@@ -1,0 +1,47 @@
+{
+  "schema": "v5.4.own-fit-krr-identity-check-1",
+  "verified_unix": 1791650634.059856,
+  "method": "Independent elementwise normal-equation identity prediction=y\u2212(4096*alpha)*coefficient for each arm own FIT; no kernel evaluation, matrix multiplication, solve or refit",
+  "warnings_observed": true,
+  "comparison_tolerance": 1e-09,
+  "model_sha256": "657448f6b31928aeec30a6c4e8a3264ce1ff6a266918125b169a30407e4e7fa4",
+  "predictions_sha256": "f25f0fddb4cbe210f47c0c1dba807e2ccbe7ca3d3d5b5acf434937874a709853",
+  "arms": {
+    "N": {
+      "prediction_entries": 32768,
+      "all_finite": true,
+      "max_absolute_difference": 8.857359290459499e-13,
+      "per_dimension_max_absolute_difference": [
+        4.1888714719107156e-13,
+        2.0625168239973846e-13,
+        5.048184092970587e-13,
+        8.857359290459499e-13,
+        5.839079220137933e-15,
+        3.991598718222633e-15,
+        5.434888650235337e-15,
+        4.23792945181134e-15
+      ],
+      "within_tolerance": true,
+      "ridge_sum_loss_lambda": 0.0032
+    },
+    "W": {
+      "prediction_entries": 32768,
+      "all_finite": true,
+      "max_absolute_difference": 1.7291723608536813e-12,
+      "per_dimension_max_absolute_difference": [
+        1.0085265955694922e-12,
+        4.388156504830931e-13,
+        1.712519015484304e-12,
+        1.7291723608536813e-12,
+        4.5900783174346316e-15,
+        4.692427002517263e-15,
+        5.703770789011742e-15,
+        4.586608870482678e-15
+      ],
+      "within_tolerance": true,
+      "ridge_sum_loss_lambda": 0.0032
+    }
+  },
+  "status": "verified",
+  "interpretation": "All saved own-FIT predictions independently agree with the fitted KRR normal-equation identity despite the recorded local matmul warnings; no nonfinite predictions were observed."
+}
