@@ -57,7 +57,7 @@ All policies use the same frozen lane position reader and32B state payload plus8
 
 ## 对象组合覆盖：Fresh64确认有效，坐标串扰仍存在
 
-J重复旧16种视图两次；X用旧16种加16种独立A/B运动组合。两者同256个FIT场景、8192加权视图、共同X8192归一化参考、同mean-loss alpha；J重复样本按精确等价方式折叠求解。X增加了新的唯一图像，所以这里识别的是这一组合增强方案的收益，不声称优于所有等量新图像方案。
+J重复旧16种视图两次；X用旧16种加16种独立A/B运动组合。两者同256个FIT场景、8192加权视图、共同X8192归一化参考、同mean-loss alpha；J重复样本按精确等价方式折叠求解。X增加新的唯一监督视图；两者共同的归一化参考已含新图像。因此这里识别的是这一组合监督增强方案的收益，不声称优于所有等量新监督方案。
 
 完整模型（含特征basis、系数和配置）先在[模型Release](https://github.com/XintongYang1010/predictive-memory-lab/releases/tag/visual-v5_6-fit-20261010)发布、完整下载核验，再生成独立命名空间的64个新场景，没有换seed或调门槛。
 
@@ -116,7 +116,7 @@ CPU数学/软件校验、旧global/lane预测复现、全视图统计和配对�
 
 本Git目录镜像小型报告和图表；GPU报告manifest所列的NPZ/逐样本CSV完整文件位于Release的`scene/`，CPU大模型与cost位于`local/`。重建顺序、SHA256和依赖入口见[ARCHIVE.md](ARCHIVE.md)。
 
-**归档状态：实验和远端封存核验完成，正在传输与独立回读；尚未清理远端。** 仅在完整回读后删除本次新建work及reference staging根；已有目录、共享环境、权重及其他作业保留。
+**归档及清理完成：** 已从GitHub完整下载两卷并逐文件核验1,531个归档成员及60个Git报告/图表文件，随后删除本次新建的`diagnostic-20261010-v56`和`reference-20261010-v56-v55`。已有目录、共享环境、权重及其他作业保留，allocation415453仍RUNNING，IndexMem未被取消。见[GitHub完整回读凭据](github_verification.json)及[清理凭据](cleanup_receipt.json)。
 
 运维恢复记录完整保留：首次部署参数过长后改stdin传输；模型首次流式压缩参数不兼容后改显式gzip流；一次只读封存检查SSH断开后重试。科学源码、模型、seed和门槛未因此改变。
 

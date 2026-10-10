@@ -8,7 +8,7 @@ The full Release contains all new scientific artifacts and the complete local CP
 61f59136fcc14e42761e7b5717f6ec1ec1ff55692209b1225df7963671bc5928
 ```
 
-The archive contains1,531 regular files totaling1,436,108,874 uncompressed bytes, including its top-level manifest. Every member was locally re-read and compared to exact path, byte size and SHA256 before upload. GitHub full-download verification and remote cleanup are separately recorded after publication; local verification alone does not authorize cleanup.
+The archive contains1,531 regular files totaling1,436,108,874 uncompressed bytes, including its top-level manifest. Every member was locally re-read and compared to exact path, byte size and SHA256 before upload. GitHub full-download verification subsequently passed for both parts, the combined archive, every member, and60 Git report/figure files. Cleanup then removed only the two creation-owned roots. See [GitHub verification](github_verification.json) and [cleanup receipt](cleanup_receipt.json). Local verification alone was not used to authorize cleanup.
 
 ## Contents
 
@@ -34,3 +34,5 @@ Official I-JEPA weights/shared environment are referenced by source/checkpoint i
 Only `/aifs4su/guhao/KVCache/WM/diagnostic-20261010-v56` and `/aifs4su/guhao/KVCache/WM/reference-20261010-v56-v55` were newly created. Cleanup checks their creation token, inode/device/owner and current full inventory, confirmed terminal states, complete GitHub asset/member readback, and unchanged prior data before removal. Existing parent directories, V5.4 scene, shared assets/environment and allocation415453 remain outside cleanup scope.
 
 All7 new steps415453.44–.50 completed0:0. New GPU charge.238702974GPUh; cumulative5.567790642GPUh. All negative scientific results remain included. The first model packaging attempt and a read-only SSH inspection failure were preserved before successful operational retries; scientific source/models/thresholds were unchanged.
+
+Both prior dependency Releases and all their assets were also checked available after publication; see [availability receipt](dependency_release_availability.json). Existing V5.4 files were rehashed unchanged immediately before cleanup.

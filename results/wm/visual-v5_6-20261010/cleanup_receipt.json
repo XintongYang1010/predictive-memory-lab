@@ -1,0 +1,18 @@
+{
+  "status": "complete",
+  "removed": [
+    "/aifs4su/guhao/KVCache/WM/diagnostic-20261010-v56",
+    "/aifs4su/guhao/KVCache/WM/reference-20261010-v56-v55"
+  ],
+  "only_two_creation_owned_roots": true,
+  "full_github_archive_sha256": "61f59136fcc14e42761e7b5717f6ec1ec1ff55692209b1225df7963671bc5928",
+  "manifest_sha256": "f16432446a68f55b50e3112c797b6219fa6ca8598c2788c20841f6ab676d8bd2",
+  "no_job_cancellation": true,
+  "parent_and_indexmem_status": [
+    "415453|RUNNING|0:0",
+    "415453.5|COMPLETED|0:0"
+  ],
+  "existing_parent_entries_preserved": true,
+  "old_v54_all_file_hashes_verified_unchanged": true,
+  "completed_unix": 1791665250.893732
+}

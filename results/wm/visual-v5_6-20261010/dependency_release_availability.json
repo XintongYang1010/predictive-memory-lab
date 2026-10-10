@@ -1,0 +1,70 @@
+{
+  "visual-v5_4-20261010": {
+    "release_id": 409078827,
+    "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/tag/visual-v5_4-20261010",
+    "assets": [
+      {
+        "id": 628489975,
+        "name": "visual-v5_4-20261010-remote-scene.tar.gz",
+        "size": 456076665,
+        "digest": "sha256:559bf2818e799b7b1525ed01c57c85c604dd1422804743c715faf62722431108",
+        "state": "uploaded"
+      }
+    ]
+  },
+  "visual-v5_5-20261010": {
+    "release_id": 409133138,
+    "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/tag/visual-v5_5-20261010",
+    "assets": [
+      {
+        "id": 628739838,
+        "name": "archive_parts.json",
+        "size": 1667,
+        "digest": "sha256:66bdd9631787d5f7fbbd11089c20da4c65b91db922dde9cb1b7793394493a813",
+        "state": "uploaded"
+      },
+      {
+        "id": 628708128,
+        "name": "visual-v5_5-20261010-remote-scene.tar.gz.part000",
+        "size": 536870912,
+        "digest": "sha256:0773f3860f166f2f825431bd84b02ecb6c13e23f27b0973bd2b2644991f81d45",
+        "state": "uploaded"
+      },
+      {
+        "id": 628708133,
+        "name": "visual-v5_5-20261010-remote-scene.tar.gz.part001",
+        "size": 536870912,
+        "digest": "sha256:89631d2367d82b12b17a5a8f0d613389a7cf9375dfc66aa7fddaa210e3f3c922",
+        "state": "uploaded"
+      },
+      {
+        "id": 628708130,
+        "name": "visual-v5_5-20261010-remote-scene.tar.gz.part002",
+        "size": 536870912,
+        "digest": "sha256:88e3dd079784ad72354f26f5916d9086e6b6f35286b7ad3d480b53ce63530679",
+        "state": "uploaded"
+      },
+      {
+        "id": 628708131,
+        "name": "visual-v5_5-20261010-remote-scene.tar.gz.part003",
+        "size": 536870912,
+        "digest": "sha256:2e870fd606f6b683b5c2a1073311b56c1685797d74bab041b2c676a0326696d9",
+        "state": "uploaded"
+      },
+      {
+        "id": 628737699,
+        "name": "visual-v5_5-20261010-remote-scene.tar.gz.part004",
+        "size": 536870912,
+        "digest": "sha256:f2a6a41575292172664f457c34a5e2cd35f17bcb8ef16abb62a5ed56c5f85636",
+        "state": "uploaded"
+      },
+      {
+        "id": 628738413,
+        "name": "visual-v5_5-20261010-remote-scene.tar.gz.part005",
+        "size": 44747834,
+        "digest": "sha256:32408085e40ad7464e50a99420a881445b786161364b23348e930e7a9af43fb7",
+        "state": "uploaded"
+      }
+    ]
+  }
+}
