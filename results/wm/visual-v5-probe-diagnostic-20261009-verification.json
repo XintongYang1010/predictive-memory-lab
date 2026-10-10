@@ -1,0 +1,20 @@
+{
+  "status": "verified_from_immutable_github_tarball",
+  "verified_utc": "2026-10-10T01:58:58.911153+00:00",
+  "commit": "d131f5b0b3926d5db052eea09ab3c370e88b09be",
+  "archive_url": "https://github.com/XintongYang1010/predictive-memory-lab/tree/d131f5b/results/wm/visual-v5-probe-diagnostic-20261009",
+  "files": 40,
+  "bytes": 8261662,
+  "source_files": {
+    "files": 12,
+    "bytes": 145272
+  },
+  "readback_files_including_manifest_and_checksums": 42,
+  "readback_byte_identical_to_local": true,
+  "SHA256SUMS_verified": true,
+  "original_archive_files_verified_unchanged": 160,
+  "manifest_sha256": "5d050c2a7fd5ac4a29c9ab957adaffb6f764ed4b30645f5de488d433291091a4",
+  "remote_cleanup_performed": false,
+  "test_opened": false,
+  "new_gpu_jobs": 0
+}
