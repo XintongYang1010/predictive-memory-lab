@@ -1,0 +1,73 @@
+{
+  "status": "verified",
+  "reference_gate": "results/wm/visual-v5-dgx-20261009/run/feature_gate.json",
+  "independent_check": "execution/visual-v5-dgx-20261009/followup/independent_pooled_delta_check.json",
+  "rtol": 1e-08,
+  "atol": 1e-10,
+  "checks": [
+    {
+      "check": "original_fixed_control",
+      "representation": "raw",
+      "metric": "r2_per_dimension",
+      "maximum_absolute_difference": 8.459899447643693e-14,
+      "matches": true
+    },
+    {
+      "check": "original_fixed_control",
+      "representation": "raw",
+      "metric": "mse",
+      "maximum_absolute_difference": 3.0574501264091225e-17,
+      "matches": true
+    },
+    {
+      "check": "original_fixed_control",
+      "representation": "raw",
+      "metric": "position_r2",
+      "maximum_absolute_difference": 2.6645352591003757e-15,
+      "matches": true
+    },
+    {
+      "check": "original_fixed_control",
+      "representation": "raw",
+      "metric": "displacement_r2",
+      "maximum_absolute_difference": 5.181965967437918e-14,
+      "matches": true
+    },
+    {
+      "check": "original_fixed_control",
+      "representation": "pooled",
+      "metric": "r2_per_dimension",
+      "maximum_absolute_difference": 4.2521541843143495e-14,
+      "matches": true
+    },
+    {
+      "check": "original_fixed_control",
+      "representation": "pooled",
+      "metric": "mse",
+      "maximum_absolute_difference": 2.1467203015212988e-17,
+      "matches": true
+    },
+    {
+      "check": "original_fixed_control",
+      "representation": "pooled",
+      "metric": "position_r2",
+      "maximum_absolute_difference": 7.771561172376096e-16,
+      "matches": true
+    },
+    {
+      "check": "original_fixed_control",
+      "representation": "pooled",
+      "metric": "displacement_r2",
+      "maximum_absolute_difference": 1.812439087700568e-14,
+      "matches": true
+    },
+    {
+      "check": "independent_pooled_difference",
+      "metric": "four_displacement_r2",
+      "maximum_absolute_difference": 1.270095140171179e-13,
+      "matches": true
+    }
+  ],
+  "all_result_metrics_finite": true,
+  "note": "NumPy/Accelerate emitted matmul floating-point warnings although all resulting metrics are finite and independent controls reproduce to approximately 1e-13."
+}

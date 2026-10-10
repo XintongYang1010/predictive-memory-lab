@@ -1,0 +1,87 @@
+{
+  "split_checks": {
+    "train": {
+      "episodes": 128,
+      "independent_pairs": 64,
+      "cue_timestamps": [
+        6,
+        7
+      ],
+      "visible_two_frame_changes": 128,
+      "paired_recent_rgb_equal": true
+    },
+    "dev": {
+      "episodes": 128,
+      "independent_pairs": 64,
+      "cue_timestamps": [
+        6,
+        7
+      ],
+      "visible_two_frame_changes": 128,
+      "paired_recent_rgb_equal": true
+    }
+  },
+  "metrics": {
+    "rgb_two_frame_centroid_oracle": {
+      "r2_per_dimension": [
+        0.9998291034672673,
+        0.9991876185354314,
+        0.9997999841368824,
+        0.9989560877966009,
+        0.9849627480123208,
+        0.9812060573230054,
+        0.9766594016664895,
+        0.9686945863170398
+      ],
+      "position_r2": 0.9994431984840455,
+      "displacement_r2": 0.9778806983297139,
+      "mse": 5.22238870097247e-06
+    },
+    "privileged_true_t7_position_degree_1": {
+      "r2_per_dimension": [
+        0.9999999659086158,
+        0.999999259909585,
+        0.9999999600765477,
+        0.9999990160061586,
+        0.18705448188624907,
+        0.5713957992119418,
+        0.1707443453619616,
+        0.3307709570050924
+      ],
+      "position_r2": 0.9999995504752268,
+      "displacement_r2": 0.3149913958663112,
+      "mse": 5.570975161385525e-05
+    },
+    "privileged_true_t7_position_degree_3": {
+      "r2_per_dimension": [
+        0.9999551370105838,
+        0.9998017432617391,
+        0.9999735180623308,
+        0.9994852589480291,
+        0.19540123647215735,
+        0.5617875851334305,
+        0.1820473753184746,
+        0.31786989421039125
+      ],
+      "position_r2": 0.9998039143206707,
+      "displacement_r2": 0.3142765227836134,
+      "mse": 5.665821563847702e-05
+    },
+    "rgb_t7_centroid_degree_1": {
+      "r2_per_dimension": [
+        0.9999615347107725,
+        0.9997777491499884,
+        0.9999441961296152,
+        0.9996745857039074,
+        0.18733662898890235,
+        0.5680745311667508,
+        0.1706753554642999,
+        0.3311372362602858
+      ],
+      "position_r2": 0.9998395164235709,
+      "displacement_r2": 0.3143059379700597,
+      "mse": 5.671073939492106e-05
+    }
+  },
+  "interpretation": "Non-temporal controls measure generator priors. True positions are privileged diagnostic inputs. RGB centroids use the known renderer color rule. None enter the actor or replace the original feature gate."
+}
