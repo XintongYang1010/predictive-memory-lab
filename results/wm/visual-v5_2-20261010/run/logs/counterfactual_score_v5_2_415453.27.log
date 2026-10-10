@@ -1,0 +1,267 @@
+{
+  "primary": {
+    "primary_dx_mse_reduction": 0.0006248237317267577,
+    "primary_dx_paired_95ci": [
+      0.0005737149613027681,
+      0.0006769731633727225
+    ],
+    "secondary_balanced_dx_mse_reduction": 0.0006155495781278136,
+    "secondary_balanced_dx_paired_95ci": [
+      0.0005679008339077944,
+      0.0006637192276373646
+    ],
+    "secondary_static_average_motion_nmse_reduction": 1.9239498139255142,
+    "secondary_motion_paired_95ci": [
+      1.7616909149433098,
+      2.092458128539617
+    ],
+    "conditions": {
+      "original": {
+        "per_dimension_skill": [
+          0.957825715466213,
+          0.9178239108443299,
+          0.9604031653839973,
+          0.9333624686929698,
+          -2.76788398041368,
+          -0.14783482369041168,
+          -3.3580240738976457,
+          0.11964989737491616
+        ],
+        "per_dimension_mse": [
+          0.0016883128652383842,
+          0.0006646379629281751,
+          0.0015332606570340856,
+          0.0004983545111138986,
+          0.0006902357965246704,
+          0.000186114571170937,
+          0.0007691150246220926,
+          0.0001447872852427501
+        ],
+        "position_skill": 0.9423538150968775,
+        "motion_skill": -1.5385232451567052,
+        "motion_nmse": 2.5385232451567052,
+        "dx_mse": 0.0007296754105733819
+      },
+      "static_t6": {
+        "per_dimension_skill": [
+          0.9610875965068535,
+          0.9158168887087377,
+          0.963378819812594,
+          0.9328097839031556,
+          0.4054873119014367,
+          0.2363874654302015,
+          0.43816444768384055,
+          0.479231172346125
+        ],
+        "per_dimension_mse": [
+          0.0015577338693723458,
+          0.0006808707031018383,
+          0.0014180379654088104,
+          0.0005024878118653758,
+          0.00010890832651611571,
+          0.00012381521842601118,
+          9.915414814740621e-05,
+          8.56485443350544e-05
+        ],
+        "position_skill": 0.9432732722328352,
+        "motion_skill": 0.38981759934040094,
+        "motion_nmse": 0.6101824006595991,
+        "dx_mse": 0.00010403123733176094
+      },
+      "static_t7": {
+        "per_dimension_skill": [
+          0.9616602435562085,
+          0.919883535373992,
+          0.9639512516159636,
+          0.9340497802545962,
+          0.4055709437434324,
+          0.24945941407807937,
+          0.4194822194905299,
+          0.44962957547681826
+        ],
+        "per_dimension_mse": [
+          0.0015348097725831687,
+          0.000647979776029084,
+          0.0013958723763799617,
+          0.0004932143924666596,
+          0.00010889300606267956,
+          0.00012169567991162256,
+          0.00010245123466029526,
+          9.051698796535231e-05
+        ],
+        "position_skill": 0.9448862027001901,
+        "motion_skill": 0.381035538197215,
+        "motion_nmse": 0.618964461802785,
+        "dx_mse": 0.00010567212036148743
+      },
+      "swap_nuisance": {
+        "per_dimension_skill": [
+          0.9596277099326309,
+          0.9148131032281326,
+          0.960165986318491,
+          0.9311514451468557,
+          -2.483752630685314,
+          -0.10019127771408165,
+          -3.442753100018,
+          0.05544489166950595
+        ],
+        "per_dimension_mse": [
+          0.0016161757685603264,
+          0.000688989292631968,
+          0.00154244465705175,
+          0.0005148898409313877,
+          0.0006381859909794752,
+          0.00017838945432883022,
+          0.0007840682157715117,
+          0.00015534679838117313
+        ],
+        "position_skill": 0.9414395611565275,
+        "motion_skill": -1.4928130291869723,
+        "motion_nmse": 2.4928130291869723,
+        "dx_mse": 0.0007111271033754937
+      }
+    },
+    "individual_comparisons": {
+      "static_t6": {
+        "nmse_reduction": 1.9283408444971073,
+        "dx_mse_reduction": 0.0006256441732416208,
+        "dx_mse_reduction_descriptive_95ci": [
+          0.0005747703687187501,
+          0.0006778734725634197
+        ],
+        "descriptive_paired_95ci": [
+          1.7655378012958953,
+          2.096061436330023
+        ]
+      },
+      "static_t7": {
+        "nmse_reduction": 1.9195587833539214,
+        "dx_mse_reduction": 0.0006240032902118943,
+        "dx_mse_reduction_descriptive_95ci": [
+          0.0005724640088475586,
+          0.0006763588088829623
+        ],
+        "descriptive_paired_95ci": [
+          1.757141122321372,
+          2.0880623937902625
+        ]
+      },
+      "swap_nuisance": {
+        "nmse_reduction": 0.04571021596973321,
+        "dx_mse_reduction": 1.8548307197888143e-05,
+        "dx_mse_reduction_descriptive_95ci": [
+          -2.2877593683233703e-05,
+          6.14950550003758e-05
+        ],
+        "descriptive_paired_95ci": [
+          -0.08841535439311593,
+          0.18313453593233803
+        ]
+      }
+    },
+    "bootstrap": {
+      "replicates": 10000,
+      "seed": 7810,
+      "unit": "paired_world_with_all_variants_and_conditions",
+      "primary_endpoints": 1,
+      "secondary_intervals": "descriptive_unadjusted",
+      "interpretation": "conditional on frozen reader; posthoc inspected Dev pairs, not fresh confirmation"
+    }
+  },
+  "original_parity": {
+    "concat": {
+      "max_abs_prediction_difference": 0.0,
+      "motion_rms_drift_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "motion_max_drift_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "all_dimension_skill_abs_drift": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "checks": {
+        "motion_rms_drift_fraction_at_most_001": true,
+        "motion_max_drift_fraction_at_most_01": true,
+        "each_motion_skill_drift_at_most_002": true
+      },
+      "passed": true
+    },
+    "t6": {
+      "max_abs_prediction_difference": 0.0,
+      "motion_rms_drift_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "motion_max_drift_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "all_dimension_skill_abs_drift": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "checks": {
+        "motion_rms_drift_fraction_at_most_001": true,
+        "motion_max_drift_fraction_at_most_01": true,
+        "each_motion_skill_drift_at_most_002": true
+      },
+      "passed": true
+    },
+    "t7": {
+      "max_abs_prediction_difference": 0.0,
+      "motion_rms_drift_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "motion_max_drift_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "all_dimension_skill_abs_drift": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "checks": {
+        "motion_rms_drift_fraction_at_most_001": true,
+        "motion_max_drift_fraction_at_most_01": true,
+        "each_motion_skill_drift_at_most_002": true
+      },
+      "passed": true
+    }
+  },
+  "p0_authorized": false
+}

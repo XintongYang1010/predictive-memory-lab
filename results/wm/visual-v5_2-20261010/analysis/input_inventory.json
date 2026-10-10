@@ -1,0 +1,51 @@
+{
+  "schema": "v5.2.posthoc-render-inputs.1",
+  "inputs": {
+    "report/report.json": {
+      "bytes": 29527,
+      "sha256": "b214d2e386d6250ecd9df9c071671fcb6e38e8dbff229d1319fb602f36708b92"
+    },
+    "report/predictions.npz": {
+      "bytes": 267965,
+      "sha256": "0c1ddd7e96a16ea4cdf8b92c70143e212287d84be499cc1ddf532b993ddb5e09"
+    },
+    "diagnostic_controller.json": {
+      "bytes": 4365,
+      "sha256": "c5a7734e7670e698e7bd225b19375f71914b929b27e3a2331c6d7d60f85a6622"
+    },
+    "registration_publication.json": {
+      "bytes": 1087,
+      "sha256": "bae582b9658a013bfae9a4f83b47349546e855ae75f9737c15f2680d7eeea881"
+    },
+    "source_manifest.json": {
+      "bytes": 11324,
+      "sha256": "a421a1822c6c3312fee6b958cf6a2d27324f989e834662a5c4d6b0db8b02070f"
+    },
+    "ledger/budget.json": {
+      "bytes": 5236,
+      "sha256": "bb1bad8c380c693231363330b6ed9eea52c80b971bb50081c2e32bdbae14426d"
+    },
+    "counterfactual_cache/receipt.json": {
+      "bytes": 16872,
+      "sha256": "79950dd0d1f303049b3a6f1a5a3fa069563133fc47110dedfa19859eaa81f321"
+    },
+    "creation.json": {
+      "bytes": 272,
+      "sha256": "63e6a1106d853ad12e2640a6b4f30038861a6859100a5c827c92ae2853cb0ff7"
+    },
+    "final_accounting.json": {
+      "bytes": 915,
+      "sha256": "47342ae998630aa92ee603398e7128e70e777621f1f84241b3ef6e983a5bea7e"
+    }
+  },
+  "renderer_sha256": "b66221060b54c00dd1d32ba64b0a46e62c7b85a352b290f1f0667b85cf9ab07c",
+  "report_status": "diagnostic_complete",
+  "software_only": false,
+  "verified": {
+    "predictions_digest": true,
+    "fixed_counts": true,
+    "mse_and_primary_effect_recomputed": true,
+    "reused_input_differences_recomputed": true,
+    "confidence_intervals": "copied from frozen scorer; not reselected"
+  }
+}

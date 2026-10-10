@@ -1,0 +1,15 @@
+{
+  "prior_scene": "/aifs4su/guhao/KVCache/WM/continuation-20261010",
+  "prior_release": "https://github.com/XintongYang1010/predictive-memory-lab/releases/tag/visual-v5_1-20261010",
+  "prior_archive_manifest_sha256": "56d35d072c7d8a885429902c7128572b645e4040a47e5edf0347177f03f1f6ae",
+  "prior_scene_full_readback_unchanged": true,
+  "prior_files_verified": 1739,
+  "copied_frozen_files": {
+    "reader/frozen_model.npz": "2136993ed79ace121d45086698ad2d6b6800c2a3017d44474c757ed48b6bcfdc",
+    "reader/freeze_receipt.json": "27ae0593f90c2728529f607b09893780d75badbf54261198b3e6f4a3f7b4596a",
+    "reader/train_selection.json": "642dc9d9d3fa72cf5aa34268e0a81c9f7a8ca753c47debec62adfb74dcf16f3b",
+    "prior_bridge/predictions.npz": "c9d510b314ef13276e9cb224b047749441ec69969f8f74c8655bf470497e6b80",
+    "prior_bridge/report.json": "18b1e43d48020d890cfac25316e1a80d269ed646f07f65be9cb382ce5866b8e4"
+  },
+  "external_encoder_checkpoint": "Official I-JEPA IN1K-vit.h.14-300e.pth.tar, SHA256 0382013c481743e9ccea89f970bc6c6aa126aa19a62127500d6e672a641aae22; official weight is not duplicated in this archive"
+}

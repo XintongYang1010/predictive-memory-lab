@@ -1,0 +1,65 @@
+{
+  "schema": "posthoc-independent-audit-inventory.1",
+  "files": {
+    "README.md": {
+      "bytes": 9889,
+      "sha256": "b290df69e278159581db37249e52d801d65b8a58997b27c7048a3d0596beadf6"
+    },
+    "audit.log": {
+      "bytes": 5196,
+      "sha256": "3f4dccd2cf10ff04355a0337640311519f96d67c70a024cd02ea914b2d4449e7"
+    },
+    "audit_summary.json": {
+      "bytes": 35947,
+      "sha256": "f5e51cf9bd96a5486f6d05b7c896abc06442b03f5d61f0e34ee902ae7a90c649"
+    },
+    "metric_comparison.csv": {
+      "bytes": 11412,
+      "sha256": "8e8585da5e057f5e5a827bc9cfc58ba47b775d87cf7088682ef00aac75d9914d"
+    },
+    "old_worst_case_followup.json": {
+      "bytes": 2383,
+      "sha256": "8fd1dee636126ed7556bbc8df540f7d6373e2e20ad68d9a98a0bb4fa8ee61898"
+    },
+    "per_world_swap_response.csv": {
+      "bytes": 72298,
+      "sha256": "c7ed1f859045d36f9b33c364c7c361816fc4e6e0dd0c9f17f68d4e516eb99489"
+    },
+    "recompute.py": {
+      "bytes": 13568,
+      "sha256": "bb87648c380fb1698354ae2cbc70ee8b0bbb7f5c2dabfd6f3fef68e458dbb0ba"
+    },
+    "recomputed_scores.json": {
+      "bytes": 14362,
+      "sha256": "347fc2237182a7d91928b5fe6612a65ad02e34f1e19eb003f275e713ac2f3f22"
+    },
+    "remaining_error_per_axis.csv": {
+      "bytes": 2172,
+      "sha256": "4c068837e6268d2363424c34c6160dd612da59e9a114043aaba74a174798d6b6"
+    },
+    "remaining_static_strata.csv": {
+      "bytes": 1471,
+      "sha256": "51357958ddca4ba1492ed763b6675b0b1f82e706e0ad5a45a6817e5f352140d7"
+    },
+    "static_remaining_predictions.png": {
+      "bytes": 414457,
+      "sha256": "7c6163fb2019fc868c1c41a6861811fbaedc84c00913dd4f8acb21ae1fcb6c77"
+    },
+    "static_residuals.log": {
+      "bytes": 5654,
+      "sha256": "8df7d9968897e233812a09b4da9c857c416b1610c1cc0ca418e67a75e420820b"
+    },
+    "static_residuals.py": {
+      "bytes": 3942,
+      "sha256": "8f2466de4e57268690bc4ddac78a59374ecb8395ee4e918a82bf407f8913b3ae"
+    },
+    "worlds_ranked_by_remaining_static_motion_error.csv": {
+      "bytes": 61076,
+      "sha256": "29945866b42cef4170f5ec69abeb0ff998d55565fb5fa4dc275ab11a30517c1f"
+    },
+    "worst_ten_static_predictions.csv": {
+      "bytes": 27650,
+      "sha256": "0d57e222b90c2d143f2e4744db813ceecd6c9e04ae5495c8cf379b745a9e6bc0"
+    }
+  }
+}

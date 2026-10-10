@@ -1,0 +1,16 @@
+{
+  "source_commit": "9792b93f4e0203b52a2e26ab7700eb1975150231",
+  "verified_readback": true,
+  "verified_unix": 1791608059.019255,
+  "protocol_sha256": "111056b99b015e19d78f4930e5977c7edc697c7218a641e98cabc36728ba6d43",
+  "source_tree_verified_files": 107,
+  "readback_files": {
+    "docs/V5_2_CONTROLLED_DIAGNOSTIC_DRAFT.md": "111056b99b015e19d78f4930e5977c7edc697c7218a641e98cabc36728ba6d43",
+    "scripts/extract_v5_2_counterfactual.py": "f2bba9bec8ee8cc6effe4f4bd215a37c818898b4f5fe4b9ff8477b303983fb60",
+    "scripts/launch_v5_2.py": "6750f49bb0a0e546c47e44f107f2f1549385adfd5f362244e7efcc4d3be0adbb",
+    "scripts/score_v5_2_counterfactual.py": "286885b2efc6bf39786f6a532dda954055ac7297db26d348de1c39a405b778fe",
+    "scripts/diagnose_v5_2_bad_cases.py": "032f21a309911a8b1cd35c686eefcabed881c9aa6c1fa18f410433df3bb80389",
+    "tests/visual_memory/test_score_v5_2_counterfactual.py": "1cb1baebd2ad191a0985daca4985cd506d19557cf990f204a9963fbc0ba609c4",
+    "tests/visual_memory/test_v5_2_counterfactual.py": "0081948b1fd58c0f78d4e74b99865881d1b7f75e4decd0668581c01001e43a28"
+  }
+}

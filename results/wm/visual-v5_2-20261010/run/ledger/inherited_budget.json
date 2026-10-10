@@ -1,0 +1,145 @@
+{
+  "charged_gpuh": 1.7294136471218544,
+  "stages": {
+    "profile": 0.008888888888888889,
+    "features": 0.4,
+    "temporal_fit": 0.45001224835713705,
+    "temporal_confirm": 0.4278377988603379,
+    "temporal_bridge": 0.44267471101548933
+  },
+  "leases": [
+    {
+      "lease_id": "003e90cca77348068bac0043325938ba",
+      "stage": "profile",
+      "job_id": "415453",
+      "pid": 2070785,
+      "gpu_count": 1,
+      "lease_hours": 0.5,
+      "charged_gpuh": 0.007657659230495079,
+      "status": "complete",
+      "start_unix": 1791595202.8986027,
+      "end_unix": 1791595230.4662051
+    },
+    {
+      "lease_id": "296990c062b04277950b24cf34017227",
+      "stage": "features",
+      "job_id": "415453",
+      "pid": 2071726,
+      "gpu_count": 8,
+      "lease_hours": 1.0,
+      "charged_gpuh": 0.3839540171478358,
+      "status": "partial",
+      "start_unix": 1791595240.5941114,
+      "end_unix": 1791595413.3730688
+    },
+    {
+      "lease_id": "3dca0bd9e19f445a8978efb4a937e9ff",
+      "stage": "temporal_fit",
+      "job_id": "415453",
+      "pid": 2197723,
+      "gpu_count": 8,
+      "lease_hours": 0.2,
+      "charged_gpuh": 0.4256992668865456,
+      "status": "complete",
+      "start_unix": 1791601199.7968407,
+      "end_unix": 1791601391.3616555
+    },
+    {
+      "lease_id": "235f76d1ba9e4936ac60b675957450b2",
+      "stage": "temporal_confirm",
+      "job_id": "415453",
+      "pid": 2204920,
+      "gpu_count": 8,
+      "lease_hours": 0.2,
+      "charged_gpuh": 0.417281410002874,
+      "status": "complete",
+      "start_unix": 1791601526.2650623,
+      "end_unix": 1791601714.0418503
+    },
+    {
+      "lease_id": "98ca6bfc39aa4b1198641d53a323781c",
+      "stage": "temporal_bridge",
+      "job_id": "415453",
+      "pid": 2209001,
+      "gpu_count": 8,
+      "lease_hours": 0.2,
+      "charged_gpuh": 0.43241293414392407,
+      "status": "complete",
+      "start_unix": 1791601720.8186243,
+      "end_unix": 1791601915.4047935
+    }
+  ],
+  "controller_envelopes": [
+    {
+      "stage": "temporal_fit",
+      "status": "closed",
+      "prior_lease_ids": [
+        "003e90cca77348068bac0043325938ba",
+        "296990c062b04277950b24cf34017227"
+      ],
+      "gpuh": 2.0
+    },
+    {
+      "stage": "temporal_confirm",
+      "status": "closed",
+      "prior_lease_ids": [
+        "003e90cca77348068bac0043325938ba",
+        "296990c062b04277950b24cf34017227",
+        "3dca0bd9e19f445a8978efb4a937e9ff"
+      ],
+      "gpuh": 2.0
+    },
+    {
+      "stage": "temporal_bridge",
+      "status": "closed",
+      "prior_lease_ids": [
+        "003e90cca77348068bac0043325938ba",
+        "235f76d1ba9e4936ac60b675957450b2",
+        "296990c062b04277950b24cf34017227",
+        "3dca0bd9e19f445a8978efb4a937e9ff"
+      ],
+      "gpuh": 2.0
+    }
+  ],
+  "overhead_receipts": [
+    {
+      "stage": "temporal_fit",
+      "controller": "fit",
+      "gpu_count": 8,
+      "charged_gpuh": 0.024312981470591466,
+      "method": "max(0, srun wall time times selected GPUs minus new stage leases)"
+    },
+    {
+      "stage": "temporal_confirm",
+      "controller": "confirm",
+      "gpu_count": 8,
+      "charged_gpuh": 0.010556388857464016,
+      "method": "max(0, srun wall time times selected GPUs minus new stage leases)"
+    },
+    {
+      "stage": "temporal_bridge",
+      "controller": "confirm",
+      "gpu_count": 8,
+      "charged_gpuh": 0.01026177687156532,
+      "method": "max(0, srun wall time times selected GPUs minus new stage leases)"
+    }
+  ],
+  "prior_step_overhead_reconciliation": [
+    {
+      "job_id": "415453.14",
+      "stage": "profile",
+      "elapsed_seconds": 32,
+      "selected_gpus": 1,
+      "old_charge": 0.007657659230495106,
+      "additional_gpuh": 0.0012312296583937826
+    },
+    {
+      "job_id": "415453.15",
+      "stage": "features",
+      "elapsed_seconds": 180,
+      "selected_gpus": 8,
+      "old_charge": 0.38395401714783617,
+      "additional_gpuh": 0.016045982852163854
+    }
+  ]
+}

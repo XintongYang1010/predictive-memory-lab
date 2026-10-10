@@ -1,0 +1,32 @@
+{
+  "checked_unix": 1791608585.1697118,
+  "cumulative_charged_gpuh": 2.2082544136047373,
+  "new_science_gpuh": 0.4766185442606607,
+  "management_gpuh": 0.0022222222222222222,
+  "gpu_step": "415453.26",
+  "cpu_step": "415453.27",
+  "gpu_step_slurm_elapsed_seconds": 214,
+  "indexmem_step": [
+    "415453.5",
+    "python",
+    "RUNNING",
+    "117765",
+    "cpu=64,gres/gpu=8,mem=0,node=1",
+    "0:0"
+  ],
+  "parent_allocation": [
+    "415453",
+    "indexmem-h800-hold-5d-20261008",
+    "RUNNING",
+    "166160",
+    "billing=64,cpu=64,gres/gpu=8,node=1",
+    "0:0"
+  ],
+  "all_new_steps_complete": true,
+  "active_new_leases": false,
+  "parent_and_unrelated_jobs_preserved": true,
+  "scientific_status": "nuisance intervention diagnostic complete; old V5 and V5.1 bridge gates remain failed",
+  "test_opened": false,
+  "p0_started": false,
+  "cleanup": "retained scientific failure investigation scene; no deletion"
+}
