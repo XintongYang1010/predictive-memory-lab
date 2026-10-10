@@ -1,0 +1,83 @@
+{
+  "design": {
+    "schema": "v5.6-correspondence-fixed-1",
+    "posthoc": true,
+    "population": {
+      "split": "dev",
+      "pair_ids": [
+        640,
+        895
+      ],
+      "episodes": 512
+    },
+    "immutable_inputs": {
+      "archive_manifest.json": "b6e0ca1e893a595edb3a8c60507f72de647f5affcb20daf8223bf3af20e72663",
+      "counterfactual_cache/receipt.json": "000ec48d9a2a7ba7ea07025f87e246ae87045d3a122ca478f6d7b10c4e5d4f46",
+      "report/predictions.npz": "f3f66de4fb643ccbf4bb011761111d24aa49170e539c186a41d93068026eb294"
+    },
+    "raw": "V5.5 original000/111 same-call stored FP32 spatial256x1280 tokens; BF16 encoder forward",
+    "roi": "A RGB R235 B60;B R60 B235;source-frame color bbox25/50/75percent xy Cartesian3x3. No target RGB ROI or labels.",
+    "grid": {
+      "minimum_pixels": -6.0,
+      "maximum_pixels": 6.0,
+      "step_pixels": 0.5,
+      "count": 625,
+      "order": "dy major,dx minor"
+    },
+    "interpolation": "Bilinear,physical pixel centers(native grid centers=(i+.5)*224/side-.5),border replication;record clamp",
+    "descriptor": "Center each interpolated descriptor over channels;cosine similarity;mean cosine distance across9 ROI points;norm squared <=1e-24 gives similarity0 and marked undefined",
+    "tie": {
+      "absolute_cost_tolerance": 1e-12,
+      "selection": "smallest squared displacement then dx then dy",
+      "near_optimal_tolerance": 1e-06
+    },
+    "native_comparison": "Full raw16x16 versus same-raw meanpool4x4;FP64 accumulation then FP32 storage,no final BF16 quantization;same displacement candidates,ROI,cost and interpolation;not bitwise GPU pooling",
+    "budget": {
+      "tokens_per_frame": 16,
+      "channels": 1280,
+      "feature_dtype": "float32",
+      "index_dtype": "uint16",
+      "bytes_per_frame": 81952,
+      "bytes_two_frames": 163904,
+      "common_header": "Method identifier and common known-grid/precision constants excluded equally from every method;no extra per-object token-bank copy",
+      "uniform": "4x4 spatial means;16 tokens",
+      "others": "2x2 global spatial means4 tokens plus12 raw tokens;identical selected indices used in bothframes",
+      "roi_adaptive": "6 perobject;source RGB color coverage perrawcell descending,then distance tosource color centroid,then rasterindex;withoutreplacement",
+      "random": "12 unique rawcells;default_rng(5617+2*pair_id+variant);no target/labels",
+      "change_priority": "12 largest raw feature-change squared L2;ties rasterindex;two-frame lookahead,not causal memory selection",
+      "common_reading": "All4 budget banks:inverse-distance-squared interpolation from selected centers to16x16 centers(exact atstoredcenter),then same bilinear+cosine reader",
+      "codes": "raw0..255;2x2means256..259;4x4means260..275"
+    },
+    "metrics": "All512 predictions/costs/ties/margins/border flags;continuous archive displacement with original frozenFIT mean;no method selection/no refit",
+    "limits": "Privileged local-correspondence and two-frame storage prototypes;not supervised decoder capacity bounds,encoder failure proof,long-term memory evidence or fresh confirmation",
+    "no_training": true,
+    "test_opened": false,
+    "p0_authorized": false
+  },
+  "sources": {
+    "scripts/v5_6_correspondence.py": "79a0fcb95c8481b43ba1d6c1fa602b21bfe5fa70da3626323af0ae528aa11dbe",
+    "scripts/v5_5_counterfactual.py": "420fda7123d16864c00ba3b829739b09ec9ce7d259833883ea66539a75b7be62",
+    "scripts/v5_4_reader.py": "e198aa3046056b032582e13c6ad135e581af895fcef17a8867e231355e82c3c1",
+    "scripts/v5_3_reader.py": "960e3123da1163d694fafaeee45f91cea84e03025b37a62da9823dcff0b04ada",
+    "pmr/visual_memory/data.py": "ce5082f3be9006dcceb46fbaffadc27349f977a77abcf8992eda3e80f8775368"
+  },
+  "software_verification": {
+    "status": "passed",
+    "software_only": true,
+    "known_translation": {
+      "raw": [
+        2.5,
+        -3.0
+      ],
+      "pool": [
+        2.5,
+        -3.0
+      ]
+    },
+    "gram_matches_explicit_descriptors": true,
+    "equal_payload_bytes_verified": true,
+    "constant_ambiguity_preserved": true,
+    "stationary_match_zero": true
+  },
+  "created_unix": 1791661281.759871
+}
