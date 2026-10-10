@@ -1,0 +1,1978 @@
+{
+  "schema": "v5.5-known-rgb-observability-1",
+  "posthoc": true,
+  "privileged_renderer_color_knowledge": true,
+  "primary": "rgb_centroid_primary",
+  "auxiliary_not_selected": "rgb_bbox_auxiliary",
+  "population": {
+    "split": "dev",
+    "pair_ids": [
+      640,
+      895
+    ],
+    "episodes": 512,
+    "frames": 1024
+  },
+  "axes": [
+    "A_dx",
+    "A_dy",
+    "B_dx",
+    "B_dy"
+  ],
+  "prediction_rule": "A pixels R=235,B=60;B pixels R=60,B=235. Arithmetic centroid of qualifying RGB pixels, or fixed auxiliary min/max midpoint. No latent position/masks/per-case sampled green value/labels enter prediction.",
+  "target_definition": "Continuous reflected endpoint position p7 and p7-p6, cast FP32 in original data.py; not raster center displacement or unreflected latent velocity.",
+  "denominator": {
+    "rule": "Exact same original V5.4 frozen joint-FIT mean as V5.5 score_outputs; no Dev centering",
+    "frozen_fit_mean": [
+      0.4847960099577904,
+      0.27861388213932514,
+      0.4824831821024418,
+      0.7279571853578091,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "per_dimension": [
+      0.04152948116054772,
+      0.008307050471623936,
+      0.039987870853593094,
+      0.00728066380180783,
+      0.00018082222672126402,
+      0.00015905438094333682,
+      0.0001767611383283593,
+      0.00016540053021914055
+    ],
+    "old_model_sha256": "657448f6b31928aeec30a6c4e8a3264ce1ff6a266918125b169a30407e4e7fa4"
+  },
+  "tiny_definition": "zero iff float32 archive displacement==0; tiny iff0<abs(displacement*224)<1pixel; at_least_1px iff abs>=1pixel. No case excluded.",
+  "scores": {
+    "rgb_centroid_primary": {
+      "per_dimension_mse": [
+        6.166049747982427e-06,
+        6.570804721210554e-06,
+        7.029695814056483e-06,
+        6.36050011030235e-06,
+        2.7693135582514986e-06,
+        3.1713187334105007e-06,
+        3.7102374122456597e-06,
+        3.2790010822088607e-06
+      ],
+      "per_dimension_skill": [
+        0.9998515259623845,
+        0.9992090086916342,
+        0.9998242042983535,
+        0.9991263845875258,
+        0.9846848830010241,
+        0.9800614185248988,
+        0.9790098805238889,
+        0.9801753895355445
+      ],
+      "position_skill": 0.9995027808849745,
+      "motion_skill": 0.9809828928963391,
+      "motion_nmse": 0.019017107103660905,
+      "motion_direction_error_rate": [
+        0.00390625,
+        0.009765625,
+        0.0,
+        0.01171875
+      ],
+      "motion_target_zero_count": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "motion_prediction_zero_count": [
+        0,
+        2,
+        0,
+        0
+      ],
+      "motion_sign_tie_count": [
+        0,
+        2,
+        0,
+        0
+      ],
+      "motion_signed_bias": [
+        -3.4371271573703535e-05,
+        -0.0001045912371762744,
+        -5.225787900515131e-05,
+        5.9315549091732685e-05
+      ],
+      "motion_prediction_target_covariance": [
+        0.00018054496898029619,
+        0.00015868499351998582,
+        0.00017523906919201772,
+        0.00013169100258367004
+      ],
+      "motion_absolute_amplitude_ratio": [
+        0.9974101998391472,
+        1.0008629340685231,
+        0.990617225935612,
+        0.9946288100305041
+      ],
+      "motion_rms_ratio": [
+        1.0061976635920935,
+        1.0102933642589582,
+        1.0018785582164023,
+        1.0028709315100717
+      ],
+      "motion_std_ratio": [
+        1.006173437412586,
+        1.0098880710515423,
+        1.0018782506777575,
+        1.0010291378702036
+      ],
+      "dx_mse_normalized": 3.2397754852485794e-06,
+      "dx_rmse_pixels": 0.4031860299512282,
+      "per_axis_motion_rmse_pixels": [
+        0.3727641038228159,
+        0.3989036083662382,
+        0.4314682750757441,
+        0.4056194747554804
+      ],
+      "per_axis_max_abs_error_pixels": [
+        0.9519962216624549,
+        0.9585590147390661,
+        1.0640640466267257,
+        1.086935047637951
+      ],
+      "direction_by_bin": {
+        "zero": {
+          "count_per_axis": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strict_opposite_per_axis": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "prediction_zero_per_axis": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sign_mismatch_including_zero_per_axis": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "tiny_nonzero_lt_1px": {
+          "count_per_axis": [
+            2,
+            17,
+            0,
+            14
+          ],
+          "strict_opposite_per_axis": [
+            2,
+            3,
+            0,
+            6
+          ],
+          "prediction_zero_per_axis": [
+            0,
+            2,
+            0,
+            0
+          ],
+          "sign_mismatch_including_zero_per_axis": [
+            2,
+            5,
+            0,
+            6
+          ]
+        },
+        "at_least_1px": {
+          "count_per_axis": [
+            510,
+            495,
+            512,
+            498
+          ],
+          "strict_opposite_per_axis": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "prediction_zero_per_axis": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sign_mismatch_including_zero_per_axis": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "rgb_bbox_auxiliary": {
+      "per_dimension_mse": [
+        5.921311819626519e-06,
+        6.096639549803018e-06,
+        6.249201821036502e-06,
+        5.736255108764133e-06,
+        2.243612923181188e-06,
+        2.2708254618143797e-06,
+        2.2575741181332977e-06,
+        1.9904633040056515e-06
+      ],
+      "per_dimension_skill": [
+        0.9998574190754579,
+        0.9992660885388107,
+        0.9998437225666774,
+        0.9992121247093788,
+        0.9875921618494407,
+        0.9857229618678447,
+        0.9872281082850941,
+        0.987965798529373
+      ],
+      "position_skill": 0.9995448387225812,
+      "motion_skill": 0.9871272576329382,
+      "motion_nmse": 0.012872742367061853,
+      "motion_direction_error_rate": [
+        0.00390625,
+        0.013671875,
+        0.0,
+        0.013671875
+      ],
+      "motion_target_zero_count": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "motion_prediction_zero_count": [
+        2,
+        7,
+        0,
+        7
+      ],
+      "motion_sign_tie_count": [
+        2,
+        7,
+        0,
+        7
+      ],
+      "motion_signed_bias": [
+        -2.1780617186907763e-05,
+        -8.814223149654151e-05,
+        -4.6862412481069835e-05,
+        5.3294257830722384e-05
+      ],
+      "motion_prediction_target_covariance": [
+        0.00018062722648544215,
+        0.0001586113734582595,
+        0.0001755012625246514,
+        0.00013200760731210865
+      ],
+      "motion_absolute_amplitude_ratio": [
+        0.9977746164105249,
+        0.9998849466672046,
+        0.9921328552914055,
+        0.9952783445294603
+      ],
+      "motion_rms_ratio": [
+        1.0051967409182856,
+        1.006965874601299,
+        0.999255016390483,
+        1.0006871769778463
+      ],
+      "motion_std_ratio": [
+        1.0051822181879568,
+        1.0066237791234602,
+        0.9992554469854181,
+        0.9985710956956309
+      ],
+      "dx_mse_normalized": 2.2505935206572437e-06,
+      "dx_rmse_pixels": 0.3360443132869501,
+      "per_axis_motion_rmse_pixels": [
+        0.3355227593376321,
+        0.3375513862688134,
+        0.33656505901750355,
+        0.3160276676839972
+      ],
+      "per_axis_max_abs_error_pixels": [
+        0.8414311110973358,
+        0.8561199903488159,
+        0.850993424654007,
+        0.8783788979053497
+      ],
+      "direction_by_bin": {
+        "zero": {
+          "count_per_axis": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strict_opposite_per_axis": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "prediction_zero_per_axis": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sign_mismatch_including_zero_per_axis": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "tiny_nonzero_lt_1px": {
+          "count_per_axis": [
+            2,
+            17,
+            0,
+            14
+          ],
+          "strict_opposite_per_axis": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "prediction_zero_per_axis": [
+            2,
+            7,
+            0,
+            7
+          ],
+          "sign_mismatch_including_zero_per_axis": [
+            2,
+            7,
+            0,
+            7
+          ]
+        },
+        "at_least_1px": {
+          "count_per_axis": [
+            510,
+            495,
+            512,
+            498
+          ],
+          "strict_opposite_per_axis": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "prediction_zero_per_axis": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sign_mismatch_including_zero_per_axis": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "W_concat": {
+      "per_dimension_mse": [
+        0.00035155811679311866,
+        0.00011911651730162474,
+        0.000356732661742363,
+        0.00013476594642157326,
+        0.00013239037996979814,
+        7.700759742428988e-05,
+        0.00010452033445347683,
+        7.548522368939783e-05
+      ],
+      "per_dimension_skill": [
+        0.9915347337128042,
+        0.9856607928760617,
+        0.9910789783469978,
+        0.9814898819544298,
+        0.26784233127558577,
+        0.515841079210991,
+        0.40869166468414997,
+        0.5436216341665482
+      ],
+      "position_skill": 0.9874410967225734,
+      "motion_skill": 0.4339991773343187,
+      "motion_nmse": 0.5660008226656813,
+      "motion_direction_error_rate": [
+        0.240234375,
+        0.140625,
+        0.1875,
+        0.138671875
+      ],
+      "motion_target_zero_count": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "motion_prediction_zero_count": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "motion_sign_tie_count": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "motion_signed_bias": [
+        6.101825732069822e-05,
+        -0.00035234541455791523,
+        0.0003584792832857743,
+        -0.0012243072215947061
+      ],
+      "motion_prediction_target_covariance": [
+        7.027119962863268e-05,
+        8.889864835820889e-05,
+        8.05820747376848e-05,
+        6.842818475525618e-05
+      ],
+      "motion_absolute_amplitude_ratio": [
+        0.5890688862006603,
+        0.6678484121102687,
+        0.5893904144719483,
+        0.6582287123053784
+      ],
+      "motion_rms_ratio": [
+        0.7137674977308321,
+        0.7805654352906835,
+        0.7093514275650988,
+        0.7676264449240858
+      ],
+      "motion_std_ratio": [
+        0.7137822481606255,
+        0.7777608205289878,
+        0.7087658324125339,
+        0.7635461406172587
+      ],
+      "dx_mse_normalized": 0.0001184553572116375,
+      "dx_rmse_pixels": 2.437953240620321,
+      "per_axis_motion_rmse_pixels": [
+        2.577366816222438,
+        1.9656889907513784,
+        2.2900681870934876,
+        1.9461620137694682
+      ],
+      "per_axis_max_abs_error_pixels": [
+        7.344223165808065,
+        6.253920560053124,
+        8.129000114091596,
+        5.8347014183682315
+      ],
+      "direction_by_bin": {
+        "zero": {
+          "count_per_axis": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strict_opposite_per_axis": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "prediction_zero_per_axis": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sign_mismatch_including_zero_per_axis": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "tiny_nonzero_lt_1px": {
+          "count_per_axis": [
+            2,
+            17,
+            0,
+            14
+          ],
+          "strict_opposite_per_axis": [
+            0,
+            3,
+            0,
+            8
+          ],
+          "prediction_zero_per_axis": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sign_mismatch_including_zero_per_axis": [
+            0,
+            3,
+            0,
+            8
+          ]
+        },
+        "at_least_1px": {
+          "count_per_axis": [
+            510,
+            495,
+            512,
+            498
+          ],
+          "strict_opposite_per_axis": [
+            123,
+            69,
+            96,
+            63
+          ],
+          "prediction_zero_per_axis": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sign_mismatch_including_zero_per_axis": [
+            123,
+            69,
+            96,
+            63
+          ]
+        }
+      }
+    },
+    "lane_W": {
+      "per_dimension_mse": [
+        0.00016684886491389692,
+        6.441873370274223e-05,
+        0.00021083696287296197,
+        9.68702023552367e-05,
+        8.961366515926629e-05,
+        5.551934909527664e-05,
+        7.674059547077073e-05,
+        6.639442563106972e-05
+      ],
+      "per_dimension_skill": [
+        0.9959823994846244,
+        0.9922452940519875,
+        0.9947274771481358,
+        0.9866948667055354,
+        0.504410122670345,
+        0.6509410884126767,
+        0.5658514298079818,
+        0.5985839613506487
+      ],
+      "position_skill": 0.9924125093475707,
+      "motion_skill": 0.5799466505604131,
+      "motion_nmse": 0.42005334943958694,
+      "motion_direction_error_rate": [
+        0.15625,
+        0.107421875,
+        0.14453125,
+        0.126953125
+      ],
+      "motion_target_zero_count": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "motion_prediction_zero_count": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "motion_sign_tie_count": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "motion_signed_bias": [
+        -8.675077916545784e-05,
+        -0.00025786169520289326,
+        -0.0004986005418939221,
+        -0.0009775067546603283
+      ],
+      "motion_prediction_target_covariance": [
+        0.00010401065101108968,
+        0.00010805504338439912,
+        0.00010627107447811604,
+        8.032131377194662e-05
+      ],
+      "motion_absolute_amplitude_ratio": [
+        0.6843273896682566,
+        0.7485497188514848,
+        0.6772009619954403,
+        0.7326181811667395
+      ],
+      "motion_rms_ratio": [
+        0.8039027823452143,
+        0.8451876219867086,
+        0.7977719314522042,
+        0.8336874218635497
+      ],
+      "motion_std_ratio": [
+        0.803793586497179,
+        0.8433847183976176,
+        0.796977870418196,
+        0.8351142702844652
+      ],
+      "dx_mse_normalized": 8.317713031501853e-05,
+      "dx_rmse_pixels": 2.042913529909274,
+      "per_axis_motion_rmse_pixels": [
+        2.120484676443417,
+        1.6690532826140092,
+        1.962278297882692,
+        1.825214151946163
+      ],
+      "per_axis_max_abs_error_pixels": [
+        6.888152105992832,
+        6.323495199375682,
+        7.030822676344391,
+        6.238938070663615
+      ],
+      "direction_by_bin": {
+        "zero": {
+          "count_per_axis": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "strict_opposite_per_axis": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "prediction_zero_per_axis": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sign_mismatch_including_zero_per_axis": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "tiny_nonzero_lt_1px": {
+          "count_per_axis": [
+            2,
+            17,
+            0,
+            14
+          ],
+          "strict_opposite_per_axis": [
+            1,
+            5,
+            0,
+            6
+          ],
+          "prediction_zero_per_axis": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sign_mismatch_including_zero_per_axis": [
+            1,
+            5,
+            0,
+            6
+          ]
+        },
+        "at_least_1px": {
+          "count_per_axis": [
+            510,
+            495,
+            512,
+            498
+          ],
+          "strict_opposite_per_axis": [
+            79,
+            50,
+            74,
+            59
+          ],
+          "prediction_zero_per_axis": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "sign_mismatch_including_zero_per_axis": [
+            79,
+            50,
+            74,
+            59
+          ]
+        }
+      }
+    }
+  },
+  "badcases": [
+    {
+      "pair_id": 761,
+      "variant": 1,
+      "axis": "A_dx",
+      "label_dx_dy_pixels": 3.8406423926353455,
+      "centroid_pixels": 3.4447174447174405,
+      "auxiliary_bbox_pixels": 3.5,
+      "global_pixels": -1.8824280551213315,
+      "lane_pixels": -2.02669295491843,
+      "motion_bin": "at_least_1px",
+      "cue_interval_reflection": false
+    },
+    {
+      "pair_id": 761,
+      "variant": 1,
+      "axis": "A_dy",
+      "label_dx_dy_pixels": -3.2839713990688324,
+      "centroid_pixels": -4.111673532726158,
+      "auxiliary_bbox_pixels": -4.0,
+      "global_pixels": -1.687624608494393,
+      "lane_pixels": -4.610594097991444,
+      "motion_bin": "at_least_1px",
+      "cue_interval_reflection": false
+    },
+    {
+      "pair_id": 761,
+      "variant": 1,
+      "axis": "B_dx",
+      "label_dx_dy_pixels": 2.112844794988632,
+      "centroid_pixels": 2.0,
+      "auxiliary_bbox_pixels": 2.0,
+      "global_pixels": -3.8773388248900567,
+      "lane_pixels": -1.5547319247965652,
+      "motion_bin": "at_least_1px",
+      "cue_interval_reflection": false
+    },
+    {
+      "pair_id": 761,
+      "variant": 1,
+      "axis": "B_dy",
+      "label_dx_dy_pixels": -2.218470126390457,
+      "centroid_pixels": -3.2183288409703437,
+      "auxiliary_bbox_pixels": -3.0,
+      "global_pixels": 3.3238022594189744,
+      "lane_pixels": 3.457887182573212,
+      "motion_bin": "at_least_1px",
+      "cue_interval_reflection": false
+    },
+    {
+      "pair_id": 844,
+      "variant": 1,
+      "axis": "A_dx",
+      "label_dx_dy_pixels": -3.2782478034496307,
+      "centroid_pixels": -2.9447174447174405,
+      "auxiliary_bbox_pixels": -3.0,
+      "global_pixels": 1.7074802291530837,
+      "lane_pixels": -0.22944031344935253,
+      "motion_bin": "at_least_1px",
+      "cue_interval_reflection": false
+    },
+    {
+      "pair_id": 844,
+      "variant": 1,
+      "axis": "A_dy",
+      "label_dx_dy_pixels": -3.7675999999046326,
+      "centroid_pixels": -3.9959369569125727,
+      "auxiliary_bbox_pixels": -4.0,
+      "global_pixels": -6.8983616897138775,
+      "lane_pixels": -7.1839257605726665,
+      "motion_bin": "at_least_1px",
+      "cue_interval_reflection": false
+    },
+    {
+      "pair_id": 844,
+      "variant": 1,
+      "axis": "B_dx",
+      "label_dx_dy_pixels": -3.6896784901618958,
+      "centroid_pixels": -2.7914438502673704,
+      "auxiliary_bbox_pixels": -3.0,
+      "global_pixels": 4.439321623929701,
+      "lane_pixels": -0.44375250161917984,
+      "motion_bin": "at_least_1px",
+      "cue_interval_reflection": false
+    },
+    {
+      "pair_id": 844,
+      "variant": 1,
+      "axis": "B_dy",
+      "label_dx_dy_pixels": -1.8828255534172058,
+      "centroid_pixels": -2.0,
+      "auxiliary_bbox_pixels": -2.0,
+      "global_pixels": 2.472457802161619,
+      "lane_pixels": -1.377154697941987,
+      "motion_bin": "at_least_1px",
+      "cue_interval_reflection": false
+    },
+    {
+      "pair_id": 891,
+      "variant": 1,
+      "axis": "A_dx",
+      "label_dx_dy_pixels": -3.780692756175995,
+      "centroid_pixels": -4.0552825552825595,
+      "auxiliary_bbox_pixels": -4.0,
+      "global_pixels": -2.176457549146043,
+      "lane_pixels": -3.1145334374028866,
+      "motion_bin": "at_least_1px",
+      "cue_interval_reflection": false
+    },
+    {
+      "pair_id": 891,
+      "variant": 1,
+      "axis": "A_dy",
+      "label_dx_dy_pixels": 2.2217412292957306,
+      "centroid_pixels": 1.9959369569125587,
+      "auxiliary_bbox_pixels": 2.0,
+      "global_pixels": 3.015337803455449,
+      "lane_pixels": 1.8822877851169373,
+      "motion_bin": "at_least_1px",
+      "cue_interval_reflection": false
+    },
+    {
+      "pair_id": 891,
+      "variant": 1,
+      "axis": "B_dx",
+      "label_dx_dy_pixels": 3.3483708202838898,
+      "centroid_pixels": 2.912466843501335,
+      "auxiliary_bbox_pixels": 3.0,
+      "global_pixels": -4.009175625247378,
+      "lane_pixels": -1.6692835489366786,
+      "motion_bin": "at_least_1px",
+      "cue_interval_reflection": false
+    },
+    {
+      "pair_id": 891,
+      "variant": 1,
+      "axis": "B_dy",
+      "label_dx_dy_pixels": 2.9553323686122894,
+      "centroid_pixels": 3.0,
+      "auxiliary_bbox_pixels": 3.0,
+      "global_pixels": 0.10534273529192552,
+      "lane_pixels": 2.436567779113553,
+      "motion_bin": "at_least_1px",
+      "cue_interval_reflection": false
+    }
+  ],
+  "all1024_rgb_hashes_match": true,
+  "all512_labels_match": true,
+  "visibility": {
+    "open_shutters_at_cues": true,
+    "all2048_target_masks_disjoint_and_detected": true,
+    "color_pixel_count_minmax": [
+      340,
+      410
+    ],
+    "no_canvas_clipping": "centers x[.1,.9],A_y[.15,.4],B_y[.6,.85],radius.06; both outlines within canvas; yellow_y[.48,.52] lies between target extents"
+  },
+  "reflection_per_axis": [
+    6,
+    52,
+    4,
+    38
+  ],
+  "identical_two_cue_rgb_episode_count": 0,
+  "identical_two_cue_target_color_masks_count": 0,
+  "same_rgb_different_latent_position_observed": [],
+  "same_two_rgb_different_labels_observed": [],
+  "limits": "A privileged handcrafted RGB diagnostic, not an encoder result, a fair learned-reader comparison or a Bayes-optimal error floor. No collisions observed in these finite samples does not make continuous latent labels globally identifiable from rasterized RGB.",
+  "source_identity": {
+    "pmr/visual_memory/data.py": "ce5082f3be9006dcceb46fbaffadc27349f977a77abcf8992eda3e80f8775368",
+    "scripts/v5_5_counterfactual.py": "420fda7123d16864c00ba3b829739b09ec9ce7d259833883ea66539a75b7be62",
+    "scripts/v5_4_reader.py": "e198aa3046056b032582e13c6ad135e581af895fcef17a8867e231355e82c3c1",
+    "scripts/v5_3_reader.py": "960e3123da1163d694fafaeee45f91cea84e03025b37a62da9823dcff0b04ada"
+  },
+  "inputs": {
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_report/predictions.npz": {
+      "bytes": 77115,
+      "sha256": "52f69d65e5f609f14d5f0d7f7610d4edb1a4c313eae0ade1247db001274a9ba0"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/reader/frozen_model.npz": {
+      "bytes": 252781114,
+      "sha256": "657448f6b31928aeec30a6c4e8a3264ce1ff6a266918125b169a30407e4e7fa4"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_5-20261010/report-snapshot/report/predictions.npz": {
+      "bytes": 1853693,
+      "sha256": "f3f66de4fb643ccbf4bb011761111d24aa49170e539c186a41d93068026eb294"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_5-20261010/report-snapshot/report/report.json": {
+      "bytes": 185978,
+      "sha256": "d865026f0ea2fcfcfab60eca47d1a92eeac87aa701ebfce4ce4a35dc80e70f17"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000640.json": {
+      "bytes": 2529,
+      "sha256": "b385d7fb849dfcea5ad53639ef471efe702bd2886ceebe9e0495b39e58d6f098"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000641.json": {
+      "bytes": 2511,
+      "sha256": "c2863e6fa43407a50cb0117eb27e5732d2e74a76421f219eb6e8adb1173c1a10"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000642.json": {
+      "bytes": 2515,
+      "sha256": "a909f9672a8e3f6a2164605606a2d4c7231777a69c4ee54b8a94a6cbf8a8f5aa"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000643.json": {
+      "bytes": 2531,
+      "sha256": "2e687688141f626a591869d95d346b05169c3c2d7d2674697cb1a922aa7671d3"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000644.json": {
+      "bytes": 2513,
+      "sha256": "43e64dae1cdc85e31c54999fd3ba691c0f1bcce95e47d370daa0adb4d2a6e1a4"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000645.json": {
+      "bytes": 2515,
+      "sha256": "55326d5da4b761675e1bf0975e81d5f93531574b3165668ddcfda0afb8b3466b"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000646.json": {
+      "bytes": 2531,
+      "sha256": "3b09a7567862b0731aebf94490fef2eff43a8c02726b02d683c6f6ea39acbf17"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000647.json": {
+      "bytes": 2513,
+      "sha256": "a17dd2691fbaa6524893567c92ebd6222fb0083abf1ab45d579079006b4594bc"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000648.json": {
+      "bytes": 2511,
+      "sha256": "2b2717025286a4c440ecc79039f8b50aeb6918e13ce69e5cf6027ca9dc9693e8"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000649.json": {
+      "bytes": 2527,
+      "sha256": "d48deabc31a4f4801a1f6aff27fc3ba8daeec35073fda0e9168be4f759baf0c2"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000650.json": {
+      "bytes": 2509,
+      "sha256": "0e24b67e52b4e01bc3457cd20278db94cabae34d3123e30aebe63e33bb0fbc54"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000651.json": {
+      "bytes": 2513,
+      "sha256": "d36941bc53f0bb98de90715c82549f57f6436d5a2211e5a6863f638a8f3636e7"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000652.json": {
+      "bytes": 2529,
+      "sha256": "7f4cff594948c26f636d3aabcc55f0ff378308c7f88323204d1fc476c069259d"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000653.json": {
+      "bytes": 2511,
+      "sha256": "b3334d513ebf189f5c07d5aaa0dc916d005229c67f590d28f99527e3c5aedb06"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000654.json": {
+      "bytes": 2513,
+      "sha256": "f38f6d4b7977295c0dbf8c372ea0d75b3910dfa551761420cbf9ecf9e23429a8"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000655.json": {
+      "bytes": 2529,
+      "sha256": "e0e65e4b7136550342444ba7c499d15e21c2e9ccb02573fd75a75a1c0d81e2d5"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000656.json": {
+      "bytes": 2511,
+      "sha256": "a6faa6c063f2d9448c8bf3ec81a91dde46e1215ea92a5fa45c0d1ed6ec8c2c62"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000657.json": {
+      "bytes": 2511,
+      "sha256": "5f9dabcf0441dafa1553975befe6260816e31cf48ae84bf4f74fbff3c68dba79"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000658.json": {
+      "bytes": 2527,
+      "sha256": "fbabc59fa76451ebb8077d5aee387f4c86c6c894933addb1476b575221f5f918"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000659.json": {
+      "bytes": 2509,
+      "sha256": "42e46add25e938e0588a3b43c02f36a1dba5f8e49a93c86e1794f79d42ea2732"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000660.json": {
+      "bytes": 2513,
+      "sha256": "7ae626073a240ea760dfc74d892042740fe27f9d34a2299141341736fb953550"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000661.json": {
+      "bytes": 2529,
+      "sha256": "3ddd4b9f9d0c35b87309086f41fffef5a7a5423d9de3ff963ee8b3370ea39ab4"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000662.json": {
+      "bytes": 2511,
+      "sha256": "3d6a38ab3eb4b92ab00ca39723c0c932476aa6723470c9f30ab3cd9fd07e800d"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000663.json": {
+      "bytes": 2513,
+      "sha256": "f5c09357d20cd2c31b0fd8119cef7eb5b4b1ba31ae0ac24d602774a17a15dae9"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000664.json": {
+      "bytes": 2529,
+      "sha256": "37bccd84664f2b8879c2488d969dc5e20d0de4c54b977b409ef90d5f00edf002"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000665.json": {
+      "bytes": 2511,
+      "sha256": "13ae857cc31927b8d486dcb59bbc1e453c12f732d55c332476c12f8719a38818"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000666.json": {
+      "bytes": 2513,
+      "sha256": "db70c12010359729716cab73b29704ec09881b59a9a7d8509abce5e8b0812bb2"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000667.json": {
+      "bytes": 2529,
+      "sha256": "271ea5a3bc86e974342dfac5da6b78b40e190b6f0584c760c2e397ecef5ba0ae"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000668.json": {
+      "bytes": 2511,
+      "sha256": "668dff0c771271e766656a4981ff52179c795e2bb8cc9c0538fc730e74c820b9"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000669.json": {
+      "bytes": 2515,
+      "sha256": "ac5029a74d7f471ac80aa4be6b2784adabc908a458f4213e784d180bfc1d6ce8"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000670.json": {
+      "bytes": 2531,
+      "sha256": "d47a838c5660f2afa3bc83d4efe2263d5ab8273cf4f13b2b7087a17414f24936"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000671.json": {
+      "bytes": 2513,
+      "sha256": "d7ac56f40afd6a48244a1d498ae031142c5e2752751f599ef77dfd62837a19bd"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000672.json": {
+      "bytes": 2515,
+      "sha256": "f3a22c5ed72f9f6ed035b09363883b44896a451886d246f82b1800937910b420"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000673.json": {
+      "bytes": 2531,
+      "sha256": "ee60946c84aff6cbf4493690c878cc3f9e4b2dda9909f0d2543a83a93e4a25d1"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000674.json": {
+      "bytes": 2513,
+      "sha256": "76fb457a3c7bdf6bb734d9934848ed589bbbf489e6fb189ed9c68bb99cab7f22"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000675.json": {
+      "bytes": 2511,
+      "sha256": "5da1f5f66dafc336589b3fac428cc79e9b5a657bd0819f6d3d4dba612e5fb354"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000676.json": {
+      "bytes": 2527,
+      "sha256": "ae55d178a9519ff0c0f805ecded283eec047cd98ad7baa07ef32214a76b8cd10"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000677.json": {
+      "bytes": 2509,
+      "sha256": "31b1915faa3537972ee0021678086b8e4bc34cde7bd27aec7215045f615201e0"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000678.json": {
+      "bytes": 2513,
+      "sha256": "c8a9f94caf7581089f7a84a863ef97452d4e7e9bbee058a374790cc812ec7ced"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000679.json": {
+      "bytes": 2529,
+      "sha256": "027db43ae4e79fe594f9ff459869dd91c5ee61bab68ed9dfca02670d0e8c0ffd"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000680.json": {
+      "bytes": 2511,
+      "sha256": "90444e092e9a22a66bffee9136b8896c1fc543e932925fdf56e25c4e963e9d1e"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000681.json": {
+      "bytes": 2513,
+      "sha256": "b7a397a6f06cf392f191aa6e087011e04288af82925211b6cbbcdb7e336c7784"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000682.json": {
+      "bytes": 2529,
+      "sha256": "bb799fe2e8ad407145c00cdb44f036bdb2f614a33a863678943cfd1000b5b040"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000683.json": {
+      "bytes": 2511,
+      "sha256": "cea2a5c363515b68d1161e13870c30a8f5093b4fbacb91ab559f48bf433c7757"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000684.json": {
+      "bytes": 2511,
+      "sha256": "07fc13b18488b8460e8ca2746296c92a59cd98683a532df2260d23554149eb02"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000685.json": {
+      "bytes": 2527,
+      "sha256": "ecf3c00eef498952465451e20092f372f96d2e84004c0f5ab2a8cbd0bc388559"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000686.json": {
+      "bytes": 2509,
+      "sha256": "85ac47b722cb01f6cc39d535d3c29af920852c1bf0ffd7d4be27411a60d359ed"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000687.json": {
+      "bytes": 2513,
+      "sha256": "69a25aed4d2a04dae1e3871d0740d6139135f88c4b8f5e5ce88fab0d2ab5c2fa"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000688.json": {
+      "bytes": 2529,
+      "sha256": "2eb9dbc33db445b3a7f9b3657a9b1abd6cde0121ca0d65a0f45a547ef7ce15a5"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000689.json": {
+      "bytes": 2511,
+      "sha256": "d1881940e74c8a0d8425130074457347766f690e95e54f01110fab6eb60d99fd"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000690.json": {
+      "bytes": 2513,
+      "sha256": "5ed6c22cfc03851c720467f3fe76c0db35c7263b0fba76debaee548bd288f818"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000691.json": {
+      "bytes": 2529,
+      "sha256": "4f32804d6dbf439ebf3fd39f8a51cffc89339614c83ae2bafb4ed4b6cb7fe718"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000692.json": {
+      "bytes": 2511,
+      "sha256": "aff4acbccaab33162d1cd969d089399eb6b08a5e1d260b3bd8e80eb59ceecb84"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000693.json": {
+      "bytes": 2513,
+      "sha256": "38b24af6ed2979f30853bcb9bf857ea5cb2fcfaad15ca37522898ac49f086eb9"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000694.json": {
+      "bytes": 2529,
+      "sha256": "8c763aaebc91faa28432f258ca77cdfffbac0d4fb65e0960e2a6c2458c8644a3"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000695.json": {
+      "bytes": 2511,
+      "sha256": "55f109c85b003f823d3c86916e99510d26ddb7821fbc67dd963f014325be6d56"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000696.json": {
+      "bytes": 2515,
+      "sha256": "1fad328e8adba3f0184e7b31d5a1f22cb6bb4ed600ee3e1544610dc752644c66"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000697.json": {
+      "bytes": 2531,
+      "sha256": "eea9858243f83f7f2411b9a1dcc77b881ebb45730be779fd03f8825ef628a9bb"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000698.json": {
+      "bytes": 2513,
+      "sha256": "4bc8ca455540e56a2871f46257bd22b58023c89a1cb66bf0c20f94cdd21c1de9"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000699.json": {
+      "bytes": 2515,
+      "sha256": "7cad105bcf188f4d4072051f055173c38555bf946d4d52411e8bff85b61a0be8"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000700.json": {
+      "bytes": 2531,
+      "sha256": "c1ade6b1d16a9042274030e678ccd6f9411920cdfabce7ef7aaa16e4cd13af05"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000701.json": {
+      "bytes": 2513,
+      "sha256": "5d47e5eea0dd929209e770d8414de966fc86a4fc7a7834522c0bf03d2bf46649"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000702.json": {
+      "bytes": 2511,
+      "sha256": "ef8d672b7e0d78d13234c33b1190a3a743756632b7b5667a9db99f0e953c13ee"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000703.json": {
+      "bytes": 2527,
+      "sha256": "ce4bc6ca53b9a0d2a6a6e49903638f542bbef55865bcdb96de5343f54d99d2cb"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000704.json": {
+      "bytes": 2509,
+      "sha256": "f31b3c38150307f5a6dc1d61e3e0cbc8f7cb211d428db10588a0de258ca9396e"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000705.json": {
+      "bytes": 2513,
+      "sha256": "9c2770f420d20b7b46f28a5930ec34737f4a8429caf6f1e3b6d31b52e8861e82"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000706.json": {
+      "bytes": 2529,
+      "sha256": "aa9eeac4770576ecf0f57177641b3012643bcb9367953c345cda48fb8403e924"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000707.json": {
+      "bytes": 2511,
+      "sha256": "a8ff56779a1e090543aaecd28999a665003c1397705d4038e4e8fce3f9d8b5a8"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000708.json": {
+      "bytes": 2513,
+      "sha256": "e9acffc1a36ed912c2b3ae268551131eaa58ba2f1813741a417a41b9251f7109"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000709.json": {
+      "bytes": 2529,
+      "sha256": "3a680469c99cf061dbf5ef4a36277d0f29ed570c73cdafae24029d0fde3bee4e"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000710.json": {
+      "bytes": 2511,
+      "sha256": "3be548ecf12a1a1f8e4a1f9a72ca313ee779a3cf9c1535adb8fb81b8f6342f4e"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000711.json": {
+      "bytes": 2511,
+      "sha256": "be33090f4dd8a66d87c1eb925d79154bbaccd167ad31a20ea320735ebdc473e5"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000712.json": {
+      "bytes": 2527,
+      "sha256": "937c80a25154a4a76421299f49a53c7a2a5f59f2301331a3d663e430dd460491"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000713.json": {
+      "bytes": 2509,
+      "sha256": "eacde7d98aea03119633d5e50fd4cf6eaeeabaf169732db51cb2ab2c9b30e524"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000714.json": {
+      "bytes": 2513,
+      "sha256": "fde06a5541f1ecf5c4c486c988c337f4bd85a857f7d120af7ba90a249fe54c0c"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000715.json": {
+      "bytes": 2529,
+      "sha256": "6d80a1cfda12c1891f2ceb8dc4e1a33768406fe10fabe0f0ef1dfa03e76518cb"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000716.json": {
+      "bytes": 2511,
+      "sha256": "eed3fba24b81902fa7d60436245ebfd8c1cbd3fda5997b4886ea872fe724ef58"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000717.json": {
+      "bytes": 2513,
+      "sha256": "c16599f49d2e888df62e70d9cb21cf2465820e58b8949bf02cf79954736de99d"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000718.json": {
+      "bytes": 2529,
+      "sha256": "d501a60da954fe0e3f1a180bc4adb9a40f72757702128c79211f87467b8b59a2"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000719.json": {
+      "bytes": 2511,
+      "sha256": "c3dbee447745f94c60c6562667fe3e3b685c0683eefce236b2a1bd17223d182f"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000720.json": {
+      "bytes": 2513,
+      "sha256": "7313480be0a5c9ace9325decf1fd86a71773ed900633deb63ee71ab8a5838651"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000721.json": {
+      "bytes": 2529,
+      "sha256": "58c73a281d201c46926d189af45202747a4e579c6d9ac51a94bd4fe03cdb7b15"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000722.json": {
+      "bytes": 2511,
+      "sha256": "d318e97b1e204ed93e4b2cea7d363b11a51e80a4617084070b82f3dc6c7bc0d3"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000723.json": {
+      "bytes": 2515,
+      "sha256": "51e8078cbfd368ee61005dd5d243047cdcefe1266671d197efa149d0fc195504"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000724.json": {
+      "bytes": 2531,
+      "sha256": "9facf76502f4c8ff542a39f591fde89641aeeb79f59c399c6b17cea02a710f8a"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000725.json": {
+      "bytes": 2513,
+      "sha256": "96146c0d175aad79345e3b351cb51cf90501985a4515906499c8e14d308970b5"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000726.json": {
+      "bytes": 2515,
+      "sha256": "4f436a96659173eccd635d767729e671655699d9f3a563d3a5575fb1a00a22ac"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000727.json": {
+      "bytes": 2531,
+      "sha256": "59d25ce70c10ff7b7a3d37e2452dd2ab8be7790c15999d80bbe0643561f71b2d"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000728.json": {
+      "bytes": 2513,
+      "sha256": "1b980dc7f460b25af7f32e3afdce70227ddefa7c2dab48845372b3a260ba5474"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000729.json": {
+      "bytes": 2511,
+      "sha256": "4495f1656c5febd77caf76a8738dc3228b88eacc6ed4c7239cf27076e377ff85"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000730.json": {
+      "bytes": 2527,
+      "sha256": "37fc5a5ee0109c19008e14209080affebe2cabc2c19f6f98dcb9eafb50c19c87"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000731.json": {
+      "bytes": 2509,
+      "sha256": "a8be2029bb2e5a28158efe1f68e18aa7e51ddff02c25d8882f981ac470649d78"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000732.json": {
+      "bytes": 2513,
+      "sha256": "cde1567aa748be670937bb1d47c780ac247c84ed56f898dc6144db5f4a903ed1"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000733.json": {
+      "bytes": 2529,
+      "sha256": "9f81b52b9cc06bf551b248595c47a863a6df27fb3b8b1eca31aa82340647cba8"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000734.json": {
+      "bytes": 2511,
+      "sha256": "6a30da07a0ade54de15d0960b40fae7494656470cf57a89a7547c42d6b7febcf"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000735.json": {
+      "bytes": 2513,
+      "sha256": "6404a35ee9daee27b4d0b1dc3a076f5e63f054fa07e1da739a4773a9ccced3ea"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000736.json": {
+      "bytes": 2529,
+      "sha256": "7c838bb6377ad1077a7d90d03d168f403f97dda271222191823335034333aeaf"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000737.json": {
+      "bytes": 2511,
+      "sha256": "fa000eb7bbce1d4ab492ed6551b908119c0d6a499c0da9ac26bf211260e22e6c"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000738.json": {
+      "bytes": 2511,
+      "sha256": "078a3e4869a6c18fe13a8e9765afcbfceaa30fbe7017be2b2eaef016807d926f"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000739.json": {
+      "bytes": 2527,
+      "sha256": "943852e1e828a670ee3ed00ad20bd77a380393a15540616f17bb491a115c832e"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000740.json": {
+      "bytes": 2509,
+      "sha256": "f78132bb0f5e7b5a294a7083fa06238e560428b7c7ee553332a19e6827cd553b"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000741.json": {
+      "bytes": 2513,
+      "sha256": "cbe8b028e22dca41ab70dd334aa44dc3a062eba72b0f1291313903262bb5f924"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000742.json": {
+      "bytes": 2529,
+      "sha256": "0f15a8155bd82a89434963e8f02095a136fa3f19ddf29944d5f777b62c821f60"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000743.json": {
+      "bytes": 2511,
+      "sha256": "e31683694310488764b41d81a2749bcb62cd860e2ed38f1b9f09a5e9b2c88520"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000744.json": {
+      "bytes": 2513,
+      "sha256": "3b3a0d4c2f29c41eda32925ae1fddcd33db51d409a52f2dc9b0bc032d9d75963"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000745.json": {
+      "bytes": 2529,
+      "sha256": "24846908b34600ff398f92970603b1254daef829d8388a8017a30337e8ce81ee"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000746.json": {
+      "bytes": 2511,
+      "sha256": "e51ad918bb6802887b886b9c7260642ea20b38250ce38c6366d226f118250b27"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000747.json": {
+      "bytes": 2513,
+      "sha256": "0507834c859e6c71693314a254227a511d4259a9edb25c64d697c62bff883bb8"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000748.json": {
+      "bytes": 2529,
+      "sha256": "9e43b3c9cb22bb7cf46d2e21e03785961f035a23cd4c5998bcc36a6a28a2df9f"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000749.json": {
+      "bytes": 2511,
+      "sha256": "8c640956052644a49b32ed9b40d3d29e538a1cf65040d3807182ecf202ec5610"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000750.json": {
+      "bytes": 2515,
+      "sha256": "bea540b969c0d48859d2ea13e375a7348fa5b3228deb249f4e043fc2aaaf1523"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000751.json": {
+      "bytes": 2531,
+      "sha256": "58297e43f2fae3f8fd4e6b6e9010aae6488ebc7821f2cda03b27bc39e7c88e40"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000752.json": {
+      "bytes": 2513,
+      "sha256": "0d8a605af7b1d46d21d65b49f31cb98af5117b3ddc03dce43ab101ce5e1c9f9e"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000753.json": {
+      "bytes": 2515,
+      "sha256": "3631372772245fbe04a6dcbc1ff014b7fdd7a735be13216b73384f45f8ec2be8"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000754.json": {
+      "bytes": 2531,
+      "sha256": "0332c29ad7a835e48678a6ebaaf210c70e59cb353e4787fca120dadfd2be9127"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000755.json": {
+      "bytes": 2513,
+      "sha256": "b36ef554691b4c60631256bcbe7bc67aa4032f382d62a71724eb129e6aa22968"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000756.json": {
+      "bytes": 2511,
+      "sha256": "b448e87a6425eaca1843ea3dfd39d77b270f4cc22068f6fc6d82fc9c34dd5098"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000757.json": {
+      "bytes": 2527,
+      "sha256": "468949d05079578c915375608c06c90161922d4c16d535f325c716c18ca95ef1"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000758.json": {
+      "bytes": 2509,
+      "sha256": "fda510cdfb699b8f74c3194ab6d043026a05ce077edfc055e84edc9084cd4123"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000759.json": {
+      "bytes": 2513,
+      "sha256": "986bdb89f30d30029f1bac67c25aafd9d58c680f25fa3f136c48ca34a84b9d8e"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000760.json": {
+      "bytes": 2529,
+      "sha256": "407e3a41064a8782566f87c91b11b5ad38785f880bfb00c7dfefbcdd74b16588"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000761.json": {
+      "bytes": 2511,
+      "sha256": "9b64888aee646b08f274067b0929e4f6be438c8bc94ab83ca220658c3cdd91ec"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000762.json": {
+      "bytes": 2513,
+      "sha256": "dfebf5a88f22f107d747d2fe80e8109af120a78c0811763a50a9913370fd87bb"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000763.json": {
+      "bytes": 2529,
+      "sha256": "595fef32677485207c83e94642a811a6c45cb95c1969e7ebefbe9e8292b49632"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000764.json": {
+      "bytes": 2511,
+      "sha256": "6db87b9f881199907a896714a30a87e9e5fa316a0ac629425abba06eb3a535b1"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000765.json": {
+      "bytes": 2511,
+      "sha256": "fc09f35c6e38e6a7c4ab7327aa7295d4863df7fdf21961fca732c0e206b8154f"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000766.json": {
+      "bytes": 2527,
+      "sha256": "d69b6bb49eef338d44637ef04ee9ebe11c99452baba012e9f57b5c7ac44e88c1"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000767.json": {
+      "bytes": 2509,
+      "sha256": "f0ce025458017027e96cebb5b9028768e6bd4ce2d243ed0ad63b82af75dc75c1"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000768.json": {
+      "bytes": 2513,
+      "sha256": "e7ee5a8fbb40d18c96d7179fccd6a838b9518e91e32623bfb6b9b4f3ae340cfa"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000769.json": {
+      "bytes": 2529,
+      "sha256": "5cba586cd443f6e87872274b6c670d878e21552335d28e2aa657632bbbc51263"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000770.json": {
+      "bytes": 2511,
+      "sha256": "9b97697c6e0d6ff001e6c6db3c992838fa098d25ccbc3fd9021c22956c0f0d15"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000771.json": {
+      "bytes": 2513,
+      "sha256": "6275f6676ed3a3be7f892665b5a56b5b120bfcd79c8c81679c069b2ee794ff45"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000772.json": {
+      "bytes": 2529,
+      "sha256": "b02fe09f6cfe2d31c8e2fd1200427a715f0b2186483dbd514c04391d023c080b"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000773.json": {
+      "bytes": 2511,
+      "sha256": "87328f035c7448a092d8bda26fd47ed9ba01636b7d36114c3a95096fac121f79"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000774.json": {
+      "bytes": 2513,
+      "sha256": "3b3f9c37721de85589cb5f5b4339ce838b28fc53c842791041970eca251511a0"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000775.json": {
+      "bytes": 2529,
+      "sha256": "2959b02a41f69359d4f69f1e270da519c52295c96aa5d78fde512d35d4f393d6"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000776.json": {
+      "bytes": 2511,
+      "sha256": "1340e34acf83275e311c278f6dbf3eee6cb5e551e41cb3da620cf7c9d96f2fd4"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000777.json": {
+      "bytes": 2515,
+      "sha256": "7da8bfa07b7e6353cd1613f0d2a0328b4d0e7a792b473963413ef0d35d212df9"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000778.json": {
+      "bytes": 2531,
+      "sha256": "b7f14c51b15eaedd9fad1ca7c342b36b0b544076c22720566b3ebb2d78ee4943"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000779.json": {
+      "bytes": 2513,
+      "sha256": "e2a3329fababc47f7b26837212b5458a92941aecb60d0955359bc51a54fc5424"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000780.json": {
+      "bytes": 2515,
+      "sha256": "d30d817631f188924dcf7094d5aa26dec783c43f7da4cea956c42c88821bb2f7"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000781.json": {
+      "bytes": 2531,
+      "sha256": "9d22e53d8d15f63b70ab1bf51634d55c7e64421cfc6c9cec28acd94b8b923da3"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000782.json": {
+      "bytes": 2513,
+      "sha256": "0c763ebf20197fc214b2dc7bdb96958a37f3d168be9959a2f1ee7436b780c749"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000783.json": {
+      "bytes": 2511,
+      "sha256": "43e6d8572805a99d8e91b5460a71a82bada54a6dc53bdf2758ca83b78049e909"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000784.json": {
+      "bytes": 2527,
+      "sha256": "c4d7d3a90c4ed680e8cf8163147f45cc7991beafcc47b7ab15e8e8f86440ec6c"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000785.json": {
+      "bytes": 2509,
+      "sha256": "d63c6ec7bf2961c8703686bf094a476b58c18860a59376ca89348655e7f2ac0a"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000786.json": {
+      "bytes": 2513,
+      "sha256": "fffd84416d4f52e145537f390a11c9f6326ee384bca61044dc378c9d72d08869"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000787.json": {
+      "bytes": 2529,
+      "sha256": "dc5fab81c2e2a77627a78355ce24c73f802f778b6ca5686478abc7193f081997"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000788.json": {
+      "bytes": 2511,
+      "sha256": "9dea6de6d17304ff5792cd404f104b107e6cefd0272d27780802c1ec487222a5"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000789.json": {
+      "bytes": 2513,
+      "sha256": "ab61e6673eae3192251a65484b0aa845e59761564be8f88784c82f1ade7a6f57"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000790.json": {
+      "bytes": 2529,
+      "sha256": "9954cd46260bedb7ba619a47f6f3ae6079b3f9830f9bccc418c333a68e808136"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000791.json": {
+      "bytes": 2511,
+      "sha256": "631c347ba6e4e42769f880d5ee2ac9abda01487c6827ea53a28f6c3f281179b1"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000792.json": {
+      "bytes": 2511,
+      "sha256": "3fb95da086ccee0606474d79776945d4afa5f88dd7443524ac5ff13dcbdf8f31"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000793.json": {
+      "bytes": 2527,
+      "sha256": "c0845dfb61838a4edc2a1e0d086a359b0c18cd26da1287c4ae51b33cde818869"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000794.json": {
+      "bytes": 2509,
+      "sha256": "bd854acacc4b37beb8b67abeb5d4516f7c0ee14ef71c109540cabd321512811b"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000795.json": {
+      "bytes": 2513,
+      "sha256": "db7bb3082baaa5e1a22b0638d5d72346e2d05aa2fded2aa6172e739a1bbf20cf"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000796.json": {
+      "bytes": 2529,
+      "sha256": "933ce2ed94952bba43cc69a10d827e6492ff690cfcce8e04ddce85400d7f2782"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000797.json": {
+      "bytes": 2511,
+      "sha256": "9ed92c4f2c4ced45de33bbac62fe3059f0d5f920db204f50b34412a81235a4cf"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000798.json": {
+      "bytes": 2513,
+      "sha256": "8ea2205160f6c01fde80f4d162e0cbd9261ff64e1fbce7a9488dbe96b29b08ab"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000799.json": {
+      "bytes": 2529,
+      "sha256": "01f565248bcef2b2ffe08ff9ceaf375ba21c5fa57e256729e1042bbb37798d5d"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000800.json": {
+      "bytes": 2511,
+      "sha256": "8ea0e98fa47ca887334840a7060b22ac7c5ab6e50c7c28e6fc580391137bab4b"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000801.json": {
+      "bytes": 2513,
+      "sha256": "d2e238d173d922d1a9facfcd0cb6bb51256f6e9ea51a62619281edc39b004230"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000802.json": {
+      "bytes": 2529,
+      "sha256": "b9797b4d61b6ed86a8cc213cc7589d880b8496d04120528bf1fdc884b263ef8c"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000803.json": {
+      "bytes": 2511,
+      "sha256": "b2a5366a738e1c1c04ecacd9cfd30a19adfa0487e8d1f773f149b20e323ec371"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000804.json": {
+      "bytes": 2515,
+      "sha256": "14609eaf2bb3e87aec635ca4a65c87873f8ac7b647bc1fa1e7160de18bf1e69b"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000805.json": {
+      "bytes": 2531,
+      "sha256": "b08f397adda9b7d94208f77a7327d2390465323c9bb558b08428a449f818efdf"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000806.json": {
+      "bytes": 2513,
+      "sha256": "d03d60d5f28bddf7dfef1a0b5045d37b1347239383ea38437753c6aa9b563589"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000807.json": {
+      "bytes": 2515,
+      "sha256": "0cf4f242607f370e55e6bb801059508be2216eeb6b644ef8d7580712abfe2623"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000808.json": {
+      "bytes": 2531,
+      "sha256": "ac800682b0a449762625d694ad855d8f538a852722af55886418a4caae943499"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000809.json": {
+      "bytes": 2513,
+      "sha256": "47349b06ef1bb728ab726f9d1a1fab4e977a0f97311042dd9db856cd7c71c461"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000810.json": {
+      "bytes": 2511,
+      "sha256": "ba7a2dd707655be0e9631c3c1c274fe7dcdfa41ca31bf6bd875ee2beab36f3a0"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000811.json": {
+      "bytes": 2527,
+      "sha256": "2afc187f8acdb59854999e5e6e655756ac03634bb950b73648bc148915757020"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000812.json": {
+      "bytes": 2509,
+      "sha256": "ff0c92beeee282a09e65d57d5b36290edd8c0cac728c7fc06a07b2fc96617257"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000813.json": {
+      "bytes": 2513,
+      "sha256": "c109a1224f4e1239ef451351a2c07efa7decf3e4ec2388b5af2bfad99e8776cb"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000814.json": {
+      "bytes": 2529,
+      "sha256": "74f4952bfb17b76a4fb3dc3d15c584d6e89747bd76c603046237813df4e6ac81"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000815.json": {
+      "bytes": 2511,
+      "sha256": "7e0e51d4d31417ab3916ce525b87c35b3ef4d6fe56054a4837f3933af216507f"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000816.json": {
+      "bytes": 2513,
+      "sha256": "e2d301e19544bd6f6f59586bb737f9ca49490a4c77d847158b18af76257162ed"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000817.json": {
+      "bytes": 2529,
+      "sha256": "0ad589e20b7d2e82ce7847459d20e13925ca67f10df9f5142a7de7ba4fcb517c"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000818.json": {
+      "bytes": 2511,
+      "sha256": "734fec7d629160369262a522eb170f59c099e25dad2f985f55566f2a0aa5d5da"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000819.json": {
+      "bytes": 2511,
+      "sha256": "235405c717bba2f641b161180978d8fb8129b86930570844331020200f9a6c27"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000820.json": {
+      "bytes": 2527,
+      "sha256": "38f8a555fe58e9d93dffa650da5f2cebe9eddca95dc3b2c086d9c2af271370d3"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000821.json": {
+      "bytes": 2509,
+      "sha256": "f0dbab85aeccf4f668c263084968e9cd5c457b5f2e7f79cfd465e9e582901bcf"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000822.json": {
+      "bytes": 2513,
+      "sha256": "6ab9070e6546c6ab49020281f3de04324dd82b01ee527df05ca05cec1b634208"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000823.json": {
+      "bytes": 2529,
+      "sha256": "6a9c4b55618e26effa36e74d109c623d80d1f07385c21f28d84e4be68cd9dbb6"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000824.json": {
+      "bytes": 2511,
+      "sha256": "50b8cc0d5d1d9399837d57b197ea347b5d4ed954c603b91caedb0c735fb7e961"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000825.json": {
+      "bytes": 2513,
+      "sha256": "574e155e25d1962ce84f5539cc05240386790851c9e46d517405b53d2eff2150"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000826.json": {
+      "bytes": 2529,
+      "sha256": "f99e1ec771140a30b24bb38a9639216ac158408f81c6abdd4b68a8916abd10bc"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000827.json": {
+      "bytes": 2511,
+      "sha256": "619131ed8107e2bd1fa955f043e1a5bd0fc91d8715619752636ab8b3f7d846b9"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000828.json": {
+      "bytes": 2513,
+      "sha256": "ad5d3c88a265890cc7a9822a5258b4fa7e13534cb4c33721e6b0357055f69342"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000829.json": {
+      "bytes": 2529,
+      "sha256": "c2040455b43b525f7e8c782a97ebd5e5aeb8a071d1f80985528daf5fcb3ad1d4"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000830.json": {
+      "bytes": 2511,
+      "sha256": "b1087f3c98ae423a796d39158b581233a7769e828126b53386a68cd8d0ff4943"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000831.json": {
+      "bytes": 2515,
+      "sha256": "086599b15b68697a738dccd11426016541b71cd39d6b0c4dbcc2091b97f83efd"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000832.json": {
+      "bytes": 2531,
+      "sha256": "116fee938e5e427db5ff1b582682bd21a8c86f4923deb694c29ffc6238a6805f"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000833.json": {
+      "bytes": 2513,
+      "sha256": "1dc83a63a28bda8df0b42c45e89f461832019f6cd13d912a3de88343c4a0dad1"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000834.json": {
+      "bytes": 2515,
+      "sha256": "6c951eb7b0126c38c6c9547891cabe27b7f82927022f6eabb788e9f4414983d5"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000835.json": {
+      "bytes": 2531,
+      "sha256": "0c1b37f14bb4a3d32d54c68668df6d52b8b99b13f4df9592fccc79dd3f25f641"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000836.json": {
+      "bytes": 2513,
+      "sha256": "5190faf887bc7d4a3f7bf82d481a85332f0024a7d7e940c83ab90655a559278b"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000837.json": {
+      "bytes": 2511,
+      "sha256": "57e5a6d70ec7c4bdf5ff9d2ee1d1d224f6c202413efffa0bf040db2e29089fb3"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000838.json": {
+      "bytes": 2527,
+      "sha256": "385b1215accc582d175f87e37482578ea55c6f08e64c1387ae14d842452746ee"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000839.json": {
+      "bytes": 2509,
+      "sha256": "af38631d124f08bdfdeb70b08b281a58e2f14e7f663a9feab8e587f603ec0a25"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000840.json": {
+      "bytes": 2513,
+      "sha256": "dce25a5e32467bed37af50a7ac088022e243cef9ee30a2e314a27b807bad4bd3"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000841.json": {
+      "bytes": 2529,
+      "sha256": "43b1be0c2beddeb51b7d570f57e4d0f0b9b372e4e085f583ef8447dacda3e8b9"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000842.json": {
+      "bytes": 2511,
+      "sha256": "e165681f6f55f3bb720cb6d0cc89a6813907db5ee11bb540837eeeeb7777b0ae"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000843.json": {
+      "bytes": 2513,
+      "sha256": "562e565dc07207df0a2fd9e862d33ade87529c1851a5ca6bc0bceaf527f531b3"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000844.json": {
+      "bytes": 2529,
+      "sha256": "3229eed8ed50e01191c4aade24dd4bc9dbf24327f41aa7d6baea0678187d1b56"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000845.json": {
+      "bytes": 2511,
+      "sha256": "aeee67878ce7da5aff7c81c6e676c860c998bf99bd1953e70dac85b53e732756"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000846.json": {
+      "bytes": 2511,
+      "sha256": "ff0f356538aa0e8902e4a4d37e5894fac50f8b3e3f2884a7687ac1c7cdd3dcda"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000847.json": {
+      "bytes": 2527,
+      "sha256": "b1b18cb4f969f0591c5bd21044703d7b1adc628ddab0713ee6e18d5669f84e34"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000848.json": {
+      "bytes": 2509,
+      "sha256": "9ecadf64bf48b81d6cd9c71ec778d61d14438defc752d5da76c4c812e8f85f2b"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000849.json": {
+      "bytes": 2513,
+      "sha256": "32d1994462c6bbc96f02298c1b1c2c99a1b47f3b1dc2ff6cbb92bd8db240c3ed"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000850.json": {
+      "bytes": 2529,
+      "sha256": "b44a5ac571fbe6eca3e9a481529e0b99831462bdd1e5322bf2d466bfb57e079a"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000851.json": {
+      "bytes": 2511,
+      "sha256": "0c6019471e9c317c888d4f7b53975e4769e7c88fc914e3f70fe262a2cebd8765"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000852.json": {
+      "bytes": 2513,
+      "sha256": "c4972f1a95258f296c80e36332e5b9b14be86d3ec53b284ffe4abf7a11c343c7"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000853.json": {
+      "bytes": 2529,
+      "sha256": "545346d12c49392915dbef863a2230eb0ce6848754a617f124021eac0f301d4c"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000854.json": {
+      "bytes": 2511,
+      "sha256": "146ccbe9262741b111845af97aed5c7c1861b51d1943e982b954699feceff352"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000855.json": {
+      "bytes": 2513,
+      "sha256": "253b0daee106ff638e7ad200e5d1853e8666b14e2ea8f4b266ed9eae5d8634d7"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000856.json": {
+      "bytes": 2529,
+      "sha256": "43b6903e018a70db46f3636ef77e10dfeadd9e9c27d411e5a8945c7a7cdbf3d9"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000857.json": {
+      "bytes": 2511,
+      "sha256": "7f8bb40453fb0e1b4f9c8e1bb4f7f05a39586d64baa81cbbf88c6c6530169ab8"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000858.json": {
+      "bytes": 2515,
+      "sha256": "badd8a02e32685743a685c7ae8d021d50bee0dc6df44dcd4fcbe5ae6c65c13ba"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000859.json": {
+      "bytes": 2531,
+      "sha256": "20e2d890a76a53b9c51b4e0010d3ac0373f0d8cdf27b4c43a65fab41113a9a91"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000860.json": {
+      "bytes": 2513,
+      "sha256": "eb8343ce966010ffefe558f02d1e17dafe63724f3664178745144d3e446b7713"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000861.json": {
+      "bytes": 2515,
+      "sha256": "ddd71c3876113afac2461043d7d2aafb11f11ebc59368e41a626a32245795201"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000862.json": {
+      "bytes": 2531,
+      "sha256": "e8b1a877190bc4aed5f98dd760b6d63664b97f80c2e9007e0b65d7c3118743fb"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000863.json": {
+      "bytes": 2513,
+      "sha256": "fd7d426f1cbd6296e498e4f6091fefb4d847a70d7c4e8d886e023d32a0d6d875"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000864.json": {
+      "bytes": 2511,
+      "sha256": "ac9ff281244d10130170e764fbe36a1afc7f93ded975483f1753d812252bfd61"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000865.json": {
+      "bytes": 2527,
+      "sha256": "05fcc0beabf6805c52018911c5ae9801707ee941e57238001781c7846906fb28"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000866.json": {
+      "bytes": 2509,
+      "sha256": "839844846dc63f3042dee17638a360e5bd293869e4f915301dd0f98a1a065e31"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000867.json": {
+      "bytes": 2513,
+      "sha256": "5cc0f7af19afa5ac1c0ef976ff495a6567131651ad2d17f7c44663f83aa00717"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000868.json": {
+      "bytes": 2529,
+      "sha256": "803ae0c596d1088495b8d8f05de06d975a96acf68968c81569b4e7cbe2333ee8"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000869.json": {
+      "bytes": 2511,
+      "sha256": "627568c76273994db0ba44d8b88654af5aafa52f4427991883f4d396ab6719f2"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000870.json": {
+      "bytes": 2513,
+      "sha256": "f1dc30c217995290cec343d88ffa24c373149bd2ae832d6180fe1e535401b6a4"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000871.json": {
+      "bytes": 2529,
+      "sha256": "c85bc98645d81604815f3a8aeaa009300d687ec960cbae9647eda4344a5e6e07"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000872.json": {
+      "bytes": 2511,
+      "sha256": "74ea07b1ee0b24bf59d3534c96affbd8405d34797d8207d478a52d74835927c7"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000873.json": {
+      "bytes": 2511,
+      "sha256": "3651ab6f18fdb4c606c123548717258ca7d3565d30222d2512659a13c3c16d02"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000874.json": {
+      "bytes": 2527,
+      "sha256": "bcb1462131dfbb6851a5baaff357c277bba60f3c8a4d5473d2efc1ee7bbd5025"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000875.json": {
+      "bytes": 2509,
+      "sha256": "f6fb72c027990b1d6886ca17147f041003ed177a32223b6d5bcd9395fef612e1"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000876.json": {
+      "bytes": 2513,
+      "sha256": "50d6746ba7f43b8b9980b4382ef53c08ed414b18b2dbd9b686f5fb731c7d53d9"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000877.json": {
+      "bytes": 2529,
+      "sha256": "5d303110c20025527d24ec1a007471b193a09b8ded4863980637a7b6e6ebb7b6"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000878.json": {
+      "bytes": 2511,
+      "sha256": "521bf982f86e08adde73c0a78d0fb81893a73af34d6f09be57e9ba5b5aec1061"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000879.json": {
+      "bytes": 2513,
+      "sha256": "269ddd0c213dba19b0abc053f827726560ef561c4c2e7ff6d1782b74c78d872e"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000880.json": {
+      "bytes": 2529,
+      "sha256": "98cf5d240ae23dea2a70474175043dd3e31e7b490337c6c4347d64bb95c2a44b"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000881.json": {
+      "bytes": 2511,
+      "sha256": "18dd1f131df71f0fbf32291f328a0cc561ae6917d80af28a62f9e110700f1b13"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000882.json": {
+      "bytes": 2513,
+      "sha256": "89ecdf597843e23cc4a84cc860a9afe60f050f2485fa0115861c86dd85be750d"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000883.json": {
+      "bytes": 2529,
+      "sha256": "cb62f219e9b86daf1f3e3dc7e29b1223c96040c139519abac3f53f90fd174cb8"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000884.json": {
+      "bytes": 2511,
+      "sha256": "f0104bab7cbdf4a17ce2d53f30315b013aa6e86ec6fd4b5a5ad67ac31473ba98"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000885.json": {
+      "bytes": 2515,
+      "sha256": "a966e2e4a77b173a82464bf06cddc70e6e916f9388f76b44db8ea83d3e330990"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000886.json": {
+      "bytes": 2531,
+      "sha256": "b6eccf74f32b7e4a017c4875388ec0b9a00643842ca56c3ebfb39dcb58f9a400"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000887.json": {
+      "bytes": 2513,
+      "sha256": "7b6a9639371989b9556af86d7923483ed356d872763b1fe21f50a3035be41144"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000888.json": {
+      "bytes": 2515,
+      "sha256": "a7eedceacfedc75077e7373699689ff1aaf87a263d0a50fbc688c66dcdf6ea76"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000889.json": {
+      "bytes": 2531,
+      "sha256": "a7e1de945fcd6fe6dbd4be3d458cd59b6ce968e902ee84a27191b0f14534ad6c"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000890.json": {
+      "bytes": 2513,
+      "sha256": "bb900168ad713af7f90a457230c49206d626c712b1130efb800551529e029522"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000891.json": {
+      "bytes": 2511,
+      "sha256": "958d966f77294ccb8b60fc5c65dddbb39b5b4f9e469f46e18e64f48ed2dd4cd3"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000892.json": {
+      "bytes": 2527,
+      "sha256": "8fd5317e6743fe266bd801e519bea436a2817fa6523a6b8dd1e537bea4602c18"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000893.json": {
+      "bytes": 2509,
+      "sha256": "9f31e28cb6580110331799aa63820ba4d22a0aac1e1269cc912cbfd62f945591"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000894.json": {
+      "bytes": 2513,
+      "sha256": "760320956e9c6707111002188bbeec02b386769ef9ac28c34d133095cbbf3290"
+    },
+    "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_4-20261010/diagnostic-20261010-v54/bridge_cache/shards/000895.json": {
+      "bytes": 2529,
+      "sha256": "27645baba88a45e9f9e2513314b18fb160131d8744e72f9c3efaed93d61165c5"
+    }
+  },
+  "script_sha256": "2cba3160c852775c77d38dabee1f351a4b263ffaf79e483ccb9614a40304b261",
+  "command": [
+    "results/wm/visual-v5_5-followup-design-20261010/rgb_observability/audit_rgb.py",
+    "--scene",
+    "execution/visual-v5_4-20261010/diagnostic-20261010-v54",
+    "--v55",
+    "execution/visual-v5_5-20261010",
+    "--out",
+    "results/wm/visual-v5_5-followup-design-20261010/rgb_observability"
+  ],
+  "runtime": {
+    "python": "3.9.6 (default, Dec  2 2025, 07:27:58) \n[Clang 17.0.0 (clang-1700.6.3.2)]",
+    "numpy": "2.0.2",
+    "pillow": "11.3.0",
+    "elapsed_seconds": 1.0461101531982422
+  },
+  "no_training": true,
+  "no_new_population": true,
+  "test_opened": false
+}

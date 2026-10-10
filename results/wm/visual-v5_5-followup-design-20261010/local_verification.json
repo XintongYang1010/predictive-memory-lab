@@ -1,0 +1,15 @@
+{
+  "status": "verified_locally",
+  "utc": "2026-10-10T19:26:43.481303+00:00",
+  "checks": {
+    "same_frozen_FIT_scalar_metrics_independently_recomputed": true,
+    "source_and_script_hashes_match_report": true,
+    "1024_frame_receipt_count_matches": true,
+    "rgb_artifact_SHA256SUMS_match": true,
+    "relative_Markdown_links_exist": true,
+    "python_sources_parse": true,
+    "figure_visually_reviewed": true,
+    "J_X_symbolic_marginals_match": true
+  },
+  "scope": "CPU descriptive known-Dev RGB audit plus ablation design. No new encoder, Slurm or memory experiment. Web discussion is analysis, not evidence."
+}
