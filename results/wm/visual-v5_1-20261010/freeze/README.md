@@ -1,0 +1,1 @@
+FIT-only freeze, published before confirmation release. The reader checkpoint hash is sealed in reader/freeze_receipt.json; the complete checkpoint will be included in the final verified release archive. No confirmation data have been opened at this publication.

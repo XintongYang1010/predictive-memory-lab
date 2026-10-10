@@ -1,0 +1,66 @@
+{
+  "charged_gpuh": 0.8416239247354692,
+  "stages": {
+    "profile": 0.007657659230495106,
+    "features": 0.38395401714783617,
+    "temporal_fit": 0.45001224835713705
+  },
+  "leases": [
+    {
+      "lease_id": "003e90cca77348068bac0043325938ba",
+      "stage": "profile",
+      "job_id": "415453",
+      "pid": 2070785,
+      "gpu_count": 1,
+      "lease_hours": 0.5,
+      "charged_gpuh": 0.007657659230495079,
+      "status": "complete",
+      "start_unix": 1791595202.8986027,
+      "end_unix": 1791595230.4662051
+    },
+    {
+      "lease_id": "296990c062b04277950b24cf34017227",
+      "stage": "features",
+      "job_id": "415453",
+      "pid": 2071726,
+      "gpu_count": 8,
+      "lease_hours": 1.0,
+      "charged_gpuh": 0.3839540171478358,
+      "status": "partial",
+      "start_unix": 1791595240.5941114,
+      "end_unix": 1791595413.3730688
+    },
+    {
+      "lease_id": "3dca0bd9e19f445a8978efb4a937e9ff",
+      "stage": "temporal_fit",
+      "job_id": "415453",
+      "pid": 2197723,
+      "gpu_count": 8,
+      "lease_hours": 0.2,
+      "charged_gpuh": 0.4256992668865456,
+      "status": "complete",
+      "start_unix": 1791601199.7968407,
+      "end_unix": 1791601391.3616555
+    }
+  ],
+  "controller_envelopes": [
+    {
+      "stage": "temporal_fit",
+      "status": "closed",
+      "prior_lease_ids": [
+        "003e90cca77348068bac0043325938ba",
+        "296990c062b04277950b24cf34017227"
+      ],
+      "gpuh": 2.0
+    }
+  ],
+  "overhead_receipts": [
+    {
+      "stage": "temporal_fit",
+      "controller": "fit",
+      "gpu_count": 8,
+      "charged_gpuh": 0.024312981470591466,
+      "method": "max(0, srun wall time times selected GPUs minus new stage leases)"
+    }
+  ]
+}
