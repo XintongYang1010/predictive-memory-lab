@@ -57,8 +57,24 @@ def report(out):
             ax.set_ylabel("Unchanged B ROI latent MSE" if family=="update" else "Normalized latent MSE")
             ax.legend(fontsize=7)
         fig.tight_layout();fig.savefig(out/"pressure_curves.png",dpi=180);plt.close(fig)
-    atomic_json(out/"report_status.json",dict(status="partial" if len({r["variant"] for r in grouped})<9 else "pilot_complete",
+    required_variants={"full","recent","fifo",*VARIANTS,"reader_only_C0"}
+    present_variants={r["variant"] for r in grouped}
+    required_stages={"profile","features","p0","replay",
+                     *("adapt_"+variant for variant in required_variants-{"reader_only_C0"})}
+    incomplete_stages=[]
+    for stage in sorted(required_stages):
+        path=out/f"{stage}_status.json"
+        if not path.exists() or json.loads(path.read_text()).get("status")!="complete":
+            incomplete_stages.append(stage)
+    missing_variants=sorted(required_variants-present_variants)
+    atomic_json(out/"report_status.json",dict(status="partial" if missing_variants or incomplete_stages else "pilot_complete",
+                missing_variants=missing_variants,incomplete_stages=incomplete_stages,
                 evaluation_split="dev",test_evaluated=False,
                 limitations=["controlled synthetic RGB only","two targets; capacity and similar-address sweeps pending",
                               "ROI latent errors are not physical trajectory errors","prefix minimization and fresh confirmation remain human-guided",
                               "sharing/selector experiments deliberately not started"]))
+    manifest_path=out/"run_manifest.json"
+    if manifest_path.exists():
+        manifest=json.loads(manifest_path.read_text())
+        manifest["status"]="partial" if missing_variants or incomplete_stages else "complete"
+        atomic_json(manifest_path,manifest)

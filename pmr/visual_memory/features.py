@@ -48,35 +48,91 @@ class Encoder:
         return (pooled,z.cpu().to(torch.bfloat16)) if raw else pooled
 
 
-def cache_split(encoder, root, split, count, budget, batch_frames=32, probe_pairs=64):
-    root = Path(root); folder = root/split; folder.mkdir(parents=True,exist_ok=True)
-    expected = dict(schema=SCHEMA,split=split,count=count,encoder=encoder.identity,
-                    seed_scheme="sha256(schema/split/pair), variants share split",horizons=[1,4,8])
-    manifest = folder/"manifest.json"
-    if manifest.exists() and json.loads(manifest.read_text())["configuration"] != expected:
+def cache_configuration(encoder_identity, split, count):
+    if split not in ("train","dev"):
+        raise ValueError("Scientific feature extraction only opens Train/Dev")
+    specs(split,count)
+    return dict(schema=SCHEMA,split=split,count=count,encoder=encoder_identity,
+                seed_scheme="sha256(schema/split/pair), variants share split",horizons=[1,4,8])
+
+
+def begin_cache(root, split, count, encoder_identity):
+    expected=cache_configuration(encoder_identity,split,count)
+    folder=Path(root)/split;folder.mkdir(parents=True,exist_ok=True)
+    manifest=folder/"manifest.json"
+    if manifest.exists() and json.loads(manifest.read_text())["configuration"]!=expected:
         raise ValueError("Feature cache identity mismatch; choose a fresh output root")
     atomic_json(manifest,dict(configuration=expected,status="partial"))
-    for spec in specs(split,count):
+    return folder
+
+
+def validate_record(path, spec):
+    row=torch.load(path,map_location="cpu",weights_only=True)
+    split,pair,variant=spec
+    metadata=row.get("metadata",{})
+    if (metadata.get("episode_id")!=f"{split}-{pair:06d}-{variant}"
+            or metadata.get("pair_id")!=f"{split}-{pair:06d}"
+            or metadata.get("split")!=split or metadata.get("variant")!=variant):
+        raise ValueError(f"Cached episode identity mismatch: {path}")
+    n=len(row["features"])
+    if (n<4 or len(row["times"])!=n or len(row["shutters"])!=n
+            or n!=metadata.get("observation_count")
+            or len(row["targets"])!=3 or len(row["target_masks"])!=3
+            or row["targets"].shape[1:]!=row["features"].shape[1:]):
+        raise ValueError(f"Cached episode tensor shape mismatch: {path}")
+    return row
+
+
+def cache_records(encoder, folder, selected_specs, budget, batch_frames=32, probe_pairs=64):
+    """Write disjoint episode files; only the parent owns cache manifests."""
+    if batch_frames<1:raise ValueError("frame-batch must be positive")
+    folder=Path(folder)
+    for spec in selected_specs:
         budget.check()
-        path = folder/f"{spec[1]:06d}-{spec[2]}.pt"
+        path=folder/f"{spec[1]:06d}-{spec[2]}.pt"
         if path.exists():
+            validate_record(path,spec)
             continue
-        ep = episode(*spec)
-        images = np.concatenate([ep.rgb,ep.target_rgb])
-        out = []
+        ep=episode(*spec)
+        images=np.concatenate([ep.rgb,ep.target_rgb])
+        out=[]
         for start in range(0,len(images),batch_frames):
-            budget.check(); out.append(encoder(images[start:start+batch_frames]))
-        feats = torch.cat(out)
-        # Raw-vs-pooled probes use the same two visible early observations.
-        raw_cue = None
-        if spec[1] < probe_pairs:
-            _,raw_cue = encoder(ep.rgb[6:8],raw=True)
+            budget.check();out.append(encoder(images[start:start+batch_frames]))
+        feats=torch.cat(out)
+        raw_cue=None
+        if spec[1]<probe_pairs:
+            budget.check();_,raw_cue=encoder(ep.rgb[6:8],raw=True)
         atomic_save(path,dict(features=feats[:-3],targets=feats[-3:],
                              times=torch.from_numpy(ep.times),shutters=torch.from_numpy(ep.shutters),
                              target_masks=torch.from_numpy(pooled_masks(ep.target_masks,encoder.grid)).float(),
                              probe_state=torch.from_numpy(ep.probe_state),raw_cue=raw_cue,metadata=ep.metadata))
         print(json.dumps(dict(stage="features",episode=ep.metadata["episode_id"],frames=len(images))),flush=True)
-    atomic_json(manifest,dict(configuration=expected,status="complete"))
+
+
+def finish_cache(root, split, count, encoder_identity, budget):
+    folder=Path(root)/split
+    expected=cache_configuration(encoder_identity,split,count)
+    manifest=json.loads((folder/"manifest.json").read_text())
+    if manifest["configuration"]!=expected:
+        raise ValueError("Feature cache identity changed while workers were running")
+    requested=specs(split,count)
+    paths={folder/f"{sp[1]:06d}-{sp[2]}.pt" for sp in requested}
+    if set(folder.glob("*.pt"))!=paths:
+        raise ValueError("Feature cache record inventory does not match requested paired split")
+    inventory={}
+    for spec in requested:
+        budget.check()
+        path=folder/f"{spec[1]:06d}-{spec[2]}.pt"
+        validate_record(path,spec)
+        inventory[path.name]=dict(bytes=path.stat().st_size,sha256=digest(path))
+    atomic_json(folder/"manifest.json",dict(configuration=expected,status="complete",validated_records=count,
+                                           files=inventory))
+
+
+def cache_split(encoder, root, split, count, budget, batch_frames=32, probe_pairs=64):
+    folder=begin_cache(root,split,count,encoder.identity)
+    cache_records(encoder,folder,specs(split,count),budget,batch_frames,probe_pairs)
+    finish_cache(root,split,count,encoder.identity,budget)
 
 
 def load_records(root, split, limit=None):
@@ -84,8 +140,17 @@ def load_records(root, split, limit=None):
     manifest = json.loads((folder/"manifest.json").read_text())
     if manifest["status"] != "complete":
         raise ValueError(f"{split} cache incomplete")
-    paths = sorted(folder.glob("*.pt"))
-    return [torch.load(p,map_location="cpu",weights_only=True) for p in (paths if limit is None else paths[:limit])]
+    requested=specs(split,manifest["configuration"]["count"])
+    paths=[folder/f"{spec[1]:06d}-{spec[2]}.pt" for spec in requested]
+    if set(folder.glob("*.pt"))!=set(paths):
+        raise ValueError(f"{split} cache inventory mismatch")
+    pairs=list(zip(paths,requested))
+    records=[]
+    for path,spec in (pairs if limit is None else pairs[:limit]):
+        if "files" in manifest and manifest["files"].get(path.name)!=dict(bytes=path.stat().st_size,sha256=digest(path)):
+            raise ValueError(f"{split} cache file hash mismatch: {path.name}")
+        records.append(validate_record(path,spec))
+    return records
 
 
 def probe(train, dev):

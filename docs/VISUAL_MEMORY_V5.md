@@ -1,5 +1,10 @@
 # V5 visual-memory pilot — GPU validation pending
 
+DGX execution update: platform adaptation is implemented. The user approved
+reusing the existing H800 allocation; see [DGX execution record](DGX_V5_EXECUTION.md).
+The original A100 protocol below remains the scientific baseline. This note
+does not claim completed GPU experiments.
+
 This implements the first runnable slice of the 2026-10-09 work order. It is
 not an A100 result, an established best architecture, or an implementation of
 the later parameter-sharing and learned-selector stages.

@@ -10,8 +10,8 @@
 1. 在可使用该 SSH 别名的 Mac 本地 Codex 中拉取本仓库的最新 `main`。
 2. 阅读并执行 [DGX 完整交接任务](docs/CODEX_DGX_HANDOFF.md)。
 3. 查询真实 Slurm 账户、分区、A100、Python/CUDA 环境和存储情况。
-4. **先适配平台**：`scripts/launch_visual_v5.py` 与
-   `pmr/visual_memory/__main__.py` 仍绑定原 NYU 账户；不能直接照搬到 DGX。
+4. 使用显式 DGX 后端和实查账户参数，见 [DGX 执行记录](docs/DGX_V5_EXECUTION.md)。
+   默认 NYU 后端仍保留原限制；不要伪造 Slurm 环境变量。
 5. 在独立环境准备官方 I-JEPA，CPU 检查和实际 A100 profile 通过后，
    按依赖运行完整首轮，首轮累计上限 60 GPUh。
 

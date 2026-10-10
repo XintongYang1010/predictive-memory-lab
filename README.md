@@ -9,7 +9,8 @@ CPU 软件测试已通过；**尚未提交 V5 GPU 作业，也没有 V5 视觉�
 当前部署目标是通过 Mac 本地 SSH 别名 `dgx-127-slurm`，在远端
 `/aifs4su/guhao/KVCache/WM` 中运行，结果归档到本仓库后再清理本次目录。
 本地 Codex 的完整执行说明见 [DGX 交接任务](docs/CODEX_DGX_HANDOFF.md)。
-**现有启动器仍绑定 NYU：本地执行者必须先查询 DGX 的 Slurm 配置并完成适配。**
+DGX 后端已加入真实 Slurm 校验、共享分配中的单 GPU 选择和独立 60 GPUh 计账；
+部署命令、H800 硬件变更及恢复方式见 [DGX 执行记录](docs/DGX_V5_EXECUTION.md)。
 实验协议、未验证项及原 NYU 运行入口见 [V5 运行说明](docs/VISUAL_MEMORY_V5.md)。
 
 ```bash

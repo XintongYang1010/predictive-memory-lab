@@ -1,5 +1,10 @@
 # V5 DGX execution handoff
 
+Execution update: an explicit DGX backend now exists. See
+[DGX execution record](DGX_V5_EXECUTION.md) for the live allocation, approved
+H800 substitution, shared-reservation accounting and recovery commands. The
+original handoff and scientific requirements below are retained for provenance.
+
 ## Task and current status
 
 Run the V5 visual world model + bounded memory pilot from this repository using
