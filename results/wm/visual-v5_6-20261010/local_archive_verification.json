@@ -1,0 +1,17 @@
+{
+  "schema": "v5.6.local-scene-verification-1",
+  "archive": {
+    "bytes": 716178272,
+    "sha256": "ca0ba14f2377010a705b32aa1151320b46fb7bc16018de4dc18a9a9cf1e7e213"
+  },
+  "manifest_record": {
+    "bytes": 207898,
+    "sha256": "f16432446a68f55b50e3112c797b6219fa6ca8598c2788c20841f6ab676d8bd2"
+  },
+  "source_commit": "031788e0499c242a3671f57d026f3ed71da4872e",
+  "verified_unix": 1791664500.499433,
+  "files": 1373,
+  "bytes": 1241983469,
+  "exact_inventory": true,
+  "all_file_hashes_verified": true
+}

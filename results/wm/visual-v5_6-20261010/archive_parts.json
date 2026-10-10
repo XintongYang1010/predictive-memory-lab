@@ -1,0 +1,30 @@
+{
+  "schema": "v5.6.split-archive-1",
+  "archive": {
+    "name": "visual-v5_6-20261010-complete.tar.gz",
+    "bytes": 891843864,
+    "sha256": "61f59136fcc14e42761e7b5717f6ec1ec1ff55692209b1225df7963671bc5928"
+  },
+  "parts": [
+    {
+      "name": "visual-v5_6-20261010-complete.tar.gz.part000",
+      "bytes": 536870912,
+      "sha256": "2145cc7a0c4795e2e460f3aa386bc7c33f55470663355e482958bca704873b85"
+    },
+    {
+      "name": "visual-v5_6-20261010-complete.tar.gz.part001",
+      "bytes": 354972952,
+      "sha256": "2bcbbfb13b80d0fe53985a24f4e9fbab01db74b2b4b447443b421c05034130f9"
+    }
+  ],
+  "manifest_record": {
+    "bytes": 251578,
+    "sha256": "609509e6aecf648f79fec5fe1a056ed057321e043a1228bd2a144285e567c9c2"
+  },
+  "remote_manifest_record": {
+    "bytes": 207898,
+    "sha256": "f16432446a68f55b50e3112c797b6219fa6ca8598c2788c20841f6ab676d8bd2"
+  },
+  "concatenation": "Listed order part000, part001, ...; verify full SHA256 before extracting.",
+  "release_url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/tag/visual-v5_6-20261010"
+}
