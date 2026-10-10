@@ -1,0 +1,116 @@
+{
+  "schema": "v5.2.github.archive.readback.v1",
+  "verified_unix": 1791609063.516441,
+  "result_commit": "21af38a62ba964774f8d8d9188dc9e9533b1d689",
+  "git_artifacts": {
+    "verified_files": 79,
+    "transport": "GitHub Git blob API, decoded base64",
+    "curated_tree_exact": true,
+    "evidence_sha256": "53b0d38751870cc4e438744edf84854dbad1894dfb9544f0810e51855781bd87"
+  },
+  "release": {
+    "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/tag/visual-v5_2-20261010",
+    "tag": "visual-v5_2-20261010",
+    "asset_id": 627055879,
+    "name": "visual-v5_2-20261010-remote-scene.tar.gz",
+    "bytes": 196878854,
+    "sha256": "ecbe23a3af9cb819059387b81b38ad24b539f8be1f4ebf07c9469a0ba9e30932",
+    "server_digest": "sha256:ecbe23a3af9cb819059387b81b38ad24b539f8be1f4ebf07c9469a0ba9e30932",
+    "downloaded_from_github_and_rehashed": true
+  },
+  "scene": {
+    "inventoried_files": 675,
+    "inventoried_bytes": 232934447,
+    "manifest_sha256": "5e6cc30bbe1952081732f8117a7791372f2409b02317d862e75898c911ac635a",
+    "all_member_hashes_match": true,
+    "exact_file_inventory": true,
+    "regular_file_members": 676,
+    "directory_members": 22,
+    "unsafe_special_duplicate_members": 0
+  },
+  "conclusion": "Yellow nuisance intervention reduced horizontal MSE by 85.63% on known bridge scenes; original gates unchanged, Test unopened, P0 not started.",
+  "cleanup": "Remote scientific failure investigation scenes retained; existing WM and IndexMem preserved.",
+  "remote_final_verification": {
+    "checked_unix": 1791609032.3301697,
+    "remote_root": "/aifs4su/guhao/KVCache/WM/diagnostic-20261010-v52",
+    "creation": {
+      "root": "/aifs4su/guhao/KVCache/WM/diagnostic-20261010-v52",
+      "created_unix": 1791607995.1922138,
+      "inode": 180144507554226195,
+      "device": 2345267470,
+      "uid": 1046,
+      "token": "b933e8253bfe43e491921725cf665dd8",
+      "preexisted": false,
+      "parent_preserved": true
+    },
+    "filesystem_identity": {
+      "inode": 180144507554226195,
+      "device": 2345267470,
+      "uid": 1046
+    },
+    "archive_manifest_sha256": "5e6cc30bbe1952081732f8117a7791372f2409b02317d862e75898c911ac635a",
+    "files_verified": 675,
+    "bytes_verified": 232934447,
+    "symlinks": [],
+    "missing": [],
+    "extra": [],
+    "changed": [],
+    "sacct_command": "sacct -n -P -j 415453 -o JobIDRaw,JobName,State,ElapsedRaw,AllocTRES,ExitCode --starttime 2026-10-08",
+    "sacct_selected": {
+      "415453": [
+        "415453",
+        "indexmem-h800-hold-5d-20261008",
+        "RUNNING",
+        "166636",
+        "billing=64,cpu=64,gres/gpu=8,node=1",
+        "0:0"
+      ],
+      "415453.5": [
+        "415453.5",
+        "python",
+        "RUNNING",
+        "118241",
+        "cpu=64,gres/gpu=8,mem=0,node=1",
+        "0:0"
+      ],
+      "415453.26": [
+        "415453.26",
+        "v51_counterfactual_v5_2",
+        "COMPLETED",
+        "214",
+        "cpu=32,gres/gpu=8,mem=0,node=1",
+        "0:0"
+      ],
+      "415453.27": [
+        "415453.27",
+        "v51_counterfactual_score_v5_2",
+        "COMPLETED",
+        "3",
+        "cpu=8,mem=0,node=1",
+        "0:0"
+      ]
+    },
+    "initial_sacct_attempt": {
+      "returncode": 1,
+      "stderr": "sacct: error: resolve_ctls_from_dns_srv: res_nsearch error: Unknown host\nsacct: error: fetch_config: DNS SRV lookup failed\nsacct: error: _establish_config_source: failed to fetch config\nsacct: fatal: Could not establish a configuration source\n",
+      "reason": "Non-login environment lacked configured Slurm configuration; login shell retry succeeded without modifying Slurm environment"
+    },
+    "status": "verified",
+    "sacct_invocation": "existing alias with bash -lc",
+    "sacct_returncode": 0,
+    "sacct_stderr": "",
+    "sacct_checked_unix": 1791609058.450193,
+    "local_creation_identity_matches": true,
+    "exact_inventory_unchanged": true,
+    "all_file_hashes_and_sizes_unchanged": true,
+    "cleanup": {
+      "status": "retained_for_scientific_failure_investigation",
+      "directory_deleted": false,
+      "jobs_stopped": false,
+      "remote_files_written": false,
+      "new_slurm_steps": false
+    }
+  },
+  "cumulative_charged_gpuh": 2.2082544136047373,
+  "posthoc_review": "results/wm/visual-v5_2-20261010/web_review_after_execution.md"
+}
