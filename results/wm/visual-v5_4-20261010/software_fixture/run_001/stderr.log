@@ -1,0 +1,12 @@
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_3_reader.py:190: RuntimeWarning: divide by zero encountered in matmul
+  g += a[:, lo:lo+chunk].astype(np.float64) @ b[:, lo:lo+chunk].astype(np.float64).T
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_3_reader.py:190: RuntimeWarning: overflow encountered in matmul
+  g += a[:, lo:lo+chunk].astype(np.float64) @ b[:, lo:lo+chunk].astype(np.float64).T
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_3_reader.py:190: RuntimeWarning: invalid value encountered in matmul
+  g += a[:, lo:lo+chunk].astype(np.float64) @ b[:, lo:lo+chunk].astype(np.float64).T
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_4_reader.py:201: RuntimeWarning: divide by zero encountered in matmul
+  output[key][lo:lo+chunk]=q[:,arrays[arm+'_rows']]@arrays[key+'__coefficients']+arrays[key+'__intercept']
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_4_reader.py:201: RuntimeWarning: overflow encountered in matmul
+  output[key][lo:lo+chunk]=q[:,arrays[arm+'_rows']]@arrays[key+'__coefficients']+arrays[key+'__intercept']
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_4_reader.py:201: RuntimeWarning: invalid value encountered in matmul
+  output[key][lo:lo+chunk]=q[:,arrays[arm+'_rows']]@arrays[key+'__coefficients']+arrays[key+'__intercept']

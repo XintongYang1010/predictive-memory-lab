@@ -1,0 +1,440 @@
+{
+  "cache_receipt_sha256": "f7de7a8d964e79bc9850776aa60c861b9b6e7f32f649d9566d4105270c9d9f7e",
+  "cache_sha256": "f692a4efbb11e69de27ec2402c75e2531aec4bf801eb6a77770005cbc30375c1",
+  "coincident_nuisance_pixel_blocks": null,
+  "examples": 512,
+  "freeze_publication_sha256": "101d05423548c7e6d3a3c60ecf7b0fedc8f4a76627343a6df3a440f661cd0edf",
+  "frozen_reader_sha256": "c76e58360f71facfc60e4abe933f51d4785f2dfdf64da71b1bfd39da63765c4e",
+  "groups": 256,
+  "inputs": [
+    "concat"
+  ],
+  "narrow_reference": {
+    "cache_sha256": "107fa44e56c3152ab08ec02413d4a1b0e051179cebf4ea8b851efbf67f513833",
+    "encoder_identity": {
+      "checkpoint_sha256": "0382013c481743e9ccea89f970bc6c6aa126aa19a62127500d6e672a641aae22",
+      "model": "official I-JEPA ViT-H/14 target_encoder",
+      "source_commit": "52c1ae95d05f743e000e8f10a1f3a79b10cff048"
+    },
+    "manifest_sha256": "bfa3006ad1af90869deab7fa24d69b309bfaf76ca9b885532373145acb95ea13",
+    "receipt_sha256": "18f52d9e6ecca5be3872a916d87dfcc67b789ff2062e84a9c9cab84aa51e17e6",
+    "source_commit": "875be45515276cc8559ffcdb21c7412c6048d5ad"
+  },
+  "original_v5_gate": "failed_unchanged",
+  "p0_authorized": false,
+  "predictions_sha256": "52f69d65e5f609f14d5f0d7f7610d4edb1a4c313eae0ade1247db001274a9ba0",
+  "reader_arms": [
+    "N",
+    "W"
+  ],
+  "role": "bridge",
+  "schema": "v5.4-reader-evaluation-1",
+  "scores": {
+    "bootstrap": {
+      "primary_endpoints": 1,
+      "replicates": 10000,
+      "seed": 7811,
+      "unit": "whole_world_both_variants"
+    },
+    "interpretation": "Relative spatial-coverage evidence; not an original V5 gate or P0 authorization",
+    "p0_authorized": false,
+    "primary": {
+      "N_minus_W_dx_mse": -5.911092876800578e-06,
+      "N_minus_W_motion_nmse": 0.08016382423849833,
+      "dx_mse_paired_95ci": [
+        -1.6792662421386374e-05,
+        5.8798499493185715e-06
+      ],
+      "motion_nmse_descriptive_paired_95ci": [
+        0.03749069238923744,
+        0.12527498910046417
+      ]
+    },
+    "primary_improvement_interval_above_zero": false,
+    "primary_reader": "concat",
+    "readers": {
+      "N_concat": {
+        "motion_absolute_amplitude_ratio": [
+          0.5979559940299516,
+          0.6403895847509374,
+          0.6198619100778859,
+          0.6433023314185203
+        ],
+        "motion_direction_error_rate": [
+          0.228515625,
+          0.2421875,
+          0.1875,
+          0.171875
+        ],
+        "motion_nmse": 0.6461646469041795,
+        "motion_prediction_target_covariance": [
+          7.513604628411171e-05,
+          6.087490269062935e-05,
+          8.840685895699431e-05,
+          5.98401256705241e-05
+        ],
+        "motion_prediction_zero_count": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "motion_rms_ratio": [
+          0.7316511109810595,
+          0.7436769272489359,
+          0.7436179784331702,
+          0.7551559962794934
+        ],
+        "motion_sign_tie_count": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "motion_signed_bias": [
+          0.0003837078008172004,
+          -0.0010172135577947868,
+          0.00017588458246242195,
+          -0.0013839375137702377
+        ],
+        "motion_skill": 0.3538353530958204,
+        "motion_std_ratio": [
+          0.7314008471738511,
+          0.733312368666673,
+          0.7434656792435637,
+          0.7549161843526864
+        ],
+        "motion_target_zero_count": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "per_dimension_mse": [
+          0.0012990791440380578,
+          0.0006193655646956092,
+          0.0014554837907712077,
+          0.0004465957748280842,
+          0.00012740798173960108,
+          0.00012330738653434172,
+          9.76805469300726e-05,
+          9.133231889994379e-05
+        ],
+        "per_dimension_skill": [
+          0.9687191097086915,
+          0.925440977298585,
+          0.9636018682740037,
+          0.9386600196101361,
+          0.2953964562332293,
+          0.22474699657427222,
+          0.44738675110466364,
+          0.44781120847111655
+        ],
+        "position_skill": 0.949105493722854
+      },
+      "W_concat": {
+        "motion_absolute_amplitude_ratio": [
+          0.5890688862006603,
+          0.6678484121102687,
+          0.5893904144719483,
+          0.6582287123053784
+        ],
+        "motion_direction_error_rate": [
+          0.240234375,
+          0.140625,
+          0.1875,
+          0.138671875
+        ],
+        "motion_nmse": 0.5660008226656813,
+        "motion_prediction_target_covariance": [
+          7.027119962863268e-05,
+          8.889864835820889e-05,
+          8.05820747376848e-05,
+          6.842818475525618e-05
+        ],
+        "motion_prediction_zero_count": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "motion_rms_ratio": [
+          0.7137674977308321,
+          0.7805654352906835,
+          0.7093514275650988,
+          0.7676264449240858
+        ],
+        "motion_sign_tie_count": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "motion_signed_bias": [
+          6.101825732069822e-05,
+          -0.00035234541455791523,
+          0.0003584792832857743,
+          -0.0012243072215947061
+        ],
+        "motion_skill": 0.4339991773343187,
+        "motion_std_ratio": [
+          0.7137822481606255,
+          0.7777608205289878,
+          0.7087658324125339,
+          0.7635461406172587
+        ],
+        "motion_target_zero_count": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "per_dimension_mse": [
+          0.00035155811679311866,
+          0.00011911651730162474,
+          0.000356732661742363,
+          0.00013476594642157326,
+          0.00013239037996979814,
+          7.700759742428988e-05,
+          0.00010452033445347683,
+          7.548522368939783e-05
+        ],
+        "per_dimension_skill": [
+          0.9915347337128042,
+          0.9856607928760617,
+          0.9910789783469978,
+          0.9814898819544298,
+          0.26784233127558577,
+          0.515841079210991,
+          0.40869166468414997,
+          0.5436216341665482
+        ],
+        "position_skill": 0.9874410967225734
+      }
+    },
+    "spatial_support": {
+      "coordinate_groups": {
+        "A_dx": {
+          "inside": {
+            "examples": 372,
+            "readers": {
+              "N_concat": {
+                "motion_mse": 9.684409228294264e-05,
+                "motion_skill": 0.44455916680289564
+              },
+              "W_concat": {
+                "motion_mse": 0.00011627319954430732,
+                "motion_skill": 0.3331252189891364
+              }
+            },
+            "worlds": 186
+          },
+          "outside": {
+            "examples": 140,
+            "readers": {
+              "N_concat": {
+                "motion_mse": 0.00020862060229586522,
+                "motion_skill": -0.053609673297967175
+              },
+              "W_concat": {
+                "motion_mse": 0.00017521603081467393,
+                "motion_skill": 0.1150955229177093
+              }
+            },
+            "worlds": 70
+          }
+        },
+        "A_dy": {
+          "inside": {
+            "examples": 106,
+            "readers": {
+              "N_concat": {
+                "motion_mse": 4.164845536577112e-05,
+                "motion_skill": 0.580629646496689
+              },
+              "W_concat": {
+                "motion_mse": 4.1344080670351485e-05,
+                "motion_skill": 0.583694483415479
+              }
+            },
+            "worlds": 53
+          },
+          "outside": {
+            "examples": 406,
+            "readers": {
+              "N_concat": {
+                "motion_mse": 0.00014462720600199813,
+                "motion_skill": 0.17191295742561052
+              },
+              "W_concat": {
+                "motion_mse": 8.631876189699306e-05,
+                "motion_skill": 0.5057676198420349
+              }
+            },
+            "worlds": 203
+          }
+        },
+        "B_dx": {
+          "inside": {
+            "examples": 382,
+            "readers": {
+              "N_concat": {
+                "motion_mse": 8.31886604378572e-05,
+                "motion_skill": 0.5180200009990573
+              },
+              "W_concat": {
+                "motion_mse": 0.00010071552698164747,
+                "motion_skill": 0.41647251754635595
+              }
+            },
+            "worlds": 191
+          },
+          "outside": {
+            "examples": 130,
+            "readers": {
+              "N_concat": {
+                "motion_mse": 0.0001402643980071981,
+                "motion_skill": 0.25784113669018005
+              },
+              "W_concat": {
+                "motion_mse": 0.00011570061487069834,
+                "motion_skill": 0.3878116041087053
+              }
+            },
+            "worlds": 65
+          }
+        },
+        "B_dy": {
+          "inside": {
+            "examples": 150,
+            "readers": {
+              "N_concat": {
+                "motion_mse": 5.522680653241248e-05,
+                "motion_skill": 0.6169141986004549
+              },
+              "W_concat": {
+                "motion_mse": 5.774016293286323e-05,
+                "motion_skill": 0.5994800717456952
+              }
+            },
+            "worlds": 75
+          },
+          "outside": {
+            "examples": 362,
+            "readers": {
+              "N_concat": {
+                "motion_mse": 0.00010629316656604812,
+                "motion_skill": 0.38982319957109457
+              },
+              "W_concat": {
+                "motion_mse": 8.283814941724375e-05,
+                "motion_skill": 0.5244669192025875
+              }
+            },
+            "worlds": 181
+          }
+        }
+      },
+      "definition": "cached float32 p7 and displacement cast to float64; p6=p7-d; all views per world; exact envelope, tolerance zero",
+      "intervals": false,
+      "lower": [
+        0.18200016021728516,
+        0.18200016021728516,
+        0.18200016021728516,
+        0.6319999694824219
+      ],
+      "support_only": true,
+      "upper": [
+        0.8179998397827148,
+        0.3680000305175781,
+        0.8179998397827148,
+        0.8179998397827148
+      ],
+      "views_per_world": 2,
+      "world_groups": {
+        "inside": {
+          "examples": 16,
+          "readers": {
+            "N_concat": {
+              "dx_mse": 5.1668537887031825e-05,
+              "mean_motion_skill": 0.7030830853553656,
+              "motion_mse": 4.542427988348233e-05,
+              "per_coordinate_motion_mse": [
+                3.3977181423377715e-05,
+                1.824381968104544e-05,
+                6.935989435068593e-05,
+                6.011622407882023e-05
+              ],
+              "per_coordinate_motion_skill": [
+                0.8175351086872801,
+                0.804674554727153,
+                0.5797432859182976,
+                0.6103793920887319
+              ]
+            },
+            "W_concat": {
+              "dx_mse": 9.162848829477858e-05,
+              "mean_motion_skill": 0.5435144695841352,
+              "motion_mse": 7.006848364416953e-05,
+              "per_coordinate_motion_mse": [
+                0.00010427205759604398,
+                3.7541801445916155e-05,
+                7.898491899351318e-05,
+                5.9475156541204806e-05
+              ],
+              "per_coordinate_motion_skill": [
+                0.4400362578890914,
+                0.5980628392536171,
+                0.5214245519118929,
+                0.6145342292819398
+              ]
+            }
+          },
+          "worlds": 8
+        },
+        "outside": {
+          "examples": 496,
+          "readers": {
+            "N_concat": {
+              "dx_mse": 0.00011450799744605637,
+              "mean_motion_skill": 0.3445697064391141,
+              "motion_mse": 0.00011201295461123199,
+              "per_coordinate_motion_mse": [
+                0.00013042187852399536,
+                0.00012669653385219,
+                9.859411636811737e-05,
+                9.233928970062522e-05
+              ],
+              "per_coordinate_motion_skill": [
+                0.27803451954056724,
+                0.21390575848234783,
+                0.4434087690666778,
+                0.44292977866686367
+              ]
+            },
+            "W_concat": {
+              "dx_mse": 0.00011932074007992325,
+              "mean_motion_skill": 0.43080411055453205,
+              "motion_mse": 9.823096131133975e-05,
+              "per_coordinate_motion_mse": [
+                0.000133297422627016,
+                7.828068761714068e-05,
+                0.00010534405753283048,
+                7.600167746837185e-05
+              ],
+              "per_coordinate_motion_skill": [
+                0.26211661064817515,
+                0.5143040153752967,
+                0.4053034723208968,
+                0.5414923438737597
+              ]
+            }
+          },
+          "worlds": 248
+        }
+      }
+    }
+  },
+  "status": "evaluation_complete",
+  "test_opened": false
+}

@@ -1,0 +1,155 @@
+{
+  "all_model_and_receipt_files_downloaded_and_verified": true,
+  "asset_bytes": 119767699,
+  "asset_id": 628450844,
+  "asset_sha256": "ef7abd09f6e83d791e07b7ca55050f41fc0a4d5b63548acff42b1ba2275192ac",
+  "both_fit_receipts_verified": true,
+  "complete_model_validation": {
+    "both_fit_receipts_verified": true,
+    "coefficient_shapes": {
+      "N": [
+        4096,
+        8
+      ],
+      "W": [
+        4096,
+        8
+      ]
+    },
+    "matched_label_audit": {
+      "block_ids": {
+        "dtype": "int64",
+        "sha256": "bbd330b12e8159e117376ef24fa106413bc9fc18032a0d43e95c5dae5e47953f",
+        "shape": [
+          256
+        ]
+      },
+      "fit_blocks": 256,
+      "maximum_absolute_motion_difference": 0.0,
+      "motion_labels_bitwise_equal": true,
+      "motion_target_entries": {
+        "N": {
+          "dtype": "float32",
+          "sha256": "d97040c44a9289752bf6727e517acde421b5050ef3a4fe192f3b3fc9842b6afa",
+          "shape": [
+            256,
+            16,
+            4
+          ]
+        },
+        "W": {
+          "dtype": "float32",
+          "sha256": "d97040c44a9289752bf6727e517acde421b5050ef3a4fe192f3b3fc9842b6afa",
+          "shape": [
+            256,
+            16,
+            4
+          ]
+        }
+      },
+      "position_target_mean": {
+        "N": [
+          0.4866240508854389,
+          0.27797846496105194,
+          0.4845893159508705,
+          0.7274372205138206
+        ],
+        "W": [
+          0.48296796903014183,
+          0.27924929931759834,
+          0.48037704825401306,
+          0.7284771502017975
+        ]
+      },
+      "scope": "reader checks of paired IDs and labels; no new images or latent reconstruction",
+      "views_per_arm": 4096
+    },
+    "normalization_reference_views": 8192,
+    "reference_views": 8192,
+    "union_feature_shape": [
+      512,
+      6,
+      20480
+    ],
+    "union_reference_fully_verified": true,
+    "union_target_shape": [
+      512,
+      16,
+      8
+    ]
+  },
+  "files": {
+    "fit_cache/manifest.json": {
+      "bytes": 79529,
+      "sha256": "961e0e8324f7eff6b380f09469262e1d0ec6ba48c2c4695d44c8f67c5b4d2322"
+    },
+    "fit_cache/receipt.json": {
+      "bytes": 14337,
+      "sha256": "d8d97bebc4042c2c6700f1a7905d6bdf37a3f730bc7b1e6202dcc5ca080a55b8"
+    },
+    "fit_controller.json": {
+      "bytes": 4745,
+      "sha256": "bdcd7139a9d116f9004f2fbae344aace71e0cc280e5e197f5a002df617c5088f"
+    },
+    "fit_extraction.json": {
+      "bytes": 2821,
+      "sha256": "b527b80f1c769575b62f51571c1a78ff0107447e6348b698a3bfe1e19f22ff28"
+    },
+    "freeze_step_verification.json": {
+      "bytes": 304,
+      "sha256": "a8a314c3bd1531a0dc0b16777db8966dd11a9d6f347f9b99257a3ce092d40103"
+    },
+    "freshness_audit.json": {
+      "bytes": 6572,
+      "sha256": "1e46e3db08cb3f3556247d4f9a09605335672412118c415a22c648e8d38d8691"
+    },
+    "narrow_reference/identity.json": {
+      "bytes": 571,
+      "sha256": "0a16fb4d230c49bdc4b03fbd8cf901364705c8e657a42dd8493f450697e4dab4"
+    },
+    "narrow_reference/receipt.json": {
+      "bytes": 12941,
+      "sha256": "18f52d9e6ecca5be3872a916d87dfcc67b789ff2062e84a9c9cab84aa51e17e6"
+    },
+    "reader/freeze_receipt.json": {
+      "bytes": 47443,
+      "sha256": "c76e58360f71facfc60e4abe933f51d4785f2dfdf64da71b1bfd39da63765c4e"
+    },
+    "reader/frozen_model.npz": {
+      "bytes": 252781114,
+      "sha256": "657448f6b31928aeec30a6c4e8a3264ce1ff6a266918125b169a30407e4e7fa4"
+    },
+    "reader/training_config.json": {
+      "bytes": 1149,
+      "sha256": "7dbe3925dbfb6b8fe5f3af28116d3fe7903dd244deddf32078c2aa82ca800bbb"
+    },
+    "registration_publication.json": {
+      "bytes": 27590,
+      "sha256": "1bbd7db51b6e9c881915496f409e6731b3ebfe00c4da360c2756bb2aefe97ce0"
+    },
+    "source_manifest.json": {
+      "bytes": 13321,
+      "sha256": "6bb2c2f65172dac661cb99b4bfbb5ea65b421a224bafe127495e21f09b49ebed"
+    }
+  },
+  "freeze_commit": "56f4bdf5e7cee531dde82f11a68da88943f8d7f6",
+  "frozen_reader_sha256": "c76e58360f71facfc60e4abe933f51d4785f2dfdf64da71b1bfd39da63765c4e",
+  "narrow_reference": {
+    "cache_sha256": "107fa44e56c3152ab08ec02413d4a1b0e051179cebf4ea8b851efbf67f513833",
+    "encoder_identity": {
+      "checkpoint_sha256": "0382013c481743e9ccea89f970bc6c6aa126aa19a62127500d6e672a641aae22",
+      "model": "official I-JEPA ViT-H/14 target_encoder",
+      "source_commit": "52c1ae95d05f743e000e8f10a1f3a79b10cff048"
+    },
+    "manifest_sha256": "bfa3006ad1af90869deab7fa24d69b309bfaf76ca9b885532373145acb95ea13",
+    "receipt_sha256": "18f52d9e6ecca5be3872a916d87dfcc67b789ff2062e84a9c9cab84aa51e17e6",
+    "source_commit": "875be45515276cc8559ffcdb21c7412c6048d5ad"
+  },
+  "plan_sha256": "e5dc00d833455fb344527114bdbf752cad9c769200e2fce192d2f3e1364d5ec5",
+  "protocol_sha256": "ef265690735250f89808204598b63171a11a9615f5764fdde5841f8a9c4888e2",
+  "release_url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/tag/visual-v5_4-fit-20261010",
+  "source_commit": "3279bbe49f8db5ec1bd4b2f5c343db1ce9e5684b",
+  "union_reference_fully_verified": true,
+  "verified_readback": true,
+  "verified_unix": 1791650284.463944
+}

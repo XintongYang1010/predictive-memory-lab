@@ -1,0 +1,31 @@
+{
+  "status": "all_five_images_visually_reviewed",
+  "method": "view_image of every generated PNG",
+  "display_changes_required": false,
+  "raw_statistics_changed": false,
+  "scientific_source_changed": false,
+  "images": {
+    "bridge_motion_diagnostics.png": {
+      "sha256": "dd8ac7fa38c09dd551f31bc0ff6356027e040d22da2d3ed74b984c59d502d55e",
+      "verdict": "labels and legends readable; no clipping; plotted comparisons match verified values"
+    },
+    "primary_bridge_effect.png": {
+      "sha256": "55fa648dcf64b0f6dcee39ba6bf2aefaa4af90c61a67ccb0f88f94c9cb3520df",
+      "verdict": "labels and legends readable; no clipping; plotted comparisons match verified values"
+    },
+    "anchor_path_diagnostics.png": {
+      "sha256": "f8cfb467fc68453b31eac4c34a378290b80059b5273a90bc818ae9315c45ea31",
+      "verdict": "labels and legends readable; no clipping; plotted comparisons match verified values"
+    },
+    "negative_control_rms.png": {
+      "sha256": "a536eaeeb5eeeb966b030e9d97affc5e4348097e77eb392e0880cc934844806f",
+      "verdict": "labels and legends readable; no clipping; plotted comparisons match verified values"
+    },
+    "spatial_coverage_groups.png": {
+      "sha256": "06c1cc7963d67ac045025ab731a9801d9714d995d8b4f234ca47a7142d803108",
+      "verdict": "labels and legends readable; no clipping; plotted comparisons match verified values"
+    }
+  },
+  "primary_plot": "CI visibly crosses zero; negative effect indicates W point estimate is worse",
+  "spatial_plot": "Actual subset counts shown: wide anchor87/169; fresh bridge8/248; no subgroup CI or preservation gate"
+}

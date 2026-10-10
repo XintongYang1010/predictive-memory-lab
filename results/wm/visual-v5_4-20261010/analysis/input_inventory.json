@@ -1,0 +1,75 @@
+{
+  "schema": "v5.4.posthoc-report-inputs.1",
+  "inputs": {
+    "anchor_report/report.json": {
+      "bytes": 81033,
+      "sha256": "d6b0f97012365dd75370489372226a43e4b761d45a031eb942dcd15744938bc7"
+    },
+    "anchor_report/predictions.npz": {
+      "bytes": 529526,
+      "sha256": "c4625a9905fa298b96354806828745b7606832df469c1ecd0f70966d4c2f86e9"
+    },
+    "anchor_report/cache_receipt.json": {
+      "bytes": 14604,
+      "sha256": "d8d72eb1e52d3f93e1d4dd36ccfdb79bbf07a24810b3eea8fb6b8c7d7c55864b"
+    },
+    "anchor_cache/receipt.json": {
+      "bytes": 14604,
+      "sha256": "637843fd3190e9519ad19cdf82d8617f52208004af7de75f8da0399d7620550d"
+    },
+    "bridge_report/report.json": {
+      "bytes": 13113,
+      "sha256": "471fc4101f38e96e5d763bb1103c514527486715951a7a9c6a00dee8aa00a893"
+    },
+    "bridge_report/predictions.npz": {
+      "bytes": 77115,
+      "sha256": "52f69d65e5f609f14d5f0d7f7610d4edb1a4c313eae0ade1247db001274a9ba0"
+    },
+    "bridge_report/cache_receipt.json": {
+      "bytes": 14373,
+      "sha256": "e1570478dc4a68c9ec131eedb7ac5937ba65679a30f513e1d15f4b0eaf286035"
+    },
+    "bridge_cache/receipt.json": {
+      "bytes": 14373,
+      "sha256": "f7de7a8d964e79bc9850776aa60c861b9b6e7f32f649d9566d4105270c9d9f7e"
+    },
+    "reader/freeze_receipt.json": {
+      "bytes": 47443,
+      "sha256": "c76e58360f71facfc60e4abe933f51d4785f2dfdf64da71b1bfd39da63765c4e"
+    },
+    "freeze_publication.json": {
+      "bytes": 5127,
+      "sha256": "101d05423548c7e6d3a3c60ecf7b0fedc8f4a76627343a6df3a440f661cd0edf"
+    },
+    "fit_controller.json": {
+      "bytes": 4745,
+      "sha256": "bdcd7139a9d116f9004f2fbae344aace71e0cc280e5e197f5a002df617c5088f"
+    },
+    "evaluation_controller.json": {
+      "bytes": 6478,
+      "sha256": "14a0c8d35f8fb2de33e89275328c09d21abb658fb78897319e32349cad586ada"
+    },
+    "registration_publication.json": {
+      "bytes": 27590,
+      "sha256": "1bbd7db51b6e9c881915496f409e6731b3ebfe00c4da360c2756bb2aefe97ce0"
+    },
+    "ledger/budget.json": {
+      "bytes": 10975,
+      "sha256": "c55095ef3a1ef5f442a5be5973192c03e4932e472f1bb4d5641d43648d9a707d"
+    }
+  },
+  "plan": {
+    "path": "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_4_plan.json",
+    "sha256": "e5dc00d833455fb344527114bdbf752cad9c769200e2fce192d2f3e1364d5ec5"
+  },
+  "renderer_sha256": "34e1d053d2a4d8b5ef01e550f06ec5954443384410acfc0ae8932d1fe0704195",
+  "frozen_reader_sha256": "c76e58360f71facfc60e4abe933f51d4785f2dfdf64da71b1bfd39da63765c4e",
+  "input_files_unchanged": true,
+  "confidence_intervals": {
+    "primary": "independently recomputed direct wholeworld bootstrap",
+    "secondary_bridge_motion": "independently recomputed with resampled denominator",
+    "anchor_and_negative_support": "copied from frozen scorer; descriptive unadjusted"
+  },
+  "independent_of_scientific_scorer": true,
+  "no_fit_or_data_generation": true
+}

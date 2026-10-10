@@ -1,0 +1,89 @@
+{
+  "arms": [
+    "N",
+    "W"
+  ],
+  "baseline": "joint_N_W_FIT_target_mean_for_scoring_only",
+  "cv": false,
+  "historical_V53_model_used": false,
+  "inputs": [
+    "concat"
+  ],
+  "intercept": "arm_specific_unpenalized_intercept_via_SPD_solve_and_Schur_complement",
+  "kernel": "quadratic",
+  "loss": "mean_within_world_then_equal_mean_over_worlds",
+  "mean_loss_alpha": 7.8125e-07,
+  "normalization": "shared_joint_N_W_FIT_linear_then_quadratic_center_and_mean_diagonal",
+  "reference_order": "all_N_worlds_then_all_W_worlds; target-major/path-minor views",
+  "regularization": {
+    "N": 0.0032,
+    "W": 0.0032
+  },
+  "selection": false,
+  "view_indices": [
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      5,
+      3
+    ],
+    [
+      4,
+      3
+    ],
+    [
+      5,
+      2
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      3,
+      0
+    ]
+  ]
+}
