@@ -1,0 +1,167 @@
+{
+  "schema": "v5.6-replay-independent-verification-1",
+  "status": "passed",
+  "created_unix": 1791662070.512052,
+  "source_commit": "031788e0499c242a3671f57d026f3ed71da4872e",
+  "method": "Read saved transition predictions, archived FIT features and original endpoint cache; independently compute fixed FIT q95 thresholds and write masks. Reconstruct each object state from a Python list of accepted observations; read latest or average last two. No production replay function called. Recompute errors in float64.",
+  "input_files": {
+    "execution/visual-v5_6-20261010/replay/report/report.json": {
+      "bytes": 10778,
+      "sha256": "afcfa34b4efdf1b9f5d3696a2ab0b307978de9e3f92a956706e2a88d09c59d39"
+    },
+    "execution/visual-v5_6-20261010/replay/report/transitions.npz": {
+      "bytes": 3822860,
+      "sha256": "ecb5f92d9dd719139774b4d70d8d3527f76dfaae1d75d60ed8de84c2f600b21c"
+    },
+    "execution/visual-v5_6-20261010/replay/report/update_replay.npz": {
+      "bytes": 254675,
+      "sha256": "3a32c3612d7d6d28ef59a4e55a05c123edc6ad7cb47890ee75bcef8538f20209"
+    },
+    "execution/visual-v5_5-20261010/diagnostic-20261010-v55/counterfactual_cache/cache.npz": {
+      "bytes": 481253863,
+      "sha256": "7fadb29391ad86e5ab278176fd1c7fed7e3785cdeff0913a575bf6dd3a9c8e24"
+    },
+    "execution/visual-v5_4-20261010/diagnostic-20261010-v54/reader/frozen_model.npz": {
+      "bytes": 252781114,
+      "sha256": "657448f6b31928aeec30a6c4e8a3264ce1ff6a266918125b169a30407e4e7fa4"
+    },
+    "scripts/v5_6_replay.py": {
+      "bytes": 14797,
+      "sha256": "6838857742aa439221256e113df55724908e31144cf2f1c47b14ae2690a53049"
+    }
+  },
+  "all_current_report_source_hashes_match": true,
+  "thresholds": {
+    "full": 17.940320877555358,
+    "local": [
+      6.001058707233465,
+      6.162423604682731
+    ],
+    "unchanged_from_report": true
+  },
+  "checks": {
+    "latest": {
+      "state_trace_bitwise_equal": true,
+      "write_trace_exact_equal": true,
+      "independent_metrics": {
+        "position_rmse_px": 2.6909295572218,
+        "change_step_rmse_px": 2.541229270719199,
+        "unchanged_object_rmse_px": 2.7079973427733544,
+        "gap_rmse_px": 2.7004778687793443,
+        "writes": 18432,
+        "missed_change_writes": 0,
+        "unchanged_object_writes": 16384,
+        "true_object_changes": 2048
+      },
+      "total_position_mse_px2": 7.241101881929913,
+      "total_squared_error_px2": 281765.75642965676,
+      "observed_position_coordinates": 38912,
+      "rmse_max_abs_drift_from_report": 1.4438000306427057e-07
+    },
+    "fifo": {
+      "state_trace_bitwise_equal": true,
+      "write_trace_exact_equal": true,
+      "independent_metrics": {
+        "position_rmse_px": 2.6847214186430652,
+        "change_step_rmse_px": 2.9320778150340017,
+        "unchanged_object_rmse_px": 2.6541055011597177,
+        "gap_rmse_px": 2.6745030777976972,
+        "writes": 18432,
+        "missed_change_writes": 0,
+        "unchanged_object_writes": 16384,
+        "true_object_changes": 2048
+      },
+      "total_position_mse_px2": 7.207729095720833,
+      "total_squared_error_px2": 280467.15457268903,
+      "observed_position_coordinates": 38912,
+      "rmse_max_abs_drift_from_report": 7.627873621629533e-08
+    },
+    "surprise": {
+      "state_trace_bitwise_equal": true,
+      "write_trace_exact_equal": true,
+      "independent_metrics": {
+        "position_rmse_px": 3.123613723127856,
+        "change_step_rmse_px": 3.2574626682017285,
+        "unchanged_object_rmse_px": 3.1074877792148587,
+        "gap_rmse_px": 3.1951401561327444,
+        "writes": 2822,
+        "missed_change_writes": 1375,
+        "unchanged_object_writes": 2149,
+        "true_object_changes": 2048
+      },
+      "total_position_mse_px2": 9.756962691312667,
+      "total_squared_error_px2": 379662.9322443585,
+      "observed_position_coordinates": 38912,
+      "rmse_max_abs_drift_from_report": 2.0565314429177306e-07
+    },
+    "trusted_local": {
+      "state_trace_bitwise_equal": true,
+      "write_trace_exact_equal": true,
+      "independent_metrics": {
+        "position_rmse_px": 3.001065777147962,
+        "change_step_rmse_px": 3.0671126889768776,
+        "unchanged_object_rmse_px": 2.9931997406163604,
+        "gap_rmse_px": 3.075648637880811,
+        "writes": 3115,
+        "missed_change_writes": 842,
+        "unchanged_object_writes": 1909,
+        "true_object_changes": 2048
+      },
+      "total_position_mse_px2": 9.006395798768702,
+      "total_squared_error_px2": 350456.87332168774,
+      "observed_position_coordinates": 38912,
+      "rmse_max_abs_drift_from_report": 1.4675664017360646e-07
+    },
+    "comparisons": {
+      "trusted_local_minus_latest_mse_px2": 1.7652939168387896,
+      "trusted_local_minus_fifo_mse_px2": 1.7986667030478696,
+      "trusted_local_write_reduction_fraction_vs_latest": 0.8310004340277778,
+      "trusted_local_missed_fraction_of_changes": 0.4111328125
+    }
+  },
+  "numerical_tolerance": "Exact equality for all state and write arrays; abs 1e-6 px only for float64-vs-float32 aggregate RMS rounding.",
+  "fixed_sequence": [
+    0,
+    1,
+    0,
+    1,
+    4,
+    5,
+    4,
+    5,
+    6,
+    7,
+    6,
+    7,
+    2,
+    3,
+    2,
+    3,
+    0,
+    1,
+    0
+  ],
+  "population": {
+    "worlds": 256,
+    "variants": 512,
+    "observed_steps": 19,
+    "true_object_changes": 2048,
+    "test_opened": false
+  },
+  "buffer_contract": {
+    "payload_bytes_per_episode": 32,
+    "metadata_bytes_per_episode": 8,
+    "objects": 2,
+    "slots_per_object": 2,
+    "position_coordinates_per_slot": 2,
+    "dtype": "float32",
+    "latest_policy_duplicates_latest_in_production": "equivalent to the newest accepted observation"
+  },
+  "conclusion": "The registered trusted_local gate reduces writes by about 83.1% but misses 842/2048 changes and increases observed position MSE versus both latest and FIFO. This negative result is reproduced independently without changing any threshold. It applies to this known-endpoint interface stress test, not a trained memory writer or new long-term memory confirmation.",
+  "scope_limits": [
+    "Predictions reused, not independently re-fitted.",
+    "No new images or IDs were generated.",
+    "No real occlusion rendering; gap scores repeat four selected held states and are reported separately.",
+    "Per-object metadata allocation checked against source, metadata values were not part of saved trace."
+  ]
+}

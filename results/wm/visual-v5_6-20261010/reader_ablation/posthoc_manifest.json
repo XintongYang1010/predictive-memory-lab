@@ -1,0 +1,26 @@
+{
+  "build_summary.py": {
+    "bytes": 16349,
+    "sha256": "603dbbd8076079b9fc8ad5f8fdbd123c22200682f0071cc0d30042ee1053a625"
+  },
+  "README.md": {
+    "bytes": 5554,
+    "sha256": "dd9f0c8ac249640d27060a7cf55165168c2761b613d7ae7fb6494af5cd53fee0"
+  },
+  "analysis_summary.json": {
+    "bytes": 5030,
+    "sha256": "338736c7a0f1fced63201daeff537d01b8649d61dc4ef25e4e705f845a307821"
+  },
+  "postrun_verification.json": {
+    "bytes": 2196,
+    "sha256": "e81e350cc20649b755e8bb64589ceb3599cf11607f8c07429afe0b170749486d"
+  },
+  "figures/original_12_arms.png": {
+    "bytes": 106372,
+    "sha256": "4fb9c4efd993fd875a4776f1c49909aad1fa1fb604dd8716c49152c307027e35"
+  },
+  "figures/object_response_controls.png": {
+    "bytes": 127328,
+    "sha256": "dec276f4fbbc7b5d89a8e9e803971a8d2c1af9571f4d3cd3f4976f02d41c3136"
+  }
+}

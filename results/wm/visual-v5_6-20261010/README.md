@@ -54,3 +54,10 @@ All policies use the same frozen lane position reader and32B state payload plus8
 ## Pending work
 
 Eight-card FIT/axis extraction, J/X fitting and model publication, fresh64 confirmation, full result/checkpoint archive and byte verification. Remote directories are retained while this work is incomplete. Full source configuration: [V5_6_EXECUTION_PROTOCOL.md](../../../docs/V5_6_EXECUTION_PROTOCOL.md).
+
+## Detailed CPU evidence
+
+- [Twelve-arm reader report and figures](reader_ablation/README.md). Complete model/CSV/binary predictions are reserved for the final Release.
+- [Fixed bad cases, uncertainty intervals and selected-token coverage](correspondence_interpretation/README.md).
+- [Independent update replay reconstruction](cpu/replay_verification.json).
+- [Web ChatGPT method review and replies](web_review.md). No scientific thresholds or models were changed in response.

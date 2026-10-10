@@ -1,0 +1,22 @@
+{
+  "display_only": true,
+  "change": "Wrap cost gap onto third title line; all panels/data unchanged",
+  "script_sha256": "036a89efe5c077075d08bc1bb613da1fe5c45c1c3ddad700529572b0f93db6b4",
+  "analysis_json_sha256": "1684091986e5267d496202504a7bd68d4661a09e2fcf3293832cca42c4e3cb10",
+  "before": {
+    "case_761_1.png": "ac5406e808510e25d7d0864f4f88ffa5d8689a5f032964dc2521c39f1eb5afc2",
+    "case_761_1.svg": "bdbe5327d1c4c447435319f49140139d102812f2309adc1cdc490e1c0dda13b2",
+    "case_844_1.png": "fd3e07675f536bc6e309e20cc405a3ea9170cbdcb228f81483c57a99292be0cb",
+    "case_844_1.svg": "6b91633d967a24c35319e66c2a6300c620e45e2236569d394350ca94078befd7",
+    "case_891_1.png": "e6f027acc0ffbf989f148163eb5ac60b0cfda6239e83c8ba424825fb275e82ef",
+    "case_891_1.svg": "c7f05dca80bbf2cac744becdeec1544d35fa39225e66ef41c583aae072eb7aa9"
+  },
+  "after": {
+    "case_761_1.png": "5912e10c37be1713d784c760f68e745fc2ca8a840cac3aa7ef0b1e50502fa30b",
+    "case_761_1.svg": "ca23244c57963559de1b20f9625fec7803ec90be661fe5ecfa295c1be31a36b5",
+    "case_844_1.png": "8e829b089e4f0994aa0f14ade976e0f14fab7cde5ce4a89ccc30af2c4819cc4d",
+    "case_844_1.svg": "7bae6b06686b3430cf5529cfc16f1417a7c23e79da123760acd2e27cca31def3",
+    "case_891_1.png": "074ee26af5c1ac3501d97a801fc891f8279a10d1657bceaa26e5b8df97a06072",
+    "case_891_1.svg": "a69b033ac7337335cfeb36c9e9b7d5731545ed95b184374abef626fc7cef541a"
+  }
+}

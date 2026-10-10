@@ -1,0 +1,62 @@
+{
+  "model": {
+    "files": 20,
+    "bytes": 129717925,
+    "exact_inventory": true,
+    "all_sha256_and_bytes_match": true
+  },
+  "report": {
+    "files": 4,
+    "bytes": 20419249,
+    "exact_inventory": true,
+    "all_sha256_and_bytes_match": true
+  },
+  "model_receipt_bound_to_report": true,
+  "parity": {
+    "atol": 1e-07,
+    "rtol": 0,
+    "max_abs": {
+      "global__original": 1.4247492075014634e-12,
+      "correct_lane__original": 1.8605117446668373e-12
+    },
+    "passed": true
+  },
+  "report_manifest_sha256": "fa7518c2d8fd4977601429d5ec62dc7ecf2e217334da787a6c7dcf3ab19d97ed",
+  "model_freeze_receipt_sha256": "07ca76a4998556d706a07e129e75f0df1ae8ed58a832432b7810eedd595af900",
+  "current_scientific_sources_unchanged": true,
+  "v55_full_batch4_supplement": {
+    "authenticated_files": {
+      "batch_match_run/cache/receipt.json": {
+        "bytes": 26643,
+        "sha256": "86c3a9d076819c26b1ddf7d85e8f96f222bd3b612179141fdedcccbf2156edd8"
+      },
+      "batch_match_run/comparison/report.json": {
+        "bytes": 232143,
+        "sha256": "745879fd9aee5b6948cfa9082dcd0e9b5662f71721a9737c765e59f7b2ad88c9"
+      },
+      "batch_match_run/comparison/manifest.json": {
+        "bytes": 464,
+        "sha256": "8643f17c1570cb7168b13ceb0577f7f7941ef91642d05e7ff13849109d549917"
+      },
+      "batch_match_run/comparison/predictions.npz": {
+        "bytes": 4792400,
+        "sha256": "b89c4519a96fffbb31f5a8dc348a80b3622865c5365065c3214a78c971a64b8f"
+      },
+      "batch_match_run/cache/cache.npz": {
+        "bytes": 335546886,
+        "sha256": "7f16d4c11b9e7bb1e5e75803075e14ffaab8f77cbee43af1f7c0b056bacb1838"
+      },
+      "counterfactual_cache/cache.npz": {
+        "bytes": 481253863,
+        "sha256": "7fadb29391ad86e5ab278176fd1c7fed7e3785cdeff0913a575bf6dd3a9c8e24"
+      }
+    },
+    "all_4096_images": true,
+    "direct_feature_array_comparison_equal": true,
+    "feature_coordinates": 83886080,
+    "archived_frozen_prediction_coordinates": 98304,
+    "all_differences_exact_zero": true,
+    "original_cache_bound_to_current_evaluation": true,
+    "conclusion": "Batch4/12 numerical confound empirically excluded for every canonical feature used here."
+  }
+}
