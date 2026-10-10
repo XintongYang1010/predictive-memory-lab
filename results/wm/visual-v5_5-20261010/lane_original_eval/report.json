@@ -1,0 +1,271 @@
+{
+  "bootstrap": {
+    "interpretation": "conditional descriptive interval, not fresh confirmation",
+    "replicates": 10000,
+    "seed": 7812,
+    "unit": "whole_world_both_variants"
+  },
+  "comparison": {
+    "dx_mse_relative_reduction": 0.29781875406098496,
+    "global_dx_mse": 0.0001184553572116375,
+    "global_minus_lane_dx_mse": 3.5278226896618786e-05,
+    "lane_dx_mse": 8.317713031501871e-05,
+    "paired_95ci": [
+      2.839088036809467e-05,
+      4.2309516139478993e-05
+    ]
+  },
+  "elapsed_seconds": 2.269895076751709,
+  "expected_future_match": "New GPU factorial111 global and lane arrays must match this original-cue run within absolute1e-9; features must match bitwise",
+  "horizontal_direction": {
+    "global_W": {
+      "any_wrong": 196,
+      "both_wrong": 23,
+      "episodes": 512,
+      "per_object_errors": [
+        123,
+        96
+      ]
+    },
+    "lane_W": {
+      "any_wrong": 139,
+      "both_wrong": 15,
+      "episodes": 512,
+      "per_object_errors": [
+        80,
+        74
+      ]
+    }
+  },
+  "new_fit": false,
+  "new_images": false,
+  "original_prediction_reproduction_max_abs": 5.662137425588298e-15,
+  "p0_authorized": false,
+  "population": {
+    "already_opened_dev": true,
+    "episodes": 512,
+    "pair_ids": [
+      640,
+      895
+    ],
+    "worlds": 256
+  },
+  "posthoc": true,
+  "provenance": {
+    "lane_freeze_sha256": "50654153b296b0489f7403ae12ccec0f4a939cf2befc27f2d70fef310f5b38b2",
+    "old_inputs": {
+      "bridge_cache/cache.npz": {
+        "bytes": 41135690,
+        "sha256": "f692a4efbb11e69de27ec2402c75e2531aec4bf801eb6a77770005cbc30375c1"
+      },
+      "bridge_cache/receipt.json": {
+        "bytes": 14373,
+        "sha256": "f7de7a8d964e79bc9850776aa60c861b9b6e7f32f649d9566d4105270c9d9f7e"
+      },
+      "bridge_report/predictions.npz": {
+        "bytes": 77115,
+        "sha256": "52f69d65e5f609f14d5f0d7f7610d4edb1a4c313eae0ade1247db001274a9ba0"
+      },
+      "bridge_report/report.json": {
+        "bytes": 13113,
+        "sha256": "471fc4101f38e96e5d763bb1103c514527486715951a7a9c6a00dee8aa00a893"
+      },
+      "freeze_publication.json": {
+        "bytes": 5127,
+        "sha256": "101d05423548c7e6d3a3c60ecf7b0fedc8f4a76627343a6df3a440f661cd0edf"
+      },
+      "reader/freeze_receipt.json": {
+        "bytes": 47443,
+        "sha256": "c76e58360f71facfc60e4abe933f51d4785f2dfdf64da71b1bfd39da63765c4e"
+      },
+      "reader/frozen_model.npz": {
+        "bytes": 252781114,
+        "sha256": "657448f6b31928aeec30a6c4e8a3264ce1ff6a266918125b169a30407e4e7fa4"
+      },
+      "reader/training_config.json": {
+        "bytes": 1149,
+        "sha256": "7dbe3925dbfb6b8fe5f3af28116d3fe7903dd244deddf32078c2aa82ca800bbb"
+      }
+    },
+    "original_freeze_sha256": "c76e58360f71facfc60e4abe933f51d4785f2dfdf64da71b1bfd39da63765c4e",
+    "original_manifest_sha256": "ec7bc9c17da8417e9ecd11ba0f21415a2df0ee7af620af9d12f911c3ab26e75c",
+    "predictions_sha256": "906a49e3bcf1355a38774897a3150d9cb7143a34140b8b777a156818a208a635",
+    "publication_sha256": "7f5d66120a10974282340a534c84c7ddabcf9f32349dfce135c420d84f1b7f66",
+    "script_sha256": "ab77d7d8a853eac0dd70240f5002c50dfb557bd5a303ffe26beb6631e477a8cc",
+    "source_commit": "d0cae2237fe2cc8e562e1c62744a6958157a3e60",
+    "source_identity": {
+      "docs/V5_5_MODULE_DIAGNOSTIC.md": "4e809663293a644719e59cd693179888dc526262f34e48977f670a0eb43fc506",
+      "pmr/visual_memory/features.py": "5324748c4c2ef0cd82329d97c73a6cf8a21562501039ba31bd67dbc0efe29f93",
+      "scripts/v5_3_data.py": "3018b72817b536323ee404c070c10b1cc13917420ec377e21a3aec5325bb8f12",
+      "scripts/v5_3_reader.py": "960e3123da1163d694fafaeee45f91cea84e03025b37a62da9823dcff0b04ada",
+      "scripts/v5_4_data.py": "97eb9796c9affe09a13d0bf242c701dac36d6e126f7e8cd91a84185534120576",
+      "scripts/v5_4_plan.json": "e5dc00d833455fb344527114bdbf752cad9c769200e2fce192d2f3e1364d5ec5",
+      "scripts/v5_4_reader.py": "e198aa3046056b032582e13c6ad135e581af895fcef17a8867e231355e82c3c1",
+      "scripts/v5_5_lane_reader.py": "7bb19734653aaf19ae0867d429e1544d9a89d304b6dcf861b8fd257eea841983",
+      "scripts/v5_5_plan.json": "df912f428416c2a7243afa09b108bb7cbf8d740c2ca14b4657c96763d31ad41a"
+    }
+  },
+  "readers": {
+    "global_W": {
+      "motion_absolute_amplitude_ratio": [
+        0.5890688862006603,
+        0.6678484121102687,
+        0.5893904144719483,
+        0.6582287123053784
+      ],
+      "motion_direction_error_rate": [
+        0.240234375,
+        0.140625,
+        0.1875,
+        0.138671875
+      ],
+      "motion_nmse": 0.5660008226656813,
+      "motion_prediction_target_covariance": [
+        7.027119962863268e-05,
+        8.889864835820889e-05,
+        8.05820747376848e-05,
+        6.842818475525618e-05
+      ],
+      "motion_prediction_zero_count": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "motion_rms_ratio": [
+        0.7137674977308321,
+        0.7805654352906835,
+        0.7093514275650988,
+        0.7676264449240858
+      ],
+      "motion_sign_tie_count": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "motion_signed_bias": [
+        6.101825732069822e-05,
+        -0.00035234541455791523,
+        0.0003584792832857743,
+        -0.0012243072215947061
+      ],
+      "motion_skill": 0.4339991773343187,
+      "motion_std_ratio": [
+        0.7137822481606255,
+        0.7777608205289878,
+        0.7087658324125339,
+        0.7635461406172587
+      ],
+      "motion_target_zero_count": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "per_dimension_mse": [
+        0.00035155811679311866,
+        0.00011911651730162474,
+        0.000356732661742363,
+        0.00013476594642157326,
+        0.00013239037996979814,
+        7.700759742428988e-05,
+        0.00010452033445347683,
+        7.548522368939783e-05
+      ],
+      "per_dimension_skill": [
+        0.9915347337128042,
+        0.9856607928760617,
+        0.9910789783469978,
+        0.9814898819544298,
+        0.26784233127558577,
+        0.515841079210991,
+        0.40869166468414997,
+        0.5436216341665482
+      ],
+      "position_skill": 0.9874410967225734
+    },
+    "lane_W": {
+      "motion_absolute_amplitude_ratio": [
+        0.6843273896682556,
+        0.7485497188514828,
+        0.6772009619954409,
+        0.7326181811667414
+      ],
+      "motion_direction_error_rate": [
+        0.15625,
+        0.107421875,
+        0.14453125,
+        0.126953125
+      ],
+      "motion_nmse": 0.4200533494395883,
+      "motion_prediction_target_covariance": [
+        0.00010401065101108957,
+        0.00010805504338439889,
+        0.00010627107447811622,
+        8.032131377194677e-05
+      ],
+      "motion_prediction_zero_count": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "motion_rms_ratio": [
+        0.8039027823452144,
+        0.8451876219867083,
+        0.7977719314522036,
+        0.8336874218635517
+      ],
+      "motion_sign_tie_count": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "motion_signed_bias": [
+        -8.675077916546248e-05,
+        -0.00025786169520289527,
+        -0.0004986005418939407,
+        -0.0009775067546603292
+      ],
+      "motion_skill": 0.5799466505604117,
+      "motion_std_ratio": [
+        0.8037935864971784,
+        0.8433847183976172,
+        0.7969778704181965,
+        0.835114270284468
+      ],
+      "motion_target_zero_count": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "per_dimension_mse": [
+        0.00016684886491389434,
+        6.441873370274296e-05,
+        0.00021083696287296585,
+        9.687020235523732e-05,
+        8.961366515926656e-05,
+        5.55193490952769e-05,
+        7.6740595470771e-05,
+        6.639442563106982e-05
+      ],
+      "per_dimension_skill": [
+        0.9959823994846245,
+        0.9922452940519874,
+        0.9947274771481358,
+        0.9866948667055353,
+        0.5044101226703436,
+        0.6509410884126752,
+        0.5658514298079802,
+        0.5985839613506481
+      ],
+      "position_skill": 0.9924125093475707
+    }
+  },
+  "schema": "v5.5-original-lane-evaluation-1",
+  "status": "complete",
+  "test_opened": false
+}

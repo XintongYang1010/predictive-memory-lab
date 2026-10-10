@@ -1,0 +1,404 @@
+{
+  "schema": "v5.5.frozen-reader-structural-audit.1",
+  "posthoc": true,
+  "population": "Original already evaluated Dev640..895;512episodes; four motion outputs only",
+  "arms": [
+    "frozen V5.4 W"
+  ],
+  "tolerance_for_descriptive_numerical_identity": 1e-07,
+  "antisymmetry_holds_on_all_observed_cues": true,
+  "identical_inputs_zero_on_all_observed_cues": true,
+  "additive_single_frame_difference_disproved": true,
+  "statistics": {
+    "archived_prediction_reproduction": {
+      "max_abs": 1.5160941078951051e-15,
+      "rms": 2.5059363937656676e-16,
+      "per_axis_max_abs": [
+        1.5160941078951051e-15,
+        1.0096090630185017e-15,
+        1.2307863062055446e-15,
+        7.979727989493313e-16
+      ],
+      "per_axis_rms": [
+        2.9134381270689684e-16,
+        2.2979568939769094e-16,
+        2.7502819296749892e-16,
+        1.9457878966796935e-16
+      ]
+    },
+    "recomposition_error": {
+      "max_abs": 5.886610643379697e-14,
+      "rms": 2.211040972978405e-14,
+      "per_axis_max_abs": [
+        4.330823893949898e-14,
+        2.2717938641392266e-14,
+        5.886610643379697e-14,
+        3.391904812577451e-14
+      ],
+      "per_axis_rms": [
+        1.509189235550378e-14,
+        5.98422360031788e-15,
+        3.8468278632737885e-14,
+        1.4563525182490806e-14
+      ]
+    },
+    "coefficient_reverse_sum": {
+      "max_abs": 9.112710586123285e-13,
+      "rms": 1.6944573042131549e-13,
+      "per_axis_max_abs": [
+        9.112710586123285e-13,
+        7.136374824412428e-13,
+        8.242642679512358e-13,
+        6.830517054745577e-13
+      ],
+      "per_axis_rms": [
+        1.8919531766370866e-13,
+        1.4108684758706665e-13,
+        2.0051497794113083e-13,
+        1.3762557562238383e-13
+      ]
+    },
+    "coefficient_sum": [
+      9.332812300755222e-16,
+      1.0547118733938987e-15,
+      -2.5396351688300456e-15,
+      3.452099717193846e-16
+    ],
+    "intercept": [
+      -2.249833878752971e-16,
+      2.079419369814311e-15,
+      1.887521751687428e-16,
+      1.2222807882082053e-15
+    ],
+    "effective_constant": [
+      -1.0454245490951843e-14,
+      1.940315460249748e-15,
+      3.7604106696199294e-14,
+      1.2928511648924618e-14
+    ],
+    "forward_plus_swapped": {
+      "max_abs": 8.862702238765507e-15,
+      "rms": 1.7879922646227305e-15,
+      "per_axis_max_abs": [
+        8.862702238765507e-15,
+        4.57446580615084e-15,
+        8.541778395709798e-15,
+        5.079270337660091e-15
+      ],
+      "per_axis_rms": [
+        2.0890733386353563e-15,
+        1.3513504768614598e-15,
+        2.181049729345595e-15,
+        1.3565809618351649e-15
+      ]
+    },
+    "identical_frame0": {
+      "max_abs": 5.910182681943644e-15,
+      "rms": 1.1016530793763608e-15,
+      "per_axis_max_abs": [
+        5.766206060841209e-15,
+        2.3289384054687654e-15,
+        5.910182681943644e-15,
+        3.6805820819087515e-15
+      ],
+      "per_axis_rms": [
+        1.2721225764864427e-15,
+        8.366457385221219e-16,
+        1.349127925099752e-15,
+        8.462505122716191e-16
+      ]
+    },
+    "identical_frame1": {
+      "max_abs": 5.798414839763668e-15,
+      "rms": 1.0857055896030032e-15,
+      "per_axis_max_abs": [
+        5.2197307785825116e-15,
+        3.8014664437664666e-15,
+        5.798414839763668e-15,
+        3.3533095676166257e-15
+      ],
+      "per_axis_rms": [
+        1.2368100963149537e-15,
+        8.337928896644915e-16,
+        1.3321581279670223e-15,
+        8.458554451385571e-16
+      ]
+    },
+    "full": {
+      "max_abs": 0.035956905494324905,
+      "rms": 0.009688089992707847,
+      "per_axis_max_abs": [
+        0.02890526747142101,
+        0.035956905494324905,
+        0.025217331129394893,
+        0.028091833848354047
+      ],
+      "per_axis_rms": [
+        0.009598042628313918,
+        0.009844238658023216,
+        0.009430936961646813,
+        0.00987230073496639
+      ]
+    },
+    "single_frame_terms": {
+      "max_abs": 0.03926564038778087,
+      "rms": 0.00822402853127172,
+      "per_axis_max_abs": [
+        0.02139901277340249,
+        0.03926564038778087,
+        0.029512564197309153,
+        0.027594383767107246
+      ],
+      "per_axis_rms": [
+        0.007424956110218829,
+        0.00893958274500614,
+        0.006949062304590758,
+        0.009338254725917119
+      ]
+    },
+    "cross_frame_term": {
+      "max_abs": 0.027773488089433813,
+      "rms": 0.005085188154844766,
+      "per_axis_max_abs": [
+        0.021371000752646148,
+        0.01111886684080392,
+        0.027773488089433813,
+        0.01018656551169104
+      ],
+      "per_axis_rms": [
+        0.0063168995141921385,
+        0.0031194388687744287,
+        0.006757007059449355,
+        0.002853995716679354
+      ]
+    },
+    "cross_plus_swapped": {
+      "max_abs": 8.33447894033057e-15,
+      "rms": 1.8733327655365046e-15,
+      "per_axis_max_abs": [
+        7.526314640959875e-15,
+        6.837412580562585e-15,
+        7.606762442158299e-15,
+        8.33447894033057e-15
+      ],
+      "per_axis_rms": [
+        2.0974880362383105e-15,
+        1.5276097251032183e-15,
+        2.0566959280248998e-15,
+        1.7534129368131206e-15
+      ]
+    },
+    "single_potential_difference_error": {
+      "max_abs": 1.4183099139586375e-14,
+      "rms": 4.021083301222364e-15,
+      "per_axis_max_abs": [
+        1.214306433183765e-14,
+        9.582612481295882e-15,
+        1.4183099139586375e-14,
+        1.259409243559162e-14
+      ],
+      "per_axis_rms": [
+        4.603156000154404e-15,
+        3.3340599226831246e-15,
+        3.909225052289847e-15,
+        4.133933045203747e-15
+      ]
+    },
+    "identical_cross": {
+      "max_abs": 6.7886859271117e-15,
+      "rms": 1.1068209374462505e-15,
+      "per_axis_max_abs": [
+        6.7886859271117e-15,
+        3.679344715829746e-15,
+        5.425577793424116e-15,
+        4.103756838197615e-15
+      ],
+      "per_axis_rms": [
+        1.2345729810586761e-15,
+        8.883394750995184e-16,
+        1.2447740482657991e-15,
+        1.0185432982752215e-15
+      ]
+    },
+    "triangle_cycle": {
+      "max_abs": 0.032298574260479884,
+      "rms": 0.006662898665857612,
+      "per_axis_max_abs": [
+        0.029135496230677554,
+        0.014415292501953794,
+        0.032298574260479884,
+        0.014564210081078041
+      ],
+      "per_axis_rms": [
+        0.008239079017912146,
+        0.004589988037179839,
+        0.00860112806574676,
+        0.003827147407367236
+      ]
+    },
+    "center_correction": {
+      "max_abs": 1.0567101339702943e-15,
+      "rms": 5.269057350857214e-16,
+      "per_axis_max_abs": [
+        3.8832653830329117e-16,
+        4.388522960750949e-16,
+        1.0567101339702943e-15,
+        1.436375113798419e-16
+      ],
+      "per_axis_rms": [
+        3.363045771519906e-16,
+        3.800616782684207e-16,
+        9.151485147779072e-16,
+        1.243951874595653e-16
+      ]
+    },
+    "linear_moment_reconstruction": {
+      "max_abs": 2.0872192862952943e-13,
+      "rms": 2.025506650503602e-13,
+      "per_axis_max_abs": [
+        2.0872192862952943e-13,
+        2.0872192862952943e-13,
+        2.0872192862952943e-13,
+        2.0872192862952943e-13
+      ],
+      "per_axis_rms": [
+        2.025506650503602e-13,
+        2.025506650503602e-13,
+        2.025506650503602e-13,
+        2.025506650503602e-13
+      ]
+    },
+    "cross_rms_over_full_rms": [
+      0.6581445570534858,
+      0.3168796467802043,
+      0.7164725081853859,
+      0.2890912456273619
+    ],
+    "component_correlation": [
+      -0.02942749158648725,
+      0.14094218618798848,
+      -0.054076215448313834,
+      0.0031630753285203633
+    ],
+    "cross_to_target_correlation": [
+      0.5736680362048948,
+      0.3606212858731707,
+      0.5331722169236677,
+      0.2712068986485458
+    ],
+    "component_scores_descriptive": {
+      "full": {
+        "per_axis_mse": [
+          0.00013239037996979824,
+          7.700759742428987e-05,
+          0.00010452033445347656,
+          7.548522368939787e-05
+        ],
+        "per_axis_skill": [
+          0.2678423312755852,
+          0.5158410792109911,
+          0.4086916646841515,
+          0.5436216341665479
+        ],
+        "mean_motion_skill": 0.4339991773343189
+      },
+      "single_frame_terms_only": {
+        "per_axis_mse": [
+          0.0001927173108901925,
+          8.802419470731955e-05,
+          0.000159616964372151,
+          8.567475221076826e-05
+        ],
+        "per_axis_skill": [
+          -0.06578330764206686,
+          0.44657799310364044,
+          0.09699062881322096,
+          0.48201645969781914
+        ],
+        "mean_motion_skill": 0.23995044349315342
+      },
+      "cross_frame_term_only": {
+        "per_axis_mse": [
+          0.00012340606621699454,
+          0.00014077578741500654,
+          0.00012666854774969052,
+          0.0001530969727730533
+        ],
+        "per_axis_skill": [
+          0.3175282239653868,
+          0.1149204028202282,
+          0.28339142332074463,
+          0.07438644501191238
+        ],
+        "mean_motion_skill": 0.197556623779568
+      }
+    }
+  },
+  "algebra": {
+    "definition": "a_i=<x-mu,u_i-mu>/s; b_i=<y-mu,v_i-mu>/s; s=joint linear trace; t=joint quadratic trace",
+    "expansion": "f(x,y)=[sum c_i(2a_i+a_i^2)]+[sum c_i(2b_i+b_i^2)]+2 sum c_i a_i b_i, each divided by t, plus effective constant and finite-sum centering correction",
+    "centering": "Constant=b+(sumc-columns_quadratic dot c+grand_quadratic*sumc)/t; correction=-mean_all8192[(1+a+b)^2]*sumc/t",
+    "theory": "Reversal-balanced FIT and unique positive-regularized solution force motion antisymmetry. They do not force additive separability: antisymmetric bilinear x^T M y with M=-M^T remains possible.",
+    "additive_test": "h(y)-h(x) requires zero mixed bilinear operator and zero triangle cycle; nonzero observed cross/cycle disproves exact global collapse.",
+    "interpretation": "Single-frame terms are an arbitrary fitted linear-plus-quadratic feature potential, not an identified position decoder. Cross terms are feature interactions, not established correspondence, object binding or causal temporal reasoning."
+  },
+  "inputs": {
+    "reader/frozen_model.npz": {
+      "bytes": 252781114,
+      "sha256": "657448f6b31928aeec30a6c4e8a3264ce1ff6a266918125b169a30407e4e7fa4"
+    },
+    "reader/freeze_receipt.json": {
+      "bytes": 47443,
+      "sha256": "c76e58360f71facfc60e4abe933f51d4785f2dfdf64da71b1bfd39da63765c4e"
+    },
+    "reader/training_config.json": {
+      "bytes": 1149,
+      "sha256": "7dbe3925dbfb6b8fe5f3af28116d3fe7903dd244deddf32078c2aa82ca800bbb"
+    },
+    "bridge_cache/cache.npz": {
+      "bytes": 41135690,
+      "sha256": "f692a4efbb11e69de27ec2402c75e2531aec4bf801eb6a77770005cbc30375c1"
+    },
+    "bridge_cache/receipt.json": {
+      "bytes": 14373,
+      "sha256": "f7de7a8d964e79bc9850776aa60c861b9b6e7f32f649d9566d4105270c9d9f7e"
+    },
+    "bridge_report/predictions.npz": {
+      "bytes": 77115,
+      "sha256": "52f69d65e5f609f14d5f0d7f7610d4edb1a4c313eae0ade1247db001274a9ba0"
+    },
+    "bridge_report/report.json": {
+      "bytes": 13113,
+      "sha256": "471fc4101f38e96e5d763bb1103c514527486715951a7a9c6a00dee8aa00a893"
+    },
+    "freeze_publication.json": {
+      "bytes": 5127,
+      "sha256": "101d05423548c7e6d3a3c60ecf7b0fedc8f4a76627343a6df3a440f661cd0edf"
+    }
+  },
+  "archive_manifest_sha256": "ec7bc9c17da8417e9ecd11ba0f21415a2df0ee7af620af9d12f911c3ab26e75c",
+  "source_identity": {
+    "scripts/v5_3_data.py": "3018b72817b536323ee404c070c10b1cc13917420ec377e21a3aec5325bb8f12",
+    "scripts/v5_3_reader.py": "960e3123da1163d694fafaeee45f91cea84e03025b37a62da9823dcff0b04ada",
+    "scripts/v5_4_data.py": "97eb9796c9affe09a13d0bf242c701dac36d6e126f7e8cd91a84185534120576",
+    "scripts/v5_4_plan.json": "e5dc00d833455fb344527114bdbf752cad9c769200e2fce192d2f3e1364d5ec5",
+    "scripts/v5_4_reader.py": "e198aa3046056b032582e13c6ad135e581af895fcef17a8867e231355e82c3c1"
+  },
+  "source_commit": "3279bbe49f8db5ec1bd4b2f5c343db1ce9e5684b",
+  "frozen_reader_sha256": "c76e58360f71facfc60e4abe933f51d4785f2dfdf64da71b1bfd39da63765c4e",
+  "script_sha256": "5356b5cbbd15c32b0df2c87eb31a7ad8ad0ebedce2dec0776804d9a8d45f1561",
+  "runtime": {
+    "python": "3.9.6 (default, Dec  2 2025, 07:27:58) \n[Clang 17.0.0 (clang-1700.6.3.2)]",
+    "numpy": "2.0.2",
+    "platform": "macOS-15.7.3-arm64-arm-64bit",
+    "threads": 4,
+    "elapsed_seconds": 1.7508971660000001,
+    "peak_rss_native_units": 1116274688
+  },
+  "no_refit": true,
+  "no_new_rgb": true,
+  "no_new_labels": true,
+  "test_opened": false,
+  "p0_authorized": false,
+  "limits": "Algebraic probes of known features and descriptive opened-Dev component scores; no new confirmation or encoder localization. No reorientation/calibration/weight selection is applied."
+}

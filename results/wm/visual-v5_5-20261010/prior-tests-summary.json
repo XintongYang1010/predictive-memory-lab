@@ -1,0 +1,9 @@
+{
+  "command": "/Library/Developer/CommandLineTools/usr/bin/python3 -m pytest tests/visual_memory -q",
+  "exit_code": 0,
+  "passed": 167,
+  "warnings": 99,
+  "duration_seconds": 8.16,
+  "note": "Existing visual-memory suite; known local NumPy matmul runtime warnings; new V5.5 fixtures separately recorded",
+  "recorded_unix": 1791655039.423431
+}

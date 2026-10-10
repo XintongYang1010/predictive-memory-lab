@@ -1,0 +1,22 @@
+{
+  "parity.json": {
+    "bytes": 128,
+    "sha256": "cd4a025f49bf9bccde9d45d11f8499b49a23b04817d6e760202554c1a2e8510d"
+  },
+  "per_episode.csv": {
+    "bytes": 1368159,
+    "sha256": "1a1ac305da327e1fe4ac115083085f8afb38543dbe638ba24923587b140766b9"
+  },
+  "pool_per_episode.json": {
+    "bytes": 142805,
+    "sha256": "1932785fcf65e85a592cfc50b830b6914fc7a3e4c0b92188160e8f553df78a2a"
+  },
+  "predictions.npz": {
+    "bytes": 1853693,
+    "sha256": "f3f66de4fb643ccbf4bb011761111d24aa49170e539c186a41d93068026eb294"
+  },
+  "report.json": {
+    "bytes": 185978,
+    "sha256": "d865026f0ea2fcfcfab60eca47d1a92eeac87aa701ebfce4ce4a35dc80e70f17"
+  }
+}

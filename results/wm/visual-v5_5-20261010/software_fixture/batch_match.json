@@ -1,0 +1,11 @@
+{
+  "status": "passed_software_only",
+  "software_worlds": 4,
+  "episodes": 8,
+  "image_slots": 64,
+  "all_four_batches_size4": true,
+  "all8mapping_exact": true,
+  "nonoriginal_rgb_mismatch_rejected_before_encoder": true,
+  "atomic_uncompressed_roundtrip": true,
+  "source_sha256": "144d86e8672931ccb5ef62feaf915078504fcc0a232a3fe1d4e79cac0a6632f4"
+}

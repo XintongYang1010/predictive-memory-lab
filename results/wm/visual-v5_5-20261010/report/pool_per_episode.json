@@ -1,0 +1,4610 @@
+[
+  {
+    "pair_id": 640,
+    "variant": 0,
+    "total_delta_squared_norm": 35615.55079964834,
+    "retained_squared_norm": 2802.911517925256,
+    "lost_squared_norm": 32812.63928172308,
+    "retained_fraction": 0.07869909225025747,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 640,
+    "variant": 1,
+    "total_delta_squared_norm": 33515.18079168537,
+    "retained_squared_norm": 3447.8178925996563,
+    "lost_squared_norm": 30067.36289908572,
+    "retained_fraction": 0.1028733192289689,
+    "orthogonality_residual": 3.637978807091713e-12
+  },
+  {
+    "pair_id": 641,
+    "variant": 0,
+    "total_delta_squared_norm": 76267.7656615898,
+    "retained_squared_norm": 8081.197921159463,
+    "lost_squared_norm": 68186.56774043036,
+    "retained_fraction": 0.10595823610484159,
+    "orthogonality_residual": 1.4551915228366852e-11
+  },
+  {
+    "pair_id": 641,
+    "variant": 1,
+    "total_delta_squared_norm": 79341.42524421256,
+    "retained_squared_norm": 6715.771734216835,
+    "lost_squared_norm": 72625.65350999573,
+    "retained_fraction": 0.08464395129714042,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 642,
+    "variant": 0,
+    "total_delta_squared_norm": 52144.526307905006,
+    "retained_squared_norm": 5037.74416126301,
+    "lost_squared_norm": 47106.78214664199,
+    "retained_fraction": 0.09661117892827224,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 642,
+    "variant": 1,
+    "total_delta_squared_norm": 52474.65228369327,
+    "retained_squared_norm": 4425.0474551033385,
+    "lost_squared_norm": 48049.60482858993,
+    "retained_fraction": 0.08432733257917063,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 643,
+    "variant": 0,
+    "total_delta_squared_norm": 47437.653581414925,
+    "retained_squared_norm": 5659.5679957519915,
+    "lost_squared_norm": 41778.085585662935,
+    "retained_fraction": 0.11930539494409756,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 643,
+    "variant": 1,
+    "total_delta_squared_norm": 53427.44213011855,
+    "retained_squared_norm": 5111.065424676018,
+    "lost_squared_norm": 48316.37670544253,
+    "retained_fraction": 0.09566367433852437,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 644,
+    "variant": 0,
+    "total_delta_squared_norm": 53146.35649574417,
+    "retained_squared_norm": 5762.632746117296,
+    "lost_squared_norm": 47383.72374962687,
+    "retained_fraction": 0.10842949782604107,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 644,
+    "variant": 1,
+    "total_delta_squared_norm": 58513.438002174866,
+    "retained_squared_norm": 6667.201630241008,
+    "lost_squared_norm": 51846.23637193386,
+    "retained_fraction": 0.1139430848345161,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 645,
+    "variant": 0,
+    "total_delta_squared_norm": 72545.6741172293,
+    "retained_squared_norm": 5634.622100540433,
+    "lost_squared_norm": 66911.05201668886,
+    "retained_fraction": 0.07766999437396135,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 645,
+    "variant": 1,
+    "total_delta_squared_norm": 68268.38773594942,
+    "retained_squared_norm": 8716.576882803074,
+    "lost_squared_norm": 59551.810853146344,
+    "retained_fraction": 0.12768101271876112,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 646,
+    "variant": 0,
+    "total_delta_squared_norm": 51065.73016880289,
+    "retained_squared_norm": 5323.956262038968,
+    "lost_squared_norm": 45741.77390676392,
+    "retained_fraction": 0.10425693012593959,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 646,
+    "variant": 1,
+    "total_delta_squared_norm": 48751.985065170855,
+    "retained_squared_norm": 6686.399785589248,
+    "lost_squared_norm": 42065.58527958161,
+    "retained_fraction": 0.1371513339744213,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 647,
+    "variant": 0,
+    "total_delta_squared_norm": 44375.05795070274,
+    "retained_squared_norm": 6674.669865164871,
+    "lost_squared_norm": 37700.388085537874,
+    "retained_fraction": 0.150414899121482,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 647,
+    "variant": 1,
+    "total_delta_squared_norm": 59773.92753022487,
+    "retained_squared_norm": 7252.843934018778,
+    "lost_squared_norm": 52521.083596206096,
+    "retained_fraction": 0.12133791828136699,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 648,
+    "variant": 0,
+    "total_delta_squared_norm": 44959.849076586994,
+    "retained_squared_norm": 4535.84869851485,
+    "lost_squared_norm": 40424.000378072145,
+    "retained_fraction": 0.10088665312884491,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 648,
+    "variant": 1,
+    "total_delta_squared_norm": 50025.29662378153,
+    "retained_squared_norm": 5044.11938575446,
+    "lost_squared_norm": 44981.177238027056,
+    "retained_fraction": 0.1008313738484968,
+    "orthogonality_residual": 1.4551915228366852e-11
+  },
+  {
+    "pair_id": 649,
+    "variant": 0,
+    "total_delta_squared_norm": 51482.38735316067,
+    "retained_squared_norm": 6273.92606026065,
+    "lost_squared_norm": 45208.46129290003,
+    "retained_fraction": 0.12186548415524233,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 649,
+    "variant": 1,
+    "total_delta_squared_norm": 67221.39864227553,
+    "retained_squared_norm": 6984.73694216016,
+    "lost_squared_norm": 60236.66170011537,
+    "retained_fraction": 0.10390645067250148,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 650,
+    "variant": 0,
+    "total_delta_squared_norm": 54101.68361380691,
+    "retained_squared_norm": 5413.280403788234,
+    "lost_squared_norm": 48688.403210018674,
+    "retained_fraction": 0.10005752209912279,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 650,
+    "variant": 1,
+    "total_delta_squared_norm": 41289.10876208576,
+    "retained_squared_norm": 4418.685332327203,
+    "lost_squared_norm": 36870.42342975856,
+    "retained_fraction": 0.10701818142378301,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 651,
+    "variant": 0,
+    "total_delta_squared_norm": 65244.71183712013,
+    "retained_squared_norm": 6419.8122830447355,
+    "lost_squared_norm": 58824.89955407539,
+    "retained_fraction": 0.09839590217014749,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 651,
+    "variant": 1,
+    "total_delta_squared_norm": 55524.98934678131,
+    "retained_squared_norm": 6381.25101747472,
+    "lost_squared_norm": 49143.73832930658,
+    "retained_fraction": 0.11492574951470262,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 652,
+    "variant": 0,
+    "total_delta_squared_norm": 50081.43457955061,
+    "retained_squared_norm": 6639.204537239486,
+    "lost_squared_norm": 43442.23004231113,
+    "retained_fraction": 0.13256817806793467,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 652,
+    "variant": 1,
+    "total_delta_squared_norm": 45102.33859158431,
+    "retained_squared_norm": 5842.06504422585,
+    "lost_squared_norm": 39260.27354735846,
+    "retained_fraction": 0.12952909376002794,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 653,
+    "variant": 0,
+    "total_delta_squared_norm": 46974.08641729494,
+    "retained_squared_norm": 5705.381260740015,
+    "lost_squared_norm": 41268.70515655493,
+    "retained_fraction": 0.12145805689665112,
+    "orthogonality_residual": 1.4551915228366852e-11
+  },
+  {
+    "pair_id": 653,
+    "variant": 1,
+    "total_delta_squared_norm": 39958.50132477336,
+    "retained_squared_norm": 4176.496254876855,
+    "lost_squared_norm": 35782.0050698965,
+    "retained_fraction": 0.10452084328516903,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 654,
+    "variant": 0,
+    "total_delta_squared_norm": 67557.78892298168,
+    "retained_squared_norm": 5726.8431801519055,
+    "lost_squared_norm": 61830.94574282978,
+    "retained_fraction": 0.08476954724910718,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 654,
+    "variant": 1,
+    "total_delta_squared_norm": 62053.910116967214,
+    "retained_squared_norm": 6078.702223623372,
+    "lost_squared_norm": 55975.207893343846,
+    "retained_fraction": 0.09795840765175716,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 655,
+    "variant": 0,
+    "total_delta_squared_norm": 67126.54013777015,
+    "retained_squared_norm": 7532.768229078708,
+    "lost_squared_norm": 59593.77190869145,
+    "retained_fraction": 0.11221743610825904,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 655,
+    "variant": 1,
+    "total_delta_squared_norm": 49239.67437261676,
+    "retained_squared_norm": 5607.474152022725,
+    "lost_squared_norm": 43632.20022059404,
+    "retained_fraction": 0.11388121922961297,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 656,
+    "variant": 0,
+    "total_delta_squared_norm": 56359.613663312644,
+    "retained_squared_norm": 5321.171831328103,
+    "lost_squared_norm": 51038.44183198455,
+    "retained_fraction": 0.09441462574808113,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 656,
+    "variant": 1,
+    "total_delta_squared_norm": 51562.96773306337,
+    "retained_squared_norm": 5742.31657954555,
+    "lost_squared_norm": 45820.65115351782,
+    "retained_fraction": 0.11136512951063993,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 657,
+    "variant": 0,
+    "total_delta_squared_norm": 55491.48203907384,
+    "retained_squared_norm": 6225.545421318094,
+    "lost_squared_norm": 49265.93661775575,
+    "retained_fraction": 0.11218920801095979,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 657,
+    "variant": 1,
+    "total_delta_squared_norm": 52697.049507505406,
+    "retained_squared_norm": 4758.426732670212,
+    "lost_squared_norm": 47938.622774835196,
+    "retained_fraction": 0.09029778283872403,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 658,
+    "variant": 0,
+    "total_delta_squared_norm": 64448.682354782155,
+    "retained_squared_norm": 7778.842651549114,
+    "lost_squared_norm": 56669.83970323303,
+    "retained_fraction": 0.12069824187758457,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 658,
+    "variant": 1,
+    "total_delta_squared_norm": 55907.31298363152,
+    "retained_squared_norm": 5901.669001927436,
+    "lost_squared_norm": 50005.64398170409,
+    "retained_fraction": 0.1055616642433758,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 659,
+    "variant": 0,
+    "total_delta_squared_norm": 39290.72839926541,
+    "retained_squared_norm": 2502.01278645382,
+    "lost_squared_norm": 36788.7156128116,
+    "retained_fraction": 0.06367947066363366,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 659,
+    "variant": 1,
+    "total_delta_squared_norm": 35039.68089676507,
+    "retained_squared_norm": 2838.846695508402,
+    "lost_squared_norm": 32200.834201256665,
+    "retained_fraction": 0.08101805218695611,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 660,
+    "variant": 0,
+    "total_delta_squared_norm": 54936.06250389134,
+    "retained_squared_norm": 7012.001623499784,
+    "lost_squared_norm": 47924.06088039156,
+    "retained_fraction": 0.12763931930875272,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 660,
+    "variant": 1,
+    "total_delta_squared_norm": 63920.015818880165,
+    "retained_squared_norm": 5257.105827334302,
+    "lost_squared_norm": 58662.909991545865,
+    "retained_fraction": 0.0822450645542785,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 661,
+    "variant": 0,
+    "total_delta_squared_norm": 49982.70635871398,
+    "retained_squared_norm": 5113.038527338276,
+    "lost_squared_norm": 44869.6678313757,
+    "retained_fraction": 0.10229615200592014,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 661,
+    "variant": 1,
+    "total_delta_squared_norm": 60948.51280030847,
+    "retained_squared_norm": 5840.997501519131,
+    "lost_squared_norm": 55107.51529878933,
+    "retained_fraction": 0.09583494712424827,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 662,
+    "variant": 0,
+    "total_delta_squared_norm": 30067.892491327155,
+    "retained_squared_norm": 2500.015286162925,
+    "lost_squared_norm": 27567.87720516423,
+    "retained_fraction": 0.08314567729959906,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 662,
+    "variant": 1,
+    "total_delta_squared_norm": 37655.502982623504,
+    "retained_squared_norm": 2099.4998959988325,
+    "lost_squared_norm": 35556.00308662467,
+    "retained_fraction": 0.05575546015060978,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 663,
+    "variant": 0,
+    "total_delta_squared_norm": 82299.41663437287,
+    "retained_squared_norm": 6650.913937598268,
+    "lost_squared_norm": 75648.50269677461,
+    "retained_fraction": 0.08081362188927681,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 663,
+    "variant": 1,
+    "total_delta_squared_norm": 51374.72576859011,
+    "retained_squared_norm": 5082.232812364464,
+    "lost_squared_norm": 46292.492956225644,
+    "retained_fraction": 0.09892476770107997,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 664,
+    "variant": 0,
+    "total_delta_squared_norm": 46150.23540031494,
+    "retained_squared_norm": 5007.0045974724035,
+    "lost_squared_norm": 41143.23080284254,
+    "retained_fraction": 0.10849358738998403,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 664,
+    "variant": 1,
+    "total_delta_squared_norm": 54240.4665680442,
+    "retained_squared_norm": 5756.989752794454,
+    "lost_squared_norm": 48483.47681524974,
+    "retained_fraction": 0.10613827861477482,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 665,
+    "variant": 0,
+    "total_delta_squared_norm": 46341.8030252484,
+    "retained_squared_norm": 6094.866203455217,
+    "lost_squared_norm": 40246.93682179319,
+    "retained_fraction": 0.1315198331867785,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 665,
+    "variant": 1,
+    "total_delta_squared_norm": 59509.65376694296,
+    "retained_squared_norm": 4380.381766615545,
+    "lost_squared_norm": 55129.272000327415,
+    "retained_fraction": 0.0736079188726318,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 666,
+    "variant": 0,
+    "total_delta_squared_norm": 66584.64625249972,
+    "retained_squared_norm": 9607.896812811006,
+    "lost_squared_norm": 56976.7494396887,
+    "retained_fraction": 0.1442959804333316,
+    "orthogonality_residual": 1.4551915228366852e-11
+  },
+  {
+    "pair_id": 666,
+    "variant": 1,
+    "total_delta_squared_norm": 69855.8660836846,
+    "retained_squared_norm": 7298.8791837244635,
+    "lost_squared_norm": 62556.98689996013,
+    "retained_fraction": 0.10448484276153261,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 667,
+    "variant": 0,
+    "total_delta_squared_norm": 52082.06934170364,
+    "retained_squared_norm": 5392.414895890398,
+    "lost_squared_norm": 46689.65444581323,
+    "retained_fraction": 0.10353687870025804,
+    "orthogonality_residual": 1.4551915228366852e-11
+  },
+  {
+    "pair_id": 667,
+    "variant": 1,
+    "total_delta_squared_norm": 53340.2962567607,
+    "retained_squared_norm": 5561.995283778564,
+    "lost_squared_norm": 47778.30097298214,
+    "retained_fraction": 0.10427379812450141,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 668,
+    "variant": 0,
+    "total_delta_squared_norm": 45440.893994179365,
+    "retained_squared_norm": 3904.776939551004,
+    "lost_squared_norm": 41536.11705462836,
+    "retained_fraction": 0.08593090048032893,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 668,
+    "variant": 1,
+    "total_delta_squared_norm": 34855.14700527575,
+    "retained_squared_norm": 2642.76239458935,
+    "lost_squared_norm": 32212.384610686393,
+    "retained_fraction": 0.0758212953223045,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 669,
+    "variant": 0,
+    "total_delta_squared_norm": 42899.55185770883,
+    "retained_squared_norm": 3913.4249006687205,
+    "lost_squared_norm": 38986.126957040105,
+    "retained_fraction": 0.09122297859075416,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 669,
+    "variant": 1,
+    "total_delta_squared_norm": 44612.029428819544,
+    "retained_squared_norm": 3336.8164647846033,
+    "lost_squared_norm": 41275.212964034945,
+    "retained_fraction": 0.0747963387343461,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 670,
+    "variant": 0,
+    "total_delta_squared_norm": 51463.22312573099,
+    "retained_squared_norm": 4509.3663739082585,
+    "lost_squared_norm": 46953.856751822736,
+    "retained_fraction": 0.0876230849920014,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 670,
+    "variant": 1,
+    "total_delta_squared_norm": 60737.648013560596,
+    "retained_squared_norm": 3946.244140373453,
+    "lost_squared_norm": 56791.40387318714,
+    "retained_fraction": 0.06497196169816115,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 671,
+    "variant": 0,
+    "total_delta_squared_norm": 50865.78608999032,
+    "retained_squared_norm": 6206.528845276429,
+    "lost_squared_norm": 44659.257244713895,
+    "retained_fraction": 0.12201775146649681,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 671,
+    "variant": 1,
+    "total_delta_squared_norm": 51905.45303457398,
+    "retained_squared_norm": 6402.0687973026215,
+    "lost_squared_norm": 45503.38423727136,
+    "retained_fraction": 0.12334096752875336,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 672,
+    "variant": 0,
+    "total_delta_squared_norm": 45869.255354388966,
+    "retained_squared_norm": 5121.899915677653,
+    "lost_squared_norm": 40747.35543871131,
+    "retained_fraction": 0.11166302736125773,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 672,
+    "variant": 1,
+    "total_delta_squared_norm": 44691.03450635711,
+    "retained_squared_norm": 5012.914378103928,
+    "lost_squared_norm": 39678.120128253184,
+    "retained_fraction": 0.11216823314731868,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 673,
+    "variant": 0,
+    "total_delta_squared_norm": 65482.651331095454,
+    "retained_squared_norm": 7363.256379262279,
+    "lost_squared_norm": 58119.39495183317,
+    "retained_fraction": 0.1124459109334463,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 673,
+    "variant": 1,
+    "total_delta_squared_norm": 49410.29831212289,
+    "retained_squared_norm": 4695.768443062048,
+    "lost_squared_norm": 44714.52986906085,
+    "retained_fraction": 0.09503622935848445,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 674,
+    "variant": 0,
+    "total_delta_squared_norm": 58483.64063373934,
+    "retained_squared_norm": 7481.1240808024295,
+    "lost_squared_norm": 51002.516552936926,
+    "retained_fraction": 0.12791823490698614,
+    "orthogonality_residual": 1.4551915228366852e-11
+  },
+  {
+    "pair_id": 674,
+    "variant": 1,
+    "total_delta_squared_norm": 26463.444096988016,
+    "retained_squared_norm": 2669.232027456773,
+    "lost_squared_norm": 23794.212069531244,
+    "retained_fraction": 0.10086487675882581,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 675,
+    "variant": 0,
+    "total_delta_squared_norm": 50805.90275082121,
+    "retained_squared_norm": 5218.312573907488,
+    "lost_squared_norm": 45587.59017691373,
+    "retained_fraction": 0.10271075389607442,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 675,
+    "variant": 1,
+    "total_delta_squared_norm": 31808.128769329734,
+    "retained_squared_norm": 3429.583741773593,
+    "lost_squared_norm": 28378.545027556145,
+    "retained_fraction": 0.10782098395805323,
+    "orthogonality_residual": 3.637978807091713e-12
+  },
+  {
+    "pair_id": 676,
+    "variant": 0,
+    "total_delta_squared_norm": 74671.8953916628,
+    "retained_squared_norm": 7459.759136066241,
+    "lost_squared_norm": 67212.13625559655,
+    "retained_fraction": 0.09990049264102557,
+    "orthogonality_residual": 1.4551915228366852e-11
+  },
+  {
+    "pair_id": 676,
+    "variant": 1,
+    "total_delta_squared_norm": 58274.97552256906,
+    "retained_squared_norm": 5094.548200974219,
+    "lost_squared_norm": 53180.42732159484,
+    "retained_fraction": 0.08742257127162882,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 677,
+    "variant": 0,
+    "total_delta_squared_norm": 62648.7859465974,
+    "retained_squared_norm": 8439.474877759858,
+    "lost_squared_norm": 54209.311068837545,
+    "retained_fraction": 0.13471090860330112,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 677,
+    "variant": 1,
+    "total_delta_squared_norm": 65659.49867474852,
+    "retained_squared_norm": 7671.233627348459,
+    "lost_squared_norm": 57988.26504740007,
+    "retained_fraction": 0.11683356988984564,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 678,
+    "variant": 0,
+    "total_delta_squared_norm": 50440.68750633141,
+    "retained_squared_norm": 4599.525138702756,
+    "lost_squared_norm": 45841.16236762866,
+    "retained_fraction": 0.09118680505941587,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 678,
+    "variant": 1,
+    "total_delta_squared_norm": 40227.9104814508,
+    "retained_squared_norm": 2890.5916599538186,
+    "lost_squared_norm": 37337.31882149698,
+    "retained_fraction": 0.0718553766616011,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 679,
+    "variant": 0,
+    "total_delta_squared_norm": 55518.76365866135,
+    "retained_squared_norm": 6359.121632696712,
+    "lost_squared_norm": 49159.64202596464,
+    "retained_fraction": 0.11454004400734959,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 679,
+    "variant": 1,
+    "total_delta_squared_norm": 53504.278806050126,
+    "retained_squared_norm": 5414.421210148015,
+    "lost_squared_norm": 48089.85759590211,
+    "retained_fraction": 0.1011960413441881,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 680,
+    "variant": 0,
+    "total_delta_squared_norm": 72453.04543527255,
+    "retained_squared_norm": 7916.937850845271,
+    "lost_squared_norm": 64536.10758442728,
+    "retained_fraction": 0.10926991133751629,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 680,
+    "variant": 1,
+    "total_delta_squared_norm": 57711.48738759345,
+    "retained_squared_norm": 6163.573881876086,
+    "lost_squared_norm": 51547.91350571736,
+    "retained_fraction": 0.10679977524199286,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 681,
+    "variant": 0,
+    "total_delta_squared_norm": 30434.31712559083,
+    "retained_squared_norm": 2231.3059179992974,
+    "lost_squared_norm": 28203.011207591535,
+    "retained_fraction": 0.07331545862493145,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 681,
+    "variant": 1,
+    "total_delta_squared_norm": 35801.60812707267,
+    "retained_squared_norm": 2957.472708379468,
+    "lost_squared_norm": 32844.13541869321,
+    "retained_fraction": 0.0826072588103401,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 682,
+    "variant": 0,
+    "total_delta_squared_norm": 57666.11216333213,
+    "retained_squared_norm": 5766.110921841734,
+    "lost_squared_norm": 51900.00124149041,
+    "retained_fraction": 0.09999132428955741,
+    "orthogonality_residual": 1.4551915228366852e-11
+  },
+  {
+    "pair_id": 682,
+    "variant": 1,
+    "total_delta_squared_norm": 45080.468816949906,
+    "retained_squared_norm": 4109.745377723665,
+    "lost_squared_norm": 40970.72343922625,
+    "retained_fraction": 0.09116465479565804,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 683,
+    "variant": 0,
+    "total_delta_squared_norm": 57077.895011493485,
+    "retained_squared_norm": 5279.118687456659,
+    "lost_squared_norm": 51798.77632403682,
+    "retained_fraction": 0.0924897227971289,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 683,
+    "variant": 1,
+    "total_delta_squared_norm": 52631.822291597855,
+    "retained_squared_norm": 4969.782137048371,
+    "lost_squared_norm": 47662.04015454948,
+    "retained_fraction": 0.09442542402416013,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 684,
+    "variant": 0,
+    "total_delta_squared_norm": 30391.187815906647,
+    "retained_squared_norm": 1954.9568354700773,
+    "lost_squared_norm": 28436.230980436572,
+    "retained_fraction": 0.06432643723279743,
+    "orthogonality_residual": 3.637978807091713e-12
+  },
+  {
+    "pair_id": 684,
+    "variant": 1,
+    "total_delta_squared_norm": 43457.50087122623,
+    "retained_squared_norm": 3456.0898033322305,
+    "lost_squared_norm": 40001.411067894,
+    "retained_fraction": 0.07952803852143629,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 685,
+    "variant": 0,
+    "total_delta_squared_norm": 66014.31631005222,
+    "retained_squared_norm": 5338.43879639157,
+    "lost_squared_norm": 60675.87751366066,
+    "retained_fraction": 0.08086789494748835,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 685,
+    "variant": 1,
+    "total_delta_squared_norm": 64442.49008901394,
+    "retained_squared_norm": 6979.506485340536,
+    "lost_squared_norm": 57462.983603673405,
+    "retained_fraction": 0.10830597135057622,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 686,
+    "variant": 0,
+    "total_delta_squared_norm": 46435.423777964534,
+    "retained_squared_norm": 5009.356189988141,
+    "lost_squared_norm": 41426.06758797639,
+    "retained_fraction": 0.1078779040316475,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 686,
+    "variant": 1,
+    "total_delta_squared_norm": 56962.47710832397,
+    "retained_squared_norm": 4855.349553991255,
+    "lost_squared_norm": 52107.127554332714,
+    "retained_fraction": 0.08523768277769891,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 687,
+    "variant": 0,
+    "total_delta_squared_norm": 55754.277843266085,
+    "retained_squared_norm": 5206.78801523151,
+    "lost_squared_norm": 50547.489828034566,
+    "retained_fraction": 0.09338813480588158,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 687,
+    "variant": 1,
+    "total_delta_squared_norm": 41113.92571487308,
+    "retained_squared_norm": 4235.977777511318,
+    "lost_squared_norm": 36877.947937361765,
+    "retained_fraction": 0.10303024349676589,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 688,
+    "variant": 0,
+    "total_delta_squared_norm": 48268.34991513743,
+    "retained_squared_norm": 4583.291217127631,
+    "lost_squared_norm": 43685.0586980098,
+    "retained_fraction": 0.09495437952997574,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 688,
+    "variant": 1,
+    "total_delta_squared_norm": 70906.14784619141,
+    "retained_squared_norm": 8037.79949276344,
+    "lost_squared_norm": 62868.34835342798,
+    "retained_fraction": 0.11335828749573194,
+    "orthogonality_residual": 1.4551915228366852e-11
+  },
+  {
+    "pair_id": 689,
+    "variant": 0,
+    "total_delta_squared_norm": 78553.92491763538,
+    "retained_squared_norm": 7044.643911102371,
+    "lost_squared_norm": 71509.28100653301,
+    "retained_fraction": 0.08967908247091097,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 689,
+    "variant": 1,
+    "total_delta_squared_norm": 63738.284089413595,
+    "retained_squared_norm": 7338.871411361905,
+    "lost_squared_norm": 56399.41267805169,
+    "retained_fraction": 0.11514071199448608,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 690,
+    "variant": 0,
+    "total_delta_squared_norm": 46270.914876255745,
+    "retained_squared_norm": 4649.711274673322,
+    "lost_squared_norm": 41621.20360158243,
+    "retained_fraction": 0.10048885540967237,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 690,
+    "variant": 1,
+    "total_delta_squared_norm": 40655.56607526037,
+    "retained_squared_norm": 4872.055950518163,
+    "lost_squared_norm": 35783.5101247422,
+    "retained_fraction": 0.11983736597097573,
+    "orthogonality_residual": 1.4551915228366852e-11
+  },
+  {
+    "pair_id": 691,
+    "variant": 0,
+    "total_delta_squared_norm": 59493.13269782261,
+    "retained_squared_norm": 6787.842905943002,
+    "lost_squared_norm": 52705.28979187961,
+    "retained_fraction": 0.11409456181135726,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 691,
+    "variant": 1,
+    "total_delta_squared_norm": 36621.48953501868,
+    "retained_squared_norm": 5038.831936736155,
+    "lost_squared_norm": 31582.657598282523,
+    "retained_fraction": 0.13759221704834962,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 692,
+    "variant": 0,
+    "total_delta_squared_norm": 62421.75135420782,
+    "retained_squared_norm": 4988.440822010335,
+    "lost_squared_norm": 57433.31053219749,
+    "retained_fraction": 0.07991510513224437,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 692,
+    "variant": 1,
+    "total_delta_squared_norm": 50148.05600525353,
+    "retained_squared_norm": 4579.063822486922,
+    "lost_squared_norm": 45568.992182766604,
+    "retained_fraction": 0.09131089392592241,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 693,
+    "variant": 0,
+    "total_delta_squared_norm": 76631.91556326232,
+    "retained_squared_norm": 9287.06924491877,
+    "lost_squared_norm": 67344.84631834355,
+    "retained_fraction": 0.12119061851262182,
+    "orthogonality_residual": 1.4551915228366852e-11
+  },
+  {
+    "pair_id": 693,
+    "variant": 1,
+    "total_delta_squared_norm": 45106.27614788199,
+    "retained_squared_norm": 3843.7002382501532,
+    "lost_squared_norm": 41262.575909631836,
+    "retained_fraction": 0.08521431087878972,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 694,
+    "variant": 0,
+    "total_delta_squared_norm": 67864.57548470134,
+    "retained_squared_norm": 8459.004879342894,
+    "lost_squared_norm": 59405.57060535846,
+    "retained_fraction": 0.12464536643642309,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 694,
+    "variant": 1,
+    "total_delta_squared_norm": 68993.67869008624,
+    "retained_squared_norm": 7464.040855809413,
+    "lost_squared_norm": 61529.63783427682,
+    "retained_fraction": 0.1081844162758338,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 695,
+    "variant": 0,
+    "total_delta_squared_norm": 55218.39840408172,
+    "retained_squared_norm": 5281.720757942532,
+    "lost_squared_norm": 49936.677646139186,
+    "retained_fraction": 0.09565146600760716,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 695,
+    "variant": 1,
+    "total_delta_squared_norm": 64420.63660474442,
+    "retained_squared_norm": 5185.581586199097,
+    "lost_squared_norm": 59235.05501854533,
+    "retained_fraction": 0.08049565883701919,
+    "orthogonality_residual": 1.4551915228366852e-11
+  },
+  {
+    "pair_id": 696,
+    "variant": 0,
+    "total_delta_squared_norm": 38051.118484758335,
+    "retained_squared_norm": 5149.494619279731,
+    "lost_squared_norm": 32901.62386547861,
+    "retained_fraction": 0.13533096593053895,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 696,
+    "variant": 1,
+    "total_delta_squared_norm": 52540.877390968235,
+    "retained_squared_norm": 6320.749711573593,
+    "lost_squared_norm": 46220.12767939466,
+    "retained_fraction": 0.12030156376223988,
+    "orthogonality_residual": 1.4551915228366852e-11
+  },
+  {
+    "pair_id": 697,
+    "variant": 0,
+    "total_delta_squared_norm": 34657.55730351741,
+    "retained_squared_norm": 4268.210817128456,
+    "lost_squared_norm": 30389.346486388953,
+    "retained_fraction": 0.12315382702101957,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 697,
+    "variant": 1,
+    "total_delta_squared_norm": 42113.7660809621,
+    "retained_squared_norm": 5051.6905632602375,
+    "lost_squared_norm": 37062.075517701865,
+    "retained_fraction": 0.11995342695185598,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 698,
+    "variant": 0,
+    "total_delta_squared_norm": 61226.92743521917,
+    "retained_squared_norm": 6707.700295695568,
+    "lost_squared_norm": 54519.2271395236,
+    "retained_fraction": 0.10955474293222724,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 698,
+    "variant": 1,
+    "total_delta_squared_norm": 87855.77759564875,
+    "retained_squared_norm": 6934.196018231722,
+    "lost_squared_norm": 80921.58157741703,
+    "retained_fraction": 0.07892703482912607,
+    "orthogonality_residual": 1.4551915228366852e-11
+  },
+  {
+    "pair_id": 699,
+    "variant": 0,
+    "total_delta_squared_norm": 50396.35727270809,
+    "retained_squared_norm": 5899.013591138193,
+    "lost_squared_norm": 44497.343681569895,
+    "retained_fraction": 0.11705238057618057,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 699,
+    "variant": 1,
+    "total_delta_squared_norm": 59279.773957715646,
+    "retained_squared_norm": 6329.254181334869,
+    "lost_squared_norm": 52950.519776380774,
+    "retained_fraction": 0.10676920235643166,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 700,
+    "variant": 0,
+    "total_delta_squared_norm": 66402.28404063043,
+    "retained_squared_norm": 4978.914595083512,
+    "lost_squared_norm": 61423.36944554693,
+    "retained_fraction": 0.07498107432625357,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 700,
+    "variant": 1,
+    "total_delta_squared_norm": 47871.80103437131,
+    "retained_squared_norm": 3283.272999682153,
+    "lost_squared_norm": 44588.52803468915,
+    "retained_fraction": 0.06858469764538015,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 701,
+    "variant": 0,
+    "total_delta_squared_norm": 60182.70537752346,
+    "retained_squared_norm": 6135.720865304253,
+    "lost_squared_norm": 54046.9845122192,
+    "retained_fraction": 0.10195156277563705,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 701,
+    "variant": 1,
+    "total_delta_squared_norm": 73272.3842855742,
+    "retained_squared_norm": 9431.079327784262,
+    "lost_squared_norm": 63841.30495778993,
+    "retained_fraction": 0.12871260325073172,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 702,
+    "variant": 0,
+    "total_delta_squared_norm": 65272.03341636693,
+    "retained_squared_norm": 4773.502863069482,
+    "lost_squared_norm": 60498.530553297445,
+    "retained_fraction": 0.07313243686801596,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 702,
+    "variant": 1,
+    "total_delta_squared_norm": 71161.08146335352,
+    "retained_squared_norm": 6456.1383118818885,
+    "lost_squared_norm": 64704.94315147163,
+    "retained_fraction": 0.090725691334619,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 703,
+    "variant": 0,
+    "total_delta_squared_norm": 41653.09028442516,
+    "retained_squared_norm": 3135.5586789091813,
+    "lost_squared_norm": 38517.53160551598,
+    "retained_fraction": 0.07527793634273573,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 703,
+    "variant": 1,
+    "total_delta_squared_norm": 33553.54452991097,
+    "retained_squared_norm": 2693.4779485098225,
+    "lost_squared_norm": 30860.06658140115,
+    "retained_fraction": 0.08027402130671317,
+    "orthogonality_residual": 3.637978807091713e-12
+  },
+  {
+    "pair_id": 704,
+    "variant": 0,
+    "total_delta_squared_norm": 69928.0412703642,
+    "retained_squared_norm": 6131.677050580664,
+    "lost_squared_norm": 63796.36421978354,
+    "retained_fraction": 0.08768552556582612,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 704,
+    "variant": 1,
+    "total_delta_squared_norm": 55422.769989668705,
+    "retained_squared_norm": 4998.126592998569,
+    "lost_squared_norm": 50424.64339667013,
+    "retained_fraction": 0.09018182588005372,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 705,
+    "variant": 0,
+    "total_delta_squared_norm": 55209.515788803634,
+    "retained_squared_norm": 5166.297359247392,
+    "lost_squared_norm": 50043.21842955625,
+    "retained_fraction": 0.09357621209739182,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 705,
+    "variant": 1,
+    "total_delta_squared_norm": 63831.85291815082,
+    "retained_squared_norm": 5941.590295655353,
+    "lost_squared_norm": 57890.26262249547,
+    "retained_fraction": 0.09308190227963506,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 706,
+    "variant": 0,
+    "total_delta_squared_norm": 29456.74927815659,
+    "retained_squared_norm": 1955.9541972145025,
+    "lost_squared_norm": 27500.79508094208,
+    "retained_fraction": 0.0664008841825912,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 706,
+    "variant": 1,
+    "total_delta_squared_norm": 28043.637033941515,
+    "retained_squared_norm": 1584.8802535949844,
+    "lost_squared_norm": 26458.75678034653,
+    "retained_fraction": 0.05651478984971838,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 707,
+    "variant": 0,
+    "total_delta_squared_norm": 56697.36492556346,
+    "retained_squared_norm": 6039.684502228316,
+    "lost_squared_norm": 50657.68042333514,
+    "retained_fraction": 0.10652495949604829,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 707,
+    "variant": 1,
+    "total_delta_squared_norm": 56832.48572283539,
+    "retained_squared_norm": 6205.096096589269,
+    "lost_squared_norm": 50627.38962624612,
+    "retained_fraction": 0.1091822048194533,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 708,
+    "variant": 0,
+    "total_delta_squared_norm": 58965.48931170044,
+    "retained_squared_norm": 5102.743792871869,
+    "lost_squared_norm": 53862.745518828575,
+    "retained_fraction": 0.08653780121959131,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 708,
+    "variant": 1,
+    "total_delta_squared_norm": 57343.66471239906,
+    "retained_squared_norm": 6624.164174082562,
+    "lost_squared_norm": 50719.5005383165,
+    "retained_fraction": 0.11551693124786042,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 709,
+    "variant": 0,
+    "total_delta_squared_norm": 54110.30309694121,
+    "retained_squared_norm": 3969.0040292187523,
+    "lost_squared_norm": 50141.29906772245,
+    "retained_fraction": 0.07335024573985643,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 709,
+    "variant": 1,
+    "total_delta_squared_norm": 59475.4634783791,
+    "retained_squared_norm": 3815.57311155937,
+    "lost_squared_norm": 55659.890366819716,
+    "retained_fraction": 0.0641537348077402,
+    "orthogonality_residual": 1.4551915228366852e-11
+  },
+  {
+    "pair_id": 710,
+    "variant": 0,
+    "total_delta_squared_norm": 52646.999407303534,
+    "retained_squared_norm": 6067.896568328332,
+    "lost_squared_norm": 46579.1028389752,
+    "retained_fraction": 0.11525626601022497,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 710,
+    "variant": 1,
+    "total_delta_squared_norm": 44542.191875075616,
+    "retained_squared_norm": 5074.518991233037,
+    "lost_squared_norm": 39467.672883842584,
+    "retained_fraction": 0.11392611763393205,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 711,
+    "variant": 0,
+    "total_delta_squared_norm": 76094.25377799645,
+    "retained_squared_norm": 7862.79137553647,
+    "lost_squared_norm": 68231.46240245999,
+    "retained_fraction": 0.10332963377860326,
+    "orthogonality_residual": 1.4551915228366852e-11
+  },
+  {
+    "pair_id": 711,
+    "variant": 1,
+    "total_delta_squared_norm": 50744.47298437407,
+    "retained_squared_norm": 5069.458954976355,
+    "lost_squared_norm": 45675.01402939772,
+    "retained_fraction": 0.09990169681213187,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 712,
+    "variant": 0,
+    "total_delta_squared_norm": 46230.22577956124,
+    "retained_squared_norm": 3899.176833740036,
+    "lost_squared_norm": 42331.048945821196,
+    "retained_fraction": 0.08434258686800301,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 712,
+    "variant": 1,
+    "total_delta_squared_norm": 55044.532273406716,
+    "retained_squared_norm": 5001.174026164743,
+    "lost_squared_norm": 50043.35824724198,
+    "retained_fraction": 0.0908568720563173,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 713,
+    "variant": 0,
+    "total_delta_squared_norm": 61110.30332121963,
+    "retained_squared_norm": 7672.907423090652,
+    "lost_squared_norm": 53437.39589812898,
+    "retained_fraction": 0.12555832660098007,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 713,
+    "variant": 1,
+    "total_delta_squared_norm": 48520.166177714564,
+    "retained_squared_norm": 6727.173338296711,
+    "lost_squared_norm": 41792.99283941784,
+    "retained_fraction": 0.1386469558586656,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 714,
+    "variant": 0,
+    "total_delta_squared_norm": 42281.79037567304,
+    "retained_squared_norm": 4069.080098474548,
+    "lost_squared_norm": 38212.71027719849,
+    "retained_fraction": 0.09623717591712261,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 714,
+    "variant": 1,
+    "total_delta_squared_norm": 60786.402701351704,
+    "retained_squared_norm": 5707.2158807564565,
+    "lost_squared_norm": 55079.18682059525,
+    "retained_fraction": 0.09388967971663745,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 715,
+    "variant": 0,
+    "total_delta_squared_norm": 57503.542883272996,
+    "retained_squared_norm": 6381.2672991834115,
+    "lost_squared_norm": 51122.275584089584,
+    "retained_fraction": 0.11097172416205395,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 715,
+    "variant": 1,
+    "total_delta_squared_norm": 44710.644032317156,
+    "retained_squared_norm": 5547.522065140136,
+    "lost_squared_norm": 39163.121967177016,
+    "retained_fraction": 0.12407609385206685,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 716,
+    "variant": 0,
+    "total_delta_squared_norm": 57274.07123063049,
+    "retained_squared_norm": 5255.2361841546835,
+    "lost_squared_norm": 52018.83504647581,
+    "retained_fraction": 0.09175593896569648,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 716,
+    "variant": 1,
+    "total_delta_squared_norm": 44805.89027228634,
+    "retained_squared_norm": 4465.055956869186,
+    "lost_squared_norm": 40340.83431541716,
+    "retained_fraction": 0.099653325260026,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 717,
+    "variant": 0,
+    "total_delta_squared_norm": 62701.127108907975,
+    "retained_squared_norm": 6306.097803665303,
+    "lost_squared_norm": 56395.02930524267,
+    "retained_fraction": 0.1005739146078188,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 717,
+    "variant": 1,
+    "total_delta_squared_norm": 62923.44338651783,
+    "retained_squared_norm": 5916.468285930121,
+    "lost_squared_norm": 57006.975100587726,
+    "retained_fraction": 0.09402645448989846,
+    "orthogonality_residual": 2.1827872842550278e-11
+  },
+  {
+    "pair_id": 718,
+    "variant": 0,
+    "total_delta_squared_norm": 44928.802395117906,
+    "retained_squared_norm": 3936.6242325318726,
+    "lost_squared_norm": 40992.17816258603,
+    "retained_fraction": 0.08761916683004303,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 718,
+    "variant": 1,
+    "total_delta_squared_norm": 47210.10320967296,
+    "retained_squared_norm": 5562.516996452201,
+    "lost_squared_norm": 41647.58621322077,
+    "retained_fraction": 0.11782471586108473,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 719,
+    "variant": 0,
+    "total_delta_squared_norm": 46972.7645385846,
+    "retained_squared_norm": 4268.313296218814,
+    "lost_squared_norm": 42704.45124236579,
+    "retained_fraction": 0.09086783241622313,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 719,
+    "variant": 1,
+    "total_delta_squared_norm": 34423.714662333405,
+    "retained_squared_norm": 3274.31464871185,
+    "lost_squared_norm": 31149.400013621555,
+    "retained_fraction": 0.0951179929542764,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 720,
+    "variant": 0,
+    "total_delta_squared_norm": 58418.10441361978,
+    "retained_squared_norm": 6451.658810094053,
+    "lost_squared_norm": 51966.44560352573,
+    "retained_fraction": 0.11043937277413425,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 720,
+    "variant": 1,
+    "total_delta_squared_norm": 47121.59691928411,
+    "retained_squared_norm": 4341.876648216297,
+    "lost_squared_norm": 42779.72027106781,
+    "retained_fraction": 0.09214196742214867,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 721,
+    "variant": 0,
+    "total_delta_squared_norm": 54476.43102540728,
+    "retained_squared_norm": 7006.030190493026,
+    "lost_squared_norm": 47470.400834914246,
+    "retained_fraction": 0.12860662966752506,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 721,
+    "variant": 1,
+    "total_delta_squared_norm": 46991.99975472364,
+    "retained_squared_norm": 6000.560183703641,
+    "lost_squared_norm": 40991.439571020004,
+    "retained_fraction": 0.12769322895437035,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 722,
+    "variant": 0,
+    "total_delta_squared_norm": 48248.21007791028,
+    "retained_squared_norm": 3971.732094828676,
+    "lost_squared_norm": 44276.4779830816,
+    "retained_fraction": 0.08231874484908766,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 722,
+    "variant": 1,
+    "total_delta_squared_norm": 59419.296521906756,
+    "retained_squared_norm": 6752.526458845733,
+    "lost_squared_norm": 52666.77006306103,
+    "retained_fraction": 0.11364197919031582,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 723,
+    "variant": 0,
+    "total_delta_squared_norm": 69554.13311123196,
+    "retained_squared_norm": 6359.125507222966,
+    "lost_squared_norm": 63195.007604009,
+    "retained_fraction": 0.09142699682639077,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 723,
+    "variant": 1,
+    "total_delta_squared_norm": 59358.15384274731,
+    "retained_squared_norm": 5515.613982191436,
+    "lost_squared_norm": 53842.53986055587,
+    "retained_fraction": 0.09292091524280724,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 724,
+    "variant": 0,
+    "total_delta_squared_norm": 67951.66108409839,
+    "retained_squared_norm": 6129.931622893449,
+    "lost_squared_norm": 61821.729461204945,
+    "retained_fraction": 0.09021018066514838,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 724,
+    "variant": 1,
+    "total_delta_squared_norm": 61826.26736470064,
+    "retained_squared_norm": 4588.538843729654,
+    "lost_squared_norm": 57237.72852097098,
+    "retained_fraction": 0.0742166564360548,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 725,
+    "variant": 0,
+    "total_delta_squared_norm": 32420.502766897363,
+    "retained_squared_norm": 2376.978324934938,
+    "lost_squared_norm": 30043.524441962425,
+    "retained_fraction": 0.07331713335926204,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 725,
+    "variant": 1,
+    "total_delta_squared_norm": 34466.6543418823,
+    "retained_squared_norm": 2109.8243537684143,
+    "lost_squared_norm": 32356.82998811388,
+    "retained_fraction": 0.061213494435537724,
+    "orthogonality_residual": 3.637978807091713e-12
+  },
+  {
+    "pair_id": 726,
+    "variant": 0,
+    "total_delta_squared_norm": 57443.312711854516,
+    "retained_squared_norm": 4635.001877067913,
+    "lost_squared_norm": 52808.31083478661,
+    "retained_fraction": 0.08068827611523512,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 726,
+    "variant": 1,
+    "total_delta_squared_norm": 56497.70327924331,
+    "retained_squared_norm": 5336.995510942281,
+    "lost_squared_norm": 51160.70776830103,
+    "retained_fraction": 0.09446393749076593,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 727,
+    "variant": 0,
+    "total_delta_squared_norm": 48641.29147063736,
+    "retained_squared_norm": 4610.81058925811,
+    "lost_squared_norm": 44030.480881379255,
+    "retained_fraction": 0.09479210871778468,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 727,
+    "variant": 1,
+    "total_delta_squared_norm": 86735.81077190055,
+    "retained_squared_norm": 7327.692054296824,
+    "lost_squared_norm": 79408.1187176037,
+    "retained_fraction": 0.08448289108137036,
+    "orthogonality_residual": 1.4551915228366852e-11
+  },
+  {
+    "pair_id": 728,
+    "variant": 0,
+    "total_delta_squared_norm": 30928.238560304024,
+    "retained_squared_norm": 3198.153501982513,
+    "lost_squared_norm": 27730.08505832151,
+    "retained_fraction": 0.10340561412014261,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 728,
+    "variant": 1,
+    "total_delta_squared_norm": 35641.83213384926,
+    "retained_squared_norm": 4663.9636975357935,
+    "lost_squared_norm": 30977.868436313467,
+    "retained_fraction": 0.13085645204827726,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 729,
+    "variant": 0,
+    "total_delta_squared_norm": 49253.530299261954,
+    "retained_squared_norm": 5665.559435968968,
+    "lost_squared_norm": 43587.97086329298,
+    "retained_fraction": 0.11502849443573518,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 729,
+    "variant": 1,
+    "total_delta_squared_norm": 68932.9409767843,
+    "retained_squared_norm": 6387.064664477302,
+    "lost_squared_norm": 62545.876312306995,
+    "retained_fraction": 0.09265620433383773,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 730,
+    "variant": 0,
+    "total_delta_squared_norm": 58341.42522906104,
+    "retained_squared_norm": 4801.366288540069,
+    "lost_squared_norm": 53540.058940520976,
+    "retained_fraction": 0.08229772018233815,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 730,
+    "variant": 1,
+    "total_delta_squared_norm": 47361.8081643881,
+    "retained_squared_norm": 4309.848508354766,
+    "lost_squared_norm": 43051.95965603334,
+    "retained_fraction": 0.09099839460089261,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 731,
+    "variant": 0,
+    "total_delta_squared_norm": 30242.248119590116,
+    "retained_squared_norm": 2029.5973297534006,
+    "lost_squared_norm": 28212.65078983672,
+    "retained_fraction": 0.06711132458564421,
+    "orthogonality_residual": 3.637978807091713e-12
+  },
+  {
+    "pair_id": 731,
+    "variant": 1,
+    "total_delta_squared_norm": 37658.2077427109,
+    "retained_squared_norm": 2958.237704102632,
+    "lost_squared_norm": 34699.97003860828,
+    "retained_fraction": 0.07855492551089946,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 732,
+    "variant": 0,
+    "total_delta_squared_norm": 48468.2348003716,
+    "retained_squared_norm": 5529.768337838608,
+    "lost_squared_norm": 42938.466462533,
+    "retained_fraction": 0.11409056592661823,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 732,
+    "variant": 1,
+    "total_delta_squared_norm": 50168.18341219313,
+    "retained_squared_norm": 5997.0357125505925,
+    "lost_squared_norm": 44171.14769964253,
+    "retained_fraction": 0.1195386259709185,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 733,
+    "variant": 0,
+    "total_delta_squared_norm": 73942.5333398924,
+    "retained_squared_norm": 7272.384366267621,
+    "lost_squared_norm": 66670.14897362477,
+    "retained_fraction": 0.09835184213717127,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 733,
+    "variant": 1,
+    "total_delta_squared_norm": 58107.34902014863,
+    "retained_squared_norm": 5794.173385579084,
+    "lost_squared_norm": 52313.17563456955,
+    "retained_fraction": 0.09971498413341769,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 734,
+    "variant": 0,
+    "total_delta_squared_norm": 50048.06191186681,
+    "retained_squared_norm": 3857.4170459016227,
+    "lost_squared_norm": 46190.64486596519,
+    "retained_fraction": 0.07707425419778337,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 734,
+    "variant": 1,
+    "total_delta_squared_norm": 42457.93537741309,
+    "retained_squared_norm": 4523.885173961308,
+    "lost_squared_norm": 37934.05020345177,
+    "retained_fraction": 0.10654981533482524,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 735,
+    "variant": 0,
+    "total_delta_squared_norm": 46914.4100721603,
+    "retained_squared_norm": 4820.41638822741,
+    "lost_squared_norm": 42093.9936839329,
+    "retained_fraction": 0.10274916344067844,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 735,
+    "variant": 1,
+    "total_delta_squared_norm": 52836.58886558926,
+    "retained_squared_norm": 6237.004851098853,
+    "lost_squared_norm": 46599.58401449041,
+    "retained_fraction": 0.11804329130643045,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 736,
+    "variant": 0,
+    "total_delta_squared_norm": 62647.31635310637,
+    "retained_squared_norm": 6454.315773222261,
+    "lost_squared_norm": 56193.000579884116,
+    "retained_fraction": 0.10302621323542493,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 736,
+    "variant": 1,
+    "total_delta_squared_norm": 46326.657927491244,
+    "retained_squared_norm": 3909.6974321552416,
+    "lost_squared_norm": 42416.960495336,
+    "retained_fraction": 0.08439411792395113,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 737,
+    "variant": 0,
+    "total_delta_squared_norm": 68396.69611917005,
+    "retained_squared_norm": 7063.390853218756,
+    "lost_squared_norm": 61333.305265951305,
+    "retained_fraction": 0.10327093637552248,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 737,
+    "variant": 1,
+    "total_delta_squared_norm": 55792.63424916144,
+    "retained_squared_norm": 5906.113357643623,
+    "lost_squared_norm": 49886.520891517815,
+    "retained_fraction": 0.10585829898742219,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 738,
+    "variant": 0,
+    "total_delta_squared_norm": 75397.06682740765,
+    "retained_squared_norm": 7375.939791869057,
+    "lost_squared_norm": 68021.12703553858,
+    "retained_fraction": 0.09782794082365846,
+    "orthogonality_residual": 1.4551915228366852e-11
+  },
+  {
+    "pair_id": 738,
+    "variant": 1,
+    "total_delta_squared_norm": 68721.03407835824,
+    "retained_squared_norm": 6669.5010980952475,
+    "lost_squared_norm": 62051.53298026299,
+    "retained_fraction": 0.09705181517627395,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 739,
+    "variant": 0,
+    "total_delta_squared_norm": 55081.8087540362,
+    "retained_squared_norm": 4991.925608337925,
+    "lost_squared_norm": 50089.88314569827,
+    "retained_fraction": 0.09062748158160536,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 739,
+    "variant": 1,
+    "total_delta_squared_norm": 71706.90838266378,
+    "retained_squared_norm": 7625.920119930495,
+    "lost_squared_norm": 64080.988262733285,
+    "retained_fraction": 0.10634847174326338,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 740,
+    "variant": 0,
+    "total_delta_squared_norm": 57180.8045286423,
+    "retained_squared_norm": 6197.038757263821,
+    "lost_squared_norm": 50983.76577137847,
+    "retained_fraction": 0.10837620786114818,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 740,
+    "variant": 1,
+    "total_delta_squared_norm": 48576.47070782418,
+    "retained_squared_norm": 5699.459330266118,
+    "lost_squared_norm": 42877.011377558054,
+    "retained_fraction": 0.11732962990553593,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 741,
+    "variant": 0,
+    "total_delta_squared_norm": 59798.253662619034,
+    "retained_squared_norm": 6493.242552706697,
+    "lost_squared_norm": 53305.011109912346,
+    "retained_fraction": 0.10858582241116081,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 741,
+    "variant": 1,
+    "total_delta_squared_norm": 44407.29073677813,
+    "retained_squared_norm": 4076.2960888547323,
+    "lost_squared_norm": 40330.994647923406,
+    "retained_fraction": 0.09179339746296981,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 742,
+    "variant": 0,
+    "total_delta_squared_norm": 58487.31894042888,
+    "retained_squared_norm": 6287.822179370515,
+    "lost_squared_norm": 52199.49676105836,
+    "retained_fraction": 0.10750744423376381,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 742,
+    "variant": 1,
+    "total_delta_squared_norm": 76432.26042407546,
+    "retained_squared_norm": 7644.777853852542,
+    "lost_squared_norm": 68787.48257022293,
+    "retained_fraction": 0.10002030309500708,
+    "orthogonality_residual": 1.4551915228366852e-11
+  },
+  {
+    "pair_id": 743,
+    "variant": 0,
+    "total_delta_squared_norm": 56805.38694506345,
+    "retained_squared_norm": 8589.40751528133,
+    "lost_squared_norm": 48215.97942978211,
+    "retained_fraction": 0.15120762267825327,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 743,
+    "variant": 1,
+    "total_delta_squared_norm": 60384.1002885769,
+    "retained_squared_norm": 6926.268821705293,
+    "lost_squared_norm": 53457.831466871605,
+    "retained_fraction": 0.11470351944641896,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 744,
+    "variant": 0,
+    "total_delta_squared_norm": 56280.905752650244,
+    "retained_squared_norm": 4367.079387618794,
+    "lost_squared_norm": 51913.82636503145,
+    "retained_fraction": 0.07759433380144472,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 744,
+    "variant": 1,
+    "total_delta_squared_norm": 61482.299784180665,
+    "retained_squared_norm": 4718.865959160611,
+    "lost_squared_norm": 56763.43382502006,
+    "retained_fraction": 0.0767516175504998,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 745,
+    "variant": 0,
+    "total_delta_squared_norm": 53081.99486696443,
+    "retained_squared_norm": 4925.921034035046,
+    "lost_squared_norm": 48156.07383292939,
+    "retained_fraction": 0.09279834049908121,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 745,
+    "variant": 1,
+    "total_delta_squared_norm": 62355.900660253785,
+    "retained_squared_norm": 6785.311505279456,
+    "lost_squared_norm": 55570.589154974325,
+    "retained_fraction": 0.10881586880204386,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 746,
+    "variant": 0,
+    "total_delta_squared_norm": 57530.33075164729,
+    "retained_squared_norm": 5304.654409517032,
+    "lost_squared_norm": 52225.67634213026,
+    "retained_fraction": 0.09220622131335723,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 746,
+    "variant": 1,
+    "total_delta_squared_norm": 52025.700089384874,
+    "retained_squared_norm": 5048.544442038308,
+    "lost_squared_norm": 46977.15564734656,
+    "retained_fraction": 0.09703943307566165,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 747,
+    "variant": 0,
+    "total_delta_squared_norm": 30614.323401271336,
+    "retained_squared_norm": 3030.4734602325534,
+    "lost_squared_norm": 27583.84994103879,
+    "retained_fraction": 0.09898874525205759,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 747,
+    "variant": 1,
+    "total_delta_squared_norm": 26648.44694440729,
+    "retained_squared_norm": 2000.4261957245612,
+    "lost_squared_norm": 24648.02074868273,
+    "retained_fraction": 0.07506727127092075,
+    "orthogonality_residual": 3.637978807091713e-12
+  },
+  {
+    "pair_id": 748,
+    "variant": 0,
+    "total_delta_squared_norm": 74549.31574044851,
+    "retained_squared_norm": 7117.326976789469,
+    "lost_squared_norm": 67431.98876365903,
+    "retained_fraction": 0.09547139240780171,
+    "orthogonality_residual": 1.4551915228366852e-11
+  },
+  {
+    "pair_id": 748,
+    "variant": 1,
+    "total_delta_squared_norm": 47868.281927341246,
+    "retained_squared_norm": 4188.568720065219,
+    "lost_squared_norm": 43679.71320727603,
+    "retained_fraction": 0.08750196479629252,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 749,
+    "variant": 0,
+    "total_delta_squared_norm": 68319.50666353008,
+    "retained_squared_norm": 6161.851228878752,
+    "lost_squared_norm": 62157.655434651315,
+    "retained_fraction": 0.09019168213882955,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 749,
+    "variant": 1,
+    "total_delta_squared_norm": 48166.027428448724,
+    "retained_squared_norm": 4834.60540250537,
+    "lost_squared_norm": 43331.42202594335,
+    "retained_fraction": 0.10037376260035646,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 750,
+    "variant": 0,
+    "total_delta_squared_norm": 40255.00687316428,
+    "retained_squared_norm": 3069.3304296095857,
+    "lost_squared_norm": 37185.676443554694,
+    "retained_fraction": 0.07624717191778033,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 750,
+    "variant": 1,
+    "total_delta_squared_norm": 33797.21227929088,
+    "retained_squared_norm": 2604.044460672635,
+    "lost_squared_norm": 31193.167818618247,
+    "retained_fraction": 0.07704909029636903,
+    "orthogonality_residual": 3.637978807091713e-12
+  },
+  {
+    "pair_id": 751,
+    "variant": 0,
+    "total_delta_squared_norm": 50890.643573964684,
+    "retained_squared_norm": 6072.353668156487,
+    "lost_squared_norm": 44818.2899058082,
+    "retained_fraction": 0.11932161280945291,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 751,
+    "variant": 1,
+    "total_delta_squared_norm": 65833.12841447988,
+    "retained_squared_norm": 6538.587846907168,
+    "lost_squared_norm": 59294.54056757271,
+    "retained_fraction": 0.09932063087965019,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 752,
+    "variant": 0,
+    "total_delta_squared_norm": 57856.22424763652,
+    "retained_squared_norm": 4994.122872010925,
+    "lost_squared_norm": 52862.101375625585,
+    "retained_fraction": 0.08631954360925893,
+    "orthogonality_residual": 1.4551915228366852e-11
+  },
+  {
+    "pair_id": 752,
+    "variant": 1,
+    "total_delta_squared_norm": 58257.56040778739,
+    "retained_squared_norm": 6154.5590121949435,
+    "lost_squared_norm": 52103.00139559245,
+    "retained_fraction": 0.1056439536622315,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 753,
+    "variant": 0,
+    "total_delta_squared_norm": 32128.5859577368,
+    "retained_squared_norm": 2985.736812119534,
+    "lost_squared_norm": 29142.84914561727,
+    "retained_fraction": 0.0929308503040591,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 753,
+    "variant": 1,
+    "total_delta_squared_norm": 48715.7501059073,
+    "retained_squared_norm": 3921.1639843694015,
+    "lost_squared_norm": 44794.5861215379,
+    "retained_fraction": 0.08049068270210047,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 754,
+    "variant": 0,
+    "total_delta_squared_norm": 54708.573992030084,
+    "retained_squared_norm": 5873.758055242864,
+    "lost_squared_norm": 48834.815936787214,
+    "retained_fraction": 0.10736448835421208,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 754,
+    "variant": 1,
+    "total_delta_squared_norm": 55983.58583192619,
+    "retained_squared_norm": 5552.21506264611,
+    "lost_squared_norm": 50431.37076928008,
+    "retained_fraction": 0.0991757669706074,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 755,
+    "variant": 0,
+    "total_delta_squared_norm": 54294.77908156823,
+    "retained_squared_norm": 6369.785617847678,
+    "lost_squared_norm": 47924.99346372055,
+    "retained_fraction": 0.11731856590259276,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 755,
+    "variant": 1,
+    "total_delta_squared_norm": 63993.98725218486,
+    "retained_squared_norm": 6582.693301351904,
+    "lost_squared_norm": 57411.29395083295,
+    "retained_fraction": 0.10286424684574033,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 756,
+    "variant": 0,
+    "total_delta_squared_norm": 38446.616195045295,
+    "retained_squared_norm": 3326.2792429765195,
+    "lost_squared_norm": 35120.336952068785,
+    "retained_fraction": 0.0865168270232631,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 756,
+    "variant": 1,
+    "total_delta_squared_norm": 54870.22442791745,
+    "retained_squared_norm": 4903.975796246499,
+    "lost_squared_norm": 49966.24863167095,
+    "retained_fraction": 0.08937407942788371,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 757,
+    "variant": 0,
+    "total_delta_squared_norm": 60105.44855084465,
+    "retained_squared_norm": 5561.008779389882,
+    "lost_squared_norm": 54544.43977145477,
+    "retained_fraction": 0.09252087645075455,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 757,
+    "variant": 1,
+    "total_delta_squared_norm": 58646.171165584106,
+    "retained_squared_norm": 6276.863509152357,
+    "lost_squared_norm": 52369.30765643175,
+    "retained_fraction": 0.10702938289747839,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 758,
+    "variant": 0,
+    "total_delta_squared_norm": 48857.38210800419,
+    "retained_squared_norm": 3943.8527874073325,
+    "lost_squared_norm": 44913.52932059686,
+    "retained_fraction": 0.08072173778548034,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 758,
+    "variant": 1,
+    "total_delta_squared_norm": 50776.31787737708,
+    "retained_squared_norm": 4403.990800982892,
+    "lost_squared_norm": 46372.32707639419,
+    "retained_fraction": 0.08673316587505156,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 759,
+    "variant": 0,
+    "total_delta_squared_norm": 61221.887281592586,
+    "retained_squared_norm": 6161.213403113023,
+    "lost_squared_norm": 55060.67387847957,
+    "retained_fraction": 0.10063743011995478,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 759,
+    "variant": 1,
+    "total_delta_squared_norm": 45464.67784041041,
+    "retained_squared_norm": 4718.114396663043,
+    "lost_squared_norm": 40746.56344374737,
+    "retained_fraction": 0.10377538389746242,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 760,
+    "variant": 0,
+    "total_delta_squared_norm": 58213.520282466896,
+    "retained_squared_norm": 6353.627098695164,
+    "lost_squared_norm": 51859.89318377173,
+    "retained_fraction": 0.10914349566674099,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 760,
+    "variant": 1,
+    "total_delta_squared_norm": 56556.40969212208,
+    "retained_squared_norm": 5255.401084997648,
+    "lost_squared_norm": 51301.00860712443,
+    "retained_fraction": 0.09292317375884787,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 761,
+    "variant": 0,
+    "total_delta_squared_norm": 59099.1365637982,
+    "retained_squared_norm": 5832.163872826783,
+    "lost_squared_norm": 53266.972690971415,
+    "retained_fraction": 0.09868441760618439,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 761,
+    "variant": 1,
+    "total_delta_squared_norm": 60731.792657497,
+    "retained_squared_norm": 5879.94440230849,
+    "lost_squared_norm": 54851.8482551885,
+    "retained_fraction": 0.09681822559510178,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 762,
+    "variant": 0,
+    "total_delta_squared_norm": 37364.96410873532,
+    "retained_squared_norm": 4800.79783449935,
+    "lost_squared_norm": 32564.16627423597,
+    "retained_fraction": 0.1284839407453626,
+    "orthogonality_residual": 3.637978807091713e-12
+  },
+  {
+    "pair_id": 762,
+    "variant": 1,
+    "total_delta_squared_norm": 49838.92793584897,
+    "retained_squared_norm": 6640.52545228615,
+    "lost_squared_norm": 43198.402483562815,
+    "retained_fraction": 0.1332397330222194,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 763,
+    "variant": 0,
+    "total_delta_squared_norm": 47055.16445839785,
+    "retained_squared_norm": 4414.659619833646,
+    "lost_squared_norm": 42640.5048385642,
+    "retained_fraction": 0.09381881182748197,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 763,
+    "variant": 1,
+    "total_delta_squared_norm": 74587.29696068699,
+    "retained_squared_norm": 7824.290728089167,
+    "lost_squared_norm": 66763.00623259784,
+    "retained_fraction": 0.1049011165026284,
+    "orthogonality_residual": 1.4551915228366852e-11
+  },
+  {
+    "pair_id": 764,
+    "variant": 0,
+    "total_delta_squared_norm": 54376.60070880471,
+    "retained_squared_norm": 5246.859376867977,
+    "lost_squared_norm": 49129.74133193673,
+    "retained_fraction": 0.09649112501470508,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 764,
+    "variant": 1,
+    "total_delta_squared_norm": 54457.5321952765,
+    "retained_squared_norm": 5000.282967503381,
+    "lost_squared_norm": 49457.24922777312,
+    "retained_fraction": 0.09181985973167348,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 765,
+    "variant": 0,
+    "total_delta_squared_norm": 58904.77829533837,
+    "retained_squared_norm": 6134.866963090052,
+    "lost_squared_norm": 52769.911332248324,
+    "retained_fraction": 0.10414888470220345,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 765,
+    "variant": 1,
+    "total_delta_squared_norm": 53919.83624419115,
+    "retained_squared_norm": 5678.494035004802,
+    "lost_squared_norm": 48241.34220918635,
+    "retained_fraction": 0.10531363651195348,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 766,
+    "variant": 0,
+    "total_delta_squared_norm": 61362.006074854624,
+    "retained_squared_norm": 5446.610145148143,
+    "lost_squared_norm": 55915.39592970648,
+    "retained_fraction": 0.08876193093335152,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 766,
+    "variant": 1,
+    "total_delta_squared_norm": 46911.587841434,
+    "retained_squared_norm": 5275.6841560052035,
+    "lost_squared_norm": 41635.903685428784,
+    "retained_fraction": 0.11246014894736797,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 767,
+    "variant": 0,
+    "total_delta_squared_norm": 71587.18120630892,
+    "retained_squared_norm": 6464.428136522777,
+    "lost_squared_norm": 65122.75306978613,
+    "retained_fraction": 0.09030147615245217,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 767,
+    "variant": 1,
+    "total_delta_squared_norm": 54357.49114643918,
+    "retained_squared_norm": 6067.364119911852,
+    "lost_squared_norm": 48290.12702652732,
+    "retained_fraction": 0.11161964969218985,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 768,
+    "variant": 0,
+    "total_delta_squared_norm": 79383.58247039601,
+    "retained_squared_norm": 8375.65859492689,
+    "lost_squared_norm": 71007.92387546913,
+    "retained_fraction": 0.10550870008985004,
+    "orthogonality_residual": 1.4551915228366852e-11
+  },
+  {
+    "pair_id": 768,
+    "variant": 1,
+    "total_delta_squared_norm": 49074.54738382119,
+    "retained_squared_norm": 4808.38784615051,
+    "lost_squared_norm": 44266.15953767068,
+    "retained_fraction": 0.09798129789243315,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 769,
+    "variant": 0,
+    "total_delta_squared_norm": 44749.20801789027,
+    "retained_squared_norm": 3816.9386652620306,
+    "lost_squared_norm": 40932.26935262824,
+    "retained_fraction": 0.0852962283429923,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 769,
+    "variant": 1,
+    "total_delta_squared_norm": 31198.585818637228,
+    "retained_squared_norm": 4096.575584747034,
+    "lost_squared_norm": 27102.010233890196,
+    "retained_fraction": 0.13130645115009815,
+    "orthogonality_residual": 3.637978807091713e-12
+  },
+  {
+    "pair_id": 770,
+    "variant": 0,
+    "total_delta_squared_norm": 52800.18754598555,
+    "retained_squared_norm": 4551.135182267237,
+    "lost_squared_norm": 48249.052363718314,
+    "retained_fraction": 0.08619543592157683,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 770,
+    "variant": 1,
+    "total_delta_squared_norm": 44627.17377646605,
+    "retained_squared_norm": 4163.761802860708,
+    "lost_squared_norm": 40463.41197360533,
+    "retained_fraction": 0.09330104173113579,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 771,
+    "variant": 0,
+    "total_delta_squared_norm": 63239.35520818447,
+    "retained_squared_norm": 5472.831388958922,
+    "lost_squared_norm": 57766.523819225564,
+    "retained_fraction": 0.08654154317263857,
+    "orthogonality_residual": 1.4551915228366852e-11
+  },
+  {
+    "pair_id": 771,
+    "variant": 1,
+    "total_delta_squared_norm": 51808.91550623854,
+    "retained_squared_norm": 5471.223484851032,
+    "lost_squared_norm": 46337.69202138751,
+    "retained_fraction": 0.1056038990855197,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 772,
+    "variant": 0,
+    "total_delta_squared_norm": 26963.058325881255,
+    "retained_squared_norm": 2375.5503512006,
+    "lost_squared_norm": 24587.50797468066,
+    "retained_fraction": 0.08810389097887908,
+    "orthogonality_residual": 3.637978807091713e-12
+  },
+  {
+    "pair_id": 772,
+    "variant": 1,
+    "total_delta_squared_norm": 30255.730678746957,
+    "retained_squared_norm": 3638.982407706411,
+    "lost_squared_norm": 26616.748271040546,
+    "retained_fraction": 0.12027415388988119,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 773,
+    "variant": 0,
+    "total_delta_squared_norm": 70174.73955329412,
+    "retained_squared_norm": 6922.4158743164935,
+    "lost_squared_norm": 63252.32367897763,
+    "retained_fraction": 0.0986454088519883,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 773,
+    "variant": 1,
+    "total_delta_squared_norm": 43819.06067672065,
+    "retained_squared_norm": 4155.241493137249,
+    "lost_squared_norm": 39663.8191835834,
+    "retained_fraction": 0.09482726076199907,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 774,
+    "variant": 0,
+    "total_delta_squared_norm": 53867.58453847692,
+    "retained_squared_norm": 6086.990858251389,
+    "lost_squared_norm": 47780.59368022553,
+    "retained_fraction": 0.11299914244165765,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 774,
+    "variant": 1,
+    "total_delta_squared_norm": 52947.46271480249,
+    "retained_squared_norm": 4697.2338324662405,
+    "lost_squared_norm": 48250.228882336254,
+    "retained_fraction": 0.08871499391325957,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 775,
+    "variant": 0,
+    "total_delta_squared_norm": 35779.758315101775,
+    "retained_squared_norm": 2884.252526181493,
+    "lost_squared_norm": 32895.50578892027,
+    "retained_fraction": 0.08061129146767097,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 775,
+    "variant": 1,
+    "total_delta_squared_norm": 39329.868161667924,
+    "retained_squared_norm": 3297.6795505176024,
+    "lost_squared_norm": 36032.18861115031,
+    "retained_fraction": 0.0838466972978979,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 776,
+    "variant": 0,
+    "total_delta_squared_norm": 53804.23240338142,
+    "retained_squared_norm": 6259.951203485789,
+    "lost_squared_norm": 47544.28119989564,
+    "retained_fraction": 0.11634681741305487,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 776,
+    "variant": 1,
+    "total_delta_squared_norm": 57258.13868224465,
+    "retained_squared_norm": 7505.720486589913,
+    "lost_squared_norm": 49752.41819565474,
+    "retained_fraction": 0.1310856527880356,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 777,
+    "variant": 0,
+    "total_delta_squared_norm": 59543.488816443896,
+    "retained_squared_norm": 5646.0208961202625,
+    "lost_squared_norm": 53897.467920323645,
+    "retained_fraction": 0.09482180181825393,
+    "orthogonality_residual": 1.4551915228366852e-11
+  },
+  {
+    "pair_id": 777,
+    "variant": 1,
+    "total_delta_squared_norm": 62009.73873051924,
+    "retained_squared_norm": 5550.735204652889,
+    "lost_squared_norm": 56459.003525866356,
+    "retained_fraction": 0.08951392665553987,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 778,
+    "variant": 0,
+    "total_delta_squared_norm": 38346.27174192312,
+    "retained_squared_norm": 3753.1612878744327,
+    "lost_squared_norm": 34593.110454048685,
+    "retained_fraction": 0.09787552002796625,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 778,
+    "variant": 1,
+    "total_delta_squared_norm": 54288.18850051924,
+    "retained_squared_norm": 6137.221346720109,
+    "lost_squared_norm": 48150.96715379913,
+    "retained_fraction": 0.11304892493624852,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 779,
+    "variant": 0,
+    "total_delta_squared_norm": 52649.97706856165,
+    "retained_squared_norm": 5762.778142471582,
+    "lost_squared_norm": 46887.198926090074,
+    "retained_fraction": 0.10945452331284397,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 779,
+    "variant": 1,
+    "total_delta_squared_norm": 62366.69522447135,
+    "retained_squared_norm": 6652.453741518708,
+    "lost_squared_norm": 55714.24148295264,
+    "retained_fraction": 0.10666676689497616,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 780,
+    "variant": 0,
+    "total_delta_squared_norm": 63936.01933661282,
+    "retained_squared_norm": 6105.51155005323,
+    "lost_squared_norm": 57830.507786559596,
+    "retained_fraction": 0.09549408320071816,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 780,
+    "variant": 1,
+    "total_delta_squared_norm": 47005.57573467404,
+    "retained_squared_norm": 3395.3376193296754,
+    "lost_squared_norm": 43610.23811534437,
+    "retained_fraction": 0.07223265679150223,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 781,
+    "variant": 0,
+    "total_delta_squared_norm": 63619.46083741429,
+    "retained_squared_norm": 7114.243209972468,
+    "lost_squared_norm": 56505.21762744183,
+    "retained_fraction": 0.11182495287336068,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 781,
+    "variant": 1,
+    "total_delta_squared_norm": 44867.80010549635,
+    "retained_squared_norm": 4660.618545473913,
+    "lost_squared_norm": 40207.181560022436,
+    "retained_fraction": 0.10387446084977504,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 782,
+    "variant": 0,
+    "total_delta_squared_norm": 61829.999776512814,
+    "retained_squared_norm": 6761.106608046047,
+    "lost_squared_norm": 55068.89316846676,
+    "retained_fraction": 0.10934993744920518,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 782,
+    "variant": 1,
+    "total_delta_squared_norm": 48575.433941047966,
+    "retained_squared_norm": 4588.559121152295,
+    "lost_squared_norm": 43986.874819895675,
+    "retained_fraction": 0.09446254513590253,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 783,
+    "variant": 0,
+    "total_delta_squared_norm": 58516.18058980025,
+    "retained_squared_norm": 5592.251311661665,
+    "lost_squared_norm": 52923.92927813858,
+    "retained_fraction": 0.09556760634914764,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 783,
+    "variant": 1,
+    "total_delta_squared_norm": 62846.34729848098,
+    "retained_squared_norm": 5545.542198939873,
+    "lost_squared_norm": 57300.80509954111,
+    "retained_fraction": 0.08823968993141326,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 784,
+    "variant": 0,
+    "total_delta_squared_norm": 44974.901236373946,
+    "retained_squared_norm": 4841.72844910631,
+    "lost_squared_norm": 40133.17278726764,
+    "retained_fraction": 0.10765400959214357,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 784,
+    "variant": 1,
+    "total_delta_squared_norm": 47704.95094560301,
+    "retained_squared_norm": 4409.397015712686,
+    "lost_squared_norm": 43295.55392989032,
+    "retained_fraction": 0.09243059532207952,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 785,
+    "variant": 0,
+    "total_delta_squared_norm": 57214.72213621787,
+    "retained_squared_norm": 6689.27049376086,
+    "lost_squared_norm": 50525.45164245702,
+    "retained_fraction": 0.1169151967186858,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 785,
+    "variant": 1,
+    "total_delta_squared_norm": 53585.76745972391,
+    "retained_squared_norm": 5358.613016523539,
+    "lost_squared_norm": 48227.15444320037,
+    "retained_fraction": 0.10000067686911782,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 786,
+    "variant": 0,
+    "total_delta_squared_norm": 59757.75374064754,
+    "retained_squared_norm": 7056.72786694786,
+    "lost_squared_norm": 52701.02587369968,
+    "retained_fraction": 0.11808890771856166,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 786,
+    "variant": 1,
+    "total_delta_squared_norm": 53566.94997761719,
+    "retained_squared_norm": 4748.15018209224,
+    "lost_squared_norm": 48818.799795524945,
+    "retained_fraction": 0.08863954703555538,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 787,
+    "variant": 0,
+    "total_delta_squared_norm": 67451.47274331056,
+    "retained_squared_norm": 8772.414740113381,
+    "lost_squared_norm": 58679.05800319718,
+    "retained_fraction": 0.13005519943941296,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 787,
+    "variant": 1,
+    "total_delta_squared_norm": 67374.36477466169,
+    "retained_squared_norm": 7215.04979891282,
+    "lost_squared_norm": 60159.31497574887,
+    "retained_fraction": 0.10708894730279182,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 788,
+    "variant": 0,
+    "total_delta_squared_norm": 53823.01858415533,
+    "retained_squared_norm": 3953.489472146781,
+    "lost_squared_norm": 49869.52911200855,
+    "retained_fraction": 0.0734535069965516,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 788,
+    "variant": 1,
+    "total_delta_squared_norm": 49072.90475314124,
+    "retained_squared_norm": 3875.128317457483,
+    "lost_squared_norm": 45197.77643568376,
+    "retained_fraction": 0.07896676051583086,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 789,
+    "variant": 0,
+    "total_delta_squared_norm": 55511.863488523326,
+    "retained_squared_norm": 6223.41077995717,
+    "lost_squared_norm": 49288.452708566154,
+    "retained_fraction": 0.11210956341330201,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 789,
+    "variant": 1,
+    "total_delta_squared_norm": 48790.70557181325,
+    "retained_squared_norm": 5658.060013476232,
+    "lost_squared_norm": 43132.645558337026,
+    "retained_fraction": 0.11596593956093422,
+    "orthogonality_residual": 1.4551915228366852e-11
+  },
+  {
+    "pair_id": 790,
+    "variant": 0,
+    "total_delta_squared_norm": 68221.75746017006,
+    "retained_squared_norm": 5769.300409142354,
+    "lost_squared_norm": 62452.4570510277,
+    "retained_fraction": 0.08456686875166836,
+    "orthogonality_residual": 1.4551915228366852e-11
+  },
+  {
+    "pair_id": 790,
+    "variant": 1,
+    "total_delta_squared_norm": 68911.16441734607,
+    "retained_squared_norm": 6821.38775040807,
+    "lost_squared_norm": 62089.77666693799,
+    "retained_fraction": 0.09898813651001108,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 791,
+    "variant": 0,
+    "total_delta_squared_norm": 37607.927329910046,
+    "retained_squared_norm": 3491.9120168550057,
+    "lost_squared_norm": 34116.01531305503,
+    "retained_fraction": 0.09285042449222787,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 791,
+    "variant": 1,
+    "total_delta_squared_norm": 42251.451355219964,
+    "retained_squared_norm": 3567.185040972423,
+    "lost_squared_norm": 38684.26631424754,
+    "retained_fraction": 0.08442751495048263,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 792,
+    "variant": 0,
+    "total_delta_squared_norm": 55891.90778458945,
+    "retained_squared_norm": 5299.661246629526,
+    "lost_squared_norm": 50592.246537959916,
+    "retained_fraction": 0.09481983093249775,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 792,
+    "variant": 1,
+    "total_delta_squared_norm": 56757.3771437681,
+    "retained_squared_norm": 5111.004588936095,
+    "lost_squared_norm": 51646.37255483201,
+    "retained_fraction": 0.09005004893002316,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 793,
+    "variant": 0,
+    "total_delta_squared_norm": 58512.896663576146,
+    "retained_squared_norm": 4963.463919202968,
+    "lost_squared_norm": 53549.432744373175,
+    "retained_fraction": 0.08482683651333721,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 793,
+    "variant": 1,
+    "total_delta_squared_norm": 51287.97877528521,
+    "retained_squared_norm": 5223.0669843424475,
+    "lost_squared_norm": 46064.91179094276,
+    "retained_fraction": 0.10183803513152585,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 794,
+    "variant": 0,
+    "total_delta_squared_norm": 27391.863275248845,
+    "retained_squared_norm": 2477.293940897715,
+    "lost_squared_norm": 24914.56933435113,
+    "retained_fraction": 0.09043904447114358,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 794,
+    "variant": 1,
+    "total_delta_squared_norm": 32592.907966335468,
+    "retained_squared_norm": 3325.805576381847,
+    "lost_squared_norm": 29267.102389953623,
+    "retained_fraction": 0.10204077463161623,
+    "orthogonality_residual": 3.637978807091713e-12
+  },
+  {
+    "pair_id": 795,
+    "variant": 0,
+    "total_delta_squared_norm": 65632.16780541763,
+    "retained_squared_norm": 7358.701464198528,
+    "lost_squared_norm": 58273.4663412191,
+    "retained_fraction": 0.11212034754078475,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 795,
+    "variant": 1,
+    "total_delta_squared_norm": 64524.19546836127,
+    "retained_squared_norm": 6667.965943556754,
+    "lost_squared_norm": 57856.22952480451,
+    "retained_fraction": 0.10334055148082114,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 796,
+    "variant": 0,
+    "total_delta_squared_norm": 61491.92306379876,
+    "retained_squared_norm": 5829.233034164083,
+    "lost_squared_norm": 55662.69002963467,
+    "retained_fraction": 0.09479672685006402,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 796,
+    "variant": 1,
+    "total_delta_squared_norm": 53552.38338820344,
+    "retained_squared_norm": 5057.948371196542,
+    "lost_squared_norm": 48494.435017006894,
+    "retained_fraction": 0.09444861369719562,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 797,
+    "variant": 0,
+    "total_delta_squared_norm": 37150.48666512024,
+    "retained_squared_norm": 3033.1881281105943,
+    "lost_squared_norm": 34117.29853700964,
+    "retained_fraction": 0.08164598637568823,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 797,
+    "variant": 1,
+    "total_delta_squared_norm": 47729.66141236871,
+    "retained_squared_norm": 4005.290871981263,
+    "lost_squared_norm": 43724.37054038745,
+    "retained_fraction": 0.08391618028413937,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 798,
+    "variant": 0,
+    "total_delta_squared_norm": 80916.72065759315,
+    "retained_squared_norm": 6756.252717939348,
+    "lost_squared_norm": 74160.4679396538,
+    "retained_fraction": 0.08349637334573998,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 798,
+    "variant": 1,
+    "total_delta_squared_norm": 64272.53247669137,
+    "retained_squared_norm": 6347.499299951922,
+    "lost_squared_norm": 57925.03317673945,
+    "retained_fraction": 0.09875912859437835,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 799,
+    "variant": 0,
+    "total_delta_squared_norm": 59998.34426211261,
+    "retained_squared_norm": 5817.035463922231,
+    "lost_squared_norm": 54181.30879819038,
+    "retained_fraction": 0.0969532665519828,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 799,
+    "variant": 1,
+    "total_delta_squared_norm": 71549.57952071715,
+    "retained_squared_norm": 7644.841939926686,
+    "lost_squared_norm": 63904.73758079046,
+    "retained_fraction": 0.10684677661471267,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 800,
+    "variant": 0,
+    "total_delta_squared_norm": 47381.31683228703,
+    "retained_squared_norm": 4305.144802201352,
+    "lost_squared_norm": 43076.17203008567,
+    "retained_fraction": 0.09086165370709365,
+    "orthogonality_residual": 1.4551915228366852e-11
+  },
+  {
+    "pair_id": 800,
+    "variant": 1,
+    "total_delta_squared_norm": 62558.294405459106,
+    "retained_squared_norm": 5051.91270939822,
+    "lost_squared_norm": 57506.38169606089,
+    "retained_fraction": 0.08075528205189315,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 801,
+    "variant": 0,
+    "total_delta_squared_norm": 62350.97199783507,
+    "retained_squared_norm": 6220.9241443292885,
+    "lost_squared_norm": 56130.04785350578,
+    "retained_fraction": 0.09977268910170782,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 801,
+    "variant": 1,
+    "total_delta_squared_norm": 46696.68167009022,
+    "retained_squared_norm": 5027.110167881963,
+    "lost_squared_norm": 41669.57150220825,
+    "retained_fraction": 0.10765454820533613,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 802,
+    "variant": 0,
+    "total_delta_squared_norm": 49627.52459240869,
+    "retained_squared_norm": 3829.015434016437,
+    "lost_squared_norm": 45798.509158392255,
+    "retained_fraction": 0.07715507604830536,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 802,
+    "variant": 1,
+    "total_delta_squared_norm": 42875.758643405396,
+    "retained_squared_norm": 3831.832654517759,
+    "lost_squared_norm": 39043.92598888764,
+    "retained_fraction": 0.08937060884185948,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 803,
+    "variant": 0,
+    "total_delta_squared_norm": 66360.85689621574,
+    "retained_squared_norm": 8005.194510454472,
+    "lost_squared_norm": 58355.66238576127,
+    "retained_fraction": 0.1206312709761132,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 803,
+    "variant": 1,
+    "total_delta_squared_norm": 43975.83349426376,
+    "retained_squared_norm": 4586.062317318041,
+    "lost_squared_norm": 39389.77117694572,
+    "retained_fraction": 0.10428596692581735,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 804,
+    "variant": 0,
+    "total_delta_squared_norm": 50495.910348615595,
+    "retained_squared_norm": 6569.121444849942,
+    "lost_squared_norm": 43926.78890376566,
+    "retained_fraction": 0.13009214804719413,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 804,
+    "variant": 1,
+    "total_delta_squared_norm": 56760.400008089186,
+    "retained_squared_norm": 5878.471513748393,
+    "lost_squared_norm": 50881.928494340784,
+    "retained_fraction": 0.1035664215352715,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 805,
+    "variant": 0,
+    "total_delta_squared_norm": 64064.638185555894,
+    "retained_squared_norm": 6021.434078736325,
+    "lost_squared_norm": 58043.204106819554,
+    "retained_fraction": 0.09398998026486828,
+    "orthogonality_residual": 1.4551915228366852e-11
+  },
+  {
+    "pair_id": 805,
+    "variant": 1,
+    "total_delta_squared_norm": 51517.75613042715,
+    "retained_squared_norm": 5197.356158530489,
+    "lost_squared_norm": 46320.399971896666,
+    "retained_fraction": 0.10088475409084934,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 806,
+    "variant": 0,
+    "total_delta_squared_norm": 49983.163646863395,
+    "retained_squared_norm": 5363.497527977635,
+    "lost_squared_norm": 44619.666118885754,
+    "retained_fraction": 0.10730608342183663,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 806,
+    "variant": 1,
+    "total_delta_squared_norm": 55821.053031854055,
+    "retained_squared_norm": 7539.727819949232,
+    "lost_squared_norm": 48281.32521190483,
+    "retained_fraction": 0.13506960923232167,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 807,
+    "variant": 0,
+    "total_delta_squared_norm": 37789.26790036731,
+    "retained_squared_norm": 4215.039501247599,
+    "lost_squared_norm": 33574.228399119726,
+    "retained_fraction": 0.11154064991046383,
+    "orthogonality_residual": 1.4551915228366852e-11
+  },
+  {
+    "pair_id": 807,
+    "variant": 1,
+    "total_delta_squared_norm": 54633.376830142835,
+    "retained_squared_norm": 5011.9366278050875,
+    "lost_squared_norm": 49621.44020233775,
+    "retained_fraction": 0.09173763216920275,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 808,
+    "variant": 0,
+    "total_delta_squared_norm": 68029.68732973842,
+    "retained_squared_norm": 5523.384099283489,
+    "lost_squared_norm": 62506.303230454934,
+    "retained_fraction": 0.08119079061045462,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 808,
+    "variant": 1,
+    "total_delta_squared_norm": 55971.25901972577,
+    "retained_squared_norm": 4873.460279939751,
+    "lost_squared_norm": 51097.79873978602,
+    "retained_fraction": 0.08707076391156778,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 809,
+    "variant": 0,
+    "total_delta_squared_norm": 50073.335798596905,
+    "retained_squared_norm": 5401.650924556599,
+    "lost_squared_norm": 44671.68487404031,
+    "retained_fraction": 0.10787479680369044,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 809,
+    "variant": 1,
+    "total_delta_squared_norm": 65679.14951011,
+    "retained_squared_norm": 6802.73144242144,
+    "lost_squared_norm": 58876.418067688566,
+    "retained_fraction": 0.1035752060305576,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 810,
+    "variant": 0,
+    "total_delta_squared_norm": 74550.17984301536,
+    "retained_squared_norm": 6026.280151663317,
+    "lost_squared_norm": 68523.89969135204,
+    "retained_fraction": 0.0808352195038725,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 810,
+    "variant": 1,
+    "total_delta_squared_norm": 38790.51794960239,
+    "retained_squared_norm": 3605.5823553532864,
+    "lost_squared_norm": 35184.9355942491,
+    "retained_fraction": 0.092950095691884,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 811,
+    "variant": 0,
+    "total_delta_squared_norm": 58348.72043830935,
+    "retained_squared_norm": 6451.024032692056,
+    "lost_squared_norm": 51897.69640561729,
+    "retained_fraction": 0.1105598200651643,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 811,
+    "variant": 1,
+    "total_delta_squared_norm": 68548.78978354468,
+    "retained_squared_norm": 5126.401051209756,
+    "lost_squared_norm": 63422.38873233493,
+    "retained_fraction": 0.07478470542510383,
+    "orthogonality_residual": 1.4551915228366852e-11
+  },
+  {
+    "pair_id": 812,
+    "variant": 0,
+    "total_delta_squared_norm": 83304.85590425233,
+    "retained_squared_norm": 9742.472233969545,
+    "lost_squared_norm": 73562.38367028278,
+    "retained_fraction": 0.11694963190581832,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 812,
+    "variant": 1,
+    "total_delta_squared_norm": 64855.66546884904,
+    "retained_squared_norm": 6375.0659352833745,
+    "lost_squared_norm": 58480.59953356567,
+    "retained_fraction": 0.09829620726573834,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 813,
+    "variant": 0,
+    "total_delta_squared_norm": 47035.01069709526,
+    "retained_squared_norm": 3858.188620672196,
+    "lost_squared_norm": 43176.82207642308,
+    "retained_fraction": 0.08202801622644185,
+    "orthogonality_residual": 1.4551915228366852e-11
+  },
+  {
+    "pair_id": 813,
+    "variant": 1,
+    "total_delta_squared_norm": 40834.134962122575,
+    "retained_squared_norm": 3097.0523101030394,
+    "lost_squared_norm": 37737.08265201953,
+    "retained_fraction": 0.0758446900607994,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 814,
+    "variant": 0,
+    "total_delta_squared_norm": 55684.31866707933,
+    "retained_squared_norm": 4951.0651932795445,
+    "lost_squared_norm": 50733.253473799785,
+    "retained_fraction": 0.08891309639398755,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 814,
+    "variant": 1,
+    "total_delta_squared_norm": 46198.46790232962,
+    "retained_squared_norm": 4067.2454114578254,
+    "lost_squared_norm": 42131.22249087179,
+    "retained_fraction": 0.08803853452578952,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 815,
+    "variant": 0,
+    "total_delta_squared_norm": 51244.0874668684,
+    "retained_squared_norm": 4705.76007127692,
+    "lost_squared_norm": 46538.32739559147,
+    "retained_fraction": 0.09183030284848774,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 815,
+    "variant": 1,
+    "total_delta_squared_norm": 59303.17113995012,
+    "retained_squared_norm": 6195.977854459362,
+    "lost_squared_norm": 53107.19328549076,
+    "retained_fraction": 0.10447970547540222,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 816,
+    "variant": 0,
+    "total_delta_squared_norm": 13940.72821212376,
+    "retained_squared_norm": 939.878422733035,
+    "lost_squared_norm": 13000.849789390726,
+    "retained_fraction": 0.06741960738576452,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 816,
+    "variant": 1,
+    "total_delta_squared_norm": 13626.668245811616,
+    "retained_squared_norm": 1138.6618536737044,
+    "lost_squared_norm": 12488.006392137911,
+    "retained_fraction": 0.08356128094801832,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 817,
+    "variant": 0,
+    "total_delta_squared_norm": 61388.51235636642,
+    "retained_squared_norm": 5786.1967896376245,
+    "lost_squared_norm": 55602.31556672879,
+    "retained_fraction": 0.09425536745455203,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 817,
+    "variant": 1,
+    "total_delta_squared_norm": 55854.87488184762,
+    "retained_squared_norm": 5643.542002874434,
+    "lost_squared_norm": 50211.33287897319,
+    "retained_fraction": 0.10103938133981101,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 818,
+    "variant": 0,
+    "total_delta_squared_norm": 56243.956689004015,
+    "retained_squared_norm": 5815.545967721977,
+    "lost_squared_norm": 50428.41072128204,
+    "retained_fraction": 0.10339859266798251,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 818,
+    "variant": 1,
+    "total_delta_squared_norm": 65130.35282622196,
+    "retained_squared_norm": 5934.295359430211,
+    "lost_squared_norm": 59196.05746679175,
+    "retained_fraction": 0.09111412884962938,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 819,
+    "variant": 0,
+    "total_delta_squared_norm": 36650.41538433288,
+    "retained_squared_norm": 3107.73195162927,
+    "lost_squared_norm": 33542.68343270361,
+    "retained_fraction": 0.08479390803733554,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 819,
+    "variant": 1,
+    "total_delta_squared_norm": 30968.16415424557,
+    "retained_squared_norm": 2843.994621380545,
+    "lost_squared_norm": 28124.169532865024,
+    "retained_fraction": 0.09183607420883064,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 820,
+    "variant": 0,
+    "total_delta_squared_norm": 69660.34719383702,
+    "retained_squared_norm": 6123.915761341912,
+    "lost_squared_norm": 63536.43143249511,
+    "retained_fraction": 0.0879110714780317,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 820,
+    "variant": 1,
+    "total_delta_squared_norm": 60326.57668317092,
+    "retained_squared_norm": 5287.371339327032,
+    "lost_squared_norm": 55039.20534384389,
+    "retained_fraction": 0.08764580438727315,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 821,
+    "variant": 0,
+    "total_delta_squared_norm": 54401.235557907945,
+    "retained_squared_norm": 4455.402913449202,
+    "lost_squared_norm": 49945.832644458744,
+    "retained_fraction": 0.08189892872390009,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 821,
+    "variant": 1,
+    "total_delta_squared_norm": 57220.3313542361,
+    "retained_squared_norm": 5007.067743340593,
+    "lost_squared_norm": 52213.26361089551,
+    "retained_fraction": 0.08750504628054574,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 822,
+    "variant": 0,
+    "total_delta_squared_norm": 62844.83309498234,
+    "retained_squared_norm": 6068.224820457994,
+    "lost_squared_norm": 56776.60827452435,
+    "retained_fraction": 0.09655885013309858,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 822,
+    "variant": 1,
+    "total_delta_squared_norm": 46075.80194050793,
+    "retained_squared_norm": 4052.0411761966434,
+    "lost_squared_norm": 42023.760764311286,
+    "retained_fraction": 0.08794293328694637,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 823,
+    "variant": 0,
+    "total_delta_squared_norm": 53572.76072236494,
+    "retained_squared_norm": 5101.726111957005,
+    "lost_squared_norm": 48471.03461040793,
+    "retained_fraction": 0.09522985269316529,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 823,
+    "variant": 1,
+    "total_delta_squared_norm": 46925.1621651094,
+    "retained_squared_norm": 5098.616099100957,
+    "lost_squared_norm": 41826.54606600844,
+    "retained_fraction": 0.10865420307256748,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 824,
+    "variant": 0,
+    "total_delta_squared_norm": 66661.44210077176,
+    "retained_squared_norm": 5321.5026518356935,
+    "lost_squared_norm": 61339.93944893607,
+    "retained_fraction": 0.07982879583959802,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 824,
+    "variant": 1,
+    "total_delta_squared_norm": 63895.00542315556,
+    "retained_squared_norm": 6136.678734306542,
+    "lost_squared_norm": 57758.32668884902,
+    "retained_fraction": 0.0960431679074967,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 825,
+    "variant": 0,
+    "total_delta_squared_norm": 49288.379093943186,
+    "retained_squared_norm": 5513.3630407931505,
+    "lost_squared_norm": 43775.01605315004,
+    "retained_fraction": 0.11185928898746564,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 825,
+    "variant": 1,
+    "total_delta_squared_norm": 48236.25635041043,
+    "retained_squared_norm": 4501.672711470841,
+    "lost_squared_norm": 43734.58363893959,
+    "retained_fraction": 0.09332549936646435,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 826,
+    "variant": 0,
+    "total_delta_squared_norm": 62037.73643966086,
+    "retained_squared_norm": 7000.74822261359,
+    "lost_squared_norm": 55036.98821704726,
+    "retained_fraction": 0.11284660957000997,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 826,
+    "variant": 1,
+    "total_delta_squared_norm": 41254.92588785845,
+    "retained_squared_norm": 3783.668268154023,
+    "lost_squared_norm": 37471.257619704425,
+    "retained_fraction": 0.0917143392388829,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 827,
+    "variant": 0,
+    "total_delta_squared_norm": 54840.368981067615,
+    "retained_squared_norm": 5409.226443277892,
+    "lost_squared_norm": 49431.142537789725,
+    "retained_fraction": 0.09863585062940229,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 827,
+    "variant": 1,
+    "total_delta_squared_norm": 56600.971308481545,
+    "retained_squared_norm": 5964.426042726345,
+    "lost_squared_norm": 50636.54526575521,
+    "retained_fraction": 0.10537674362900178,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 828,
+    "variant": 0,
+    "total_delta_squared_norm": 52022.16183439948,
+    "retained_squared_norm": 6370.367548026899,
+    "lost_squared_norm": 45651.79428637258,
+    "retained_fraction": 0.1224548792936651,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 828,
+    "variant": 1,
+    "total_delta_squared_norm": 40586.94194092206,
+    "retained_squared_norm": 4452.011743291554,
+    "lost_squared_norm": 36134.9301976305,
+    "retained_fraction": 0.10969074116921293,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 829,
+    "variant": 0,
+    "total_delta_squared_norm": 59708.51082012352,
+    "retained_squared_norm": 6295.986118347991,
+    "lost_squared_norm": 53412.52470177553,
+    "retained_fraction": 0.10544537172121296,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 829,
+    "variant": 1,
+    "total_delta_squared_norm": 57993.88926213664,
+    "retained_squared_norm": 6944.3809017356925,
+    "lost_squared_norm": 51049.50836040094,
+    "retained_fraction": 0.11974332106520018,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 830,
+    "variant": 0,
+    "total_delta_squared_norm": 62814.25730572098,
+    "retained_squared_norm": 6501.381610260962,
+    "lost_squared_norm": 56312.87569546002,
+    "retained_fraction": 0.10350168718255036,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 830,
+    "variant": 1,
+    "total_delta_squared_norm": 54266.672301890154,
+    "retained_squared_norm": 4487.712339674742,
+    "lost_squared_norm": 49778.95996221541,
+    "retained_fraction": 0.08269739324919746,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 831,
+    "variant": 0,
+    "total_delta_squared_norm": 59286.822611044365,
+    "retained_squared_norm": 8057.838010673135,
+    "lost_squared_norm": 51228.98460037123,
+    "retained_fraction": 0.1359127990976542,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 831,
+    "variant": 1,
+    "total_delta_squared_norm": 62315.964233570805,
+    "retained_squared_norm": 7250.139634297021,
+    "lost_squared_norm": 55065.82459927378,
+    "retained_fraction": 0.11634481987829423,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 832,
+    "variant": 0,
+    "total_delta_squared_norm": 50283.818682995654,
+    "retained_squared_norm": 4461.273922920875,
+    "lost_squared_norm": 45822.54476007478,
+    "retained_fraction": 0.08872186002908987,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 832,
+    "variant": 1,
+    "total_delta_squared_norm": 46191.639840233,
+    "retained_squared_norm": 5229.4447670152185,
+    "lost_squared_norm": 40962.19507321778,
+    "retained_fraction": 0.11321193153355778,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 833,
+    "variant": 0,
+    "total_delta_squared_norm": 70962.31951116738,
+    "retained_squared_norm": 7409.069735827102,
+    "lost_squared_norm": 63553.24977534029,
+    "retained_fraction": 0.10440850562475106,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 833,
+    "variant": 1,
+    "total_delta_squared_norm": 67409.44642833648,
+    "retained_squared_norm": 5981.624812214051,
+    "lost_squared_norm": 61427.82161612243,
+    "retained_fraction": 0.08873570588616485,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 834,
+    "variant": 0,
+    "total_delta_squared_norm": 55023.35123347173,
+    "retained_squared_norm": 5851.434078420096,
+    "lost_squared_norm": 49171.91715505164,
+    "retained_fraction": 0.10634456003218792,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 834,
+    "variant": 1,
+    "total_delta_squared_norm": 48775.72376746414,
+    "retained_squared_norm": 5106.508644665003,
+    "lost_squared_norm": 43669.21512279913,
+    "retained_fraction": 0.10469365188736167,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 835,
+    "variant": 0,
+    "total_delta_squared_norm": 35355.62436124291,
+    "retained_squared_norm": 3507.274525912939,
+    "lost_squared_norm": 31848.349835329966,
+    "retained_fraction": 0.09919990353098215,
+    "orthogonality_residual": 3.637978807091713e-12
+  },
+  {
+    "pair_id": 835,
+    "variant": 1,
+    "total_delta_squared_norm": 30875.645939388443,
+    "retained_squared_norm": 2709.0913608805326,
+    "lost_squared_norm": 28166.554578507916,
+    "retained_fraction": 0.08774201408445714,
+    "orthogonality_residual": 3.637978807091713e-12
+  },
+  {
+    "pair_id": 836,
+    "variant": 0,
+    "total_delta_squared_norm": 60287.16895437619,
+    "retained_squared_norm": 5818.033005717833,
+    "lost_squared_norm": 54469.13594865835,
+    "retained_fraction": 0.09650532786040714,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 836,
+    "variant": 1,
+    "total_delta_squared_norm": 64027.24080772039,
+    "retained_squared_norm": 6019.784783878244,
+    "lost_squared_norm": 58007.45602384214,
+    "retained_fraction": 0.09401911917391854,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 837,
+    "variant": 0,
+    "total_delta_squared_norm": 60710.58492287113,
+    "retained_squared_norm": 7291.111668417938,
+    "lost_squared_norm": 53419.4732544532,
+    "retained_fraction": 0.12009621843836332,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 837,
+    "variant": 1,
+    "total_delta_squared_norm": 56019.42923864468,
+    "retained_squared_norm": 6510.533242005164,
+    "lost_squared_norm": 49508.89599663952,
+    "retained_fraction": 0.11621919984707572,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 838,
+    "variant": 0,
+    "total_delta_squared_norm": 27858.97789656905,
+    "retained_squared_norm": 2747.1932647825624,
+    "lost_squared_norm": 25111.784631786486,
+    "retained_fraction": 0.09861069831714432,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 838,
+    "variant": 1,
+    "total_delta_squared_norm": 29085.760150054106,
+    "retained_squared_norm": 3054.6213295975313,
+    "lost_squared_norm": 26031.138820456577,
+    "retained_fraction": 0.10502119641496971,
+    "orthogonality_residual": 3.637978807091713e-12
+  },
+  {
+    "pair_id": 839,
+    "variant": 0,
+    "total_delta_squared_norm": 46159.7007108807,
+    "retained_squared_norm": 3670.923602579726,
+    "lost_squared_norm": 42488.77710830098,
+    "retained_fraction": 0.07952659020846772,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 839,
+    "variant": 1,
+    "total_delta_squared_norm": 53588.07518422385,
+    "retained_squared_norm": 6658.954023425877,
+    "lost_squared_norm": 46929.12116079798,
+    "retained_fraction": 0.12426186237393072,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 840,
+    "variant": 0,
+    "total_delta_squared_norm": 55730.653668850355,
+    "retained_squared_norm": 5120.812604819124,
+    "lost_squared_norm": 50609.84106403123,
+    "retained_fraction": 0.09188502677981884,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 840,
+    "variant": 1,
+    "total_delta_squared_norm": 45367.82769280689,
+    "retained_squared_norm": 5923.619787986263,
+    "lost_squared_norm": 39444.20790482062,
+    "retained_fraction": 0.13056873315813308,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 841,
+    "variant": 0,
+    "total_delta_squared_norm": 31097.892289294832,
+    "retained_squared_norm": 3076.3548945067205,
+    "lost_squared_norm": 28021.53739478811,
+    "retained_fraction": 0.09892486815145758,
+    "orthogonality_residual": 3.637978807091713e-12
+  },
+  {
+    "pair_id": 841,
+    "variant": 1,
+    "total_delta_squared_norm": 37757.43683398989,
+    "retained_squared_norm": 3150.9229649069684,
+    "lost_squared_norm": 34606.51386908292,
+    "retained_fraction": 0.08345171783669526,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 842,
+    "variant": 0,
+    "total_delta_squared_norm": 77248.01034176078,
+    "retained_squared_norm": 5534.086371948356,
+    "lost_squared_norm": 71713.92396981241,
+    "retained_fraction": 0.07164050371607555,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 842,
+    "variant": 1,
+    "total_delta_squared_norm": 47699.994738746114,
+    "retained_squared_norm": 5086.643679178788,
+    "lost_squared_norm": 42613.351059567336,
+    "retained_fraction": 0.10663824402997199,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 843,
+    "variant": 0,
+    "total_delta_squared_norm": 56733.89515322492,
+    "retained_squared_norm": 5829.714026879294,
+    "lost_squared_norm": 50904.18112634563,
+    "retained_fraction": 0.10275539888693709,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 843,
+    "variant": 1,
+    "total_delta_squared_norm": 71140.60325680823,
+    "retained_squared_norm": 8331.10708856289,
+    "lost_squared_norm": 62809.49616824534,
+    "retained_fraction": 0.11710762500127654,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 844,
+    "variant": 0,
+    "total_delta_squared_norm": 52988.83877794069,
+    "retained_squared_norm": 3375.798082101681,
+    "lost_squared_norm": 49613.04069583901,
+    "retained_fraction": 0.06370771958692231,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 844,
+    "variant": 1,
+    "total_delta_squared_norm": 53382.27773421201,
+    "retained_squared_norm": 5843.4072290576705,
+    "lost_squared_norm": 47538.87050515435,
+    "retained_fraction": 0.10946343013221983,
+    "orthogonality_residual": 1.4551915228366852e-11
+  },
+  {
+    "pair_id": 845,
+    "variant": 0,
+    "total_delta_squared_norm": 67787.71472551039,
+    "retained_squared_norm": 7621.933824622087,
+    "lost_squared_norm": 60165.780900888305,
+    "retained_fraction": 0.1124382766919526,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 845,
+    "variant": 1,
+    "total_delta_squared_norm": 64565.462283278786,
+    "retained_squared_norm": 7054.967290511394,
+    "lost_squared_norm": 57510.49499276739,
+    "retained_fraction": 0.10926843920915431,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 846,
+    "variant": 0,
+    "total_delta_squared_norm": 60915.87504988953,
+    "retained_squared_norm": 5937.507929865402,
+    "lost_squared_norm": 54978.36712002414,
+    "retained_fraction": 0.09747061706004614,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 846,
+    "variant": 1,
+    "total_delta_squared_norm": 66894.2858519817,
+    "retained_squared_norm": 6581.003154810573,
+    "lost_squared_norm": 60313.28269717112,
+    "retained_fraction": 0.09837915258371228,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 847,
+    "variant": 0,
+    "total_delta_squared_norm": 67036.9915034991,
+    "retained_squared_norm": 8018.383608557389,
+    "lost_squared_norm": 59018.60789494171,
+    "retained_fraction": 0.11961132844302623,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 847,
+    "variant": 1,
+    "total_delta_squared_norm": 53547.96484083844,
+    "retained_squared_norm": 6198.640907270692,
+    "lost_squared_norm": 47349.32393356774,
+    "retained_fraction": 0.11575866469799594,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 848,
+    "variant": 0,
+    "total_delta_squared_norm": 61928.922550860625,
+    "retained_squared_norm": 7392.32099606946,
+    "lost_squared_norm": 54536.60155479117,
+    "retained_fraction": 0.11936782833575602,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 848,
+    "variant": 1,
+    "total_delta_squared_norm": 45037.2408707594,
+    "retained_squared_norm": 5772.770451226361,
+    "lost_squared_norm": 39264.47041953304,
+    "retained_fraction": 0.128177711147806,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 849,
+    "variant": 0,
+    "total_delta_squared_norm": 58910.86673869604,
+    "retained_squared_norm": 6691.597602592533,
+    "lost_squared_norm": 52219.26913610351,
+    "retained_fraction": 0.11358851045722448,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 849,
+    "variant": 1,
+    "total_delta_squared_norm": 60008.22369840233,
+    "retained_squared_norm": 5344.142094414334,
+    "lost_squared_norm": 54664.08160398801,
+    "retained_fraction": 0.0890568286319166,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 850,
+    "variant": 0,
+    "total_delta_squared_norm": 51347.59206707618,
+    "retained_squared_norm": 5759.230935571823,
+    "lost_squared_norm": 45588.36113150436,
+    "retained_fraction": 0.11216165556601851,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 850,
+    "variant": 1,
+    "total_delta_squared_norm": 50680.96893481662,
+    "retained_squared_norm": 5912.07846688158,
+    "lost_squared_norm": 44768.89046793504,
+    "retained_fraction": 0.11665283026623674,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 851,
+    "variant": 0,
+    "total_delta_squared_norm": 73422.3231750571,
+    "retained_squared_norm": 6089.079385092835,
+    "lost_squared_norm": 67333.24378996427,
+    "retained_fraction": 0.08293226258415923,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 851,
+    "variant": 1,
+    "total_delta_squared_norm": 59682.052114922364,
+    "retained_squared_norm": 5473.919059318267,
+    "lost_squared_norm": 54208.1330556041,
+    "retained_fraction": 0.09171801011094284,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 852,
+    "variant": 0,
+    "total_delta_squared_norm": 56381.10928030815,
+    "retained_squared_norm": 4782.1108330888765,
+    "lost_squared_norm": 51598.99844721927,
+    "retained_fraction": 0.0848176081338487,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 852,
+    "variant": 1,
+    "total_delta_squared_norm": 54732.06230024658,
+    "retained_squared_norm": 4861.41557849867,
+    "lost_squared_norm": 49870.64672174791,
+    "retained_fraction": 0.08882207931121149,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 853,
+    "variant": 0,
+    "total_delta_squared_norm": 67349.05435960405,
+    "retained_squared_norm": 6941.092430505558,
+    "lost_squared_norm": 60407.961929098485,
+    "retained_fraction": 0.1030614682938863,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 853,
+    "variant": 1,
+    "total_delta_squared_norm": 56579.4180838532,
+    "retained_squared_norm": 7190.152330039457,
+    "lost_squared_norm": 49389.26575381374,
+    "retained_fraction": 0.12708070484894937,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 854,
+    "variant": 0,
+    "total_delta_squared_norm": 53523.04802959675,
+    "retained_squared_norm": 4631.0034739401435,
+    "lost_squared_norm": 48892.04455565661,
+    "retained_fraction": 0.08652353788557274,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 854,
+    "variant": 1,
+    "total_delta_squared_norm": 51855.07407299275,
+    "retained_squared_norm": 5148.057179846096,
+    "lost_squared_norm": 46707.01689314665,
+    "retained_fraction": 0.09927779049355011,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 855,
+    "variant": 0,
+    "total_delta_squared_norm": 66558.84578009332,
+    "retained_squared_norm": 5954.158605927472,
+    "lost_squared_norm": 60604.687174165854,
+    "retained_fraction": 0.08945705918037816,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 855,
+    "variant": 1,
+    "total_delta_squared_norm": 61965.95573132462,
+    "retained_squared_norm": 5436.747718169211,
+    "lost_squared_norm": 56529.20801315542,
+    "retained_fraction": 0.08773765616949668,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 856,
+    "variant": 0,
+    "total_delta_squared_norm": 61726.22583434069,
+    "retained_squared_norm": 6527.063455136857,
+    "lost_squared_norm": 55199.162379203844,
+    "retained_fraction": 0.10574214390904164,
+    "orthogonality_residual": 1.4551915228366852e-11
+  },
+  {
+    "pair_id": 856,
+    "variant": 1,
+    "total_delta_squared_norm": 60417.757505068104,
+    "retained_squared_norm": 7912.150692507327,
+    "lost_squared_norm": 52505.60681256078,
+    "retained_fraction": 0.13095737113122116,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 857,
+    "variant": 0,
+    "total_delta_squared_norm": 43117.12326225403,
+    "retained_squared_norm": 3724.534450872478,
+    "lost_squared_norm": 39392.58881138155,
+    "retained_fraction": 0.08638179379961193,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 857,
+    "variant": 1,
+    "total_delta_squared_norm": 26750.58208056941,
+    "retained_squared_norm": 2343.972140034686,
+    "lost_squared_norm": 24406.609940534727,
+    "retained_fraction": 0.08762322004713524,
+    "orthogonality_residual": 3.637978807091713e-12
+  },
+  {
+    "pair_id": 858,
+    "variant": 0,
+    "total_delta_squared_norm": 51338.269473002176,
+    "retained_squared_norm": 4934.479146304606,
+    "lost_squared_norm": 46403.79032669758,
+    "retained_fraction": 0.0961169746654502,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 858,
+    "variant": 1,
+    "total_delta_squared_norm": 48851.512207566295,
+    "retained_squared_norm": 4960.0854924126,
+    "lost_squared_norm": 43891.42671515369,
+    "retained_fraction": 0.10153391918222675,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 859,
+    "variant": 0,
+    "total_delta_squared_norm": 74975.69250585926,
+    "retained_squared_norm": 8145.187439018429,
+    "lost_squared_norm": 66830.50506684082,
+    "retained_fraction": 0.10863770865980188,
+    "orthogonality_residual": 1.4551915228366852e-11
+  },
+  {
+    "pair_id": 859,
+    "variant": 1,
+    "total_delta_squared_norm": 61229.098438631736,
+    "retained_squared_norm": 8699.978980113316,
+    "lost_squared_norm": 52529.11945851842,
+    "retained_fraction": 0.14208896100002302,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 860,
+    "variant": 0,
+    "total_delta_squared_norm": 26913.88669350787,
+    "retained_squared_norm": 3688.7540382930597,
+    "lost_squared_norm": 23225.13265521481,
+    "retained_fraction": 0.13705764909766288,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 860,
+    "variant": 1,
+    "total_delta_squared_norm": 31672.53567184681,
+    "retained_squared_norm": 2790.372710131329,
+    "lost_squared_norm": 28882.162961715483,
+    "retained_fraction": 0.08810070463072033,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 861,
+    "variant": 0,
+    "total_delta_squared_norm": 71194.4001031451,
+    "retained_squared_norm": 7052.489176155641,
+    "lost_squared_norm": 64141.910926989454,
+    "retained_fraction": 0.09905960533325835,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 861,
+    "variant": 1,
+    "total_delta_squared_norm": 55040.52775310847,
+    "retained_squared_norm": 4861.828847380782,
+    "lost_squared_norm": 50178.698905727695,
+    "retained_fraction": 0.08833179923690329,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 862,
+    "variant": 0,
+    "total_delta_squared_norm": 62682.91879146885,
+    "retained_squared_norm": 7039.636800465292,
+    "lost_squared_norm": 55643.28199100356,
+    "retained_fraction": 0.11230550421374742,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 862,
+    "variant": 1,
+    "total_delta_squared_norm": 67904.09275032583,
+    "retained_squared_norm": 6258.080770260425,
+    "lost_squared_norm": 61646.01198006541,
+    "retained_fraction": 0.09216058291612175,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 863,
+    "variant": 0,
+    "total_delta_squared_norm": 33231.38846666139,
+    "retained_squared_norm": 2612.3133255255843,
+    "lost_squared_norm": 30619.075141135807,
+    "retained_fraction": 0.07860981578143587,
+    "orthogonality_residual": 3.637978807091713e-12
+  },
+  {
+    "pair_id": 863,
+    "variant": 1,
+    "total_delta_squared_norm": 24146.15104477945,
+    "retained_squared_norm": 2106.7366540488006,
+    "lost_squared_norm": 22039.414390730653,
+    "retained_fraction": 0.08724937776384407,
+    "orthogonality_residual": 3.637978807091713e-12
+  },
+  {
+    "pair_id": 864,
+    "variant": 0,
+    "total_delta_squared_norm": 59100.61426274624,
+    "retained_squared_norm": 6048.604024203713,
+    "lost_squared_norm": 53052.010238542534,
+    "retained_fraction": 0.10234418203020977,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 864,
+    "variant": 1,
+    "total_delta_squared_norm": 61308.12353785722,
+    "retained_squared_norm": 6045.969149906077,
+    "lost_squared_norm": 55262.15438795113,
+    "retained_fraction": 0.09861611807728458,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 865,
+    "variant": 0,
+    "total_delta_squared_norm": 76436.04071921295,
+    "retained_squared_norm": 5727.153674971261,
+    "lost_squared_norm": 70708.8870442417,
+    "retained_fraction": 0.07492739839848461,
+    "orthogonality_residual": 1.4551915228366852e-11
+  },
+  {
+    "pair_id": 865,
+    "variant": 1,
+    "total_delta_squared_norm": 63280.75336140312,
+    "retained_squared_norm": 6621.376841545505,
+    "lost_squared_norm": 56659.376519857615,
+    "retained_fraction": 0.10463492436207447,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 866,
+    "variant": 0,
+    "total_delta_squared_norm": 42486.172676583374,
+    "retained_squared_norm": 3779.987032153229,
+    "lost_squared_norm": 38706.185644430145,
+    "retained_fraction": 0.08896981756694224,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 866,
+    "variant": 1,
+    "total_delta_squared_norm": 48061.7693922134,
+    "retained_squared_norm": 4609.760915117885,
+    "lost_squared_norm": 43452.0084770955,
+    "retained_fraction": 0.0959132585714733,
+    "orthogonality_residual": 1.4551915228366852e-11
+  },
+  {
+    "pair_id": 867,
+    "variant": 0,
+    "total_delta_squared_norm": 59876.62732308588,
+    "retained_squared_norm": 6057.820638780748,
+    "lost_squared_norm": 53818.806684305135,
+    "retained_fraction": 0.10117170771983527,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 867,
+    "variant": 1,
+    "total_delta_squared_norm": 49829.93595438551,
+    "retained_squared_norm": 5915.864810594027,
+    "lost_squared_norm": 43914.07114379149,
+    "retained_fraction": 0.11872110002327577,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 868,
+    "variant": 0,
+    "total_delta_squared_norm": 74973.20599751256,
+    "retained_squared_norm": 9019.215761184127,
+    "lost_squared_norm": 65953.99023632843,
+    "retained_fraction": 0.12029918743882133,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 868,
+    "variant": 1,
+    "total_delta_squared_norm": 62986.22158821547,
+    "retained_squared_norm": 5595.976921370902,
+    "lost_squared_norm": 57390.24466684457,
+    "retained_fraction": 0.08884446122130768,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 869,
+    "variant": 0,
+    "total_delta_squared_norm": 54850.59760336703,
+    "retained_squared_norm": 5088.658695668624,
+    "lost_squared_norm": 49761.93890769841,
+    "retained_fraction": 0.09277307664841658,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 869,
+    "variant": 1,
+    "total_delta_squared_norm": 40615.52429805067,
+    "retained_squared_norm": 4445.264915264252,
+    "lost_squared_norm": 36170.25938278642,
+    "retained_fraction": 0.10944743400684356,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 870,
+    "variant": 0,
+    "total_delta_squared_norm": 38339.59355772461,
+    "retained_squared_norm": 5371.294266239862,
+    "lost_squared_norm": 32968.29929148476,
+    "retained_fraction": 0.14009784058228913,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 870,
+    "variant": 1,
+    "total_delta_squared_norm": 45936.11716866791,
+    "retained_squared_norm": 5520.61700386454,
+    "lost_squared_norm": 40415.500164803365,
+    "retained_fraction": 0.12018031440476297,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 871,
+    "variant": 0,
+    "total_delta_squared_norm": 66501.9145667574,
+    "retained_squared_norm": 6949.1158889138005,
+    "lost_squared_norm": 59552.7986778436,
+    "retained_fraction": 0.10449497483170934,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 871,
+    "variant": 1,
+    "total_delta_squared_norm": 57197.199880060434,
+    "retained_squared_norm": 5130.025458177275,
+    "lost_squared_norm": 52067.17442188316,
+    "retained_fraction": 0.08969015037335172,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 872,
+    "variant": 0,
+    "total_delta_squared_norm": 55609.24349351248,
+    "retained_squared_norm": 6560.449431912176,
+    "lost_squared_norm": 49048.7940616003,
+    "retained_fraction": 0.11797408164125692,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 872,
+    "variant": 1,
+    "total_delta_squared_norm": 63051.30665692354,
+    "retained_squared_norm": 8405.226816359052,
+    "lost_squared_norm": 54646.07984056448,
+    "retained_fraction": 0.1333077340029414,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 873,
+    "variant": 0,
+    "total_delta_squared_norm": 51957.19248752255,
+    "retained_squared_norm": 4967.635639890636,
+    "lost_squared_norm": 46989.55684763192,
+    "retained_fraction": 0.09561016294488212,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 873,
+    "variant": 1,
+    "total_delta_squared_norm": 54929.13354404511,
+    "retained_squared_norm": 6648.730857616027,
+    "lost_squared_norm": 48280.40268642908,
+    "retained_fraction": 0.1210419758812456,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 874,
+    "variant": 0,
+    "total_delta_squared_norm": 48282.52058430689,
+    "retained_squared_norm": 3770.093567835609,
+    "lost_squared_norm": 44512.42701647128,
+    "retained_fraction": 0.07808402548604702,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 874,
+    "variant": 1,
+    "total_delta_squared_norm": 34032.14756385841,
+    "retained_squared_norm": 3547.8330622963263,
+    "lost_squared_norm": 30484.314501562083,
+    "retained_fraction": 0.10424946164913988,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 875,
+    "variant": 0,
+    "total_delta_squared_norm": 58063.58188651976,
+    "retained_squared_norm": 7121.538118006418,
+    "lost_squared_norm": 50942.04376851334,
+    "retained_fraction": 0.12265068544901084,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 875,
+    "variant": 1,
+    "total_delta_squared_norm": 48093.7358060592,
+    "retained_squared_norm": 5122.009570725088,
+    "lost_squared_norm": 42971.726235334114,
+    "retained_fraction": 0.10650055531930169,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 876,
+    "variant": 0,
+    "total_delta_squared_norm": 66976.64924498419,
+    "retained_squared_norm": 4644.503515839862,
+    "lost_squared_norm": 62332.14572914432,
+    "retained_fraction": 0.06934511606950365,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 876,
+    "variant": 1,
+    "total_delta_squared_norm": 51929.005127537916,
+    "retained_squared_norm": 4621.92465186242,
+    "lost_squared_norm": 47307.080475675495,
+    "retained_fraction": 0.08900468323070987,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 877,
+    "variant": 0,
+    "total_delta_squared_norm": 58001.2104666829,
+    "retained_squared_norm": 6341.1119971612625,
+    "lost_squared_norm": 51660.09846952163,
+    "retained_fraction": 0.1093272355204333,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 877,
+    "variant": 1,
+    "total_delta_squared_norm": 58797.57654814588,
+    "retained_squared_norm": 5801.403622496879,
+    "lost_squared_norm": 52996.17292564901,
+    "retained_fraction": 0.09866739350637097,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 878,
+    "variant": 0,
+    "total_delta_squared_norm": 45315.746411416716,
+    "retained_squared_norm": 5651.770106914782,
+    "lost_squared_norm": 39663.976304501935,
+    "retained_fraction": 0.12471978405923138,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 878,
+    "variant": 1,
+    "total_delta_squared_norm": 66532.57308064596,
+    "retained_squared_norm": 6170.347822671161,
+    "lost_squared_norm": 60362.22525797481,
+    "retained_fraction": 0.0927417584645631,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 879,
+    "variant": 0,
+    "total_delta_squared_norm": 31745.373816191266,
+    "retained_squared_norm": 3039.3869248675633,
+    "lost_squared_norm": 28705.9868913237,
+    "retained_fraction": 0.09574267238010498,
+    "orthogonality_residual": 3.637978807091713e-12
+  },
+  {
+    "pair_id": 879,
+    "variant": 1,
+    "total_delta_squared_norm": 65733.07105743962,
+    "retained_squared_norm": 5246.563803633553,
+    "lost_squared_norm": 60486.50725380606,
+    "retained_fraction": 0.0798161978321223,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 880,
+    "variant": 0,
+    "total_delta_squared_norm": 55891.80132752747,
+    "retained_squared_norm": 6204.296848537679,
+    "lost_squared_norm": 49687.504478989795,
+    "retained_fraction": 0.1110054909874944,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 880,
+    "variant": 1,
+    "total_delta_squared_norm": 72085.25870790405,
+    "retained_squared_norm": 7686.345380219581,
+    "lost_squared_norm": 64398.91332768447,
+    "retained_fraction": 0.10662853290664244,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 881,
+    "variant": 0,
+    "total_delta_squared_norm": 76774.83160980867,
+    "retained_squared_norm": 8829.930916935822,
+    "lost_squared_norm": 67944.90069287285,
+    "retained_fraction": 0.1150107493795886,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 881,
+    "variant": 1,
+    "total_delta_squared_norm": 52681.651506420276,
+    "retained_squared_norm": 5253.674153679825,
+    "lost_squared_norm": 47427.97735274046,
+    "retained_fraction": 0.09972493275081863,
+    "orthogonality_residual": 1.4551915228366852e-11
+  },
+  {
+    "pair_id": 882,
+    "variant": 0,
+    "total_delta_squared_norm": 16317.033090238187,
+    "retained_squared_norm": 1353.1035222726296,
+    "lost_squared_norm": 14963.929567965557,
+    "retained_fraction": 0.08292583062064979,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 882,
+    "variant": 1,
+    "total_delta_squared_norm": 32544.457104732814,
+    "retained_squared_norm": 2530.9529247899545,
+    "lost_squared_norm": 30013.504179942858,
+    "retained_fraction": 0.07776909341719786,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 883,
+    "variant": 0,
+    "total_delta_squared_norm": 54422.58406702954,
+    "retained_squared_norm": 4344.89362449856,
+    "lost_squared_norm": 50077.69044253098,
+    "retained_fraction": 0.07983622422535422,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 883,
+    "variant": 1,
+    "total_delta_squared_norm": 54065.994261391344,
+    "retained_squared_norm": 5553.239518503509,
+    "lost_squared_norm": 48512.75474288783,
+    "retained_fraction": 0.10271224259107153,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 884,
+    "variant": 0,
+    "total_delta_squared_norm": 82079.8693169332,
+    "retained_squared_norm": 8265.975468749923,
+    "lost_squared_norm": 73813.89384818327,
+    "retained_fraction": 0.10070648914940024,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 884,
+    "variant": 1,
+    "total_delta_squared_norm": 61039.56803705497,
+    "retained_squared_norm": 5938.514789553888,
+    "lost_squared_norm": 55101.053247501084,
+    "retained_fraction": 0.09728959395565881,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 885,
+    "variant": 0,
+    "total_delta_squared_norm": 35762.74481874685,
+    "retained_squared_norm": 3396.3114975543544,
+    "lost_squared_norm": 32366.43332119249,
+    "retained_fraction": 0.0949678643171149,
+    "orthogonality_residual": 3.637978807091713e-12
+  },
+  {
+    "pair_id": 885,
+    "variant": 1,
+    "total_delta_squared_norm": 37492.98823611404,
+    "retained_squared_norm": 2870.8382466768808,
+    "lost_squared_norm": 34622.14998943716,
+    "retained_fraction": 0.07657000366568885,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 886,
+    "variant": 0,
+    "total_delta_squared_norm": 62236.25015018393,
+    "retained_squared_norm": 4097.429948566469,
+    "lost_squared_norm": 58138.82020161746,
+    "retained_fraction": 0.06583670993478645,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 886,
+    "variant": 1,
+    "total_delta_squared_norm": 54903.807518745794,
+    "retained_squared_norm": 5009.246677660407,
+    "lost_squared_norm": 49894.56084108539,
+    "retained_fraction": 0.09123678127332245,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 887,
+    "variant": 0,
+    "total_delta_squared_norm": 60926.83146731181,
+    "retained_squared_norm": 7523.0263621117565,
+    "lost_squared_norm": 53403.80510520005,
+    "retained_fraction": 0.12347640901280049,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 887,
+    "variant": 1,
+    "total_delta_squared_norm": 62581.23585636681,
+    "retained_squared_norm": 6796.5050754230115,
+    "lost_squared_norm": 55784.73078094379,
+    "retained_fraction": 0.10860292198482618,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 888,
+    "variant": 0,
+    "total_delta_squared_norm": 65457.64721608468,
+    "retained_squared_norm": 5471.577434454062,
+    "lost_squared_norm": 59986.06978163062,
+    "retained_fraction": 0.08358958299236809,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 888,
+    "variant": 1,
+    "total_delta_squared_norm": 58336.02587405642,
+    "retained_squared_norm": 4318.500579768795,
+    "lost_squared_norm": 54017.525294287625,
+    "retained_fraction": 0.07402802153667701,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 889,
+    "variant": 0,
+    "total_delta_squared_norm": 41374.985534877516,
+    "retained_squared_norm": 4625.200140097809,
+    "lost_squared_norm": 36749.78539477971,
+    "retained_fraction": 0.1117873536462978,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 889,
+    "variant": 1,
+    "total_delta_squared_norm": 59200.784718741954,
+    "retained_squared_norm": 6996.159041370714,
+    "lost_squared_norm": 52204.62567737124,
+    "retained_fraction": 0.11817679570649085,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 890,
+    "variant": 0,
+    "total_delta_squared_norm": 68051.21671240282,
+    "retained_squared_norm": 6078.915437216727,
+    "lost_squared_norm": 61972.301275186095,
+    "retained_fraction": 0.08932853416724879,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 890,
+    "variant": 1,
+    "total_delta_squared_norm": 63458.49942701509,
+    "retained_squared_norm": 6818.538957268795,
+    "lost_squared_norm": 56639.96046974631,
+    "retained_fraction": 0.10744878966309208,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 891,
+    "variant": 0,
+    "total_delta_squared_norm": 66083.79563914197,
+    "retained_squared_norm": 7176.846954829941,
+    "lost_squared_norm": 58906.948684312025,
+    "retained_fraction": 0.10860222064150074,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 891,
+    "variant": 1,
+    "total_delta_squared_norm": 56797.65616666959,
+    "retained_squared_norm": 5575.575121535924,
+    "lost_squared_norm": 51222.08104513367,
+    "retained_fraction": 0.09816558460044031,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 892,
+    "variant": 0,
+    "total_delta_squared_norm": 55082.86949701641,
+    "retained_squared_norm": 4534.08889256737,
+    "lost_squared_norm": 50548.780604449035,
+    "retained_fraction": 0.08231395593530147,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 892,
+    "variant": 1,
+    "total_delta_squared_norm": 36906.13287448732,
+    "retained_squared_norm": 4159.2358910659495,
+    "lost_squared_norm": 32746.896983421364,
+    "retained_fraction": 0.11269768916756841,
+    "orthogonality_residual": 3.637978807091713e-12
+  },
+  {
+    "pair_id": 893,
+    "variant": 0,
+    "total_delta_squared_norm": 59103.94778797538,
+    "retained_squared_norm": 6262.844984586487,
+    "lost_squared_norm": 52841.1028033889,
+    "retained_fraction": 0.1059632261292139,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 893,
+    "variant": 1,
+    "total_delta_squared_norm": 61162.41862299968,
+    "retained_squared_norm": 6072.90883595113,
+    "lost_squared_norm": 55089.50978704854,
+    "retained_fraction": 0.09929150894741526,
+    "orthogonality_residual": 7.275957614183426e-12
+  },
+  {
+    "pair_id": 894,
+    "variant": 0,
+    "total_delta_squared_norm": 73762.42439494094,
+    "retained_squared_norm": 8269.109438122921,
+    "lost_squared_norm": 65493.31495681802,
+    "retained_fraction": 0.11210463194441946,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 894,
+    "variant": 1,
+    "total_delta_squared_norm": 63072.25767129816,
+    "retained_squared_norm": 6566.9857862145755,
+    "lost_squared_norm": 56505.27188508359,
+    "retained_fraction": 0.10411845126011664,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 895,
+    "variant": 0,
+    "total_delta_squared_norm": 58128.94757044169,
+    "retained_squared_norm": 5746.207065572707,
+    "lost_squared_norm": 52382.74050486898,
+    "retained_fraction": 0.09885276279274369,
+    "orthogonality_residual": 0.0
+  },
+  {
+    "pair_id": 895,
+    "variant": 1,
+    "total_delta_squared_norm": 58900.4521877651,
+    "retained_squared_norm": 5404.648570623168,
+    "lost_squared_norm": 53495.80361714194,
+    "retained_fraction": 0.09175903358762041,
+    "orthogonality_residual": 7.275957614183426e-12
+  }
+]

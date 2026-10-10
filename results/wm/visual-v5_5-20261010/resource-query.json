@@ -1,0 +1,25 @@
+{
+  "host": "dgx-127",
+  "uid": 1046,
+  "disk": {
+    "total": 569350962151424,
+    "used": 557739140411392,
+    "free": 5849738887168
+  },
+  "new_root_exists": false,
+  "job": {
+    "returncode": 0,
+    "stdout": "JobId=415453 JobName=indexmem-h800-hold-5d-20261008\n   UserId=guhao(1046) GroupId=Gov(1009) MCS_label=N/A\n   Priority=4294708234 Nice=0 Account=hansirui QOS=llm\n   JobState=RUNNING Reason=None Dependency=(null)\n   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0\n   RunTime=2-10:53:08 TimeLimit=5-00:00:00 TimeMin=N/A\n   SubmitTime=2026-10-08T13:50:59 EligibleTime=2026-10-08T13:50:59\n   AccrueTime=2026-10-08T13:50:59\n   StartTime=2026-10-08T14:53:41 EndTime=2026-10-13T14:53:41 Deadline=N/A\n   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-08T14:53:41 Scheduler=Main\n   Partition=llm AllocNode:Sid=dgx-127:2756420\n   ReqNodeList=(null) ExcNodeList=(null)\n   NodeList=dgx-097\n   BatchHost=dgx-097\n   NumNodes=1 NumCPUs=64 NumTasks=1 CPUs/Task=64 ReqB:S:C:T=0:0:*:*\n   ReqTRES=cpu=64,mem=2063935M,node=1,billing=64,gres/gpu=8\n   AllocTRES=cpu=64,node=1,billing=64,gres/gpu=8\n   Socks/Node=* NtasksPerN:B:S:C=1:0:*:* CoreSpec=*\n   MinCPUsNode=64 MinMemoryNode=0 MinTmpDiskNode=0\n   Features=(null) DelayBoot=00:00:00\n   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)\n   Command=/aifs4su/guhao/debug_h800_8gpu_5days_20260908.slurm\n   WorkDir=/home/guhao\n   StdErr=/aifs4su/guhao/logs/debug-h800-5d-415453.err\n   StdIn=/dev/null\n   StdOut=/aifs4su/guhao/logs/debug-h800-5d-415453.out\n   Power=\n   TresPerNode=gres:gpu:8\n   \n\n",
+    "stderr": ""
+  },
+  "acct": {
+    "returncode": 0,
+    "stdout": "415453|indexmem-h800-hold-5d-20261008|RUNNING|211989|0:0\n415453.batch|batch|RUNNING|211989|0:0\n415453.0|bash|FAILED|0|6:0\n415453.1|python|COMPLETED|1|0:0\n415453.2|python|COMPLETED|6|0:0\n415453.3|python|FAILED|14|1:0\n415453.4|python|COMPLETED|7|0:0\n415453.5|python|COMPLETED|162407|0:0\n415453.6|nvidia-smi|COMPLETED|0|0:0\n415453.7|ps|COMPLETED|0|0:0\n415453.8|nvidia-smi|COMPLETED|0|0:0\n415453.9|bash|COMPLETED|1|0:0\n415453.10|bash|FAILED|1|1:0\n415453.11|bash|COMPLETED|0|0:0\n415453.12|bash|COMPLETED|10|0:0\n415453.13|bash|COMPLETED|11|0:0\n415453.14|v5_profile|COMPLETED|32|0:0\n415453.15|v5_features|FAILED|180|1:0\n415453.16|v5_final_readonly|COMPLETED|1|0:0\n415453.17|bash|COMPLETED|1|0:0\n415453.18|v51_temporal_fit|COMPLETED|202|0:0\n415453.19|v51_reader_fit|COMPLETED|3|0:0\n415453.20|v51_temporal_confirm|COMPLETED|192|0:0\n415453.21|v51_reader_confirm|COMPLETED|2|0:0\n415453.22|v51_temporal_bridge|COMPLETED|200|0:0\n415453.23|v51_reader_bridge|COMPLETED|1|0:0\n415453.24|wm-v52-readonly-preflight|COMPLETED|9|0:0\n415453.25|wm-v52-gpu-status|COMPLETED|1|0:0\n415453.26|v51_counterfactual_v5_2|COMPLETED|214|0:0\n415453.27|v51_counterfactual_score_v5_2|COMPLETED|3|0:0\n415453.28|wm-v53-gpu-status|COMPLETED|1|0:0\n415453.29|v53_fit|COMPLETED|213|0:0\n415453.30|v53_fit_reader|COMPLETED|6|0:0\n415453.31|v53_anchor|COMPLETED|204|0:0\n415453.32|v53_anchor_reader|COMPLETED|4|0:0\n415453.33|v53_bridge|COMPLETED|196|0:0\n415453.34|v53_bridge_reader|COMPLETED|2|0:0\n415453.35|v54_fit|COMPLETED|206|0:0\n415453.36|v54_fit_reader|COMPLETED|8|0:0\n415453.37|v54_eval|COMPLETED|220|0:0\n415453.38|v54_anchor_reader|COMPLETED|5|0:0\n415453.39|v54_bridge_reader|COMPLETED|2|0:0\n",
+    "stderr": ""
+  },
+  "partitions": {
+    "returncode": 0,
+    "stdout": "debug|gpu:3(S:0-1)|2063934|224\ndebug|(null)|2063934|224\nllm|gpu:8(S:0-1)|2063934+|224\n",
+    "stderr": ""
+  }
+}

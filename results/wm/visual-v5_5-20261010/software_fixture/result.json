@@ -1,0 +1,29 @@
+{
+  "status": "software_fixture_passed",
+  "software_only": true,
+  "scientific_roles_opened": false,
+  "software_episodes_checked": 24,
+  "endpoint_images_checked": 192,
+  "checks": [
+    "original cue RGB bitwise",
+    "original physical labels bitwise",
+    "endpoint bit map",
+    "outside changed-object mask union unchanged",
+    "object masks disjoint",
+    "exact original4/edited12 batch order",
+    "same-call prequant raw pooling",
+    "official pooled path bitwise",
+    "BF16 roundtrip bitwise",
+    "changed archived input rejected before encoding",
+    "unseen Dev and Test rejected"
+  ],
+  "source_hashes": {
+    "scripts/v5_5_counterfactual.py": "12001e72a86a7a0da7e27e663b4ae120152baf134fd35e9d836cd8274956cbc2",
+    "pmr/visual_memory/data.py": "ce5082f3be9006dcceb46fbaffadc27349f977a77abcf8992eda3e80f8775368",
+    "pmr/visual_memory/features.py": "5324748c4c2ef0cd82329d97c73a6cf8a21562501039ba31bd67dbc0efe29f93"
+  },
+  "python": "3.9.6 (default, Dec  2 2025, 07:27:58) \n[Clang 17.0.0 (clang-1700.6.3.2)]",
+  "numpy": "2.0.2",
+  "torch": "2.8.0",
+  "elapsed_seconds": 0.6076791286468506
+}

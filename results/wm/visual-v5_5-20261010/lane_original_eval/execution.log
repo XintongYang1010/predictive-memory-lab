@@ -1,0 +1,211 @@
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_3_reader.py:190: RuntimeWarning: divide by zero encountered in matmul
+  g += a[:, lo:lo+chunk].astype(np.float64) @ b[:, lo:lo+chunk].astype(np.float64).T
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_3_reader.py:190: RuntimeWarning: overflow encountered in matmul
+  g += a[:, lo:lo+chunk].astype(np.float64) @ b[:, lo:lo+chunk].astype(np.float64).T
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_3_reader.py:190: RuntimeWarning: invalid value encountered in matmul
+  g += a[:, lo:lo+chunk].astype(np.float64) @ b[:, lo:lo+chunk].astype(np.float64).T
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_5_lane_reader.py:100: RuntimeWarning: divide by zero encountered in matmul
+  answer[lo:lo+chunk,spec['outputs']]=kernel@arrays[lane+'__coefficients']+arrays[lane+'__intercept']
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_5_lane_reader.py:100: RuntimeWarning: overflow encountered in matmul
+  answer[lo:lo+chunk,spec['outputs']]=kernel@arrays[lane+'__coefficients']+arrays[lane+'__intercept']
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_5_lane_reader.py:100: RuntimeWarning: invalid value encountered in matmul
+  answer[lo:lo+chunk,spec['outputs']]=kernel@arrays[lane+'__coefficients']+arrays[lane+'__intercept']
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_4_reader.py:203: RuntimeWarning: divide by zero encountered in matmul
+  output[key][lo:lo+chunk]=q[:,arrays[arm+'_rows']]@arrays[key+'__coefficients']+arrays[key+'__intercept']
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_4_reader.py:203: RuntimeWarning: overflow encountered in matmul
+  output[key][lo:lo+chunk]=q[:,arrays[arm+'_rows']]@arrays[key+'__coefficients']+arrays[key+'__intercept']
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_4_reader.py:203: RuntimeWarning: invalid value encountered in matmul
+  output[key][lo:lo+chunk]=q[:,arrays[arm+'_rows']]@arrays[key+'__coefficients']+arrays[key+'__intercept']
+{
+  "comparison": {
+    "global_minus_lane_dx_mse": 3.5278226896618786e-05,
+    "paired_95ci": [
+      2.839088036809467e-05,
+      4.2309516139478993e-05
+    ],
+    "global_dx_mse": 0.0001184553572116375,
+    "lane_dx_mse": 8.317713031501871e-05,
+    "dx_mse_relative_reduction": 0.29781875406098496
+  },
+  "readers": {
+    "global_W": {
+      "per_dimension_mse": [
+        0.00035155811679311866,
+        0.00011911651730162474,
+        0.000356732661742363,
+        0.00013476594642157326,
+        0.00013239037996979814,
+        7.700759742428988e-05,
+        0.00010452033445347683,
+        7.548522368939783e-05
+      ],
+      "per_dimension_skill": [
+        0.9915347337128042,
+        0.9856607928760617,
+        0.9910789783469978,
+        0.9814898819544298,
+        0.26784233127558577,
+        0.515841079210991,
+        0.40869166468414997,
+        0.5436216341665482
+      ],
+      "position_skill": 0.9874410967225734,
+      "motion_skill": 0.4339991773343187,
+      "motion_nmse": 0.5660008226656813,
+      "motion_direction_error_rate": [
+        0.240234375,
+        0.140625,
+        0.1875,
+        0.138671875
+      ],
+      "motion_target_zero_count": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "motion_prediction_zero_count": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "motion_sign_tie_count": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "motion_signed_bias": [
+        6.101825732069822e-05,
+        -0.00035234541455791523,
+        0.0003584792832857743,
+        -0.0012243072215947061
+      ],
+      "motion_prediction_target_covariance": [
+        7.027119962863268e-05,
+        8.889864835820889e-05,
+        8.05820747376848e-05,
+        6.842818475525618e-05
+      ],
+      "motion_absolute_amplitude_ratio": [
+        0.5890688862006603,
+        0.6678484121102687,
+        0.5893904144719483,
+        0.6582287123053784
+      ],
+      "motion_rms_ratio": [
+        0.7137674977308321,
+        0.7805654352906835,
+        0.7093514275650988,
+        0.7676264449240858
+      ],
+      "motion_std_ratio": [
+        0.7137822481606255,
+        0.7777608205289878,
+        0.7087658324125339,
+        0.7635461406172587
+      ]
+    },
+    "lane_W": {
+      "per_dimension_mse": [
+        0.00016684886491389434,
+        6.441873370274296e-05,
+        0.00021083696287296585,
+        9.687020235523732e-05,
+        8.961366515926656e-05,
+        5.55193490952769e-05,
+        7.6740595470771e-05,
+        6.639442563106982e-05
+      ],
+      "per_dimension_skill": [
+        0.9959823994846245,
+        0.9922452940519874,
+        0.9947274771481358,
+        0.9866948667055353,
+        0.5044101226703436,
+        0.6509410884126752,
+        0.5658514298079802,
+        0.5985839613506481
+      ],
+      "position_skill": 0.9924125093475707,
+      "motion_skill": 0.5799466505604117,
+      "motion_nmse": 0.4200533494395883,
+      "motion_direction_error_rate": [
+        0.15625,
+        0.107421875,
+        0.14453125,
+        0.126953125
+      ],
+      "motion_target_zero_count": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "motion_prediction_zero_count": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "motion_sign_tie_count": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "motion_signed_bias": [
+        -8.675077916546248e-05,
+        -0.00025786169520289527,
+        -0.0004986005418939407,
+        -0.0009775067546603292
+      ],
+      "motion_prediction_target_covariance": [
+        0.00010401065101108957,
+        0.00010805504338439889,
+        0.00010627107447811622,
+        8.032131377194677e-05
+      ],
+      "motion_absolute_amplitude_ratio": [
+        0.6843273896682556,
+        0.7485497188514828,
+        0.6772009619954409,
+        0.7326181811667414
+      ],
+      "motion_rms_ratio": [
+        0.8039027823452144,
+        0.8451876219867083,
+        0.7977719314522036,
+        0.8336874218635517
+      ],
+      "motion_std_ratio": [
+        0.8037935864971784,
+        0.8433847183976172,
+        0.7969778704181965,
+        0.835114270284468
+      ]
+    }
+  },
+  "horizontal_direction": {
+    "global_W": {
+      "per_object_errors": [
+        123,
+        96
+      ],
+      "any_wrong": 196,
+      "both_wrong": 23,
+      "episodes": 512
+    },
+    "lane_W": {
+      "per_object_errors": [
+        80,
+        74
+      ],
+      "any_wrong": 139,
+      "both_wrong": 15,
+      "episodes": 512
+    }
+  },
+  "elapsed_seconds": 2.269895076751709
+}

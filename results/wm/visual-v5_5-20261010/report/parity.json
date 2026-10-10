@@ -1,0 +1,8 @@
+{
+  "features_bitwise_equal": true,
+  "predictions_max_abs": {
+    "N_concat": 0.0,
+    "W_concat": 0.0
+  },
+  "passed": true
+}

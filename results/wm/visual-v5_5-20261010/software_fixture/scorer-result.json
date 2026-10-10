@@ -1,0 +1,38 @@
+{
+  "status": "software_scorer_checks_passed",
+  "software_only": true,
+  "scientific_data_opened": false,
+  "source_sha256": "5172ab4c3052b8cd85a19bea57b2666fc79fb4310b26a3d477d7d7bb922380c3",
+  "checks": {
+    "additive": {
+      "shapley_max_abs": 2.220446049250313e-16,
+      "mobius_max_abs": 0.0
+    },
+    "pure_pair": {
+      "shapley_max_abs": 2.220446049250313e-16,
+      "mobius_max_abs": 0.0
+    },
+    "pure_triple": {
+      "shapley_max_abs": 0.0,
+      "mobius_max_abs": 0.0
+    },
+    "factorial_targets": {
+      "masks_checked": 8,
+      "original_111_exact": true,
+      "yellow_never_changes_labels": true
+    },
+    "pool_axes": {
+      "raster_max_abs": 0.0,
+      "repeat_projection_exact": true,
+      "relative_energy_identity_error": 7.1075290738182995e-16
+    },
+    "bootstrap": {
+      "all_masks_checked": 8,
+      "replicates": 10000,
+      "worlds": 5,
+      "variants_per_world": 2,
+      "paired_interval_max_abs": 0.0
+    }
+  },
+  "elapsed_seconds": 0.01931905746459961
+}
