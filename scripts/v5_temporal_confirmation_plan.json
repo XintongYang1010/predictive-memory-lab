@@ -1,0 +1,70 @@
+{
+  "schema": "v5-temporal-confirm-1",
+  "status": "registered_design_not_executed",
+  "frozen_scientific_source": "d0b4fef25e98eefb58bfba737997cb0145f27daa",
+  "original_failed_result": "d4b6fc622d0fe08e28605aaf6e48100201ab2008",
+  "independent_diagnostic_evidence": "ca365e1aa1026c51be0d23008b63650354c5bf31",
+  "core_diagnostic_commit": "8b2ee24d1beabf69efa4f9b2329fdf43963f3883",
+  "purpose": "Confirm use of ordered two-frame evidence in frozen pooled features, separate from static position priors; not a memory architecture result.",
+  "original_gate_mutation": false,
+  "test_access": false,
+  "gpu_execution_in_this_review": false,
+  "data": {
+    "seed_scheme": "first 8 bytes little-endian of SHA256(v5-temporal-confirm-1/role/block), NumPy default_rng; no rejection sampling or reseeding",
+    "fit": {"role": "fit", "block_ids": [0, 255], "blocks": 256, "views_per_block": 4, "unique_images_per_block": 3},
+    "confirmation": {"role": "confirm", "block_ids": [0, 255], "blocks": 256, "views_per_block": 4, "unique_images_per_block": 3, "release": "only after FIT selection, weights, source and receipts are frozen"},
+    "software_tests": {"role": "software_test", "used_blocks": [0, 7], "scientific_use": false},
+    "original_distribution_bridge": {"generator_source": "d0b4fef25e98eefb58bfba737997cb0145f27daa", "split": "dev", "pair_ids": [128, 383], "paired_worlds": 256, "episodes": 512, "cue_times": [6, 7], "reflections": "retained", "freshness": "executor must attest no previous access; if violated stop and revise the registration before any score"},
+    "geometry": {"center_lower": [0.20, 0.20, 0.20, 0.65], "center_upper": [0.80, 0.35, 0.80, 0.80], "absolute_displacement_range": [0.008, 0.018], "coordinate_rounding": "nearest multiple of 2^-20", "primary_cue_reflections": false},
+    "views": [["C-d", "C"], ["C+d", "C"], ["C", "C+d"], ["C", "C-d"]],
+    "nuisance": "same colors, glyphs, static yellow distractor, background and shutter state within every block",
+    "actor_inputs": ["independently encoded RGB", "fixed timestamps [6,7]", "both shutters open"],
+    "excluded_actor_fields": ["block ID", "view ID", "role", "positions", "displacements", "ROI masks", "variant labels"]
+  },
+  "encoder": {
+    "source_commit": "52c1ae95d05f743e000e8f10a1f3a79b10cff048",
+    "checkpoint_sha256": "0382013c481743e9ccea89f970bc6c6aa126aa19a62127500d6e672a641aae22",
+    "model": "official I-JEPA ViT-H/14 target_encoder",
+    "primary_representation": "original 4x4 pooled spatial tokens",
+    "unique_image_rule": "encode each of the three images exactly once and reuse identical tensors for all views and [C,C]; no separately batched anchor copies",
+    "raw_role": "optional secondary diagnosis; raw scores cannot satisfy the pooled prerequisite"
+  },
+  "reader": {
+    "primary_input": "concatenated two-frame pooled features",
+    "kernel_families": ["linear", "quadratic"],
+    "quadratic_definition": "(1+Train-centered trace-normalized linear Gram)^2, then Train-only RKHS center and trace-normalize again",
+    "mean_loss_alpha_grid": [0.00000078125, 0.0000078125, 0.000078125, 0.00078125, 0.0078125, 0.078125],
+    "regularization": "solve K + n_fit * mean_loss_alpha * I in FP64; this grid equals the diagnostic alpha grid divided by 128, not its diagonal-lambda convention",
+    "cv": {"folds": 4, "seed": 8317, "group": "all four views of a block", "objective": "four-dimension motion normalized MSE against each fitting fold's target mean; equally average four held-fold losses", "tie_break": "lowest loss, linear before quadratic, then larger mean_loss_alpha"},
+    "candidate_count_per_input": 12,
+    "single_frame_controls": "t6-only and t7-only, each given exactly the same two kernels, six penalties, folds and objective; report both, do not select by confirmation",
+    "selection_data": "new FIT blocks only; no old Dev or new confirmation labels",
+    "freeze_before_confirmation": ["selected family and penalty", "all fold scores and block assignments", "fitted coefficients/Train moments and their hashes", "FIT cache identity", "source/protocol/environment hashes", "predictor input-field audit"]
+  },
+  "primary_endpoints": {
+    "end_anchor_contrast": "(prediction(view0)-prediction(view1))/2, target d",
+    "start_anchor_contrast": "(prediction(view2)-prediction(view3))/2, target d",
+    "contrast_skill": "per coordinate 1 - mean((predicted_contrast-d)^2)/mean(d^2); zero contrast is the structural single-frame null",
+    "absolute_motion_skill": "mean of four coordinate skills over all four views, against zero displacement (the exact balanced FIT mean)",
+    "acceptance": "all eight coordinate contrast lower bounds AND absolute mean motion lower bound > 0; position skill against frozen FIT mean > 0.1",
+    "bootstrap": {"replicates": 10000, "seed": 7709, "unit": "entire four-view block", "lower_quantile": 0.005555555555555556, "familywise_alpha": 0.05, "endpoints": 9, "method": "Bonferroni-adjusted one-sided percentile bootstrap; approximate finite-sample coverage, conditional on frozen reader"},
+    "numerical_invariants": {"max_abs_reversal_prediction_sum": 0.000001, "max_abs_repeated_center_motion_prediction": 0.000001, "meaning": "consistency checks for a reader trained on exactly reversal-balanced views; not evidence of information on their own"}
+  },
+  "bridge_acceptance": {
+    "same_frozen_primary_reader": true,
+    "position_skill": ">0.1 against FIT position mean",
+    "motion_skill": "mean Train-mean-baseline skill has one-sided 95% paired-world bootstrap lower bound >0; every coordinate point skill >0",
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 7709,
+    "interpretation": "Checks transfer back to original task geometry/reflections; does not independently prove temporal use. Primary quartet confirmation supplies that evidence."
+  },
+  "stopping_rule": "Single locked primary reader, fixed counts, one confirmation report. Any failed prerequisite stops P0. No winner switching, seed hunting, block top-up, threshold change, or Test consultation.",
+  "outputs": {
+    "review": "results/wm/visual-v5-probe-review-20261010",
+    "fit": "results/wm/visual-v5-temporal-fit-v1-20261010",
+    "confirm": "results/wm/visual-v5-temporal-confirm-v1-20261010",
+    "bridge": "results/wm/visual-v5-temporal-bridge-v1-20261010",
+    "later_p0": "results/wm/visual-v5-p0-v5_1-20261010"
+  },
+  "integration": "Sidecar primitives only. No GPU extraction runner or production-gate override is provided. Local executor independently reviews and freezes a new runner commit before any future authorized execution; original V5 remains failed."
+}

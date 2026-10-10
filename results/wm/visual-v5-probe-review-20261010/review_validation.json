@@ -1,0 +1,26 @@
+{
+  "status": "software_verified_scientific_confirmation_not_run",
+  "source_base": "d0b4fef25e98eefb58bfba737997cb0145f27daa",
+  "latest_diagnostic_reviewed": "ca365e1aa1026c51be0d23008b63650354c5bf31",
+  "command": "python -m unittest discover -s tests/visual_memory -p test_temporal_confirmation.py -v",
+  "tests_passed": 11,
+  "test_scope": "8 software_test blocks only; no fit, confirm, bridge or Test generation",
+  "scientific_fits_run": 0,
+  "gpu_jobs_started": 0,
+  "remote_operations": 0,
+  "existing_cache_diagnostics_repeated_after_user_update": false,
+  "plan_constants_match_code": true,
+  "original_gate_changed": false,
+  "new_P0_gate_emitted": false,
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "Pillow": "12.3.0"
+  },
+  "sha256": {
+    "scripts/v5_temporal_confirmation.py": "6fe8a1f96e6d1209094fa2522dcccf4e9558afcb9714e8e9d7dd9785eb651681",
+    "scripts/v5_temporal_confirmation_plan.json": "b2bd8f17c4abad23b2f2600b3dce572f8d1ec53b9500f129aff718b4aaacf711",
+    "tests/visual_memory/test_temporal_confirmation.py": "178ea75387dec7d171a3a0afc48e758c09f08811f4d0045275b9847c75812038",
+    "scripts/audit_v5_archived_predictions.py": "28be65f50b0783b37d258edc28a6e255c848ea2ffab6af676dd43dc6e24d2c80"
+  }
+}
