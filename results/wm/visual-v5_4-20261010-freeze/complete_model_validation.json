@@ -1,0 +1,74 @@
+{
+  "both_fit_receipts_verified": true,
+  "coefficient_shapes": {
+    "N": [
+      4096,
+      8
+    ],
+    "W": [
+      4096,
+      8
+    ]
+  },
+  "matched_label_audit": {
+    "block_ids": {
+      "dtype": "int64",
+      "sha256": "bbd330b12e8159e117376ef24fa106413bc9fc18032a0d43e95c5dae5e47953f",
+      "shape": [
+        256
+      ]
+    },
+    "fit_blocks": 256,
+    "maximum_absolute_motion_difference": 0.0,
+    "motion_labels_bitwise_equal": true,
+    "motion_target_entries": {
+      "N": {
+        "dtype": "float32",
+        "sha256": "d97040c44a9289752bf6727e517acde421b5050ef3a4fe192f3b3fc9842b6afa",
+        "shape": [
+          256,
+          16,
+          4
+        ]
+      },
+      "W": {
+        "dtype": "float32",
+        "sha256": "d97040c44a9289752bf6727e517acde421b5050ef3a4fe192f3b3fc9842b6afa",
+        "shape": [
+          256,
+          16,
+          4
+        ]
+      }
+    },
+    "position_target_mean": {
+      "N": [
+        0.4866240508854389,
+        0.27797846496105194,
+        0.4845893159508705,
+        0.7274372205138206
+      ],
+      "W": [
+        0.48296796903014183,
+        0.27924929931759834,
+        0.48037704825401306,
+        0.7284771502017975
+      ]
+    },
+    "scope": "reader checks of paired IDs and labels; no new images or latent reconstruction",
+    "views_per_arm": 4096
+  },
+  "normalization_reference_views": 8192,
+  "reference_views": 8192,
+  "union_feature_shape": [
+    512,
+    6,
+    20480
+  ],
+  "union_reference_fully_verified": true,
+  "union_target_shape": [
+    512,
+    16,
+    8
+  ]
+}

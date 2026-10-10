@@ -1,0 +1,15 @@
+{
+  "source_commit": "3279bbe49f8db5ec1bd4b2f5c343db1ce9e5684b",
+  "steps": {
+    "v54_fit": {
+      "exit_code": "0:0",
+      "state": "COMPLETED",
+      "step_id": "415453.35"
+    },
+    "v54_fit_reader": {
+      "exit_code": "0:0",
+      "state": "COMPLETED",
+      "step_id": "415453.36"
+    }
+  }
+}
