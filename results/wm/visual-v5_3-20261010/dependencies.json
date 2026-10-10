@@ -1,0 +1,9 @@
+{
+  "prior_scene": "/aifs4su/guhao/KVCache/WM/diagnostic-20261010-v52",
+  "prior_release": "https://github.com/XintongYang1010/predictive-memory-lab/releases/tag/visual-v5_2-20261010",
+  "prior_archive_manifest_sha256": "5e6cc30bbe1952081732f8117a7791372f2409b02317d862e75898c911ac635a",
+  "prior_files_verified": 675,
+  "prior_scene_full_readback_unchanged": true,
+  "external_encoder_checkpoint": "Official IN1K-vit.h.14-300e.pth.tar SHA256 0382013c481743e9ccea89f970bc6c6aa126aa19a62127500d6e672a641aae22",
+  "external_encoder_source_commit": "52c1ae95d05f743e000e8f10a1f3a79b10cff048"
+}

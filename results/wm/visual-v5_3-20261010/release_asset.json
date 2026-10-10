@@ -1,0 +1,11 @@
+{
+  "file": "visual-v5_3-20261010-remote-scene.tar.gz",
+  "bytes": 395002032,
+  "sha256": "8746f0d32fddbc7c6c9a02c4223f2e4048de32423f59655e7406578dc7cf85ce",
+  "scene_files": 1799,
+  "scene_bytes": 465241564,
+  "manifest_sha256": "bfa3006ad1af90869deab7fa24d69b309bfaf76ca9b885532373145acb95ea13",
+  "local_snapshot_hashes_verified": true,
+  "verified_unix": 1791649121.079838,
+  "cleanup": "retained; no deletion"
+}

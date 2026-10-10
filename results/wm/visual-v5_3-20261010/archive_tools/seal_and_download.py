@@ -175,6 +175,7 @@ def main():
     scene_name=PurePosixPath(args.root).name;scene=args.base/scene_name
     if archive.exists() or scene.exists():raise FileExistsError('Existing archive/scene preserved; use a fresh --base')
     ssh=['ssh','-o','BatchMode=yes','-o','ConnectTimeout=15',args.ssh_alias]
+    if Path('/tmp/pmr-v5-dgx-20261010.sock').exists():ssh[1:1]=['-S','/tmp/pmr-v5-dgx-20261010.sock']
     code=REMOTE.replace('CONFIGURATION',repr(cfg),1)
     command='bash -lc '+shlex.quote('python3 -c '+shlex.quote(code))
     result=subprocess.run(ssh+[command],capture_output=True,text=True)

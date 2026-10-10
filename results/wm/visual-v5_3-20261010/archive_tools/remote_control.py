@@ -3,6 +3,7 @@ from pathlib import Path
 p=argparse.ArgumentParser();p.add_argument('action',choices=['fit','evaluation','status']);a=p.parse_args()
 B=Path('execution/visual-v5_3-20261010');remote='/aifs4su/guhao/KVCache/WM/diagnostic-20261010-v53'
 ssh=['ssh','-o','BatchMode=yes','-o','ConnectTimeout=15','dgx-127-slurm']
+if Path('/tmp/pmr-v5-dgx-20261010.sock').exists():ssh[1:1]=['-S','/tmp/pmr-v5-dgx-20261010.sock']
 if a.action=='status':
  code='''import json,subprocess;from pathlib import Path;p=Path(REMOTE)
 for n in ['fit_controller.json','evaluation_controller.json','ledger/budget.json']:

@@ -5,6 +5,7 @@ B=Path('execution/visual-v5_3-20261010');D=B/'frozen';D.mkdir(exist_ok=True)
 R=Path('results/wm/visual-v5_3-20261010-freeze');R.mkdir(parents=True,exist_ok=True)
 REMOTE='/aifs4su/guhao/KVCache/WM/diagnostic-20261010-v53';REPO='XintongYang1010/predictive-memory-lab';TAG='visual-v5_3-fit-20261010'
 ssh=['ssh','-o','BatchMode=yes','-o','ConnectTimeout=15','dgx-127-slurm']
+if Path('/tmp/pmr-v5-dgx-20261010.sock').exists():ssh[1:1]=['-S','/tmp/pmr-v5-dgx-20261010.sock']
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 def save(p,d):Path(p).write_text(json.dumps(d,indent=2)+'\n')
 def cmd(a):return subprocess.check_output(a,text=True).strip()

@@ -36,6 +36,7 @@ with tarfile.open(archive,'w:gz') as t:
  for n in ['source_manifest.json','registration_publication.json','freshness_audit.json'] :t.add(B/n,arcname=n)
  t.add(R,arcname='registration')
 ssh=['ssh','-o','BatchMode=yes','-o','ConnectTimeout=15','dgx-127-slurm']
+if Path('/tmp/pmr-v5-dgx-20261010.sock').exists():ssh[1:1]=['-S','/tmp/pmr-v5-dgx-20261010.sock']
 remote='test ! -e '+REMOTE+'/source_manifest.json && tar -xzf - -C '+REMOTE
 with archive.open('rb') as f:subprocess.run(ssh+['bash -lc '+shlex.quote(remote)],stdin=f,check=True)
 verify='import hashlib,json;from pathlib import Path;p=Path('+repr(REMOTE)+');m=json.loads((p/"source_manifest.json").read_text());assert all(hashlib.sha256((p/"code"/n).read_bytes()).hexdigest()==h for n,h in m["files"].items());print(json.dumps({"source_commit":m["commit"],"verified_files":len(m["files"])}))'
