@@ -1,0 +1,38 @@
+{
+  "software_only": true,
+  "scientific_data_generated": false,
+  "roles_used": [
+    "software_test"
+  ],
+  "unique_images": 3072,
+  "joint_reference_views": 8192,
+  "arm_supervised_views": {
+    "N": 4096,
+    "W": 4096
+  },
+  "feature_width": 64,
+  "production_feature_width_not_exercised": 20480,
+  "regularization": {
+    "N": 0.0032,
+    "W": 0.0032
+  },
+  "fit_seconds": 1.9985990409999999,
+  "total_seconds": 2.310307834,
+  "peak_rss_bytes": 2946318336,
+  "all_models_and_predictions_finite": true,
+  "source_unchanged": true,
+  "source_sha256": {
+    "scripts/v5_4_reader.py": "c932584c8729e359ab7edd787d27b2899bff65975ab7ccd3644bd3e756d5a201",
+    "scripts/v5_4_data.py": "97eb9796c9affe09a13d0bf242c701dac36d6e126f7e8cd91a84185534120576",
+    "scripts/v5_4_plan.json": "5ced3ea48e8734bd7f3c103f6536b95bdfeafc8dc23a0954f1bdf4efcc2a2ac8",
+    "scripts/v5_3_reader.py": "960e3123da1163d694fafaeee45f91cea84e03025b37a62da9823dcff0b04ada",
+    "scripts/v5_3_data.py": "3018b72817b536323ee404c070c10b1cc13917420ec377e21a3aec5325bb8f12"
+  },
+  "coefficient_sum_max_abs": {
+    "N": 6.732281399024487e-12,
+    "W": 8.460121492248618e-12
+  },
+  "python": "3.9.6 (default, Dec  2 2025, 07:27:58) \n[Clang 17.0.0 (clang-1700.6.3.2)]",
+  "numpy": "2.0.2",
+  "threads": 4
+}

@@ -1,0 +1,87 @@
+{
+  "prior_local_scene": {
+    "manifest_sha256": "bfa3006ad1af90869deab7fa24d69b309bfaf76ca9b885532373145acb95ea13",
+    "files": 1799,
+    "bytes": 465241564,
+    "ledger": {
+      "bytes": 8673,
+      "sha256": "d8740b2943f656f92772c585c49529efc183311296a2ac99663f1fb4fcce5911"
+    },
+    "final_accounting": {
+      "bytes": 2657,
+      "sha256": "ea022a782fd2ff0c6143e6e5c88d58086cb813854b7e4976d65d12b67654dc23"
+    },
+    "prior_bridge_predictions": {
+      "bytes": 203153,
+      "sha256": "fc2ce9a5cab09c03b25ccfb3355bdd8bea512aecb1bd0a2b9be832adfec3929b"
+    },
+    "prior_bridge_ids": [
+      384,
+      639
+    ]
+  },
+  "prior_verification": {
+    "bytes": 1664,
+    "sha256": "51456de4beb346f69c6e1abd104e8ef10eac64df4321f55267497b17aab5339b"
+  },
+  "prior_verification_commit": "c029e03b24cb368fdec95cb2a65693a662ea02e9",
+  "remote_audit": {
+    "bytes": 291724,
+    "sha256": "20a70d559fc28cfdb5f435eed0076f9d1acc4b29bf00a2154b516ecab2d49d42"
+  },
+  "old_original_dev_ids_conservatively_consumed": [
+    0,
+    639
+  ],
+  "seed_hash_only_audit": {
+    "new_bridge_unique_seed_count": 256,
+    "new_bridge_collisions_with_old_dev_or_planned_train": 0,
+    "fresh_anchor_unique_seed_count": 256,
+    "anchor_collisions_with_known_old_namespaces": 0,
+    "fit_latents": "deliberate reuse of V5.3/fit IDs0..255; not claimed fresh",
+    "software_latents": "V5.3/software_test only",
+    "scientific_rng_draws_or_images_generated": false
+  },
+  "source_test_paths": [
+    "tests/conftest.py",
+    "tests/test_attention.py",
+    "tests/test_controller.py",
+    "tests/test_diagnostics.py",
+    "tests/test_protocol.py",
+    "tests/test_state_memory_data.py",
+    "tests/test_state_memory_metrics.py",
+    "tests/test_state_memory_models.py",
+    "tests/test_state_memory_runner.py",
+    "tests/test_v3.py",
+    "tests/visual_memory/test_archive.py",
+    "tests/visual_memory/test_budget_parallel.py",
+    "tests/visual_memory/test_confirmation_reader.py",
+    "tests/visual_memory/test_extract_v5_confirmation.py",
+    "tests/visual_memory/test_feature_workers.py",
+    "tests/visual_memory/test_input_audit.py",
+    "tests/visual_memory/test_launcher.py",
+    "tests/visual_memory/test_probe_diagnostics.py",
+    "tests/visual_memory/test_probe_temporal.py",
+    "tests/visual_memory/test_profiling.py",
+    "tests/visual_memory/test_protocol.py",
+    "tests/visual_memory/test_report.py",
+    "tests/visual_memory/test_score_v5_2_counterfactual.py",
+    "tests/visual_memory/test_slurm_backend.py",
+    "tests/visual_memory/test_temporal_confirmation.py",
+    "tests/visual_memory/test_v5_1_controller.py",
+    "tests/visual_memory/test_v5_1_downstream.py",
+    "tests/visual_memory/test_v5_2_counterfactual.py",
+    "tests/visual_memory/test_v5_3_controller.py",
+    "tests/visual_memory/test_v5_3_data.py",
+    "tests/visual_memory/test_v5_3_reader.py",
+    "tests/visual_memory/test_v5_4_controller.py",
+    "tests/visual_memory/test_v5_4_data.py",
+    "tests/visual_memory/test_v5_4_reader.py"
+  ],
+  "source_manifest": {
+    "bytes": 13321,
+    "sha256": "6bb2c2f65172dac661cb99b4bfbb5ea65b421a224bafe127495e21f09b49ebed"
+  },
+  "scope": "Known local sealed artifacts and source/tests, exact old remote archive plus known WM cache filename inventory; no claim about unknown external experiments",
+  "scientific_samples_generated": false
+}

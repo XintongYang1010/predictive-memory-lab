@@ -1,0 +1,33 @@
+{
+  "source": "actual sealed V5.3 same encoder/pooling/eight H800/serialized loads",
+  "measured": {
+    "fit": {
+      "images": 1536,
+      "step": "415453.29",
+      "controller_wall_s": 213.27482390403748,
+      "last_worker_lifetime_s": 23.489983558654785,
+      "workers_complete": 8
+    },
+    "anchor": {
+      "images": 1536,
+      "step": "415453.31",
+      "controller_wall_s": 204.34759545326233,
+      "last_worker_lifetime_s": 22.458397388458252,
+      "workers_complete": 8
+    },
+    "bridge": {
+      "images": 1024,
+      "step": "415453.33",
+      "controller_wall_s": 195.9352207183838,
+      "last_worker_lifetime_s": 21.733994245529175,
+      "workers_complete": 8
+    }
+  },
+  "new_eval_images": 2560,
+  "projection": "Adding 1024 images to a1536-image step adds approximately last_worker_lifetime_s*1024/1536, conservatively counting its load too; observed max wall plus this increment is below264s worker deadline. This is planning extrapolation, not measured V5.4 throughput.",
+  "projected_eval_upper_s": 228.93481294314066,
+  "worker_deadline_seconds_from_lease_start": 264,
+  "slurm_limit_seconds": 360,
+  "outer_envelope_seconds": 540,
+  "new_gpu_profile_step": false
+}

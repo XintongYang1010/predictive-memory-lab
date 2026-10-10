@@ -1,0 +1,34 @@
+{
+  "schema": "v5.3.github.archive.readback.v1",
+  "verified_unix": 1791649491.613628,
+  "result_commit": "65a569f2b1dcff86239c1f2939f82058a877c9b3",
+  "source_commit": "875be45515276cc8559ffcdb21c7412c6048d5ad",
+  "git_artifacts": {
+    "verified_files": 68,
+    "transport": "GitHub Git blob API, decoded base64",
+    "curated_tree_exact": true,
+    "evidence_sha256": "33ec1dc62dea3a4d0dd71306e387dee8a32af3fd6709d9a8c82a66509ecd9039"
+  },
+  "release": {
+    "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/tag/visual-v5_3-20261010",
+    "tag": "visual-v5_3-20261010",
+    "asset_id": 628416959,
+    "name": "visual-v5_3-20261010-remote-scene.tar.gz",
+    "bytes": 395002032,
+    "sha256": "8746f0d32fddbc7c6c9a02c4223f2e4048de32423f59655e7406578dc7cf85ce",
+    "server_digest": "sha256:8746f0d32fddbc7c6c9a02c4223f2e4048de32423f59655e7406578dc7cf85ce",
+    "downloaded_from_github_and_rehashed": true
+  },
+  "scene": {
+    "inventoried_files": 1799,
+    "inventoried_bytes": 465241564,
+    "manifest_sha256": "bfa3006ad1af90869deab7fa24d69b309bfaf76ca9b885532373145acb95ea13",
+    "all_member_hashes_match": true,
+    "exact_file_inventory": true,
+    "regular_file_members": 1800,
+    "directory_members": 33,
+    "unsafe_special_duplicate_members": 0
+  },
+  "conclusion": "Balanced nuisance supervision reduced original-Dev dx MSE by 85.17%; primary S-B=0.0006382055, 95% CI [0.0005843579,0.0006926271]. Residual direction/amplitude and spatial-support errors remain. No memory-utility or original gate pass claim.",
+  "cleanup": "Investigation scenes retained; no deletion or job cancellation. Original V5/V5.1 gates unchanged."
+}

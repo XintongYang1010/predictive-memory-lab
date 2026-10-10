@@ -1,0 +1,42 @@
+{
+  "commit": "c029e03b24cb368fdec95cb2a65693a662ea02e9",
+  "files": {
+    "results/wm/visual-v5_3-20261010-verification.json": {
+      "git_blob_sha": "419d02630e4bc304d0017b8f9d1a371bb7c43a77",
+      "sha256": "51456de4beb346f69c6e1abd104e8ef10eac64df4321f55267497b17aab5339b",
+      "bytes": 1664
+    }
+  },
+  "complete_scene_manifest_sha256": "bfa3006ad1af90869deab7fa24d69b309bfaf76ca9b885532373145acb95ea13",
+  "local_full_scene_verification": {
+    "manifest_sha256": "bfa3006ad1af90869deab7fa24d69b309bfaf76ca9b885532373145acb95ea13",
+    "files": 1799,
+    "bytes": 465241564,
+    "ledger": {
+      "bytes": 8673,
+      "sha256": "d8740b2943f656f92772c585c49529efc183311296a2ac99663f1fb4fcce5911"
+    },
+    "final_accounting": {
+      "bytes": 2657,
+      "sha256": "ea022a782fd2ff0c6143e6e5c88d58086cb813854b7e4976d65d12b67654dc23"
+    },
+    "prior_bridge_predictions": {
+      "bytes": 203153,
+      "sha256": "fc2ce9a5cab09c03b25ccfb3355bdd8bea512aecb1bd0a2b9be832adfec3929b"
+    },
+    "prior_bridge_ids": [
+      384,
+      639
+    ]
+  },
+  "release": {
+    "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/tag/visual-v5_3-20261010",
+    "tag": "visual-v5_3-20261010",
+    "asset_id": 628416959,
+    "name": "visual-v5_3-20261010-remote-scene.tar.gz",
+    "bytes": 395002032,
+    "sha256": "8746f0d32fddbc7c6c9a02c4223f2e4048de32423f59655e7406578dc7cf85ce",
+    "server_digest": "sha256:8746f0d32fddbc7c6c9a02c4223f2e4048de32423f59655e7406578dc7cf85ce",
+    "downloaded_from_github_and_rehashed": true
+  }
+}
