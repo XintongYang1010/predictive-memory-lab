@@ -1,0 +1,98 @@
+{
+  "checked_unix": 1791651033.5230305,
+  "cumulative_charged_gpuh": 4.522264341248407,
+  "inherited_gpuh": 3.573925619125368,
+  "v54_gpuh": 0.9483387221230393,
+  "new_management_steps": 0,
+  "management_charge_added_by_sealer": false,
+  "steps": [
+    {
+      "stage": "v54_fit",
+      "step_id": "415453.35",
+      "selected_gpus": 8,
+      "sacct": [
+        "415453.35",
+        "v54_fit",
+        "COMPLETED",
+        "206",
+        "cpu=32,gres/gpu=8,mem=0,node=1",
+        "0:0"
+      ]
+    },
+    {
+      "stage": "v54_fit_reader",
+      "step_id": "415453.36",
+      "selected_gpus": 0,
+      "sacct": [
+        "415453.36",
+        "v54_fit_reader",
+        "COMPLETED",
+        "8",
+        "cpu=8,mem=0,node=1",
+        "0:0"
+      ]
+    },
+    {
+      "stage": "v54_eval",
+      "step_id": "415453.37",
+      "selected_gpus": 8,
+      "sacct": [
+        "415453.37",
+        "v54_eval",
+        "COMPLETED",
+        "220",
+        "cpu=32,gres/gpu=8,mem=0,node=1",
+        "0:0"
+      ]
+    },
+    {
+      "stage": "v54_anchor_reader",
+      "step_id": "415453.38",
+      "selected_gpus": 0,
+      "sacct": [
+        "415453.38",
+        "v54_anchor_reader",
+        "COMPLETED",
+        "5",
+        "cpu=8,mem=0,node=1",
+        "0:0"
+      ]
+    },
+    {
+      "stage": "v54_bridge_reader",
+      "step_id": "415453.39",
+      "selected_gpus": 0,
+      "sacct": [
+        "415453.39",
+        "v54_bridge_reader",
+        "COMPLETED",
+        "2",
+        "cpu=8,mem=0,node=1",
+        "0:0"
+      ]
+    }
+  ],
+  "parent_allocation": [
+    "415453",
+    "indexmem-h800-hold-5d-20261008",
+    "RUNNING",
+    "208609",
+    "billing=64,cpu=64,gres/gpu=8,node=1",
+    "0:0"
+  ],
+  "indexmem_step": [
+    "415453.5",
+    "python",
+    "RUNNING",
+    "160214",
+    "cpu=64,gres/gpu=8,mem=0,node=1",
+    "0:0"
+  ],
+  "indexmem_state_is_observation_not_required_running": true,
+  "all_new_steps_complete": true,
+  "active_new_leases": false,
+  "scientific_status": "Primary horizontal improvement unconfirmed: W MSE point estimate increases5.25percent, paired95CI crosses0. Vertical improvement and per-coordinate outside/inside tradeoff are supporting findings. Own-FIT nearly perfect but fresh-world generalization remains weak. Original gates unchanged; no Test or P0; retain unresolved investigation scenes.",
+  "test_opened": false,
+  "p0_started": false,
+  "cleanup": "Retained investigation scene; no deletion or job cancellation. Original V5/V5.1 gates unchanged."
+}

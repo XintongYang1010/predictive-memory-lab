@@ -32,7 +32,7 @@ if a.final:
  copy(B/'local_snapshot_receipt.json',R/'release_asset.json')
  text+='\n完整现场、所有新缓存、模型、日志与复现资料见 [V5.4完整归档](https://github.com/XintongYang1010/predictive-memory-lab/releases/tag/visual-v5_4-20261010)。独立GitHub回读凭证位于 results/wm/visual-v5_4-20261010-verification.json。科学问题尚未全部解决，现场保留，未取消IndexMem或删除既有内容。\n'
 (R/'README.md').write_text(text.rstrip()+'\n')
-for name in ['web_design_review.md','web_result_review.md','profile_reuse.json','precommit-tests.log']:
+for name in ['web_design_review.md','web_result_review.md','profile_reuse.json','precommit-tests.log','report-snapshot-verification.json','REPRODUCE.md']:
  if (B/name).exists():copy(B/name,R/name)
 for path in B.glob('*.py'):copy(path,R/'archive_tools'/path.name)
 for path in (B/'software_fixture').rglob('*'):
