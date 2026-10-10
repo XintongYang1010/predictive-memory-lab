@@ -64,5 +64,9 @@ fig.text(.525,.026,'RGB centroid uses renderer color identity. Privileged diagno
 fig.text(.525,.006,'Pixel units = normalized coordinates × 224. Bottom cases were fixed before this RGB audit; the auxiliary bbox rule is not plotted.',ha='center',fontsize=9,color='#66717E')
 fig.savefig(HERE/'rgb_observability.png',dpi=240)
 fig.savefig(HERE/'rgb_observability.svg')
+# Matplotlib emits trailing spaces in SVG path lines; preserve geometry while
+# making the generated text clean for Git review.
+svg_path=HERE/'rgb_observability.svg'
+svg_path.write_text('\n'.join(line.rstrip() for line in svg_path.read_text().splitlines())+'\n')
 plt.close(fig)
 print('Saved rgb_observability.png and rgb_observability.svg; sealed input hashes verified.')
