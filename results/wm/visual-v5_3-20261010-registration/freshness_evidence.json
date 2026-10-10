@@ -1,0 +1,40 @@
+{
+  "prior_evidence": {
+    "execution/visual-v5-dgx-20261009/downloaded/run1/probe_features/dev/manifest.json": {
+      "bytes": 17856,
+      "sha256": "a44c86624c8de1c7924cb725af93cfd8b6e13effa795931d90dc96edad544498"
+    },
+    "execution/visual-v5_1-20261010/continuation-20261010/freshness_audit.json": {
+      "bytes": 6000,
+      "sha256": "0ac68b3c94e2da88df129c462f2de9cf74027ce53031e0dcf81436df0c4864dc"
+    },
+    "execution/visual-v5_1-20261010/continuation-20261010/bridge_cache/manifest.json": {
+      "bytes": 80287,
+      "sha256": "9fd6c1ee8b1b6d1c9d8aa6eefb0f7491be1d129d2f6a22f84ce1923744f3a179"
+    },
+    "execution/visual-v5_2-20261010/diagnostic-20261010-v52/counterfactual_cache/manifest.json": {
+      "bytes": 83941,
+      "sha256": "e1c14ab9a5c92c9de53d69b1830e9c2c8a81decdc04c8446bb9cc368a7d67c41"
+    },
+    "results/wm/visual-v5_1-20261010-verification.json": {
+      "bytes": 2499,
+      "sha256": "bad9a65a861a06fae76f87b2474a27af4dec164a6989d02048567662389808ec"
+    },
+    "results/wm/visual-v5_2-20261010-verification.json": {
+      "bytes": 4304,
+      "sha256": "900c0e5e129d559dbd8a7ca945e0dac32ac9b0e8b2ac73d320d68f5646820ba9"
+    },
+    "execution/visual-v5_3-20261010/prior_file_inventory.json": {
+      "bytes": 126137,
+      "sha256": "8dd9bbe0bbdcc73bdc392877b313174841fe17f46e2efc9821efd22b967d5d95"
+    }
+  },
+  "prior_original_dev_ids_conservatively_consumed": [
+    0,
+    383
+  ],
+  "new_bridge_unique_seed_count": 256,
+  "new_bridge_collisions_with_old_dev_or_planned_train": 0,
+  "scientific_samples_generated": false,
+  "scope": "Inspected project artifacts and remote inventories; not a claim about unknown external experiments"
+}

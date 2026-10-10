@@ -1,0 +1,364 @@
+{
+  "checked_unix": 1791646563.4008589,
+  "wm_children": [
+    {
+      "name": "execution_controller.sh",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "logs",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "previews",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "archive_receipt.json",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "run1",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "continuation-20261010",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "assets",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "preparation.json",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": ".venv",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "controller_status.json",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "creation_record.json",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "remote_run_inventory.json",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "code",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "diagnostic-20261010-v52",
+      "directory": true,
+      "symlink": false
+    },
+    {
+      "name": "controller.lock",
+      "directory": false,
+      "symlink": false
+    },
+    {
+      "name": "cache",
+      "directory": true,
+      "symlink": false
+    }
+  ],
+  "job": {
+    "command": [
+      "scontrol",
+      "show",
+      "job",
+      "415453",
+      "-o"
+    ],
+    "returncode": 0,
+    "stdout": "JobId=415453 JobName=indexmem-h800-hold-5d-20261008 UserId=guhao(1046) GroupId=Gov(1009) MCS_label=N/A Priority=4294708234 Nice=0 Account=hansirui QOS=llm JobState=RUNNING Reason=None Dependency=(null) Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=2-08:42:22 TimeLimit=5-00:00:00 TimeMin=N/A SubmitTime=2026-10-08T13:50:59 EligibleTime=2026-10-08T13:50:59 AccrueTime=2026-10-08T13:50:59 StartTime=2026-10-08T14:53:41 EndTime=2026-10-13T14:53:41 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-08T14:53:41 Scheduler=Main Partition=llm AllocNode:Sid=dgx-127:2756420 ReqNodeList=(null) ExcNodeList=(null) NodeList=dgx-097 BatchHost=dgx-097 NumNodes=1 NumCPUs=64 NumTasks=1 CPUs/Task=64 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=64,mem=2063935M,node=1,billing=64,gres/gpu=8 AllocTRES=cpu=64,node=1,billing=64,gres/gpu=8 Socks/Node=* NtasksPerN:B:S:C=1:0:*:* CoreSpec=* MinCPUsNode=64 MinMemoryNode=0 MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null) Command=/aifs4su/guhao/debug_h800_8gpu_5days_20260908.slurm WorkDir=/home/guhao StdErr=/aifs4su/guhao/logs/debug-h800-5d-415453.err StdIn=/dev/null StdOut=/aifs4su/guhao/logs/debug-h800-5d-415453.out Power= TresPerNode=gres:gpu:8 \n",
+    "stderr": ""
+  },
+  "indexmem": {
+    "command": [
+      "scontrol",
+      "show",
+      "step",
+      "415453.5",
+      "-o"
+    ],
+    "returncode": 0,
+    "stdout": "StepId=415453.5 UserId=1046 StartTime=2026-10-09T04:20:16 TimeLimit=4-00:00:00 State=RUNNING Partition=llm NodeList=dgx-097 Nodes=1 CPUs=64 Tasks=8 Name=python Network=(null) TRES=cpu=64,gres/gpu=8,mem=0,node=1 ResvPorts=(null) CPUFreqReq=Default Dist=Block SrunHost:Pid=dgx-127:3499575 TresBind=gpu:single:1 TresPerStep=cpu:64 TresPerNode=gres:gpu:8 TresPerTask=cpu:8,gres:gpu:1\n",
+    "stderr": ""
+  },
+  "queue": {
+    "command": [
+      "squeue",
+      "-u",
+      "guhao",
+      "-o",
+      "%i|%j|%P|%a|%q|%T|%N|%b"
+    ],
+    "returncode": 0,
+    "stdout": "JOBID|NAME|PARTITION|ACCOUNT|QOS|STATE|NODELIST|TRES_PER_NODE\n415463|improbe-final-report|llm|hansirui|llm|PENDING||N/A\n415453|indexmem-h800-hold-5d-20261008|llm|hansirui|llm|RUNNING|dgx-097|gres:gpu:8\n",
+    "stderr": ""
+  },
+  "assoc": {
+    "command": [
+      "sacctmgr",
+      "-n",
+      "-P",
+      "show",
+      "assoc",
+      "where",
+      "user=guhao",
+      "format=User,Account,Partition,QOS"
+    ],
+    "returncode": 0,
+    "stdout": "guhao|hansirui||for_hansirui\n",
+    "stderr": ""
+  },
+  "disk": {
+    "command": [
+      "df",
+      "-h",
+      "/aifs4su/guhao/KVCache/WM"
+    ],
+    "returncode": 0,
+    "stdout": "Filesystem                                                                                                                                      Size  Used Avail Use% Mounted on\n10.35.255.1@o2ib,10.35.255.2@o2ib:10.35.255.3@o2ib,10.35.255.4@o2ib:10.35.255.5@o2ib,10.35.255.6@o2ib:10.35.255.7@o2ib,10.35.255.8@o2ib:/ustfs  518T  507T  6.2T  99% /aifs4su\n",
+    "stderr": ""
+  },
+  "resource": {
+    "command": [
+      "sinfo",
+      "-N",
+      "-h",
+      "-o",
+      "%N|%P|%t|%G"
+    ],
+    "returncode": 0,
+    "stdout": "dgx-061|llm|mix|gpu:8(S:0-1)\ndgx-081|llm|mix|gpu:8(S:0-1)\ndgx-082|llm|idle|gpu:8(S:0-1)\ndgx-091|llm|mix|gpu:8(S:0-1)\ndgx-092|llm|mix|gpu:8(S:0-1)\ndgx-097|llm|mix|gpu:8(S:0-1)\ndgx-100|llm|mix|gpu:8(S:0-1)\ndgx-103|llm|idle|gpu:8(S:0-1)\ndgx-126|debug|idle|(null)\ndgx-127|debug|drain|gpu:3(S:0-1)\n",
+    "stderr": ""
+  },
+  "gpu_management_only": {
+    "command": [
+      "srun",
+      "--jobid=415453",
+      "--overlap",
+      "--exact",
+      "--nodes=1",
+      "--ntasks=1",
+      "--gres=gpu:8",
+      "--cpus-per-task=1",
+      "--mem=8G",
+      "--time=1",
+      "--job-name=wm-v53-gpu-status",
+      "python3",
+      "-c",
+      "import json,os,subprocess,time; print(json.dumps(dict(step_id=os.environ.get('SLURM_STEP_ID'),start_unix=time.time(),gpus=subprocess.check_output(['nvidia-smi','--query-gpu=index,uuid,name,memory.total,memory.free,utilization.gpu,driver_version','--format=csv,noheader,nounits'],text=True),processes=subprocess.check_output(['nvidia-smi','--query-compute-apps=gpu_uuid,pid,used_memory','--format=csv,noheader,nounits'],text=True))))"
+    ],
+    "returncode": 0,
+    "stdout": "{\"step_id\": \"28\", \"start_unix\": 1791646564.5559037, \"gpus\": \"0, GPU-da1decf6-d33d-ca44-9340-8c9c6b45ceb6, NVIDIA H800, 81559, 64217, 47, 580.159.03\\n1, GPU-a27a6655-95b8-cb05-ed08-b15125877960, NVIDIA H800, 81559, 81079, 0, 580.159.03\\n2, GPU-aeca771a-00a6-7a2a-fc47-dc7b3db7bf0f, NVIDIA H800, 81559, 81079, 0, 580.159.03\\n3, GPU-ce743878-6a02-ca37-28ce-3b78d9b7bbe9, NVIDIA H800, 81559, 81079, 0, 580.159.03\\n4, GPU-c15374ab-3124-048a-40c1-15e42a684766, NVIDIA H800, 81559, 64217, 47, 580.159.03\\n5, GPU-dbd04f6c-e269-6f2d-1fa2-ddbd8fc89a4d, NVIDIA H800, 81559, 81079, 0, 580.159.03\\n6, GPU-40129db3-3a4e-227b-7159-b4ad9065a36e, NVIDIA H800, 81559, 81079, 0, 580.159.03\\n7, GPU-e862d13a-759f-cb9c-ded1-1faf7b7387ed, NVIDIA H800, 81559, 81079, 0, 580.159.03\\n\", \"processes\": \"GPU-da1decf6-d33d-ca44-9340-8c9c6b45ceb6, 4084652, 16854\\nGPU-c15374ab-3124-048a-40c1-15e42a684766, 4084873, 16854\\n\"}\n",
+    "stderr": ""
+  },
+  "prior_budget": {
+    "charged_gpuh": 2.2082544136047373,
+    "stages": {
+      "profile": 0.008888888888888889,
+      "features": 0.4,
+      "temporal_fit": 0.45001224835713705,
+      "temporal_confirm": 0.4278377988603379,
+      "temporal_bridge": 0.44267471101548933,
+      "counterfactual_v5_2": 0.4766185442606607,
+      "management_v5_2": 0.0022222222222222222
+    },
+    "leases": [
+      {
+        "lease_id": "003e90cca77348068bac0043325938ba",
+        "stage": "profile",
+        "job_id": "415453",
+        "pid": 2070785,
+        "gpu_count": 1,
+        "lease_hours": 0.5,
+        "charged_gpuh": 0.007657659230495079,
+        "status": "complete",
+        "start_unix": 1791595202.8986027,
+        "end_unix": 1791595230.4662051
+      },
+      {
+        "lease_id": "296990c062b04277950b24cf34017227",
+        "stage": "features",
+        "job_id": "415453",
+        "pid": 2071726,
+        "gpu_count": 8,
+        "lease_hours": 1.0,
+        "charged_gpuh": 0.3839540171478358,
+        "status": "partial",
+        "start_unix": 1791595240.5941114,
+        "end_unix": 1791595413.3730688
+      },
+      {
+        "lease_id": "3dca0bd9e19f445a8978efb4a937e9ff",
+        "stage": "temporal_fit",
+        "job_id": "415453",
+        "pid": 2197723,
+        "gpu_count": 8,
+        "lease_hours": 0.2,
+        "charged_gpuh": 0.4256992668865456,
+        "status": "complete",
+        "start_unix": 1791601199.7968407,
+        "end_unix": 1791601391.3616555
+      },
+      {
+        "lease_id": "235f76d1ba9e4936ac60b675957450b2",
+        "stage": "temporal_confirm",
+        "job_id": "415453",
+        "pid": 2204920,
+        "gpu_count": 8,
+        "lease_hours": 0.2,
+        "charged_gpuh": 0.417281410002874,
+        "status": "complete",
+        "start_unix": 1791601526.2650623,
+        "end_unix": 1791601714.0418503
+      },
+      {
+        "lease_id": "98ca6bfc39aa4b1198641d53a323781c",
+        "stage": "temporal_bridge",
+        "job_id": "415453",
+        "pid": 2209001,
+        "gpu_count": 8,
+        "lease_hours": 0.2,
+        "charged_gpuh": 0.43241293414392407,
+        "status": "complete",
+        "start_unix": 1791601720.8186243,
+        "end_unix": 1791601915.4047935
+      },
+      {
+        "lease_id": "51534c598ad4438e91d3f75b81441b92",
+        "stage": "counterfactual_v5_2",
+        "job_id": "415453",
+        "pid": 2343014,
+        "gpu_count": 8,
+        "lease_hours": 0.2,
+        "charged_gpuh": 0.4661826312210825,
+        "status": "complete",
+        "start_unix": 1791608115.298549,
+        "end_unix": 1791608325.0813382
+      }
+    ],
+    "controller_envelopes": [
+      {
+        "stage": "temporal_fit",
+        "status": "closed",
+        "prior_lease_ids": [
+          "003e90cca77348068bac0043325938ba",
+          "296990c062b04277950b24cf34017227"
+        ],
+        "gpuh": 2.0
+      },
+      {
+        "stage": "temporal_confirm",
+        "status": "closed",
+        "prior_lease_ids": [
+          "003e90cca77348068bac0043325938ba",
+          "296990c062b04277950b24cf34017227",
+          "3dca0bd9e19f445a8978efb4a937e9ff"
+        ],
+        "gpuh": 2.0
+      },
+      {
+        "stage": "temporal_bridge",
+        "status": "closed",
+        "prior_lease_ids": [
+          "003e90cca77348068bac0043325938ba",
+          "235f76d1ba9e4936ac60b675957450b2",
+          "296990c062b04277950b24cf34017227",
+          "3dca0bd9e19f445a8978efb4a937e9ff"
+        ],
+        "gpuh": 2.0
+      },
+      {
+        "stage": "counterfactual_v5_2",
+        "status": "closed",
+        "prior_lease_ids": [
+          "003e90cca77348068bac0043325938ba",
+          "235f76d1ba9e4936ac60b675957450b2",
+          "296990c062b04277950b24cf34017227",
+          "3dca0bd9e19f445a8978efb4a937e9ff",
+          "98ca6bfc39aa4b1198641d53a323781c"
+        ],
+        "gpuh": 2.0
+      }
+    ],
+    "overhead_receipts": [
+      {
+        "stage": "temporal_fit",
+        "controller": "fit",
+        "gpu_count": 8,
+        "charged_gpuh": 0.024312981470591466,
+        "method": "max(0, srun wall time times selected GPUs minus new stage leases)"
+      },
+      {
+        "stage": "temporal_confirm",
+        "controller": "confirm",
+        "gpu_count": 8,
+        "charged_gpuh": 0.010556388857464016,
+        "method": "max(0, srun wall time times selected GPUs minus new stage leases)"
+      },
+      {
+        "stage": "temporal_bridge",
+        "controller": "confirm",
+        "gpu_count": 8,
+        "charged_gpuh": 0.01026177687156532,
+        "method": "max(0, srun wall time times selected GPUs minus new stage leases)"
+      },
+      {
+        "stage": "counterfactual_v5_2",
+        "controller": "diagnostic",
+        "gpu_count": 8,
+        "charged_gpuh": 0.010435913039578304,
+        "method": "max(0, srun wall time times selected GPUs minus new stage leases)"
+      },
+      {
+        "stage": "management_v5_2",
+        "job_id": "415453.25",
+        "gpu_count": 8,
+        "charged_gpuh": 0.0022222222222222222,
+        "method": "conservative allocated GPU count times Slurm ElapsedRaw; nvidia-smi management query, no CUDA kernels"
+      }
+    ],
+    "prior_step_overhead_reconciliation": [
+      {
+        "job_id": "415453.14",
+        "stage": "profile",
+        "elapsed_seconds": 32,
+        "selected_gpus": 1,
+        "old_charge": 0.007657659230495106,
+        "additional_gpuh": 0.0012312296583937826
+      },
+      {
+        "job_id": "415453.15",
+        "stage": "features",
+        "elapsed_seconds": 180,
+        "selected_gpus": 8,
+        "old_charge": 0.38395401714783617,
+        "additional_gpuh": 0.016045982852163854
+      }
+    ]
+  }
+}
