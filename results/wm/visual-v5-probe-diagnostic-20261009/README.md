@@ -80,6 +80,10 @@ consistency. The existing Test split remains sealed. Merely changing alpha
 or lowering the old threshold does not authorize P0 or memory training.
 
 Source code and results are synchronized through the
-`diagnostics/visual-v5-probe-20261009` branch. Consultation with the original
-ChatGPT design conversation is ongoing; its review will be linked after receipt
-and independent verification. Original remote contents and IndexMem are retained.
+`diagnostics/visual-v5-probe-20261009` branch. At the time this CPU snapshot was
+sealed, consultation with the original ChatGPT design conversation was ongoing.
+The separate [consultation record](../../../docs/VISUAL_V5_GPT_REVIEW_20261009.md)
+tracks its response and our verification without rewriting these measurements.
+No new GPU job was launched and no remote cleanup was performed in this follow-up.
+See [reproduction instructions](REPRODUCE.md), [validation](validation/environment.json)
+and the archive manifest for evidence and limitations.
