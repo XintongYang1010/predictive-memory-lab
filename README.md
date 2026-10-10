@@ -1,9 +1,27 @@
 # Predictive Memory Lab
 
+## V5 视觉记忆首轮（源码已提供，A100 实验尚未运行）
+
+新增独立的 `pmr/visual_memory/`：受控成对 RGB 世界、冻结官方 I-JEPA、
+公共时间预测器 P0、三种 writer × 两种 reader、等字节 FIFO 对照，以及
+特征/历史有效性门槛、断点恢复和 60 GPUh 轮次上限。
+CPU 软件测试已通过；**尚未提交 V5 GPU 作业，也没有 V5 视觉实验结果**。
+当前部署目标是通过 Mac 本地 SSH 别名 `dgx-127-slurm`，在远端
+`/aifs4su/guhao/KVCache/WM` 中运行，结果归档到本仓库后再清理本次目录。
+本地 Codex 的完整执行说明见 [DGX 交接任务](docs/CODEX_DGX_HANDOFF.md)。
+**现有启动器仍绑定 NYU：本地执行者必须先查询 DGX 的 Slurm 配置并完成适配。**
+实验协议、未验证项及原 NYU 运行入口见 [V5 运行说明](docs/VISUAL_MEMORY_V5.md)。
+
+```bash
+python -m unittest discover -s tests/visual_memory -v
+```
+
+下面保留此前 V4 与 RealMotion 的独立入口。
+
 研究持续记忆如何保留隐藏状态、接受新证据，并避免破坏未变化对象。
 
 **目标镜像：Python 3.11 / PyTorch 2.9.1 / CUDA 12.8，单张 A100 即可启动。**
-最新实验为 **V4 可控状态记忆对照**；V1–V3 的 RealMotion 冻结骨干实验仍可独立运行。
+**V4 可控状态记忆对照**及 V1–V3 的 RealMotion 冻结骨干实验仍可独立运行。
 
 ## V4：隐藏状态、局部纠正与保留
 

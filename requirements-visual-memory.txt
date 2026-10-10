@@ -1,0 +1,4 @@
+# Reuse the course image's CUDA PyTorch. Never replace torch via this file.
+numpy>=1.26,<3
+Pillow>=10,<13
+matplotlib>=3.8,<4
