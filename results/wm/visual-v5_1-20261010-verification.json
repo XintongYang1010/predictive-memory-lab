@@ -1,0 +1,47 @@
+{
+  "schema": "v5.1.github.archive.readback.v1",
+  "verified_unix": 1791604562.129361,
+  "result_commit": "ab965d6ecea4a4bec8d311dfdb5aad041ac8731f",
+  "git_artifacts": {
+    "verified_files": 112,
+    "transport": "GitHub Git blob API, decoded base64",
+    "curated_tree_exact": true,
+    "evidence_sha256": "9c2cdd42c83ee87221a4c56f4ebbc41c99b5b6614148a4c8e783f15a006fb472"
+  },
+  "release": {
+    "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/tag/visual-v5_1-20261010",
+    "tag": "visual-v5_1-20261010",
+    "asset_id": 626912900,
+    "name": "visual-v5_1-20261010-remote-scene.tar.gz",
+    "bytes": 238634147,
+    "sha256": "86ee5e31749476bde466d9b7e094c779adcbd9dc7590168402c8bb2992ba7358",
+    "server_digest": "sha256:86ee5e31749476bde466d9b7e094c779adcbd9dc7590168402c8bb2992ba7358",
+    "downloaded_from_github_and_rehashed": true
+  },
+  "scene": {
+    "inventoried_files": 1739,
+    "inventoried_bytes": 274246065,
+    "manifest_sha256": "56d35d072c7d8a885429902c7128572b645e4040a47e5edf0347177f03f1f6ae",
+    "manifest_member_identical": true,
+    "all_member_hashes_match": true,
+    "exact_file_inventory": true,
+    "regular_file_members": 1740,
+    "directory_members": 28,
+    "unsafe_special_duplicate_members": 0
+  },
+  "remote_final_verification": {
+    "checked_unix": 1791603834.550453,
+    "remote_root": "/aifs4su/guhao/KVCache/WM/continuation-20261010",
+    "root_identity_unchanged": true,
+    "full_remote_scene_reverified": true,
+    "files": 1739,
+    "bytes": 274246065,
+    "archive_manifest_sha256": "56d35d072c7d8a885429902c7128572b645e4040a47e5edf0347177f03f1f6ae",
+    "indexmem_step": "StepId=415453.5 UserId=1046 StartTime=2026-10-09T04:20:16 TimeLimit=4-00:00:00 State=RUNNING Partition=llm NodeList=dgx-097 Nodes=1 CPUs=64 Tasks=8 Name=python Network=(null) TRES=cpu=64,gres/gpu=8,mem=0,node=1 ResvPorts=(null) CPUFreqReq=Default Dist=Block SrunHost:Pid=dgx-127:3499575 TresBind=gpu:single:1 TresPerStep=cpu:64 TresPerNode=gres:gpu:8 TresPerTask=cpu:8,gres:gpu:1",
+    "cleanup": "not_deleted_scientific_failure_scene_retained",
+    "original_WM_and_IndexMem_preserved": true
+  },
+  "conclusion": "Controlled temporal confirmation passed; original-distribution bridge failed. P0 and memory comparisons were not started. Test remains unopened.",
+  "cleanup": "Retained new remote scientific-failure scene as requested; no remote deletion authorized by this verification receipt.",
+  "review": "docs/V5_1_RESULT_REVIEW_20261010.md"
+}
