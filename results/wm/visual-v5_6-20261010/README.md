@@ -114,6 +114,8 @@ Fresh64主比较中每个运动坐标有2048个非零且≥1px的方向样本，
 
 CPU数学/软件校验、旧global/lane预测复现、全视图统计和配对区间独立重算通过。完整协议：[V5_6_EXECUTION_PROTOCOL.md](../../../docs/V5_6_EXECUTION_PROTOCOL.md)。大文件入口：[完整结果Release](https://github.com/XintongYang1010/predictive-memory-lab/releases/tag/visual-v5_6-20261010)。包含新cache、J/X及12臂模型、全部预测/匹配cost、配置、源码、日志、图表及manifest；旧V5.4/V5.5依赖以既有封存内容及引用清单验证。
 
+本Git目录镜像小型报告和图表；GPU报告manifest所列的NPZ/逐样本CSV完整文件位于Release的`scene/`，CPU大模型与cost位于`local/`。重建顺序、SHA256和依赖入口见[ARCHIVE.md](ARCHIVE.md)。
+
 **归档状态：实验和远端封存核验完成，正在传输与独立回读；尚未清理远端。** 仅在完整回读后删除本次新建work及reference staging根；已有目录、共享环境、权重及其他作业保留。
 
 运维恢复记录完整保留：首次部署参数过长后改stdin传输；模型首次流式压缩参数不兼容后改显式gzip流；一次只读封存检查SSH断开后重试。科学源码、模型、seed和门槛未因此改变。
@@ -124,3 +126,4 @@ CPU数学/软件校验、旧global/lane预测复现、全视图统计和配对�
 - [Fixed bad cases, uncertainty intervals and selected-token coverage](correspondence_interpretation/README.md).
 - [Independent update replay reconstruction](cpu/replay_verification.json).
 - [Web ChatGPT method review and replies](web_review.md). No scientific thresholds or models were changed in response.
+- [网页端对最终J/X和坐标结论的复核](web_final_review.md)。22.34%是MSE降幅；old16/mixed16是同一批64个world的子集。
