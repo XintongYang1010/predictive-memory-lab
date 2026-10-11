@@ -1,0 +1,84 @@
+{
+  "schema": "v5.8-independent-protocol-review-1",
+  "created_unix": 1791679344.762795,
+  "reviewer": "audit_protocol",
+  "status": "protocol_passed_no_blocking_design_issue",
+  "protocol_sha256": "d74b771e8b512bed6bf68eabccab8cfb3f5a5a8c88c71e9dcaddc8d76d946cfa",
+  "scientific_inputs_opened": false,
+  "scientific_scoring_executed": false,
+  "source_modified": false,
+  "scope": "Final five-arm protocol, analytical physical geometry, synthetic independent tests; final five-arm implementation review remains separate.",
+  "arms": [
+    "R",
+    "BR",
+    "DR",
+    "DBR",
+    "H"
+  ],
+  "geometry": {
+    "raw_centers": "6.5+14*i for i=0..15",
+    "box_and_H_centers": "27.5+14*j for j=0..12",
+    "coarse_centers": "27.5+56*k for k=0..3",
+    "BR": "FP64 mean over raw[j:j+4,k:k+4], stored FP32",
+    "H": "FP64 bilinear raw sampling at BR centers equals raw[j+1:j+3,k+1:k+3]2x2 mean, stored FP32",
+    "DR": "H rows/cols0,4,8,12",
+    "DBR": "BR rows/cols0,4,8,12; old pool4 bank",
+    "query": "Direct native-grid bilinear evaluation; no intermediate16x16 reconstruction"
+  },
+  "common_subset": {
+    "criterion": "All coordinates of all nine source ROI points lie in closed interval[33.5,189.5], equivalent to no clamps across all625 candidate translations in all five arms",
+    "physical_common_field_support": [
+      27.5,
+      195.5
+    ],
+    "maximum_candidate_offset": 6.0,
+    "subset_uses_costs_or_labels": false,
+    "bootstrap": "Whole world, preserve variants and objects; ratio of included loss sums to included query counts; not equal weight per valid world"
+  },
+  "actual_synthetic_checks": [
+    {
+      "seed": 58091,
+      "status": "passed",
+      "checks": [
+        "DBR exact old.pool",
+        "DR exact central2x2 mean",
+        "double interpolation is not equivalent"
+      ],
+      "double_interpolation_impulse_counterexample_max_abs": 0.234375
+    },
+    {
+      "seed": 580912,
+      "status": "passed",
+      "reviewed_four_arm_source_sha256": "311666ef446e678c57c72295811c6e2648dc8102372d4cca58ec8890e78a27f2",
+      "checks": [
+        "all169 BR windows",
+        "DBR bitwise oldpool",
+        "DR bitwise central2x2",
+        "all4 arms affine physical field",
+        "row-stochastic weights",
+        "common interior formula at six inside/boundary/outside ROI fixtures"
+      ]
+    },
+    {
+      "seed": 580913,
+      "status": "passed",
+      "implementation": "Independent old-grid bilinear weights, without scientific observations",
+      "checks": [
+        "all169 H nodes exact central2x2 average",
+        "H stride4 subgrid bitwise equals DR"
+      ]
+    }
+  ],
+  "interpretation": [
+    "BR-H compares4x4 versus2x2 averaging at same phase,density,support and query reconstruction.",
+    "DBR-DR compares4x4 versus2x2 averages on same coarse grid.",
+    "DR-H and DBR-BR combine sampling density and reconstruction; these operations are not individually separated.",
+    "H-R is not pure phase: it includes half-grid averaging,resampling and changed support.",
+    "Matched factorial interaction is a loss contrast, not a module responsibility percentage.",
+    "Finite-grid, source-RGB-privileged, already-opened Dev evidence cannot establish encoder defect, irreversible information loss, learned-reader generalization or memory efficacy."
+  ],
+  "implementation_notes": [
+    "Earlier four-arm source had missing global rank and FIT-mean four-coordinate scores relative to protocol; backend/root notified and final source addition pending at this protocol-only signoff."
+  ],
+  "environment_notes": "Local NumPy matmul emitted floating-status RuntimeWarning in synthetic checks; outputs passed finite/equality checks. Warnings were not suppressed and no tolerance was relaxed."
+}

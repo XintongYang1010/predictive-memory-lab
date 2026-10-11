@@ -1,0 +1,102 @@
+{
+  "status": "passed",
+  "software_only": true,
+  "scientific_inputs_opened": false,
+  "source_identity": {
+    "docs/V5_8_EXECUTION_PROTOCOL.md": "d74b771e8b512bed6bf68eabccab8cfb3f5a5a8c88c71e9dcaddc8d76d946cfa",
+    "pmr/visual_memory/__init__.py": "5334f491766718f980788f117910c30e2b4d804bee37b69bd26438db575f0027",
+    "pmr/visual_memory/__main__.py": "bb4c496ca7009b617ff20badb661237d7e0afc35ec34972af15c61c42faa49b5",
+    "pmr/visual_memory/bind_gpu.py": "cab3427dddd890e1437393dc40cdb2381c623d177b32054f4bdd4c1f674fef45",
+    "pmr/visual_memory/common.py": "6b89bfca6f38aea698449edd7ece7da3baa14e16b97b805b6368d59853f5b4ac",
+    "pmr/visual_memory/data.py": "ce5082f3be9006dcceb46fbaffadc27349f977a77abcf8992eda3e80f8775368",
+    "pmr/visual_memory/feature_workers.py": "9334ce554d5d910d3f651e7d7d555ef23c629762b0f391f8b0e318d4c8fb1cc1",
+    "pmr/visual_memory/features.py": "5324748c4c2ef0cd82329d97c73a6cf8a21562501039ba31bd67dbc0efe29f93",
+    "pmr/visual_memory/memory.py": "779a3fa3ffd9a5e4b1b52111ae37ebb35292f61e2a4a4973cadffa61e6ec4b7b",
+    "pmr/visual_memory/predictor.py": "11b481b74fb50ad069c42335611677ab3dc20c0cc7dc8eef9e74b4472fb14d38",
+    "pmr/visual_memory/profiling.py": "a99b14df2651f4f32d5f242f28a877c47f83c6b5a8d425d31a891fa79c2c12fe",
+    "pmr/visual_memory/report.py": "fa8b54a0f1f840da0acf1cab11b23f24d6bbead8f214c4a1a6b4634cbbed225d",
+    "pmr/visual_memory/slurm_backend.py": "6b622a7f895adeaf1fd6dd84031639765ca9ce7c2e445ceba5d989f6a2c6fbbe",
+    "pmr/visual_memory/train.py": "59b8420c95625a08b324e93a7b5d75f7f44af58719a486002bd0cd831a1cf7bb",
+    "scripts/extract_v5_confirmation.py": "8db68a6a978014e18b9f3f12f81cdc7388048cfaf41c285c97c1c268ee656034",
+    "scripts/v5_3_data.py": "3018b72817b536323ee404c070c10b1cc13917420ec377e21a3aec5325bb8f12",
+    "scripts/v5_3_reader.py": "960e3123da1163d694fafaeee45f91cea84e03025b37a62da9823dcff0b04ada",
+    "scripts/v5_4_data.py": "97eb9796c9affe09a13d0bf242c701dac36d6e126f7e8cd91a84185534120576",
+    "scripts/v5_4_reader.py": "e198aa3046056b032582e13c6ad135e581af895fcef17a8867e231355e82c3c1",
+    "scripts/v5_5_counterfactual.py": "420fda7123d16864c00ba3b829739b09ec9ce7d259833883ea66539a75b7be62",
+    "scripts/v5_6_correspondence.py": "79a0fcb95c8481b43ba1d6c1fa602b21bfe5fa70da3626323af0ae528aa11dbe",
+    "scripts/v5_8_spatial_diagnosis.py": "83a4ee8e84954902c8c0c7d3af43852761f348a157e3795a178f32deb01772cf",
+    "scripts/v5_temporal_confirmation.py": "6fe8a1f96e6d1209094fa2522dcccf4e9558afcb9714e8e9d7dd9785eb651681",
+    "tests/visual_memory/test_v5_8_spatial_diagnosis.py": "4bf3367e1dae04313140aab78f4b2606548b444e1414d6e0b2bdab4d48b72b01"
+  },
+  "review_script_sha256": "79189f7d7d85f3ccebf67d17b777cb2cf573befeb4fc50bd3074d2593a253b16",
+  "physical_grids": {
+    "R": [
+      16,
+      6.5,
+      14.0
+    ],
+    "BR": [
+      13,
+      27.5,
+      14.0
+    ],
+    "DR": [
+      4,
+      27.5,
+      56.0
+    ],
+    "DBR": [
+      4,
+      27.5,
+      56.0
+    ],
+    "H": [
+      13,
+      27.5,
+      14.0
+    ]
+  },
+  "all_five_banks_match_independent_construction_exactly": true,
+  "DBR_exact_old_pool": true,
+  "DR_exact_half_grid_2x2_average": true,
+  "H_exact_dense_half_grid_2x2_average": true,
+  "DR_exact_subsampled_H": true,
+  "affine_interior_max_abs": {
+    "R": 5.684341886080802e-14,
+    "BR": 2.842170943040401e-14,
+    "DR": 2.842170943040401e-14,
+    "DBR": 2.842170943040401e-14,
+    "H": 2.842170943040401e-14
+  },
+  "direct_cost_max_abs": {
+    "R_interior": 3.3306690738754696e-16,
+    "R_border": 4.440892098500626e-16,
+    "BR_interior": 3.3306690738754696e-16,
+    "BR_border": 2.220446049250313e-16,
+    "DR_interior": 3.3306690738754696e-16,
+    "DR_border": 2.220446049250313e-16,
+    "DBR_interior": 2.220446049250313e-16,
+    "DBR_border": 2.220446049250313e-16,
+    "H_interior": 4.440892098500626e-16,
+    "H_border": 2.220446049250313e-16
+  },
+  "baseline_cost_max_abs": {
+    "R_interior": 4.440892098500626e-16,
+    "R_border": 4.440892098500626e-16,
+    "DBR_interior": 2.220446049250313e-16,
+    "DBR_border": 2.220446049250313e-16
+  },
+  "all_predictions_and_clamps_match_direct_reference": true,
+  "constant_ambiguity_zero_prediction": true,
+  "synthetic_translation_pixels": [
+    2.5,
+    -3.0
+  ],
+  "tie_rule_and_source_only_roi_verified": true,
+  "count_weighted_world_bootstrap_verified": true,
+  "sources_unchanged": true,
+  "python": "3.9.6 (default, Dec  2 2025, 07:27:58) \n[Clang 17.0.0 (clang-1700.6.3.2)]",
+  "numpy": "2.0.2",
+  "wall_seconds": 0.7892758846282959,
+  "limits": "Synthetic numerical audit only; no real costs, labels, production scores, new images or Test read. H and BR match phase/density but compare2x2 versus4x4 averaging, not zero versus nonzero filtering; D includes reconstruction."
+}

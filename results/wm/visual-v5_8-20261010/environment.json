@@ -1,0 +1,16 @@
+{
+  "python": "3.9.6 (default, Dec  2 2025, 07:27:58) \n[Clang 17.0.0 (clang-1700.6.3.2)]",
+  "executable": "/Library/Developer/CommandLineTools/usr/bin/python3",
+  "platform": "macOS-15.7.3-arm64-arm-64bit",
+  "machine": "arm64",
+  "packages": {
+    "numpy": "2.0.2",
+    "torch": "2.8.0",
+    "matplotlib": "3.9.4",
+    "Pillow": "11.3.0",
+    "scipy": null,
+    "pytest": "8.4.2"
+  },
+  "cpu_threads_per_scoring_process": 4,
+  "gpu": false
+}

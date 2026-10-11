@@ -1,0 +1,39 @@
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_8_spatial_diagnosis.py:158: RuntimeWarning: divide by zero encountered in matmul
+  sampled = np.stack([w @ frame.astype(np.float64) for frame in raw]).astype(np.float32)
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_8_spatial_diagnosis.py:158: RuntimeWarning: overflow encountered in matmul
+  sampled = np.stack([w @ frame.astype(np.float64) for frame in raw]).astype(np.float32)
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_8_spatial_diagnosis.py:158: RuntimeWarning: invalid value encountered in matmul
+  sampled = np.stack([w @ frame.astype(np.float64) for frame in raw]).astype(np.float32)
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_6_correspondence.py:131: RuntimeWarning: divide by zero encountered in matmul
+  source=s@x;source_norm=np.sum(source*source,1)
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_6_correspondence.py:131: RuntimeWarning: overflow encountered in matmul
+  source=s@x;source_norm=np.sum(source*source,1)
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_6_correspondence.py:131: RuntimeWarning: invalid value encountered in matmul
+  source=s@x;source_norm=np.sum(source*source,1)
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_6_correspondence.py:132: RuntimeWarning: divide by zero encountered in matmul
+  source_target=source@y.T;target_gram=y@y.T
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_6_correspondence.py:132: RuntimeWarning: overflow encountered in matmul
+  source_target=source@y.T;target_gram=y@y.T
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_6_correspondence.py:132: RuntimeWarning: invalid value encountered in matmul
+  source_target=source@y.T;target_gram=y@y.T
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_8_spatial_diagnosis.py:206: RuntimeWarning: divide by zero encountered in matmul
+  sn = ((sw[:, active] @ x) ** 2).sum(1)
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_8_spatial_diagnosis.py:206: RuntimeWarning: overflow encountered in matmul
+  sn = ((sw[:, active] @ x) ** 2).sum(1)
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_8_spatial_diagnosis.py:206: RuntimeWarning: invalid value encountered in matmul
+  sn = ((sw[:, active] @ x) ** 2).sum(1)
+{"progress_worlds": 32, "total_worlds": 256}
+{"progress_worlds": 64, "total_worlds": 256}
+{"progress_worlds": 96, "total_worlds": 256}
+{"progress_worlds": 128, "total_worlds": 256}
+{"progress_worlds": 160, "total_worlds": 256}
+{"progress_worlds": 192, "total_worlds": 256}
+{"progress_worlds": 224, "total_worlds": 256}
+{"progress_worlds": 256, "total_worlds": 256}
+{
+  "status": "complete",
+  "out": "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_8-20261010/spatial",
+  "baseline_cost_max_abs": 3.885780586188048e-16,
+  "all_object_queries": 1024,
+  "common_unclamped_objects": 863
+}

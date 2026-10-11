@@ -1,0 +1,10 @@
+{
+  "run_id": "visual-v5_8-20261010",
+  "created_unix": 1791679158.185316,
+  "parent_commit": "6569ba2102a3d085fe1b4484807ffb979936a0c3",
+  "new_remote_roots": [],
+  "new_slurm_steps": [],
+  "new_gpu_hours": 0,
+  "inherited_diagnostic_gpu_hours": 5.56779064169697,
+  "execution": "CPU cached-feature factorial intervention; four BLAS threads"
+}

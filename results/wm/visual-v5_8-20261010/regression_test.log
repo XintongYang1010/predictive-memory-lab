@@ -1,0 +1,282 @@
+........................................................................ [ 41%]
+........................................................................ [ 82%]
+...............................                                          [100%]
+=============================== warnings summary ===============================
+tests/visual_memory/test_confirmation_reader.py::ConfirmationReader::test_all_three_readers_use_same_grouped_cv_and_survive_reload
+tests/visual_memory/test_confirmation_reader.py::ConfirmationReader::test_indexed_grams_equal_explicit_cue_inputs
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_confirmation_reader.py:129: RuntimeWarning: divide by zero encountered in matmul
+    out += a[:, lo:lo+chunk].astype(np.float64) @ b[:, lo:lo+chunk].astype(np.float64).T
+
+tests/visual_memory/test_confirmation_reader.py::ConfirmationReader::test_all_three_readers_use_same_grouped_cv_and_survive_reload
+tests/visual_memory/test_confirmation_reader.py::ConfirmationReader::test_indexed_grams_equal_explicit_cue_inputs
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_confirmation_reader.py:129: RuntimeWarning: overflow encountered in matmul
+    out += a[:, lo:lo+chunk].astype(np.float64) @ b[:, lo:lo+chunk].astype(np.float64).T
+
+tests/visual_memory/test_confirmation_reader.py::ConfirmationReader::test_all_three_readers_use_same_grouped_cv_and_survive_reload
+tests/visual_memory/test_confirmation_reader.py::ConfirmationReader::test_indexed_grams_equal_explicit_cue_inputs
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_confirmation_reader.py:129: RuntimeWarning: invalid value encountered in matmul
+    out += a[:, lo:lo+chunk].astype(np.float64) @ b[:, lo:lo+chunk].astype(np.float64).T
+
+tests/visual_memory/test_confirmation_reader.py::ConfirmationReader::test_all_three_readers_use_same_grouped_cv_and_survive_reload
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_confirmation_reader.py:170: RuntimeWarning: divide by zero encountered in matmul
+    prediction = q @ state["coefficients"] + state["target_mean"]
+
+tests/visual_memory/test_confirmation_reader.py::ConfirmationReader::test_all_three_readers_use_same_grouped_cv_and_survive_reload
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_confirmation_reader.py:170: RuntimeWarning: overflow encountered in matmul
+    prediction = q @ state["coefficients"] + state["target_mean"]
+
+tests/visual_memory/test_confirmation_reader.py::ConfirmationReader::test_all_three_readers_use_same_grouped_cv_and_survive_reload
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_confirmation_reader.py:170: RuntimeWarning: invalid value encountered in matmul
+    prediction = q @ state["coefficients"] + state["target_mean"]
+
+tests/visual_memory/test_confirmation_reader.py::ConfirmationReader::test_indexed_grams_equal_explicit_cue_inputs
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_confirmation_reader.py:50: RuntimeWarning: divide by zero encountered in matmul
+    np.testing.assert_allclose(reader.view_gram(raw, qi, bi, name), left@right.T, atol=1e-12)
+
+tests/visual_memory/test_confirmation_reader.py::ConfirmationReader::test_indexed_grams_equal_explicit_cue_inputs
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_confirmation_reader.py:50: RuntimeWarning: overflow encountered in matmul
+    np.testing.assert_allclose(reader.view_gram(raw, qi, bi, name), left@right.T, atol=1e-12)
+
+tests/visual_memory/test_confirmation_reader.py::ConfirmationReader::test_indexed_grams_equal_explicit_cue_inputs
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_confirmation_reader.py:50: RuntimeWarning: invalid value encountered in matmul
+    np.testing.assert_allclose(reader.view_gram(raw, qi, bi, name), left@right.T, atol=1e-12)
+
+tests/visual_memory/test_probe_diagnostics.py::ProbeDiagnostics::test_shared_position_decoder_uses_derived_labels_and_differences
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_probe_diagnostics.py:73: RuntimeWarning: divide by zero encountered in matmul
+    views = diagnostics.kernel_views(frames@frames.T, query@frames.T)
+
+tests/visual_memory/test_probe_diagnostics.py::ProbeDiagnostics::test_shared_position_decoder_uses_derived_labels_and_differences
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_probe_diagnostics.py:73: RuntimeWarning: overflow encountered in matmul
+    views = diagnostics.kernel_views(frames@frames.T, query@frames.T)
+
+tests/visual_memory/test_probe_diagnostics.py::ProbeDiagnostics::test_shared_position_decoder_uses_derived_labels_and_differences
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_probe_diagnostics.py:73: RuntimeWarning: invalid value encountered in matmul
+    views = diagnostics.kernel_views(frames@frames.T, query@frames.T)
+
+tests/visual_memory/test_probe_temporal.py::TemporalControls::test_single_frame_and_query_swap_kernels_match_explicit_features
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_probe_temporal.py:16: RuntimeWarning: divide by zero encountered in matmul
+    cross=dev.reshape(10,13)@train.reshape(16,13).T
+
+tests/visual_memory/test_probe_temporal.py::TemporalControls::test_single_frame_and_query_swap_kernels_match_explicit_features
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_probe_temporal.py:16: RuntimeWarning: overflow encountered in matmul
+    cross=dev.reshape(10,13)@train.reshape(16,13).T
+
+tests/visual_memory/test_probe_temporal.py::TemporalControls::test_single_frame_and_query_swap_kernels_match_explicit_features
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_probe_temporal.py:16: RuntimeWarning: invalid value encountered in matmul
+    cross=dev.reshape(10,13)@train.reshape(16,13).T
+
+tests/visual_memory/test_report.py::ReportCompleteness::test_requires_reader_results_and_successful_replay_status
+  /Users/xintongyang/Library/Python/3.9/lib/python/site-packages/matplotlib/_fontconfig_pattern.py:64: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+    prop = Group((name + Suppress("=") + comma_separated(value)) | oneOf(_CONSTANTS))
+
+tests/visual_memory/test_report.py::ReportCompleteness::test_requires_reader_results_and_successful_replay_status
+tests/visual_memory/test_report.py::ReportCompleteness::test_requires_reader_results_and_successful_replay_status
+tests/visual_memory/test_report.py::ReportCompleteness::test_requires_reader_results_and_successful_replay_status
+tests/visual_memory/test_report.py::ReportCompleteness::test_requires_reader_results_and_successful_replay_status
+tests/visual_memory/test_report.py::ReportCompleteness::test_requires_reader_results_and_successful_replay_status
+tests/visual_memory/test_report.py::ReportCompleteness::test_requires_reader_results_and_successful_replay_status
+  /Users/xintongyang/Library/Python/3.9/lib/python/site-packages/matplotlib/_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+    parse = parser.parseString(pattern)
+
+tests/visual_memory/test_report.py::ReportCompleteness::test_requires_reader_results_and_successful_replay_status
+tests/visual_memory/test_report.py::ReportCompleteness::test_requires_reader_results_and_successful_replay_status
+tests/visual_memory/test_report.py::ReportCompleteness::test_requires_reader_results_and_successful_replay_status
+tests/visual_memory/test_report.py::ReportCompleteness::test_requires_reader_results_and_successful_replay_status
+tests/visual_memory/test_report.py::ReportCompleteness::test_requires_reader_results_and_successful_replay_status
+tests/visual_memory/test_report.py::ReportCompleteness::test_requires_reader_results_and_successful_replay_status
+  /Users/xintongyang/Library/Python/3.9/lib/python/site-packages/matplotlib/_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+    parser.resetCache()
+
+tests/visual_memory/test_report.py::ReportCompleteness::test_requires_reader_results_and_successful_replay_status
+  /Users/xintongyang/Library/Python/3.9/lib/python/site-packages/matplotlib/_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'
+    ParserElement.enablePackrat()
+
+tests/visual_memory/test_report.py::ReportCompleteness::test_requires_reader_results_and_successful_replay_status
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/pmr/visual_memory/report.py:58: UserWarning: No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+    ax.legend(fontsize=7)
+
+tests/visual_memory/test_v5_3_reader.py::test_shared_kernel_and_unpenalized_intercept_match_explicit_augmented_and_primal
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_v5_3_reader.py:54: RuntimeWarning: divide by zero encountered in matmul
+    np.testing.assert_allclose(gram,phi@phi.T,rtol=1e-12,atol=1e-12)
+
+tests/visual_memory/test_v5_3_reader.py::test_shared_kernel_and_unpenalized_intercept_match_explicit_augmented_and_primal
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_v5_3_reader.py:54: RuntimeWarning: overflow encountered in matmul
+    np.testing.assert_allclose(gram,phi@phi.T,rtol=1e-12,atol=1e-12)
+
+tests/visual_memory/test_v5_3_reader.py::test_shared_kernel_and_unpenalized_intercept_match_explicit_augmented_and_primal
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_v5_3_reader.py:54: RuntimeWarning: invalid value encountered in matmul
+    np.testing.assert_allclose(gram,phi@phi.T,rtol=1e-12,atol=1e-12)
+
+tests/visual_memory/test_v5_3_reader.py::test_shared_kernel_and_unpenalized_intercept_match_explicit_augmented_and_primal
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_v5_3_reader.py:55: RuntimeWarning: divide by zero encountered in matmul
+    np.testing.assert_allclose(cross,qphi@phi.T,rtol=1e-12,atol=1e-12)
+
+tests/visual_memory/test_v5_3_reader.py::test_shared_kernel_and_unpenalized_intercept_match_explicit_augmented_and_primal
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_v5_3_reader.py:55: RuntimeWarning: overflow encountered in matmul
+    np.testing.assert_allclose(cross,qphi@phi.T,rtol=1e-12,atol=1e-12)
+
+tests/visual_memory/test_v5_3_reader.py::test_shared_kernel_and_unpenalized_intercept_match_explicit_augmented_and_primal
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_v5_3_reader.py:55: RuntimeWarning: invalid value encountered in matmul
+    np.testing.assert_allclose(cross,qphi@phi.T,rtol=1e-12,atol=1e-12)
+
+tests/visual_memory/test_v5_3_reader.py::test_shared_kernel_and_unpenalized_intercept_match_explicit_augmented_and_primal
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_v5_3_reader.py:71: RuntimeWarning: divide by zero encountered in matmul
+    w = np.linalg.solve(centered.T@centered+n*.02*np.eye(phi.shape[1]),
+
+tests/visual_memory/test_v5_3_reader.py::test_shared_kernel_and_unpenalized_intercept_match_explicit_augmented_and_primal
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_v5_3_reader.py:71: RuntimeWarning: overflow encountered in matmul
+    w = np.linalg.solve(centered.T@centered+n*.02*np.eye(phi.shape[1]),
+
+tests/visual_memory/test_v5_3_reader.py::test_shared_kernel_and_unpenalized_intercept_match_explicit_augmented_and_primal
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_v5_3_reader.py:71: RuntimeWarning: invalid value encountered in matmul
+    w = np.linalg.solve(centered.T@centered+n*.02*np.eye(phi.shape[1]),
+
+tests/visual_memory/test_v5_3_reader.py::test_shared_kernel_and_unpenalized_intercept_match_explicit_augmented_and_primal
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_v5_3_reader.py:72: RuntimeWarning: divide by zero encountered in matmul
+    centered.T@(target[static]-target[static].mean(0)))
+
+tests/visual_memory/test_v5_3_reader.py::test_shared_kernel_and_unpenalized_intercept_match_explicit_augmented_and_primal
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_v5_3_reader.py:72: RuntimeWarning: overflow encountered in matmul
+    centered.T@(target[static]-target[static].mean(0)))
+
+tests/visual_memory/test_v5_3_reader.py::test_shared_kernel_and_unpenalized_intercept_match_explicit_augmented_and_primal
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_v5_3_reader.py:72: RuntimeWarning: invalid value encountered in matmul
+    centered.T@(target[static]-target[static].mean(0)))
+
+tests/visual_memory/test_v5_3_reader.py::test_duplicate_static_views_preserve_world_normalized_fit
+tests/visual_memory/test_v5_3_reader.py::test_all_six_models_roundtrip_and_singleframe_distribution_identity
+tests/visual_memory/test_v5_3_reader.py::test_role_count_boundary_and_no_fitting_during_prediction
+tests/visual_memory/test_v5_4_reader.py::test_both_refitted_arms_match_explicit_joint_features_and_augmented_intercept
+tests/visual_memory/test_v5_4_reader.py::test_arm_label_translation_changes_only_intercept_and_shared_scoring_baseline
+tests/visual_memory/test_v5_4_reader.py::test_nw_motion_must_match_and_frozen_prediction_never_refits
+tests/visual_memory/test_v5_4_reader.py::test_exact_original_receipts_and_matching_audit_survive_model_release
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_3_reader.py:190: RuntimeWarning: divide by zero encountered in matmul
+    g += a[:, lo:lo+chunk].astype(np.float64) @ b[:, lo:lo+chunk].astype(np.float64).T
+
+tests/visual_memory/test_v5_3_reader.py::test_duplicate_static_views_preserve_world_normalized_fit
+tests/visual_memory/test_v5_3_reader.py::test_all_six_models_roundtrip_and_singleframe_distribution_identity
+tests/visual_memory/test_v5_3_reader.py::test_role_count_boundary_and_no_fitting_during_prediction
+tests/visual_memory/test_v5_4_reader.py::test_both_refitted_arms_match_explicit_joint_features_and_augmented_intercept
+tests/visual_memory/test_v5_4_reader.py::test_arm_label_translation_changes_only_intercept_and_shared_scoring_baseline
+tests/visual_memory/test_v5_4_reader.py::test_nw_motion_must_match_and_frozen_prediction_never_refits
+tests/visual_memory/test_v5_4_reader.py::test_exact_original_receipts_and_matching_audit_survive_model_release
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_3_reader.py:190: RuntimeWarning: overflow encountered in matmul
+    g += a[:, lo:lo+chunk].astype(np.float64) @ b[:, lo:lo+chunk].astype(np.float64).T
+
+tests/visual_memory/test_v5_3_reader.py::test_duplicate_static_views_preserve_world_normalized_fit
+tests/visual_memory/test_v5_3_reader.py::test_all_six_models_roundtrip_and_singleframe_distribution_identity
+tests/visual_memory/test_v5_3_reader.py::test_role_count_boundary_and_no_fitting_during_prediction
+tests/visual_memory/test_v5_4_reader.py::test_both_refitted_arms_match_explicit_joint_features_and_augmented_intercept
+tests/visual_memory/test_v5_4_reader.py::test_arm_label_translation_changes_only_intercept_and_shared_scoring_baseline
+tests/visual_memory/test_v5_4_reader.py::test_nw_motion_must_match_and_frozen_prediction_never_refits
+tests/visual_memory/test_v5_4_reader.py::test_exact_original_receipts_and_matching_audit_survive_model_release
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_3_reader.py:190: RuntimeWarning: invalid value encountered in matmul
+    g += a[:, lo:lo+chunk].astype(np.float64) @ b[:, lo:lo+chunk].astype(np.float64).T
+
+tests/visual_memory/test_v5_3_reader.py::test_duplicate_static_views_preserve_world_normalized_fit
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_v5_3_reader.py:89: RuntimeWarning: divide by zero encountered in matmul
+    np.testing.assert_allclose(gram[:,static]@original+b1,gram[:,duplicate]@repeated+b2,rtol=1e-11,atol=1e-12)
+
+tests/visual_memory/test_v5_3_reader.py::test_duplicate_static_views_preserve_world_normalized_fit
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_v5_3_reader.py:89: RuntimeWarning: overflow encountered in matmul
+    np.testing.assert_allclose(gram[:,static]@original+b1,gram[:,duplicate]@repeated+b2,rtol=1e-11,atol=1e-12)
+
+tests/visual_memory/test_v5_3_reader.py::test_duplicate_static_views_preserve_world_normalized_fit
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_v5_3_reader.py:89: RuntimeWarning: invalid value encountered in matmul
+    np.testing.assert_allclose(gram[:,static]@original+b1,gram[:,duplicate]@repeated+b2,rtol=1e-11,atol=1e-12)
+
+tests/visual_memory/test_v5_3_reader.py::test_all_six_models_roundtrip_and_singleframe_distribution_identity
+tests/visual_memory/test_v5_3_reader.py::test_role_count_boundary_and_no_fitting_during_prediction
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_3_reader.py:282: RuntimeWarning: divide by zero encountered in matmul
+    fitted[arm] = g[:,arm_rows[arm]]@coef+intercept
+
+tests/visual_memory/test_v5_3_reader.py::test_all_six_models_roundtrip_and_singleframe_distribution_identity
+tests/visual_memory/test_v5_3_reader.py::test_role_count_boundary_and_no_fitting_during_prediction
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_3_reader.py:282: RuntimeWarning: overflow encountered in matmul
+    fitted[arm] = g[:,arm_rows[arm]]@coef+intercept
+
+tests/visual_memory/test_v5_3_reader.py::test_all_six_models_roundtrip_and_singleframe_distribution_identity
+tests/visual_memory/test_v5_3_reader.py::test_role_count_boundary_and_no_fitting_during_prediction
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_3_reader.py:282: RuntimeWarning: invalid value encountered in matmul
+    fitted[arm] = g[:,arm_rows[arm]]@coef+intercept
+
+tests/visual_memory/test_v5_3_reader.py::test_anchor_view_mapping_and_zero_motion_negative_controls
+tests/visual_memory/test_v5_3_reader.py::test_negative_control_squares_both_directions_before_pooling_and_bootstrap
+tests/visual_memory/test_v5_4_reader.py::test_anchor_names_target_contrasts_and_no_negative_direction_cancellation
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_3_reader.py:442: RuntimeWarning: divide by zero encountered in matmul
+    return (weights@values.reshape(len(values),-1)).reshape((len(weights),)+values.shape[1:])
+
+tests/visual_memory/test_v5_3_reader.py::test_anchor_view_mapping_and_zero_motion_negative_controls
+tests/visual_memory/test_v5_3_reader.py::test_negative_control_squares_both_directions_before_pooling_and_bootstrap
+tests/visual_memory/test_v5_4_reader.py::test_anchor_names_target_contrasts_and_no_negative_direction_cancellation
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_3_reader.py:442: RuntimeWarning: overflow encountered in matmul
+    return (weights@values.reshape(len(values),-1)).reshape((len(weights),)+values.shape[1:])
+
+tests/visual_memory/test_v5_3_reader.py::test_anchor_view_mapping_and_zero_motion_negative_controls
+tests/visual_memory/test_v5_3_reader.py::test_negative_control_squares_both_directions_before_pooling_and_bootstrap
+tests/visual_memory/test_v5_4_reader.py::test_anchor_names_target_contrasts_and_no_negative_direction_cancellation
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_3_reader.py:442: RuntimeWarning: invalid value encountered in matmul
+    return (weights@values.reshape(len(values),-1)).reshape((len(weights),)+values.shape[1:])
+
+tests/visual_memory/test_v5_3_reader.py::test_role_count_boundary_and_no_fitting_during_prediction
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_3_reader.py:303: RuntimeWarning: divide by zero encountered in matmul
+    output[key][lo:lo+chunk] = q[:, arrays[arm+'_rows']] @ arrays[key+'__coefficients']+arrays[key+'__intercept']
+
+tests/visual_memory/test_v5_3_reader.py::test_role_count_boundary_and_no_fitting_during_prediction
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_3_reader.py:303: RuntimeWarning: overflow encountered in matmul
+    output[key][lo:lo+chunk] = q[:, arrays[arm+'_rows']] @ arrays[key+'__coefficients']+arrays[key+'__intercept']
+
+tests/visual_memory/test_v5_3_reader.py::test_role_count_boundary_and_no_fitting_during_prediction
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_3_reader.py:303: RuntimeWarning: invalid value encountered in matmul
+    output[key][lo:lo+chunk] = q[:, arrays[arm+'_rows']] @ arrays[key+'__coefficients']+arrays[key+'__intercept']
+
+tests/visual_memory/test_v5_4_reader.py::test_both_refitted_arms_match_explicit_joint_features_and_augmented_intercept
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_v5_4_reader.py:52: RuntimeWarning: divide by zero encountered in matmul
+    rows=arrays[arm+'_rows'];k=phi[rows]@phi[rows].T
+
+tests/visual_memory/test_v5_4_reader.py::test_both_refitted_arms_match_explicit_joint_features_and_augmented_intercept
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_v5_4_reader.py:52: RuntimeWarning: overflow encountered in matmul
+    rows=arrays[arm+'_rows'];k=phi[rows]@phi[rows].T
+
+tests/visual_memory/test_v5_4_reader.py::test_both_refitted_arms_match_explicit_joint_features_and_augmented_intercept
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_v5_4_reader.py:52: RuntimeWarning: invalid value encountered in matmul
+    rows=arrays[arm+'_rows'];k=phi[rows]@phi[rows].T
+
+tests/visual_memory/test_v5_4_reader.py::test_both_refitted_arms_match_explicit_joint_features_and_augmented_intercept
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_v5_4_reader.py:59: RuntimeWarning: divide by zero encountered in matmul
+    expected=qphi@phi[rows].T@solution[:-1]+solution[-1]
+
+tests/visual_memory/test_v5_4_reader.py::test_both_refitted_arms_match_explicit_joint_features_and_augmented_intercept
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_v5_4_reader.py:59: RuntimeWarning: overflow encountered in matmul
+    expected=qphi@phi[rows].T@solution[:-1]+solution[-1]
+
+tests/visual_memory/test_v5_4_reader.py::test_both_refitted_arms_match_explicit_joint_features_and_augmented_intercept
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_v5_4_reader.py:59: RuntimeWarning: invalid value encountered in matmul
+    expected=qphi@phi[rows].T@solution[:-1]+solution[-1]
+
+tests/visual_memory/test_v5_4_reader.py::test_duplicate_supervised_rows_preserves_mean_loss_under_fixed_joint_kernel
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_v5_4_reader.py:88: RuntimeWarning: divide by zero encountered in matmul
+    np.testing.assert_allclose(gram[:,rows]@c+b,gram[:,twice]@c2+b2,rtol=1e-11,atol=1e-12)
+
+tests/visual_memory/test_v5_4_reader.py::test_duplicate_supervised_rows_preserves_mean_loss_under_fixed_joint_kernel
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_v5_4_reader.py:88: RuntimeWarning: overflow encountered in matmul
+    np.testing.assert_allclose(gram[:,rows]@c+b,gram[:,twice]@c2+b2,rtol=1e-11,atol=1e-12)
+
+tests/visual_memory/test_v5_4_reader.py::test_duplicate_supervised_rows_preserves_mean_loss_under_fixed_joint_kernel
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/tests/visual_memory/test_v5_4_reader.py:88: RuntimeWarning: invalid value encountered in matmul
+    np.testing.assert_allclose(gram[:,rows]@c+b,gram[:,twice]@c2+b2,rtol=1e-11,atol=1e-12)
+
+tests/visual_memory/test_v5_4_reader.py::test_nw_motion_must_match_and_frozen_prediction_never_refits
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_4_reader.py:203: RuntimeWarning: divide by zero encountered in matmul
+    output[key][lo:lo+chunk]=q[:,arrays[arm+'_rows']]@arrays[key+'__coefficients']+arrays[key+'__intercept']
+
+tests/visual_memory/test_v5_4_reader.py::test_nw_motion_must_match_and_frozen_prediction_never_refits
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_4_reader.py:203: RuntimeWarning: overflow encountered in matmul
+    output[key][lo:lo+chunk]=q[:,arrays[arm+'_rows']]@arrays[key+'__coefficients']+arrays[key+'__intercept']
+
+tests/visual_memory/test_v5_4_reader.py::test_nw_motion_must_match_and_frozen_prediction_never_refits
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_4_reader.py:203: RuntimeWarning: invalid value encountered in matmul
+    output[key][lo:lo+chunk]=q[:,arrays[arm+'_rows']]@arrays[key+'__coefficients']+arrays[key+'__intercept']
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+175 passed, 99 warnings in 7.19s

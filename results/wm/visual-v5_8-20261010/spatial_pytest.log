@@ -1,0 +1,79 @@
+....                                                                     [100%]
+=============================== warnings summary ===============================
+tests/visual_memory/test_v5_8_spatial_diagnosis.py::test_synthetic_geometry_cosine_and_pool_parity
+tests/visual_memory/test_v5_8_spatial_diagnosis.py::test_synthetic_geometry_cosine_and_pool_parity
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_8_spatial_diagnosis.py:158: RuntimeWarning: divide by zero encountered in matmul
+    sampled = np.stack([w @ frame.astype(np.float64) for frame in raw]).astype(np.float32)
+
+tests/visual_memory/test_v5_8_spatial_diagnosis.py::test_synthetic_geometry_cosine_and_pool_parity
+tests/visual_memory/test_v5_8_spatial_diagnosis.py::test_synthetic_geometry_cosine_and_pool_parity
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_8_spatial_diagnosis.py:158: RuntimeWarning: overflow encountered in matmul
+    sampled = np.stack([w @ frame.astype(np.float64) for frame in raw]).astype(np.float32)
+
+tests/visual_memory/test_v5_8_spatial_diagnosis.py::test_synthetic_geometry_cosine_and_pool_parity
+tests/visual_memory/test_v5_8_spatial_diagnosis.py::test_synthetic_geometry_cosine_and_pool_parity
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_8_spatial_diagnosis.py:158: RuntimeWarning: invalid value encountered in matmul
+    sampled = np.stack([w @ frame.astype(np.float64) for frame in raw]).astype(np.float32)
+
+tests/visual_memory/test_v5_8_spatial_diagnosis.py::test_synthetic_geometry_cosine_and_pool_parity
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_6_correspondence.py:131: RuntimeWarning: divide by zero encountered in matmul
+    source=s@x;source_norm=np.sum(source*source,1)
+
+tests/visual_memory/test_v5_8_spatial_diagnosis.py::test_synthetic_geometry_cosine_and_pool_parity
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_6_correspondence.py:131: RuntimeWarning: overflow encountered in matmul
+    source=s@x;source_norm=np.sum(source*source,1)
+
+tests/visual_memory/test_v5_8_spatial_diagnosis.py::test_synthetic_geometry_cosine_and_pool_parity
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_6_correspondence.py:131: RuntimeWarning: invalid value encountered in matmul
+    source=s@x;source_norm=np.sum(source*source,1)
+
+tests/visual_memory/test_v5_8_spatial_diagnosis.py::test_synthetic_geometry_cosine_and_pool_parity
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_6_correspondence.py:132: RuntimeWarning: divide by zero encountered in matmul
+    source_target=source@y.T;target_gram=y@y.T
+
+tests/visual_memory/test_v5_8_spatial_diagnosis.py::test_synthetic_geometry_cosine_and_pool_parity
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_6_correspondence.py:132: RuntimeWarning: overflow encountered in matmul
+    source_target=source@y.T;target_gram=y@y.T
+
+tests/visual_memory/test_v5_8_spatial_diagnosis.py::test_synthetic_geometry_cosine_and_pool_parity
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_6_correspondence.py:132: RuntimeWarning: invalid value encountered in matmul
+    source_target=source@y.T;target_gram=y@y.T
+
+tests/visual_memory/test_v5_8_spatial_diagnosis.py::test_synthetic_geometry_cosine_and_pool_parity
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_8_spatial_diagnosis.py:206: RuntimeWarning: divide by zero encountered in matmul
+    sn = ((sw[:, active] @ x) ** 2).sum(1)
+
+tests/visual_memory/test_v5_8_spatial_diagnosis.py::test_synthetic_geometry_cosine_and_pool_parity
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_8_spatial_diagnosis.py:206: RuntimeWarning: overflow encountered in matmul
+    sn = ((sw[:, active] @ x) ** 2).sum(1)
+
+tests/visual_memory/test_v5_8_spatial_diagnosis.py::test_synthetic_geometry_cosine_and_pool_parity
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_8_spatial_diagnosis.py:206: RuntimeWarning: invalid value encountered in matmul
+    sn = ((sw[:, active] @ x) ** 2).sum(1)
+
+tests/visual_memory/test_v5_8_spatial_diagnosis.py::test_synthetic_geometry_cosine_and_pool_parity
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_8_spatial_diagnosis.py:360: RuntimeWarning: divide by zero encountered in matmul
+    source = sw@banks[arm][0].astype(np.float64); target = tw@banks[arm][1].astype(np.float64)
+
+tests/visual_memory/test_v5_8_spatial_diagnosis.py::test_synthetic_geometry_cosine_and_pool_parity
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_8_spatial_diagnosis.py:360: RuntimeWarning: overflow encountered in matmul
+    source = sw@banks[arm][0].astype(np.float64); target = tw@banks[arm][1].astype(np.float64)
+
+tests/visual_memory/test_v5_8_spatial_diagnosis.py::test_synthetic_geometry_cosine_and_pool_parity
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_8_spatial_diagnosis.py:360: RuntimeWarning: invalid value encountered in matmul
+    source = sw@banks[arm][0].astype(np.float64); target = tw@banks[arm][1].astype(np.float64)
+
+tests/visual_memory/test_v5_8_spatial_diagnosis.py::test_synthetic_geometry_cosine_and_pool_parity
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_8_spatial_diagnosis.py:388: RuntimeWarning: divide by zero encountered in matmul
+    sw, _ = weights(interior, *GRID[arm]); actual = sw@affine[arm][0]
+
+tests/visual_memory/test_v5_8_spatial_diagnosis.py::test_synthetic_geometry_cosine_and_pool_parity
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_8_spatial_diagnosis.py:388: RuntimeWarning: overflow encountered in matmul
+    sw, _ = weights(interior, *GRID[arm]); actual = sw@affine[arm][0]
+
+tests/visual_memory/test_v5_8_spatial_diagnosis.py::test_synthetic_geometry_cosine_and_pool_parity
+  /Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_8_spatial_diagnosis.py:388: RuntimeWarning: invalid value encountered in matmul
+    sw, _ = weights(interior, *GRID[arm]); actual = sw@affine[arm][0]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+4 passed, 21 warnings in 0.27s

@@ -1,0 +1,177 @@
+{
+  "schema": "v5.8-independent-interpretation-review-1",
+  "created_unix": 1791679667.085013,
+  "reviewer": "audit_protocol",
+  "status": "passed_with_explicit_interpretation_limits",
+  "inputs": {
+    "report.json": {
+      "bytes": 132857,
+      "sha256": "d99d563eac4aa3eef7644b9978f999692fef8be03cfeb86299098ff999f00747"
+    },
+    "per_episode_object.csv": {
+      "bytes": 1919507,
+      "sha256": "811365e249e6fa5403ef2db84819af982efbb3db0b5db2d5a8122e0cfc1ad432"
+    },
+    "fixed_cases.json": {
+      "bytes": 1958,
+      "sha256": "3e9adc70e39719b61d70e709a9b7bb4fbaf350976fb2c38a018699261b601ead"
+    }
+  },
+  "archive_manifest": {
+    "bytes": 3195,
+    "sha256": "d32ad2bd313102be0d707d46cbfb688240cdd392f5491ab871699f5f7618d8c9"
+  },
+  "all_opened_report_members_match_manifest": true,
+  "scope": "Read completed report, per-query CSV and fixed cases; checked their consistency and interpretation. Did not repeat production scoring or bootstrap.",
+  "new_scientific_experiment": false,
+  "source_or_result_modified": false,
+  "populations": {
+    "all": {
+      "objects": 1024,
+      "episodes_with_objects": 512,
+      "worlds_with_objects": 256,
+      "objects_excluded": 0
+    },
+    "common_unclamped": {
+      "objects": 863,
+      "episodes_with_objects": 500,
+      "worlds_with_objects": 256,
+      "objects_excluded": 161
+    }
+  },
+  "actual_results": {
+    "all": {
+      "dx_rmse_px": {
+        "R": 1.534342385090596,
+        "BR": 3.392404470842935,
+        "DR": 4.808293058040087,
+        "DBR": 3.8780244379950646,
+        "H": 1.5195863837723869
+      },
+      "BR_minus_H": {
+        "point_px2": 9.199265316048693,
+        "ci95_px2": [
+          8.216300250129821,
+          10.232917319188346
+        ]
+      },
+      "DR_minus_H": {
+        "point_px2": 20.810539354250054,
+        "ci95_px2": [
+          19.355893687706715,
+          22.296141535804782
+        ]
+      },
+      "DBR_minus_DR": {
+        "point_px2": -8.080608590309556,
+        "ci95_px2": [
+          -9.54783402529811,
+          -6.601311104896384
+        ]
+      },
+      "phase_matched_interaction": {
+        "point_px2": -17.279873906358247,
+        "ci95_px2": [
+          -18.93057419043905,
+          -15.64102821023953
+        ]
+      }
+    },
+    "common_unclamped": {
+      "dx_rmse_px": {
+        "R": 1.5121933271001848,
+        "BR": 3.259076388099389,
+        "DR": 4.748923745789689,
+        "DBR": 3.777186232939755,
+        "H": 1.4867294336144625
+      },
+      "BR_minus_H": {
+        "point_px2": 8.411214494691379,
+        "ci95_px2": [
+          7.445921608977417,
+          9.4069782741879
+        ]
+      },
+      "DR_minus_H": {
+        "point_px2": 20.34191233454959,
+        "ci95_px2": [
+          18.717863111639357,
+          22.02679311268302
+        ]
+      },
+      "DBR_minus_DR": {
+        "point_px2": -8.285140905015554,
+        "ci95_px2": [
+          -9.77271832137663,
+          -6.833110870414639
+        ]
+      },
+      "phase_matched_interaction": {
+        "point_px2": -16.69635539970693,
+        "ci95_px2": [
+          -18.403075228852355,
+          -14.981759741091084
+        ]
+      }
+    }
+  },
+  "fixed_cases_verified_against_csv": [
+    {
+      "pair_id": 844,
+      "variant": 1,
+      "object": "A",
+      "true_dx_px": -3.2782478034496307,
+      "common_unclamped": true,
+      "predicted_dx_px": {
+        "R": -4.0,
+        "BR": 3.0,
+        "DR": 6.0,
+        "DBR": 6.0,
+        "H": -1.5
+      }
+    },
+    {
+      "pair_id": 891,
+      "variant": 1,
+      "object": "B",
+      "true_dx_px": 3.3483708202838898,
+      "common_unclamped": true,
+      "predicted_dx_px": {
+        "R": 1.5,
+        "BR": -2.0,
+        "DR": 0.5,
+        "DBR": -2.5,
+        "H": 0.5
+      }
+    }
+  ],
+  "approved_claims": [
+    "With frozen I-JEPA descriptors, matching geometry, candidate set and cosine readout, increasing averaging from2x2(H) to4x4(BR) at identical phase/density/support is sufficient to worsen localization on this known population.",
+    "Coarse sampling and bilinear reconstruction of the same H field also worsen error; this contrast does not split sampling from reconstruction.",
+    "4x4 averaging conditionally improves coarse-grid results relative to2x2(DR), so smoothness has an interaction with sampling rather than a universally harmful effect.",
+    "These operator effects and common-interior results localize a failure of this concrete compressed-field plus fixed-correspondence pipeline; they do not identify a defective neural layer or prove that pooled information cannot support another readout."
+  ],
+  "required_precision": [
+    "Say border replication/clamping cannot be the sole explanation, rather than eliminating all boundary or encoder-context effects. The863-query interior subset changes the population and is not an independent confirmation.",
+    "Do not call H and R equivalent overall: all-population H-minus-R dx CI crosses zero, but four-coordinate motion MSE increases0.1770065037317198px2 with95CI[0.05459184207381734,0.3020185714424571].",
+    "DBR better than DR is compatible with an anti-aliasing explanation, but this study has not separately established aliasing as the mechanism.",
+    "The4x4-versus2x2 comparison holds grid geometry fixed but still changes feature statistics and cosine cost ordering; do not generalize its effect to all smoothers or all learned readers.",
+    "1024 and863 are object queries, not independent bootstrap units; the fixed bootstrap uses256 whole worlds.",
+    "No encoder network, KRR reader or original memory writer was trained or changed; no original memory gate was repaired."
+  ],
+  "suggested_next_falsifiable_step": {
+    "name": "Equivariant descriptor-transport control before another network intervention",
+    "fixed": "Reuse authenticated source fields and same ROI/cosine/candidate/tie rule. Choose a fixed set of grid-aligned shifts before scoring; keep all arms on a common support including every shifted query.",
+    "interventions": [
+      "Exact continuous transport of each source field: define target F1(p)=F0(p-delta) and query it directly.",
+      "Native-grid sampled transport: sample that same shifted field once at each arm native centers, retain the registered precision, then reconstruct/query by its registered bilinear rule.",
+      "Compare these controlled costs and rank/margin/tie outcomes with the already archived actual-frame costs."
+    ],
+    "falsifiable_interpretation": [
+      "Failure or ambiguity under exact continuous transport points to the chosen descriptor/cosine cost ambiguity without needing a second encoder pass.",
+      "Exact transport succeeds but sampled transport fails: native sampling/reconstruction can suffice even under a perfectly equivariant underlying field.",
+      "Both transport controls succeed but actual frames fail: investigate actual temporal feature inconsistency, contextual changes or rendering/feature equivariance next; the experiment alone still cannot uniquely blame the encoder."
+    ],
+    "boundaries": "A privileged synthetic transformation of existing feature fields, not physical-scene confirmation or a deployable new reader. No new encoding, data generation, model fitting or scientific run was performed for this review."
+  }
+}

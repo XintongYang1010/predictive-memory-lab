@@ -1,0 +1,52 @@
+{
+  "schema": "v5.8-independent-implementation-review-1",
+  "created_unix": 1791679510.24277,
+  "reviewer": "audit_protocol",
+  "status": "passed_no_blocking_issue",
+  "source_sha256": {
+    "scripts/v5_8_spatial_diagnosis.py": "83a4ee8e84954902c8c0c7d3af43852761f348a157e3795a178f32deb01772cf",
+    "docs/V5_8_EXECUTION_PROTOCOL.md": "d74b771e8b512bed6bf68eabccab8cfb3f5a5a8c88c71e9dcaddc8d76d946cfa",
+    "tests/visual_memory/test_v5_8_spatial_diagnosis.py": "4bf3367e1dae04313140aab78f4b2606548b444e1414d6e0b2bdab4d48b72b01"
+  },
+  "source_unchanged_during_check": true,
+  "scientific_inputs_opened": false,
+  "scientific_scoring_executed": false,
+  "source_modified": false,
+  "protocol_review": "protocol_review.json",
+  "resolved_protocol_gaps": [
+    "All five arms and all nine registered contrasts present.",
+    "H native13grid half-step construction; H stride4 bitwise DR; DBR bitwise old.pool.",
+    "Both global625 and correct-y-row25 nearest-GT ranks,ties,gaps emitted.",
+    "Dy error and all four coordinate MSE/skill/counts added using authenticated original frozen FIT mean.",
+    "World/episode/object exclusion counts added.",
+    "Five-arm all-source/all-candidate common mask asserted equal to closed ROI interval[33.5,189.5]."
+  ],
+  "static_checks": [
+    "Arm dimension propagated to allocation,reshape,plotting and losses.",
+    "H and BR queried directly on matching native13grid; DR and DBR queried on native4grid, with no intermediate16grid reconstruction.",
+    "Exact source/design/publication precede all scientific np.load; both baseline and source RGB/label identities remain enforced.",
+    "R and DBR costs/predictions replay archived baselines; file identities rechecked before complete.",
+    "Subset bootstrap sums losses and valid query counts by whole world.",
+    "Skill is a mean of four separately normalized coordinate skills; subset losses remain query weighted."
+  ],
+  "actual_synthetic_validation": {
+    "seed": 580914,
+    "H_all169_nodes_match_raw_bilinear_sampling": true,
+    "H_stride4_bitwise_DR": true,
+    "global_and_row_rank_independent_enumeration": true,
+    "full_synthetic_summary_shape": [
+      512,
+      5,
+      4
+    ],
+    "independent_MSE_skill_and_coordinate_counts": true,
+    "maximum_coordinate_statistic_error": 0.0,
+    "reviewer_bootstrap_replicates": 17,
+    "bootstrap_shortening": "Temporary in-memory reviewer wrapper only; production source remains10000 fixed draws."
+  },
+  "scope_limits": [
+    "No production score or empirical conclusion was reviewed at this stage.",
+    "No learned encoder,reader or memory result follows from these fixed-field operator comparisons."
+  ],
+  "environment": "Mac NumPy matmul can emit floating-state warnings; no suppression or scientific tolerance changes were made; independent equality checks passed."
+}
