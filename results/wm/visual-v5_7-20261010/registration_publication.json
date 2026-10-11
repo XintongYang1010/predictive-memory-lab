@@ -1,0 +1,148 @@
+{
+  "verified_readback": true,
+  "verified_unix": 1791677447.730494,
+  "source_commit": "4375e57c8e5f736a43ffae5d4ce74393555d41b9",
+  "commit": "4375e57c8e5f736a43ffae5d4ce74393555d41b9",
+  "files": {
+    "docs/V5_7_EXECUTION_PROTOCOL.md": {
+      "bytes": 6418,
+      "sha256": "e78da72f134f34e678e7887b36bb224d9e9033257bc91bb10d724c76857392eb",
+      "git_blob_sha": "b7f8971594334dd953c97b7b82ce153d26416906"
+    },
+    "docs/V5_7_RELATED_WORK.md": {
+      "bytes": 3707,
+      "sha256": "14344fea6bc77d1fabbb1acfa3c59ef23f02ff7d2d9db61a28069cc9f7b20dd3",
+      "git_blob_sha": "1d5eef1a27c9702e1619716430616a704cd2be2d"
+    },
+    "pmr/visual_memory/__init__.py": {
+      "bytes": 86,
+      "sha256": "5334f491766718f980788f117910c30e2b4d804bee37b69bd26438db575f0027",
+      "git_blob_sha": "cc1774c8b7748bfded7755585c2b855fb77fbcf1"
+    },
+    "pmr/visual_memory/__main__.py": {
+      "bytes": 11150,
+      "sha256": "bb4c496ca7009b617ff20badb661237d7e0afc35ec34972af15c61c42faa49b5",
+      "git_blob_sha": "d5f564dbaa1962bce18e16e5337d5e2e782c561d"
+    },
+    "pmr/visual_memory/bind_gpu.py": {
+      "bytes": 3648,
+      "sha256": "cab3427dddd890e1437393dc40cdb2381c623d177b32054f4bdd4c1f674fef45",
+      "git_blob_sha": "749637defaeeafcb52f760e803cc8b0e511d517c"
+    },
+    "pmr/visual_memory/common.py": {
+      "bytes": 6412,
+      "sha256": "6b89bfca6f38aea698449edd7ece7da3baa14e16b97b805b6368d59853f5b4ac",
+      "git_blob_sha": "582eb920b0dc86423fc2dc78c2ba9bf1b032a748"
+    },
+    "pmr/visual_memory/data.py": {
+      "bytes": 5577,
+      "sha256": "ce5082f3be9006dcceb46fbaffadc27349f977a77abcf8992eda3e80f8775368",
+      "git_blob_sha": "da0bd973e1b270a577fb1d30e793e2f0afe71c48"
+    },
+    "pmr/visual_memory/feature_workers.py": {
+      "bytes": 7539,
+      "sha256": "9334ce554d5d910d3f651e7d7d555ef23c629762b0f391f8b0e318d4c8fb1cc1",
+      "git_blob_sha": "f8d62efb9126a4b4702b32b537347715f4c41ed8"
+    },
+    "pmr/visual_memory/features.py": {
+      "bytes": 9033,
+      "sha256": "5324748c4c2ef0cd82329d97c73a6cf8a21562501039ba31bd67dbc0efe29f93",
+      "git_blob_sha": "d0ea867c5c5f845432bf43341298daf48346a328"
+    },
+    "pmr/visual_memory/memory.py": {
+      "bytes": 4934,
+      "sha256": "779a3fa3ffd9a5e4b1b52111ae37ebb35292f61e2a4a4973cadffa61e6ec4b7b",
+      "git_blob_sha": "1d9ca44e739469430be852e78586fb02df23f2b5"
+    },
+    "pmr/visual_memory/predictor.py": {
+      "bytes": 7428,
+      "sha256": "11b481b74fb50ad069c42335611677ab3dc20c0cc7dc8eef9e74b4472fb14d38",
+      "git_blob_sha": "14d9eea385e8d723ab266620b377d7c0cea198b3"
+    },
+    "pmr/visual_memory/profiling.py": {
+      "bytes": 1747,
+      "sha256": "a99b14df2651f4f32d5f242f28a877c47f83c6b5a8d425d31a891fa79c2c12fe",
+      "git_blob_sha": "36446e8c6bdb859ad7c85a9c618090fcbbe492bf"
+    },
+    "pmr/visual_memory/report.py": {
+      "bytes": 5313,
+      "sha256": "fa8b54a0f1f840da0acf1cab11b23f24d6bbead8f214c4a1a6b4634cbbed225d",
+      "git_blob_sha": "1d88773b3ab427858b7afa1eedb9dbda9a4a8a2b"
+    },
+    "pmr/visual_memory/slurm_backend.py": {
+      "bytes": 10614,
+      "sha256": "6b622a7f895adeaf1fd6dd84031639765ca9ce7c2e445ceba5d989f6a2c6fbbe",
+      "git_blob_sha": "ef8cb5c5b1af451549ef826b0c7a2ad91664ef04"
+    },
+    "pmr/visual_memory/train.py": {
+      "bytes": 12143,
+      "sha256": "59b8420c95625a08b324e93a7b5d75f7f44af58719a486002bd0cd831a1cf7bb",
+      "git_blob_sha": "0c1e9ccf8f108e524a91b9059043375f23a0125d"
+    },
+    "scripts/extract_v5_confirmation.py": {
+      "bytes": 24771,
+      "sha256": "8db68a6a978014e18b9f3f12f81cdc7388048cfaf41c285c97c1c268ee656034",
+      "git_blob_sha": "bd463309557b003da4ec6b6bfbdc3849d68f5278"
+    },
+    "scripts/v5_3_data.py": {
+      "bytes": 3491,
+      "sha256": "3018b72817b536323ee404c070c10b1cc13917420ec377e21a3aec5325bb8f12",
+      "git_blob_sha": "01481cf945d916716dbe5eaf202147c8fabe1c5f"
+    },
+    "scripts/v5_3_reader.py": {
+      "bytes": 34845,
+      "sha256": "960e3123da1163d694fafaeee45f91cea84e03025b37a62da9823dcff0b04ada",
+      "git_blob_sha": "0bbceadd7dab1d84b6e1419aed0f034e71c71ece"
+    },
+    "scripts/v5_4_data.py": {
+      "bytes": 4081,
+      "sha256": "97eb9796c9affe09a13d0bf242c701dac36d6e126f7e8cd91a84185534120576",
+      "git_blob_sha": "b801a34ce98501726650f1fe775ddb3b3b2375d3"
+    },
+    "scripts/v5_4_reader.py": {
+      "bytes": 35872,
+      "sha256": "e198aa3046056b032582e13c6ad135e581af895fcef17a8867e231355e82c3c1",
+      "git_blob_sha": "310867e811e7a8b6657f4dfdd50a07a795d0c977"
+    },
+    "scripts/v5_5_counterfactual.py": {
+      "bytes": 28033,
+      "sha256": "420fda7123d16864c00ba3b829739b09ec9ce7d259833883ea66539a75b7be62",
+      "git_blob_sha": "3eb15f572c377fc45a7175881f1bab11d956befd"
+    },
+    "scripts/v5_6_correspondence.py": {
+      "bytes": 21159,
+      "sha256": "79a0fcb95c8481b43ba1d6c1fa602b21bfe5fa70da3626323af0ae528aa11dbe",
+      "git_blob_sha": "85368833095b4e69896c5b0bec01f3784fedf3ec"
+    },
+    "scripts/v5_7_cost_diagnosis.py": {
+      "bytes": 36797,
+      "sha256": "d3a423230ff74389bb6a6249195fa989658cd828fffc95d6f298104d13b8be01",
+      "git_blob_sha": "f016d9427f057dfbb3f6d2f0f603adfcf003ffc7"
+    },
+    "scripts/v5_7_cost_plan.json": {
+      "bytes": 4593,
+      "sha256": "7f85a40e3106d9181747971b9cfe68162feb085a11d81b716ce3709ebafde92e",
+      "git_blob_sha": "45c55ad87be43f0a5fdb8d967fd5df9589a197a9"
+    },
+    "scripts/v5_7_descriptor_diagnosis.py": {
+      "bytes": 37495,
+      "sha256": "9eb6d42594349a3d14861904b02ea8a3ffb15717e7a9ad432133f332f0a002fa",
+      "git_blob_sha": "b0482710dd341033a8a076870b9c79f1e73e5301"
+    },
+    "scripts/v5_7_descriptor_plan.json": {
+      "bytes": 9598,
+      "sha256": "9a8060741e26a551a21091283f0688b2aca541b128662512f5f104e55d5d618f",
+      "git_blob_sha": "e779568705585957e247fd344424e4b7833b0768"
+    },
+    "scripts/v5_temporal_confirmation.py": {
+      "bytes": 12061,
+      "sha256": "6fe8a1f96e6d1209094fa2522dcccf4e9558afcb9714e8e9d7dd9785eb651681",
+      "git_blob_sha": "075611df8217ecbb5c4dc8db028c01d638d00151"
+    },
+    "tests/visual_memory/test_v5_7_cost_diagnosis.py": {
+      "bytes": 6844,
+      "sha256": "b6e54aecfed940af7d73810dc40459fa81e5ecddefc3fbdf4e27272dfe215cfb",
+      "git_blob_sha": "e4c74b3f14e0e55465db6274c01510a208063fb2"
+    }
+  }
+}

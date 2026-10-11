@@ -1,0 +1,1 @@
+{"status": "passed", "software_only": true, "tests": ["V56 cost tie and row subset", "nearest-axis boundary and midpoint", "wrong-minimum rescue and rank", "fixed donor preserves variant/object", "grid lower bound and out-of-support", "whole-world mean and ratio bootstrap"]}

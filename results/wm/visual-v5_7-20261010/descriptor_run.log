@@ -1,0 +1,28 @@
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_7_descriptor_diagnosis.py:164: RuntimeWarning: divide by zero encountered in matmul
+  source = s @ x
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_7_descriptor_diagnosis.py:164: RuntimeWarning: overflow encountered in matmul
+  source = s @ x
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_7_descriptor_diagnosis.py:164: RuntimeWarning: invalid value encountered in matmul
+  source = s @ x
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_7_descriptor_diagnosis.py:166: RuntimeWarning: divide by zero encountered in matmul
+  numerator = np.einsum('pn,kpn->kp', source @ y.T, t)
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_7_descriptor_diagnosis.py:166: RuntimeWarning: overflow encountered in matmul
+  numerator = np.einsum('pn,kpn->kp', source @ y.T, t)
+/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/scripts/v5_7_descriptor_diagnosis.py:166: RuntimeWarning: invalid value encountered in matmul
+  numerator = np.einsum('pn,kpn->kp', source @ y.T, t)
+{"progress_worlds": 32, "total_worlds": 256}
+{"progress_worlds": 64, "total_worlds": 256}
+{"progress_worlds": 96, "total_worlds": 256}
+{"progress_worlds": 128, "total_worlds": 256}
+{"progress_worlds": 160, "total_worlds": 256}
+{"progress_worlds": 192, "total_worlds": 256}
+{"progress_worlds": 224, "total_worlds": 256}
+{"progress_worlds": 256, "total_worlds": 256}
+{
+  "status": "complete",
+  "out": "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_7-20261010/descriptor",
+  "worlds": 256,
+  "arms": 12,
+  "baseline_cost_max_abs": 0.0,
+  "shared_source_L2_cost_max_abs": 1.7069679003611782e-15
+}

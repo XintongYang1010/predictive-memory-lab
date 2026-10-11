@@ -1,0 +1,254 @@
+[
+  {
+    "pair_id": 761,
+    "variant": 1,
+    "targets_pixels": [
+      3.8406423926353455,
+      -3.2839713990688324,
+      2.112844794988632,
+      -2.218470126390457
+    ],
+    "predictions_pixels": {
+      "raw16_none_cosine": [
+        2.0,
+        -5.0,
+        1.5,
+        -4.5
+      ],
+      "raw16_none_l2": [
+        2.0,
+        -5.5,
+        1.5,
+        -5.0
+      ],
+      "raw16_shared_source_cosine": [
+        2.0,
+        -5.5,
+        2.0,
+        -5.0
+      ],
+      "raw16_shared_source_l2": [
+        2.0,
+        -5.5,
+        1.5,
+        -5.0
+      ],
+      "raw16_framewise_cosine": [
+        2.0,
+        -5.5,
+        2.0,
+        -5.0
+      ],
+      "raw16_framewise_l2": [
+        2.0,
+        -5.5,
+        1.5,
+        -5.0
+      ],
+      "pool4_none_cosine": [
+        2.0,
+        -1.0,
+        3.5,
+        -1.5
+      ],
+      "pool4_none_l2": [
+        3.0,
+        -3.0,
+        5.0,
+        -1.5
+      ],
+      "pool4_shared_source_cosine": [
+        3.5,
+        -3.0,
+        5.5,
+        -2.0
+      ],
+      "pool4_shared_source_l2": [
+        3.0,
+        -3.0,
+        5.0,
+        -1.5
+      ],
+      "pool4_framewise_cosine": [
+        2.5,
+        -2.0,
+        5.0,
+        -2.0
+      ],
+      "pool4_framewise_l2": [
+        2.5,
+        -2.0,
+        4.5,
+        -1.5
+      ]
+    }
+  },
+  {
+    "pair_id": 844,
+    "variant": 1,
+    "targets_pixels": [
+      -3.2782478034496307,
+      -3.7675999999046326,
+      -3.6896784901618958,
+      -1.8828255534172058
+    ],
+    "predictions_pixels": {
+      "raw16_none_cosine": [
+        -4.0,
+        -2.0,
+        -6.0,
+        -1.5
+      ],
+      "raw16_none_l2": [
+        -4.0,
+        -5.0,
+        -6.0,
+        -1.5
+      ],
+      "raw16_shared_source_cosine": [
+        -4.0,
+        -4.5,
+        -6.0,
+        -1.5
+      ],
+      "raw16_shared_source_l2": [
+        -4.0,
+        -5.0,
+        -6.0,
+        -1.5
+      ],
+      "raw16_framewise_cosine": [
+        -4.0,
+        -4.5,
+        -6.0,
+        -1.5
+      ],
+      "raw16_framewise_l2": [
+        -4.0,
+        -5.0,
+        -6.0,
+        -1.5
+      ],
+      "pool4_none_cosine": [
+        6.0,
+        4.0,
+        -1.0,
+        -2.0
+      ],
+      "pool4_none_l2": [
+        6.0,
+        5.5,
+        -1.0,
+        -2.5
+      ],
+      "pool4_shared_source_cosine": [
+        6.0,
+        5.5,
+        0.0,
+        -3.0
+      ],
+      "pool4_shared_source_l2": [
+        6.0,
+        5.5,
+        -1.0,
+        -2.5
+      ],
+      "pool4_framewise_cosine": [
+        6.0,
+        5.0,
+        -0.5,
+        -3.0
+      ],
+      "pool4_framewise_l2": [
+        6.0,
+        5.0,
+        -0.5,
+        -2.5
+      ]
+    }
+  },
+  {
+    "pair_id": 891,
+    "variant": 1,
+    "targets_pixels": [
+      -3.780692756175995,
+      2.2217412292957306,
+      3.3483708202838898,
+      2.9553323686122894
+    ],
+    "predictions_pixels": {
+      "raw16_none_cosine": [
+        -5.5,
+        1.5,
+        1.5,
+        5.0
+      ],
+      "raw16_none_l2": [
+        -5.0,
+        1.0,
+        1.5,
+        4.5
+      ],
+      "raw16_shared_source_cosine": [
+        -5.5,
+        1.0,
+        1.5,
+        5.0
+      ],
+      "raw16_shared_source_l2": [
+        -5.0,
+        1.0,
+        1.5,
+        4.5
+      ],
+      "raw16_framewise_cosine": [
+        -5.5,
+        1.0,
+        2.0,
+        5.0
+      ],
+      "raw16_framewise_l2": [
+        -5.0,
+        1.0,
+        1.5,
+        4.5
+      ],
+      "pool4_none_cosine": [
+        -1.0,
+        0.5,
+        -2.5,
+        0.0
+      ],
+      "pool4_none_l2": [
+        -1.0,
+        0.5,
+        -2.5,
+        -0.5
+      ],
+      "pool4_shared_source_cosine": [
+        -1.0,
+        1.0,
+        -4.0,
+        -0.5
+      ],
+      "pool4_shared_source_l2": [
+        -1.0,
+        0.5,
+        -2.5,
+        -0.5
+      ],
+      "pool4_framewise_cosine": [
+        -0.5,
+        1.5,
+        -4.0,
+        -0.5
+      ],
+      "pool4_framewise_l2": [
+        -0.5,
+        1.0,
+        -2.5,
+        -0.5
+      ]
+    }
+  }
+]

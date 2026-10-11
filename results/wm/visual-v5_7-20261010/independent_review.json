@@ -1,0 +1,56 @@
+{
+  "schema": "v5.7-independent-review-1",
+  "recorded_unix": 1791677545.502974,
+  "reviewer": "audit_protocol",
+  "status": "passed_no_blocking_issue",
+  "source_sha256": {
+    "scripts/v5_7_cost_diagnosis.py": "d3a423230ff74389bb6a6249195fa989658cd828fffc95d6f298104d13b8be01",
+    "scripts/v5_7_descriptor_diagnosis.py": "9eb6d42594349a3d14861904b02ea8a3ffb15717e7a9ad432133f332f0a002fa",
+    "docs/V5_7_EXECUTION_PROTOCOL.md": "e78da72f134f34e678e7887b36bb224d9e9033257bc91bb10d724c76857392eb"
+  },
+  "source_unchanged_during_checks": true,
+  "scientific_inputs_opened": false,
+  "scientific_scoring_executed": false,
+  "source_modified": false,
+  "scope": [
+    "A donor collision supplement and conditional ratio bootstrap",
+    "B numerical/scientific logic and protocol consistency",
+    "source/design/publication ordering reviewed statically"
+  ],
+  "previous_cost_review": "cost_independent_review.json",
+  "cost_subset": {
+    "seed": 570107,
+    "method": "Nonuniform object-episode subset; independently enumerate repeated whole-world samples including an all-empty draw; compare aggregate loss sum/count and percentile limits; separately test empty population and same-quantized-y donor collisions.",
+    "status": "passed",
+    "empty_draws_preserved": 1,
+    "selected_coordinates": 7,
+    "selected_episodes": 5,
+    "selected_worlds": 3,
+    "same_row_predictions_exact": true
+  },
+  "descriptor": {
+    "method": "Synthetic 2x256x19 FP32 descriptors with channel-varying common offset; edge-clamped 3x3 ROI; explicit FP64 interpolation and channel centering; compare all 625 candidate cosine and squared distances at both resolutions and all three origins; exact legacy cosine replay and shared-origin L2 invariance.",
+    "status": "passed",
+    "maximum_explicit_distance_error": 3.863576125695545e-14,
+    "maximum_shared_source_l2_error": 3.8413716652030416e-14,
+    "shared_source_prediction_identity": true,
+    "arm_order_correct": true,
+    "unique_fixed_contrasts": 20
+  },
+  "static_findings": [
+    "No blocking mathematical, axis, target-label or provenance inconsistency found.",
+    "B means reduce raw token axis; raw and pooled arms reuse same raw global means.",
+    "B origin subtraction follows native FP64 accumulation/FP32 pool storage and is itself FP64.",
+    "B publication and exact design/source hashes are verified before any scientific np.load.",
+    "B checks authenticated scene files plus exact baseline hash, original RGB/label reproduction, cosine costs and predictions.",
+    "B enforces shared-source L2 tolerance and exact selected-prediction equality; unstable ties fail rather than silently score.",
+    "A collision equality and different-row conditional effect preserve per-world sums/counts."
+  ],
+  "interpretation_limits": [
+    "Oracle-supplied coordinate gains are privileged and not an independent prediction improvement.",
+    "Fixed-donor bootstrap is conditional and exploratory, not unseen confirmation.",
+    "Origin removal changes metric geometry; the global vector is not established to be pure background.",
+    "No learned selector, trained shared correspondence head, encoder defect, or memory efficacy is established."
+  ],
+  "reviewer_fixture_correction": "Initial reviewer-only assertion incorrectly counted seven selected coordinates as eight; corrected that handwritten expected count without changing candidate source or any scientific input/output, then all checks passed."
+}

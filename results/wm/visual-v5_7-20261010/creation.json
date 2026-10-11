@@ -1,0 +1,10 @@
+{
+  "run_id": "visual-v5_7-20261010",
+  "created_unix": 1791677002.749734,
+  "resolved_path": "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_7-20261010",
+  "new_remote_roots": [],
+  "new_slurm_steps": [],
+  "new_gpu_hours": 0,
+  "inherited_gpu_hours": 5.56779064169697,
+  "original_test_opened": false
+}

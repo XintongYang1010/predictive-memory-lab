@@ -1,0 +1,26 @@
+{
+  "schema": "v5.7-independent-cost-review-1",
+  "recorded_unix": 1791677545.502767,
+  "reviewer": "audit_protocol",
+  "status": "passed_no_blocking_issue",
+  "reviewed_source_sha256": "b8c1db31abfafad6dfa3834eabd0efd548d3e4452a5603fb43e09ae8354cb2da",
+  "scope": "Earlier review before donor collision subset addition; source untouched; no scientific inputs opened",
+  "actual_verification": {
+    "builtin_self_test": "passed",
+    "independent_synthetic_seed": 17391,
+    "episodes": 8,
+    "methods": 6,
+    "objects": 2,
+    "readouts": 5,
+    "enumerated_readouts": 480,
+    "rank_records": 192,
+    "method": "Independent explicit candidate subset enumeration with cost tolerance then (norm squared,dx,dy) tie sorting; separate loops for nearest GT ranks/ties/gaps; independent loop aggregation over each world, both variants and dx/dy/four coordinates for percentile bootstrap.",
+    "whole_world_bootstrap": "passed"
+  },
+  "not_executed": [
+    "scientific NPZ load",
+    "production run",
+    "GPU",
+    "remote action"
+  ]
+}

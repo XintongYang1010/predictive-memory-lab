@@ -1,0 +1,21 @@
+{
+  "scientific_status": "complete",
+  "source_commit": "4375e57c8e5f736a43ffae5d4ce74393555d41b9",
+  "completed_unix": 1791677711.6753018,
+  "cpu_processes": {
+    "cost": {
+      "exit_code": 0,
+      "wall_seconds": 6.138023853302002
+    },
+    "descriptor": {
+      "exit_code": 0,
+      "wall_seconds": 33.4301860332489
+    }
+  },
+  "source_and_original_inputs_unchanged": true,
+  "new_gpu_hours": 0,
+  "new_slurm_steps": [],
+  "new_remote_roots": [],
+  "test_opened": false,
+  "trained_memory": false
+}

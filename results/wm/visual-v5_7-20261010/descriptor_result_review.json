@@ -1,0 +1,205 @@
+{
+  "schema": "v5.7-independent-descriptor-review-1",
+  "status": "verified",
+  "review_kind": "read-only saved-output replay; no raw descriptor rerun, refit, remote or GPU operations",
+  "created_unix": 1791677655.357737,
+  "source_commit": "4375e57c8e5f736a43ffae5d4ce74393555d41b9",
+  "report_sha256": "f8e7e80fef5d6a2f0bf1a06e31769d4e336d3fdeeaf336a7f5c35ea52c834e04",
+  "manifest_sha256": "5b8779a51af8cfd93805451736b52990a3f7bd14427fc1175b68a2ee78e48332",
+  "checks": {
+    "exact_inventory": true,
+    "inventory_files": 277,
+    "inventory_bytes": 299140181,
+    "source_hashes": 23,
+    "candidate_surfaces_replayed": 12288,
+    "predictions_exact": true,
+    "baseline_costs_and_predictions_bitwise_exact": true,
+    "shared_source_L2_cost_max_abs": 1.7069679003611782e-15,
+    "shared_source_L2_predictions_exact": true,
+    "clamp_flags_and_csv_exact": true,
+    "csv_rows": 12288,
+    "finite_norm_shards": 256,
+    "FP64_target_norm_values": 34560000,
+    "minimum_saved_target_norm2": 81.21062922231258,
+    "report_numeric_max_abs": 0.0,
+    "bootstrap_replicates": 10000,
+    "bootstrap_whole_world_exact": true,
+    "bootstrap_max_abs": 0.0,
+    "contrasts_exact": 20,
+    "fixed_case_values_exact": true
+  },
+  "scores": [
+    {
+      "arm": "raw16_none_cosine",
+      "dx_rmse_pixels": 1.5343423850905957,
+      "motion_skill": 0.7575322068660036
+    },
+    {
+      "arm": "raw16_none_l2",
+      "dx_rmse_pixels": 1.6218758488823994,
+      "motion_skill": 0.7237059238086934
+    },
+    {
+      "arm": "raw16_shared_source_cosine",
+      "dx_rmse_pixels": 1.5537586485924626,
+      "motion_skill": 0.744469801789755
+    },
+    {
+      "arm": "raw16_shared_source_l2",
+      "dx_rmse_pixels": 1.6218758488823994,
+      "motion_skill": 0.7237059238086934
+    },
+    {
+      "arm": "raw16_framewise_cosine",
+      "dx_rmse_pixels": 1.5574888407083505,
+      "motion_skill": 0.7441132753897691
+    },
+    {
+      "arm": "raw16_framewise_l2",
+      "dx_rmse_pixels": 1.605971613972315,
+      "motion_skill": 0.727260955251986
+    },
+    {
+      "arm": "pool4_none_cosine",
+      "dx_rmse_pixels": 3.8780244379950646,
+      "motion_skill": -0.7746241547201216
+    },
+    {
+      "arm": "pool4_none_l2",
+      "dx_rmse_pixels": 3.8433005958986453,
+      "motion_skill": -0.7836359649526384
+    },
+    {
+      "arm": "pool4_shared_source_cosine",
+      "dx_rmse_pixels": 3.9662661226623257,
+      "motion_skill": -0.7780010326750539
+    },
+    {
+      "arm": "pool4_shared_source_l2",
+      "dx_rmse_pixels": 3.8433005958986453,
+      "motion_skill": -0.7836359649526384
+    },
+    {
+      "arm": "pool4_framewise_cosine",
+      "dx_rmse_pixels": 3.8570239319616935,
+      "motion_skill": -0.75733799528811
+    },
+    {
+      "arm": "pool4_framewise_l2",
+      "dx_rmse_pixels": 3.7442547641931387,
+      "motion_skill": -0.738536697182199
+    }
+  ],
+  "matched_resolution_contrasts": [
+    {
+      "first": "pool4_none_cosine",
+      "second": "raw16_none_cosine",
+      "dx": {
+        "point": 0.00025280745748966526,
+        "ci95": [
+          0.00022839570505035393,
+          0.00027796816110851603
+        ]
+      }
+    },
+    {
+      "first": "pool4_none_l2",
+      "second": "raw16_none_l2",
+      "dx": {
+        "point": 0.00024195787231439091,
+        "ci95": [
+          0.00021761952470757248,
+          0.00026712554788712933
+        ]
+      }
+    },
+    {
+      "first": "pool4_shared_source_cosine",
+      "second": "raw16_shared_source_cosine",
+      "dx": {
+        "point": 0.0002654077849510314,
+        "ci95": [
+          0.00023977481826617509,
+          0.000291821587260342
+        ]
+      }
+    },
+    {
+      "first": "pool4_shared_source_l2",
+      "second": "raw16_shared_source_l2",
+      "dx": {
+        "point": 0.00024195787231439091,
+        "ci95": [
+          0.00021761952470757248,
+          0.00026712554788712933
+        ]
+      }
+    },
+    {
+      "first": "pool4_framewise_cosine",
+      "second": "raw16_framewise_cosine",
+      "dx": {
+        "point": 0.00024814377636308606,
+        "ci95": [
+          0.00022359502471127815,
+          0.00027341192645415194
+        ]
+      }
+    },
+    {
+      "first": "pool4_framewise_l2",
+      "second": "raw16_framewise_l2",
+      "dx": {
+        "point": 0.0002280034062958024,
+        "ci95": [
+          0.00020509642523717817,
+          0.00025150413373256045
+        ]
+      }
+    }
+  ],
+  "scientific_reading": [
+    "No registered origin/metric intervention closes the native raw16 versus pool4 correspondence gap; all six matched pool-minus-raw dx-MSE intervals remain positive.",
+    "Shared-source L2 is a successful strict negative control; angular-origin changes do affect cosine but do not consistently improve raw16 matching.",
+    "Framewise L2 lowers pooled dx MSE relative to pooled baseline L2, but the remaining pooled error is large and the framewise mean contains scene/object/context change, not known pure background.",
+    "These known-Dev source-RGB-privileged local-correspondence results do not identify an encoder module defect, equal-byte storage benefit, supervised-reader bound or generalization."
+  ],
+  "fixed_case_reading": {
+    "761/1": "All arms preserve both dx directions; raw16 underestimates A dx and overestimates downward y motion. Pooled shared cosine improves A (3.5,-3) toward (3.84,-3.28) while overestimating B dx at5.5 versus2.11. It is not a uniform two-object rescue.",
+    "844/1": "All six pooled arms predict A dx+6 at the boundary although truth is-3.278; origin and metric do not fix this sign reversal. Native raw arms all keep the correct negative direction. Raw B dx remains-6 versus-3.690, so correct signs do not imply calibrated magnitude.",
+    "891/1": "All six pooled arms retain B dx wrong sign (-2.5 to-4 versus+3.348), while all raw arms keep the positive sign (+1.5 or+2). Pool mean subtraction does not rescue the case; raw magnitude/y errors remain."
+  },
+  "matplotlib_visual_review": {
+    "status": "passed",
+    "reviewed_unix": 1791677674.837559,
+    "files": [
+      {
+        "path": "descriptor/figures/case_761_1_predictions.png",
+        "sha256": "e759b778b75c7153b1ff01c40a4f2b2dbc1b66db6926eaf026ce39562ed53a66"
+      },
+      {
+        "path": "descriptor/figures/case_844_1_predictions.png",
+        "sha256": "fc85041c07fcc65081db4138c74c67f7e81e7825d7d263e454a07db142f968c6"
+      },
+      {
+        "path": "descriptor/figures/case_844_1_costs.png",
+        "sha256": "a2fe5dbd7b351b2933b986092aa6c6376fab8a5e4cec9692c12929b6a5f8ef06"
+      }
+    ],
+    "observations": [
+      "All twelve arm labels, both object axes, ground-truth red lines and predictions are legible without overlap or clipping.",
+      "The 6x4 cost layout includes both objects and both metrics for each resolution/origin. Prediction crosses and truth stars are visible; axes and case labels agree with arrays.",
+      "Cost maps explicitly use individual panel scales; colors alone must not be compared as absolute cost or uncertainty across arms."
+    ]
+  },
+  "warnings": {
+    "numpy_matmul_warnings_retained": true,
+    "all_saved_cost_prediction_norm_arrays_finite": true,
+    "warning_origin_not_independently_proven": true
+  },
+  "runtime": {
+    "python": "3.9.6 (default, Dec  2 2025, 07:27:58) \n[Clang 17.0.0 (clang-1700.6.3.2)]",
+    "numpy": "2.0.2",
+    "elapsed_seconds": 4.189786195755005
+  }
+}
