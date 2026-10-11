@@ -1,0 +1,109 @@
+{
+  "design": {
+    "schema": "v5.7-saved-cost-diagnosis-design-1",
+    "input_sha256": "265766a0d1de852f5eb863c068d08de11c696ed961e76768468797a6e9879eb0",
+    "population": {
+      "split": "known_dev",
+      "worlds": 256,
+      "episodes": 512,
+      "pair_ids": [
+        640,
+        895
+      ],
+      "variants": [
+        0,
+        1
+      ],
+      "objects": [
+        "A",
+        "B"
+      ]
+    },
+    "methods": [
+      "raw_native",
+      "pool_native",
+      "uniform_budget",
+      "roi_adaptive_budget",
+      "random_budget",
+      "change_priority_budget"
+    ],
+    "readouts": [
+      "min2d",
+      "oracle_gt_y",
+      "zero_y",
+      "oracle_gt_x",
+      "mismatched_gt_y"
+    ],
+    "grid": {
+      "minimum_pixels": -6.0,
+      "maximum_pixels": 6.0,
+      "step_pixels": 0.5,
+      "count": 625,
+      "order": "dy major; dx minor; each offset is [dx,dy]"
+    },
+    "cost_tie": {
+      "absolute_tolerance": 1e-12,
+      "selection": "cost <= minimum+1e-12; smallest norm squared, then dx, then dy"
+    },
+    "nearest_axis_tie": "minimum exact absolute distance; smallest absolute ordinate, then smaller ordinate",
+    "readout_rules": {
+      "min2d": "Original 625-candidate minimum; must replay every archived prediction exactly.",
+      "oracle_gt_y": "Use nearest grid row to original GT dy; minimize its 25 dx candidates.",
+      "zero_y": "Use dy=0 row; minimize its 25 dx candidates.",
+      "oracle_gt_x": "Use nearest grid column to original GT dx; minimize its 25 dy candidates.",
+      "mismatched_gt_y": "Donor world=(world_index+37)%256, preserving variant/object; nearest donor GT dy row, minimize dx. All methods use the same donors."
+    },
+    "rank": "1 + count(cost < nearest-GT-grid cost - 1e-12); tie count uses absolute difference <=1e-12. Report globally and within original GT-y row.",
+    "margins": "GT-grid cost minus actual minimum, and GT-grid cost minus best other candidate; global and GT-y row. Negative best-other margin means GT grid is strictly better.",
+    "geometric_lower_bound": "Nearest grid point to continuous GT, independent of costs; lower bound only for predictors restricted to this finite grid.",
+    "metrics": {
+      "units": "Original normalized displacement; pixels=normalized*224.",
+      "skill": "Mean of four per-axis 1-MSE/mean((GT-frozen FIT mean)^2); never Dev-centered variance.",
+      "oracle_primary": "oracle_gt_y and mismatched_gt_y: dx; oracle_gt_x: dy. Full4D scores contain the supplied privileged coordinate.",
+      "direction": "abs(GT dx pixels)>=1 inclusive; correct=product>0, wrong=product<0, zero=prediction==0. Non-correct=wrong+zero. GT zero and 0<abs(GT)<1 reported separately."
+    },
+    "bootstrap": {
+      "worlds": 256,
+      "samples": 10000,
+      "seed": 7817,
+      "interval": "two-sided percentile95%; resample whole worlds preserving both variants and objects; same draws for all comparisons; conditional on these costs/readers, no multiplicity correction"
+    },
+    "effects": "min2d minus each alternative MSE (dx/dy/4D), and mismatched_gt_y minus oracle_gt_y dx MSE; direction rescue/harm/net rates with whole-world ratio bootstrap. Report donor/true quantized-row equality; additionally report different-row dx effect with whole-world ratio bootstrap preserving its denominator. Donor-world mismatch does not imply a different y row.",
+    "fixed_cases": [
+      [
+        761,
+        1
+      ],
+      [
+        844,
+        1
+      ],
+      [
+        891,
+        1
+      ]
+    ],
+    "limits": "Privileged posthoc known-Dev localization, not a deployable reader, new confirmation, or module responsibility/explained-error fraction. Nearest-grid cost rank describes this fixed surface and cannot establish descriptor information absence.",
+    "no_training": true,
+    "test_opened": false,
+    "p0_authorized": false
+  },
+  "sources": {
+    "scripts/v5_7_cost_diagnosis.py": "d3a423230ff74389bb6a6249195fa989658cd828fffc95d6f298104d13b8be01",
+    "scripts/v5_6_correspondence.py": "79a0fcb95c8481b43ba1d6c1fa602b21bfe5fa70da3626323af0ae528aa11dbe",
+    "docs/V5_7_EXECUTION_PROTOCOL.md": "e78da72f134f34e678e7887b36bb224d9e9033257bc91bb10d724c76857392eb"
+  },
+  "software_verification": {
+    "status": "passed",
+    "software_only": true,
+    "tests": [
+      "V56 cost tie and row subset",
+      "nearest-axis boundary and midpoint",
+      "wrong-minimum rescue and rank",
+      "fixed donor preserves variant/object",
+      "grid lower bound and out-of-support",
+      "whole-world mean and ratio bootstrap"
+    ]
+  },
+  "created_unix": 1791677394.6516411
+}

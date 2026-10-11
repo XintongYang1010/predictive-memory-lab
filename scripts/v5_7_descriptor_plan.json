@@ -1,0 +1,231 @@
+{
+  "design": {
+    "schema": "v5.7-descriptor-diagnosis-1",
+    "posthoc": true,
+    "no_training": true,
+    "test_opened": false,
+    "population": {
+      "split": "dev",
+      "pair_ids": [
+        640,
+        895
+      ],
+      "worlds": 256,
+      "variants": 2,
+      "episodes": 512,
+      "objects_per_episode": 2
+    },
+    "immutable_scene_inputs": {
+      "archive_manifest.json": "b6e0ca1e893a595edb3a8c60507f72de647f5affcb20daf8223bf3af20e72663",
+      "counterfactual_cache/receipt.json": "000ec48d9a2a7ba7ea07025f87e246ae87045d3a122ca478f6d7b10c4e5d4f46",
+      "report/predictions.npz": "f3f66de4fb643ccbf4bb011761111d24aa49170e539c186a41d93068026eb294"
+    },
+    "baseline": {
+      "report_sha256": "47f10e6589fc26650f319712b6f588d3bcde94e4636e4d32b480738e42fe8d33",
+      "costs_sha256": "265766a0d1de852f5eb863c068d08de11c696ed961e76768468797a6e9879eb0",
+      "schema": "v5.6-correspondence-fixed-1",
+      "methods": [
+        "raw_native",
+        "pool_native"
+      ],
+      "cost_atol": 1e-10,
+      "cost_rtol": 0.0,
+      "predictions": "exact array equality"
+    },
+    "arms": [
+      {
+        "name": "raw16_none_cosine",
+        "representation": "raw16",
+        "origin": "none",
+        "metric": "cosine"
+      },
+      {
+        "name": "raw16_none_l2",
+        "representation": "raw16",
+        "origin": "none",
+        "metric": "l2"
+      },
+      {
+        "name": "raw16_shared_source_cosine",
+        "representation": "raw16",
+        "origin": "shared_source",
+        "metric": "cosine"
+      },
+      {
+        "name": "raw16_shared_source_l2",
+        "representation": "raw16",
+        "origin": "shared_source",
+        "metric": "l2"
+      },
+      {
+        "name": "raw16_framewise_cosine",
+        "representation": "raw16",
+        "origin": "framewise",
+        "metric": "cosine"
+      },
+      {
+        "name": "raw16_framewise_l2",
+        "representation": "raw16",
+        "origin": "framewise",
+        "metric": "l2"
+      },
+      {
+        "name": "pool4_none_cosine",
+        "representation": "pool4",
+        "origin": "none",
+        "metric": "cosine"
+      },
+      {
+        "name": "pool4_none_l2",
+        "representation": "pool4",
+        "origin": "none",
+        "metric": "l2"
+      },
+      {
+        "name": "pool4_shared_source_cosine",
+        "representation": "pool4",
+        "origin": "shared_source",
+        "metric": "cosine"
+      },
+      {
+        "name": "pool4_shared_source_l2",
+        "representation": "pool4",
+        "origin": "shared_source",
+        "metric": "l2"
+      },
+      {
+        "name": "pool4_framewise_cosine",
+        "representation": "pool4",
+        "origin": "framewise",
+        "metric": "cosine"
+      },
+      {
+        "name": "pool4_framewise_l2",
+        "representation": "pool4",
+        "origin": "framewise",
+        "metric": "l2"
+      }
+    ],
+    "roi": "A RGB R235 B60;B R60 B235;source-frame color bbox25/50/75percent xy Cartesian3x3. No target RGB ROI or labels.",
+    "grid": {
+      "minimum_pixels": -6.0,
+      "maximum_pixels": 6.0,
+      "step_pixels": 0.5,
+      "count": 625,
+      "order": "dy major,dx minor"
+    },
+    "interpolation": "Bilinear,physical pixel centers(native grid centers=(i+.5)*224/side-.5),border replication;record clamp",
+    "tie": {
+      "absolute_cost_tolerance": 1e-12,
+      "selection": "smallest squared displacement then dx then dy",
+      "near_optimal_tolerance": 1e-06
+    },
+    "native_pooling": "Same raw FP32 input; 4x4 spatial means accumulated FP64 and stored FP32, before origin subtraction; no final BF16 conversion.",
+    "global_mean": "Per-frame, per-channel mean of all 256 raw tokens, accumulated FP64; identical vectors used for raw16 and pool4.",
+    "origin": {
+      "none": "No spatial-origin subtraction.",
+      "shared_source": "Subtract source global vector mu0 from both frame banks.",
+      "framewise": "Subtract each frame global vector mut from its own bank."
+    },
+    "descriptor": "Subtract origin in FP64, then center each descriptor over channels. Centering commutes with row-stochastic interpolation.",
+    "cosine": "Mean of nine centered cosine distances. Squared norm <=1e-24 produces similarity zero and an explicit undefined diagnostic.",
+    "l2": "Mean squared channel difference over 1280 channels, then mean over nine ROI points. NO unit norm normalization. L2 is not a cosine rescaling.",
+    "numerical": {
+      "norm_negative_tolerance": 1e-08,
+      "l2_negative_tolerance": 1e-10,
+      "l2_shared_origin_atol": 1e-10,
+      "l2_shared_origin_rtol": 1e-10,
+      "l2_shared_origin_predictions": "exact equality under original tie rule",
+      "negative_roundoff": "Record signed minimum before clipping tiny negative squared norms/distances to zero."
+    },
+    "storage": {
+      "costs": "All 512 x 12 x 2 x 625 FP64 costs.",
+      "norms": "Per-world compressed FP64 source9 and target625x9 squared norms, shared across metrics; all raw global means also saved.",
+      "clamps": "Every source and candidate/point clamp flag at each native resolution.",
+      "equal_memory_comparison": false,
+      "extra_access": "Full raw256 tokens from both frames; framewise origin uses target-wide context. No equal-byte-bank claim."
+    },
+    "metrics": {
+      "baseline": "Original archived frozen FIT target mean; no Dev-mean normalization.",
+      "reported": [
+        "per-axis MSE/skill",
+        "dx MSE",
+        "motion MSE/skill",
+        "signed bias",
+        "absolute amplitude ratio",
+        "wrong nonzero sign and predicted zero separately for abs(true displacement)>=1 pixel",
+        "ties, margins, boundary optima, finite/norm/clamp checks"
+      ]
+    },
+    "bootstrap": {
+      "seed": 7818,
+      "replicates": 10000,
+      "unit": "whole world; both variants and objects remain together",
+      "metrics": [
+        "dx_mse",
+        "motion_mse",
+        "motion_nmse"
+      ],
+      "contrasts": [
+        "each subtracted origin minus none at fixed resolution/metric",
+        "pool4 minus raw16 at fixed origin/metric",
+        "l2 minus cosine at fixed resolution/origin"
+      ],
+      "interval": "percentile 2.5/97.5; paired, conditional exploratory, not multiplicity adjusted"
+    },
+    "fixed_cases": [
+      [
+        761,
+        1
+      ],
+      [
+        844,
+        1
+      ],
+      [
+        891,
+        1
+      ]
+    ],
+    "figures": "All 12 arms and both objects at every fixed case; no result-dependent selection.",
+    "limits": "Global means contain object, position and contextual signals; improvements cannot establish encoder background removal or causal module failure. No learned selector, unseen confirmation, memory training, or P0 authorization."
+  },
+  "sources": {
+    "docs/V5_7_EXECUTION_PROTOCOL.md": "e78da72f134f34e678e7887b36bb224d9e9033257bc91bb10d724c76857392eb",
+    "pmr/visual_memory/__init__.py": "5334f491766718f980788f117910c30e2b4d804bee37b69bd26438db575f0027",
+    "pmr/visual_memory/__main__.py": "bb4c496ca7009b617ff20badb661237d7e0afc35ec34972af15c61c42faa49b5",
+    "pmr/visual_memory/bind_gpu.py": "cab3427dddd890e1437393dc40cdb2381c623d177b32054f4bdd4c1f674fef45",
+    "pmr/visual_memory/common.py": "6b89bfca6f38aea698449edd7ece7da3baa14e16b97b805b6368d59853f5b4ac",
+    "pmr/visual_memory/data.py": "ce5082f3be9006dcceb46fbaffadc27349f977a77abcf8992eda3e80f8775368",
+    "pmr/visual_memory/feature_workers.py": "9334ce554d5d910d3f651e7d7d555ef23c629762b0f391f8b0e318d4c8fb1cc1",
+    "pmr/visual_memory/features.py": "5324748c4c2ef0cd82329d97c73a6cf8a21562501039ba31bd67dbc0efe29f93",
+    "pmr/visual_memory/memory.py": "779a3fa3ffd9a5e4b1b52111ae37ebb35292f61e2a4a4973cadffa61e6ec4b7b",
+    "pmr/visual_memory/predictor.py": "11b481b74fb50ad069c42335611677ab3dc20c0cc7dc8eef9e74b4472fb14d38",
+    "pmr/visual_memory/profiling.py": "a99b14df2651f4f32d5f242f28a877c47f83c6b5a8d425d31a891fa79c2c12fe",
+    "pmr/visual_memory/report.py": "fa8b54a0f1f840da0acf1cab11b23f24d6bbead8f214c4a1a6b4634cbbed225d",
+    "pmr/visual_memory/slurm_backend.py": "6b622a7f895adeaf1fd6dd84031639765ca9ce7c2e445ceba5d989f6a2c6fbbe",
+    "pmr/visual_memory/train.py": "59b8420c95625a08b324e93a7b5d75f7f44af58719a486002bd0cd831a1cf7bb",
+    "scripts/extract_v5_confirmation.py": "8db68a6a978014e18b9f3f12f81cdc7388048cfaf41c285c97c1c268ee656034",
+    "scripts/v5_3_data.py": "3018b72817b536323ee404c070c10b1cc13917420ec377e21a3aec5325bb8f12",
+    "scripts/v5_3_reader.py": "960e3123da1163d694fafaeee45f91cea84e03025b37a62da9823dcff0b04ada",
+    "scripts/v5_4_data.py": "97eb9796c9affe09a13d0bf242c701dac36d6e126f7e8cd91a84185534120576",
+    "scripts/v5_4_reader.py": "e198aa3046056b032582e13c6ad135e581af895fcef17a8867e231355e82c3c1",
+    "scripts/v5_5_counterfactual.py": "420fda7123d16864c00ba3b829739b09ec9ce7d259833883ea66539a75b7be62",
+    "scripts/v5_6_correspondence.py": "79a0fcb95c8481b43ba1d6c1fa602b21bfe5fa70da3626323af0ae528aa11dbe",
+    "scripts/v5_7_descriptor_diagnosis.py": "9eb6d42594349a3d14861904b02ea8a3ffb15717e7a9ad432133f332f0a002fa",
+    "scripts/v5_temporal_confirmation.py": "6fe8a1f96e6d1209094fa2522dcccf4e9558afcb9714e8e9d7dd9785eb651681"
+  },
+  "software_verification": {
+    "status": "passed",
+    "software_only": true,
+    "scientific_inputs_opened": false,
+    "explicit_descriptor_math": true,
+    "exact_legacy_cosine": true,
+    "border_replication": true,
+    "constant_ambiguity": true,
+    "non_unit_L2": true,
+    "whole_world_bootstrap": true,
+    "maximum_synthetic_shared_L2_difference": 8.881784197001252e-16
+  },
+  "created_unix": 1791677417.624425
+}
