@@ -1,0 +1,105 @@
+{
+  "commit": "cd478951d710237d7736cdb9c3a981d1dfc4bf3d",
+  "verified_unix": 1791684441.8948,
+  "remote_tree_file_count": 1105,
+  "all_tree_blob_ids_match": true,
+  "new_or_changed_files_freshly_read": [
+    {
+      "path": "README.md",
+      "bytes": 15891,
+      "sha256": "d633be8cd339ef959319bd66ef88391b318c58629e89ea0b4c413f67353fe488",
+      "git_blob_sha": "1318317a1de9fec9cf2e6515dd4dfd747ad13791"
+    },
+    {
+      "path": "START_HERE.md",
+      "bytes": 2289,
+      "sha256": "f4340f26273439c0b38be29b17d94e4ff5630b0692faeb5111ee46a02824fe20",
+      "git_blob_sha": "fae18b50055ba2d8439cdbd420c132f4cfd0fbcb"
+    },
+    {
+      "path": "docs/CODEX_DGX_HANDOFF.md",
+      "bytes": 7577,
+      "sha256": "81467eb7378ef26b9623ff57c5c6c1ffebf37a9e4522caed9ab6f180ecdd6006",
+      "git_blob_sha": "342cc215e3b4c1646ca47823eff51350ead3d597"
+    },
+    {
+      "path": "docs/VALIDATION.md",
+      "bytes": 9576,
+      "sha256": "f12425b094a558b15f70d74d61e90fa74e1a7050ae45dde1be47ded713da0e1c",
+      "git_blob_sha": "c9d6807eb6bb06d5a9348bf93a88945082c73a00"
+    },
+    {
+      "path": "docs/VISUAL_MEMORY_V5.md",
+      "bytes": 12090,
+      "sha256": "2b40f7040a6a570eded33ec48c185ac669d9bad55648690c26ac53462a9ca086",
+      "git_blob_sha": "d182db8ed7b06307188be3376f5c17f39e088249"
+    },
+    {
+      "path": "docs/WEB_PROJECT_ARTIFACT_INDEX.md",
+      "bytes": 12447,
+      "sha256": "4a38ed3a554efc0a824983c4ebd15ec2537aa89b3e68e606d8367d6a920493a3",
+      "git_blob_sha": "03c01a71e514fc8cd2fdec8b2f864a3996625b07"
+    },
+    {
+      "path": "docs/WEB_PROJECT_BAD_CASES.md",
+      "bytes": 13245,
+      "sha256": "b74c74960be7d9d475b478bd00fa9a6fab1ff50b932417ca7e3bcfb86d0fd9ac",
+      "git_blob_sha": "d7a06402af44c60f674c5e09a79eb87b41c83384"
+    },
+    {
+      "path": "docs/WEB_PROJECT_CHAT_PROMPT.md",
+      "bytes": 2614,
+      "sha256": "38e1e8b2725d8086bc9811cc36d5bea7caecc2e4b7006cbf0bbe9d15d992cbdd",
+      "git_blob_sha": "a7ac0244c869ddf576735c8d68430e4b498070b4"
+    },
+    {
+      "path": "docs/WEB_PROJECT_EXPERIMENT_TIMELINE.md",
+      "bytes": 27691,
+      "sha256": "0cfe4fafd2eb3c303bb6fb3c198628e45b034368e1980f762168b9daa5626c1c",
+      "git_blob_sha": "d6b00f345758e4fe95fba97bd81c5c9b0596fc4f"
+    },
+    {
+      "path": "docs/WEB_PROJECT_FULL_CONTEXT.md",
+      "bytes": 90338,
+      "sha256": "283dec29e0943c42e539a1a4f0d367a30142dee653ebd3bab01a4223717529c7",
+      "git_blob_sha": "b14648810635351388edf58313b8fbfed98353f8"
+    },
+    {
+      "path": "docs/WEB_PROJECT_HANDOFF.md",
+      "bytes": 13454,
+      "sha256": "80a0ce634d71d9092521422cd7074c021a4347161ebc9041c3ac7f29a28c2a9e",
+      "git_blob_sha": "3a9084d1ed116d89c0e8d051c57c442800ba7f3f"
+    },
+    {
+      "path": "docs/WEB_PROJECT_PAPER_ROADMAP.md",
+      "bytes": 22559,
+      "sha256": "88e62e0d13479d25b69159abd25349cbcbfae8a2e2e783898083ba97533a60aa",
+      "git_blob_sha": "60550f084ca9fd563230b06b9bb266c164755f70"
+    },
+    {
+      "path": "docs/web_handoff_20261010/build_record.json",
+      "bytes": 1522,
+      "sha256": "60d48f74405d281a8661d063e9221f316b76d890a302b0b7b92289404d2f2b84",
+      "git_blob_sha": "4e13a3a3daa437e1690c435ddb167281c3dfed9b"
+    },
+    {
+      "path": "docs/web_handoff_20261010/historical_result_branches.json",
+      "bytes": 2747,
+      "sha256": "1ce2b7abf37a125327b194d09f06f1a6fa7e5fb93a1ed28cc1f1f38d76e40d9c",
+      "git_blob_sha": "7b56e730cf7f19b52023f5f45411d244c9b74f4b"
+    },
+    {
+      "path": "docs/web_handoff_20261010/release_inventory.json",
+      "bytes": 12344,
+      "sha256": "daf528b1960e463a97bd02e1ddbd6d304831348b2aec19970dfc0a61a65a9356",
+      "git_blob_sha": "c7945a111440fe6f06dcee7f26930c6b1d4aad92"
+    },
+    {
+      "path": "docs/web_handoff_20261010/scientific_git_readback.json",
+      "bytes": 385,
+      "sha256": "12fd932dbf361050b81e2c78d7a6602e921a574958e83dee3b40062cdcff285c",
+      "git_blob_sha": "862acea5845cd78c5dbe893b07a058e265919993"
+    }
+  ],
+  "unchanged_files_basis": "scientific_git_readback.json: all 1094 previous scientific snapshot files freshly downloaded and verified in this task"
+}

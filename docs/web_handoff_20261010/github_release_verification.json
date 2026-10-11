@@ -1,0 +1,35 @@
+{
+  "verified_at_utc": "2026-10-11T02:08:11.759721+00:00",
+  "source_commit": "cd478951d710237d7736cdb9c3a981d1dfc4bf3d",
+  "release_url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/tag/web-project-handoff-20261010",
+  "full_independent_download": true,
+  "all_asset_bytes_equal_uploaded_files": true,
+  "all_archive_members_verified": true,
+  "archive_file_count": 1105,
+  "assets": [
+    {
+      "name": "WEB_PROJECT_CHAT_PROMPT.md",
+      "bytes": 2614,
+      "sha256": "38e1e8b2725d8086bc9811cc36d5bea7caecc2e4b7006cbf0bbe9d15d992cbdd"
+    },
+    {
+      "name": "WEB_PROJECT_FULL_CONTEXT.md",
+      "bytes": 90338,
+      "sha256": "283dec29e0943c42e539a1a4f0d367a30142dee653ebd3bab01a4223717529c7"
+    },
+    {
+      "name": "source_snapshot_inventory.json",
+      "bytes": 287203,
+      "sha256": "689d331ad362d9384e180106d1618f7ace98c081aa16c13fd5544dac54bc8074"
+    },
+    {
+      "name": "web-project-git-snapshot.zip",
+      "bytes": 33222727,
+      "sha256": "e70d3b97a226590d26a44838be681554ae480bd43c0f72a3d87c7de67160ace9"
+    }
+  ],
+  "new_experiments": false,
+  "new_remote_directories": [],
+  "cleanup": "not_applicable_documentation_only; preserved local originals and all prior remote content",
+  "scope": "Complete tracked Git snapshot at source_commit; historical large assets are indexed, not duplicated. V4 full raw archive remains an explicitly documented external archival exception."
+}
