@@ -1,0 +1,9 @@
+{
+  "schema": "v5.7-report-wording-revision-1",
+  "created_unix": 1791677865.975636,
+  "reason": "Final independent prose audit: raw framewise L2 has a small favorable point estimate with CI spanning zero, so do not say all mean subtraction had no improvement.",
+  "scientific_data_changed": false,
+  "supersedes_archive_report_readme_sha256": "94db0d134f0a123e0a539b98d72ce6e29ce7fac6eb9cc67c50c0eeb9a36cdb7b",
+  "corrected_readme_sha256": "a1b8c0a40ffb61aea610649408d01f627e645677db3a86eff9e16c7649866fa1",
+  "corrected_make_report_sha256": "8585f823172a2720f6c2c2bf09b26b95721f7cbae85c75ed8cead9232b082da3"
+}

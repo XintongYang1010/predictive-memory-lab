@@ -40,7 +40,7 @@ Raw 的变化区间跨零；Pool、Uniform、ROI 等正确行控制的水平 MSE
 | framewise | cosine | 1.557 | 3.857 |
 | framewise | l2 | 1.606 | 3.744 |
 
-六组固定原点/度量内的配对 Raw−Pool 比较都保留明显差距，全部 Pool−Raw 水平 MSE 区间为正。Raw 的均值减法没有改善，平方距离也较差。Pool 的 framewise L2 相对 none L2 有小幅改善：差为 −0.7515px²，95% CI [−1.0521, −0.4495]，但仍处于约 3.7–4.0px 的误差范围。它不能被描述为已修复，也没有证明被去掉的均值就是背景或黄色干扰。
+六组固定原点/度量内的配对 Raw−Pool 比较都保留明显差距，全部 Pool−Raw 水平 MSE 区间为正。Raw 未见明确的均值减法收益：cosine 变差，shared-source L2 不变；framewise L2 的点估计从 1.622 降至 1.606px，但差的区间跨零。各原点下 L2 均劣于对应 cosine。Pool 的 framewise L2 相对 none L2 有小幅改善：差为 −0.7515px²，95% CI [−1.0521, −0.4495]，但仍处于约 3.7–4.0px 的误差范围。它不能被描述为已修复，也没有证明被去掉的均值就是背景或黄色干扰。
 
 ![全部12组水平误差](descriptor/figures/all_arms_dx_mse.png)
 
