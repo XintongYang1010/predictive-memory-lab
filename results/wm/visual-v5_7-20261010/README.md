@@ -69,6 +69,6 @@ RAFT/TAPIR 的二维对应、OSTrack 的目标相关筛选、STCN 的共享对�
 - 本轮没有新 Slurm job ID、GPU 小时或远端目录。上一轮实际 GPU steps 为 415453.44 与 415453.49；累计诊断 charge 保持 **5.56779064169697 GPUh**。本轮没有取消或修改任何远端作业。
 - [reproduce.sh](reproduce.sh) 给出两组完整命令；需先从 V5.5/V5.6 Release 恢复认证输入，并 checkout 已冻结源码。输出必须使用新目录。
 - [完整本轮 Release](https://github.com/XintongYang1010/predictive-memory-lab/releases/tag/visual-v5_7-20261010) 保存全部成本、预测、FP64 范数、源码/设计、图表、CSV、原始日志及核验信息；没有新训练检查点。旧输入和模型按精确哈希引用先前完整 Release。
-- 最终归档状态以本目录后续 `github_verification.json` 回执为准。没有新建远端目录，因此本轮无需远端删除；此前 V5.6 清理结论保留。
+- 完整归档及两个 companion 已独立下载回读：383 个归档成员逐项哈希通过，47 个 Git 报告文件逐字节一致，见 [核验回执](github_verification.json) 与 [恢复说明](ARCHIVE.md)。没有新建远端目录，因此本轮无需远端删除；此前 V5.6 清理结论保留。
 
 所有区间为10,000次固定种子、整 world 配对 bootstrap；两个 variant 和对象一起重采样。它们是已知 Dev 上条件性的探索区间，未做多重比较校正，不能作为独立确认或普遍容量结论。
