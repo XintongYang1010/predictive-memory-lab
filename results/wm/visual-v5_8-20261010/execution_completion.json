@@ -1,0 +1,11 @@
+{
+  "status": "complete",
+  "completed_unix": 1791679779.027429,
+  "source_commit": "980a194adf503bbf6b64ce0ce4b9f66bc066ab86",
+  "scientific_status": "independent_result_review_passed",
+  "new_remote_roots": [],
+  "new_slurm_steps": [],
+  "new_gpu_hours": 0,
+  "local_originals_preserved": true,
+  "archive_verification_record": "github_verification.json is written after independent download; this file records scientific completion only"
+}

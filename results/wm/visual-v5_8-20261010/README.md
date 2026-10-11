@@ -80,7 +80,7 @@ H 的水平点估计略优于 R，但差的区间跨零，且 dy 更差、零输
 
 当前优先级更明确：先处理**空间压缩之后仍能否稳定定位对象**。可以保留目标附近较密的局部细节，将粗全局上下文作为补充；不能仅因为总 token 数更少就假设强平均后仍能读出小位移。这个方向是由对照支持的研究假设，还不是本轮训练验证的算法。
 
-下一项可证伪诊断是固定滤波和 token 数，改变粗采样相位并保存真实二维代价面：检验错误是否对网格对齐高度敏感；再在固定相同 coarse bank 上换重建规则，分开采样与插值。若要定位 encoder 本身，必须另做已知像素平移前后的 encoder 特征等变性测量，而不是从 pooled 失败反推 encoder 坏了。学习型修复需 FIT-only 开发和未用过的确认世界。上述下一项尚未执行。
+下一项优先做同一描述子场的已知位移控制：比较连续场的精确平移与先采样、再重建的平移，在预固定候选中检查真值成本、排名和并列。它可分开当前场/度量的歧义、采样重建误差与真实跨帧表示变化。另一项是固定滤波和 token 数改变粗采样相位，再在相同 coarse bank 上换重建规则，继续分开采样与插值。若要定位 encoder 本身，必须另做已知像素平移前后的 encoder 特征等变性测量，而不是从 pooled 失败反推 encoder 坏了。学习型修复需 FIT-only 开发和未用过的确认世界。上述下一项尚未执行。
 
 原训练型 reader、P0/history gate 与 memory writer 均未进入本轮路径。R/H 仍有约 1.5px 水平误差及幅度低估，不能声称原任务已修复，更不能声称原 memory 有效。
 
@@ -89,5 +89,6 @@ H 的水平点估计略优于 R，但差的区间跨零，且 dy 更差、零输
 - 完整 CPU 评分耗时 27.765s（不含开发、审查及上传）；没有新增 Slurm job/step、GPU 时间或远端目录。本轮不需要远端清理，也没有更动已有远端内容。
 - Raw/Pool 全部预测与旧归档精确一致；全部成本最大差 3.89e-16，DBR bank 与旧 Pool、H 的粗子集与 DR 均逐位一致。512 个 source RGB 哈希通过，原始输入前后未变，全部成本、预测和范数有限。
 - 原有 175 项测试与新增 4 项测试通过；五组算子另经独立窗口构造和显式描述子计算复核。Mac NumPy 仍输出已有的 matmul 浮点状态 warning，原日志完整保留；有限值检查及显式运算验证通过，未放宽阈值。
+- [独立结果重算](spatial_result_review.json) 通过：全部 5120 个预测、全局/行内 rank 与 clamp 精确一致，10,000 次 bootstrap 全数组最大差 2.17×10⁻¹⁹；三固定案例的显式描述子成本最大差 7.53×10⁻¹⁶。
 - [reproduce.sh](reproduce.sh) 给出完整命令，[environment.json](environment.json) 记录软件环境。旧 raw/模型与 baseline 分别从 V5.5/V5.6 的已核验 Release 恢复，哈希由方案固定；本轮没有新训练检查点。
 - [本轮完整 Release](https://github.com/XintongYang1010/predictive-memory-lab/releases/tag/visual-v5_8-20261010) 保存全部 cost/prediction、clamp、bootstrap、源码设计、图表、CSV、日志与复核脚本。归档独立下载及每项哈希核验结果以本目录 `github_verification.json` 为准。所有本地原件保留。
