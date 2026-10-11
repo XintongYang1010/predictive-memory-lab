@@ -1,0 +1,62 @@
+[
+  {
+    "branch": "results/week1-20261002",
+    "commit": "8b6adfa6db484174a351eccc4d075391780253af",
+    "url": "https://github.com/XintongYang1010/predictive-memory-lab/tree/8b6adfa6db484174a351eccc4d075391780253af",
+    "report_files": [],
+    "result_files": [
+      "results/2026-10-02/yxt_pmr_week1_20261002.tar.gz"
+    ]
+  },
+  {
+    "branch": "results/week1-v2-20261003",
+    "commit": "40cdcae3dcb43c1cb08ed747c8767bb967c01bf8",
+    "url": "https://github.com/XintongYang1010/predictive-memory-lab/tree/40cdcae3dcb43c1cb08ed747c8767bb967c01bf8",
+    "report_files": [],
+    "result_files": [
+      "results/2026-10-03/yxt_pmr_week1_v2_20261003.tar.gz"
+    ]
+  },
+  {
+    "branch": "results/week1-v3-20261004",
+    "commit": "2fb3e285a4af19ecd71d9b6e9958c7b73f6f6cdb",
+    "url": "https://github.com/XintongYang1010/predictive-memory-lab/tree/2fb3e285a4af19ecd71d9b6e9958c7b73f6f6cdb",
+    "report_files": [],
+    "result_files": [
+      "results/2026-10-04/week1_v3_20261004T015400Z_450.tar.gz",
+      "results/2026-10-04/week1_v3_20261004T015400Z_450.tar.gz.sha256"
+    ]
+  },
+  {
+    "branch": "results/state-memory-v4-20261009-job615",
+    "commit": "542bb55a05762658d3c1265b7bf183c1e2048a14",
+    "url": "https://github.com/XintongYang1010/predictive-memory-lab/tree/542bb55a05762658d3c1265b7bf183c1e2048a14",
+    "report_files": [
+      "results/2026-10-09/v4-job615/README.md",
+      "results/2026-10-09/v4-job615/REPORT.md"
+    ],
+    "result_files": [
+      "results/2026-10-09/v4-job615/README.md",
+      "results/2026-10-09/v4-job615/REPORT.md",
+      "results/2026-10-09/v4-job615/datasets_manifest.json",
+      "results/2026-10-09/v4-job615/environment.json",
+      "results/2026-10-09/v4-job615/execution.json",
+      "results/2026-10-09/v4-job615/launcher_next/retest_v4_gpu.sh",
+      "results/2026-10-09/v4-job615/launcher_next/retest_v4_inside.sh",
+      "results/2026-10-09/v4-job615/launcher_used/retest_v4_gpu.sh",
+      "results/2026-10-09/v4-job615/launcher_used/retest_v4_inside.sh",
+      "results/2026-10-09/v4-job615/logs/output.615.txt",
+      "results/2026-10-09/v4-job615/logs/retest_v4_gpu_615.log",
+      "results/2026-10-09/v4-job615/logs/retest_v4_inside_615.log",
+      "results/2026-10-09/v4-job615/metrics.csv",
+      "results/2026-10-09/v4-job615/resource_after.json",
+      "results/2026-10-09/v4-job615/run_stats.json",
+      "results/2026-10-09/v4-job615/source_manifest.json",
+      "results/2026-10-09/v4-job615/state_memory_v4_20261009T061757Z_615.tar.gz.sha256",
+      "results/2026-10-09/v4-job615/summary.json",
+      "results/2026-10-09/v4-job615/training.jsonl",
+      "results/2026-10-09/v4-job615/training_curves.png",
+      "results/2026-10-09/v4-job615/verification.json"
+    ]
+  }
+]

@@ -1,0 +1,251 @@
+{
+  "queried_at_utc": "2026-10-11T01:57:21.175958+00:00",
+  "method": "Authenticated GitHub Releases API inventory; existing archives are NOT re-downloaded by this inventory",
+  "releases": [
+    {
+      "tag": "visual-v5_8-20261010",
+      "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/tag/visual-v5_8-20261010",
+      "target_commitish": "experiments/visual-v5_8-20261010",
+      "assets": [
+        {
+          "name": "asset_identity.json",
+          "bytes": 243,
+          "github_digest": "sha256:a7d99661d9856226b20fd7df33827b8b49a485037db3cf6998b239f610b97c11",
+          "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/download/visual-v5_8-20261010/asset_identity.json",
+          "state": "uploaded"
+        },
+        {
+          "name": "visual-v5_8-20261010-complete.tar.gz",
+          "bytes": 28642922,
+          "github_digest": "sha256:b018b6f4ceff3e23a9fd80e1f016e2f799f4282d11594352be648e61e7918df7",
+          "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/download/visual-v5_8-20261010/visual-v5_8-20261010-complete.tar.gz",
+          "state": "uploaded"
+        }
+      ]
+    },
+    {
+      "tag": "visual-v5_7-20261010",
+      "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/tag/visual-v5_7-20261010",
+      "target_commitish": "bce24623e4f1299378a6b26fdeb20ac05c26942d",
+      "assets": [
+        {
+          "name": "asset_identity.json",
+          "bytes": 244,
+          "github_digest": "sha256:e808436cfb4437ca8d2f345c023879644a4bd8710d9dc48dea02e17f09ecc9c6",
+          "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/download/visual-v5_7-20261010/asset_identity.json",
+          "state": "uploaded"
+        },
+        {
+          "name": "report_revision.json",
+          "bytes": 21489,
+          "github_digest": "sha256:89d40c1fa52972abddbeea11abab0e0ae1eee9b0725ca658ef8be7dd52b86b3b",
+          "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/download/visual-v5_7-20261010/report_revision.json",
+          "state": "uploaded"
+        },
+        {
+          "name": "visual-v5_7-20261010-complete.tar.gz",
+          "bytes": 300422555,
+          "github_digest": "sha256:4333c8fd061eac96d8092a4b73246aede0a2c87ab90215f6603692cbf8ad6cac",
+          "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/download/visual-v5_7-20261010/visual-v5_7-20261010-complete.tar.gz",
+          "state": "uploaded"
+        }
+      ]
+    },
+    {
+      "tag": "visual-v5_6-fit-20261010",
+      "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/tag/visual-v5_6-fit-20261010",
+      "target_commitish": "031788e0499c242a3671f57d026f3ed71da4872e",
+      "assets": [
+        {
+          "name": "visual-v5_6-jx-reader.tar.gz",
+          "bytes": 103316651,
+          "github_digest": "sha256:2a14b4ec28cf6c0f9a961264f46ac5c55fd60f2a9b1143950bb082661dd56d05",
+          "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/download/visual-v5_6-fit-20261010/visual-v5_6-jx-reader.tar.gz",
+          "state": "uploaded"
+        }
+      ]
+    },
+    {
+      "tag": "visual-v5_6-20261010",
+      "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/tag/visual-v5_6-20261010",
+      "target_commitish": "53f9e1e12e38b53e058ec97fcd29419684cd55ce",
+      "assets": [
+        {
+          "name": "archive_parts.json",
+          "bytes": 1075,
+          "github_digest": "sha256:2ba20fc11db37121c2a6b924a86e4f6e13a1101692a3ee94a30ea6119fca8bae",
+          "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/download/visual-v5_6-20261010/archive_parts.json",
+          "state": "uploaded"
+        },
+        {
+          "name": "visual-v5_6-20261010-complete.tar.gz.part000",
+          "bytes": 536870912,
+          "github_digest": "sha256:2145cc7a0c4795e2e460f3aa386bc7c33f55470663355e482958bca704873b85",
+          "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/download/visual-v5_6-20261010/visual-v5_6-20261010-complete.tar.gz.part000",
+          "state": "uploaded"
+        },
+        {
+          "name": "visual-v5_6-20261010-complete.tar.gz.part001",
+          "bytes": 354972952,
+          "github_digest": "sha256:2bcbbfb13b80d0fe53985a24f4e9fbab01db74b2b4b447443b421c05034130f9",
+          "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/download/visual-v5_6-20261010/visual-v5_6-20261010-complete.tar.gz.part001",
+          "state": "uploaded"
+        }
+      ]
+    },
+    {
+      "tag": "visual-v5_5-fit-20261010",
+      "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/tag/visual-v5_5-fit-20261010",
+      "target_commitish": "d0cae2237fe2cc8e562e1c62744a6958157a3e60",
+      "assets": [
+        {
+          "name": "visual-v5_5-20261010-lane-reader.tar.gz",
+          "bytes": 123372609,
+          "github_digest": "sha256:73a79d40abb7a30c6f6c764c36478c713e6e9a39a23f2389b67294985817194c",
+          "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/download/visual-v5_5-fit-20261010/visual-v5_5-20261010-lane-reader.tar.gz",
+          "state": "uploaded"
+        }
+      ]
+    },
+    {
+      "tag": "visual-v5_5-20261010",
+      "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/tag/visual-v5_5-20261010",
+      "target_commitish": "5688318e0c638dd356b3f0204476019d237f137a",
+      "assets": [
+        {
+          "name": "archive_parts.json",
+          "bytes": 1667,
+          "github_digest": "sha256:66bdd9631787d5f7fbbd11089c20da4c65b91db922dde9cb1b7793394493a813",
+          "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/download/visual-v5_5-20261010/archive_parts.json",
+          "state": "uploaded"
+        },
+        {
+          "name": "visual-v5_5-20261010-remote-scene.tar.gz.part000",
+          "bytes": 536870912,
+          "github_digest": "sha256:0773f3860f166f2f825431bd84b02ecb6c13e23f27b0973bd2b2644991f81d45",
+          "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/download/visual-v5_5-20261010/visual-v5_5-20261010-remote-scene.tar.gz.part000",
+          "state": "uploaded"
+        },
+        {
+          "name": "visual-v5_5-20261010-remote-scene.tar.gz.part001",
+          "bytes": 536870912,
+          "github_digest": "sha256:89631d2367d82b12b17a5a8f0d613389a7cf9375dfc66aa7fddaa210e3f3c922",
+          "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/download/visual-v5_5-20261010/visual-v5_5-20261010-remote-scene.tar.gz.part001",
+          "state": "uploaded"
+        },
+        {
+          "name": "visual-v5_5-20261010-remote-scene.tar.gz.part002",
+          "bytes": 536870912,
+          "github_digest": "sha256:88e3dd079784ad72354f26f5916d9086e6b6f35286b7ad3d480b53ce63530679",
+          "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/download/visual-v5_5-20261010/visual-v5_5-20261010-remote-scene.tar.gz.part002",
+          "state": "uploaded"
+        },
+        {
+          "name": "visual-v5_5-20261010-remote-scene.tar.gz.part003",
+          "bytes": 536870912,
+          "github_digest": "sha256:2e870fd606f6b683b5c2a1073311b56c1685797d74bab041b2c676a0326696d9",
+          "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/download/visual-v5_5-20261010/visual-v5_5-20261010-remote-scene.tar.gz.part003",
+          "state": "uploaded"
+        },
+        {
+          "name": "visual-v5_5-20261010-remote-scene.tar.gz.part004",
+          "bytes": 536870912,
+          "github_digest": "sha256:f2a6a41575292172664f457c34a5e2cd35f17bcb8ef16abb62a5ed56c5f85636",
+          "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/download/visual-v5_5-20261010/visual-v5_5-20261010-remote-scene.tar.gz.part004",
+          "state": "uploaded"
+        },
+        {
+          "name": "visual-v5_5-20261010-remote-scene.tar.gz.part005",
+          "bytes": 44747834,
+          "github_digest": "sha256:32408085e40ad7464e50a99420a881445b786161364b23348e930e7a9af43fb7",
+          "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/download/visual-v5_5-20261010/visual-v5_5-20261010-remote-scene.tar.gz.part005",
+          "state": "uploaded"
+        }
+      ]
+    },
+    {
+      "tag": "visual-v5_4-fit-20261010",
+      "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/tag/visual-v5_4-fit-20261010",
+      "target_commitish": "56f4bdf5e7cee531dde82f11a68da88943f8d7f6",
+      "assets": [
+        {
+          "name": "visual-v5_4-20261010-frozen-readers.tar.gz",
+          "bytes": 119767699,
+          "github_digest": "sha256:ef7abd09f6e83d791e07b7ca55050f41fc0a4d5b63548acff42b1ba2275192ac",
+          "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/download/visual-v5_4-fit-20261010/visual-v5_4-20261010-frozen-readers.tar.gz",
+          "state": "uploaded"
+        }
+      ]
+    },
+    {
+      "tag": "visual-v5_4-20261010",
+      "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/tag/visual-v5_4-20261010",
+      "target_commitish": "36c6d42c9f6e227c2725523e80c023dcd4d60ad7",
+      "assets": [
+        {
+          "name": "visual-v5_4-20261010-remote-scene.tar.gz",
+          "bytes": 456076665,
+          "github_digest": "sha256:559bf2818e799b7b1525ed01c57c85c604dd1422804743c715faf62722431108",
+          "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/download/visual-v5_4-20261010/visual-v5_4-20261010-remote-scene.tar.gz",
+          "state": "uploaded"
+        }
+      ]
+    },
+    {
+      "tag": "visual-v5_3-fit-20261010",
+      "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/tag/visual-v5_3-fit-20261010",
+      "target_commitish": "4f59b2ec40b9393fb0a5833e404e8cdcc287b340",
+      "assets": [
+        {
+          "name": "visual-v5_3-20261010-frozen-readers.tar.gz",
+          "bytes": 62651536,
+          "github_digest": "sha256:2d7e9a310b4a2b7abb3279c984afbf3bcdd736d4d4f444d46fbea0f3f5c5c417",
+          "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/download/visual-v5_3-fit-20261010/visual-v5_3-20261010-frozen-readers.tar.gz",
+          "state": "uploaded"
+        }
+      ]
+    },
+    {
+      "tag": "visual-v5_3-20261010",
+      "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/tag/visual-v5_3-20261010",
+      "target_commitish": "65a569f2b1dcff86239c1f2939f82058a877c9b3",
+      "assets": [
+        {
+          "name": "visual-v5_3-20261010-remote-scene.tar.gz",
+          "bytes": 395002032,
+          "github_digest": "sha256:8746f0d32fddbc7c6c9a02c4223f2e4048de32423f59655e7406578dc7cf85ce",
+          "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/download/visual-v5_3-20261010/visual-v5_3-20261010-remote-scene.tar.gz",
+          "state": "uploaded"
+        }
+      ]
+    },
+    {
+      "tag": "visual-v5_2-20261010",
+      "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/tag/visual-v5_2-20261010",
+      "target_commitish": "9792b93f4e0203b52a2e26ab7700eb1975150231",
+      "assets": [
+        {
+          "name": "visual-v5_2-20261010-remote-scene.tar.gz",
+          "bytes": 196878854,
+          "github_digest": "sha256:ecbe23a3af9cb819059387b81b38ad24b539f8be1f4ebf07c9469a0ba9e30932",
+          "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/download/visual-v5_2-20261010/visual-v5_2-20261010-remote-scene.tar.gz",
+          "state": "uploaded"
+        }
+      ]
+    },
+    {
+      "tag": "visual-v5_1-20261010",
+      "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/tag/visual-v5_1-20261010",
+      "target_commitish": "ab965d6ecea4a4bec8d311dfdb5aad041ac8731f",
+      "assets": [
+        {
+          "name": "visual-v5_1-20261010-remote-scene.tar.gz",
+          "bytes": 238634147,
+          "github_digest": "sha256:86ee5e31749476bde466d9b7e094c779adcbd9dc7590168402c8bb2992ba7358",
+          "url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/download/visual-v5_1-20261010/visual-v5_1-20261010-remote-scene.tar.gz",
+          "state": "uploaded"
+        }
+      ]
+    }
+  ]
+}

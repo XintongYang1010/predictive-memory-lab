@@ -1,0 +1,43 @@
+{
+  "generated_at_utc": "2026-10-11T02:05:59.781320+00:00",
+  "scientific_source_commit": "cb1d31315d1c936ca93afe1cb18460e9d3d57778",
+  "components": [
+    {
+      "path": "docs/WEB_PROJECT_HANDOFF.md",
+      "bytes": 13454,
+      "sha256": "80a0ce634d71d9092521422cd7074c021a4347161ebc9041c3ac7f29a28c2a9e"
+    },
+    {
+      "path": "docs/WEB_PROJECT_EXPERIMENT_TIMELINE.md",
+      "bytes": 27691,
+      "sha256": "0cfe4fafd2eb3c303bb6fb3c198628e45b034368e1980f762168b9daa5626c1c"
+    },
+    {
+      "path": "docs/WEB_PROJECT_BAD_CASES.md",
+      "bytes": 13245,
+      "sha256": "b74c74960be7d9d475b478bd00fa9a6fab1ff50b932417ca7e3bcfb86d0fd9ac"
+    },
+    {
+      "path": "docs/WEB_PROJECT_PAPER_ROADMAP.md",
+      "bytes": 22559,
+      "sha256": "88e62e0d13479d25b69159abd25349cbcbfae8a2e2e783898083ba97533a60aa"
+    },
+    {
+      "path": "docs/WEB_PROJECT_ARTIFACT_INDEX.md",
+      "bytes": 12447,
+      "sha256": "4a38ed3a554efc0a824983c4ebd15ec2537aa89b3e68e606d8367d6a920493a3"
+    }
+  ],
+  "output": {
+    "path": "docs/WEB_PROJECT_FULL_CONTEXT.md",
+    "bytes": 90338,
+    "sha256": "283dec29e0943c42e539a1a4f0d367a30142dee653ebd3bab01a4223717529c7"
+  },
+  "validation": {
+    "relative_links_checked": 227,
+    "missing": []
+  },
+  "new_experiments": false,
+  "new_remote_directories": false,
+  "notes": "Concatenation in listed order; original evidence files not modified. Full scientific Git source freshly verified separately; historical Release inventory is API metadata, not fresh full-asset download."
+}

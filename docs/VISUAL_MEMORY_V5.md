@@ -1,5 +1,7 @@
 # V5 visual-memory pilot — GPU validation pending
 
+> Historical design/protocol, retained for provenance. Actual H800 profile/probe and V5.1–V5.8 diagnostic results are indexed in [the current project handoff](WEB_PROJECT_HANDOFF.md). Original A100 execution and the complete P0/memory comparison remain unverified; old statements below about no GPU jobs or missing DGX adaptation are superseded by the execution records.
+
 DGX execution update: platform adaptation is implemented. The user approved
 reusing the existing H800 allocation; see [DGX execution record](DGX_V5_EXECUTION.md).
 The original A100 protocol below remains the scientific baseline. This note

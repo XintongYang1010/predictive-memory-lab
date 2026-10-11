@@ -1,5 +1,18 @@
 # Predictive Memory Lab
 
+## 最新学习入口：V5.8 完成后的项目全景（2026-10-10）
+
+**从头理解项目请先读 [网页端接手说明](docs/WEB_PROJECT_HANDOFF.md)，或 [单文件完整上下文](docs/WEB_PROJECT_FULL_CONTEXT.md)。**
+这里汇总研究目标、V1–V5.8 实验时间线、固定 bad case 图解、源码与归档入口，以及 Cambrian-S / Saining 相关论文阅读路线。
+[逐轮结果](docs/WEB_PROJECT_EXPERIMENT_TIMELINE.md) · [bad case](docs/WEB_PROJECT_BAD_CASES.md) · [论文路线](docs/WEB_PROJECT_PAPER_ROADMAP.md) · [网页教学提示词](docs/WEB_PROJECT_CHAT_PROMPT.md)。
+
+最新结论：空间平均与粗采样重建会损害当前固定对应器，且二者存在交互；原始特征仍有残余错误。
+原 P0/history gate 与六组 memory 主比较尚未完成，不能声称原 memory 有效。
+V5.8 使用本地 CPU，没有新 GPU 作业；此前诊断 reader 训练与原 memory 主实验必须区分。
+[V5.8 原始报告](results/wm/visual-v5_8-20261010/README.md) · [完整 Release](https://github.com/XintongYang1010/predictive-memory-lab/releases/tag/visual-v5_8-20261010)。
+
+以下保留各阶段的原始介绍。早期“当前状态”只代表对应日期；学习接手以以上汇总和各轮归档证据为准。
+
 ## V5 视觉记忆首轮（H800 八卡 probe 已运行，门槛未通过）
 
 新增独立的 `pmr/visual_memory/`：受控成对 RGB 世界、冻结官方 I-JEPA、

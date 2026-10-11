@@ -1,0 +1,9 @@
+{
+  "source_commit": "cb1d31315d1c936ca93afe1cb18460e9d3d57778",
+  "method": "fresh authenticated GitHub tarball download; every file checked against local Git object ID",
+  "files_verified": 1094,
+  "archive_bytes": 32707667,
+  "archive_sha256": "b39118a6bd6e14dc83c7cd414b4e78ad7546e6de27e60ea20fe8ec8d73856f00",
+  "verified_unix": 1791684156.621483,
+  "df9e780_is_ancestor": true
+}

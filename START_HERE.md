@@ -1,5 +1,7 @@
 # V5 first run: local Codex to DGX
 
+> **最新状态与学习交接（2026-10-10）：** V5.1–V5.8 诊断已归档。先读 [项目全景](docs/WEB_PROJECT_HANDOFF.md) 或 [单文件完整上下文](docs/WEB_PROJECT_FULL_CONTEXT.md)，再读 [最新 V5.8 报告](results/wm/visual-v5_8-20261010/README.md)。原 memory 主实验仍未完成。下面是首轮部署历史，不是要求重新执行的最新任务。
+
 本仓库包含 V5 首轮 visual world model + bounded memory 的源码和 CPU 测试。
 2026-10-09 已按用户选择共用 IndexMem 的八张 H800，完成官方 I-JEPA profile 和
 八卡 Train/Dev probe。池化特征位移 R² = −0.020927，未通过预定门槛，

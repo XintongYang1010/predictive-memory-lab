@@ -1,5 +1,7 @@
 # 验证记录
 
+> 最新阅读入口：[项目实验时间线](WEB_PROJECT_EXPERIMENT_TIMELINE.md)。V4 后来已在独立结果分支完成 A100 Slurm615 正式计算，但 GPU UUID 绑定核验失败；见 [实测报告](https://github.com/XintongYang1010/predictive-memory-lab/blob/542bb55a05762658d3c1265b7bf183c1e2048a14/results/2026-10-09/v4-job615/README.md)。下文 V4“尚未正式 A100”保留为较早本地检查记录，不是当前状态。V5.1–V5.8 状态见最新时间线。
+
 这些记录描述实际执行过的软件检查，不代表模型效果或 A100 性能。
 
 ## V4 状态记忆本地验证（2026-10-09）

@@ -1,5 +1,7 @@
 # V5 DGX execution handoff
 
+> Historical deployment order. For the completed V5.1–V5.8 diagnostics and current research interpretation, read [the project handoff](WEB_PROJECT_HANDOFF.md). Statements below about unsubmitted jobs and missing backend adaptation describe the original handoff, not the current repository. This document alone is not an instruction to launch new work.
+
 Execution update: an explicit DGX backend now exists. See
 [DGX execution record](DGX_V5_EXECUTION.md) for the live allocation, approved
 H800 substitution, shared-reservation accounting and recovery commands. The
