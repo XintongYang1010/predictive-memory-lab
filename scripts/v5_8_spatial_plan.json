@@ -1,0 +1,284 @@
+{
+  "design": {
+    "schema": "v5.8-spatial-diagnosis-1",
+    "posthoc": true,
+    "no_training": true,
+    "test_opened": false,
+    "population": {
+      "split": "dev",
+      "pair_ids": [
+        640,
+        895
+      ],
+      "worlds": 256,
+      "episodes": 512,
+      "object_queries": 1024
+    },
+    "immutable_scene_inputs": {
+      "archive_manifest.json": "b6e0ca1e893a595edb3a8c60507f72de647f5affcb20daf8223bf3af20e72663",
+      "counterfactual_cache/receipt.json": "000ec48d9a2a7ba7ea07025f87e246ae87045d3a122ca478f6d7b10c4e5d4f46",
+      "report/predictions.npz": "f3f66de4fb643ccbf4bb011761111d24aa49170e539c186a41d93068026eb294"
+    },
+    "baseline": {
+      "report_sha256": "47f10e6589fc26650f319712b6f588d3bcde94e4636e4d32b480738e42fe8d33",
+      "costs_sha256": "265766a0d1de852f5eb863c068d08de11c696ed961e76768468797a6e9879eb0",
+      "R": "raw_native",
+      "DBR": "pool_native",
+      "cost_atol": 1e-10,
+      "cost_rtol": 0.0,
+      "bank": "R unchanged and DBR bitwise equal to old.pool(raw,4)",
+      "predictions": "exact equality"
+    },
+    "arms": [
+      {
+        "name": "R",
+        "bank": "Original raw16x16 descriptors, FP32; grid origin6.5 spacing14."
+      },
+      {
+        "name": "BR",
+        "bank": "Valid4x4 box mean, stride1; FP64 accumulation then FP32; 13x13 grid origin27.5 spacing14."
+      },
+      {
+        "name": "DR",
+        "bank": "Sample raw bilinear field at (27.5+56k,27.5+56j), FP64 interpolation then FP32; reconstruct4x4 bilinearly."
+      },
+      {
+        "name": "DBR",
+        "bank": "Select BR rows/columns0,4,8,12 exactly; reconstruct4x4 bilinearly; must reproduce oldpool4."
+      },
+      {
+        "name": "H",
+        "bank": "Sample R at all13x13 BR centers27.5+14j: raw2x2 averages starting atj+1, FP64 accumulation then FP32; directly query13grid. H[::4,::4] must equal DR bitwise."
+      }
+    ],
+    "grid_specs": {
+      "R": [
+        16,
+        6.5,
+        14.0
+      ],
+      "BR": [
+        13,
+        27.5,
+        14.0
+      ],
+      "DR": [
+        4,
+        27.5,
+        56.0
+      ],
+      "DBR": [
+        4,
+        27.5,
+        56.0
+      ],
+      "H": [
+        13,
+        27.5,
+        14.0
+      ]
+    },
+    "DR_limitation": "Half-grid raw sampling is itself a2x2 linear average. This is not a no-low-pass operator, and the factorial contrasts do not isolate perfectly orthogonal physical mechanisms.",
+    "H_limitation": "BR and H match phase/density but compare4x4 versus2x2 averaging, not filtering versus unfiltered input. H minus R changes both phase and interpolation averaging, so it is not a pure-phase effect.",
+    "B_limitation": "Even4 valid averaging shifts the dense native grid phase by half a raw spacing modulo14pixels; R versus BR changes grid phase as well as averaging.",
+    "roi": "A RGB R235 B60;B R60 B235;source-frame color bbox25/50/75percent xy Cartesian3x3. No target RGB ROI or labels.",
+    "candidate_grid": {
+      "minimum_pixels": -6.0,
+      "maximum_pixels": 6.0,
+      "step_pixels": 0.5,
+      "count": 625,
+      "order": "dy major,dx minor"
+    },
+    "tie": {
+      "absolute_cost_tolerance": 1e-12,
+      "selection": "smallest squared displacement then dx then dy",
+      "near_optimal_tolerance": 1e-06
+    },
+    "interpolation": "Bilinear on each arm native physical centers; border replication; identical9 source ROI points and625 candidate translations. Record every source/target clamp.",
+    "descriptor": "Center each interpolated descriptor over channels;cosine similarity;mean cosine distance across9 ROI points;norm squared <=1e-24 gives similarity0 and marked undefined",
+    "metric": "old.costs centered cosine; no origin change or fitted normalization.",
+    "correct_y_rank": "Analysis only: nearest ground-truth y row, nearest ground-truth x column. Nearest-grid ties prefer smallest absolute offset then smaller signed offset. Rank=1+number of costs strictly below target-cell cost minus1e-12, both globally625 and within the correct-y row25. Report ties, gaps to respective minima and out-of-support status.",
+    "subsets": {
+      "all": "All1024 object queries.",
+      "common_unclamped": "An object query enters iff all9 source points AND all625x9 target points are unclamped in ALL5 arms; fixed intersection, no cost/label selection. Independently assert every ROI coordinate is within closed interval[33.5,189.5]."
+    },
+    "analysis": {
+      "metrics": [
+        "dx_mse",
+        "motion_mse"
+      ],
+      "units": "normalized image coordinates squared; also report pixel RMSE",
+      "sign": "abs(true axis displacement)>=1pixel; wrong nonzero sign and predicted zero separate",
+      "descriptive": "dy MSE/RMSE and four-coordinate MSE/skill with immutable original frozen FIT mean; no additional bootstrap contrasts.",
+      "bootstrap": {
+        "seed": 7819,
+        "replicates": 10000,
+        "unit": "256 whole worlds; keep both variants/objects together",
+        "subset_estimator": "Within each resample divide summed included-object losses by summed included-object counts. Do not equally weight worlds with different included counts.",
+        "interval": "paired percentile2.5/97.5, conditional exploratory, no multiplicity adjustment"
+      },
+      "contrasts": [
+        {
+          "name": "B_before_coarse_sampling",
+          "weights": [
+            -1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "definition": "BR minus R"
+        },
+        {
+          "name": "B_with_coarse_sampling",
+          "weights": [
+            0.0,
+            0.0,
+            -1.0,
+            1.0,
+            0.0
+          ],
+          "definition": "DBR minus DR"
+        },
+        {
+          "name": "D_without_box_filter",
+          "weights": [
+            -1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "definition": "DR minus R"
+        },
+        {
+          "name": "D_with_box_filter",
+          "weights": [
+            0.0,
+            -1.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          "definition": "DBR minus BR"
+        },
+        {
+          "name": "difference_in_differences",
+          "weights": [
+            1.0,
+            -1.0,
+            -1.0,
+            1.0,
+            0.0
+          ],
+          "definition": "DBR minus DR minus BR plus R"
+        },
+        {
+          "name": "half_grid_sampling",
+          "weights": [
+            -1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "definition": "H minus R"
+        },
+        {
+          "name": "matched_dense_phase_filter",
+          "weights": [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "definition": "BR minus H"
+        },
+        {
+          "name": "coarse_sampling_of_H",
+          "weights": [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            -1.0
+          ],
+          "definition": "DR minus H"
+        },
+        {
+          "name": "phase_matched_interaction",
+          "weights": [
+            0.0,
+            -1.0,
+            -1.0,
+            1.0,
+            1.0
+          ],
+          "definition": "DBR minus BR minus DR plus H"
+        }
+      ]
+    },
+    "fixed_cases": [
+      [
+        761,
+        1
+      ],
+      [
+        844,
+        1
+      ],
+      [
+        891,
+        1
+      ]
+    ],
+    "outputs": "Every arm cost/prediction/source-clamp/target-clamp, common subset flags, ROI points, correct-y ranks, norm summaries, world loss sums/counts, bootstrap draws, all fixed-case figures.",
+    "limits": "Known-Dev source-RGB-privileged correspondence only. Different native boundary supports are controlled with the common unclamped subset. Coarse sampling and reconstruction remain coupled; phase and DR implicit smoothing matter. No module-responsibility percentage, neural defect, memory-training, fresh-confirmation or equal-byte-storage claim."
+  },
+  "sources": {
+    "docs/V5_8_EXECUTION_PROTOCOL.md": "d74b771e8b512bed6bf68eabccab8cfb3f5a5a8c88c71e9dcaddc8d76d946cfa",
+    "pmr/visual_memory/__init__.py": "5334f491766718f980788f117910c30e2b4d804bee37b69bd26438db575f0027",
+    "pmr/visual_memory/__main__.py": "bb4c496ca7009b617ff20badb661237d7e0afc35ec34972af15c61c42faa49b5",
+    "pmr/visual_memory/bind_gpu.py": "cab3427dddd890e1437393dc40cdb2381c623d177b32054f4bdd4c1f674fef45",
+    "pmr/visual_memory/common.py": "6b89bfca6f38aea698449edd7ece7da3baa14e16b97b805b6368d59853f5b4ac",
+    "pmr/visual_memory/data.py": "ce5082f3be9006dcceb46fbaffadc27349f977a77abcf8992eda3e80f8775368",
+    "pmr/visual_memory/feature_workers.py": "9334ce554d5d910d3f651e7d7d555ef23c629762b0f391f8b0e318d4c8fb1cc1",
+    "pmr/visual_memory/features.py": "5324748c4c2ef0cd82329d97c73a6cf8a21562501039ba31bd67dbc0efe29f93",
+    "pmr/visual_memory/memory.py": "779a3fa3ffd9a5e4b1b52111ae37ebb35292f61e2a4a4973cadffa61e6ec4b7b",
+    "pmr/visual_memory/predictor.py": "11b481b74fb50ad069c42335611677ab3dc20c0cc7dc8eef9e74b4472fb14d38",
+    "pmr/visual_memory/profiling.py": "a99b14df2651f4f32d5f242f28a877c47f83c6b5a8d425d31a891fa79c2c12fe",
+    "pmr/visual_memory/report.py": "fa8b54a0f1f840da0acf1cab11b23f24d6bbead8f214c4a1a6b4634cbbed225d",
+    "pmr/visual_memory/slurm_backend.py": "6b622a7f895adeaf1fd6dd84031639765ca9ce7c2e445ceba5d989f6a2c6fbbe",
+    "pmr/visual_memory/train.py": "59b8420c95625a08b324e93a7b5d75f7f44af58719a486002bd0cd831a1cf7bb",
+    "scripts/extract_v5_confirmation.py": "8db68a6a978014e18b9f3f12f81cdc7388048cfaf41c285c97c1c268ee656034",
+    "scripts/v5_3_data.py": "3018b72817b536323ee404c070c10b1cc13917420ec377e21a3aec5325bb8f12",
+    "scripts/v5_3_reader.py": "960e3123da1163d694fafaeee45f91cea84e03025b37a62da9823dcff0b04ada",
+    "scripts/v5_4_data.py": "97eb9796c9affe09a13d0bf242c701dac36d6e126f7e8cd91a84185534120576",
+    "scripts/v5_4_reader.py": "e198aa3046056b032582e13c6ad135e581af895fcef17a8867e231355e82c3c1",
+    "scripts/v5_5_counterfactual.py": "420fda7123d16864c00ba3b829739b09ec9ce7d259833883ea66539a75b7be62",
+    "scripts/v5_6_correspondence.py": "79a0fcb95c8481b43ba1d6c1fa602b21bfe5fa70da3626323af0ae528aa11dbe",
+    "scripts/v5_8_spatial_diagnosis.py": "83a4ee8e84954902c8c0c7d3af43852761f348a157e3795a178f32deb01772cf",
+    "scripts/v5_temporal_confirmation.py": "6fe8a1f96e6d1209094fa2522dcccf4e9558afcb9714e8e9d7dd9785eb651681",
+    "tests/visual_memory/test_v5_8_spatial_diagnosis.py": "4bf3367e1dae04313140aab78f4b2606548b444e1414d6e0b2bdab4d48b72b01"
+  },
+  "software_verification": {
+    "status": "passed",
+    "software_only": true,
+    "scientific_inputs_opened": false,
+    "old_pool_bank_exact": true,
+    "DR_2x2_mean_exact": true,
+    "dense_box_filter_all169_positions": true,
+    "H_dense_half_grid_all169_positions": true,
+    "H_coarse_equals_DR_bitwise": true,
+    "baseline_cost_prediction_match": true,
+    "explicit_cosine": true,
+    "border_replication": true,
+    "affine_field_preserved": true,
+    "constant_ambiguity": true,
+    "correct_y_and_global_rank": true,
+    "common_support_closed_interval": true,
+    "whole_world_subset_count_weighted_bootstrap": true
+  },
+  "created_unix": 1791679446.400003
+}
