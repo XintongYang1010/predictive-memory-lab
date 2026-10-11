@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_8-20261010/publish.py", line 93, in <module>
+    else: verify(a.commit)
+  File "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_8-20261010/publish.py", line 72, in verify
+    if archive.stat().st_size!=expected['bytes'] or sha(archive.read_bytes())!=expected['sha256']: raise ValueError('Downloaded archive differs')
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py", line 1222, in stat
+    return self._accessor.stat(self)
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-lab/execution/visual-v5_8-20261010/github-readback/visual-v5_8-20261010-complete.tar.gz'

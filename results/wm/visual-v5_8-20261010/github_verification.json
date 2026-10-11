@@ -1,0 +1,220 @@
+{
+  "verified_unix": 1791679931.8808398,
+  "result_commit": "56dbcf46702a7078aaf4449566211fe520b9bf79",
+  "full_independent_download": true,
+  "every_archive_member_verified": true,
+  "archive": {
+    "name": "visual-v5_8-20261010-complete.tar.gz",
+    "bytes": 28642922,
+    "sha256": "b018b6f4ceff3e23a9fd80e1f016e2f799f4282d11594352be648e61e7918df7",
+    "manifest_sha256": "9f6f7745ebd1c206182762aaebfad714298810220c00f301b2edbe5c1d0616b0"
+  },
+  "member_count": 110,
+  "release_companions": {
+    "asset_identity.json": {
+      "bytes": 243,
+      "sha256": "a7d99661d9856226b20fd7df33827b8b49a485037db3cf6998b239f610b97c11"
+    }
+  },
+  "git_files": {
+    "results/wm/visual-v5_8-20261010/README.md": {
+      "bytes": 10156,
+      "sha256": "5dd333a2405d259128e0dbe93dca6ecda58a9f31563e87eaa9804f0f7f4df083",
+      "git_blob_sha": "cd07e6d3d65ac19696ed8b04106820b8c574c6ef"
+    },
+    "results/wm/visual-v5_8-20261010/creation.json": {
+      "bytes": 345,
+      "sha256": "ab7e3b525f84842a53f359082d16c3eca10cedd46e6caf91110526be295f2346",
+      "git_blob_sha": "6bcbe0d13b8a68e35a0060230c063b344caf8b67"
+    },
+    "results/wm/visual-v5_8-20261010/environment.json": {
+      "bytes": 445,
+      "sha256": "ccbcd2ae3c24eacdfffcb1a444d81e698923d894299d1770f4c654dc4bbba007",
+      "git_blob_sha": "e2713abeb2fdabbe37a2156e00b84a08c50c2388"
+    },
+    "results/wm/visual-v5_8-20261010/execution_completion.json": {
+      "bytes": 443,
+      "sha256": "6790bfdbf9184df78735b2e754202a7e15c49ba067dc69e3afb7cbacf2d91f5d",
+      "git_blob_sha": "def6ff37f0c4766ab549725321223a0d89c8bf3b"
+    },
+    "results/wm/visual-v5_8-20261010/implementation_review.json": {
+      "bytes": 2829,
+      "sha256": "51d89310a3f647fe807afb794a22d255829990d8c47221154440d45a3d23b23e",
+      "git_blob_sha": "5f2c8ef7bede8e8d65dfd69859b54768daa5ac39"
+    },
+    "results/wm/visual-v5_8-20261010/interpretation_review.json": {
+      "bytes": 7278,
+      "sha256": "009e1c94d07ba0676c86fa2eb2dd12d4dc6455ab2f73856165cc0eaa66cfde19",
+      "git_blob_sha": "182b15c4dd0afc3d80904245ec09ed3cc58abb2f"
+    },
+    "results/wm/visual-v5_8-20261010/protocol_review.json": {
+      "bytes": 3743,
+      "sha256": "eeb636dd84762c7552d58a0cf9e6a9aefc40d86964e3b4bc468c64be2daaaa57",
+      "git_blob_sha": "b7b35b8290715177325ac1e93ca1a6f5190cb467"
+    },
+    "results/wm/visual-v5_8-20261010/registration.log": {
+      "bytes": 91,
+      "sha256": "0a3bfd738b4ca0f2c77ea800bca79b6605bdcd29b948d44b6a67a10b9d2571cc",
+      "git_blob_sha": "dee5de90058221e0e31633aa481839acb1421a7d"
+    },
+    "results/wm/visual-v5_8-20261010/registration_publication.json": {
+      "bytes": 5625,
+      "sha256": "acab6e87d763cc72268151324680b72e856ae8928bbc69c353a3db7b4d9c6813",
+      "git_blob_sha": "0cdbdc758b7e1750b3a358a795b741336ebcc847"
+    },
+    "results/wm/visual-v5_8-20261010/regression_test.log": {
+      "bytes": 26319,
+      "sha256": "3729ce303fff8761cd087cd5b8ca794474ac88a3bb8bbedf196f6196a99c7c70",
+      "git_blob_sha": "725ae807078c8fffd63250798822e740fd34f378"
+    },
+    "results/wm/visual-v5_8-20261010/reproduce.sh": {
+      "bytes": 991,
+      "sha256": "95f0689c3c08ac420a8b6bea8d0b423000df70ffd7f846152400a655d93bfaf6",
+      "git_blob_sha": "676067c77d81f9b7cc91e751fd32720d1b80d6ce"
+    },
+    "results/wm/visual-v5_8-20261010/spatial/archive_manifest.json": {
+      "bytes": 3195,
+      "sha256": "d32ad2bd313102be0d707d46cbfb688240cdd392f5491ab871699f5f7618d8c9",
+      "git_blob_sha": "3c75701897f8b23a149e8794fc49d6ecf68f9ef0"
+    },
+    "results/wm/visual-v5_8-20261010/spatial/bank_identities.json": {
+      "bytes": 567811,
+      "sha256": "7fdf99940554f82ba85f35eabe5d793216a8cdb1d01d3faca0e1a025bdf12322",
+      "git_blob_sha": "efe01a0351e3e7abc1a49ea16ac5ebec5f443948"
+    },
+    "results/wm/visual-v5_8-20261010/spatial/figures/all_arms_dx_rmse.png": {
+      "bytes": 38264,
+      "sha256": "307e5f56f50a2dc6f9c0d26f5656b368b0204ef91b3d51902e0407fba2028e30",
+      "git_blob_sha": "16c5ff37e251c30a2a4e6a3e05ea7f0c27fb1391"
+    },
+    "results/wm/visual-v5_8-20261010/spatial/figures/all_arms_dx_rmse.svg": {
+      "bytes": 40441,
+      "sha256": "d8e65fd8c89aa042cb8f9ccfec4e578c58c26b9277d338179c5cf97894632a92",
+      "git_blob_sha": "bc7d4ea86808dbcdc52c44348f58b752989ffd53"
+    },
+    "results/wm/visual-v5_8-20261010/spatial/figures/case_761_1_costs.png": {
+      "bytes": 106368,
+      "sha256": "fa693a4de0dfb369c52bc2aa58a26561a8208f0d00a61de37d7814385523b55f",
+      "git_blob_sha": "dd1bd9e1900c1683617dd202300fc3308434af02"
+    },
+    "results/wm/visual-v5_8-20261010/spatial/figures/case_761_1_costs.svg": {
+      "bytes": 143389,
+      "sha256": "5b67effb9b820ec692433111d72e2fc529de883abbb79a4bcac90f46542eb17d",
+      "git_blob_sha": "8e5d487bee3500121553d4041d05842bcc91322a"
+    },
+    "results/wm/visual-v5_8-20261010/spatial/figures/case_761_1_predictions.png": {
+      "bytes": 51741,
+      "sha256": "9703521a84aac9341dec9104012882de999148e37da163d1a38cc231105cf8b9",
+      "git_blob_sha": "975d1a8bba54fc3828137142e95a0fca22418a0b"
+    },
+    "results/wm/visual-v5_8-20261010/spatial/figures/case_761_1_predictions.svg": {
+      "bytes": 53831,
+      "sha256": "18744308f7c645e0bb6e3c939a65de9ed2b5de4291eeecd61beb0b3d16316237",
+      "git_blob_sha": "2d2a211d9e35dd702002a2ce7f67e20ad5910a7a"
+    },
+    "results/wm/visual-v5_8-20261010/spatial/figures/case_844_1_costs.png": {
+      "bytes": 105768,
+      "sha256": "b454c7961d047c93ac066d1f64efaee0484f9c73a29874df709fba6e001e83cd",
+      "git_blob_sha": "1d809829999e35de5c5f211a86ba0e3cdfd8063d"
+    },
+    "results/wm/visual-v5_8-20261010/spatial/figures/case_844_1_costs.svg": {
+      "bytes": 144007,
+      "sha256": "a69eb42f70b638710b4bb0aad1e50f292d00c6f2306fce8662401b8373edc3d3",
+      "git_blob_sha": "6286aa9fea97c45d86fdac20c2bd3aade5455579"
+    },
+    "results/wm/visual-v5_8-20261010/spatial/figures/case_844_1_predictions.png": {
+      "bytes": 52042,
+      "sha256": "9018b77369ff89663d8e3c98c9bd92d7fce6d1d73d0331960ccec56be6d044ca",
+      "git_blob_sha": "53c1847cd6aff2037e7682ae221537690b69c3c2"
+    },
+    "results/wm/visual-v5_8-20261010/spatial/figures/case_844_1_predictions.svg": {
+      "bytes": 54526,
+      "sha256": "02ce6f34091d6505973767b280f4d315b2d0384051e788df5faa0b444f8900b6",
+      "git_blob_sha": "7f60a7c61410e9f07a5a831d6328cde25335031c"
+    },
+    "results/wm/visual-v5_8-20261010/spatial/figures/case_891_1_costs.png": {
+      "bytes": 106667,
+      "sha256": "4e782d8517ad6c59396b7cfe9766d808548159a5dc5f1063bb05485f012aafef",
+      "git_blob_sha": "24b6d21b896fdb7d0bec4df49e937473cfb3903a"
+    },
+    "results/wm/visual-v5_8-20261010/spatial/figures/case_891_1_costs.svg": {
+      "bytes": 145561,
+      "sha256": "0abc30440fc6a34e3f8ff63119bb5344b9ecf7e27a7a703d98cdbc45dd7d4552",
+      "git_blob_sha": "2d30011b59f0d0082e6e188f971b2c4130e1be17"
+    },
+    "results/wm/visual-v5_8-20261010/spatial/figures/case_891_1_predictions.png": {
+      "bytes": 52127,
+      "sha256": "8e4966afd2e804117eec7889e1244373c70b631784e4c05474163f0e4610c2cd",
+      "git_blob_sha": "0eae1514410425bc6ebea9be3976fef4d464bce0"
+    },
+    "results/wm/visual-v5_8-20261010/spatial/figures/case_891_1_predictions.svg": {
+      "bytes": 55150,
+      "sha256": "ef0a54da0e17fdbc740f1170b94132672a3ae90d4a296efaabb7e0d63cb076ff",
+      "git_blob_sha": "ebfcb31b62c9d7ec48573985be4087ae28ed0e01"
+    },
+    "results/wm/visual-v5_8-20261010/spatial/fixed_cases.json": {
+      "bytes": 1958,
+      "sha256": "3e9adc70e39719b61d70e709a9b7bb4fbaf350976fb2c38a018699261b601ead",
+      "git_blob_sha": "315fb85daf5da451a444a031435a0ab73d412d45"
+    },
+    "results/wm/visual-v5_8-20261010/spatial/per_episode_object.csv": {
+      "bytes": 1919507,
+      "sha256": "811365e249e6fa5403ef2db84819af982efbb3db0b5db2d5a8122e0cfc1ad432",
+      "git_blob_sha": "d874c601d5abf9c9f62da758e85dd7e0b059a0d2"
+    },
+    "results/wm/visual-v5_8-20261010/spatial/report.json": {
+      "bytes": 132857,
+      "sha256": "d99d563eac4aa3eef7644b9978f999692fef8be03cfeb86299098ff999f00747",
+      "git_blob_sha": "d1d66045d68dd8769b32a5d737302aa9e95141d6"
+    },
+    "results/wm/visual-v5_8-20261010/spatial/source_rgb_records.json": {
+      "bytes": 219651,
+      "sha256": "8d7859c9c087eddbe30ba65ec61631d03453e3bbd507eb1492bb692d304a8ef9",
+      "git_blob_sha": "e24991e096a5907610e50bba64661528262618a6"
+    },
+    "results/wm/visual-v5_8-20261010/spatial_pytest.log": {
+      "bytes": 6570,
+      "sha256": "fad129a4245dd075e3e816cbf5469e10bb67e6c65ab667929393877b852dedea",
+      "git_blob_sha": "db4b9ee2d747c6b2bd3177a4b2afb3bdb4201d94"
+    },
+    "results/wm/visual-v5_8-20261010/spatial_result_review.json": {
+      "bytes": 34031,
+      "sha256": "c433af3dba0bd0d3ca5e85fe74fd1ee834cdfd75877871faadd85d19998c00da",
+      "git_blob_sha": "04cc8ef3271b71ad35e1cb049583dedf889610db"
+    },
+    "results/wm/visual-v5_8-20261010/spatial_run.log": {
+      "bytes": 3289,
+      "sha256": "ac053256bcd6e36a177d3a63cda808bb6b81fed05fe0de7a4a1ef8742fffd40e",
+      "git_blob_sha": "57e3dc9febd0778f9f7af3dfe82307dfaa1cb879"
+    },
+    "results/wm/visual-v5_8-20261010/spatial_self_test.log": {
+      "bytes": 16440,
+      "sha256": "3dd4fa3d9e68bf727adc4b1e7d3abad7af6e5ff89fd77d4b3086205b0e96bfd7",
+      "git_blob_sha": "aff008e8edbaa7268a816d3522c4395983a514fb"
+    },
+    "results/wm/visual-v5_8-20261010/spatial_software_review.json": {
+      "bytes": 4758,
+      "sha256": "33236c9f735235feaa36eea4545a9f14e3df54c951aa43e9860b5c4b0936399f",
+      "git_blob_sha": "22ffde017edb999187bf7768b17ccae70008f091"
+    },
+    "results/wm/visual-v5_8-20261010/spatial_software_review.log": {
+      "bytes": 5103,
+      "sha256": "f504ced31926a8ed95937074bc44df4e0192b85f74b2cf9a0a10c49796e17bc2",
+      "git_blob_sha": "1276a62a9ba4f61dba6cac450d8e56979c606f3e"
+    },
+    "results/wm/visual-v5_8-20261010/spatial_software_review_logged.json": {
+      "bytes": 4758,
+      "sha256": "5f8b53f530694c8a338ddca308204b5b9a0382eae625491b9f63df86065c2434",
+      "git_blob_sha": "6d56e45a64754b81bec804011839d2b705e59693"
+    },
+    "results/wm/visual-v5_8-20261010/web_review.md": {
+      "bytes": 1586,
+      "sha256": "552c5a8bdf3d9790e088555a659fdc8d7a081d619d4d4fa7a1b3ee70c6d85b48",
+      "git_blob_sha": "5a5018843de20362e0afe8a4a88f60ad1ce625e6"
+    }
+  },
+  "release_url": "https://github.com/XintongYang1010/predictive-memory-lab/releases/tag/visual-v5_8-20261010",
+  "new_remote_roots": [],
+  "new_slurm_steps": [],
+  "cleanup": "not_applicable_no_remote_root_created"
+}

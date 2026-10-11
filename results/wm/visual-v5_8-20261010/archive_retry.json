@@ -1,0 +1,9 @@
+{
+  "status": "retry_after_upload_completed",
+  "reason": "First download began before asynchronous archive upload completed; metadata companion existed but archive asset was not yet present. No hash mismatch occurred.",
+  "first_attempt_retained": "github-readback-before-upload-complete/",
+  "first_log_retained": "verification-before-upload-complete.log",
+  "upload_subsequently_completed": true,
+  "retry_unix": 1791679921.641351,
+  "scientific_files_changed": false
+}
