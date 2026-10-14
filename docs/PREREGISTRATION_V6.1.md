@@ -70,7 +70,7 @@
 
 | 事项 | 为什么 |
 |---|---|
-| 读 World-T3 全文（arXiv 2610.17434 / OpenReview 515W3FqYxm），确认它没有似然比或变化触发的门，只有位姿 key 和遗忘因子 | 决定新意主张能否成立 |
+| 读 World-T3 全文（arXiv 2610.17434 / OpenReview 515W3FqYxm），确认附录里也没有遗忘因子、重置或变化触发的门。2026-10-14 已核到项目页源码（github.com/adreamwu/World-T3 @1b6000b, `static/js/ttt-anim.js`）：写入是全协方差加权 RLS，$g=P\phi/(w^{-1}+\phi^\top P\phi)$，$W_2\mathrel{+}=(v-W_2\phi)g^\top$，$P\mathrel{-}=g\phi^\top P$；没有 λ、没有重置；key 只用位姿；评测是静态场景的往返重访。即 A6 族的“永不遗忘”端点。正文仍待核 | 决定新意主张能否成立 |
 | 检索 ICLR 2027 投稿池："Bayes factor"、"change-point"、"hazard"、"surprise" + "delta rule"、"VSI-SUPER"、"Cambrian-S" | 目录只覆盖含 "world model" 短语的投稿 |
 | 查 Liakoni 2021、MOCA、2511.16655 的被引列表 | 引用者最可能先做了这个组合 |
 | 确认 VSC 校准源（10 个视频退路，或另找与 VSI-SUPER 不相交的校准流） | 协议选择 |
