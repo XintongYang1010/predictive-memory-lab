@@ -1,178 +1,326 @@
-"""World registry, train pools and numpy -> torch conversion.
+"""Evaluation conditions, L1 perturbations and transition tensors (numpy only).
 
-World strings select a generator plus overrides, e.g. ``l0_sched``,
-``l0_ctrl:rho=0.5,n_objects=8``.  Synthetic train data are drawn from a pool
-of fresh episodes that is regenerated every ``refresh`` steps (an effectively
-unbounded stream); dev/test sets are fixed seeds in separate namespaces.
+A *transition* t predicts frame j = t + 1 of a frame sequence from frame j-1:
+
+  L0/L1  z_in = [pose_{j-1}, pose_j, onehot(action_j), o_{j-1} * y_{j-1}, o_{j-1}]
+         value y_j, mask o_j, oracle key = (cell, octant) of pose_j
+  R      z_in = [x_{j-1}, onehot(action_j)], value x_j (no mask)
+
+The pose of the frame being predicted is an input (ground-truth odometry):
+the memory stores *what is where*, never integrates the path.
+
+Conditions (frame sequences, t_s = 400):
+  STATIC   A[0:1001]                       unspliced; STAT window, probes, FA
+  CONT     A[0:800]                        reference
+  EXACT    A[0:400] + A[0:400]             familiar: protect
+  NEWPATH  A[0:400] + A[600:1000]          same world, new start: protect what was seen
+  CHANGE   A[0:400] + B[600:1000]          different world: reset conflicting keys
+  MOVE     A[0:1001], one hidden object moved at t_m (L1 only)
+The teleport transition into frame t_s is neither written nor scored.
 """
 from __future__ import annotations
 
-import hashlib
-from dataclasses import replace
+import json
+from pathlib import Path
 
 import numpy as np
 
-from . import worlds_l0
-from .geometry import Geometry
-from .worlds_l0 import L0Config
+from . import maze as M
+from . import prereg
 
-TRAIN_T = 64
-
-L0_WORLDS = {
-    # FloWM MNIST-World spec, natural hide/reveal from the moving window
-    "l0_main": dict(visibility="window"),
-    # static camera, per-object occlusion schedules (clean H1/H2/H4 world)
-    "l0_sched": dict(visibility="schedule"),
-    # schedule world with unexpected hidden changes (H3/H5)
-    "l0_ctrl": dict(visibility="schedule", p_change=0.5),
-    # window world with a small hidden-change hazard
-    "l0_window_ctrl": dict(visibility="window", p_change=0.02),
-    # lights-off world for MemoryGain
-    "l0_blackout": dict(visibility="blackout", blackout_start=8, blackout_len=32),
-    # per-episode velocity rotation/damping (H6)
-    "l0_drift": dict(visibility="schedule", continuous=True, omega_max=0.15, gamma_max=0.03),
-    # counting tours (H5): static objects, k identical copies
-    "l0_tour_static": dict(visibility="tour", static_objects=True),
-    "l0_tour_dynamic": dict(visibility="tour"),
-}
-
-INT_KEYS = {"n_objects", "world", "window", "vel_max", "ego_max", "appearance_dim", "copies",
-            "blackout_start", "blackout_len", "tour_speed", "tour_row"}
-FLOAT_KEYS = {"rho", "obs_noise", "p_change", "teleport_frac", "omega_max", "gamma_max", "hidden_scale"}
-BOOL_KEYS = {"static_objects", "continuous", "allow_zero_velocity"}
+CONDITIONS = ("STATIC", "CONT", "EXACT", "NEWPATH", "CHANGE", "MOVE")
+N_ACT = 6
 
 
-def parse_world(spec: str):
-    name, _, rest = spec.partition(":")
-    over = {}
-    for item in filter(None, rest.split(",")):
-        k, _, v = item.partition("=")
-        if k in INT_KEYS:
-            over[k] = int(v)
-        elif k in FLOAT_KEYS:
-            over[k] = float(v)
-        elif k in BOOL_KEYS:
-            over[k] = v.lower() in ("1", "true", "yes")
-        elif k in ("blind_after", "frame"):
-            over[k] = v
-        else:
-            raise ValueError(f"unknown world override {k!r}")
-    return name, over
+def _seed(*parts):
+    return M.sha1_int("/".join(str(p) for p in parts)) % (2 ** 63)
 
 
-def stable_seed(*parts) -> int:
-    h = hashlib.sha256("/".join(map(str, parts)).encode()).digest()
-    return int.from_bytes(h[:4], "little")
+class Store:
+    """Memory-mapped token cache of one split."""
+
+    KEYS = ("y", "o", "pose", "act", "key", "vis", "tvec", "pos", "dir", "layout", "tpos")
+
+    def __init__(self, cache, split):
+        d = Path(cache) / split
+        self.dir = d
+        self.meta = json.loads((d / "meta.json").read_text())
+        self.ids = json.loads((d / "ids.json").read_text())
+        self.ok = np.load(d / "ok.npy")
+        self.a = {k: np.load(d / f"{k}.npy", mmap_mode="r") for k in self.KEYS}
+        self.S, self.G, self.D = self.meta["S"], self.meta["G"], self.meta["D"]
+        self.conv = self.meta["calibration"]["axis_convention"]
+        self.fov = float(self.meta["calibration"]["fov_deg"])
+        self.max_dist = float(self.meta["calibration"]["max_dist"])
+        self.order = np.flatnonzero(self.ok)
+        feat = d / "rfeat.npy"
+        self.rfeat = np.load(feat, mmap_mode="r") if feat.exists() else None
+
+    def __len__(self):
+        return len(self.order)
+
+    def episode(self, i):
+        e = {k: np.asarray(self.a[k][i]) for k in self.KEYS}
+        e["y"] = e["y"].astype(np.float32)
+        if self.rfeat is not None:
+            e["x"] = np.asarray(self.rfeat[i], dtype=np.float32)
+        e["eid"] = self.ids[i]
+        return e
 
 
-def l0_config(spec: str, T: int = TRAIN_T, scale_hidden=True) -> tuple[L0Config, dict]:
-    name, over = parse_world(spec)
-    if name not in L0_WORLDS:
-        raise ValueError(f"unknown L0 world {name!r}")
-    extra = {k: over.pop(k) for k in ("blind_after", "frame") if k in over}
-    kw = dict(L0_WORLDS[name])
-    kw.update(over)
-    cfg = L0Config(**kw)
-    if scale_hidden and cfg.visibility == "schedule" and "hidden_scale" not in over:
-        cfg = replace(cfg, hidden_scale=max(1.0, T / TRAIN_T))
-    return cfg, extra
+# ------------------------------------------------------------- planning
+def plan(store, cond, n_items, salt="dev"):
+    """Deterministic item specs; pairs A with the next episode for CHANGE."""
+    order = list(store.order)
+    specs = []
+    if cond == "MOVE":
+        for i in order:
+            mv = _plan_move(store, i, salt)
+            if mv is not None:
+                specs.append({"cond": cond, "A": int(i), **mv})
+            if len(specs) >= n_items:
+                break
+        return specs
+    for k, i in enumerate(order[:n_items]):
+        s = {"cond": cond, "A": int(i)}
+        if cond == "CHANGE":
+            s["B"] = int(order[(k + 1) % len(order)])
+        specs.append(s)
+    return specs
 
 
-def make_l0(spec: str, n: int, T: int, seed: int, scale_hidden=True) -> dict:
-    cfg, extra = l0_config(spec, T, scale_hidden)
-    if cfg.visibility == "tour":
-        data = worlds_l0.generate(cfg, n, T, seed)
-    else:
-        data = worlds_l0.generate(cfg, n, T, seed)
-    if "blind_after" in extra:  # FloWM protocol: context then fully unobserved rollout
-        k = int(extra["blind_after"])
-        data["vis"][:, k:] = False
-        data["obs"][:, k:] = 0.0
-        data["reveal_changed"][:, k:] = False
-    if extra.get("frame") == "ego":
-        data = worlds_l0.to_ego_frame(data)
-    data["meta"]["spec"] = spec
-    return data
+def _plan_move(store, i, salt):
+    cfg = prereg.L1
+    vis = np.asarray(store.a["vis"][i])
+    lay = np.asarray(store.a["layout"][i])
+    tpos = np.asarray(store.a["tpos"][i])
+    rng = np.random.default_rng(_seed("move", store.ids[i], salt))
+    lo, hi = cfg["move_window"]
+    cands = []
+    for g in range(vis.shape[1]):
+        for tm in range(lo, hi + 1):
+            if not vis[tm - cfg["move_hidden_before"]:tm].any() and not vis[tm:tm + cfg["move_hidden_after"]].any():
+                cands.append((g, tm))
+    if not cands:
+        return None
+    g, tm = cands[rng.integers(len(cands))]
+    D = M.bfs_all(lay)
+    S = lay.shape[0]
+    c0 = np.clip(M.cell_of(tpos[g]), 0, S - 1)
+    src = c0[1] * S + c0[0]
+    free = [s for s in range(S * S) if np.isfinite(D[src, s]) and D[src, s] >= cfg["move_min_bfs"]]
+    occupied = {int(np.floor(p[1])) * S + int(np.floor(p[0])) for p in tpos}
+    free = [s for s in free if s not in occupied]
+    if not free:
+        return None
+    dst = free[rng.integers(len(free))]
+    new = np.array([dst % S + 0.5, dst // S + 0.5])
+    return {"g": int(g), "tm": int(tm), "new": new.tolist()}
 
 
-def make_world(spec: str, n: int, T: int, seed: int, cache=None) -> dict:
-    """Dispatch on world family.  L1 and real worlds read prepared caches."""
-    if spec.startswith("l0_"):
-        return make_l0(spec, n, T, seed)
-    if spec.startswith("l1"):
-        from .worlds_l1 import load_l1
-        return load_l1(spec, n, T, seed, cache)
-    if spec.startswith("real_"):
-        from .worlds_real import load_real
-        return load_real(spec, n, T, seed, cache)
-    raise ValueError(spec)
+# ----------------------------------------------------------- perturbation
+def apply_move(ep, spec, conv, fov, max_dist):
+    """Move object g to ``new`` from frame tm on; recompute its egocentric
+    vector, visibility and value/mask entries.  Returns reveal frame or None."""
+    g, tm, new = spec["g"], spec["tm"], np.asarray(spec["new"])
+    pos, d, lay = ep["pos"].astype(np.float64), ep["dir"].astype(np.float64), ep["layout"]
+    tv = M.egocentric(new[None] - pos[tm:], d[tm:], conv)
+    vis = M.object_visibility(lay, pos[tm:], d[tm:], new[None], tv[:, None], conv, fov, max_dist)[:, 0]
+    ep["tvec"] = ep["tvec"].copy()
+    ep["vis"] = ep["vis"].copy()
+    ep["tvec"][tm:, g] = tv
+    ep["vis"][tm:, g] = vis
+    b = M.N_GRID + 3 * g
+    ep["y"] = ep["y"].copy()
+    ep["o"] = ep["o"].copy()
+    ep["y"][tm:, b] = vis
+    ep["y"][tm:, b + 1:b + 3] = np.where(vis[:, None], tv, 0.0)
+    ep["o"][tm:, b + 1:b + 3] = vis[:, None]
+    seen = np.flatnonzero(vis)
+    return int(tm + seen[0]) if len(seen) else None
 
 
-def geometry_of(data) -> Geometry:
-    return Geometry.from_dict(data["meta"]["geometry"])
-
-
-def n_objects_of(data) -> int:
-    return data["vis"].shape[2]
-
-
-def concat(datas):
-    out = {}
-    for k in datas[0]:
-        if k == "meta":
-            out[k] = datas[0][k]
-        elif isinstance(datas[0][k], np.ndarray):
-            out[k] = np.concatenate([d[k] for d in datas], 0)
-        else:
-            out[k] = datas[0][k]
+def perturb_l1(ep, rng, sigma_vec, S, conv, fov, flicker_g=None):
+    """Observation-space noise (L1).  ``sigma_vec`` [G,2] raw-unit noise s.d.
+    of the object-vector dims; pose noise only enters the inputs."""
+    cfg = prereg.L1
+    T, G = ep["vis"].shape
+    y, o = ep["y"].copy(), ep["o"].copy()
+    vis = ep["vis"].copy()
+    drop = vis & (rng.random((T, G)) < cfg["vis_dropout"])
+    fp = (~vis) & (rng.random((T, G)) < cfg["vis_false_pos"])
+    for g in range(G):
+        b = M.N_GRID + 3 * g
+        v = vis[:, g] & ~drop[:, g]
+        noise = rng.normal(0.0, 1.0, (T, 2)) * sigma_vec[g]
+        vec = ep["tvec"][:, g] + noise
+        if flicker_g is not None and g == flicker_g:
+            vec = vec + rng.normal(0.0, 1.0, (T, 2)) * np.sqrt(cfg["flicker_var"]) * sigma_vec[g] \
+                / np.sqrt(cfg["obs_noise_frac"] / (1 - cfg["obs_noise_frac"]))
+        ang = rng.uniform(-np.deg2rad(fov) / 2, np.deg2rad(fov) / 2, T)
+        dist = rng.uniform(0.5, 4.0, T)
+        i_lat, i_fwd, _ = M.AXIS_CANDIDATES[conv]
+        junk = np.zeros((T, 2))
+        junk[:, i_lat], junk[:, i_fwd] = dist * np.sin(ang), dist * np.cos(ang)
+        f = fp[:, g]
+        shown = v | f
+        y[:, b] = shown
+        y[:, b + 1:b + 3] = np.where(v[:, None], vec, np.where(f[:, None], junk, 0.0))
+        o[:, b + 1:b + 3] = shown[:, None]
+    pose = ep["pose"].copy()
+    pose[:, :2] += rng.normal(0.0, cfg["pose_noise_cells"] * 2.0 / S, (T, 2))
+    a = np.arctan2(pose[:, 3], pose[:, 2]) + rng.normal(0.0, cfg["dir_noise_rad"], T)
+    pose[:, 2], pose[:, 3] = np.cos(a), np.sin(a)
+    out = dict(ep)
+    out.update(y=y.astype(np.float32), o=o, pose_in=pose, shown=y[:, M.N_GRID::3] > 0.5)
     return out
 
 
-# ----------------------------------------------------------------- torch
-def to_tbatch(data: dict, device, dtype=None):
-    import torch
-    from .memories import TBatch
-    dtype = dtype or torch.float32
-    geom = geometry_of(data)
-    frame = data["meta"].get("frame", "allo")
-    vis = data["vis"].astype(bool)
-    if frame == "ego":
-        # ego observations are window-relative world units on the torus
-        obs = np.where(vis[..., None], data["obs"] / geom.period, 0.0)
+# ------------------------------------------------------------ transitions
+def _onehot(a):
+    out = np.zeros(a.shape + (N_ACT,), dtype=np.float32)
+    np.put_along_axis(out, a[..., None].astype(np.int64), 1.0, -1)
+    return out
+
+
+def frames_to_transitions(fr, kind):
+    """fr: dict of frame arrays [L, ...] (already concatenated).  Returns the
+    transition arrays [L-1, ...]."""
+    if kind in ("r", "rpose"):
+        x = fr["x"]
+        zin = np.concatenate([x[:-1], _onehot(fr["act"][1:])], -1)
+        y = x[1:]
+        o = np.ones_like(y, dtype=bool)
     else:
-        obs = np.where(vis[..., None], geom.normalize(data["obs"]), 0.0)
-    if geom.kind == "torus":
-        obs = np.mod(obs, 1.0)
-    u = geom.normalize_vector(data["u"]) if geom.kind != "box" else data["u"] / geom.unit
-    t = lambda x: torch.as_tensor(np.ascontiguousarray(x), dtype=dtype, device=device)
-    fov, window = None, 1.0
-    cfg = data["meta"].get("config", {})
-    if geom.kind == "torus" and cfg.get("visibility") in ("window", "tour"):
-        fov, window = t(data["ego"] / geom.period), cfg["window"] / cfg["world"]
-    drift = t(data["drift"]) if "drift" in data else None
-    return TBatch(app=t(data["app"]), obs=t(obs), vis=t(vis.astype(np.float32)), u=t(u),
-                  dt=t(data["dt"]), kind=geom.kind, frame=frame, fov=fov, window=window, drift=drift)
+        pose_in = fr.get("pose_in", fr["pose"])
+        yo = fr["y"] * fr["o"]
+        zin = np.concatenate([pose_in[:-1], pose_in[1:], _onehot(fr["act"][1:]), yo[:-1],
+                              fr["o"][:-1].astype(np.float32)], -1)
+        y, o = fr["y"][1:], fr["o"][1:]
+    out = {"zin": zin.astype(np.float32), "y": y.astype(np.float32), "o": o.astype(bool),
+           "key": fr["key"][1:].astype(np.int64)}
+    if kind == "rpose":
+        out["zkey"] = np.concatenate([fr["pose"][:-1], fr["pose"][1:], _onehot(fr["act"][1:])], -1)
+    return out
 
 
-class TrainPool:
-    """Pool of fresh training episodes, regenerated every ``refresh`` steps."""
+def _concat(segs):
+    keys = segs[0].keys()
+    return {k: np.concatenate([s[k] for s in segs], 0) for k in keys}
 
-    def __init__(self, spec, T=TRAIN_T, size=16384, refresh=5000, seed=0, cache=None):
-        self.spec, self.T, self.size, self.refresh, self.seed, self.cache = spec, T, size, refresh, seed, cache
-        self.generation, self.rng = -1, np.random.default_rng(seed)
-        self.data = None
 
-    def _regen(self, step):
-        g = step // self.refresh
-        if g != self.generation:
-            chunks, per = [], 2048
-            for c in range(0, self.size, per):
-                s = stable_seed("train", self.spec, self.seed, g, c)
-                chunks.append(make_world(self.spec, min(per, self.size - c), self.T, s, self.cache))
-            self.data = concat(chunks)
-            self.generation = g
+FRAME_KEYS = ("y", "o", "pose", "act", "key", "vis", "tvec", "pos", "dir")
 
-    def sample(self, step, batch):
-        self._regen(step)
-        idx = self.rng.integers(0, len(self.data["vis"]), batch)
-        return {k: (v[idx] if isinstance(v, np.ndarray) else v) for k, v in self.data.items()}
+
+def _frames(ep, sl, extra=()):
+    d = {k: ep[k][sl] for k in FRAME_KEYS + tuple(extra) if k in ep}
+    return d
+
+
+def build_item(store, spec, track, rng_salt="dev", sigma_vec=None, sbar_inj=0.0, item_uid=None,
+               want_revisits=True):
+    """Numpy arrays for one evaluation item.
+
+    track: dict(kind in {'l0','l1','r','rpose'}).  Returns transitions plus
+    scoring metadata: w (write flag), ts, tm/tr/g (MOVE), flicker, vis/tvec of
+    targets, eps (residual-space noise for T0/T1)."""
+    kind = track["kind"]
+    cond = spec["cond"]
+    uid = item_uid or f"{cond}/{store.ids[spec['A']]}/{spec.get('B', '')}/{rng_salt}"
+    A = store.episode(spec["A"])
+    extra = ("x",) if kind in ("r", "rpose") else ()
+    ts = prereg.DATA["splice_ts"]
+    meta = {"uid": uid, "cond": cond, "A": store.ids[spec["A"]], "ts": None}
+    if kind == "l1":
+        G = store.G
+        rng0 = np.random.default_rng(_seed("flicker", store.ids[spec["A"]]))
+        meta["flicker"] = int(rng0.integers(G))
+    move_tr = None
+    if cond == "MOVE":
+        move_tr = apply_move(A, spec, store.conv, store.fov, store.max_dist)
+        meta.update(g=spec["g"], tm=spec["tm"], tr=move_tr)
+
+    def seg(ep, sl, segno):
+        fr = _frames(ep, sl, extra)
+        if kind == "l1":
+            rng = np.random.default_rng(_seed("l1", uid, segno))
+            p = perturb_l1({**fr, "tvec": fr["tvec"]}, rng, sigma_vec, store.S, store.conv, store.fov,
+                           meta.get("flicker"))
+            fr.update(y=p["y"], o=p["o"], pose_in=p["pose_in"])
+            fr["shown"] = p["shown"]
+        return fr
+
+    if cond in ("STATIC", "MOVE"):
+        segs = [seg(A, slice(0, 1001), 0)]
+    elif cond == "CONT":
+        segs = [seg(A, slice(0, 800), 0)]
+    elif cond == "EXACT":
+        segs = [seg(A, slice(0, ts), 0), seg(A, slice(0, ts), 1)]
+    elif cond == "NEWPATH":
+        segs = [seg(A, slice(0, ts), 0), seg(A, slice(600, 1000), 1)]
+    elif cond == "CHANGE":
+        B = store.episode(spec["B"])
+        meta["B"] = store.ids[spec["B"]]
+        segs = [seg(A, slice(0, ts), 0), seg(B, slice(600, 1000), 1)]
+    else:
+        raise ValueError(cond)
+    fr = _concat(segs)
+    tr = frames_to_transitions(fr, kind)
+    L1 = len(tr["y"])
+    w = np.ones(L1, dtype=np.float32)
+    if len(segs) == 2:
+        w[ts - 1] = 0.0           # teleport into frame ts: no write, no score
+        meta["ts"] = ts - 1       # transition index of the splice
+    tr["w"] = w
+    tr["vis"] = fr["vis"][1:]
+    tr["tvec"] = fr["tvec"][1:]
+    if "shown" in fr:
+        tr["shown"] = fr["shown"][1:]
+    tr["pos"] = fr["pos"][1:]
+    tr["dir"] = fr["dir"][1:]
+    if sbar_inj > 0:
+        rng = np.random.default_rng(_seed("eps", uid))
+        tr["eps"] = rng.standard_normal(tr["y"].shape).astype(np.float32)
+    if cond == "STATIC" and want_revisits:
+        meta["revisits"] = M.revisit_events(A["pos"], A["dir"], A["layout"], prereg.DATA["revisit_min_gap"],
+                                            prereg.DATA["revisit_min_bfs"], prereg.DATA["view_revisit_cos"])
+    tr["meta"] = meta
+    return tr
+
+
+def stack_items(items):
+    keys = [k for k in items[0] if k != "meta"]
+    out = {k: np.stack([it[k] for it in items]) for k in keys}
+    out["meta"] = [it["meta"] for it in items]
+    return out
+
+
+def train_windows(store, rng, batch, kind, length=1000, sigma_vec=None):
+    """Random unspliced train windows for fitting (f_theta, phi, gates)."""
+    items = []
+    for _ in range(batch):
+        i = int(store.order[rng.integers(len(store.order))])
+        uid = f"train/{store.ids[i]}/{rng.integers(2**31)}"
+        tr = build_item(store, {"cond": "STATIC", "A": i}, {"kind": kind}, sigma_vec=sigma_vec, item_uid=uid,
+                        want_revisits=False)
+        if length < len(tr["y"]):
+            s = int(rng.integers(0, len(tr["y"]) - length + 1))
+            tr = {k: (v[s:s + length] if k != "meta" else v) for k, v in tr.items()}
+        items.append(tr)
+    return stack_items(items)
+
+
+def train_spliced(store, rng, batch, kind, sigma_vec=None):
+    """A2+ training mixture EXACT : NEWPATH : CHANGE : unspliced = 1:1:1:1,
+    all from the train split (dev/test never used for fitting)."""
+    items = []
+    n = len(store.order)
+    for b in range(batch):
+        cond = ("EXACT", "NEWPATH", "CHANGE", "CONT")[b % 4]
+        i = int(store.order[rng.integers(n)])
+        spec = {"cond": cond, "A": i}
+        if cond == "CHANGE":
+            spec["B"] = int(store.order[rng.integers(n)])
+        items.append(build_item(store, spec, {"kind": kind}, sigma_vec=sigma_vec,
+                                item_uid=f"trainsplice/{b}/{rng.integers(2**31)}"))
+    return stack_items(items)

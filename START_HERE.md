@@ -1,9 +1,14 @@
-# 从这里开始：V6
+# 从这里开始：V6.1
 
-当前主线是 V6（预测式联想记忆，对象 token，无感知）。按顺序读：
-[AGENTS.md](AGENTS.md) → [docs/CODEX_V6_HANDOFF.md](docs/CODEX_V6_HANDOFF.md) →
-[docs/V6_PREDICTIVE_MEMORY.md](docs/V6_PREDICTIVE_MEMORY.md) → [docs/PREREGISTRATION_V6.md](docs/PREREGISTRATION_V6.md)。
-V6 尚无 GPU 结果；预注册阈值待用户确认后冻结。
+当前主线是 V6.1 BF-Delta：冻结世界模型为记忆算出遗忘门，在 Memory Maze 真值 token 与 VSC-Repeat 上检验，不涉及感知。
+
+阅读顺序：
+1. [AGENTS.md](AGENTS.md)
+2. [docs/CODEX_V6_HANDOFF.md](docs/CODEX_V6_HANDOFF.md)
+3. [docs/V6_BF_DELTA.md](docs/V6_BF_DELTA.md)
+4. [docs/PREREGISTRATION_V6.1.md](docs/PREREGISTRATION_V6.1.md)
+
+V6.1 尚无 GPU 结果。预注册状态为 approved-dev：S0–S6 可直接运行，FINAL 需用户确认。
 
 ---
 

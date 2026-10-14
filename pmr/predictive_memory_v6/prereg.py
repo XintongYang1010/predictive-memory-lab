@@ -1,49 +1,105 @@
-"""Pre-registered thresholds (mirror of docs/PREREGISTRATION_V6.md).
+"""V6.1 pre-registration (mirror of docs/PREREGISTRATION_V6.1.md).
 
-Status: PROPOSED.  They become binding when the user confirms them and the
-commit hash of this file is recorded in docs/PREREGISTRATION_V6.md (the
-runner refuses S2+ without ``--prereg-commit``).  After freezing: never lower
-a threshold, never re-seed to obtain a pass; a failed gate is first debugged
-as a possible implementation error, then reported as a finding.
+Status ``approved-dev``: the user approved running the development stages
+S0-S6 on 2026-10-14 ("研究完之后更新v6 ... 直接开始跑").  Thresholds below are
+binding for those stages from the commit that introduced this file.  FINAL
+(the only stage that opens Memory Maze test or scores VSC-Repeat) additionally
+needs the human checks listed in the pre-registration and an explicit
+``--final-ack`` from the user.
+
+Never lower a threshold or re-seed to obtain a pass (AGENTS.md rule 6).  A
+failed gate is first debugged as a possible bug, then reported as a finding.
+Changing anything here is a protocol change: new version, user approval.
 """
 
-STATUS = "proposed"
+STATUS = "approved-dev"
+VERSION = "6.1"
 
-# H1 protocol validity (L0, train length T=64, identifiable predictable hidden steps)
-H1 = {"ours_er_range": (0.85, 1.15), "ours_nhe_max": 0.30,
-      "pausing_variants": ("static_delta", "gdn", "gdn_neg", "fifo", "lact"), "pausing_er_max": 0.20,
-      "abandon_if": "gdn_neg or lact ER >= 0.8 at 9T"}
+RULES = {
+    "bootstrap_draws": 1000, "ci": 0.95, "unit": "episode (VSC: video)", "paired": True,
+    "pass_requires": "point estimate meets threshold AND paired CI on the correct side of 0",
+    # T1-T3: learned keys, 5 phi seeds, pass in >= 4.  T0: oracle keys, 3 noise
+    # levels x 3 noise seeds, pass at every level in >= 2 of 3 seeds.
+    "phi_seeds": 5, "phi_seed_pass_min": 4,
+    "learned_gate_seeds": 5,
+    "t0_noise_seeds": 3, "t0_noise_seed_pass_min": 2,
+}
 
-# H2 structure necessity / equivalence
-H2 = {"vo_er_max": 0.30, "frame_ci_contains_zero_at": (64, 192),
-      "tpa_nhe_ratio_at_T_max": 1.2, "tpa_nhe_ratio_at_9T_min": 2.0}
+DATA = {
+    "maze": "9x9",                     # primary; 15x15 is an optional FINAL replication
+    "dev_mod": 29,                     # dev = train files with int(sha1(basename)) % 29 == 0
+    "train_max_episodes": 12000,       # first N train files in sha1 order (bounds prep time/disk)
+    "splice_ts": 400, "post_len": 200, "stat_window": (500, 1000), "rev_window": 10,
+    "dev_items_per_condition": 500, "test_items_per_condition": 1000,
+    "fov_deg": 80.0,                   # dm_control jumping_ball_with_head.xml egocentric fovy
+    "revisit_min_gap": 50, "revisit_min_bfs": 2, "view_revisit_cos": 0.7,
+}
 
-# H3 correction and non-interference (l0_ctrl + change pairs)
-H3 = {"post3_vs_kf_max_ratio": 2.0, "never_recovered_max": 0.05, "lemma4_slope_tol": 0.20,
-      "interference_rel_max_at_low_rho": 0.10, "low_rho": 0.5}
+CALIB = {
+    "pi": 1e-3, "pi_robustness": (1e-4, 1e-2), "pi_vsc": 5e-3,
+    "sbar_grid": tuple(round(0.05 * i, 2) for i in range(1, 20)),
+    "t0_sbar_inj": (0.25, 0.5, 0.75), "t1_sbar_inj": 0.5,
+    "dk_grid": (64, 128, 256, 512), "dk_frac_of_oracle_gain": 0.80,
+    "ell_clip": 50.0, "n_max": None, "lambda_temper_fallback": "only if C1 fails (needs approval)",
+    "a1_beta0": (0.05, 0.1, 0.2, 0.4, 0.8, 1.0), "a6_lambda": (0.99, 0.999),
+    "mlii_train_episodes": 1000,
+}
 
-# H4 extrapolation and numerics
-H4 = {"ours_nhe_9T_over_T_max": 1.5, "recurrent_nhe_9T_over_T_min": 3.0, "fp64_replay_max_dev": 1e-3}
+L1 = {
+    # Observation-space perturbations.  The object-vector noise s.d. is set per
+    # dimension so that it makes up `obs_noise_frac` of the standardized
+    # residual variance of the clean (T1) slow model.
+    "obs_noise_frac": 0.5, "pose_noise_cells": 0.10, "dir_noise_rad": 0.05,
+    "vis_dropout": 0.05, "vis_false_pos": 0.01, "flicker_var": 4.0,
+    "move_window": (400, 600), "move_hidden_before": 50, "move_hidden_after": 20, "move_min_bfs": 3,
+}
 
-# H5 memory-aware surprise (Saining / Cambrian-S analogue)
-H5 = {"lfp_mra_drop_k3_min_frac": 0.50, "memory_mra_drop_k3_max_points": 0.10,
-      "auroc_ours_min": 0.90, "auroc_static_max": 0.75, "auroc_lfp_max": 0.65,
-      "f1_transfer_drop_max": 0.05, "narrow_if_auroc_gap_below": 0.05}
+TRAIN = {
+    "slow": {"hidden": 256, "steps": 20000, "batch": 4096, "lr": 1e-3, "wd": 1e-4},
+    "phi": {"hidden": 256, "steps": 10000, "batch": 32, "lr": 3e-4, "warmup": 500, "wd": 0.1,
+            "clip": 1.0, "chunk": 64, "window": 1000},
+    "gate": {"A2_steps": 2000, "A2P_steps": 2000, "A3A4_steps": 400, "batch": 32, "lr": 1e-3,
+             "tbptt": 250, "hidden": 64},
+    "probe": {"layers": 4, "hidden": 1024, "steps": 5000, "batch": 256, "lr": 3e-4, "eps": 1e-5,
+              "train_episodes": 1024, "states_per_episode": 20, "eval_episodes": 256, "eval_stride": 10},
+}
 
-# H6 (secondary) reveal-error TTT
-H6 = {"hidden_error_reduction_min": 0.30, "ttt_lrs": (0.1, 0.3, 1.0)}
+# H1 is judged on the global CHANGE split, where the natural member of the
+# BF-Delta family is the global form A8g: the local form A8 must pay one stale
+# error per old key on its first revisit, so nu_C(A8) < nu_C(A8g) by
+# construction (predicted analytically in docs/research/V6_1_FINAL_REVIEW.md
+# and confirmed on a synthetic one-hot world before any Memory Maze run:
+# A8g (0.88, 0.96), A8 (0.30, 1.00)).  A8 is reported; locality is H4.
+H1 = {"not_dominated": True, "nuR_margin_at_matched_nuC": 0.20, "a1bf_ge_a1_min_count": 5,
+      "a1bf_tie_tol": 0.01, "t0_nuC_min": 0.80, "t0_nuR_min": 0.80, "applies_to": "A8g"}
+H2 = {"nuC_gap_vs_A2_min": 0.30, "nuC_vs_A2plus_min_diff": -0.10, "nuR_vs_A2plus_min_diff": -0.10,
+      "applies_to": "better of A8, A8g (chosen on dev nu_C, reported)"}
+H3 = {"flicker_false_change_ratio_max": 0.50, "auroc_gap_vs_A4_min": 0.05}
+H4 = {"nuR_unch_gap_vs_A8g_min": 0.30, "moved_reveal_err_ratio_max": 1.10, "config": "single head"}
+H5 = {"walls_pts_tol": 1.0, "objmse_rel_tol": 0.10, "ref_arms": ("A1_best", "A6", "A2"),
+      "all_fast_beat_A0": True}
+H6 = {"repro_tol_mra": 2.0, "mra_rep_frac_of_own_base_min": 0.80, "mra_base_drop_max_pts": 5.0,
+      "median_pred_gt_N5_max": 1.30, "veto_rate_N0_max": 0.05, "key_overlap_max": 0.10,
+      "fam_auroc_exact_min": 0.90, "fam_auroc_phase_min": 0.80, "false_familiar_calib": 0.05,
+      "kill_if": "A9 equal-byte >= A8 on exact, phase-shift and reversed"}
 
-# L1 replication
-L1 = {"seeds_same_direction": 3}
+DIAG = {"C1_fa_per_episode_max": 1.0, "C2_sbar_tol": 0.05, "C4_soft_band": (0.05, 0.95),
+        "F1_key_overlap_max": 0.10, "aliasing_cos": 0.9}
 
-# H7 real-token validation (nuScenes primary, MOT direction only)
-H7 = {"ours_er_range": (0.8, 1.2), "ade_vs_cv_kf_max_ratio": 1.1, "gap_closure_min": 0.6,
-      "static_er_max": 0.2, "min_natural_events": 200}
+R_GATE = {"encoder": "dinov2_vits14", "image_px": 224, "crop_border_px": 2, "pca_dim": 64,
+          "pca_fit_frames": 1_000_000, "probe_mse_frac_of_const_max": 0.50,
+          "A0_next_latent_r2_min": 0.30, "runs": 1}
 
-# S0/S1 software gates
-GATES = {"kf_hidden_rmse_max": 1e-3, "mra_cases": {(10, 10): 1.0, (15, 10): 0.1, (10.5, 10): 1.0, (0, 10): 0.0},
-         "gdn_vs_fla_max_abs": 1e-5, "ttt_equivalence_max_abs": 1e-6, "overfit_ratio_max": 0.5,
-         "l1_depth_agreement_min": 0.95, "spectral_abscissa_max": 1e-6}
+GATES = {"s0_vis_agreement_min": 0.95, "overfit_ratio_max": 0.50, "unit_tol_fp64": 1e-6,
+         "gdn_vs_ref_max_abs": 1e-5, "chunk_vs_scan_max_abs": 1e-4, "profile_dev_max_factor": 2.0,
+         "mra_cases": {(10, 10): 1.0, (15, 10): 0.1, (10.5, 10): 1.0, (0, 10): 0.0},
+         "axis_fit_max_err_cells": 0.05}
 
-BUDGET_GPUH = {"S1": 2, "S2": 30, "S3": 8, "S4": 18, "S5": 35, "S6": 20, "S7": 6, "reserve": 25,
-               "first_decision_point": 40, "hard_cap": 160}
+BUDGET_GPUH = {"S1": 2, "S2": 4, "S3": 16, "S4": 8, "S5": 40, "S6": 6, "FINAL": 30, "reserve": 25,
+               "first_decision_point": 30, "hard_cap": 160}
+
+STAGE_ORDER = ("S0", "S1", "S2", "S3", "S4", "S5", "S6", "FINAL")
+
+
+def as_dict():
+    return {k: v for k, v in globals().items() if k.isupper() and not k.startswith("_")}

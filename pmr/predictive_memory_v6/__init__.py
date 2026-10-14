@@ -1,22 +1,16 @@
-"""V6: predictive associative memory for world models.
+"""V6.1: Bayes-factor gated fast-weight memory for world models (BF-Delta).
 
-One recurrence per step, studied on object tokens only (no perception):
+A frozen memoryless predictor f_theta (the role of Cambrian-S's LFP head) is
+the prior; a test-time delta-rule fast weight S on its standardized residual is
+the belief; the signed log Bayes factor between the two computes, in closed
+form, the decay gate 1 - P(change) and the write gate (Kalman gain) that Gated
+DeltaNet otherwise learns.  Studied on Memory Maze ground-truth tokens (L0),
+perturbed tokens (L1), frozen DINOv2 features (R) and, once, on Cambrian-S
+VSC-Repeat counting.
 
-* predict  -- evolve every stored content on the VALUE side with a learned,
-              action/dt-conditioned linear generator that contains a shear
-              (position += velocity * dt): ``S <- expm(dt * L(u)) S``;
-* compare  -- residual between an observed token and the memory's own
-              pre-write prediction; the same residual is the surprise signal;
-* correct  -- delta-rule write of that residual, ``S <- S + beta G J^T e k^T``,
-              which is one preconditioned TTT/SGD step on the memory's own
-              observation-prediction loss.
-
-The package is split so that everything except the learned memories runs on
-numpy only (world generators, references, metrics, loaders, surprise logic).
-Torch is imported lazily by ``memories``, ``train`` and ``evaluate``.
-
-Protocol, hypotheses and budgets: ``docs/V6_PREDICTIVE_MEMORY.md`` and
-``docs/PREREGISTRATION_V6.md``.
+numpy-only modules: prereg, maze, fake_maze, prepare, data, bf, metrics, vsc.
+torch modules (imported lazily): models, train, evaluate, probes, features_r.
+Protocol: docs/V6_BF_DELTA.md, docs/PREREGISTRATION_V6.1.md.
 """
 
-SCHEMA = "pmr-v6-1"
+SCHEMA = "pmr-v6.1"

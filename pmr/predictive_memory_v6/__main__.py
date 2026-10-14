@@ -1,12 +1,11 @@
-"""CLI for V6.
+"""CLI for V6.1 (BF-Delta).
 
-  python -m pmr.predictive_memory_v6 s0 --out runs/v6 [--cache DIR --nuscenes-meta DIR --mot-roots A B --miniworld DIR]
-  python -m pmr.predictive_memory_v6 run --stage S1 --out runs/v6 --gpus 0,1,2,3,4,5,6,7 --procs-per-gpu 4
-  python -m pmr.predictive_memory_v6 run --stage S2 --out runs/v6 --gpus 0,...,7 --prereg-commit <hash>
-  python -m pmr.predictive_memory_v6 prepare-l1 --miniworld DIR --cache DIR --procs 48
-  python -m pmr.predictive_memory_v6 prepare-real --cache DIR --nuscenes-meta DIR --mot-roots MOT17/train MOT20/train
-  python -m pmr.predictive_memory_v6 report --out runs/v6
-  python -m pmr.predictive_memory_v6 job --spec job_spec.json        (used by the runner)
+  python -m pmr.predictive_memory_v6 s0      --data DIR --cache DIR --out RUN
+  python -m pmr.predictive_memory_v6 run     --stage S1 --out RUN --cache DIR --data DIR --gpus 0,1,...
+  python -m pmr.predictive_memory_v6 run     --stage S2 ... --prereg-commit <hash>
+  python -m pmr.predictive_memory_v6 report  --out RUN
+  python -m pmr.predictive_memory_v6 run     --stage SMOKE --out RUN            (CPU, synthetic data)
+  python -m pmr.predictive_memory_v6 job     --spec job_spec.json              (used by the runner)
 """
 from __future__ import annotations
 
@@ -16,6 +15,34 @@ import sys
 from pathlib import Path
 
 
+def run_job(spec):
+    t = spec["type"]
+    if t == "fit_slow":
+        from .train import fit_slow as f
+    elif t == "calib":
+        from .train import calib as f
+    elif t == "fit_phi":
+        from .train import fit_phi as f
+    elif t == "fit_gate":
+        from .train import fit_gate as f
+    elif t == "eval":
+        from .evaluate import evaluate as f
+    elif t == "probe":
+        from .probes import probe as f
+    elif t == "fit_pca":
+        from .features_r import fit_pca as f
+    elif t == "project":
+        from .features_r import project as f
+    elif t == "r_gate":
+        from .features_r import r_gate as f
+    elif t in ("dk_select", "fake_data", "prepare_test", "vsc_infer", "vsc_calib", "vsc_eval", "vsc_synthetic"):
+        from . import jobs
+        f = getattr(jobs, t)
+    else:
+        raise SystemExit(f"unknown job type {t}")
+    return f(spec)
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(prog="pmr.predictive_memory_v6")
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -23,84 +50,66 @@ def main(argv=None):
     j.add_argument("--spec", required=True)
     s0 = sub.add_parser("s0")
     s0.add_argument("--out", required=True)
+    s0.add_argument("--data")
     s0.add_argument("--cache")
-    s0.add_argument("--nuscenes-meta")
-    s0.add_argument("--mot-roots", nargs="*")
-    s0.add_argument("--miniworld")
+    s0.add_argument("--procs", type=int)
+    s0.add_argument("--skip-tests", action="store_true")
+    pr = sub.add_parser("prepare")
+    pr.add_argument("--data", required=True)
+    pr.add_argument("--cache", required=True)
+    pr.add_argument("--splits", nargs="*", default=["train", "dev"])
+    pr.add_argument("--procs", type=int)
     r = sub.add_parser("run")
-    r.add_argument("--stage", required=True, choices=["SMOKE", "S1", "S2", "S3", "S4", "S5", "S6", "S7", "FINAL"])
+    r.add_argument("--stage", required=True, choices=["SMOKE", "S1", "S2", "S3", "S4", "S5", "S6", "FINAL"])
     r.add_argument("--out", required=True)
+    r.add_argument("--cache")
+    r.add_argument("--data")
     r.add_argument("--gpus", default="")
     r.add_argument("--procs-per-gpu", type=int, default=4)
     r.add_argument("--max-gpuh", type=float)
-    r.add_argument("--cache")
     r.add_argument("--prereg-commit")
+    r.add_argument("--final-ack", action="store_true")
     r.add_argument("--filter")
     r.add_argument("--dry-run", action="store_true")
-    p1 = sub.add_parser("prepare-l1")
-    p1.add_argument("--miniworld", required=True)
-    p1.add_argument("--cache", required=True)
-    p1.add_argument("--procs", type=int, default=48)
-    p1.add_argument("--splits", nargs="*", default=["dev", "train", "test", "peekaboo", "backforth"])
-    p1.add_argument("--n", type=int)
-    pr = sub.add_parser("prepare-real")
-    pr.add_argument("--cache", required=True)
-    pr.add_argument("--nuscenes-meta")
-    pr.add_argument("--mot-roots", nargs="*")
+    r.add_argument("--vsc-task", default="cambrians_vsc_10mins")
+    r.add_argument("--vsc-calib-cache", default="cambrians_vsc_calib")
+    r.add_argument("--vsc-gt-json")
     rep = sub.add_parser("report")
     rep.add_argument("--out", required=True)
     a = ap.parse_args(argv)
 
     if a.cmd == "job":
         spec = json.loads(Path(a.spec).read_text())
-        t = spec["type"]
-        if t == "train":
-            from .train import train_job
-            res = train_job(spec)
-        elif t == "eval":
-            from .evaluate import eval_job
-            res = eval_job(spec)
-        elif t == "numerics":
-            from .checks import numerics_job
-            res = numerics_job(spec)
-        elif t == "analog":
-            from .checks import analog_job
-            res = analog_job(spec)
-        else:
-            raise SystemExit(f"unknown job type {t}")
+        try:
+            res = run_job(spec)
+        except SystemExit:
+            raise
+        except Exception as exc:  # recorded, then re-raised for the log
+            Path(spec["out"]).mkdir(parents=True, exist_ok=True)
+            (Path(spec["out"]) / "status.json").write_text(json.dumps({"status": "failed", "error": repr(exc)}))
+            raise
         print(json.dumps(res, default=str)[:2000])
-        ok = isinstance(res, dict) and res.get("status") == "complete"
-        return 0 if ok else 3
+        return 0 if isinstance(res, dict) and res.get("status") == "complete" else 3
     if a.cmd == "s0":
-        from .checks import s0
-        rep = s0(a)
+        from .checks import s0 as run_s0
+        rep = run_s0(a.data, a.cache, a.out, a.procs, a.skip_tests)
         print(json.dumps({"gates": rep["gates"], "all_gates_pass": rep["all_gates_pass"]}, indent=2))
         return 0 if rep["all_gates_pass"] else 4
+    if a.cmd == "prepare":
+        from .prepare import default_procs, prepare
+        print(json.dumps(prepare(a.data, a.cache, tuple(a.splits), a.procs or default_procs()), indent=2,
+                         default=str)[:4000])
+        return 0
     if a.cmd == "run":
         from .experiments import run_stage
         gpus = [g for g in a.gpus.split(",") if g != ""]
-        return run_stage(a.stage, a.out, gpus, a.procs_per_gpu, a.max_gpuh, a.cache, a.prereg_commit,
-                         a.filter, a.dry_run)
-    if a.cmd == "prepare-l1":
-        from . import worlds_l1
-        for sp in a.splits:
-            print(worlds_l1.generate(a.miniworld, a.cache, sp, n=a.n, procs=a.procs)["failures"], "failures in", sp)
-            print(worlds_l1.convert_split(a.cache, sp))
-        print(worlds_l1.check_dynamics(a.cache, "dev"))
-        print(worlds_l1.depth_check(a.cache, "dev"))
-        return 0
-    if a.cmd == "prepare-real":
-        from .worlds_real import prepare_nuscenes, prepare_mot
-        if a.nuscenes_meta:
-            print(json.dumps(prepare_nuscenes(a.nuscenes_meta, a.cache), indent=2)[:3000])
-        if a.mot_roots:
-            print(json.dumps(prepare_mot(a.mot_roots, a.cache), indent=2)[:3000])
-        return 0
+        vsc = {"task": a.vsc_task, "calib_cache": a.vsc_calib_cache, "gt_json": a.vsc_gt_json}
+        return run_stage(a.stage, a.out, gpus, a.procs_per_gpu, a.max_gpuh, a.cache, a.data, a.prereg_commit,
+                         a.filter, a.dry_run, a.final_ack, vsc=vsc)
     if a.cmd == "report":
         from .report import write_report
         H = write_report(a.out)
-        print(json.dumps({k: {kk: vv for kk, vv in v.items() if vv in ("pass", "fail", "missing")}
-                          for k, v in H.items()}, indent=2))
+        print((Path(a.out) / "report" / "REPORT.md").read_text()[:4000])
         return 0
     return 1
 
