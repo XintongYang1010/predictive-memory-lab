@@ -1,4 +1,13 @@
-# V5 first run: local Codex to DGX
+# 从这里开始：V6
+
+当前主线是 V6（预测式联想记忆，对象 token，无感知）。按顺序读：
+[AGENTS.md](AGENTS.md) → [docs/CODEX_V6_HANDOFF.md](docs/CODEX_V6_HANDOFF.md) →
+[docs/V6_PREDICTIVE_MEMORY.md](docs/V6_PREDICTIVE_MEMORY.md) → [docs/PREREGISTRATION_V6.md](docs/PREREGISTRATION_V6.md)。
+V6 尚无 GPU 结果；预注册阈值待用户确认后冻结。
+
+---
+
+# V5 first run: local Codex to DGX (historical)
 
 本仓库包含 V5 首轮 visual world model + bounded memory 的源码和 CPU 测试。
 尚未运行 V5 A100 实验，没有真实 GPU 结果。

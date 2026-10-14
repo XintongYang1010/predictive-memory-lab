@@ -1,5 +1,38 @@
 # Predictive Memory Lab
 
+## V6：预测式联想记忆（当前主线；代码已提供，GPU 实验尚未运行）
+
+V6 只研究 world model **记忆的状态转移算子**，不再碰视觉感知。它在对象 token 上测试三件事：
+- 记忆能否让看不见的对象继续演化；
+- 重新看见时能否只纠正该对象；
+- surprise 能否只在真正违背预期时出现。
+
+方法是一条递推，每步三个动作：
+1. **predict**：value 侧学到的、含 shear 的线性生成元推进全部记忆内容；
+2. **compare**：记忆自身预测与观测的残差即 surprise；
+3. **correct**：用同一残差做 delta 写入，这恰为一步 TTT。
+
+- 方法与协议：[docs/V6_PREDICTIVE_MEMORY.md](docs/V6_PREDICTIVE_MEMORY.md)
+- 预注册阈值（PROPOSED，待确认后冻结）：[docs/PREREGISTRATION_V6.md](docs/PREREGISTRATION_V6.md)
+- GPU 执行交接（Codex）：[docs/CODEX_V6_HANDOFF.md](docs/CODEX_V6_HANDOFF.md)；代理规则：[AGENTS.md](AGENTS.md)
+- 调研报告与全部引用：[docs/V6_RESEARCH_REPORT.md](docs/V6_RESEARCH_REPORT.md)
+
+数据全部公开，分三级：
+- **L0**：按 FloWM MNIST-World 公开规格自建；
+- **L1**：用 Apache-2.0 的 Miniworld 重新生成 Block World；
+- **R**：nuScenes 元数据与 MOT17/20 标签。
+
+全程预算 ≤160 GPUh（8×A100 或 4×H800），首个决策点 ≤40 GPUh。
+
+```bash
+python -m pip install -r requirements-v6.txt              # torch 2.9.1 沿用镜像
+python -m unittest discover -s tests/predictive_memory_v6 -t . -v
+bash scripts/run_v6.sh S0 /abs/runs/v6_<id>               # CPU gates
+bash scripts/run_v6.sh S1 /abs/runs/v6_<id>               # 冒烟/过拟合/profile，≤2 GPUh
+```
+
+以下为 V5 及更早版本的说明，保留作历史记录。
+
 ## V5 视觉记忆首轮（源码已提供，A100 实验尚未运行）
 
 新增独立的 `pmr/visual_memory/`：受控成对 RGB 世界、冻结官方 I-JEPA、
