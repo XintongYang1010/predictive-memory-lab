@@ -26,3 +26,86 @@ jobs:
         run: |
           .venv/bin/python -m pmr.state_memory --device cpu --smoke --steps 3 --train-episodes 32 --dev-episodes 8 --eval-episodes 8 --seeds 42 --eval-lengths 24,48 --max-seconds 120 --out runs/ci-v4
           .venv/bin/python scripts/package_results.py --run runs/ci-v4
+  v6:
+    # V6.1 BF-Delta: numpy algebra/data tests, torch parity tests and an
+    # end-to-end CPU SMOKE of every stage on synthetic Memory-Maze-format data.
+    # Software checks only; SMOKE numbers are meaningless.
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install CPU torch 2.9.1 and V6 requirements
+        run: |
+          python -m pip install torch==2.9.1 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -r requirements-v6.txt
+      - name: V6.1 unit, algebra and torch parity tests
+        run: python -m unittest discover -s tests/predictive_memory_v6 -t . -v
+      - name: V6.1 CPU end-to-end SMOKE and report
+        run: |
+          python -m pmr.predictive_memory_v6 run --stage SMOKE --out runs/ci-v6 --procs-per-gpu 2
+          python -m pmr.predictive_memory_v6 report --out runs/ci-v6
+      - name: Surface failed SMOKE jobs as annotations
+        if: failure()
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          n = 0
+          for st in sorted(pathlib.Path("runs/ci-v6").rglob("status.json")):
+              s = json.loads(st.read_text())
+              if s.get("status") == "complete":
+                  continue
+              log = st.parent / "job.log"
+              tail = log.read_text().splitlines()[-25:] if log.exists() else []
+              msg = f"{st.parent}: {s} || " + " | ".join(tail)
+              print("::error title=SMOKE job::" + msg.replace("%", "%25").replace("\r", "").replace("\n", " ")[:6000])
+              n += 1
+              if n >= 9:
+                  break
+          ss = pathlib.Path("runs/ci-v6/SMOKE_status.json")
+          if ss.exists():
+              print("::error title=SMOKE status::" + ss.read_text().replace("\n", " ")[:6000])
+          PY
+      - name: Surface SMOKE outputs as notices (plumbing check only)
+        if: success()
+        run: |
+          python - <<'PY'
+          import gzip, json, pathlib
+          R = pathlib.Path("runs/ci-v6")
+          def note(title, obj):
+              txt = json.dumps(obj, default=str, separators=(",", ":"))
+              print(f"::notice title={title}::" + txt.replace("%", "%25")[:3500])
+          def js(p):
+              p = R / p
+              return json.loads(p.read_text()) if p.exists() else None
+          note("status", js("SMOKE_status.json"))
+          note("gates", {"gates": js("report/gates.json"), "verdicts": {k: (v.get("verdict") or v.get("levels")) for k, v in (js("report/hypotheses.json") or {}).items() if isinstance(v, dict) and ("verdict" in v or "levels" in v)}})
+          s = js("S3/eval/T1/s0/summary.json") or {}
+          keep = ("A0|", "A6|", "A8|", "A8g|", "OC|", "A1@0.2|", "A2|", "A2P|", "A3|", "A4|")
+          note("T1 summary", {c: {k: round(v, 4) for k, v in d.items() if k.startswith(keep)} for c, d in s.get("summary", {}).items()})
+          rows = [json.loads(l) for l in gzip.open(R / "S4/eval/T2/s0/rows.jsonl.gz", "rt")] if (R / "S4/eval/T2/s0/rows.jsonl.gz").exists() else []
+          mv = [r for r in rows if r["cond"] == "MOVE"]
+          st = [r for r in rows if r["cond"] == "STATIC"]
+          note("T2 rows", {"n": len(rows), "n_move": len(mv), "move_keys": sorted(k for k in (mv[0] if mv else {}) if "A8" in k or k.startswith("OL"))[:40],
+                           "static_keys": sorted(k for k in (st[0] if st else {}) if not k.startswith("A1"))[:60]})
+          pr = {p.parent.parent.name: json.loads(p.read_text()) for p in R.glob("S3/probe/T1/*/s0/status.json")}
+          note("probes", pr)
+          note("dk+sbar", {"dk": js("S3/dk_select/dk.json"), "sbar": {str(p.parent.relative_to(R)): json.loads(p.read_text())["sbar"] for p in R.glob("S*/calib/**/calib.json")}})
+          note("diag T1", js("S3/eval/T1/s0/diag.json"))
+          note("R", {"gate": js("S5/r_gate/r_gate.json"), "T3": {c: {k: round(v, 4) for k, v in d.items() if k.startswith(keep)} for c, d in (js("S5/eval/T3/s0/summary.json") or {}).get("summary", {}).items()}})
+          note("vsc", js("SMOKE/vsc_synthetic/status.json"))
+          PY
+      - name: Upload smoke outputs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v6-smoke
+          path: |
+            runs/ci-v6/**/status.json
+            runs/ci-v6/**/job.log
+            runs/ci-v6/**/summary.json
+            runs/ci-v6/report/**
+            runs/ci-v6/SMOKE_status.json
+          retention-days: 7

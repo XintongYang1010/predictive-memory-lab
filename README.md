@@ -1,5 +1,39 @@
 # Predictive Memory Lab
 
+## V6.1：让冻结世界模型为记忆算出遗忘门（当前主线；代码已就绪，GPU 实验尚未运行）
+
+V6.1 只回答一个问题：**世界模型的有界记忆什么时候该忘、什么时候该护住旧内容**。不再碰视觉感知。
+
+方法 BF-Delta 是一行递推，没有可训练参数：
+- 冻结的无记忆一步预测器 $f_\theta$ 作先验，对应 Cambrian-S 的 LFP head；
+- 在它的标准化残差上维护一个 delta-rule 快权重记忆，相当于一步测试时回归（TTT）；
+- 用"先验预测 vs 记忆预测"的带符号对数 Bayes 因子，闭式算出 Gated DeltaNet 平时要*学*的两道门：衰减门 = 1 − P(世界已变)，写入门 = Kalman 增益。
+
+在 vMF 似然下，这个对数比恰好是 Cambrian-S 的 surprise 减去记忆自己的 surprise。同一个量在计数聚合时判定"见过没有"，用来修复 Cambrian-S 在 VSC-Repeat 上重复计数的已知局限。
+
+- 方法与协议：[docs/V6_BF_DELTA.md](docs/V6_BF_DELTA.md)
+- 预注册（approved-dev，FINAL 需用户确认）：[docs/PREREGISTRATION_V6.1.md](docs/PREREGISTRATION_V6.1.md)
+- GPU 执行交接（Codex）：[docs/CODEX_V6_HANDOFF.md](docs/CODEX_V6_HANDOFF.md)；代理规则：[AGENTS.md](AGENTS.md)
+- 调研报告（定稿核验与方向重定）：[docs/research/](docs/research/)
+
+**数据全部公开**：
+- Memory Maze 离线集（MIT），先在加噪真值 token 上定结论，再逐层外推到 L1 扰动和冻结 DINOv2 特征；
+- VSI-SUPER-Count（Apache-2.0），搭配冻结的 Cambrian-S-7B-LFP。
+
+**对照**：13 个等预算对照臂只换门，包括常数增益前沿、学习门 GDN、带变化监督的最强学习门、Titans 式误差门、World-T3 式遗忘 RLS、全局重置、完美检测端点。
+
+**预算**：阶段上限合计 131 GPUh，硬上限 160（8×A100 或 4×H800），首个决策点 ≤30 GPUh。
+
+```bash
+python -m pip install -r requirements-v6.txt                       # torch 2.9.1 沿用镜像
+python -m unittest discover -s tests/predictive_memory_v6 -t . -v
+bash scripts/run_v6.sh SMOKE /abs/runs/v6_1_smoke                  # CPU 端到端（合成数据）
+PMR_V6_DATA=... PMR_V6_CACHE=... bash scripts/run_v6.sh S0 /abs/runs/v6_1_<id>
+bash scripts/run_v6.sh S1 /abs/runs/v6_1_<id>                      # 测速/过拟合，≤2 GPUh
+```
+
+以下为 V5 及更早版本的说明，保留作历史记录。
+
 ## V5 视觉记忆首轮（源码已提供，A100 实验尚未运行）
 
 新增独立的 `pmr/visual_memory/`：受控成对 RGB 世界、冻结官方 I-JEPA、
