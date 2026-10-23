@@ -1,0 +1,11 @@
+{
+  "status": "verified",
+  "members": 30,
+  "archive": "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-v6-h800/experiments/bank_reference/results/br-0.1-dev-seed17-evidence.tgz",
+  "archive_bytes": 8679258,
+  "archive_sha256": "719643d1fba4353810f3582a336fe9d288fe4a8448ba8a29ce0e59ea56181d9a",
+  "verification_passes": 1,
+  "full_l0_data_not_restored": true,
+  "presentation_cleanup_repacked": true,
+  "all_member_bytes_verified": true
+}

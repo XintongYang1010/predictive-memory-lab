@@ -1,0 +1,161 @@
+{
+  "schema": "br-0.1-evidence-v1",
+  "claim": "L0-derived frozen-residual diagnostic; not complete L0 or visual evaluation",
+  "complete_l0_inputs_present": false,
+  "files": {
+    "inputs/a2_frozen_inputs.npz": {
+      "bytes": 6204297,
+      "sha256": "c256d8ee6b80e422c5ddc6d6e120b3eb3bfb8272a9083f3b64ca5683db9700b3"
+    },
+    "inputs/input_manifest.json": {
+      "bytes": 17122,
+      "sha256": "108563c48bdc528ea2e6e8985494c06d220b58b5e37e024f49a6fd0c63bc2b50"
+    },
+    "inputs/reference_rows.jsonl.gz": {
+      "bytes": 2098776,
+      "sha256": "b014a53d0a6b0c23be0eebc288c6561adac98d1dd63a70311ca6eaf83918d807"
+    },
+    "results/ASSESSMENT_ZH.md": {
+      "bytes": 4946,
+      "sha256": "bba525c776f78347822e76bf53c0ba649f999d442f1d124e0562eefb46c5d5e7"
+    },
+    "results/REPORT.md": {
+      "bytes": 4881,
+      "sha256": "f874e0378b816c60390acf640772c166ccc91c19d95882594087b760d48df381"
+    },
+    "results/bad-cases.json": {
+      "bytes": 91186,
+      "sha256": "eab51c4fc89c87b84a4ec389674417df30e98d87501a9180aa11f1cbd4b6b0f1"
+    },
+    "results/development-summary.png": {
+      "bytes": 105292,
+      "sha256": "e9c70a64cef13b22894b1991c58fba53899357a760f8d2acd17b7c94baad9efc"
+    },
+    "results/development-summary.svg": {
+      "bytes": 65173,
+      "sha256": "f85786036a5288589a134c814450ff37604f82cb543df8771cab4944d30531ca"
+    },
+    "results/frozen-protocol.json": {
+      "bytes": 4471,
+      "sha256": "182a34ba61a5535e889b1ac3360fba87fdd8c919bb1cb51cafabff454db75086"
+    },
+    "results/parents.json": {
+      "bytes": 1832995,
+      "sha256": "6ce697cb33cd070e2328aebff85e00e60857f1a194af353af02e4a331908d84b"
+    },
+    "results/reference-reproduction.json": {
+      "bytes": 244,
+      "sha256": "bfb7cf32923eb9423641ea6d37bb2634e14bb34b8e34d2718369e1d720df00d7"
+    },
+    "results/rows.json": {
+      "bytes": 77302,
+      "sha256": "a781ee7fcb4c973c637ef15febfc1677868de50e17eebd25def078c39f146181"
+    },
+    "results/source/README.md": {
+      "bytes": 1926,
+      "sha256": "7c5f4c8e88439195d101dceb7f87af8c7bf63af3855437dc7901b3a150e19b39"
+    },
+    "results/source/core.py": {
+      "bytes": 9460,
+      "sha256": "a0c571f8974b08dea7cda27c2b247cfc81f5e66471863ba4eeced9bb5b82c164"
+    },
+    "results/source/plot_results.py": {
+      "bytes": 2088,
+      "sha256": "7d357086a893e826cc152cc9b2dc95e663965824589c27952d6ac95db861a9dd"
+    },
+    "results/source/protocol.md": {
+      "bytes": 5783,
+      "sha256": "b6d047549fa0466d36253342598f271b10cc880e9493498140c2e41a552c25ff"
+    },
+    "results/source/runner.py": {
+      "bytes": 22577,
+      "sha256": "4625c6c9117281b9a588851a2df32093bfe65fd7dd7b2431d92d21c7c8dbe7b3"
+    },
+    "results/source/shared_mechanisms.py": {
+      "bytes": 22877,
+      "sha256": "e83a4a46eb661601f37d2aca02e2ccad7c6d7179bb0f5675fb3914852f8ccc0d"
+    },
+    "results/source/shared_memory.py": {
+      "bytes": 18299,
+      "sha256": "9f5dfe5aaa3052a2af4a9c79a2f8c5558be258feff1459ea82f2d86e66da073c"
+    },
+    "results/source/test_core.py": {
+      "bytes": 5181,
+      "sha256": "3863471b7bc4938c843cceabdb297bd96732773b89a3ab356d6ab23e4d6cc78d"
+    },
+    "results/student-k16.pt": {
+      "bytes": 48133,
+      "sha256": "a1b71dd070d4560ee31b7381ec4f733105adc759a4b515ae37156bb5fb24657e"
+    },
+    "results/student-k4.pt": {
+      "bytes": 48123,
+      "sha256": "5cdb2596f4c1b1bbab6688fb4f9815d05c1c749e8c44d323af62960769eaafa5"
+    },
+    "results/student-k64.pt": {
+      "bytes": 48133,
+      "sha256": "33d5dc45fdf31ee85b16190689e9f804a24f25e78caedae969d31d0582e1ae64"
+    },
+    "results/summary.json": {
+      "bytes": 42940,
+      "sha256": "d8271f9cc4350395e424d3f5e403545121fa7466c0951326059cf0096754c7fd"
+    },
+    "results/teacher-k16.json": {
+      "bytes": 67442,
+      "sha256": "6cd19a404ba3cf3bede6204012012a0e954da5f746aa62e8aa6ac8b946738013"
+    },
+    "results/teacher-k4.json": {
+      "bytes": 64276,
+      "sha256": "6c09c9930c7374364c04e44f60ba56efab4382d92a95a402a6d052c8445372a5"
+    },
+    "results/teacher-k64.json": {
+      "bytes": 242462,
+      "sha256": "0b33a4b854a4ffb717cbc6677cdf1829aedf5e3c9f4e5b162a3c3fde4fea984d"
+    },
+    "results/test.log": {
+      "bytes": 907,
+      "sha256": "8e3fdd361e93dc17d11a64b006800f91d7d6be3a7f9040661463cccd753e935b"
+    },
+    "results/top-case-analysis.json": {
+      "bytes": 4316,
+      "sha256": "548eb9ce19d0ec2e5b13cf45458feef582d48658ed0ccecd9f535887f24622fc"
+    }
+  },
+  "input_original_paths": {
+    "inputs/a2_frozen_inputs.npz": "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-v6-h800/deployment/v6-h800-20261015/a2-gate-attribution-prepared/frozen/a2_frozen_inputs.npz",
+    "inputs/input_manifest.json": "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-v6-h800/deployment/v6-h800-20261015/a2-gate-attribution-prepared/frozen/manifest.json",
+    "inputs/reference_rows.jsonl.gz": "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-v6-h800/deployment/v6-h800-20261015/oracle-s2-terminal/evidence/runs/main/S2/eval/T0_s0.5/ns0/rows.jsonl.gz"
+  },
+  "tests": "11 passed; see test.log",
+  "source_files_unchanged": true,
+  "source_files_unchanged_scope": "Frozen fit/evaluation sources listed in summary.json; post-run plot-only cleanup recorded separately below.",
+  "post_run_presentation_cleanup": {
+    "action": "Strip SVG line-end whitespace; update plot-only generator to do the same after future saves.",
+    "changed_svg_lines": 1004,
+    "experiment_rerun": false,
+    "numerical_artifacts_unchanged": true,
+    "frozen_training_protocol_unchanged": true,
+    "png_unchanged": true,
+    "files": {
+      "results/development-summary.svg": {
+        "before": {
+          "bytes": 66177,
+          "sha256": "24df03828df20d9c8de18a0d332fa44b0ad30d7c24996a7de1aa0e9922631786"
+        },
+        "after": {
+          "bytes": 65173,
+          "sha256": "f85786036a5288589a134c814450ff37604f82cb543df8771cab4944d30531ca"
+        }
+      },
+      "results/source/plot_results.py": {
+        "before": {
+          "bytes": 1889,
+          "sha256": "888addf3d6099bdcb878b49a86d401d0f363ffd996063c2a5d3b6f64d63150aa"
+        },
+        "after": {
+          "bytes": 2088,
+          "sha256": "7d357086a893e826cc152cc9b2dc95e663965824589c27952d6ac95db861a9dd"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "check": "illustration export only",
+  "all_manifest_output_hashes_match": true,
+  "combined_pdf_page_objects": 4,
+  "png_cards_visually_inspected": 4,
+  "selected_parent_weighted_loss_recomputations": 24,
+  "selected_parent_coverage_recomputations": 6,
+  "maximum_allowed_numerical_difference": 1e-12,
+  "source_hashes_unchanged": true,
+  "local_document_links_exist": true,
+  "new_model_calls": 0,
+  "training_steps": 0,
+  "new_scenarios": 0
+}

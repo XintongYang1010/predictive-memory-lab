@@ -1,0 +1,1028 @@
+{
+  "protocol": "BR-0.2",
+  "scope": "Connect existing cases via exact frozen-parent component accounting; no new online policy",
+  "parents": 864,
+  "losses_verified": 25056,
+  "max_loss_reconstruction_error": 1.7763568394002505e-15,
+  "input_identity_audit": {
+    "EXACT": {
+      "reconstruction_error": 1.7763568394002505e-15,
+      "same_Z_EPS_O_W_key_identity": true
+    },
+    "NEWPATH": {
+      "reconstruction_error": 1.7763568394002505e-15,
+      "same_Z_EPS_O_W_key_identity": true
+    },
+    "CHANGE": {
+      "reconstruction_error": 1.7763568394002505e-15,
+      "same_Z_EPS_O_W_key_identity": true
+    }
+  },
+  "groups": {
+    "K16/FIFO/EXACT": {
+      "parents": 32,
+      "positive_task_regret": 0,
+      "chosen_loss": 1.1490755303941609,
+      "oracle_loss": 1.1490755303941609,
+      "zero_memory_loss": 1.0142137193616445,
+      "chosen_minus_oracle": {
+        "signal": 0.0,
+        "noise": 0.0,
+        "cross": 0.0,
+        "total": 0.0
+      },
+      "chosen_minus_zero": {
+        "signal": 0.0405827055833966,
+        "noise": 0.06524868818491396,
+        "cross": 0.029030417264205674,
+        "total": 0.13486181103251624
+      },
+      "positive_regret_oracle_improves_signal": 0,
+      "positive_regret_oracle_worsens_signal": 0,
+      "disjoint_task_signal_optimal_sets": 0,
+      "positive_regret_oracle_drop_pre_splice": 0,
+      "teacher_nonempty_parents": 0,
+      "teacher_positive_regret": 0,
+      "teacher_weighted_regret": null,
+      "positive_regret_teacher_highest_attention_also_optimal_drop": 0
+    },
+    "K16/FIFO/NEWPATH": {
+      "parents": 32,
+      "positive_task_regret": 1,
+      "chosen_loss": 1.1513066451756735,
+      "oracle_loss": 1.1349950389207957,
+      "zero_memory_loss": 1.0340529754444217,
+      "chosen_minus_oracle": {
+        "signal": -0.0005111541011353584,
+        "noise": 0.0136403463266971,
+        "cross": 0.003182414029316239,
+        "total": 0.01631160625487798
+      },
+      "chosen_minus_zero": {
+        "signal": 0.03498410025051986,
+        "noise": 0.07480022208072173,
+        "cross": 0.007469347400010298,
+        "total": 0.1172536697312519
+      },
+      "positive_regret_oracle_improves_signal": 0,
+      "positive_regret_oracle_worsens_signal": 1,
+      "disjoint_task_signal_optimal_sets": 2,
+      "positive_regret_oracle_drop_pre_splice": 1,
+      "teacher_nonempty_parents": 2,
+      "teacher_positive_regret": 1,
+      "teacher_weighted_regret": 0.21509099526580766,
+      "positive_regret_teacher_highest_attention_also_optimal_drop": 1
+    },
+    "K16/FIFO/CHANGE": {
+      "parents": 32,
+      "positive_task_regret": 1,
+      "chosen_loss": 1.1247426218719823,
+      "oracle_loss": 1.1227201943078327,
+      "zero_memory_loss": 1.0215087322318528,
+      "chosen_minus_oracle": {
+        "signal": 0.0011360885401936695,
+        "noise": -7.096733193821623e-05,
+        "cross": 0.0009573063558940688,
+        "total": 0.0020224275641495255
+      },
+      "chosen_minus_zero": {
+        "signal": 0.03365923769524954,
+        "noise": 0.06451895772077565,
+        "cross": 0.005055694224104127,
+        "total": 0.1032338896401293
+      },
+      "positive_regret_oracle_improves_signal": 1,
+      "positive_regret_oracle_worsens_signal": 0,
+      "disjoint_task_signal_optimal_sets": 0,
+      "positive_regret_oracle_drop_pre_splice": 0,
+      "teacher_nonempty_parents": 1,
+      "teacher_positive_regret": 1,
+      "teacher_weighted_regret": 0.06298417271208523,
+      "positive_regret_teacher_highest_attention_also_optimal_drop": 1
+    },
+    "K16/FIFO/ALL": {
+      "parents": 96,
+      "positive_task_regret": 2,
+      "chosen_loss": 1.1417134302684702,
+      "oracle_loss": 1.135721121112382,
+      "zero_memory_loss": 1.0231094831951641,
+      "chosen_minus_oracle": {
+        "signal": 0.00021099638843919568,
+        "noise": 0.004425120327348113,
+        "cross": 0.001356192440300819,
+        "total": 0.005992309156088129
+      },
+      "chosen_minus_zero": {
+        "signal": 0.036454966110492704,
+        "noise": 0.06812125410076346,
+        "cross": 0.014027726862049806,
+        "total": 0.11860394707330596
+      },
+      "positive_regret_oracle_improves_signal": 1,
+      "positive_regret_oracle_worsens_signal": 1,
+      "disjoint_task_signal_optimal_sets": 2,
+      "positive_regret_oracle_drop_pre_splice": 1,
+      "teacher_nonempty_parents": 3,
+      "teacher_positive_regret": 2,
+      "teacher_weighted_regret": 0.1602878018457165,
+      "positive_regret_teacher_highest_attention_also_optimal_drop": 2
+    },
+    "K16/PaFu/EXACT": {
+      "parents": 32,
+      "positive_task_regret": 5,
+      "chosen_loss": 1.1140300050637033,
+      "oracle_loss": 1.0897250458254553,
+      "zero_memory_loss": 1.0142137193616445,
+      "chosen_minus_oracle": {
+        "signal": -0.0031764553658156737,
+        "noise": 0.019015854927434746,
+        "cross": 0.008465559676629012,
+        "total": 0.024304959238248085
+      },
+      "chosen_minus_zero": {
+        "signal": -0.017492511714989726,
+        "noise": 0.08413659725716086,
+        "cross": 0.033172200159887796,
+        "total": 0.09981628570205896
+      },
+      "positive_regret_oracle_improves_signal": 2,
+      "positive_regret_oracle_worsens_signal": 3,
+      "disjoint_task_signal_optimal_sets": 5,
+      "positive_regret_oracle_drop_pre_splice": 4,
+      "teacher_nonempty_parents": 11,
+      "teacher_positive_regret": 5,
+      "teacher_weighted_regret": 0.06422575232096922,
+      "positive_regret_teacher_highest_attention_also_optimal_drop": 3
+    },
+    "K16/PaFu/NEWPATH": {
+      "parents": 32,
+      "positive_task_regret": 4,
+      "chosen_loss": 1.1711682820835503,
+      "oracle_loss": 1.1306286315516654,
+      "zero_memory_loss": 1.0340529754444217,
+      "chosen_minus_oracle": {
+        "signal": 0.012864480367367233,
+        "noise": 0.0121492665431298,
+        "cross": 0.01552590362138795,
+        "total": 0.040539650531885
+      },
+      "chosen_minus_zero": {
+        "signal": 0.048994220132167116,
+        "noise": 0.06674864481460507,
+        "cross": 0.021372441692356373,
+        "total": 0.13711530663912858
+      },
+      "positive_regret_oracle_improves_signal": 1,
+      "positive_regret_oracle_worsens_signal": 3,
+      "disjoint_task_signal_optimal_sets": 3,
+      "positive_regret_oracle_drop_pre_splice": 3,
+      "teacher_nonempty_parents": 5,
+      "teacher_positive_regret": 3,
+      "teacher_weighted_regret": 0.21911721015962576,
+      "positive_regret_teacher_highest_attention_also_optimal_drop": 3
+    },
+    "K16/PaFu/CHANGE": {
+      "parents": 32,
+      "positive_task_regret": 5,
+      "chosen_loss": 1.20446932223177,
+      "oracle_loss": 1.115278253427108,
+      "zero_memory_loss": 1.0215087322318528,
+      "chosen_minus_oracle": {
+        "signal": 0.047060307899928114,
+        "noise": 0.023352677941503027,
+        "cross": 0.01877808296323087,
+        "total": 0.089191068804662
+      },
+      "chosen_minus_zero": {
+        "signal": 0.07137474315732793,
+        "noise": 0.08956899536341044,
+        "cross": 0.022016851479178753,
+        "total": 0.1829605899999171
+      },
+      "positive_regret_oracle_improves_signal": 4,
+      "positive_regret_oracle_worsens_signal": 1,
+      "disjoint_task_signal_optimal_sets": 1,
+      "positive_regret_oracle_drop_pre_splice": 3,
+      "teacher_nonempty_parents": 7,
+      "teacher_positive_regret": 6,
+      "teacher_weighted_regret": 0.4289423588869226,
+      "positive_regret_teacher_highest_attention_also_optimal_drop": 5
+    },
+    "K16/PaFu/ALL": {
+      "parents": 96,
+      "positive_task_regret": 14,
+      "chosen_loss": 1.162732924169843,
+      "oracle_loss": 1.1115609636102612,
+      "zero_memory_loss": 1.0231094831951641,
+      "chosen_minus_oracle": {
+        "signal": 0.018757004663835706,
+        "noise": 0.01821818806646823,
+        "cross": 0.014196767829277937,
+        "total": 0.051171960559581876
+      },
+      "chosen_minus_zero": {
+        "signal": 0.0337366971107947,
+        "noise": 0.08027168978518501,
+        "cross": 0.025615054078699007,
+        "total": 0.13962344097467871
+      },
+      "positive_regret_oracle_improves_signal": 7,
+      "positive_regret_oracle_worsens_signal": 7,
+      "disjoint_task_signal_optimal_sets": 9,
+      "positive_regret_oracle_drop_pre_splice": 10,
+      "teacher_nonempty_parents": 23,
+      "teacher_positive_regret": 14,
+      "teacher_weighted_regret": 0.19913203460343107,
+      "positive_regret_teacher_highest_attention_also_optimal_drop": 11
+    },
+    "K16/WR/EXACT": {
+      "parents": 32,
+      "positive_task_regret": 6,
+      "chosen_loss": 1.1410291132750257,
+      "oracle_loss": 1.103579661086555,
+      "zero_memory_loss": 1.0142137193616445,
+      "chosen_minus_oracle": {
+        "signal": 0.00765749839607361,
+        "noise": 0.02895145176152144,
+        "cross": 0.0008405020308757127,
+        "total": 0.03744945218847075
+      },
+      "chosen_minus_zero": {
+        "signal": -0.010397254388928072,
+        "noise": 0.12183899907981377,
+        "cross": 0.015373649222495485,
+        "total": 0.1268153939133812
+      },
+      "positive_regret_oracle_improves_signal": 4,
+      "positive_regret_oracle_worsens_signal": 2,
+      "disjoint_task_signal_optimal_sets": 2,
+      "positive_regret_oracle_drop_pre_splice": 6,
+      "teacher_nonempty_parents": 14,
+      "teacher_positive_regret": 6,
+      "teacher_weighted_regret": 0.07946281865854253,
+      "positive_regret_teacher_highest_attention_also_optimal_drop": 5
+    },
+    "K16/WR/NEWPATH": {
+      "parents": 32,
+      "positive_task_regret": 5,
+      "chosen_loss": 1.181478393837857,
+      "oracle_loss": 1.1325801478132314,
+      "zero_memory_loss": 1.0340529754444217,
+      "chosen_minus_oracle": {
+        "signal": 0.0237282665784527,
+        "noise": 0.017249494051565218,
+        "cross": 0.007920485394607827,
+        "total": 0.048898246024625766
+      },
+      "chosen_minus_zero": {
+        "signal": 0.060602528950672356,
+        "noise": 0.07410254294076242,
+        "cross": 0.012720346502000532,
+        "total": 0.1474254183934353
+      },
+      "positive_regret_oracle_improves_signal": 3,
+      "positive_regret_oracle_worsens_signal": 2,
+      "disjoint_task_signal_optimal_sets": 2,
+      "positive_regret_oracle_drop_pre_splice": 5,
+      "teacher_nonempty_parents": 5,
+      "teacher_positive_regret": 4,
+      "teacher_weighted_regret": 0.32433846851788883,
+      "positive_regret_teacher_highest_attention_also_optimal_drop": 4
+    },
+    "K16/WR/CHANGE": {
+      "parents": 32,
+      "positive_task_regret": 5,
+      "chosen_loss": 1.2200417715934448,
+      "oracle_loss": 1.1227201943078327,
+      "zero_memory_loss": 1.0215087322318528,
+      "chosen_minus_oracle": {
+        "signal": 0.0767926638395471,
+        "noise": 0.029358257587412423,
+        "cross": -0.008829344141347303,
+        "total": 0.09732157728561218
+      },
+      "chosen_minus_zero": {
+        "signal": 0.10931581299460297,
+        "noise": 0.09394818264012629,
+        "cross": -0.004730956273137246,
+        "total": 0.19853303936159197
+      },
+      "positive_regret_oracle_improves_signal": 5,
+      "positive_regret_oracle_worsens_signal": 0,
+      "disjoint_task_signal_optimal_sets": 0,
+      "positive_regret_oracle_drop_pre_splice": 5,
+      "teacher_nonempty_parents": 6,
+      "teacher_positive_regret": 6,
+      "teacher_weighted_regret": 0.48434169776593083,
+      "positive_regret_teacher_highest_attention_also_optimal_drop": 5
+    },
+    "K16/WR/ALL": {
+      "parents": 96,
+      "positive_task_regret": 16,
+      "chosen_loss": 1.1804900914006176,
+      "oracle_loss": 1.1194014873012617,
+      "zero_memory_loss": 1.0231094831951641,
+      "chosen_minus_oracle": {
+        "signal": 0.03588368629057514,
+        "noise": 0.025270178340716466,
+        "cross": -6.526053193590964e-05,
+        "total": 0.06108860409935569
+      },
+      "chosen_minus_zero": {
+        "signal": 0.052558914780276765,
+        "noise": 0.09699741722205277,
+        "cross": 0.0078242762031237,
+        "total": 0.15738060820545324
+      },
+      "positive_regret_oracle_improves_signal": 12,
+      "positive_regret_oracle_worsens_signal": 4,
+      "disjoint_task_signal_optimal_sets": 4,
+      "positive_regret_oracle_drop_pre_splice": 16,
+      "teacher_nonempty_parents": 25,
+      "teacher_positive_regret": 16,
+      "teacher_weighted_regret": 0.2216610781241,
+      "positive_regret_teacher_highest_attention_also_optimal_drop": 14
+    },
+    "K4/FIFO/EXACT": {
+      "parents": 32,
+      "positive_task_regret": 0,
+      "chosen_loss": 1.1490755303941609,
+      "oracle_loss": 1.1490755303941609,
+      "zero_memory_loss": 1.0142137193616445,
+      "chosen_minus_oracle": {
+        "signal": 0.0,
+        "noise": 0.0,
+        "cross": 0.0,
+        "total": 0.0
+      },
+      "chosen_minus_zero": {
+        "signal": 0.0405827055833966,
+        "noise": 0.06524868818491396,
+        "cross": 0.029030417264205674,
+        "total": 0.13486181103251624
+      },
+      "positive_regret_oracle_improves_signal": 0,
+      "positive_regret_oracle_worsens_signal": 0,
+      "disjoint_task_signal_optimal_sets": 0,
+      "positive_regret_oracle_drop_pre_splice": 0,
+      "teacher_nonempty_parents": 0,
+      "teacher_positive_regret": 0,
+      "teacher_weighted_regret": null,
+      "positive_regret_teacher_highest_attention_also_optimal_drop": 0
+    },
+    "K4/FIFO/NEWPATH": {
+      "parents": 32,
+      "positive_task_regret": 0,
+      "chosen_loss": 1.1325801478132314,
+      "oracle_loss": 1.1325801478132314,
+      "zero_memory_loss": 1.0340529754444217,
+      "chosen_minus_oracle": {
+        "signal": 0.0,
+        "noise": 0.0,
+        "cross": 0.0,
+        "total": 0.0
+      },
+      "chosen_minus_zero": {
+        "signal": 0.03687426237221965,
+        "noise": 0.0568530488891972,
+        "cross": 0.004799861107392704,
+        "total": 0.09852717236880955
+      },
+      "positive_regret_oracle_improves_signal": 0,
+      "positive_regret_oracle_worsens_signal": 0,
+      "disjoint_task_signal_optimal_sets": 1,
+      "positive_regret_oracle_drop_pre_splice": 0,
+      "teacher_nonempty_parents": 1,
+      "teacher_positive_regret": 0,
+      "teacher_weighted_regret": 0.0,
+      "positive_regret_teacher_highest_attention_also_optimal_drop": 0
+    },
+    "K4/FIFO/CHANGE": {
+      "parents": 32,
+      "positive_task_regret": 1,
+      "chosen_loss": 1.1247426218719823,
+      "oracle_loss": 1.1227201943078327,
+      "zero_memory_loss": 1.0215087322318528,
+      "chosen_minus_oracle": {
+        "signal": 0.0011360885401936695,
+        "noise": -7.096733193821623e-05,
+        "cross": 0.0009573063558940688,
+        "total": 0.0020224275641495255
+      },
+      "chosen_minus_zero": {
+        "signal": 0.03365923769524954,
+        "noise": 0.06451895772077565,
+        "cross": 0.005055694224104127,
+        "total": 0.1032338896401293
+      },
+      "positive_regret_oracle_improves_signal": 1,
+      "positive_regret_oracle_worsens_signal": 0,
+      "disjoint_task_signal_optimal_sets": 0,
+      "positive_regret_oracle_drop_pre_splice": 0,
+      "teacher_nonempty_parents": 1,
+      "teacher_positive_regret": 1,
+      "teacher_weighted_regret": 0.06298417271208523,
+      "positive_regret_teacher_highest_attention_also_optimal_drop": 1
+    },
+    "K4/FIFO/ALL": {
+      "parents": 96,
+      "positive_task_regret": 1,
+      "chosen_loss": 1.135605899429347,
+      "oracle_loss": 1.1349335193720718,
+      "zero_memory_loss": 1.0231094831951641,
+      "chosen_minus_oracle": {
+        "signal": 0.00037770612469183873,
+        "noise": -2.3593932143293674e-05,
+        "cross": 0.0003182678647264377,
+        "total": 0.0006723800572749839
+      },
+      "chosen_minus_zero": {
+        "signal": 0.037071430750184334,
+        "noise": 0.06226789500104401,
+        "cross": 0.013157090482954261,
+        "total": 0.1124964162341826
+      },
+      "positive_regret_oracle_improves_signal": 1,
+      "positive_regret_oracle_worsens_signal": 0,
+      "disjoint_task_signal_optimal_sets": 1,
+      "positive_regret_oracle_drop_pre_splice": 0,
+      "teacher_nonempty_parents": 2,
+      "teacher_positive_regret": 1,
+      "teacher_weighted_regret": 0.031492086356042615,
+      "positive_regret_teacher_highest_attention_also_optimal_drop": 1
+    },
+    "K4/PaFu/EXACT": {
+      "parents": 32,
+      "positive_task_regret": 1,
+      "chosen_loss": 1.1794831913868162,
+      "oracle_loss": 1.1490755303941609,
+      "zero_memory_loss": 1.0142137193616445,
+      "chosen_minus_oracle": {
+        "signal": 0.013616707551158142,
+        "noise": 0.016735181184413937,
+        "cross": 5.5772257083369825e-05,
+        "total": 0.030407660992655454
+      },
+      "chosen_minus_zero": {
+        "signal": 0.054199413134554744,
+        "noise": 0.0819838693693279,
+        "cross": 0.029086189521289038,
+        "total": 0.1652694720251717
+      },
+      "positive_regret_oracle_improves_signal": 1,
+      "positive_regret_oracle_worsens_signal": 0,
+      "disjoint_task_signal_optimal_sets": 0,
+      "positive_regret_oracle_drop_pre_splice": 0,
+      "teacher_nonempty_parents": 1,
+      "teacher_positive_regret": 1,
+      "teacher_weighted_regret": 0.6228601931436745,
+      "positive_regret_teacher_highest_attention_also_optimal_drop": 1
+    },
+    "K4/PaFu/NEWPATH": {
+      "parents": 32,
+      "positive_task_regret": 1,
+      "chosen_loss": 1.1333801039173685,
+      "oracle_loss": 1.1325801478132314,
+      "zero_memory_loss": 1.0340529754444217,
+      "chosen_minus_oracle": {
+        "signal": -0.0011580968946880228,
+        "noise": 0.00024273450350976671,
+        "cross": 0.0017153184953155023,
+        "total": 0.0007999561041372406
+      },
+      "chosen_minus_zero": {
+        "signal": 0.035716165477531626,
+        "noise": 0.05709578339270697,
+        "cross": 0.0065151796027082065,
+        "total": 0.09932712847294678
+      },
+      "positive_regret_oracle_improves_signal": 0,
+      "positive_regret_oracle_worsens_signal": 1,
+      "disjoint_task_signal_optimal_sets": 1,
+      "positive_regret_oracle_drop_pre_splice": 1,
+      "teacher_nonempty_parents": 1,
+      "teacher_positive_regret": 0,
+      "teacher_weighted_regret": 0.0,
+      "positive_regret_teacher_highest_attention_also_optimal_drop": 0
+    },
+    "K4/PaFu/CHANGE": {
+      "parents": 32,
+      "positive_task_regret": 1,
+      "chosen_loss": 1.1264772771443112,
+      "oracle_loss": 1.1227201943078327,
+      "zero_memory_loss": 1.0215087322318528,
+      "chosen_minus_oracle": {
+        "signal": 0.00036081308855263953,
+        "noise": 0.006168132499647717,
+        "cross": -0.002771862751721852,
+        "total": 0.003757082836478501
+      },
+      "chosen_minus_zero": {
+        "signal": 0.03288396224360851,
+        "noise": 0.07075805755236159,
+        "cross": 0.001326525116488206,
+        "total": 0.10496854491245829
+      },
+      "positive_regret_oracle_improves_signal": 1,
+      "positive_regret_oracle_worsens_signal": 0,
+      "disjoint_task_signal_optimal_sets": 0,
+      "positive_regret_oracle_drop_pre_splice": 1,
+      "teacher_nonempty_parents": 2,
+      "teacher_positive_regret": 2,
+      "teacher_weighted_regret": 0.07702648795946174,
+      "positive_regret_teacher_highest_attention_also_optimal_drop": 1
+    },
+    "K4/PaFu/ALL": {
+      "parents": 96,
+      "positive_task_regret": 3,
+      "chosen_loss": 1.1468245101066799,
+      "oracle_loss": 1.1349335193720718,
+      "zero_memory_loss": 1.0231094831951641,
+      "chosen_minus_oracle": {
+        "signal": 0.004390917310337291,
+        "noise": 0.007843131298952762,
+        "cross": -0.0003430578746820476,
+        "total": 0.011890990734608003
+      },
+      "chosen_minus_zero": {
+        "signal": 0.04108464193582979,
+        "noise": 0.07013462023214007,
+        "cross": 0.012495764743545777,
+        "total": 0.12371502691151562
+      },
+      "positive_regret_oracle_improves_signal": 2,
+      "positive_regret_oracle_worsens_signal": 1,
+      "disjoint_task_signal_optimal_sets": 1,
+      "positive_regret_oracle_drop_pre_splice": 2,
+      "teacher_nonempty_parents": 4,
+      "teacher_positive_regret": 3,
+      "teacher_weighted_regret": 0.2352847401952061,
+      "positive_regret_teacher_highest_attention_also_optimal_drop": 2
+    },
+    "K4/WR/EXACT": {
+      "parents": 32,
+      "positive_task_regret": 3,
+      "chosen_loss": 1.1615913423655098,
+      "oracle_loss": 1.1312696325383886,
+      "zero_memory_loss": 1.0142137193616445,
+      "chosen_minus_oracle": {
+        "signal": 0.0058003919232092055,
+        "noise": 0.022380463290852956,
+        "cross": 0.0021408546130589944,
+        "total": 0.030321709827121155
+      },
+      "chosen_minus_zero": {
+        "signal": 0.02388827026338895,
+        "noise": 0.09755755249782243,
+        "cross": 0.025931800242653975,
+        "total": 0.14737762300386537
+      },
+      "positive_regret_oracle_improves_signal": 2,
+      "positive_regret_oracle_worsens_signal": 1,
+      "disjoint_task_signal_optimal_sets": 1,
+      "positive_regret_oracle_drop_pre_splice": 3,
+      "teacher_nonempty_parents": 5,
+      "teacher_positive_regret": 3,
+      "teacher_weighted_regret": 0.17696133817169032,
+      "positive_regret_teacher_highest_attention_also_optimal_drop": 3
+    },
+    "K4/WR/NEWPATH": {
+      "parents": 32,
+      "positive_task_regret": 1,
+      "chosen_loss": 1.1333801039173685,
+      "oracle_loss": 1.1325801478132314,
+      "zero_memory_loss": 1.0340529754444217,
+      "chosen_minus_oracle": {
+        "signal": -0.0011580968946880228,
+        "noise": 0.00024273450350976671,
+        "cross": 0.0017153184953155023,
+        "total": 0.0007999561041372406
+      },
+      "chosen_minus_zero": {
+        "signal": 0.035716165477531626,
+        "noise": 0.05709578339270697,
+        "cross": 0.0065151796027082065,
+        "total": 0.09932712847294678
+      },
+      "positive_regret_oracle_improves_signal": 0,
+      "positive_regret_oracle_worsens_signal": 1,
+      "disjoint_task_signal_optimal_sets": 1,
+      "positive_regret_oracle_drop_pre_splice": 1,
+      "teacher_nonempty_parents": 1,
+      "teacher_positive_regret": 0,
+      "teacher_weighted_regret": 0.0,
+      "positive_regret_teacher_highest_attention_also_optimal_drop": 0
+    },
+    "K4/WR/CHANGE": {
+      "parents": 32,
+      "positive_task_regret": 2,
+      "chosen_loss": 1.1574136912763664,
+      "oracle_loss": 1.1227201943078327,
+      "zero_memory_loss": 1.0215087322318528,
+      "chosen_minus_oracle": {
+        "signal": 0.023072097979494,
+        "noise": 0.014418690443978007,
+        "cross": -0.0027972914549382996,
+        "total": 0.03469349696853369
+      },
+      "chosen_minus_zero": {
+        "signal": 0.05559524713454987,
+        "noise": 0.07900861549669186,
+        "cross": 0.001301096413271758,
+        "total": 0.1359049590445135
+      },
+      "positive_regret_oracle_improves_signal": 2,
+      "positive_regret_oracle_worsens_signal": 0,
+      "disjoint_task_signal_optimal_sets": 0,
+      "positive_regret_oracle_drop_pre_splice": 2,
+      "teacher_nonempty_parents": 3,
+      "teacher_positive_regret": 3,
+      "teacher_weighted_regret": 0.3469257017763132,
+      "positive_regret_teacher_highest_attention_also_optimal_drop": 2
+    },
+    "K4/WR/ALL": {
+      "parents": 96,
+      "positive_task_regret": 6,
+      "chosen_loss": 1.151001512404965,
+      "oracle_loss": 1.1288546867054063,
+      "zero_memory_loss": 1.0231094831951641,
+      "chosen_minus_oracle": {
+        "signal": 0.009273107757958324,
+        "noise": 0.01251339458519197,
+        "cross": 0.00036032335640847626,
+        "total": 0.02214682569955876
+      },
+      "chosen_minus_zero": {
+        "signal": 0.038287225784295956,
+        "noise": 0.0781943833880004,
+        "cross": 0.011410420037504502,
+        "total": 0.12789202920980086
+      },
+      "positive_regret_oracle_improves_signal": 4,
+      "positive_regret_oracle_worsens_signal": 2,
+      "disjoint_task_signal_optimal_sets": 2,
+      "positive_regret_oracle_drop_pre_splice": 6,
+      "teacher_nonempty_parents": 9,
+      "teacher_positive_regret": 6,
+      "teacher_weighted_regret": 0.2161641338955604,
+      "positive_regret_teacher_highest_attention_also_optimal_drop": 5
+    },
+    "K64/FIFO/EXACT": {
+      "parents": 32,
+      "positive_task_regret": 3,
+      "chosen_loss": 1.1798326137596282,
+      "oracle_loss": 1.1512969636936505,
+      "zero_memory_loss": 1.0142137193616445,
+      "chosen_minus_oracle": {
+        "signal": 0.017682012663604887,
+        "noise": 0.016279138706064365,
+        "cross": -0.005425501303691492,
+        "total": 0.028535650065977757
+      },
+      "chosen_minus_zero": {
+        "signal": 0.05824055104730632,
+        "noise": 0.08393486242330321,
+        "cross": 0.023443480927374197,
+        "total": 0.16561889439798375
+      },
+      "positive_regret_oracle_improves_signal": 2,
+      "positive_regret_oracle_worsens_signal": 1,
+      "disjoint_task_signal_optimal_sets": 1,
+      "positive_regret_oracle_drop_pre_splice": 3,
+      "teacher_nonempty_parents": 3,
+      "teacher_positive_regret": 3,
+      "teacher_weighted_regret": 0.09582852219729754,
+      "positive_regret_teacher_highest_attention_also_optimal_drop": 3
+    },
+    "K64/FIFO/NEWPATH": {
+      "parents": 32,
+      "positive_task_regret": 2,
+      "chosen_loss": 1.1527698977362797,
+      "oracle_loss": 1.1340582024703143,
+      "zero_memory_loss": 1.0340529754444217,
+      "chosen_minus_oracle": {
+        "signal": 0.0010668014883913513,
+        "noise": 0.014180476797729257,
+        "cross": 0.003464416979844926,
+        "total": 0.01871169526596553
+      },
+      "chosen_minus_zero": {
+        "signal": 0.03710584424015815,
+        "noise": 0.07313091142405614,
+        "cross": 0.008480166627643811,
+        "total": 0.1187169222918581
+      },
+      "positive_regret_oracle_improves_signal": 1,
+      "positive_regret_oracle_worsens_signal": 1,
+      "disjoint_task_signal_optimal_sets": 3,
+      "positive_regret_oracle_drop_pre_splice": 1,
+      "teacher_nonempty_parents": 4,
+      "teacher_positive_regret": 2,
+      "teacher_weighted_regret": 0.1411154046002539,
+      "positive_regret_teacher_highest_attention_also_optimal_drop": 2
+    },
+    "K64/FIFO/CHANGE": {
+      "parents": 32,
+      "positive_task_regret": 3,
+      "chosen_loss": 1.1390661067452383,
+      "oracle_loss": 1.1226311459664953,
+      "zero_memory_loss": 1.0215087322318528,
+      "chosen_minus_oracle": {
+        "signal": 0.002960454332206319,
+        "noise": 0.008400848613776084,
+        "cross": 0.005073657832760819,
+        "total": 0.016434960778743225
+      },
+      "chosen_minus_zero": {
+        "signal": 0.0357551255024698,
+        "noise": 0.07239164860940511,
+        "cross": 0.009410600401510613,
+        "total": 0.11755737451338552
+      },
+      "positive_regret_oracle_improves_signal": 3,
+      "positive_regret_oracle_worsens_signal": 0,
+      "disjoint_task_signal_optimal_sets": 1,
+      "positive_regret_oracle_drop_pre_splice": 1,
+      "teacher_nonempty_parents": 4,
+      "teacher_positive_regret": 3,
+      "teacher_weighted_regret": 0.12086626577523932,
+      "positive_regret_teacher_highest_attention_also_optimal_drop": 3
+    },
+    "K64/FIFO/ALL": {
+      "parents": 96,
+      "positive_task_regret": 8,
+      "chosen_loss": 1.1574529676613905,
+      "oracle_loss": 1.1361443572877739,
+      "zero_memory_loss": 1.0231094831951641,
+      "chosen_minus_oracle": {
+        "signal": 0.007368707839419946,
+        "noise": 0.012975442070419577,
+        "cross": 0.0009644604637769705,
+        "total": 0.02130861037361649
+      },
+      "chosen_minus_zero": {
+        "signal": 0.043872050944534786,
+        "noise": 0.07657354239587809,
+        "cross": 0.013897891125813366,
+        "total": 0.13434348446622624
+      },
+      "positive_regret_oracle_improves_signal": 6,
+      "positive_regret_oracle_worsens_signal": 2,
+      "disjoint_task_signal_optimal_sets": 5,
+      "positive_regret_oracle_drop_pre_splice": 5,
+      "teacher_nonempty_parents": 11,
+      "teacher_positive_regret": 8,
+      "teacher_weighted_regret": 0.11954888666119345,
+      "positive_regret_teacher_highest_attention_also_optimal_drop": 8
+    },
+    "K64/PaFu/EXACT": {
+      "parents": 32,
+      "positive_task_regret": 21,
+      "chosen_loss": 1.1938199280935806,
+      "oracle_loss": 1.080718972738614,
+      "zero_memory_loss": 1.0142137193616445,
+      "chosen_minus_oracle": {
+        "signal": -0.016015646862090036,
+        "noise": 0.11617684698541483,
+        "cross": 0.012939755231641866,
+        "total": 0.11310095535496664
+      },
+      "chosen_minus_zero": {
+        "signal": -0.059845937158247736,
+        "noise": 0.21807914816193155,
+        "cross": 0.021372997728252446,
+        "total": 0.17960620873193625
+      },
+      "positive_regret_oracle_improves_signal": 6,
+      "positive_regret_oracle_worsens_signal": 15,
+      "disjoint_task_signal_optimal_sets": 18,
+      "positive_regret_oracle_drop_pre_splice": 21,
+      "teacher_nonempty_parents": 27,
+      "teacher_positive_regret": 21,
+      "teacher_weighted_regret": 0.13717430111550521,
+      "positive_regret_teacher_highest_attention_also_optimal_drop": 11
+    },
+    "K64/PaFu/NEWPATH": {
+      "parents": 32,
+      "positive_task_regret": 13,
+      "chosen_loss": 1.1678785245504164,
+      "oracle_loss": 1.0977858030853636,
+      "zero_memory_loss": 1.0340529754444217,
+      "chosen_minus_oracle": {
+        "signal": 0.0021835595690862042,
+        "noise": 0.05001915681287621,
+        "cross": 0.017890005083090545,
+        "total": 0.07009272146505295
+      },
+      "chosen_minus_zero": {
+        "signal": 0.024603361873342396,
+        "noise": 0.09649834046688437,
+        "cross": 0.012723846765767877,
+        "total": 0.13382554910599465
+      },
+      "positive_regret_oracle_improves_signal": 6,
+      "positive_regret_oracle_worsens_signal": 7,
+      "disjoint_task_signal_optimal_sets": 9,
+      "positive_regret_oracle_drop_pre_splice": 12,
+      "teacher_nonempty_parents": 15,
+      "teacher_positive_regret": 12,
+      "teacher_weighted_regret": 0.1412270520698309,
+      "positive_regret_teacher_highest_attention_also_optimal_drop": 8
+    },
+    "K64/PaFu/CHANGE": {
+      "parents": 32,
+      "positive_task_regret": 6,
+      "chosen_loss": 1.1935469238267493,
+      "oracle_loss": 1.137184828888744,
+      "zero_memory_loss": 1.0215087322318528,
+      "chosen_minus_oracle": {
+        "signal": 0.02158189581004158,
+        "noise": 0.0309267030178192,
+        "cross": 0.0038534961101445546,
+        "total": 0.05636209493800535
+      },
+      "chosen_minus_zero": {
+        "signal": 0.05377040751896557,
+        "noise": 0.11614533903202967,
+        "cross": 0.0021224450439012916,
+        "total": 0.17203819159489653
+      },
+      "positive_regret_oracle_improves_signal": 4,
+      "positive_regret_oracle_worsens_signal": 2,
+      "disjoint_task_signal_optimal_sets": 2,
+      "positive_regret_oracle_drop_pre_splice": 4,
+      "teacher_nonempty_parents": 8,
+      "teacher_positive_regret": 7,
+      "teacher_weighted_regret": 0.2152047858412762,
+      "positive_regret_teacher_highest_attention_also_optimal_drop": 4
+    },
+    "K64/PaFu/ALL": {
+      "parents": 96,
+      "positive_task_regret": 40,
+      "chosen_loss": 1.18526853689199,
+      "oracle_loss": 1.1050579578179567,
+      "zero_memory_loss": 1.0231094831951641,
+      "chosen_minus_oracle": {
+        "signal": 0.0024196607948040122,
+        "noise": 0.06625750452727949,
+        "cross": 0.011533413751949878,
+        "total": 0.08021057907403337
+      },
+      "chosen_minus_zero": {
+        "signal": 0.00546978018983896,
+        "noise": 0.14453721747528323,
+        "cross": 0.012152056031703589,
+        "total": 0.16215905369682573
+      },
+      "positive_regret_oracle_improves_signal": 16,
+      "positive_regret_oracle_worsens_signal": 24,
+      "disjoint_task_signal_optimal_sets": 29,
+      "positive_regret_oracle_drop_pre_splice": 37,
+      "teacher_nonempty_parents": 50,
+      "teacher_positive_regret": 40,
+      "teacher_weighted_regret": 0.1516309150275812,
+      "positive_regret_teacher_highest_attention_also_optimal_drop": 23
+    },
+    "K64/WR/EXACT": {
+      "parents": 32,
+      "positive_task_regret": 16,
+      "chosen_loss": 1.2562091074958686,
+      "oracle_loss": 1.0900039345002115,
+      "zero_memory_loss": 1.0142137193616445,
+      "chosen_minus_oracle": {
+        "signal": 0.07817528961493195,
+        "noise": 0.10067914398967333,
+        "cross": -0.012649260608948372,
+        "total": 0.1662051729956569
+      },
+      "chosen_minus_zero": {
+        "signal": 0.049983411453150633,
+        "noise": 0.2217776317100697,
+        "cross": -0.029765655028996328,
+        "total": 0.24199538813422403
+      },
+      "positive_regret_oracle_improves_signal": 13,
+      "positive_regret_oracle_worsens_signal": 3,
+      "disjoint_task_signal_optimal_sets": 7,
+      "positive_regret_oracle_drop_pre_splice": 16,
+      "teacher_nonempty_parents": 26,
+      "teacher_positive_regret": 16,
+      "teacher_weighted_regret": 0.19805589816288546,
+      "positive_regret_teacher_highest_attention_also_optimal_drop": 6
+    },
+    "K64/WR/NEWPATH": {
+      "parents": 32,
+      "positive_task_regret": 11,
+      "chosen_loss": 1.3208093491625512,
+      "oracle_loss": 1.1510168262746872,
+      "zero_memory_loss": 1.0340529754444217,
+      "chosen_minus_oracle": {
+        "signal": 0.07386085230545557,
+        "noise": 0.0681829367364154,
+        "cross": 0.027748733845992933,
+        "total": 0.1697925228878639
+      },
+      "chosen_minus_zero": {
+        "signal": 0.13079375467776794,
+        "noise": 0.13419818178580753,
+        "cross": 0.02176443725455397,
+        "total": 0.2867563737181294
+      },
+      "positive_regret_oracle_improves_signal": 8,
+      "positive_regret_oracle_worsens_signal": 3,
+      "disjoint_task_signal_optimal_sets": 6,
+      "positive_regret_oracle_drop_pre_splice": 10,
+      "teacher_nonempty_parents": 14,
+      "teacher_positive_regret": 11,
+      "teacher_weighted_regret": 0.365725765126809,
+      "positive_regret_teacher_highest_attention_also_optimal_drop": 7
+    },
+    "K64/WR/CHANGE": {
+      "parents": 32,
+      "positive_task_regret": 12,
+      "chosen_loss": 1.2972294731565552,
+      "oracle_loss": 1.143468377193267,
+      "zero_memory_loss": 1.0215087322318528,
+      "chosen_minus_oracle": {
+        "signal": 0.11656466750534303,
+        "noise": 0.053813646805296135,
+        "cross": -0.016617218347350745,
+        "total": 0.1537610959632884
+      },
+      "chosen_minus_zero": {
+        "signal": 0.16456723621335942,
+        "noise": 0.1314173032977987,
+        "cross": -0.02026379858645571,
+        "total": 0.2757207409247024
+      },
+      "positive_regret_oracle_improves_signal": 11,
+      "positive_regret_oracle_worsens_signal": 1,
+      "disjoint_task_signal_optimal_sets": 3,
+      "positive_regret_oracle_drop_pre_splice": 10,
+      "teacher_nonempty_parents": 13,
+      "teacher_positive_regret": 12,
+      "teacher_weighted_regret": 0.36382547275767413,
+      "positive_regret_teacher_highest_attention_also_optimal_drop": 9
+    },
+    "K64/WR/ALL": {
+      "parents": 96,
+      "positive_task_regret": 39,
+      "chosen_loss": 1.2909157828277273,
+      "oracle_loss": 1.1276777991050029,
+      "zero_memory_loss": 1.0231094831951641,
+      "chosen_minus_oracle": {
+        "signal": 0.08953116717669254,
+        "noise": 0.07449971676494854,
+        "cross": -0.0007929002189167566,
+        "total": 0.16323798372272433
+      },
+      "chosen_minus_zero": {
+        "signal": 0.11443395620071724,
+        "noise": 0.16317277382472198,
+        "cross": -0.009800430392876114,
+        "total": 0.26780629963256314
+      },
+      "positive_regret_oracle_improves_signal": 32,
+      "positive_regret_oracle_worsens_signal": 7,
+      "disjoint_task_signal_optimal_sets": 16,
+      "positive_regret_oracle_drop_pre_splice": 36,
+      "teacher_nonempty_parents": 53,
+      "teacher_positive_regret": 39,
+      "teacher_weighted_regret": 0.28215706439144783,
+      "positive_regret_teacher_highest_attention_also_optimal_drop": 22
+    }
+  },
+  "collision_audit": {
+    "bounded_past_sha256": {
+      "unique_states": 864,
+      "duplicate_groups": 0,
+      "duplicate_rows": 0,
+      "conflicting_optimal_set_groups": 0,
+      "conflicts": [],
+      "limit": "Only exact archived input collisions; zero conflicts does not establish learnability or exclude unobserved future branches."
+    },
+    "full_available_past_sha256": {
+      "unique_states": 864,
+      "duplicate_groups": 0,
+      "duplicate_rows": 0,
+      "conflicting_optimal_set_groups": 0,
+      "conflicts": [],
+      "limit": "Only exact archived input collisions; zero conflicts does not establish learnability or exclude unobserved future branches."
+    }
+  },
+  "runtime_seconds": 10.248637790908106,
+  "training_steps": 0,
+  "gpu_seconds": 0,
+  "new_scientific_online_arms": 0,
+  "positive_regret_parents": 129,
+  "positive_regret_signal_improves": 81,
+  "positive_regret_signal_worsens": 48,
+  "disjoint_task_signal_optimal_sets": 69,
+  "limitations": [
+    "U is a standardized pre-injection slow-model residual, not physical ground truth.",
+    "Saved parents reuse eight A clusters and adjacent CHANGE B sources; 864 rows are not independent.",
+    "Frozen-path realized decomposition does not identify causal effects of noise on policy selection.",
+    "Raw Z/actions/continuous pose/RGB absent; no visual task metric is reconstructed.",
+    "Exact collision audit is not a trained causal-predictability test."
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "runner_sha256": "7a706a2f454a8568c68949b34940de853db1af5d3707260930dbd7c5e08756f6",
+  "input_parent_sha256": "aa2bcb043c34204c42407f0f07d1c30461f99b1ec292ac9e3c29fe3091582c11",
+  "input_summary_sha256": "c049a800fdd3db57306fee22019fe7b0c3292eb74aced460cc3536b45c6698ba",
+  "files": {
+    "connection_statistics.json": {
+      "sha256": "577ff2803f619b30d462f696fdc9c609aab158cf56f8884854e5d4315df08e5d",
+      "bytes": 51516
+    },
+    "connection_components.png": {
+      "sha256": "5486b898c9364759a8366e06b3cafd604d422276eb2c8b6396149fe4b1f5a8e2",
+      "bytes": 100543
+    },
+    "connection_components.pdf": {
+      "sha256": "3b24d0127437f119d80549c0b599061bb3445746c45e28ea62b045bd0d0f2085",
+      "bytes": 20248
+    }
+  },
+  "new_model_calls": 0,
+  "new_training_steps": 0
+}

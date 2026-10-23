@@ -1,0 +1,16 @@
+{
+  "kind": "posthoc illustration of existing frozen results, not a scientific run or preregistration",
+  "selection": "Existing harmful-read case retained exactly. For noise tradeoff choose first K64/PaFu positive-regret and signal-worsening parent; for positive control choose first K64/PaFu zero-regret parent beating zero on total and signal. Order EXACT,NEWPATH,CHANGE, then source index, then original_t. No maximum-loss re-selection. A2 uses original aggregate conclusion only.",
+  "threshold": 1e-08,
+  "source_sha256": {
+    "parents.json": "aa2bcb043c34204c42407f0f07d1c30461f99b1ec292ac9e3c29fe3091582c11",
+    "previous_top_case.json": "407ad69f0ae7ee50b96a187ff3696b2d0107becd820972d693d604ef7713e46e",
+    "prior_a2_conclusion.json": "426b7483ad4d5e99a926cba51384f399dbe4bef430af0d78bedcfffa3501eb80"
+  },
+  "limits": [
+    "Data already examined before this illustration protocol; cases are explanatory, not unbiased estimators.",
+    "No RGB / reconstructed physical state; no invented residual values.",
+    "All 864 parents and policy/source dependence are reported.",
+    "No new model calls, training, scientific intervention or confirmation."
+  ]
+}

@@ -1,0 +1,4370 @@
+[
+  {
+    "condition": "EXACT",
+    "source_index": 24,
+    "method": "REF/A1",
+    "POST": {
+      "num": 2659.598302817297,
+      "den": 2920.0
+    },
+    "DET": {
+      "num": 341.09924667302073,
+      "den": 424.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 24,
+    "method": "REF/A2",
+    "POST": {
+      "num": 2647.6273421542037,
+      "den": 2920.0
+    },
+    "DET": {
+      "num": 339.4999496651388,
+      "den": 424.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 24,
+    "method": "REF/A6",
+    "POST": {
+      "num": 2597.294593781018,
+      "den": 2920.0
+    },
+    "DET": {
+      "num": 333.59274990927804,
+      "den": 424.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 24,
+    "method": "REF/all_observations_mean",
+    "POST": {
+      "num": 2683.6896531339735,
+      "den": 2920.0
+    },
+    "DET": {
+      "num": 361.2526368809288,
+      "den": 424.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 24,
+    "method": "REF/no_memory",
+    "POST": {
+      "num": 2920.1583402412816,
+      "den": 2920.0
+    },
+    "DET": {
+      "num": 383.8715264330756,
+      "den": 424.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 25,
+    "method": "REF/A1",
+    "POST": {
+      "num": 2995.685523024153,
+      "den": 3339.0
+    },
+    "DET": {
+      "num": 294.1170248064772,
+      "den": 348.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 25,
+    "method": "REF/A2",
+    "POST": {
+      "num": 2973.5539240038743,
+      "den": 3339.0
+    },
+    "DET": {
+      "num": 293.4905555047409,
+      "den": 348.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 25,
+    "method": "REF/A6",
+    "POST": {
+      "num": 2921.513840452628,
+      "den": 3339.0
+    },
+    "DET": {
+      "num": 288.0372461351524,
+      "den": 348.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 25,
+    "method": "REF/all_observations_mean",
+    "POST": {
+      "num": 3001.5319912880304,
+      "den": 3339.0
+    },
+    "DET": {
+      "num": 299.68127368881625,
+      "den": 348.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 25,
+    "method": "REF/no_memory",
+    "POST": {
+      "num": 3277.479677066578,
+      "den": 3339.0
+    },
+    "DET": {
+      "num": 312.4961653070468,
+      "den": 348.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 26,
+    "method": "REF/A1",
+    "POST": {
+      "num": 2798.959010442012,
+      "den": 2914.0
+    },
+    "DET": {
+      "num": 394.99086058147503,
+      "den": 388.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 26,
+    "method": "REF/A2",
+    "POST": {
+      "num": 2761.436582146571,
+      "den": 2914.0
+    },
+    "DET": {
+      "num": 381.60959491594303,
+      "den": 388.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 26,
+    "method": "REF/A6",
+    "POST": {
+      "num": 2717.2617282122205,
+      "den": 2914.0
+    },
+    "DET": {
+      "num": 376.57203734303584,
+      "den": 388.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 26,
+    "method": "REF/all_observations_mean",
+    "POST": {
+      "num": 2767.157981280111,
+      "den": 2914.0
+    },
+    "DET": {
+      "num": 363.050350354732,
+      "den": 388.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 26,
+    "method": "REF/no_memory",
+    "POST": {
+      "num": 3195.4117279667103,
+      "den": 2914.0
+    },
+    "DET": {
+      "num": 505.22029793471415,
+      "den": 388.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 27,
+    "method": "REF/A1",
+    "POST": {
+      "num": 2641.2530705153804,
+      "den": 3084.0
+    },
+    "DET": {
+      "num": 342.5582888118197,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 27,
+    "method": "REF/A2",
+    "POST": {
+      "num": 2618.4976141301627,
+      "den": 3084.0
+    },
+    "DET": {
+      "num": 343.7827477176797,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 27,
+    "method": "REF/A6",
+    "POST": {
+      "num": 2570.3836240370383,
+      "den": 3084.0
+    },
+    "DET": {
+      "num": 336.8946843310871,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 27,
+    "method": "REF/all_observations_mean",
+    "POST": {
+      "num": 2683.0487455698335,
+      "den": 3084.0
+    },
+    "DET": {
+      "num": 350.7300397293591,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 27,
+    "method": "REF/no_memory",
+    "POST": {
+      "num": 2869.415642479991,
+      "den": 3084.0
+    },
+    "DET": {
+      "num": 364.6897109464056,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 28,
+    "method": "REF/A1",
+    "POST": {
+      "num": 3507.507930523335,
+      "den": 3760.0
+    },
+    "DET": {
+      "num": 415.1297892904588,
+      "den": 423.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 28,
+    "method": "REF/A2",
+    "POST": {
+      "num": 3492.222552970462,
+      "den": 3760.0
+    },
+    "DET": {
+      "num": 412.31241136222656,
+      "den": 423.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 28,
+    "method": "REF/A6",
+    "POST": {
+      "num": 3412.4478101003947,
+      "den": 3760.0
+    },
+    "DET": {
+      "num": 403.8320064818959,
+      "den": 423.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 28,
+    "method": "REF/all_observations_mean",
+    "POST": {
+      "num": 3362.2211683783366,
+      "den": 3760.0
+    },
+    "DET": {
+      "num": 404.8976303218392,
+      "den": 423.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 28,
+    "method": "REF/no_memory",
+    "POST": {
+      "num": 3878.032705480875,
+      "den": 3760.0
+    },
+    "DET": {
+      "num": 459.87883824143057,
+      "den": 423.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 29,
+    "method": "REF/A1",
+    "POST": {
+      "num": 2966.924080020485,
+      "den": 3081.0
+    },
+    "DET": {
+      "num": 378.56700772286,
+      "den": 368.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 29,
+    "method": "REF/A2",
+    "POST": {
+      "num": 2976.547626910293,
+      "den": 3081.0
+    },
+    "DET": {
+      "num": 375.77252670775295,
+      "den": 368.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 29,
+    "method": "REF/A6",
+    "POST": {
+      "num": 2904.6973530984087,
+      "den": 3081.0
+    },
+    "DET": {
+      "num": 367.8175966326827,
+      "den": 368.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 29,
+    "method": "REF/all_observations_mean",
+    "POST": {
+      "num": 3004.152573680487,
+      "den": 3081.0
+    },
+    "DET": {
+      "num": 388.92092689919326,
+      "den": 368.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 29,
+    "method": "REF/no_memory",
+    "POST": {
+      "num": 3254.6187031261184,
+      "den": 3081.0
+    },
+    "DET": {
+      "num": 417.9990863440196,
+      "den": 368.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 30,
+    "method": "REF/A1",
+    "POST": {
+      "num": 2938.106326627184,
+      "den": 3321.0
+    },
+    "DET": {
+      "num": 318.48996895073424,
+      "den": 319.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 30,
+    "method": "REF/A2",
+    "POST": {
+      "num": 2925.604909725934,
+      "den": 3321.0
+    },
+    "DET": {
+      "num": 313.9523383615906,
+      "den": 319.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 30,
+    "method": "REF/A6",
+    "POST": {
+      "num": 2867.3675681080304,
+      "den": 3321.0
+    },
+    "DET": {
+      "num": 305.82767186289357,
+      "den": 319.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 30,
+    "method": "REF/all_observations_mean",
+    "POST": {
+      "num": 2951.7063318694727,
+      "den": 3321.0
+    },
+    "DET": {
+      "num": 308.5849841537697,
+      "den": 319.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 30,
+    "method": "REF/no_memory",
+    "POST": {
+      "num": 3251.9132509812553,
+      "den": 3321.0
+    },
+    "DET": {
+      "num": 375.73856509568486,
+      "den": 319.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 31,
+    "method": "REF/A1",
+    "POST": {
+      "num": 2534.062336674644,
+      "den": 2921.0
+    },
+    "DET": {
+      "num": 349.4353240950733,
+      "den": 314.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 31,
+    "method": "REF/A2",
+    "POST": {
+      "num": 2491.8226176255484,
+      "den": 2921.0
+    },
+    "DET": {
+      "num": 347.51596736501284,
+      "den": 314.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 31,
+    "method": "REF/A6",
+    "POST": {
+      "num": 2464.8421375376665,
+      "den": 2921.0
+    },
+    "DET": {
+      "num": 337.1804222218675,
+      "den": 314.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 31,
+    "method": "REF/all_observations_mean",
+    "POST": {
+      "num": 2534.6900625994294,
+      "den": 2921.0
+    },
+    "DET": {
+      "num": 316.7282885389885,
+      "den": 314.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 31,
+    "method": "REF/no_memory",
+    "POST": {
+      "num": 2821.8610535176995,
+      "den": 2921.0
+    },
+    "DET": {
+      "num": 402.1520535225237,
+      "den": 314.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 24,
+    "method": "REF/A1",
+    "POST": {
+      "num": 2821.9131098174776,
+      "den": 2857.0
+    },
+    "DET": {
+      "num": 419.42614519655206,
+      "den": 277.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 24,
+    "method": "REF/A2",
+    "POST": {
+      "num": 2805.6401448920383,
+      "den": 2857.0
+    },
+    "DET": {
+      "num": 418.75182635957265,
+      "den": 277.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 24,
+    "method": "REF/A6",
+    "POST": {
+      "num": 2811.810114172171,
+      "den": 2857.0
+    },
+    "DET": {
+      "num": 416.70509159012306,
+      "den": 277.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 24,
+    "method": "REF/all_observations_mean",
+    "POST": {
+      "num": 3538.960329821397,
+      "den": 2857.0
+    },
+    "DET": {
+      "num": 547.7690046095673,
+      "den": 277.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 24,
+    "method": "REF/no_memory",
+    "POST": {
+      "num": 2905.3000079200233,
+      "den": 2857.0
+    },
+    "DET": {
+      "num": 429.06635519041765,
+      "den": 277.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 25,
+    "method": "REF/A1",
+    "POST": {
+      "num": 3405.2644191119443,
+      "den": 3192.0
+    },
+    "DET": {
+      "num": 471.4708313599122,
+      "den": 305.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 25,
+    "method": "REF/A2",
+    "POST": {
+      "num": 3408.8342979260765,
+      "den": 3192.0
+    },
+    "DET": {
+      "num": 469.73256397596145,
+      "den": 305.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 25,
+    "method": "REF/A6",
+    "POST": {
+      "num": 3398.00455292692,
+      "den": 3192.0
+    },
+    "DET": {
+      "num": 469.7121199770175,
+      "den": 305.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 25,
+    "method": "REF/all_observations_mean",
+    "POST": {
+      "num": 4269.658420304809,
+      "den": 3192.0
+    },
+    "DET": {
+      "num": 579.1797751416118,
+      "den": 305.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 25,
+    "method": "REF/no_memory",
+    "POST": {
+      "num": 3484.561333386259,
+      "den": 3192.0
+    },
+    "DET": {
+      "num": 480.0275356093051,
+      "den": 305.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 26,
+    "method": "REF/A1",
+    "POST": {
+      "num": 2920.6544634907195,
+      "den": 3182.0
+    },
+    "DET": {
+      "num": 295.92759817187147,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 26,
+    "method": "REF/A2",
+    "POST": {
+      "num": 2920.8280329919903,
+      "den": 3182.0
+    },
+    "DET": {
+      "num": 296.8605172848793,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 26,
+    "method": "REF/A6",
+    "POST": {
+      "num": 2931.829329256146,
+      "den": 3182.0
+    },
+    "DET": {
+      "num": 293.44047250287366,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 26,
+    "method": "REF/all_observations_mean",
+    "POST": {
+      "num": 4066.078812507256,
+      "den": 3182.0
+    },
+    "DET": {
+      "num": 344.90308216715704,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 26,
+    "method": "REF/no_memory",
+    "POST": {
+      "num": 2957.4637394309048,
+      "den": 3182.0
+    },
+    "DET": {
+      "num": 306.287581359059,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 27,
+    "method": "REF/A1",
+    "POST": {
+      "num": 3146.1326553369718,
+      "den": 3188.0
+    },
+    "DET": {
+      "num": 262.52308125538696,
+      "den": 257.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 27,
+    "method": "REF/A2",
+    "POST": {
+      "num": 3148.2926878970484,
+      "den": 3188.0
+    },
+    "DET": {
+      "num": 263.1690711693574,
+      "den": 257.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 27,
+    "method": "REF/A6",
+    "POST": {
+      "num": 3133.063323718493,
+      "den": 3188.0
+    },
+    "DET": {
+      "num": 263.7214370635162,
+      "den": 257.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 27,
+    "method": "REF/all_observations_mean",
+    "POST": {
+      "num": 3993.1888941883644,
+      "den": 3188.0
+    },
+    "DET": {
+      "num": 387.1281157916806,
+      "den": 257.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 27,
+    "method": "REF/no_memory",
+    "POST": {
+      "num": 3241.0906074608,
+      "den": 3188.0
+    },
+    "DET": {
+      "num": 261.4208636231775,
+      "den": 257.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 28,
+    "method": "REF/A1",
+    "POST": {
+      "num": 3292.3831914524108,
+      "den": 3627.0
+    },
+    "DET": {
+      "num": 313.34729466009344,
+      "den": 374.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 28,
+    "method": "REF/A2",
+    "POST": {
+      "num": 3295.8144695106885,
+      "den": 3627.0
+    },
+    "DET": {
+      "num": 311.9824201979884,
+      "den": 374.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 28,
+    "method": "REF/A6",
+    "POST": {
+      "num": 3298.9963556343578,
+      "den": 3627.0
+    },
+    "DET": {
+      "num": 315.9836971704349,
+      "den": 374.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 28,
+    "method": "REF/all_observations_mean",
+    "POST": {
+      "num": 4252.232570356149,
+      "den": 3627.0
+    },
+    "DET": {
+      "num": 417.7752682196913,
+      "den": 374.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 28,
+    "method": "REF/no_memory",
+    "POST": {
+      "num": 3357.630414788483,
+      "den": 3627.0
+    },
+    "DET": {
+      "num": 309.79788213217387,
+      "den": 374.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 29,
+    "method": "REF/A1",
+    "POST": {
+      "num": 2828.8610553530943,
+      "den": 2904.0
+    },
+    "DET": {
+      "num": 343.5100158430018,
+      "den": 347.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 29,
+    "method": "REF/A2",
+    "POST": {
+      "num": 2814.547901739216,
+      "den": 2904.0
+    },
+    "DET": {
+      "num": 344.2678786594368,
+      "den": 347.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 29,
+    "method": "REF/A6",
+    "POST": {
+      "num": 2819.534655162088,
+      "den": 2904.0
+    },
+    "DET": {
+      "num": 344.11459807889014,
+      "den": 347.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 29,
+    "method": "REF/all_observations_mean",
+    "POST": {
+      "num": 3508.2623743787794,
+      "den": 2904.0
+    },
+    "DET": {
+      "num": 446.2298668478403,
+      "den": 347.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 29,
+    "method": "REF/no_memory",
+    "POST": {
+      "num": 2865.5080112018236,
+      "den": 2904.0
+    },
+    "DET": {
+      "num": 354.38544646152326,
+      "den": 347.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 30,
+    "method": "REF/A1",
+    "POST": {
+      "num": 2919.4874051684133,
+      "den": 3232.0
+    },
+    "DET": {
+      "num": 255.39375747307588,
+      "den": 278.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 30,
+    "method": "REF/A2",
+    "POST": {
+      "num": 2927.2396580020977,
+      "den": 3232.0
+    },
+    "DET": {
+      "num": 255.1326463315658,
+      "den": 278.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 30,
+    "method": "REF/A6",
+    "POST": {
+      "num": 2915.513251494116,
+      "den": 3232.0
+    },
+    "DET": {
+      "num": 255.21772034804033,
+      "den": 278.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 30,
+    "method": "REF/all_observations_mean",
+    "POST": {
+      "num": 3714.445397373834,
+      "den": 3232.0
+    },
+    "DET": {
+      "num": 333.5289072125672,
+      "den": 278.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 30,
+    "method": "REF/no_memory",
+    "POST": {
+      "num": 2987.3106086765297,
+      "den": 3232.0
+    },
+    "DET": {
+      "num": 258.20319385383016,
+      "den": 278.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 31,
+    "method": "REF/A1",
+    "POST": {
+      "num": 2444.7830696588776,
+      "den": 2748.0
+    },
+    "DET": {
+      "num": 150.48591590003787,
+      "den": 224.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 31,
+    "method": "REF/A2",
+    "POST": {
+      "num": 2437.7432715772047,
+      "den": 2748.0
+    },
+    "DET": {
+      "num": 151.08083417660808,
+      "den": 224.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 31,
+    "method": "REF/A6",
+    "POST": {
+      "num": 2445.084080701112,
+      "den": 2748.0
+    },
+    "DET": {
+      "num": 151.3909151338325,
+      "den": 224.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 31,
+    "method": "REF/all_observations_mean",
+    "POST": {
+      "num": 3076.3360496627383,
+      "den": 2748.0
+    },
+    "DET": {
+      "num": 215.50805461925225,
+      "den": 224.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 31,
+    "method": "REF/no_memory",
+    "POST": {
+      "num": 2476.4967053268956,
+      "den": 2748.0
+    },
+    "DET": {
+      "num": 154.0261223203624,
+      "den": 224.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 24,
+    "method": "REF/A1",
+    "POST": {
+      "num": 3222.4786783092763,
+      "den": 3192.0
+    },
+    "DET": {
+      "num": 433.73167831019566,
+      "den": 305.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 24,
+    "method": "REF/A2",
+    "POST": {
+      "num": 3228.7313314832973,
+      "den": 3192.0
+    },
+    "DET": {
+      "num": 434.0386561383586,
+      "den": 305.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 24,
+    "method": "REF/A6",
+    "POST": {
+      "num": 3233.8711015165063,
+      "den": 3192.0
+    },
+    "DET": {
+      "num": 436.9201902765358,
+      "den": 305.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 24,
+    "method": "REF/all_observations_mean",
+    "POST": {
+      "num": 4535.437001711771,
+      "den": 3192.0
+    },
+    "DET": {
+      "num": 677.4050083861157,
+      "den": 305.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 24,
+    "method": "REF/no_memory",
+    "POST": {
+      "num": 3250.415561446993,
+      "den": 3192.0
+    },
+    "DET": {
+      "num": 434.4443698731433,
+      "den": 305.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 25,
+    "method": "REF/A1",
+    "POST": {
+      "num": 2873.075036724769,
+      "den": 3182.0
+    },
+    "DET": {
+      "num": 366.41063649914304,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 25,
+    "method": "REF/A2",
+    "POST": {
+      "num": 2859.5600462526345,
+      "den": 3182.0
+    },
+    "DET": {
+      "num": 364.66126429101826,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 25,
+    "method": "REF/A6",
+    "POST": {
+      "num": 2885.808141290591,
+      "den": 3182.0
+    },
+    "DET": {
+      "num": 367.48382781067596,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 25,
+    "method": "REF/all_observations_mean",
+    "POST": {
+      "num": 3902.1707142530886,
+      "den": 3182.0
+    },
+    "DET": {
+      "num": 407.5452074086759,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 25,
+    "method": "REF/no_memory",
+    "POST": {
+      "num": 2873.940207591974,
+      "den": 3182.0
+    },
+    "DET": {
+      "num": 363.1427645952918,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 26,
+    "method": "REF/A1",
+    "POST": {
+      "num": 3049.420576472407,
+      "den": 3188.0
+    },
+    "DET": {
+      "num": 232.42568557396316,
+      "den": 257.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 26,
+    "method": "REF/A2",
+    "POST": {
+      "num": 3041.687298708348,
+      "den": 3188.0
+    },
+    "DET": {
+      "num": 230.6896412402504,
+      "den": 257.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 26,
+    "method": "REF/A6",
+    "POST": {
+      "num": 3058.561330163404,
+      "den": 3188.0
+    },
+    "DET": {
+      "num": 231.4226884715064,
+      "den": 257.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 26,
+    "method": "REF/all_observations_mean",
+    "POST": {
+      "num": 4253.596748600048,
+      "den": 3188.0
+    },
+    "DET": {
+      "num": 334.5771573297634,
+      "den": 257.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 26,
+    "method": "REF/no_memory",
+    "POST": {
+      "num": 3075.3042178030764,
+      "den": 3188.0
+    },
+    "DET": {
+      "num": 243.25231077905383,
+      "den": 257.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 27,
+    "method": "REF/A1",
+    "POST": {
+      "num": 3446.2457955760556,
+      "den": 3627.0
+    },
+    "DET": {
+      "num": 291.75541029190435,
+      "den": 374.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 27,
+    "method": "REF/A2",
+    "POST": {
+      "num": 3435.382269024157,
+      "den": 3627.0
+    },
+    "DET": {
+      "num": 294.356148914668,
+      "den": 374.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 27,
+    "method": "REF/A6",
+    "POST": {
+      "num": 3458.4281244429058,
+      "den": 3627.0
+    },
+    "DET": {
+      "num": 292.71623256083814,
+      "den": 374.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 27,
+    "method": "REF/all_observations_mean",
+    "POST": {
+      "num": 4738.825339555478,
+      "den": 3627.0
+    },
+    "DET": {
+      "num": 440.8363818191998,
+      "den": 374.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 27,
+    "method": "REF/no_memory",
+    "POST": {
+      "num": 3482.2251614624456,
+      "den": 3627.0
+    },
+    "DET": {
+      "num": 296.79614936172527,
+      "den": 374.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 28,
+    "method": "REF/A1",
+    "POST": {
+      "num": 2809.2743835237043,
+      "den": 2904.0
+    },
+    "DET": {
+      "num": 345.0924112068441,
+      "den": 347.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 28,
+    "method": "REF/A2",
+    "POST": {
+      "num": 2799.7240456906165,
+      "den": 2904.0
+    },
+    "DET": {
+      "num": 342.58644848456584,
+      "den": 347.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 28,
+    "method": "REF/A6",
+    "POST": {
+      "num": 2813.904248367119,
+      "den": 2904.0
+    },
+    "DET": {
+      "num": 349.34478548850063,
+      "den": 347.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 28,
+    "method": "REF/all_observations_mean",
+    "POST": {
+      "num": 3765.4009136292143,
+      "den": 2904.0
+    },
+    "DET": {
+      "num": 551.6572529419088,
+      "den": 347.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 28,
+    "method": "REF/no_memory",
+    "POST": {
+      "num": 2837.4638906966575,
+      "den": 2904.0
+    },
+    "DET": {
+      "num": 339.31891485254397,
+      "den": 347.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 29,
+    "method": "REF/A1",
+    "POST": {
+      "num": 2990.863446635176,
+      "den": 3232.0
+    },
+    "DET": {
+      "num": 274.74655545375174,
+      "den": 278.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 29,
+    "method": "REF/A2",
+    "POST": {
+      "num": 2965.1735092753706,
+      "den": 3232.0
+    },
+    "DET": {
+      "num": 257.8675433676293,
+      "den": 278.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 29,
+    "method": "REF/A6",
+    "POST": {
+      "num": 3000.9006543955766,
+      "den": 3232.0
+    },
+    "DET": {
+      "num": 274.5412579462847,
+      "den": 278.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 29,
+    "method": "REF/all_observations_mean",
+    "POST": {
+      "num": 4246.784032109002,
+      "den": 3232.0
+    },
+    "DET": {
+      "num": 315.6022195931097,
+      "den": 278.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 29,
+    "method": "REF/no_memory",
+    "POST": {
+      "num": 3007.466179769739,
+      "den": 3232.0
+    },
+    "DET": {
+      "num": 279.5849891736445,
+      "den": 278.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 30,
+    "method": "REF/A1",
+    "POST": {
+      "num": 2435.4579076924992,
+      "den": 2748.0
+    },
+    "DET": {
+      "num": 199.55298586414838,
+      "den": 224.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 30,
+    "method": "REF/A2",
+    "POST": {
+      "num": 2439.058440368339,
+      "den": 2748.0
+    },
+    "DET": {
+      "num": 200.3157286631494,
+      "den": 224.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 30,
+    "method": "REF/A6",
+    "POST": {
+      "num": 2447.15625447429,
+      "den": 2748.0
+    },
+    "DET": {
+      "num": 199.4319986221642,
+      "den": 224.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 30,
+    "method": "REF/all_observations_mean",
+    "POST": {
+      "num": 3289.934188257824,
+      "den": 2748.0
+    },
+    "DET": {
+      "num": 262.90908651773265,
+      "den": 224.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 30,
+    "method": "REF/no_memory",
+    "POST": {
+      "num": 2456.335364195348,
+      "den": 2748.0
+    },
+    "DET": {
+      "num": 202.48924583569095,
+      "den": 224.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 31,
+    "method": "REF/A1",
+    "POST": {
+      "num": 3030.026316297778,
+      "den": 3306.0
+    },
+    "DET": {
+      "num": 408.74718678315963,
+      "den": 396.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 31,
+    "method": "REF/A2",
+    "POST": {
+      "num": 3007.0907929957166,
+      "den": 3306.0
+    },
+    "DET": {
+      "num": 404.94721811143035,
+      "den": 396.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 31,
+    "method": "REF/A6",
+    "POST": {
+      "num": 3037.037637418351,
+      "den": 3306.0
+    },
+    "DET": {
+      "num": 408.59342657640707,
+      "den": 396.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 31,
+    "method": "REF/all_observations_mean",
+    "POST": {
+      "num": 4116.277178375349,
+      "den": 3306.0
+    },
+    "DET": {
+      "num": 537.1224158479054,
+      "den": 396.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 31,
+    "method": "REF/no_memory",
+    "POST": {
+      "num": 3045.0100314964393,
+      "den": 3306.0
+    },
+    "DET": {
+      "num": 414.0791310914924,
+      "den": 396.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 24,
+    "method": "K4/FIFO",
+    "POST": {
+      "num": 3966.813159517823,
+      "den": 2920.0
+    },
+    "DET": {
+      "num": 490.322225251416,
+      "den": 424.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 25,
+    "method": "K4/FIFO",
+    "POST": {
+      "num": 4523.635116349688,
+      "den": 3339.0
+    },
+    "DET": {
+      "num": 442.8094784633313,
+      "den": 348.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 26,
+    "method": "K4/FIFO",
+    "POST": {
+      "num": 4337.8233119615425,
+      "den": 2914.0
+    },
+    "DET": {
+      "num": 591.1535195664751,
+      "den": 388.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 27,
+    "method": "K4/FIFO",
+    "POST": {
+      "num": 3980.742433445276,
+      "den": 3084.0
+    },
+    "DET": {
+      "num": 534.8051307428354,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 28,
+    "method": "K4/FIFO",
+    "POST": {
+      "num": 5663.971843442638,
+      "den": 3760.0
+    },
+    "DET": {
+      "num": 688.9918202541277,
+      "den": 423.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 29,
+    "method": "K4/FIFO",
+    "POST": {
+      "num": 4430.181793938518,
+      "den": 3081.0
+    },
+    "DET": {
+      "num": 637.9298444447433,
+      "den": 368.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 30,
+    "method": "K4/FIFO",
+    "POST": {
+      "num": 4512.547670758049,
+      "den": 3321.0
+    },
+    "DET": {
+      "num": 481.99104122926485,
+      "den": 319.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 31,
+    "method": "K4/FIFO",
+    "POST": {
+      "num": 3703.9727193070594,
+      "den": 2921.0
+    },
+    "DET": {
+      "num": 518.4767711893383,
+      "den": 314.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 24,
+    "method": "K4/FIFO",
+    "POST": {
+      "num": 3767.350927244277,
+      "den": 2857.0
+    },
+    "DET": {
+      "num": 547.7690046095673,
+      "den": 277.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 25,
+    "method": "K4/FIFO",
+    "POST": {
+      "num": 4808.884211480237,
+      "den": 3192.0
+    },
+    "DET": {
+      "num": 588.151629157338,
+      "den": 305.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 26,
+    "method": "K4/FIFO",
+    "POST": {
+      "num": 4272.772190675579,
+      "den": 3182.0
+    },
+    "DET": {
+      "num": 399.6497073789452,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 27,
+    "method": "K4/FIFO",
+    "POST": {
+      "num": 4732.377393546437,
+      "den": 3188.0
+    },
+    "DET": {
+      "num": 387.1281157916806,
+      "den": 257.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 28,
+    "method": "K4/FIFO",
+    "POST": {
+      "num": 4681.39037584228,
+      "den": 3627.0
+    },
+    "DET": {
+      "num": 472.1674315595319,
+      "den": 374.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 29,
+    "method": "K4/FIFO",
+    "POST": {
+      "num": 4086.457062058954,
+      "den": 2904.0
+    },
+    "DET": {
+      "num": 583.8203169246563,
+      "den": 347.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 30,
+    "method": "K4/FIFO",
+    "POST": {
+      "num": 4115.115417719692,
+      "den": 3232.0
+    },
+    "DET": {
+      "num": 363.39585638531946,
+      "den": 278.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 31,
+    "method": "K4/FIFO",
+    "POST": {
+      "num": 3366.0293310687866,
+      "den": 2748.0
+    },
+    "DET": {
+      "num": 194.75291882596625,
+      "den": 224.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 24,
+    "method": "K4/FIFO",
+    "POST": {
+      "num": 4488.772341293625,
+      "den": 3192.0
+    },
+    "DET": {
+      "num": 600.4835995757273,
+      "den": 305.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 25,
+    "method": "K4/FIFO",
+    "POST": {
+      "num": 4173.258282465217,
+      "den": 3182.0
+    },
+    "DET": {
+      "num": 474.4929819144912,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 26,
+    "method": "K4/FIFO",
+    "POST": {
+      "num": 4425.691767235875,
+      "den": 3188.0
+    },
+    "DET": {
+      "num": 356.0147410871081,
+      "den": 257.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 27,
+    "method": "K4/FIFO",
+    "POST": {
+      "num": 4933.612365780598,
+      "den": 3627.0
+    },
+    "DET": {
+      "num": 439.8097348924113,
+      "den": 374.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 28,
+    "method": "K4/FIFO",
+    "POST": {
+      "num": 3958.5754369826527,
+      "den": 2904.0
+    },
+    "DET": {
+      "num": 551.6572529419088,
+      "den": 347.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 29,
+    "method": "K4/FIFO",
+    "POST": {
+      "num": 4181.3434364363075,
+      "den": 3232.0
+    },
+    "DET": {
+      "num": 329.96983315383557,
+      "den": 278.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 30,
+    "method": "K4/FIFO",
+    "POST": {
+      "num": 3319.9176463641843,
+      "den": 2748.0
+    },
+    "DET": {
+      "num": 271.2195641931511,
+      "den": 224.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 31,
+    "method": "K4/FIFO",
+    "POST": {
+      "num": 4217.8159621605955,
+      "den": 3306.0
+    },
+    "DET": {
+      "num": 537.1224158479054,
+      "den": 396.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 24,
+    "method": "K4/WR",
+    "POST": {
+      "num": 3974.145906966204,
+      "den": 2920.0
+    },
+    "DET": {
+      "num": 490.322225251416,
+      "den": 424.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 25,
+    "method": "K4/WR",
+    "POST": {
+      "num": 4525.939615956839,
+      "den": 3339.0
+    },
+    "DET": {
+      "num": 442.8094784633313,
+      "den": 348.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 26,
+    "method": "K4/WR",
+    "POST": {
+      "num": 4337.8233119615425,
+      "den": 2914.0
+    },
+    "DET": {
+      "num": 591.1535195664751,
+      "den": 388.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 27,
+    "method": "K4/WR",
+    "POST": {
+      "num": 3927.9631133923676,
+      "den": 3084.0
+    },
+    "DET": {
+      "num": 495.8173542716929,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 28,
+    "method": "K4/WR",
+    "POST": {
+      "num": 5521.001455748402,
+      "den": 3760.0
+    },
+    "DET": {
+      "num": 614.2515064051304,
+      "den": 423.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 29,
+    "method": "K4/WR",
+    "POST": {
+      "num": 4435.225804438176,
+      "den": 3081.0
+    },
+    "DET": {
+      "num": 619.9159750195033,
+      "den": 368.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 30,
+    "method": "K4/WR",
+    "POST": {
+      "num": 4499.7026375199375,
+      "den": 3321.0
+    },
+    "DET": {
+      "num": 481.99104122926485,
+      "den": 319.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 31,
+    "method": "K4/WR",
+    "POST": {
+      "num": 3664.9304785506665,
+      "den": 2921.0
+    },
+    "DET": {
+      "num": 518.4767711893383,
+      "den": 314.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 24,
+    "method": "K4/WR",
+    "POST": {
+      "num": 3767.350927244277,
+      "den": 2857.0
+    },
+    "DET": {
+      "num": 547.7690046095673,
+      "den": 277.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 25,
+    "method": "K4/WR",
+    "POST": {
+      "num": 4841.698037333888,
+      "den": 3192.0
+    },
+    "DET": {
+      "num": 588.151629157338,
+      "den": 305.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 26,
+    "method": "K4/WR",
+    "POST": {
+      "num": 4270.607739261518,
+      "den": 3182.0
+    },
+    "DET": {
+      "num": 399.6497073789452,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 27,
+    "method": "K4/WR",
+    "POST": {
+      "num": 4765.456488306106,
+      "den": 3188.0
+    },
+    "DET": {
+      "num": 387.1281157916806,
+      "den": 257.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 28,
+    "method": "K4/WR",
+    "POST": {
+      "num": 4681.39037584228,
+      "den": 3627.0
+    },
+    "DET": {
+      "num": 472.1674315595319,
+      "den": 374.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 29,
+    "method": "K4/WR",
+    "POST": {
+      "num": 4086.457062058954,
+      "den": 2904.0
+    },
+    "DET": {
+      "num": 583.8203169246563,
+      "den": 347.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 30,
+    "method": "K4/WR",
+    "POST": {
+      "num": 4097.361103738637,
+      "den": 3232.0
+    },
+    "DET": {
+      "num": 363.39585638531946,
+      "den": 278.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 31,
+    "method": "K4/WR",
+    "POST": {
+      "num": 3358.449718532177,
+      "den": 2748.0
+    },
+    "DET": {
+      "num": 194.75291882596625,
+      "den": 224.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 24,
+    "method": "K4/WR",
+    "POST": {
+      "num": 4568.234104564777,
+      "den": 3192.0
+    },
+    "DET": {
+      "num": 679.9453628468797,
+      "den": 305.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 25,
+    "method": "K4/WR",
+    "POST": {
+      "num": 4150.459459878131,
+      "den": 3182.0
+    },
+    "DET": {
+      "num": 475.7883175909978,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 26,
+    "method": "K4/WR",
+    "POST": {
+      "num": 4409.05795263941,
+      "den": 3188.0
+    },
+    "DET": {
+      "num": 356.0147410871081,
+      "den": 257.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 27,
+    "method": "K4/WR",
+    "POST": {
+      "num": 4993.498702407452,
+      "den": 3627.0
+    },
+    "DET": {
+      "num": 439.8097348924113,
+      "den": 374.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 28,
+    "method": "K4/WR",
+    "POST": {
+      "num": 3958.5754369826527,
+      "den": 2904.0
+    },
+    "DET": {
+      "num": 551.6572529419088,
+      "den": 347.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 29,
+    "method": "K4/WR",
+    "POST": {
+      "num": 4181.3434364363075,
+      "den": 3232.0
+    },
+    "DET": {
+      "num": 329.96983315383557,
+      "den": 278.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 30,
+    "method": "K4/WR",
+    "POST": {
+      "num": 3319.9176463641843,
+      "den": 2748.0
+    },
+    "DET": {
+      "num": 271.2195641931511,
+      "den": 224.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 31,
+    "method": "K4/WR",
+    "POST": {
+      "num": 4217.8159621605955,
+      "den": 3306.0
+    },
+    "DET": {
+      "num": 537.1224158479054,
+      "den": 396.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 24,
+    "method": "K4/PaFu",
+    "POST": {
+      "num": 3959.2078992853417,
+      "den": 2920.0
+    },
+    "DET": {
+      "num": 482.7169650189345,
+      "den": 424.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 25,
+    "method": "K4/PaFu",
+    "POST": {
+      "num": 4545.69323664376,
+      "den": 3339.0
+    },
+    "DET": {
+      "num": 449.8120381607007,
+      "den": 348.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 26,
+    "method": "K4/PaFu",
+    "POST": {
+      "num": 4360.1067864505985,
+      "den": 2914.0
+    },
+    "DET": {
+      "num": 586.5272344647261,
+      "den": 388.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 27,
+    "method": "K4/PaFu",
+    "POST": {
+      "num": 3983.1982880357164,
+      "den": 3084.0
+    },
+    "DET": {
+      "num": 534.8051307428354,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 28,
+    "method": "K4/PaFu",
+    "POST": {
+      "num": 5607.092759855735,
+      "den": 3760.0
+    },
+    "DET": {
+      "num": 688.9918202541277,
+      "den": 423.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 29,
+    "method": "K4/PaFu",
+    "POST": {
+      "num": 4369.25563343907,
+      "den": 3081.0
+    },
+    "DET": {
+      "num": 595.6938459852436,
+      "den": 368.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 30,
+    "method": "K4/PaFu",
+    "POST": {
+      "num": 4512.547670758049,
+      "den": 3321.0
+    },
+    "DET": {
+      "num": 481.99104122926485,
+      "den": 319.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 31,
+    "method": "K4/PaFu",
+    "POST": {
+      "num": 3681.758867507797,
+      "den": 2921.0
+    },
+    "DET": {
+      "num": 518.4767711893383,
+      "den": 314.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 24,
+    "method": "K4/PaFu",
+    "POST": {
+      "num": 3758.6637406876885,
+      "den": 2857.0
+    },
+    "DET": {
+      "num": 547.7690046095673,
+      "den": 277.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 25,
+    "method": "K4/PaFu",
+    "POST": {
+      "num": 4808.884211480237,
+      "den": 3192.0
+    },
+    "DET": {
+      "num": 588.151629157338,
+      "den": 305.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 26,
+    "method": "K4/PaFu",
+    "POST": {
+      "num": 4298.531640862134,
+      "den": 3182.0
+    },
+    "DET": {
+      "num": 425.4091575655004,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 27,
+    "method": "K4/PaFu",
+    "POST": {
+      "num": 4761.357487724874,
+      "den": 3188.0
+    },
+    "DET": {
+      "num": 387.1281157916806,
+      "den": 257.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 28,
+    "method": "K4/PaFu",
+    "POST": {
+      "num": 4682.017952019831,
+      "den": 3627.0
+    },
+    "DET": {
+      "num": 472.1674315595319,
+      "den": 374.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 29,
+    "method": "K4/PaFu",
+    "POST": {
+      "num": 4086.457062058954,
+      "den": 2904.0
+    },
+    "DET": {
+      "num": 583.8203169246563,
+      "den": 347.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 30,
+    "method": "K4/PaFu",
+    "POST": {
+      "num": 4135.25808130794,
+      "den": 3232.0
+    },
+    "DET": {
+      "num": 363.39585638531946,
+      "den": 278.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 31,
+    "method": "K4/PaFu",
+    "POST": {
+      "num": 3366.0293310687866,
+      "den": 2748.0
+    },
+    "DET": {
+      "num": 194.75291882596625,
+      "den": 224.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 24,
+    "method": "K4/PaFu",
+    "POST": {
+      "num": 4488.772341293625,
+      "den": 3192.0
+    },
+    "DET": {
+      "num": 600.4835995757273,
+      "den": 305.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 25,
+    "method": "K4/PaFu",
+    "POST": {
+      "num": 4173.258282465217,
+      "den": 3182.0
+    },
+    "DET": {
+      "num": 474.4929819144912,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 26,
+    "method": "K4/PaFu",
+    "POST": {
+      "num": 4419.519318310091,
+      "den": 3188.0
+    },
+    "DET": {
+      "num": 356.0147410871081,
+      "den": 257.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 27,
+    "method": "K4/PaFu",
+    "POST": {
+      "num": 4936.1649339520045,
+      "den": 3627.0
+    },
+    "DET": {
+      "num": 439.8097348924113,
+      "den": 374.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 28,
+    "method": "K4/PaFu",
+    "POST": {
+      "num": 3958.5754369826527,
+      "den": 2904.0
+    },
+    "DET": {
+      "num": 551.6572529419088,
+      "den": 347.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 29,
+    "method": "K4/PaFu",
+    "POST": {
+      "num": 4181.3434364363075,
+      "den": 3232.0
+    },
+    "DET": {
+      "num": 329.96983315383557,
+      "den": 278.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 30,
+    "method": "K4/PaFu",
+    "POST": {
+      "num": 3319.9176463641843,
+      "den": 2748.0
+    },
+    "DET": {
+      "num": 271.2195641931511,
+      "den": 224.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 31,
+    "method": "K4/PaFu",
+    "POST": {
+      "num": 4217.8159621605955,
+      "den": 3306.0
+    },
+    "DET": {
+      "num": 537.1224158479054,
+      "den": 396.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 24,
+    "method": "K16/FIFO",
+    "POST": {
+      "num": 3991.428566260218,
+      "den": 2920.0
+    },
+    "DET": {
+      "num": 490.322225251416,
+      "den": 424.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 25,
+    "method": "K16/FIFO",
+    "POST": {
+      "num": 4523.635116349688,
+      "den": 3339.0
+    },
+    "DET": {
+      "num": 442.8094784633313,
+      "den": 348.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 26,
+    "method": "K16/FIFO",
+    "POST": {
+      "num": 4347.0284740116485,
+      "den": 2914.0
+    },
+    "DET": {
+      "num": 591.1535195664751,
+      "den": 388.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 27,
+    "method": "K16/FIFO",
+    "POST": {
+      "num": 3980.742433445276,
+      "den": 3084.0
+    },
+    "DET": {
+      "num": 534.8051307428354,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 28,
+    "method": "K16/FIFO",
+    "POST": {
+      "num": 5664.425504429182,
+      "den": 3760.0
+    },
+    "DET": {
+      "num": 688.9918202541277,
+      "den": 423.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 29,
+    "method": "K16/FIFO",
+    "POST": {
+      "num": 4430.181793938518,
+      "den": 3081.0
+    },
+    "DET": {
+      "num": 637.9298444447433,
+      "den": 368.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 30,
+    "method": "K16/FIFO",
+    "POST": {
+      "num": 4512.547670758049,
+      "den": 3321.0
+    },
+    "DET": {
+      "num": 481.99104122926485,
+      "den": 319.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 31,
+    "method": "K16/FIFO",
+    "POST": {
+      "num": 3703.9727193070594,
+      "den": 2921.0
+    },
+    "DET": {
+      "num": 518.4767711893383,
+      "den": 314.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 24,
+    "method": "K16/FIFO",
+    "POST": {
+      "num": 3767.350927244277,
+      "den": 2857.0
+    },
+    "DET": {
+      "num": 547.7690046095673,
+      "den": 277.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 25,
+    "method": "K16/FIFO",
+    "POST": {
+      "num": 4808.884211480237,
+      "den": 3192.0
+    },
+    "DET": {
+      "num": 588.151629157338,
+      "den": 305.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 26,
+    "method": "K16/FIFO",
+    "POST": {
+      "num": 4272.772190675579,
+      "den": 3182.0
+    },
+    "DET": {
+      "num": 399.6497073789452,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 27,
+    "method": "K16/FIFO",
+    "POST": {
+      "num": 4732.377393546437,
+      "den": 3188.0
+    },
+    "DET": {
+      "num": 387.1281157916806,
+      "den": 257.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 28,
+    "method": "K16/FIFO",
+    "POST": {
+      "num": 4681.39037584228,
+      "den": 3627.0
+    },
+    "DET": {
+      "num": 472.1674315595319,
+      "den": 374.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 29,
+    "method": "K16/FIFO",
+    "POST": {
+      "num": 4086.457062058954,
+      "den": 2904.0
+    },
+    "DET": {
+      "num": 583.8203169246563,
+      "den": 347.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 30,
+    "method": "K16/FIFO",
+    "POST": {
+      "num": 4115.115417719692,
+      "den": 3232.0
+    },
+    "DET": {
+      "num": 363.39585638531946,
+      "den": 278.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 31,
+    "method": "K16/FIFO",
+    "POST": {
+      "num": 3391.0576778950117,
+      "den": 2748.0
+    },
+    "DET": {
+      "num": 219.7812656521914,
+      "den": 224.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 24,
+    "method": "K16/FIFO",
+    "POST": {
+      "num": 4488.772341293625,
+      "den": 3192.0
+    },
+    "DET": {
+      "num": 600.4835995757273,
+      "den": 305.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 25,
+    "method": "K16/FIFO",
+    "POST": {
+      "num": 4173.258282465217,
+      "den": 3182.0
+    },
+    "DET": {
+      "num": 474.4929819144912,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 26,
+    "method": "K16/FIFO",
+    "POST": {
+      "num": 4425.691767235875,
+      "den": 3188.0
+    },
+    "DET": {
+      "num": 356.0147410871081,
+      "den": 257.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 27,
+    "method": "K16/FIFO",
+    "POST": {
+      "num": 4933.612365780598,
+      "den": 3627.0
+    },
+    "DET": {
+      "num": 439.8097348924113,
+      "den": 374.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 28,
+    "method": "K16/FIFO",
+    "POST": {
+      "num": 3958.5754369826527,
+      "den": 2904.0
+    },
+    "DET": {
+      "num": 551.6572529419088,
+      "den": 347.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 29,
+    "method": "K16/FIFO",
+    "POST": {
+      "num": 4181.3434364363075,
+      "den": 3232.0
+    },
+    "DET": {
+      "num": 329.96983315383557,
+      "den": 278.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 30,
+    "method": "K16/FIFO",
+    "POST": {
+      "num": 3319.9176463641843,
+      "den": 2748.0
+    },
+    "DET": {
+      "num": 271.2195641931511,
+      "den": 224.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 31,
+    "method": "K16/FIFO",
+    "POST": {
+      "num": 4217.8159621605955,
+      "den": 3306.0
+    },
+    "DET": {
+      "num": 537.1224158479054,
+      "den": 396.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 24,
+    "method": "K16/WR",
+    "POST": {
+      "num": 3872.52915784523,
+      "den": 2920.0
+    },
+    "DET": {
+      "num": 481.6691678904332,
+      "den": 424.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 25,
+    "method": "K16/WR",
+    "POST": {
+      "num": 4433.180166278898,
+      "den": 3339.0
+    },
+    "DET": {
+      "num": 429.9035887301836,
+      "den": 348.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 26,
+    "method": "K16/WR",
+    "POST": {
+      "num": 4292.351613608358,
+      "den": 2914.0
+    },
+    "DET": {
+      "num": 581.5694206255638,
+      "den": 388.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 27,
+    "method": "K16/WR",
+    "POST": {
+      "num": 3872.9291403955494,
+      "den": 3084.0
+    },
+    "DET": {
+      "num": 489.1400771705004,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 28,
+    "method": "K16/WR",
+    "POST": {
+      "num": 5215.018972127855,
+      "den": 3760.0
+    },
+    "DET": {
+      "num": 617.0898041466708,
+      "den": 423.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 29,
+    "method": "K16/WR",
+    "POST": {
+      "num": 4387.541647436815,
+      "den": 3081.0
+    },
+    "DET": {
+      "num": 619.7842756833529,
+      "den": 368.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 30,
+    "method": "K16/WR",
+    "POST": {
+      "num": 4381.914630892568,
+      "den": 3321.0
+    },
+    "DET": {
+      "num": 481.99104122926485,
+      "den": 319.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 31,
+    "method": "K16/WR",
+    "POST": {
+      "num": 3658.85959187703,
+      "den": 2921.0
+    },
+    "DET": {
+      "num": 500.60805194720274,
+      "den": 314.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 24,
+    "method": "K16/WR",
+    "POST": {
+      "num": 3770.939726964467,
+      "den": 2857.0
+    },
+    "DET": {
+      "num": 547.7690046095673,
+      "den": 277.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 25,
+    "method": "K16/WR",
+    "POST": {
+      "num": 4876.800912209351,
+      "den": 3192.0
+    },
+    "DET": {
+      "num": 588.151629157338,
+      "den": 305.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 26,
+    "method": "K16/WR",
+    "POST": {
+      "num": 4308.836839507571,
+      "den": 3182.0
+    },
+    "DET": {
+      "num": 408.67599617682987,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 27,
+    "method": "K16/WR",
+    "POST": {
+      "num": 4768.504944772673,
+      "den": 3188.0
+    },
+    "DET": {
+      "num": 387.1281157916806,
+      "den": 257.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 28,
+    "method": "K16/WR",
+    "POST": {
+      "num": 4796.4212082234735,
+      "den": 3627.0
+    },
+    "DET": {
+      "num": 518.5893452444097,
+      "den": 374.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 29,
+    "method": "K16/WR",
+    "POST": {
+      "num": 4086.457062058954,
+      "den": 2904.0
+    },
+    "DET": {
+      "num": 583.8203169246563,
+      "den": 347.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 30,
+    "method": "K16/WR",
+    "POST": {
+      "num": 4140.44188828821,
+      "den": 3232.0
+    },
+    "DET": {
+      "num": 363.39585638531946,
+      "den": 278.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 31,
+    "method": "K16/WR",
+    "POST": {
+      "num": 3369.6043527684024,
+      "den": 2748.0
+    },
+    "DET": {
+      "num": 210.84036342732117,
+      "den": 224.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 24,
+    "method": "K16/WR",
+    "POST": {
+      "num": 4581.764178018466,
+      "den": 3192.0
+    },
+    "DET": {
+      "num": 679.9453628468797,
+      "den": 305.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 25,
+    "method": "K16/WR",
+    "POST": {
+      "num": 4156.885706390188,
+      "den": 3182.0
+    },
+    "DET": {
+      "num": 475.7883175909978,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 26,
+    "method": "K16/WR",
+    "POST": {
+      "num": 4500.560252813237,
+      "den": 3188.0
+    },
+    "DET": {
+      "num": 356.0147410871081,
+      "den": 257.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 27,
+    "method": "K16/WR",
+    "POST": {
+      "num": 5098.769231029522,
+      "den": 3627.0
+    },
+    "DET": {
+      "num": 439.8097348924113,
+      "den": 374.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 28,
+    "method": "K16/WR",
+    "POST": {
+      "num": 3958.5754369826527,
+      "den": 2904.0
+    },
+    "DET": {
+      "num": 551.6572529419088,
+      "den": 347.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 29,
+    "method": "K16/WR",
+    "POST": {
+      "num": 4292.854093033159,
+      "den": 3232.0
+    },
+    "DET": {
+      "num": 362.72375940269353,
+      "den": 278.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 30,
+    "method": "K16/WR",
+    "POST": {
+      "num": 3379.8880603061534,
+      "den": 2748.0
+    },
+    "DET": {
+      "num": 271.2195641931511,
+      "den": 224.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 31,
+    "method": "K16/WR",
+    "POST": {
+      "num": 4236.94614087887,
+      "den": 3306.0
+    },
+    "DET": {
+      "num": 537.1224158479054,
+      "den": 396.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 24,
+    "method": "K16/PaFu",
+    "POST": {
+      "num": 3988.4252825166573,
+      "den": 2920.0
+    },
+    "DET": {
+      "num": 459.03995960606443,
+      "den": 424.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 25,
+    "method": "K16/PaFu",
+    "POST": {
+      "num": 4505.4769977463475,
+      "den": 3339.0
+    },
+    "DET": {
+      "num": 463.827404350742,
+      "den": 348.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 26,
+    "method": "K16/PaFu",
+    "POST": {
+      "num": 4267.498322901584,
+      "den": 2914.0
+    },
+    "DET": {
+      "num": 555.2733321181636,
+      "den": 388.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 27,
+    "method": "K16/PaFu",
+    "POST": {
+      "num": 3866.4893681483427,
+      "den": 3084.0
+    },
+    "DET": {
+      "num": 534.8051307428354,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 28,
+    "method": "K16/PaFu",
+    "POST": {
+      "num": 5405.477407523029,
+      "den": 3760.0
+    },
+    "DET": {
+      "num": 599.5909878500952,
+      "den": 423.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 29,
+    "method": "K16/PaFu",
+    "POST": {
+      "num": 4511.702984749736,
+      "den": 3081.0
+    },
+    "DET": {
+      "num": 619.9159750195033,
+      "den": 368.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 30,
+    "method": "K16/PaFu",
+    "POST": {
+      "num": 4481.091698879873,
+      "den": 3321.0
+    },
+    "DET": {
+      "num": 481.99104122926485,
+      "den": 319.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 31,
+    "method": "K16/PaFu",
+    "POST": {
+      "num": 3591.638990112536,
+      "den": 2921.0
+    },
+    "DET": {
+      "num": 464.36297907964837,
+      "den": 314.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 24,
+    "method": "K16/PaFu",
+    "POST": {
+      "num": 3770.7361960237477,
+      "den": 2857.0
+    },
+    "DET": {
+      "num": 547.7690046095673,
+      "den": 277.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 25,
+    "method": "K16/PaFu",
+    "POST": {
+      "num": 4818.042956947977,
+      "den": 3192.0
+    },
+    "DET": {
+      "num": 588.151629157338,
+      "den": 305.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 26,
+    "method": "K16/PaFu",
+    "POST": {
+      "num": 4344.742324285449,
+      "den": 3182.0
+    },
+    "DET": {
+      "num": 389.3751547311771,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 27,
+    "method": "K16/PaFu",
+    "POST": {
+      "num": 4602.350758734772,
+      "den": 3188.0
+    },
+    "DET": {
+      "num": 387.1281157916806,
+      "den": 257.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 28,
+    "method": "K16/PaFu",
+    "POST": {
+      "num": 4698.793285340091,
+      "den": 3627.0
+    },
+    "DET": {
+      "num": 518.5893452444097,
+      "den": 374.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 29,
+    "method": "K16/PaFu",
+    "POST": {
+      "num": 4104.730495338333,
+      "den": 2904.0
+    },
+    "DET": {
+      "num": 583.8203169246563,
+      "den": 347.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 30,
+    "method": "K16/PaFu",
+    "POST": {
+      "num": 4119.583224327167,
+      "den": 3232.0
+    },
+    "DET": {
+      "num": 363.39585638531946,
+      "den": 278.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 31,
+    "method": "K16/PaFu",
+    "POST": {
+      "num": 3392.397106878814,
+      "den": 2748.0
+    },
+    "DET": {
+      "num": 188.70959251313775,
+      "den": 224.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 24,
+    "method": "K16/PaFu",
+    "POST": {
+      "num": 4490.867393996748,
+      "den": 3192.0
+    },
+    "DET": {
+      "num": 597.3053655804644,
+      "den": 305.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 25,
+    "method": "K16/PaFu",
+    "POST": {
+      "num": 4187.320685558685,
+      "den": 3182.0
+    },
+    "DET": {
+      "num": 474.4929819144912,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 26,
+    "method": "K16/PaFu",
+    "POST": {
+      "num": 4470.790462807773,
+      "den": 3188.0
+    },
+    "DET": {
+      "num": 356.2505265878876,
+      "den": 257.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 27,
+    "method": "K16/PaFu",
+    "POST": {
+      "num": 4947.158023890608,
+      "den": 3627.0
+    },
+    "DET": {
+      "num": 439.8097348924113,
+      "den": 374.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 28,
+    "method": "K16/PaFu",
+    "POST": {
+      "num": 3938.692063416079,
+      "den": 2904.0
+    },
+    "DET": {
+      "num": 551.6572529419088,
+      "den": 347.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 29,
+    "method": "K16/PaFu",
+    "POST": {
+      "num": 4158.630632868336,
+      "den": 3232.0
+    },
+    "DET": {
+      "num": 307.25702958586385,
+      "den": 278.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 30,
+    "method": "K16/PaFu",
+    "POST": {
+      "num": 3457.830805779818,
+      "den": 2748.0
+    },
+    "DET": {
+      "num": 289.0416720649604,
+      "den": 224.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 31,
+    "method": "K16/PaFu",
+    "POST": {
+      "num": 4351.238524816478,
+      "den": 3306.0
+    },
+    "DET": {
+      "num": 537.1224158479054,
+      "den": 396.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 24,
+    "method": "K64/FIFO",
+    "POST": {
+      "num": 4008.129559926713,
+      "den": 2920.0
+    },
+    "DET": {
+      "num": 507.02321891791087,
+      "den": 424.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 25,
+    "method": "K64/FIFO",
+    "POST": {
+      "num": 4460.357951630251,
+      "den": 3339.0
+    },
+    "DET": {
+      "num": 381.2150284945404,
+      "den": 348.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 26,
+    "method": "K64/FIFO",
+    "POST": {
+      "num": 4347.0284740116485,
+      "den": 2914.0
+    },
+    "DET": {
+      "num": 591.1535195664751,
+      "den": 388.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 27,
+    "method": "K64/FIFO",
+    "POST": {
+      "num": 3874.4155363487453,
+      "den": 3084.0
+    },
+    "DET": {
+      "num": 462.15730918960116,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 28,
+    "method": "K64/FIFO",
+    "POST": {
+      "num": 5662.852179080337,
+      "den": 3760.0
+    },
+    "DET": {
+      "num": 688.9918202541277,
+      "den": 423.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 29,
+    "method": "K64/FIFO",
+    "POST": {
+      "num": 4443.123655190898,
+      "den": 3081.0
+    },
+    "DET": {
+      "num": 637.9298444447433,
+      "den": 368.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 30,
+    "method": "K64/FIFO",
+    "POST": {
+      "num": 4518.827712767243,
+      "den": 3321.0
+    },
+    "DET": {
+      "num": 491.1530418812689,
+      "den": 319.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 31,
+    "method": "K64/FIFO",
+    "POST": {
+      "num": 3646.1856851253187,
+      "den": 2921.0
+    },
+    "DET": {
+      "num": 457.7483010653328,
+      "den": 314.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 24,
+    "method": "K64/FIFO",
+    "POST": {
+      "num": 3727.840965933611,
+      "den": 2857.0
+    },
+    "DET": {
+      "num": 547.7690046095673,
+      "den": 277.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 25,
+    "method": "K64/FIFO",
+    "POST": {
+      "num": 4808.884211480237,
+      "den": 3192.0
+    },
+    "DET": {
+      "num": 588.151629157338,
+      "den": 305.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 26,
+    "method": "K64/FIFO",
+    "POST": {
+      "num": 4272.772190675579,
+      "den": 3182.0
+    },
+    "DET": {
+      "num": 399.6497073789452,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 27,
+    "method": "K64/FIFO",
+    "POST": {
+      "num": 4720.62015896381,
+      "den": 3188.0
+    },
+    "DET": {
+      "num": 387.1281157916806,
+      "den": 257.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 28,
+    "method": "K64/FIFO",
+    "POST": {
+      "num": 4673.502410026409,
+      "den": 3627.0
+    },
+    "DET": {
+      "num": 472.1674315595319,
+      "den": 374.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 29,
+    "method": "K64/FIFO",
+    "POST": {
+      "num": 4086.457062058954,
+      "den": 2904.0
+    },
+    "DET": {
+      "num": 583.8203169246563,
+      "den": 347.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 30,
+    "method": "K64/FIFO",
+    "POST": {
+      "num": 4155.286269790143,
+      "den": 3232.0
+    },
+    "DET": {
+      "num": 363.39585638531946,
+      "den": 278.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 31,
+    "method": "K64/FIFO",
+    "POST": {
+      "num": 3361.9439538617717,
+      "den": 2748.0
+    },
+    "DET": {
+      "num": 215.50805461925225,
+      "den": 224.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 24,
+    "method": "K64/FIFO",
+    "POST": {
+      "num": 4568.647186917429,
+      "den": 3192.0
+    },
+    "DET": {
+      "num": 680.3584451995314,
+      "den": 305.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 25,
+    "method": "K64/FIFO",
+    "POST": {
+      "num": 4145.328394737333,
+      "den": 3182.0
+    },
+    "DET": {
+      "num": 446.563094186607,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 26,
+    "method": "K64/FIFO",
+    "POST": {
+      "num": 4434.431148681853,
+      "den": 3188.0
+    },
+    "DET": {
+      "num": 356.0147410871081,
+      "den": 257.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 27,
+    "method": "K64/FIFO",
+    "POST": {
+      "num": 4944.079153099713,
+      "den": 3627.0
+    },
+    "DET": {
+      "num": 439.8097348924113,
+      "den": 374.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 28,
+    "method": "K64/FIFO",
+    "POST": {
+      "num": 3958.5754369826527,
+      "den": 2904.0
+    },
+    "DET": {
+      "num": 551.6572529419088,
+      "den": 347.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 29,
+    "method": "K64/FIFO",
+    "POST": {
+      "num": 4236.089855611099,
+      "den": 3232.0
+    },
+    "DET": {
+      "num": 362.72375940269353,
+      "den": 278.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 30,
+    "method": "K64/FIFO",
+    "POST": {
+      "num": 3319.9176463641843,
+      "den": 2748.0
+    },
+    "DET": {
+      "num": 271.2195641931511,
+      "den": 224.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 31,
+    "method": "K64/FIFO",
+    "POST": {
+      "num": 4217.8159621605955,
+      "den": 3306.0
+    },
+    "DET": {
+      "num": 537.1224158479054,
+      "den": 396.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 24,
+    "method": "K64/WR",
+    "POST": {
+      "num": 3811.221274896673,
+      "den": 2920.0
+    },
+    "DET": {
+      "num": 511.32040200301225,
+      "den": 424.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 25,
+    "method": "K64/WR",
+    "POST": {
+      "num": 4408.8207961457465,
+      "den": 3339.0
+    },
+    "DET": {
+      "num": 450.0243441549502,
+      "den": 348.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 26,
+    "method": "K64/WR",
+    "POST": {
+      "num": 3990.6056811744593,
+      "den": 2914.0
+    },
+    "DET": {
+      "num": 564.9484094605762,
+      "den": 388.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 27,
+    "method": "K64/WR",
+    "POST": {
+      "num": 3839.592609991836,
+      "den": 3084.0
+    },
+    "DET": {
+      "num": 461.66166191094374,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 28,
+    "method": "K64/WR",
+    "POST": {
+      "num": 4841.946177540992,
+      "den": 3760.0
+    },
+    "DET": {
+      "num": 609.9251747782885,
+      "den": 423.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 29,
+    "method": "K64/WR",
+    "POST": {
+      "num": 4238.660897817599,
+      "den": 3081.0
+    },
+    "DET": {
+      "num": 619.7842756833529,
+      "den": 368.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 30,
+    "method": "K64/WR",
+    "POST": {
+      "num": 4199.812087248559,
+      "den": 3321.0
+    },
+    "DET": {
+      "num": 459.7764477218021,
+      "den": 319.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 31,
+    "method": "K64/WR",
+    "POST": {
+      "num": 3474.317665571321,
+      "den": 2921.0
+    },
+    "DET": {
+      "num": 490.95686379310087,
+      "den": 314.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 24,
+    "method": "K64/WR",
+    "POST": {
+      "num": 3813.2411124293308,
+      "den": 2857.0
+    },
+    "DET": {
+      "num": 547.7690046095673,
+      "den": 277.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 25,
+    "method": "K64/WR",
+    "POST": {
+      "num": 4926.854670128978,
+      "den": 3192.0
+    },
+    "DET": {
+      "num": 588.151629157338,
+      "den": 305.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 26,
+    "method": "K64/WR",
+    "POST": {
+      "num": 4389.3306955662065,
+      "den": 3182.0
+    },
+    "DET": {
+      "num": 452.3217746120165,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 27,
+    "method": "K64/WR",
+    "POST": {
+      "num": 4801.750677084284,
+      "den": 3188.0
+    },
+    "DET": {
+      "num": 387.1281157916806,
+      "den": 257.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 28,
+    "method": "K64/WR",
+    "POST": {
+      "num": 4802.862564621268,
+      "den": 3627.0
+    },
+    "DET": {
+      "num": 518.5893452444097,
+      "den": 374.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 29,
+    "method": "K64/WR",
+    "POST": {
+      "num": 4090.298681315244,
+      "den": 2904.0
+    },
+    "DET": {
+      "num": 538.8077329454862,
+      "den": 347.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 30,
+    "method": "K64/WR",
+    "POST": {
+      "num": 4153.648356280312,
+      "den": 3232.0
+    },
+    "DET": {
+      "num": 363.39585638531946,
+      "den": 278.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 31,
+    "method": "K64/WR",
+    "POST": {
+      "num": 3460.2906490619503,
+      "den": 2748.0
+    },
+    "DET": {
+      "num": 231.51340015183587,
+      "den": 224.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 24,
+    "method": "K64/WR",
+    "POST": {
+      "num": 4687.84551075946,
+      "den": 3192.0
+    },
+    "DET": {
+      "num": 669.7337296481182,
+      "den": 305.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 25,
+    "method": "K64/WR",
+    "POST": {
+      "num": 4188.869500504042,
+      "den": 3182.0
+    },
+    "DET": {
+      "num": 480.6389119333513,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 26,
+    "method": "K64/WR",
+    "POST": {
+      "num": 4556.387215857396,
+      "den": 3188.0
+    },
+    "DET": {
+      "num": 404.799661554266,
+      "den": 257.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 27,
+    "method": "K64/WR",
+    "POST": {
+      "num": 5113.6616934788435,
+      "den": 3627.0
+    },
+    "DET": {
+      "num": 439.8097348924113,
+      "den": 374.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 28,
+    "method": "K64/WR",
+    "POST": {
+      "num": 4014.090886388466,
+      "den": 2904.0
+    },
+    "DET": {
+      "num": 551.6572529419088,
+      "den": 347.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 29,
+    "method": "K64/WR",
+    "POST": {
+      "num": 4379.80441085908,
+      "den": 3232.0
+    },
+    "DET": {
+      "num": 399.6307020490418,
+      "den": 278.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 30,
+    "method": "K64/WR",
+    "POST": {
+      "num": 3535.069909870395,
+      "den": 2748.0
+    },
+    "DET": {
+      "num": 266.17410577932185,
+      "den": 224.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 31,
+    "method": "K64/WR",
+    "POST": {
+      "num": 4233.229153250863,
+      "den": 3306.0
+    },
+    "DET": {
+      "num": 537.1224158479054,
+      "den": 396.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 24,
+    "method": "K64/PaFu",
+    "POST": {
+      "num": 3851.308535975996,
+      "den": 2920.0
+    },
+    "DET": {
+      "num": 500.0553286930237,
+      "den": 424.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 25,
+    "method": "K64/PaFu",
+    "POST": {
+      "num": 4276.6858662932555,
+      "den": 3339.0
+    },
+    "DET": {
+      "num": 347.6609723412732,
+      "den": 348.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 26,
+    "method": "K64/PaFu",
+    "POST": {
+      "num": 3914.963205840306,
+      "den": 2914.0
+    },
+    "DET": {
+      "num": 504.62956612616875,
+      "den": 388.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 27,
+    "method": "K64/PaFu",
+    "POST": {
+      "num": 3802.8048371473196,
+      "den": 3084.0
+    },
+    "DET": {
+      "num": 483.4325632746809,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 28,
+    "method": "K64/PaFu",
+    "POST": {
+      "num": 5218.440006679655,
+      "den": 3760.0
+    },
+    "DET": {
+      "num": 697.9526929986723,
+      "den": 423.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 29,
+    "method": "K64/PaFu",
+    "POST": {
+      "num": 4238.536346259118,
+      "den": 3081.0
+    },
+    "DET": {
+      "num": 532.8919038449128,
+      "den": 368.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 30,
+    "method": "K64/PaFu",
+    "POST": {
+      "num": 4205.646523071831,
+      "den": 3321.0
+    },
+    "DET": {
+      "num": 468.14382285874945,
+      "den": 319.0
+    }
+  },
+  {
+    "condition": "EXACT",
+    "source_index": 31,
+    "method": "K64/PaFu",
+    "POST": {
+      "num": 3378.5602284728093,
+      "den": 2921.0
+    },
+    "DET": {
+      "num": 373.86852583026723,
+      "den": 314.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 24,
+    "method": "K64/PaFu",
+    "POST": {
+      "num": 3776.3120575360617,
+      "den": 2857.0
+    },
+    "DET": {
+      "num": 547.7690046095673,
+      "den": 277.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 25,
+    "method": "K64/PaFu",
+    "POST": {
+      "num": 4777.319954261998,
+      "den": 3192.0
+    },
+    "DET": {
+      "num": 588.151629157338,
+      "den": 305.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 26,
+    "method": "K64/PaFu",
+    "POST": {
+      "num": 4287.450944948917,
+      "den": 3182.0
+    },
+    "DET": {
+      "num": 407.1924557169695,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 27,
+    "method": "K64/PaFu",
+    "POST": {
+      "num": 4602.168915616272,
+      "den": 3188.0
+    },
+    "DET": {
+      "num": 387.1281157916806,
+      "den": 257.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 28,
+    "method": "K64/PaFu",
+    "POST": {
+      "num": 4482.386593021384,
+      "den": 3627.0
+    },
+    "DET": {
+      "num": 431.7204112842212,
+      "den": 374.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 29,
+    "method": "K64/PaFu",
+    "POST": {
+      "num": 4019.3575377476886,
+      "den": 2904.0
+    },
+    "DET": {
+      "num": 495.22854821146916,
+      "den": 347.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 30,
+    "method": "K64/PaFu",
+    "POST": {
+      "num": 4084.6196491482997,
+      "den": 3232.0
+    },
+    "DET": {
+      "num": 363.39585638531946,
+      "den": 278.0
+    }
+  },
+  {
+    "condition": "NEWPATH",
+    "source_index": 31,
+    "method": "K64/PaFu",
+    "POST": {
+      "num": 3408.8694395409448,
+      "den": 2748.0
+    },
+    "DET": {
+      "num": 210.84036342732117,
+      "den": 224.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 24,
+    "method": "K64/PaFu",
+    "POST": {
+      "num": 4558.251413708789,
+      "den": 3192.0
+    },
+    "DET": {
+      "num": 606.5465741803968,
+      "den": 305.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 25,
+    "method": "K64/PaFu",
+    "POST": {
+      "num": 4185.525920812846,
+      "den": 3182.0
+    },
+    "DET": {
+      "num": 475.95643137200864,
+      "den": 370.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 26,
+    "method": "K64/PaFu",
+    "POST": {
+      "num": 4476.250874713667,
+      "den": 3188.0
+    },
+    "DET": {
+      "num": 364.40983345143434,
+      "den": 257.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 27,
+    "method": "K64/PaFu",
+    "POST": {
+      "num": 5035.13042090748,
+      "den": 3627.0
+    },
+    "DET": {
+      "num": 439.8097348924113,
+      "den": 374.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 28,
+    "method": "K64/PaFu",
+    "POST": {
+      "num": 3997.3905903575214,
+      "den": 2904.0
+    },
+    "DET": {
+      "num": 551.6572529419088,
+      "den": 347.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 29,
+    "method": "K64/PaFu",
+    "POST": {
+      "num": 4176.210540122061,
+      "den": 3232.0
+    },
+    "DET": {
+      "num": 337.03543563874575,
+      "den": 278.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 30,
+    "method": "K64/PaFu",
+    "POST": {
+      "num": 3399.817143158005,
+      "den": 2748.0
+    },
+    "DET": {
+      "num": 271.2195641931511,
+      "den": 224.0
+    }
+  },
+  {
+    "condition": "CHANGE",
+    "source_index": 31,
+    "method": "K64/PaFu",
+    "POST": {
+      "num": 4202.813674650704,
+      "den": 3306.0
+    },
+    "DET": {
+      "num": 537.1224158479054,
+      "den": 396.0
+    }
+  }
+]
