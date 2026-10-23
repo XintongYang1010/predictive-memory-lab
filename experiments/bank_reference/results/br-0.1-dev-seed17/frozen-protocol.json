@@ -1,0 +1,156 @@
+{
+  "version": "BR-0.1",
+  "protocol_sha256": "b6d047549fa0466d36253342598f271b10cc880e9493498140c2e41a552c25ff",
+  "core_sha256": "a0c571f8974b08dea7cda27c2b247cfc81f5e66471863ba4eeced9bb5b82c164",
+  "runner_sha256": "4625c6c9117281b9a588851a2df32093bfe65fd7dd7b2431d92d21c7c8dbe7b3",
+  "seed": 17,
+  "capacities": [
+    4,
+    16,
+    64
+  ],
+  "recent": 4,
+  "anchors": [
+    400,
+    464,
+    528,
+    592
+  ],
+  "future_horizon": 6,
+  "split": {
+    "train_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "dev_indices": [
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "excluded_indices": [
+      23
+    ],
+    "train_sources": [
+      "train/20220923T102418-1000.npz",
+      "train/20220923T102538-1000.npz",
+      "train/20220923T103745-1000.npz",
+      "train/20220923T105625-1000.npz",
+      "train/20220923T112419-1000.npz",
+      "train/20220923T120952-1000.npz",
+      "train/20220923T121055-1000.npz",
+      "train/20220923T121522-1000.npz",
+      "train/20220923T125643-1000.npz",
+      "train/20220923T133719-1000.npz",
+      "train/20220923T153131-1000.npz",
+      "train/20220923T155246-1000.npz",
+      "train/20220923T155416-1000.npz",
+      "train/20220923T161455-1000.npz",
+      "train/20220923T161554-1000.npz",
+      "train/20220923T164720-1000.npz",
+      "train/20220923T170702-1000.npz",
+      "train/20220923T180840-1000.npz",
+      "train/20220923T183016-1000.npz",
+      "train/20220923T183034-1000.npz",
+      "train/20220923T194326-1000.npz",
+      "train/20220923T194734-1000.npz",
+      "train/20220923T194953-1000.npz",
+      "train/20220923T200203-1000.npz"
+    ],
+    "dev_sources": [
+      "train/20220923T110512-1000.npz",
+      "train/20220923T112857-1000.npz",
+      "train/20220923T115919-1000.npz",
+      "train/20220923T132147-1000.npz",
+      "train/20220923T142722-1000.npz",
+      "train/20220923T160337-1000.npz",
+      "train/20220923T181532-1000.npz",
+      "train/20220923T191811-1000.npz",
+      "train/20220923T193427-1000.npz"
+    ],
+    "train_streams": 69,
+    "dev_streams": 24,
+    "source_disjoint": true,
+    "boundary_purge_reason": "CHANGE adjacent A/B source sharing"
+  },
+  "inventory": {
+    "input_sha256": "c256d8ee6b80e422c5ddc6d6e120b3eb3bfb8272a9083f3b64ca5683db9700b3",
+    "input_bytes": 6204297,
+    "available_fields": [
+      "CHANGE__O",
+      "CHANGE__R",
+      "CHANGE__W",
+      "CHANGE__gate",
+      "CHANGE__key",
+      "EXACT__O",
+      "EXACT__R",
+      "EXACT__W",
+      "EXACT__gate",
+      "EXACT__key",
+      "NEWPATH__O",
+      "NEWPATH__R",
+      "NEWPATH__W",
+      "NEWPATH__gate",
+      "NEWPATH__key"
+    ],
+    "missing_complete_l0_fields": [
+      "Z",
+      "Y",
+      "action",
+      "pose",
+      "RGB"
+    ],
+    "claim": "L0-derived frozen-residual diagnostic; not complete L0 or visual evaluation",
+    "streams_available": 96,
+    "steps_per_stream": 799,
+    "manifest_only_Z_EPS_hashes_are_not_arrays": true
+  },
+  "resolved_cv_root": "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/CV_project",
+  "frozen_sources_before_fit": {
+    "protocol": {
+      "path": "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-v6-h800/experiments/bank_reference/PROTOCOL.md",
+      "sha256": "b6d047549fa0466d36253342598f271b10cc880e9493498140c2e41a552c25ff"
+    },
+    "core": {
+      "path": "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-v6-h800/experiments/bank_reference/core.py",
+      "sha256": "a0c571f8974b08dea7cda27c2b247cfc81f5e66471863ba4eeced9bb5b82c164"
+    },
+    "runner": {
+      "path": "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/predictive-memory-v6-h800/experiments/bank_reference/run.py",
+      "sha256": "4625c6c9117281b9a588851a2df32093bfe65fd7dd7b2431d92d21c7c8dbe7b3"
+    },
+    "shared_mechanisms": {
+      "path": "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/CV_project/experiments/phase2/literature_baselines.py",
+      "sha256": "e83a4a46eb661601f37d2aca02e2ccad7c6d7179bb0f5675fb3914852f8ccc0d"
+    },
+    "shared_memory": {
+      "path": "/Users/xintongyang/Documents/Documents - Mac/CV-26fall/CV_project/experiments/phase2/memory.py",
+      "sha256": "9f5dfe5aaa3052a2af4a9c79a2f8c5558be258feff1459ea82f2d86e66da073c"
+    }
+  }
+}

@@ -1,0 +1,2579 @@
+[
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 0,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 0,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 0,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 0,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 1,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 1,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 1,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 1,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 2,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 2,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 2,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 2,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 3,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 3,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 3,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 3,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 4,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 4,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 4,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 4,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 5,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 5,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 5,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 5,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 6,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 6,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 6,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 6,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 1,
+    "query_times": [
+      401
+    ],
+    "candidate_times": [
+      391,
+      392,
+      393,
+      394,
+      395
+    ],
+    "decision_time": 399,
+    "future_group_only": true,
+    "conditional_history_attention": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "history_attention_mass": [
+      0.6764705882352942
+    ],
+    "target": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "nonuniform": true,
+    "condition": "EXACT",
+    "source_index": 7,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 7,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 7,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 7,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 8,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 8,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 8,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 8,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 9,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 9,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 9,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 9,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 10,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 10,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 10,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 10,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 11,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 11,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 11,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 11,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 12,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 12,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 12,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 12,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 13,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 13,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 13,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 13,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 14,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 14,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 14,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 14,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 15,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 15,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 15,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 15,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 16,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 16,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 16,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 16,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 17,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 17,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 1,
+    "query_times": [
+      533
+    ],
+    "candidate_times": [
+      519,
+      520,
+      521,
+      522,
+      523
+    ],
+    "decision_time": 527,
+    "future_group_only": true,
+    "conditional_history_attention": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "history_attention_mass": [
+      0.08823529411764706
+    ],
+    "target": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "nonuniform": true,
+    "condition": "EXACT",
+    "source_index": 17,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 17,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 18,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 18,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 18,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 18,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 19,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 19,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 19,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 19,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 20,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 20,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 20,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 20,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 21,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 21,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 21,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 21,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 22,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 22,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 22,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "EXACT",
+    "source_index": 22,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 0,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 0,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 0,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 0,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 1,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 1,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 1,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 1,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 2,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 2,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 2,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 2,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 3,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 3,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 3,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 3,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 4,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 4,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 4,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 4,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 5,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 5,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 5,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 5,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 6,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 6,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 6,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 6,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 7,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 7,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 7,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 7,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 8,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 8,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 8,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 8,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 9,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 9,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 9,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 9,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 10,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 10,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 10,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 10,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 11,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 11,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 11,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 11,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 12,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 12,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 12,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 12,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 13,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 13,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 13,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 13,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 14,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 14,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 14,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 14,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 15,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 15,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 15,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 15,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 16,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 16,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 16,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 16,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 17,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 17,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 17,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 17,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 18,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 18,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 18,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 18,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 19,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 19,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 19,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 19,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 20,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 20,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 20,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 20,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 21,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 21,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 21,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 21,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 22,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 22,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 22,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "NEWPATH",
+    "source_index": 22,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 0,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 0,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 0,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 0,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 1,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 1,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 1,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 1,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 2,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 2,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 2,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 2,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 3,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 3,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 3,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 3,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 4,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 4,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 4,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 4,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 5,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 5,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 5,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 5,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 6,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 6,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 6,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 6,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 7,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 7,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 7,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 7,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 8,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 8,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 8,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 8,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 1,
+    "query_times": [
+      402
+    ],
+    "candidate_times": [
+      391,
+      392,
+      393,
+      394,
+      395
+    ],
+    "decision_time": 399,
+    "future_group_only": true,
+    "conditional_history_attention": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "history_attention_mass": [
+      0.5588235294117647
+    ],
+    "target": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "nonuniform": true,
+    "condition": "CHANGE",
+    "source_index": 9,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 9,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 9,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 9,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 10,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 10,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 10,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 10,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 11,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 11,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 11,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 11,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 12,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 12,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 12,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 12,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 13,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 13,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 13,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 13,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 14,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 14,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 14,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 14,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 15,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 15,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 15,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 15,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 16,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 16,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 16,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 16,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 17,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 17,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 17,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 17,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 18,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 18,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 18,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 18,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 19,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 19,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 19,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 19,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 20,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 20,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 20,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 20,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 21,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 21,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 21,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 21,
+    "original_t": 592,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 22,
+    "original_t": 400,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 22,
+    "original_t": 464,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 22,
+    "original_t": 528,
+    "capacity": 4
+  },
+  {
+    "available_queries": 6,
+    "valid_queries": 0,
+    "reason": "no future query places attention on a historical candidate",
+    "condition": "CHANGE",
+    "source_index": 22,
+    "original_t": 592,
+    "capacity": 4
+  }
+]

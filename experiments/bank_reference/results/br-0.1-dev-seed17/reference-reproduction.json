@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "checks": 1152,
+  "arms": [
+    "A1",
+    "A2",
+    "A6"
+  ],
+  "reference_rows_sha256": "b014a53d0a6b0c23be0eebc288c6561adac98d1dd63a70311ca6eaf83918d807",
+  "rtol": 1e-05,
+  "atol": 0.001,
+  "denominators_exact": true
+}
