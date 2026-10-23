@@ -1,0 +1,78 @@
+{
+  "parents": 864,
+  "unique_A_sources": 8,
+  "conditions": {
+    "EXACT": 288,
+    "NEWPATH": 288,
+    "CHANGE": 288
+  },
+  "positive_local_regret": 129,
+  "oracle_worsens_signal_with_positive_regret": 48,
+  "positive_control_rule": 25,
+  "by_method": {
+    "K16/FIFO": {
+      "parents": 96,
+      "positive_local_regret": 2,
+      "oracle_worsens_signal_with_positive_regret": 1,
+      "baseline_beats_zero_total": 1,
+      "positive_control_rule": 0
+    },
+    "K16/PaFu": {
+      "parents": 96,
+      "positive_local_regret": 14,
+      "oracle_worsens_signal_with_positive_regret": 7,
+      "baseline_beats_zero_total": 8,
+      "positive_control_rule": 5
+    },
+    "K16/WR": {
+      "parents": 96,
+      "positive_local_regret": 16,
+      "oracle_worsens_signal_with_positive_regret": 4,
+      "baseline_beats_zero_total": 8,
+      "positive_control_rule": 6
+    },
+    "K4/FIFO": {
+      "parents": 96,
+      "positive_local_regret": 1,
+      "oracle_worsens_signal_with_positive_regret": 0,
+      "baseline_beats_zero_total": 1,
+      "positive_control_rule": 0
+    },
+    "K4/PaFu": {
+      "parents": 96,
+      "positive_local_regret": 3,
+      "oracle_worsens_signal_with_positive_regret": 1,
+      "baseline_beats_zero_total": 1,
+      "positive_control_rule": 0
+    },
+    "K4/WR": {
+      "parents": 96,
+      "positive_local_regret": 6,
+      "oracle_worsens_signal_with_positive_regret": 2,
+      "baseline_beats_zero_total": 3,
+      "positive_control_rule": 2
+    },
+    "K64/FIFO": {
+      "parents": 96,
+      "positive_local_regret": 8,
+      "oracle_worsens_signal_with_positive_regret": 2,
+      "baseline_beats_zero_total": 2,
+      "positive_control_rule": 1
+    },
+    "K64/PaFu": {
+      "parents": 96,
+      "positive_local_regret": 40,
+      "oracle_worsens_signal_with_positive_regret": 24,
+      "baseline_beats_zero_total": 10,
+      "positive_control_rule": 3
+    },
+    "K64/WR": {
+      "parents": 96,
+      "positive_local_regret": 39,
+      "oracle_worsens_signal_with_positive_regret": 7,
+      "baseline_beats_zero_total": 13,
+      "positive_control_rule": 8
+    }
+  },
+  "not_independent": "Repeated anchors/policies share source trajectories; CHANGE B sources overlap."
+}
