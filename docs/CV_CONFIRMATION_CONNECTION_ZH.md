@@ -2,6 +2,8 @@
 
 这次PM部分只把已有BR-0.2及旧A2分析做成[四张案例卡](PM_CASE_GALLERY_ZH.md)，没有启动新PM训练、场景、感知轮次或V6 FINAL。另附[三篇论文阅读指南](PAPER_READING_GUIDE_ZH.md)。
 
+**2026-10-24 展示更新：** [新版CV分组图册](https://github.com/JasonLIN0226/CV_project/tree/phase2/independent-interfaces-20261020/results/literature_diagnosis/visual-casebook-20261024)把内容失败与成功放在一组，时间戳只作辅助；另用已有WR启动trace展示“未接纳事件→随后完整丢失”，与“保存后reader利用失败”分开。所选WR例中t=8只丢掉首个cue帧，t=10才丢尽等价cue副本；62个救回案例仍有41个改善、21个变差。配合[逐案例论文阅读指南](https://github.com/JasonLIN0226/CV_project/blob/phase2/independent-interfaces-20261020/docs/CASE_STUDY_READING_GUIDE_ZH.md)阅读，不新增PM结果或改变下列结论。新版静态图已检查，自动文件浏览被安全机制拦截；源码检查不等于完成浏览器播放／交互验收。
+
 CV侧的新结果见[受控诊断与独立确认汇总](https://github.com/JasonLIN0226/CV_project/blob/phase2/independent-interfaces-20261020/docs/GATE_CONFIRMATION_AND_CASEBOOK.md)：
 
 1. 在旧开发场景的72个可比较parent上，固定时间和动作后仍有正确cue使预测更差的案例。最明显一例只替换正确内容，MSE从0.127822升至0.324210。模型给线索近乎全部attention却预测错方向；另有明确成功对照，不能说统一学反。
