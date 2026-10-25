@@ -2,6 +2,10 @@
 
 这次PM部分只把已有BR-0.2及旧A2分析做成[四张案例卡](PM_CASE_GALLERY_ZH.md)，没有启动新PM训练、场景、感知轮次或V6 FINAL。另附[三篇论文阅读指南](PAPER_READING_GUIDE_ZH.md)。
 
+**2026-10-24 use-time 诊断更新：** CV 已完成 [TRAIN 标签审计](https://github.com/JasonLIN0226/CV_project/blob/phase2/independent-interfaces-20261020/docs/GATE_USE_TIME_LABEL_AUDIT.md)和[固定 reader 的 use-time 反事实实验](https://github.com/JasonLIN0226/CV_project/blob/phase2/independent-interfaces-20261020/docs/GATE_USE_TIME_PROBE.md)。在130个结果尚未显现、一次删除即可毁掉最后cue的训练parent中，原局部标签有111个偏好毁cue；固定attention继续到使用时刻后，130个的最优集合全部保护cue。新标签学生在旧TRAIN 32/32保cue，但192条旧开发场景仅74/192，MSE 0.125385，差于同容量local-cost学生的0.112316，也差于attention/diversity。标签修复没有转化为泛化收益。
+
+这里还有一个重要混淆：CV reader原本只在query时刻训练，局部标签却在每次overflow调用它；use-time同时改变了价值时距和reader的评价起点。不能把全部收益归于延迟信用，更不能把CV的数值搬到PM。PM目前只借用诊断问题：在相同L0输入、相同预算和同一读取器下，一个条目的删除/改写代价，是在决策附近还是在再次使用时测量？这段更新没有新增PM实验、修改V6阈值、打开FINAL，或启动感知诊断；既有PM结论保持其原有证据范围。
+
 **2026-10-24 展示更新：** [新版CV分组图册](https://github.com/JasonLIN0226/CV_project/tree/phase2/independent-interfaces-20261020/results/literature_diagnosis/visual-casebook-20261024)把内容失败与成功放在一组，时间戳只作辅助；另用已有WR启动trace展示“未接纳事件→随后完整丢失”，与“保存后reader利用失败”分开。所选WR例中t=8只丢掉首个cue帧，t=10才丢尽等价cue副本；62个救回案例仍有41个改善、21个变差。配合[逐案例论文阅读指南](https://github.com/JasonLIN0226/CV_project/blob/phase2/independent-interfaces-20261020/docs/CASE_STUDY_READING_GUIDE_ZH.md)阅读，不新增PM结果或改变下列结论。新版静态图已检查，自动文件浏览被安全机制拦截；源码检查不等于完成浏览器播放／交互验收。
 
 CV侧的新结果见[受控诊断与独立确认汇总](https://github.com/JasonLIN0226/CV_project/blob/phase2/independent-interfaces-20261020/docs/GATE_CONFIRMATION_AND_CASEBOOK.md)：
