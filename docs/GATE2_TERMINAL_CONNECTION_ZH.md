@@ -1,8 +1,8 @@
 # Gate2 终局删除 pilot 与 PM 的联系
 
-2026-10-25。本页是跨仓库分析补充，不是一次新的 PM 实验。CV 的 Gate2 pilot 在 A100 作业11310上完成，调度状态为`COMPLETED 0:0`、耗时307秒。日志报告geometry gate和24项reader检查通过；**完整逐行结果仍待结果包回收后的独立核验**，不能把完成或日志判定当成已审计的方法收益。本轮没有运行 PM 模型、训练或新场景，没有打开 V6 FINAL，也没有修改 V6.1 的实现、阈值、预算或阶段顺序。
+2026-10-25。本页是跨仓库分析补充，不是一次新的 PM 实验。**CV Gate2已完成A100运行、完整归档取回与独立数值审计，出现了真实的互补证据保留失败；尚未证明学生能够学会修复，也未证明必须使用集合条件打分。** A100作业11310为`COMPLETED 0:0`、耗时307秒。本轮没有运行 PM 模型、训练或新场景，没有打开 V6 FINAL，也没有修改 V6.1 的实现、阈值、预算或阶段顺序。
 
-当前执行证据和传输限制见 [CV Gate2运行报告](https://github.com/JasonLIN0226/CV_project/blob/phase2/independent-interfaces-20261020/docs/GATE2_TERMINAL_PILOT_REPORT_ZH.md)。目前分块传输已校验21/83块；完整本地ZIP、独立数据审计与完整GitHub Release均未完成。这份PM说明只同步已取回的日志事实，不宣称完整流程或数值审计已完成。
+执行、数值结果与归档入口见 [CV Gate2运行报告](https://github.com/JasonLIN0226/CV_project/blob/phase2/independent-interfaces-20261020/docs/GATE2_TERMINAL_PILOT_REPORT_ZH.md)。先前网络中断已经恢复：83/83块、完整ZIP SHA256与CRC、136个源/结果文件的manifest均通过。独立NumPy审计通过68,328项检查，零失败、零警告；它复算保存的预测和指标，没有独立重新推理模型。
 
 CV 执行前源码记录为 [`3bd9f33`](https://github.com/JasonLIN0226/CV_project/commit/3bd9f33)；完整设计以 [Gate2 运行前协议](https://github.com/JasonLIN0226/CV_project/blob/3bd9f33/docs/GATE2_TERMINAL_PILOT_PROTOCOL.md)为准。该协议 SHA256 为 `44b78d5803726b8ee98b234da47b6dba63d62e5647db4488328be59072d47660`。
 
@@ -31,6 +31,31 @@ TRAIN/VAL/GEOMETRY/DEV分别为240/48/24/48 quartets，每个基础 family 配�
 
 各siblings的过去 cue 本来不同，因此它们的 oracle 动作不同不自动意味着不可学习；反过来，任务语义要求保留两个 bit，也不保证 reader特有的全部 oracle 差距都能从过去预测。原 reader没有完整利用除current之外的recent内容，本轮早期静止目标检查也不能被解释为一般early-reader质量证明。
 
+## 本轮CV结果：可以继续检验，但不是已经学到
+
+24项reader门槛全部通过。固定时间/动作的AB和A′B识别正确分别为192/192、191/192；只翻A或B内容时，预测转到对应反事实未来，均为192/192。更关键的是，**真实时间戳下的全部384个互补保留对都识别正确**，冗余保留对仅96/192。因而这轮所见的丢唯一证据，不再只能解释为共同reader不会利用互补信息。
+
+| DEV外观 | 策略 | 丢唯一证据 | 四未来识别 | MSE | 相对同parent oracle regret |
+|---|---|---:|---:|---:|---:|
+| 普通副本 | diversity | 0/96 | 96/96 | 0.104013 | 0.005414 |
+| 普通副本 | reader-attention | 61/96 | 64/96 | 0.139173 | 0.040574 |
+| 普通副本 | oracle | 0/96 | 96/96 | 0.098600 | 0 |
+| 改变副本外观 | diversity | 48/96 | 72/96 | 0.174863 | 0.072378 |
+| 改变副本外观 | reader-attention | 40/96 | 75/96 | 0.136816 | 0.034331 |
+| 改变副本外观 | oracle | 0/96 | 96/96 | 0.102485 | 0 |
+
+总体diversity regret为0.038896，24个family重采样2,000次的描述性95%区间为[0.028249,0.049900]；reader-attention为0.037452，[0.028449,0.047010]。这些是开发场景中的特征MSE差距，不是自然任务上的物理成功率，也不是独立确认。该attention臂是冻结reader的因果读取分数，并非新训练的PaFu-KV学生；本轮没有新增WR或PaFu学生实验。
+
+保留以下三个限制，才能决定下一步是否值得做：
+
+- **差距有特定场景结构。** Diversity的48次语义失败全在“改变副本外观＋重复竖直轴”；改变外观但重复水平轴和普通副本均有成功控制。普通副本diversity已经保住全部必要信息，其0.005414剩余regret是副本/时间读取偏好问题，不能称为信息丢失。不能从这个人为设计的两style pilot推广到PushT或自然视频。
+- **语义正确与精确MSE最优仍不等价。** 全部192个oracle最小集合均语义正确，且没有精确或1e−6容差平局；但四siblings共享同一个最优动作的只有29/48 quartets，其余19组在两个冗余副本之间改变偏好。所有过去都包含足以确定任务语义的两位信息，不等于全部reader特有的最优副本选择已经可学习。
+- **Reader和保留器的可见信息不同。** Reader可接收q之后的计划动作；按本轮协议，保留scorer不能接收尚未执行的动作。保留两个轴的语义要求不依赖这些正向动作的具体幅度，但精确feature-MSE的副本排序可能依赖计划动作和时间/读取交互。因此后续应检验过去信息下的期望收益，不能要求学生复现所有hindsight argmin，或把没有相同输入冲突记录当成可学性证明。
+
+早期reader检查也仍失败：q−6时预测两个运动前静止目标，因果复制前一空白帧的MSE为0，reader却为0.342578（普通0.170035，改变外观0.515122）。这不否定query终局对照，但阻止我们直接把该reader用于可靠的早期local/use-time监督，更不能说旧时距混淆已全部解决。
+
+审稿判断是：**可以预先锁定一个小规模学生比较来检验可学性，不能现在宣布可学缺口或集合条件方法已成立。** 独立逐条目scorer、集合条件scorer、future-attention、打乱标签和已有强基线应在同一预算/输入边界下比较，并加入能利用特殊副本外观的简单对照。先区分“避免丢唯一证据”与“选择哪个副本的精确MSE更低”，再用另一个未用于选择的新seed集合评价；独立学生已解决就如实报告集合条件不必要。本轮学生仍为零，这不是已完成的新方法实验。
+
 ## 能与 PM 结合到哪一步
 
 PM 的研究对象仍是有界世界模型记忆的写入、修正和保护，按 [AGENTS.md](../AGENTS.md) 与 [V6.1预注册](PREREGISTRATION_V6.1.md)继续。可共用的是下面的判别问题，不能共用实验数值或直接迁移模型胜负。
@@ -47,18 +72,19 @@ PM 的研究对象仍是有界世界模型记忆的写入、修正和保护，�
 
 同时保留[既有案例图册](PM_CASE_GALLERY_ZH.md)的成功对照与噪声反例：局部oracle降低总误差，有时却恶化signal；旧值被删后覆盖下降，可能只是少犯错。旧A2的0.0125%账面修补空间也不因此升级为主线。
 
-## CV执行记录与待核验结果
+## CV执行与审计记录
 
 | 项目 | 当前状态 |
 |---|---|
-| A100作业、实际硬件与完成状态 | 作业11310：`COMPLETED 0:0`，307秒；硬件明细随完整包归档 |
-| Geometry gate及各style完整计数 | 日志：benign重复保留0/48 episodes；distant为24/48，涉及6/12 quartets；geometry gate通过，逐行重算待结果包 |
-| Reader选中checkpoint及24项gate | 日志报告24/24通过；选中checkpoint身份与指标待完整包核验 |
-| 同parent强baseline与oracle差距 | 待回收 |
-| 语义最优与reader最优是否一致 | 待回收 |
+| A100作业、实际硬件与完成状态 | 作业11310：`COMPLETED 0:0`，307秒；CUDA与nvidia-smi匹配同一A100-SXM4-40GB UUID |
+| GEOMETRY专用集 | benign重复保留0/48 episodes；distant为24/48，涉及6/12 quartets；逐行审计通过，不能与DEV分母混用 |
+| Reader checkpoint及24项gate | VAL选择step1024；24/24通过，未用DEV选checkpoint |
+| 同parent强baseline与oracle差距 | 见上表及CV完整逐行记录；尚无学生、新seed确认或新方法胜出 |
+| 语义最优与reader最优 | 192/192最小集合语义正确；跨siblings共享精确/容差最优动作29/48 quartets |
+| 完整归档与独立算术审计 | 本地ZIP SHA256/CRC通过；68,328项检查，零失败、零警告；不含独立模型推理复现 |
 | 本轮新PM实验 | 无 |
 | V6.1或FINAL边界改变 | 无 |
 
-执行依据为CV的[调度记录](https://github.com/JasonLIN0226/CV_project/blob/phase2/independent-interfaces-20261020/results/literature_diagnosis/gate2-terminal-pilot-20261025/sacct-11310.txt)与[原始日志](https://github.com/JasonLIN0226/CV_project/blob/phase2/independent-interfaces-20261020/results/literature_diagnosis/gate2-terminal-pilot-20261025/slurm-11310.log)。远端打包receipt记载ZIP为345,671,988字节，SHA256 `523654adcb889726af0a8ce8a0dd3e59dba71b8c99e9634a2cd84ad09ed9be5c`；本页尚未把传输完成或独立审计标为通过。
+执行依据为CV的[调度记录](https://github.com/JasonLIN0226/CV_project/blob/phase2/independent-interfaces-20261020/results/literature_diagnosis/gate2-terminal-pilot-20261025/sacct-11310.txt)、[原始日志](https://github.com/JasonLIN0226/CV_project/blob/phase2/independent-interfaces-20261020/results/literature_diagnosis/gate2-terminal-pilot-20261025/slurm-11310.log)、[完整指标](https://github.com/JasonLIN0226/CV_project/blob/phase2/independent-interfaces-20261020/results/literature_diagnosis/gate2-terminal-pilot-20261025/summary.json)、[逐次删除](https://github.com/JasonLIN0226/CV_project/blob/phase2/independent-interfaces-20261020/results/literature_diagnosis/gate2-terminal-pilot-20261025/terminal_decisions.json)与[独立审计](https://github.com/JasonLIN0226/CV_project/blob/phase2/independent-interfaces-20261020/results/literature_diagnosis/gate2-terminal-pilot-20261025/independent_audit.json)。完整ZIP为345,671,988字节，SHA256 `523654adcb889726af0a8ce8a0dd3e59dba71b8c99e9634a2cd84ad09ed9be5c`。
 
-结果填入后仍分别标记CV开发证据与PM已有证据。若Gate2失败，保留失败条件；若通过，也先说明差距来自什么、量级多大，再决定是否值得在独立数据上验证。两仓库目前可以共用“可见→保存→留存→正确读取→任务改善”的检查链，尚不能合并成已验证的新memory方法。
+以上数值始终属于CV开发证据；PM旧bank与V6.1各自保留原有证据范围。两仓库可以共用“可见→保存→留存→正确读取→任务改善”的检查链，尚不能合并成已验证的新memory方法。
