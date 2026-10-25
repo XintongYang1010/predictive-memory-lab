@@ -1,5 +1,17 @@
 # Gate2 终局删除 pilot 与 PM 的联系
 
+## 2026-10-25补充：无训练预测一致性已通过CPU输入隔离检查
+
+CV新增的TRAIN动作平均medoid只丢唯一证据2/192，平均regret=0.006753；同一组DEV上reader-attention为101/192、0.037452，diversity为48/192、0.038896。该规则用固定reader分别预测三种删除，每种删除共享16个TRAIN参考动作计划；先算同计划下的两两预测MSE，再平均并选medoid。选择器不接收实际未执行动作、真实未来或语义角色，全部192个决策先锁定，再用归档实际计划损失评价。独立数值审计重算192次选择通过。仍是24个已查看的DEV family，**没有新seed确认，也没有新的PM运行**。
+
+这使下一步更明确：先把它作为学习型scorer的强对照，不能默认必须学习集合条件打分。它的计算成本是每决策48个reader预测样本，额外动作库768字节；768字节不包含reader、basis副本或临时工作区。CPU主推理加距离计算合计2.031秒，不能当作GPU训练时间或等算力比较。详细输入隔离、区间、成本和原始数据见[CV预测一致性报告](https://github.com/JasonLIN0226/CV_project/blob/phase2/independent-interfaces-20261020/docs/GATE2_PREDICTION_CONSENSUS_ZH.md)。
+
+本次还修正推进条件：29/48的精确副本argmin一致性和早期reader失败不挡住终局研究。必要证据丢失率和regret为主，副本精确选择为辅。Attention的101次失败全部对应唯一证据的严格最低读取权重；diversity的48次失败体现预先测到的距离几何，而不仅是一个窄反例。
+
+下一轮[合并草案](https://github.com/JasonLIN0226/CV_project/blob/phase2/independent-interfaces-20261020/docs/GATE2_COMBINED_STUDY_DRAFT.md)把冗余[A,A′,B]和诱饵[A,B,D]作为两个各自K=2、三个候选的任务族，平衡显眼外观的位置。前者有两种删除能保住完整信息，后者只有删D能保住完整信息，可以检验“一致”是否等于“有用”；不能预言共识规则必定胜出或失败。草案尚未冻结执行，也不是新训练结果。
+
+与PM共用的问题是“能否让冻结预测模型直接辅助记忆决策”。V6.1 BF-Delta基于已观察到的当前残差，对保持/重置假设比较预测证据并形成遗忘门；CV规则则比较假设动作下三种删除的预测一致性。两者不是同一算法，本次不修改V6.1源码、阶段、阈值、预算或FINAL状态，不把CV数值并入PM结果。下文保留原pilot及旧bank的独立证据范围。
+
 2026-10-25。本页是跨仓库分析补充，不是一次新的 PM 实验。**CV Gate2已完成A100运行、完整归档取回与独立数值审计，出现了真实的互补证据保留失败；尚未证明学生能够学会修复，也未证明必须使用集合条件打分。** A100作业11310为`COMPLETED 0:0`、耗时307秒。本轮没有运行 PM 模型、训练或新场景，没有打开 V6 FINAL，也没有修改 V6.1 的实现、阈值、预算或阶段顺序。
 
 执行、数值结果与归档入口见 [CV Gate2运行报告](https://github.com/JasonLIN0226/CV_project/blob/phase2/independent-interfaces-20261020/docs/GATE2_TERMINAL_PILOT_REPORT_ZH.md)。先前网络中断已经恢复：83/83块、完整ZIP SHA256与CRC、136个源/结果文件的manifest均通过。独立NumPy审计通过68,328项检查，零失败、零警告；它复算保存的预测和指标，没有独立重新推理模型。
