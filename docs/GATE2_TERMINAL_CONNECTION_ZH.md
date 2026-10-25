@@ -1,5 +1,11 @@
 # Gate2 终局删除 pilot 与 PM 的联系
 
+## 2026-10-25补充：三任务协议和执行代码已冻结
+
+CV已在commit `4e279fc4b57bbb333cf82f2bac6cde865aa47ad9`提交[正式预注册](https://github.com/JasonLIN0226/CV_project/blob/4e279fc4b57bbb333cf82f2bac6cde865aa47ad9/docs/TERMINAL_STRUCTURES_PREREGISTRATION_20261025.md)、R/D/S生成器、0–3历史共同reader、48/64预测对照、独立/集合学生及确认集自动门槛。29项针对性测试通过；原图容量profile不属于视觉效果验证。新reader使用纯MSE，避免旧排序损失改变缺信息时的均值预测。48/24/24/48个TRAIN/VAL/DEV/CONF families与所有seed在编码前锁定；CONF未通过DEV reader和模型绑定门槛不得生成。
+
+本条只证明代码、协议和来源已公开，**不是运行完成或方法胜出**。运行结果随后单独更新；PM未启动新实验，V6.1 S0–S2和FINAL保持原协议。
+
 ## 2026-10-25补充：三结构设计与符号预检
 
 CV下一轮草案已扩展为冗余、加性诱饵和关系XOR协同三族，均保持K=2、三个终局候选；新增相对完整K+1预测的敏感度对照。此次只完成精确符号枚举和纯预测打分函数，没有新视觉reader、A100、确认集或PM实验。详见[CV协同设计审计](https://github.com/JasonLIN0226/CV_project/blob/phase2/independent-interfaces-20261020/docs/GATE2_SYNERGY_DESIGN_AUDIT_ZH.md)。
