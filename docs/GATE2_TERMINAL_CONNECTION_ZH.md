@@ -1,5 +1,25 @@
 # Gate2 终局删除 pilot 与 PM 的联系
 
+## 2026-10-26更新：合格reader的冻结保留策略通过三条CONF主张
+
+CV已一次性评价CONF（seed20261104，48个独立family；R/D各576条、S2304条），固定两个合格reader、全部学生checkpoint和评价规则，没有训练或调参。A100作业12374负责生成与编码，冻结方法随后在CPU上预测；这不是新的PM实验。完整结果见[CV报告的CONF确认节](https://github.com/JasonLIN0226/CV_project/blob/phase2/independent-interfaces-20261020/docs/QUALIFIED_READER_RETENTION_DEV_ZH.md)、[正式claims及逐样本结果](https://github.com/JasonLIN0226/CV_project/tree/phase2/independent-interfaces-20261020/results/literature_diagnosis/qualified-reader-retention-20261025/conf)和[本次归档入口](https://github.com/JasonLIN0226/CV_project/releases/tag/qualified-reader-retention-confirmation-20261026)。
+
+三条预注册主张均通过，指标均为**必要证据丢失率**，不是物理规划成功率：
+
+| 主张 | multihead | item_attention |
+|---|---|---|
+| S：集合删除代价学生优于三项指定对照 | 学生4.586%；完整集合敏感度35.894%、attention70.269%、集合future-attention学生67.376% | 学生0.651%；对应三项为37.804%、55.122%、56.293% |
+| R/D：完整集合敏感度与oracle相差不超过10个百分点 | 非该主张的指定reader | R两者均0%；D为0.174%与1.563%，差1.389个百分点 |
+| D/S：medoid丢失率高于完整集合敏感度 | D为44.965%对11.285%；S为97.526%对35.894% | D为36.979%对0.174%；S为96.050%对37.804% |
+
+学生先对三个冻结seed的逐parent丢失率平均，再按family聚合；配对family bootstrap区间只作描述，不是通过条件。追加的平局平均版本未改变任何主张的真值：18个规则／任务／reader格中，只有item_attention的D-medoid和S-oracle分别变化0.087和0.022个百分点。原逐元素数值复现门槛曾触发停止；用户在CONF生成和评价前授权登记v2尺度与平局规则，原失败记录保留，三条科学主张没有修改。
+
+**确认范围仍然有限。** 集合删除代价学生在R上仍丢失34.317%／33.391%，没有证明跨三族的普遍优势；D的只看外观对照仍为0%，不能将D成功解释成关系推理。两个reader各只有一个训练seed，任务也只有三候选的一次终局删除。S上学生比MSE oracle更少丢必要证据，说明任务语义指标与该模型的MSE最优删除不是同一目标，不能说学生在oracle自己的优化目标上超越oracle。
+
+对PM的连接是：合格世界模型的预测一致性仍不保证正确记忆决策；需要在同输入、同预算、同损失下区分保留必要证据、降低模型误差和恢复真实状态。这与旧bank中“少犯错／回退零残差不等于恢复新状态”、总误差与signal/noise分解的区别对应，但CV特征空间的丢失率不能并入PM的MPE或充当BF-Delta、CHANGE的验证。**本轮PM仅更新文档，没有新增推理、训练、场景、S0–S2或FINAL运行；V6.1门槛、预算和阶段边界不变。** 上游疑点继续按[AGENTS.md](../AGENTS.md)使用oracle L0替代，不开启新的感知诊断。
+
+以下各节保留原时点的历史快照；其中“尚未训练／尚未确认”不描述本节已完成的CV确认。
+
 ## 2026-10-25最新结果：三结构运行完成，协同暴露medoid失败，共同reader门槛未通过
 
 CV的A100作业11441已完成预注册的TRAIN、VAL和DEV运行，真实设备为NVIDIA A100-SXM4-40GB。执行以 `completed_reader_gate_failed_no_students_no_confirmation` 正常结束：保存了全部三族的reader资格检查、终局基线及原始预测，按预先锁定的门槛跳过学生和确认集，**不是运行崩溃，也不是学生训练完成**。详见[三结构运行报告](https://github.com/JasonLIN0226/CV_project/blob/phase2/independent-interfaces-20261020/docs/TERMINAL_THREE_STRUCTURES_REPORT_ZH.md)和[完整结果归档](https://github.com/JasonLIN0226/CV_project/releases/tag/terminal-structures-20261025)。
