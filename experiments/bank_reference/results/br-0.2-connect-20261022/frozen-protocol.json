@@ -1,0 +1,22 @@
+{
+  "protocol": "BR-0.2",
+  "created_utc": "2026-10-23T00:42:16.634414+00:00",
+  "before_new_accounting": true,
+  "source_sha256": {
+    "r25": "5d0cf16b8625b9a545bc5bc7ccf6fa5a0181fd98acdebea199c244568d01767e",
+    "m25": "daf87e10fc363f04f1944b3fecd410db3292013e5e521609bc1e88aef348084a",
+    "r50": "c256d8ee6b80e422c5ddc6d6e120b3eb3bfb8272a9083f3b64ca5683db9700b3",
+    "m50": "108563c48bdc528ea2e6e8985494c06d220b58b5e37e024f49a6fd0c63bc2b50",
+    "parents": "6ce697cb33cd070e2328aebff85e00e60857f1a194af353af02e4a331908d84b",
+    "old_a2_conclusion": "426b7483ad4d5e99a926cba51384f399dbe4bef430af0d78bedcfffa3501eb80",
+    "old_a2_components": "dd41b6842d4ac93da407fdad5c5966ddbf34b3414b8cd00968769784989ab9c9",
+    "protocol": "da95c974227f2d3faf259d74401c73ca081f180bb3d1df840368a410f229a684",
+    "runner": "96aea1bf9814de91ad4d643ec184b92752959ab983d30af6e85438b708e2d8c9"
+  },
+  "parents": 864,
+  "new_training_steps": 0,
+  "gpu_seconds": 0,
+  "same_budget_comparison": "Original chosen K subset versus same-parent oracle K subset; reader/input/horizon/loss unchanged",
+  "dev_only": true,
+  "new_online_policy": false
+}

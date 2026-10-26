@@ -1,0 +1,36 @@
+{
+  "schema": "a2-object-cost-analysis-conclusion-v1",
+  "completed_utc": "2026-10-19T16:28:54.048839+00:00",
+  "client_date": "2026-10-19",
+  "decision": "Do not select repair of this observed A2 object-coordinate cost as the paper main line on current evidence. Retain as a bounded mechanism diagnostic.",
+  "evidence": {
+    "observed_object_cost": "Established in EXACT object coordinates, not all object dimensions or conditions. CHANGE coordinate error improves; NEWPATH and combined RET net-coordinate intervals cross zero.",
+    "signal_noise": "EXACT coordinate signal cost 0.010935638 exceeds realized-noise saving 0.004822307; cross cost 0.000780184. Not noise amplification.",
+    "key_context": "EXACT repeats same C/O/key/gate to floating precision. Same-key pre-injection coordinate target changes are not larger than grid changes in observed pairs. Key insufficiency exists but object-specific stronger confusion is not established.",
+    "shared_beta": "Analytic expected-loss gradients conflict on 1589 of 3113 EXACT writes affecting both grid and coordinates. Both groups still have a common improving first-order output-space direction when summed over writes; no proof of a fundamental shared-scalar capacity limit.",
+    "weighting": "Loss averages observed coordinates jointly; EXACT grid weight .778094 and coordinate weight .033267. This allows a rare-coordinate cost to be outweighed by grid benefit, but does not isolate training weights versus gate sharing or contextual mismatch."
+  },
+  "recovering_only_observed_exact_coordinate_loss": {
+    "exact_mpe_recovery": 0.00022932711767955697,
+    "exact_relative_to_A2_percent": 0.025436908338015027,
+    "retention_mpe_recovery": 0.0001156544083423876,
+    "retention_relative_to_A2_percent": 0.012487047947101306,
+    "counterfactual": "Assumes all other existing errors unchanged. This is bookkeeping, not a tested policy, not an attainable guarantee and not an upper bound on all possible improvements."
+  },
+  "scope": {
+    "new_scientific_arms": 0,
+    "raw_data_restored_bytes": 0,
+    "training_steps": 0,
+    "gpu_hours": 0,
+    "gate_network_forward_runs": 0,
+    "analysis": "Existing original A1/A2 linear accounting, descriptive same-key statistics, analytic sensitivity at frozen A2 outputs. Only synthetic derivatives were numerically perturbed for validation."
+  },
+  "limits": [
+    "Only reused dev trajectories at noise .5/ns0; no confirmatory scientific gate passed by this analysis.",
+    "Pre-injection C is a standardized slow-model residual, not physical noise-free truth.",
+    "Exact actions, continuous pose and Z bodies are absent, so input-channel causal attribution is unavailable.",
+    "Retrospective beta sensitivities use future POST losses, not online causal information; opposite signs do not provide a finite attainable gain.",
+    "Per-group comparisons are exploratory; different masks/gaps and adjacent A/B source dependence limit interpretation.",
+    "The signal-known .5 floor is an informational oracle, not evidence that beta or key changes can realize its headroom."
+  ]
+}

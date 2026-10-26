@@ -1,0 +1,62 @@
+{
+  "source_sha256": {
+    "parents.json": "aa2bcb043c34204c42407f0f07d1c30461f99b1ec292ac9e3c29fe3091582c11",
+    "previous_top_case.json": "407ad69f0ae7ee50b96a187ff3696b2d0107becd820972d693d604ef7713e46e",
+    "prior_a2_conclusion.json": "426b7483ad4d5e99a926cba51384f399dbe4bef430af0d78bedcfffa3501eb80"
+  },
+  "renderer_sha256": "d9f336d370b31a57abc2be943260e3518bab31c001990c0448d9f2e17a3c0637",
+  "new_model_calls": 0,
+  "new_training_steps": 0,
+  "new_scenarios": 0,
+  "selected_ids": {
+    "harmful_read": "CHANGE / source 31 / K16/PaFu / t=464",
+    "noise_tradeoff": "EXACT / source 24 / K64/PaFu / t=528",
+    "positive_control": "EXACT / source 24 / K64/PaFu / t=400"
+  },
+  "outputs": {
+    "01_harmful_read.png": {
+      "sha256": "fcdcbbd20eafa7a15a60a6f33d744b54fb01b83246a31be4138bb1c17fd025a9",
+      "bytes": 276906
+    },
+    "01_harmful_read.pdf": {
+      "sha256": "1478397712be7f9c8f53fdfde5b07a1c0acfe691010698a8a3ef79a198232020",
+      "bytes": 42443
+    },
+    "02_noise_tradeoff.png": {
+      "sha256": "1720dc1a466f5159322f9c53d694cc1b7326da294e3402ef7cb4b8cccdc1b0ac",
+      "bytes": 301370
+    },
+    "02_noise_tradeoff.pdf": {
+      "sha256": "af1de0d28d9cf4e559fade4056fedf7665e0c43a65c8e5b8e4a8e223d159fcb3",
+      "bytes": 43432
+    },
+    "03_positive_control.png": {
+      "sha256": "cd3e554c6fccb999016d7a3663e3c6d688bd4c9ad031b9bb434f9d3cb315fab2",
+      "bytes": 300437
+    },
+    "03_positive_control.pdf": {
+      "sha256": "3fcff71bf6b2e8cfffe736dbd1e851a74a37801ecb05a867574ca7defead9400",
+      "bytes": 43921
+    },
+    "04_a2_tradeoff.png": {
+      "sha256": "24b12bbb07c53bfd06248d1ab3831e6f68feb7f496aae18fd65051ed469f90f1",
+      "bytes": 169496
+    },
+    "04_a2_tradeoff.pdf": {
+      "sha256": "6e4c99b4bbc961b1dd58fc161bbb7653e7681790f83e2e1e7c87ccc51f0a9ce6",
+      "bytes": 33185
+    },
+    "pm_case_cards.pdf": {
+      "sha256": "58859e357a95ac2b81143ff40dd5e752599a0060d4b8a8a72a03e4e0a34e3053",
+      "bytes": 64005
+    },
+    "selected_cases.json": {
+      "sha256": "ea2c0b09e37edfeb39bcec74029fa0c8fda57e1ff426689060e2cb398d934618",
+      "bytes": 59346
+    },
+    "population_counts.json": {
+      "sha256": "f149888d5d86b0454b17296d693c954eb9c5fa8cb3272c7cf06b5970a5714a33",
+      "bytes": 2216
+    }
+  }
+}
